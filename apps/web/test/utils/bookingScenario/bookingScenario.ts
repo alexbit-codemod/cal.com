@@ -451,7 +451,9 @@ export async function addEventTypesToDb(
 
 export async function addEventTypes(eventTypes: InputEventType[], usersStore: InputUser[]) {
   const baseEventType = {
-    title: "Base EventType Title",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     slug: "base-event-type-slug",
     timeZone: null,
     beforeEventBuffer: 0,
@@ -598,7 +600,9 @@ export async function addBookings(bookings: InputBooking[]) {
       uid: booking.uid || uuidv4(),
       workflowReminders: [],
       references: [],
-      title: "Test Booking Title",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       ...booking,
     };
   });
@@ -1620,8 +1624,12 @@ export function getScenarioData(
           bookingLimits: eventType?.team?.bookingLimits,
           includeManagedEventsInLimits: eventType?.team?.includeManagedEventsInLimits,
         },
-        title: `Test Event Type - ${index + 1}`,
-        description: `It's a test event type - ${index + 1}`,
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
     }),
     users: users.map((user) => {
@@ -2316,10 +2324,14 @@ export const getDefaultBookingFields = ({
     {
       name: "name",
       type: "name",
-      sources: [{ id: "default", type: "default", label: "Default" }],
+      sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }],
       editable: "system",
       required: true,
-      defaultLabel: "your_name",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     !!emailField
       ? emailField
@@ -2328,19 +2340,27 @@ export const getDefaultBookingFields = ({
           type: "email",
           label: "",
           hidden: false,
-          sources: [{ id: "default", type: "default", label: "Default" }],
+          sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+           }],
           editable: "system",
           required: true,
           placeholder: "",
-          defaultLabel: "email_address",
+          defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
     {
       name: "location",
       type: "radioInput",
-      sources: [{ id: "default", type: "default", label: "Default" }],
+      sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }],
       editable: "system",
       required: false,
-      defaultLabel: "location",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       getOptionsAt: "locations",
       optionsInputs: {
         phone: { type: "phone", required: true, placeholder: "" },
@@ -2352,40 +2372,64 @@ export const getDefaultBookingFields = ({
       name: "title",
       type: "text",
       hidden: true,
-      sources: [{ id: "default", type: "default", label: "Default" }],
+      sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }],
       editable: "system-but-optional",
       required: true,
-      defaultLabel: "what_is_this_meeting_about",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       defaultPlaceholder: "",
     },
     {
       name: "notes",
       type: "textarea",
-      sources: [{ id: "default", type: "default", label: "Default" }],
+      sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }],
       editable: "system-but-optional",
       required: false,
-      defaultLabel: "additional_notes",
-      defaultPlaceholder: "share_additional_notes",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     {
       name: "guests",
       type: "multiemail",
       hidden: false,
-      sources: [{ id: "default", type: "default", label: "Default" }],
+      sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }],
       editable: "system-but-optional",
       required: false,
-      defaultLabel: "additional_guests",
-      defaultPlaceholder: "email",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     {
       name: "rescheduleReason",
       type: "textarea",
-      views: [{ id: "reschedule", label: "Reschedule View" }],
-      sources: [{ id: "default", type: "default", label: "Default" }],
+      views: [{ id: "reschedule", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }],
+      sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }],
       editable: "system-but-optional",
       required: false,
-      defaultLabel: "reason_for_reschedule",
-      defaultPlaceholder: "reschedule_placeholder",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     ...bookingFields,
   ] as Fields;
@@ -2411,7 +2455,9 @@ export const createDelegationCredential = async (orgId: number, type: "google" |
       data: {
         name: "Test Workspace",
         slug: "google",
-        description: "Test Workspace",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         defaultServiceAccountKey: encryptedServiceAccountKey,
         enabled: true,
       },
@@ -2462,7 +2508,9 @@ export const createDelegationCredential = async (orgId: number, type: "google" |
       data: {
         name: "Test Workspace",
         slug: "office365",
-        description: "Test Workspace",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         defaultServiceAccountKey: encryptedServiceAccountKey,
         enabled: true,
       },

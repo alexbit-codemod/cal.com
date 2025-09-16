@@ -7,7 +7,9 @@ export class CreateWebhookInputDto {
   @IsOptional()
   @ApiProperty({
     description:
-      "The template of the payload that will be sent to the subscriberUrl, check cal.com/docs/core-features/webhooks for more information",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: JSON.stringify({
       content: "A new event has been scheduled",
       type: "{{type}}",

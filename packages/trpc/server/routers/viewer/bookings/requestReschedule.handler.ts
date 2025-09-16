@@ -89,11 +89,15 @@ export const requestRescheduleHandler = async ({ ctx, input }: RequestReschedule
   });
 
   if (!bookingToReschedule.userId) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "Booking to reschedule doesn't have an owner" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!bookingToReschedule.eventType && !bookingToReschedule.dynamicEventSlugRef) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "EventType not found for current booking." });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const bookingBelongsToTeam = !!bookingToReschedule.eventType?.teamId;
@@ -110,7 +114,9 @@ export const requestRescheduleHandler = async ({ ctx, input }: RequestReschedule
   if (bookingBelongsToTeam && bookingToReschedule.eventType?.teamId) {
     const userTeamIds = userTeams.teams.map((item) => item.teamId);
     if (userTeamIds.indexOf(bookingToReschedule.eventType?.teamId) === -1) {
-      throw new TRPCError({ code: "FORBIDDEN", message: "User isn't a member on the team" });
+      throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     log.debug(
       "Request reschedule for team booking",
@@ -120,7 +126,9 @@ export const requestRescheduleHandler = async ({ ctx, input }: RequestReschedule
     );
   }
   if (!bookingBelongsToTeam && bookingToReschedule.userId !== user.id) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "User isn't owner of the current booking" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!bookingToReschedule) return;

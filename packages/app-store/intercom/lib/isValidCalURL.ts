@@ -15,7 +15,9 @@ export async function isValidCalURL(url: string) {
 
   const error: TextComponent = {
     type: "text",
-    text: `This is not a valid ${CAL_URL.replace("https://", "")} link`,
+    text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     style: "error",
     align: "left",
   };

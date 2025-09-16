@@ -98,25 +98,33 @@ async function handler(input: CancelBookingInput) {
   if (bookingToDelete.status === BookingStatus.CANCELLED) {
     throw new HttpError({
       statusCode: 400,
-      message: "This booking has already been cancelled.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!bookingToDelete.userId || !bookingToDelete.user) {
-    throw new HttpError({ statusCode: 400, message: "User not found" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (bookingToDelete.eventType?.disableCancelling) {
     throw new HttpError({
       statusCode: 400,
-      message: "This event type does not allow cancellations",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!platformClientId && !cancellationReason?.trim() && bookingToDelete.userId == userId) {
     throw new HttpError({
       statusCode: 400,
-      message: "Cancellation reason is required when you are the host",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -129,7 +137,9 @@ async function handler(input: CancelBookingInput) {
     const userIsOwnerOfEventType = bookingToDelete.eventType.owner?.id === userId;
 
     if (!userIsHost && !userIsOwnerOfEventType) {
-      throw new HttpError({ statusCode: 401, message: "User not a host of this event" });
+      throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
   }
 
@@ -304,7 +314,9 @@ async function handler(input: CancelBookingInput) {
       onlyRemovedAttendee: true,
       bookingId: bookingToDelete.id,
       bookingUid: bookingToDelete.uid,
-      message: "Attendee successfully removed.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     } satisfies HandleCancelBookingResponse;
 
   const promises = webhooks.map((webhook) =>
@@ -554,7 +566,9 @@ async function handler(input: CancelBookingInput) {
   }
   return {
     success: true,
-    message: "Booking successfully cancelled.",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     onlyRemovedAttendee: false,
     bookingId: bookingToDelete.id,
     bookingUid: bookingToDelete.uid,

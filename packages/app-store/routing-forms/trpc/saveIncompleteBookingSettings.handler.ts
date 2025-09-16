@@ -30,7 +30,9 @@ const saveIncompleteBookingSettingsHandler = async (options: SaveIncompleteBooki
   if (!dataSchema) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Action data schema not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -40,7 +42,9 @@ const saveIncompleteBookingSettingsHandler = async (options: SaveIncompleteBooki
     log.error("Data is not valid", data, parsedData.error);
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Data is not valid",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

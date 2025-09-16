@@ -83,12 +83,8 @@ export function UserDropdown({ small }: UserDropdownProps) {
               small ? "h-4 w-4" : "h-5 w-5 ltr:mr-2 rtl:ml-2",
               "relative flex-shrink-0 rounded-full"
             )}>
-            <Avatar
-              size={small ? "xs" : "xsm"}
-              imageSrc={user?.avatarUrl ?? user?.avatar}
-              alt={user?.username ? `${user.username} Avatar` : "Nameless User Avatar"}
-              className="overflow-hidden"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <span
               className={classNames(
                 "border-muted absolute -bottom-1 -right-1 rounded-full border bg-green-500",
@@ -182,9 +178,8 @@ export function UserDropdown({ small }: UserDropdownProps) {
 
               {!isPlatformPages && isPlatformUser && (
                 <DropdownMenuItem className="todesktop:hidden hidden lg:flex">
-                  <DropdownItem StartIcon="blocks" target="_blank" rel="noreferrer" href="/settings/platform">
-                    Platform
-                  </DropdownItem>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </DropdownMenuItem>
               )}
               <DropdownMenuSeparator />

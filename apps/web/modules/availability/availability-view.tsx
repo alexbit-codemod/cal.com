@@ -127,13 +127,8 @@ export function AvailabilityList({ availabilities }: AvailabilityListProps) {
     <>
       {availabilities.schedules.length === 0 ? (
         <div className="flex justify-center">
-          <EmptyScreen
-            Icon="clock"
-            headline={t("new_schedule_heading")}
-            description={t("new_schedule_description")}
-            className="w-full"
-            buttonRaw={<NewScheduleButton />}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       ) : (
         <>
@@ -163,16 +158,8 @@ export function AvailabilityList({ availabilities }: AvailabilityListProps) {
             </Link>
           </div>
           {bulkUpdateModal && (
-            <BulkEditDefaultForEventsModal
-              isPending={bulkUpdateDefaultAvailabilityMutation.isPending}
-              open={bulkUpdateModal}
-              setOpen={setBulkUpdateModal}
-              bulkUpdateFunction={bulkUpdateFunction}
-              description={t("default_schedules_bulk_description")}
-              eventTypes={eventTypesQueryData?.eventTypes}
-              isEventTypesFetching={isEventTypesFetching}
-              handleBulkEditDialogToggle={handleBulkEditDialogToggle}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         </>
       )}

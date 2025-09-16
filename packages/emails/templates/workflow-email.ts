@@ -49,7 +49,9 @@ export function addHTMLStyles(html?: string) {
 
   links.forEach((link) => {
     link.style.fontSize = "20px";
-    link.style.textDecoration = "none";
+    link.style.textDecoration = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
   });
 
   return dom.serialize();

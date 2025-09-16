@@ -7,8 +7,12 @@ export const templateFieldsMap: Record<TemplateType, Fields> = {
       type: "text",
       name: fieldNameEnum.enum.schedulerName,
       required: true,
-      defaultLabel: "scheduler_name",
-      placeholder: "Enter your name",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   ],
   CUSTOM_TEMPLATE: [
@@ -16,38 +20,58 @@ export const templateFieldsMap: Record<TemplateType, Fields> = {
       type: "textarea",
       name: fieldNameEnum.enum.generalPrompt,
       required: true,
-      defaultLabel: "general_prompt",
-      placeholder: "Enter your prompt",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     {
       type: "text",
       name: fieldNameEnum.enum.beginMessage,
       required: true,
-      defaultLabel: "begin_message",
-      placeholder: "begin_message",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     {
       type: "text",
       name: fieldNameEnum.enum.guestName,
       required: false,
-      defaultLabel: "guest_name",
-      placeholder: "guest_name",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       variableName: "name",
     },
     {
       type: "email",
       name: fieldNameEnum.enum.guestEmail,
       required: false,
-      defaultLabel: "guest_email",
-      placeholder: "guest_email",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       variableName: "email",
     },
     {
       type: "text",
       name: fieldNameEnum.enum.guestCompany,
       required: false,
-      defaultLabel: "guest_company",
-      placeholder: "guest_company",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       variableName: "company",
     },
   ],

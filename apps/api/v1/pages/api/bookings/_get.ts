@@ -226,7 +226,9 @@ export async function handler(req: NextApiRequest) {
       },
     });
     if (!user) {
-      throw new HttpError({ message: "User not found", statusCode: 404 });
+      throw new HttpError({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      , statusCode: 404 });
     }
     args.where = buildWhereClause(userId, attendeeEmails, []);
   }
@@ -265,7 +267,9 @@ export async function handler(req: NextApiRequest) {
         };
         break;
       default:
-        throw new HttpError({ message: "Invalid status", statusCode: 400 });
+        throw new HttpError({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , statusCode: 400 });
     }
   }
 
@@ -371,7 +375,9 @@ const handleOrgWideAdminArgs = async ({
       memberUserIds: requestedUserIds,
     });
 
-    if (!accessibleUsersIds.length) throw new HttpError({ message: "No User found", statusCode: 404 });
+    if (!accessibleUsersIds.length) throw new HttpError({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , statusCode: 404 });
     const users = await prisma.user.findMany({
       where: { id: { in: accessibleUsersIds } },
       select: { email: true },

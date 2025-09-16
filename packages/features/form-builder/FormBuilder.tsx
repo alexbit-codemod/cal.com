@@ -432,21 +432,8 @@ function Options({
           {value?.map((option, index) => (
             <li key={index}>
               <div className="flex items-center">
-                <Input
-                  required
-                  value={option.label}
-                  onChange={(e) => {
-                    // Right now we use label of the option as the value of the option. It allows us to not separately lookup the optionId to know the optionValue
-                    // It has the same drawback that if the label is changed, the value of the option will change. It is not a big deal for now.
-                    value.splice(index, 1, {
-                      label: e.target.value,
-                      value: e.target.value.trim(),
-                    });
-                    onChange(value);
-                  }}
-                  readOnly={readOnly}
-                  placeholder={`Enter Option ${index + 1}`}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 {value.length > 2 && !readOnly && (
                   <Button
                     type="button"
@@ -469,15 +456,8 @@ function Options({
           ))}
         </ul>
         {!readOnly && (
-          <Button
-            color="minimal"
-            onClick={() => {
-              value.push({ label: "", value: "" });
-              onChange(value);
-            }}
-            StartIcon="plus">
-            Add an Option
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       </div>
     </div>
@@ -490,17 +470,8 @@ const CheckboxFieldLabel = ({ fieldForm }: { fieldForm: UseFormReturn<RhfFormFie
   return (
     <div className="mt-6">
       <Label>{t("label")}</Label>
-      <Editor
-        getText={() => md.render(fieldForm.getValues("label") || "")}
-        setText={(value: string) => {
-          fieldForm.setValue("label", turndown(value), { shouldDirty: true });
-        }}
-        excludedToolbarItems={["blockType", "bold", "italic"]}
-        disableLists
-        firstRender={firstRender}
-        setFirstRender={setFirstRender}
-        placeholder={t(fieldForm.getValues("defaultLabel") || "")}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 };
@@ -550,73 +521,30 @@ function FieldEditDialog({
       <DialogContent className="max-h-none" data-testid="edit-field-dialog" forceOverlayWhenNoModal={true}>
         <Form id="form-builder" form={fieldForm} handleSubmit={handleSubmit}>
           <div className="h-auto max-h-[85vh] overflow-auto">
-            <DialogHeader title={t("add_a_booking_question")} subtitle={t("booking_questions_description")} />
-            <SelectField
-              defaultValue={fieldTypesConfigMap.text}
-              data-testid="test-field-type"
-              id="test-field-type"
-              isDisabled={
-                fieldForm.getValues("editable") === "system" ||
-                fieldForm.getValues("editable") === "system-but-optional"
-              }
-              onChange={(e) => {
-                const value = e?.value;
-                if (!value) {
-                  return;
-                }
-                fieldForm.setValue("type", value, { shouldDirty: true });
-              }}
-              value={fieldTypesConfigMap[formFieldType]}
-              options={fieldTypes.filter((f) => !f.systemOnly)}
-              label={t("input_type")}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             {(() => {
               if (!variantsConfig) {
                 return (
                   <>
-                    <InputField
-                      required
-                      {...fieldForm.register("name")}
-                      containerClassName="mt-6"
-                      onChange={(e) => {
-                        fieldForm.setValue("name", getFieldIdentifier(e.target.value || ""), {
-                          shouldDirty: true,
-                        });
-                      }}
-                      disabled={
-                        fieldForm.getValues("editable") === "system" ||
-                        fieldForm.getValues("editable") === "system-but-optional"
-                      }
-                      label={t("identifier")}
-                    />
-                    <CheckboxField
-                      description={t("disable_input_if_prefilled")}
-                      {...fieldForm.register("disableOnPrefill", { setValueAs: Boolean })}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <div>
                       {formFieldType === "boolean" ? (
                         <CheckboxFieldLabel fieldForm={fieldForm} />
                       ) : (
-                        <InputField
-                          {...fieldForm.register("label")}
-                          // System fields have a defaultLabel, so there a label is not required
-                          required={
-                            !["system", "system-but-optional"].includes(fieldForm.getValues("editable") || "")
-                          }
-                          placeholder={t(fieldForm.getValues("defaultLabel") || "")}
-                          containerClassName="mt-6"
-                          label={t("label")}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       )}
                     </div>
 
                     {fieldType?.isTextType ? (
-                      <InputField
-                        {...fieldForm.register("placeholder")}
-                        containerClassName="mt-6"
-                        label={t("placeholder")}
-                        placeholder={t(fieldForm.getValues("defaultPlaceholder") || "")}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     ) : null}
                     {fieldType?.needsOptions && !fieldForm.getValues("getOptionsAt") ? (
                       <Controller
@@ -632,45 +560,13 @@ function FieldEditDialog({
                     ) : null}
 
                     {formFieldType === "email" && (
-                      <InputField
-                        {...fieldForm.register("requireEmails")}
-                        containerClassName="mt-6"
-                        onChange={(e) => {
-                          try {
-                            excludeOrRequireEmailSchema.parse(e.target.value);
-                            fieldForm.clearErrors("requireEmails");
-                          } catch (err) {
-                            if (err instanceof ZodError) {
-                              fieldForm.setError("requireEmails", {
-                                message: err.errors[0]?.message || "Invalid input",
-                              });
-                            }
-                          }
-                        }}
-                        label={t("require_emails_that_contain")}
-                        placeholder="gmail.com, hotmail.com, ..."
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
 
                     {formFieldType === "email" && (
-                      <InputField
-                        {...fieldForm.register("excludeEmails")}
-                        containerClassName="mt-6"
-                        onChange={(e) => {
-                          try {
-                            excludeOrRequireEmailSchema.parse(e.target.value);
-                            fieldForm.clearErrors("excludeEmails");
-                          } catch (err) {
-                            if (err instanceof ZodError) {
-                              fieldForm.setError("excludeEmails", {
-                                message: err.errors[0]?.message || "Invalid input",
-                              });
-                            }
-                          }
-                        }}
-                        label={t("exclude_emails_that_contain")}
-                        placeholder="gmail.com, hotmail.com, ..."
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
 
                     <Controller
@@ -681,15 +577,8 @@ function FieldEditDialog({
                           ? shouldConsiderRequired(fieldForm.getValues())
                           : value;
                         return (
-                          <BooleanToggleGroupField
-                            data-testid="field-required"
-                            disabled={fieldForm.getValues("editable") === "system"}
-                            value={isRequired}
-                            onValueChange={(val) => {
-                              onChange(val);
-                            }}
-                            label={t("required")}
-                          />
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                         );
                       }}
                     />
@@ -736,41 +625,10 @@ function FieldWithLengthCheckSupport({
 
   return (
     <div className={classNames("grid grid-cols-2 gap-4", className)} {...rest}>
-      <InputField
-        {...fieldForm.register("minLength", {
-          valueAsNumber: true,
-        })}
-        defaultValue={0}
-        containerClassName={containerClassName}
-        label={t("min_characters")}
-        type="number"
-        onChange={(e) => {
-          fieldForm.setValue("minLength", parseInt(e.target.value ?? 0));
-          // Ensure that maxLength field adjusts its restrictions
-          fieldForm.trigger("maxLength");
-        }}
-        min={0}
-        max={fieldForm.getValues("maxLength") || maxAllowedMaxLength}
-      />
-      <InputField
-        {...fieldForm.register("maxLength", {
-          valueAsNumber: true,
-        })}
-        defaultValue={maxAllowedMaxLength}
-        containerClassName={containerClassName}
-        label={t("max_characters")}
-        type="number"
-        onChange={(e) => {
-          if (!supportsLengthCheck) {
-            return;
-          }
-          fieldForm.setValue("maxLength", parseInt(e.target.value ?? maxAllowedMaxLength));
-          // Ensure that minLength field adjusts its restrictions
-          fieldForm.trigger("minLength");
-        }}
-        min={fieldForm.getValues("minLength") || 0}
-        max={maxAllowedMaxLength}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 }
@@ -855,35 +713,17 @@ function VariantFields({
   return (
     <>
       {supportsVariantToggle ? (
-        <Switch
-          checked={!isDefaultVariant}
-          label={variantToggleLabel}
-          data-testid="variant-toggle"
-          onCheckedChange={(checked) => {
-            fieldForm.setValue("variant", checked ? otherVariant : defaultVariant);
-          }}
-          classNames={{ container: "mt-2" }}
-          tooltip={t("Toggle Variant")}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       ) : (
         <VariantSelector />
       )}
 
-      <InputField
-        required
-        {...fieldForm.register("name")}
-        containerClassName="mt-6"
-        disabled={
-          fieldForm.getValues("editable") === "system" ||
-          fieldForm.getValues("editable") === "system-but-optional"
-        }
-        label={t("identifier")}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <CheckboxField
-        description={t("disable_input_if_prefilled")}
-        {...fieldForm.register("disableOnPrefill", { setValueAs: Boolean })}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
       <ul
         className={classNames(
@@ -905,36 +745,18 @@ function VariantFields({
                   <span className="text-muted">{f.name}</span>
                 </Label>
               )}
-              <InputField
-                {...fieldForm.register(`${rhfVariantFieldPrefix}.label`)}
-                value={f.label || ""}
-                placeholder={t(appUiFieldConfig?.defaultLabel || "")}
-                containerClassName="mt-6"
-                label={t("label")}
-              />
-              <InputField
-                {...fieldForm.register(`${rhfVariantFieldPrefix}.placeholder`)}
-                key={f.name}
-                value={f.placeholder || ""}
-                containerClassName="mt-6"
-                label={t("placeholder")}
-                placeholder={t(appUiFieldConfig?.defaultPlaceholder || "")}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
 
               <Controller
                 name={`${rhfVariantFieldPrefix}.required`}
                 control={fieldForm.control}
                 render={({ field: { onChange } }) => {
                   return (
-                    <BooleanToggleGroupField
-                      data-testid="field-required"
-                      disabled={!appUiFieldConfig?.canChangeRequirability}
-                      value={f.required}
-                      onValueChange={(val) => {
-                        onChange(val);
-                      }}
-                      label={t("required")}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   );
                 }}
               />

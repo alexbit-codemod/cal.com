@@ -6,7 +6,9 @@ import { SkipTakePagination } from "@calcom/platform-types";
 export class GetManagedOrganizationsInput_2024_08_13 extends SkipTakePagination {
   @IsOptional()
   @IsString()
-  @ApiProperty({ example: "organization-slug", description: "The slug of the managed organization" })
+  @ApiProperty({ example: "organization-slug", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   slug?: string;
 
   @IsOptional()
@@ -14,7 +16,9 @@ export class GetManagedOrganizationsInput_2024_08_13 extends SkipTakePagination 
   @ApiProperty({
     example: "metadata-key",
     description:
-      "The key of the metadata - it is case sensitive so provide exactly as stored. If you provide it then you must also provide metadataValue",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   metadataKey?: string;
 
@@ -23,7 +27,9 @@ export class GetManagedOrganizationsInput_2024_08_13 extends SkipTakePagination 
   @ApiProperty({
     example: "metadata-value",
     description:
-      "The value of the metadata - it is case sensitive so provide exactly as stored. If you provide it then you must also provide metadataKey",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   metadataValue?: string;
 }

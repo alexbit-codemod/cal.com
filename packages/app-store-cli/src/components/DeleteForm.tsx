@@ -38,12 +38,10 @@ export default function DeleteForm({ slug, action }: { slug: string; action: "de
   if (state === "INITIALIZED") {
     return (
       <>
-        <ImportantText>
-          Type below the slug of the {isTemplate ? "Template" : "App"} that you want to delete.
-        </ImportantText>
-        <Text color="gray" italic>
-          It would cleanup the app directory and App table and Credential table.
-        </Text>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <TextInput
           value={confirmedAppSlug}
           onSubmit={(value) => {

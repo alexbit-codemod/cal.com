@@ -41,7 +41,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     });
 
-    if (credentialExistsWithInputPassword) return res.status(409).json({ message: "account_already_linked" });
+    if (credentialExistsWithInputPassword) return res.status(409).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
     const data = {
       type: "apple_calendar",
@@ -72,7 +74,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     } catch (reason) {
       logger.error("Could not add this apple calendar account", reason);
-      return res.status(500).json({ message: "unable_to_add_apple_calendar" });
+      return res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     return res

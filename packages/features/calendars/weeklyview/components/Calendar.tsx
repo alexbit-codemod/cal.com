@@ -154,8 +154,10 @@ const MobileNotSupported = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div className="flex h-full flex-col items-center justify-center sm:hidden">
-        <h1 className="text-2xl font-bold">Mobile not supported yet </h1>
-        <p className="text-subtle">Please use a desktop browser to view this page</p>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <div className="hidden h-full sm:block">{children}</div>
     </>

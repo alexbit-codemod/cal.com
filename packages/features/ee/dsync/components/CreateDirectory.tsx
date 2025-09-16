@@ -66,34 +66,16 @@ const CreateDirectory = ({ orgId }: { orgId: number | null }) => {
                 control={form.control}
                 name="name"
                 render={({ field: { value } }) => (
-                  <TextField
-                    name="title"
-                    label={t("directory_name")}
-                    value={value}
-                    onChange={(e) => {
-                      form.setValue("name", e?.target.value);
-                    }}
-                    type="text"
-                    required
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
               />
               <Controller
                 control={form.control}
                 name="provider"
                 render={() => (
-                  <SelectField
-                    name="provider"
-                    label={t("directory_provider")}
-                    options={directoryProviders}
-                    placeholder={t("choose_directory_provider")}
-                    defaultValue={directoryProviders[0]}
-                    onChange={(option) => {
-                      if (option) {
-                        form.setValue("provider", option.value);
-                      }
-                    }}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
               />
             </fieldset>

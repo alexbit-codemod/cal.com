@@ -184,7 +184,8 @@ export const MeetingSessionDetailsDialog = (props: IMeetingSessionDetailsDialog)
   return (
     <Dialog open={isOpenDialog} onOpenChange={setIsOpenDialog}>
       <DialogContent enableOverflow>
-        <DialogHeader title={t("meeting_session_details")} subtitle={subtitle} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         {roomName ? (
           <Suspense fallback={<MeetingSessionDetailsSkeleton />}>
             <MeetingSessionDetailsList roomName={roomName} />

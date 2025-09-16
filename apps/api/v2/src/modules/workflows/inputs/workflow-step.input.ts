@@ -85,7 +85,9 @@ export type RecipientType = (typeof RECIPIENT_TYPES)[number];
 
 export class BaseWorkflowMessageDto {
   @ApiProperty({
-    description: "Subject of the message",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Reminder: Your Meeting {EVENT_NAME} - {EVENT_DATE_ddd, MMM D, YYYY h:mma} with Cal.com",
   })
   @IsString()
@@ -94,7 +96,9 @@ export class BaseWorkflowMessageDto {
 
 export class HtmlWorkflowMessageDto extends BaseWorkflowMessageDto {
   @ApiProperty({
-    description: "HTML content of the message (used for Emails)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example:
       "<p>This is a reminder from {ORGANIZER} of {EVENT_NAME} to {ATTENDEE} starting here  {LOCATION} {MEETING_URL} at {START_TIME_h:mma} {TIMEZONE}.</p>",
   })
@@ -104,7 +108,9 @@ export class HtmlWorkflowMessageDto extends BaseWorkflowMessageDto {
 
 export class TextWorkflowMessageDto extends BaseWorkflowMessageDto {
   @ApiProperty({
-    description: "Text content of the message (used for SMS)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example:
       "This is a reminder message from {ORGANIZER} of {EVENT_NAME} to {ATTENDEE} starting here {LOCATION} {MEETING_URL} at {START_TIME_h:mma} {TIMEZONE}.",
   })
@@ -113,29 +119,41 @@ export class TextWorkflowMessageDto extends BaseWorkflowMessageDto {
 }
 
 export class BaseWorkflowStepDto {
-  @ApiProperty({ description: "Action to perform", example: EMAIL_HOST, enum: STEP_ACTIONS })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: EMAIL_HOST, enum: STEP_ACTIONS })
   @IsString()
   @IsIn(STEP_ACTIONS)
   action!: StepAction;
 
-  @ApiProperty({ description: "Step number in the workflow sequence", example: 1 })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 1 })
   @IsNumber()
   stepNumber!: number;
 
-  @ApiProperty({ description: "Recipient type", example: ATTENDEE, enum: RECIPIENT_TYPES })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: ATTENDEE, enum: RECIPIENT_TYPES })
   recipient!: RecipientType;
 
-  @ApiProperty({ description: "Template type for the step", example: REMINDER, enum: TEMPLATES })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: REMINDER, enum: TEMPLATES })
   template!: TemplateType;
 
-  @ApiProperty({ description: "Displayed sender name.", type: String })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: String })
   @IsString()
   sender!: string;
 }
 
 export class WorkflowEmailHostStepDto extends BaseWorkflowStepDto {
   @ApiProperty({
-    description: "Action to perform, send an email to the host of the event",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: EMAIL_HOST,
     enum: STEP_ACTIONS,
   })
@@ -144,13 +162,17 @@ export class WorkflowEmailHostStepDto extends BaseWorkflowStepDto {
   action: typeof EMAIL_HOST = EMAIL_HOST;
 
   @ApiProperty({
-    description: `Whether to include a calendar event in the notification, can be included with actions ${EMAIL_HOST}, ${EMAIL_ATTENDEE}, ${EMAIL_ADDRESS}`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()
   includeCalendarEvent = false;
 
-  @ApiProperty({ description: "Message content for this step", type: HtmlWorkflowMessageDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: HtmlWorkflowMessageDto })
   @ValidateNested()
   @Type(() => HtmlWorkflowMessageDto)
   message!: HtmlWorkflowMessageDto;
@@ -158,7 +180,9 @@ export class WorkflowEmailHostStepDto extends BaseWorkflowStepDto {
 
 export class WorkflowEmailAddressStepDto extends BaseWorkflowStepDto {
   @ApiProperty({
-    description: "Action to perform, send an email to a specific email address",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: EMAIL_ADDRESS,
     enum: STEP_ACTIONS,
   })
@@ -167,7 +191,9 @@ export class WorkflowEmailAddressStepDto extends BaseWorkflowStepDto {
   action: typeof EMAIL_ADDRESS = EMAIL_ADDRESS;
 
   @ApiProperty({
-    description: "Email address if recipient is EMAIL, required for action EMAIL_ADDRESS",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "31214",
     externalDocs: {
       url: "https://cal.com/docs/api-reference/v2/organization-team-verified-resources/verify-an-email-for-an-org-team",
@@ -177,13 +203,17 @@ export class WorkflowEmailAddressStepDto extends BaseWorkflowStepDto {
   verifiedEmailId!: number;
 
   @ApiProperty({
-    description: `Whether to include a calendar event in the notification, can be included with actions ${EMAIL_HOST}, ${EMAIL_ATTENDEE}, ${EMAIL_ADDRESS}`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()
   includeCalendarEvent = false;
 
-  @ApiProperty({ description: "Message content for this step", type: HtmlWorkflowMessageDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: HtmlWorkflowMessageDto })
   @ValidateNested()
   @Type(() => HtmlWorkflowMessageDto)
   message!: HtmlWorkflowMessageDto;
@@ -191,7 +221,9 @@ export class WorkflowEmailAddressStepDto extends BaseWorkflowStepDto {
 
 export class WorkflowEmailAttendeeStepDto extends BaseWorkflowStepDto {
   @ApiProperty({
-    description: "Action to perform, send an email to the attendees of the event",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: EMAIL_ATTENDEE,
     enum: STEP_ACTIONS,
   })
@@ -200,13 +232,17 @@ export class WorkflowEmailAttendeeStepDto extends BaseWorkflowStepDto {
   action: typeof EMAIL_ATTENDEE = EMAIL_ATTENDEE;
 
   @ApiProperty({
-    description: `Whether to include a calendar event in the notification, can be included with actions ${EMAIL_HOST}, ${EMAIL_ATTENDEE}, ${EMAIL_ADDRESS}`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()
   includeCalendarEvent = false;
 
-  @ApiProperty({ description: "Message content for this step", type: HtmlWorkflowMessageDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: HtmlWorkflowMessageDto })
   @ValidateNested()
   @Type(() => HtmlWorkflowMessageDto)
   message!: HtmlWorkflowMessageDto;
@@ -214,7 +250,9 @@ export class WorkflowEmailAttendeeStepDto extends BaseWorkflowStepDto {
 
 export class WorkflowPhoneWhatsAppNumberStepDto extends BaseWorkflowStepDto {
   @ApiProperty({
-    description: "Action to perform, send a text message via whatsapp to a specific phone number",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: WHATSAPP_NUMBER,
   })
   @IsString()
@@ -223,7 +261,9 @@ export class WorkflowPhoneWhatsAppNumberStepDto extends BaseWorkflowStepDto {
 
   @ApiProperty({
     description:
-      "Phone number if recipient is PHONE_NUMBER, required for actions SMS_NUMBER and WHATSAPP_NUMBER",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "3243434",
     externalDocs: {
       url: "https://cal.com/docs/api-reference/v2/organization-team-verified-resources/verify-a-phone-number-for-an-org-team",
@@ -232,7 +272,9 @@ export class WorkflowPhoneWhatsAppNumberStepDto extends BaseWorkflowStepDto {
   @IsNumber()
   verifiedPhoneId!: number;
 
-  @ApiProperty({ description: "Message content for this step", type: TextWorkflowMessageDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: TextWorkflowMessageDto })
   @ValidateNested()
   @Type(() => TextWorkflowMessageDto)
   message!: TextWorkflowMessageDto;
@@ -240,7 +282,9 @@ export class WorkflowPhoneWhatsAppNumberStepDto extends BaseWorkflowStepDto {
 
 export class WorkflowPhoneAttendeeStepDto extends BaseWorkflowStepDto {
   @ApiProperty({
-    description: "Action to perform, send a text message to the phone numbers of the attendees",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: SMS_ATTENDEE,
   })
   @IsString()
@@ -249,13 +293,17 @@ export class WorkflowPhoneAttendeeStepDto extends BaseWorkflowStepDto {
 
   @ApiProperty({
     description:
-      "Phone number if recipient is PHONE_NUMBER, required for actions SMS_NUMBER and WHATSAPP_NUMBER",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "3243434",
     externalDocs: {
       url: "https://cal.com/docs/api-reference/v2/organization-team-verified-resources/verify-a-phone-number-for-an-org-team",
     },
   })
-  @ApiProperty({ description: "Message content for this step", type: TextWorkflowMessageDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: TextWorkflowMessageDto })
   @ValidateNested()
   @Type(() => TextWorkflowMessageDto)
   message!: TextWorkflowMessageDto;
@@ -263,7 +311,9 @@ export class WorkflowPhoneAttendeeStepDto extends BaseWorkflowStepDto {
 
 export class WorkflowPhoneNumberStepDto extends BaseWorkflowStepDto {
   @ApiProperty({
-    description: "Action to perform, send a text message to a specific phone number",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: SMS_NUMBER,
   })
   @IsString()
@@ -272,7 +322,9 @@ export class WorkflowPhoneNumberStepDto extends BaseWorkflowStepDto {
 
   @ApiProperty({
     description:
-      "Phone number if recipient is PHONE_NUMBER, required for actions SMS_NUMBER and WHATSAPP_NUMBER",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "3243434",
     externalDocs: {
       url: "https://cal.com/docs/api-reference/v2/organization-team-verified-resources/verify-a-phone-number-for-an-org-team",
@@ -281,21 +333,27 @@ export class WorkflowPhoneNumberStepDto extends BaseWorkflowStepDto {
   @IsNumber()
   verifiedPhoneId!: number;
 
-  @ApiProperty({ description: "Message content for this step", type: TextWorkflowMessageDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: TextWorkflowMessageDto })
   @ValidateNested()
   @Type(() => TextWorkflowMessageDto)
   message!: TextWorkflowMessageDto;
 }
 
 export class WorkflowPhoneWhatsAppAttendeeStepDto extends BaseWorkflowStepDto {
-  @ApiProperty({ description: "Action to perform", example: WHATSAPP_ATTENDEE })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: WHATSAPP_ATTENDEE })
   @IsString()
   @IsIn(STEP_ACTIONS)
   action: typeof WHATSAPP_ATTENDEE = WHATSAPP_ATTENDEE;
 
   @ApiProperty({
     description:
-      "Message content for this step, send a text message via whatsapp to the phone numbers of the attendees",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: TextWorkflowMessageDto,
   })
   @ValidateNested()

@@ -86,7 +86,9 @@ test.describe("user with a special character in the username", () => {
       username: "ßenny", // ß is a special character
       eventTypes: [
         {
-          title: "15 min",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "15-min",
           length: 15,
         },
@@ -608,7 +610,9 @@ test.describe("Event type with disabled cancellation and rescheduling", () => {
       name: `Test-user-${randomString(4)}`,
       eventTypes: [
         {
-          title: "No Cancel No Reschedule",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "no-cancel-no-reschedule",
           length: 30,
           disableCancelling: true,
@@ -674,7 +678,9 @@ test("Should throw error when both seatsPerTimeSlot and recurringEvent are set",
     name: `Test-user-${randomString(4)}`,
     eventTypes: [
       {
-        title: "Seats With Recurrence",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "seats-with-recurrence",
         length: 30,
         seatsPerTimeSlot: 3,

@@ -24,16 +24,8 @@ export const HelpCards = () => {
 
           return (
             <div key={card.title}>
-              <Card
-                icon={<Icon name={card.icon} className="h-5 w-5 text-green-700" />}
-                variant={card.variant}
-                title={title}
-                description={description}
-                actionButton={{
-                  href: `${card.actionButton.href}`,
-                  child: actionButtonChild,
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           );
         })}

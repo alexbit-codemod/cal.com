@@ -27,14 +27,18 @@ export class CallService {
     if (!data.from_number?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "From phone number is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (!data.to_number?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "To phone number is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -52,7 +56,9 @@ export class CallService {
       });
       throw new HttpError({
         statusCode: 500,
-        message: `Failed to create phone call from ${data.from_number} to ${data.to_number}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -71,7 +77,9 @@ export class CallService {
     if (!agentId?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "Agent ID is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -86,7 +94,9 @@ export class CallService {
     if (!toNumber) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is required for test call",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -98,7 +108,9 @@ export class CallService {
     if (!agent) {
       throw new HttpError({
         statusCode: 404,
-        message: "Agent not found or you don't have permission to use it.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -107,7 +119,9 @@ export class CallService {
     if (!agentPhoneNumber) {
       throw new HttpError({
         statusCode: 400,
-        message: "Agent must have a phone number assigned to make calls.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -119,7 +133,9 @@ export class CallService {
     return {
       callId: call.call_id,
       status: call.call_status,
-      message: `Call initiated to ${toNumber} with call_id ${call.call_id}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
 
@@ -138,7 +154,9 @@ export class CallService {
       if (availableCredits < MIN_CREDIT_REQUIRED_FOR_TEST_CALL) {
         throw new HttpError({
           statusCode: 403,
-          message: `Insufficient credits to make test call. Need ${MIN_CREDIT_REQUIRED_FOR_TEST_CALL} credits, have ${availableCredits}. Please purchase more credits.`,
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     } catch (error) {
@@ -154,7 +172,9 @@ export class CallService {
       });
       throw new HttpError({
         statusCode: 500,
-        message: "Unable to validate credits. Please try again.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }

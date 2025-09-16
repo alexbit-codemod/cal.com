@@ -122,27 +122,8 @@ export const EventWebhooksTab = ({ eventType }: Pick<EventTypeSetupProps, "event
             <div>
               <>
                 {(isManagedEventType || isChildrenManagedEventType) && (
-                  <Alert
-                    severity={webhooksDisableProps.isLocked ? "neutral" : "info"}
-                    className="mb-2"
-                    title={
-                      <ServerTrans
-                        t={t}
-                        i18nKey={`${lockedText}_${isManagedEventType ? "for_members" : "by_team_admins"}`}
-                      />
-                    }
-                    actions={
-                      <div className="flex h-full items-center">{webhooksDisableProps.LockedIcon}</div>
-                    }
-                    message={
-                      <ServerTrans
-                        t={t}
-                        i18nKey={`webhooks_${lockedText}_${
-                          isManagedEventType ? "for_members" : "by_team_admins"
-                        }_description`}
-                      />
-                    }
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
                 {webhooks.length ? (
                   <>
@@ -185,32 +166,16 @@ export const EventWebhooksTab = ({ eventType }: Pick<EventTypeSetupProps, "event
                           t={t}
                           i18nKey="edit_or_manage_webhooks"
                           components={[
-                            <Link
-                              key="edit_or_manage_webhooks"
-                              className="cursor-pointer font-semibold underline"
-                              href="/settings/developer/webhooks">
-                              webhooks settings
-                            </Link>,
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$,
                           ]}
                         />
                       </p>
                     </div>
                   </>
                 ) : (
-                  <EmptyScreen
-                    Icon="webhook"
-                    headline={t("create_your_first_webhook")}
-                    description={t("first_event_type_webhook_description")}
-                    buttonRaw={
-                      cannotEditWebhooks ? (
-                        <Button StartIcon="lock" color="secondary" disabled>
-                          {t("locked_by_team_admin")}
-                        </Button>
-                      ) : (
-                        <NewWebhookButton />
-                      )
-                    }
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
               </>
             </div>

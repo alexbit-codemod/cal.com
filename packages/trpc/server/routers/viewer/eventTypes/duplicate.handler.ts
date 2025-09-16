@@ -230,9 +230,13 @@ export const duplicateHandler = async ({ ctx, input }: DuplicateOptions) => {
       // unique constraint violation
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: "Unique constraint violation while creating a duplicate event.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
-    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: `Error duplicating event type ${error}` });
+    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };

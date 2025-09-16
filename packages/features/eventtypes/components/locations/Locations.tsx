@@ -125,17 +125,8 @@ const LocationInput = (props: {
         defaultValue={defaultValue}
         render={({ field: { onChange, value } }) => {
           return (
-            <Input
-              name={`locations[${index}].${eventLocationType.defaultValueVariable}`}
-              placeholder={t(eventLocationType.organizerInputPlaceholder || "")}
-              type="text"
-              required
-              onChange={onChange}
-              value={value}
-              {...(disableLocationProp ? { disabled: true } : {})}
-              className={classNames("my-0", customClassNames?.addressInput)}
-              {...rest}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           );
         }}
       />
@@ -149,16 +140,8 @@ const LocationInput = (props: {
         defaultValue={defaultValue}
         render={({ field: { onChange, value } }) => {
           return (
-            <PhoneInput
-              required
-              disabled={disableLocationProp}
-              placeholder={t(eventLocationType.organizerInputPlaceholder || "")}
-              name={`locations[${index}].${eventLocationType.defaultValueVariable}`}
-              className={customClassNames?.phoneInput}
-              value={value}
-              onChange={onChange}
-              {...rest}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           );
         }}
       />
@@ -266,59 +249,8 @@ const Locations: React.FC<LocationsProps> = ({
           return (
             <li key={field.id}>
               <div className="flex w-full items-center">
-                <LocationSelect
-                  name={`locations[${index}].type`}
-                  placeholder={t("select")}
-                  options={locationOptions}
-                  isDisabled={disableLocationProp}
-                  defaultValue={option}
-                  isSearchable={false}
-                  className={classNames(
-                    "block min-w-0 flex-1 rounded-sm text-sm",
-                    customClassNames?.locationSelect?.selectWrapper
-                  )}
-                  customClassNames={customClassNames?.locationSelect}
-                  menuPlacement="auto"
-                  onChange={(e: SingleValueLocationOption) => {
-                    setShowEmptyLocationSelect(false);
-                    if (e?.value) {
-                      const newLocationType = e.value;
-                      const eventLocationType = getEventLocationType(newLocationType);
-                      if (!eventLocationType) {
-                        return;
-                      }
-                      const canAddLocation =
-                        eventLocationType.organizerInputType ||
-                        !validLocations?.find((location) => location.type === newLocationType);
-
-                      const shouldUpdateLink =
-                        eventLocationType?.organizerInputType === "text" &&
-                        eventLocationType.defaultValueVariable === "link";
-
-                      if (canAddLocation) {
-                        updateLocationField(index, {
-                          type: newLocationType,
-                          ...(e.credentialId && {
-                            credentialId: e.credentialId,
-                            teamName: e.teamName ?? undefined,
-                          }),
-                          ...(shouldUpdateLink && {
-                            link: "",
-                          }),
-                        });
-                      } else {
-                        updateLocationField(index, {
-                          type: field.type,
-                          ...(field.credentialId && {
-                            credentialId: field.credentialId,
-                            teamName: field.teamName ?? undefined,
-                          }),
-                        });
-                        showToast(t("location_already_exists"), "warning");
-                      }
-                    }
-                  }}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 {!(disableLocationProp && isChildrenManagedEventType) && (
                   <button
                     data-testid={`delete-locations.${index}.type`}
@@ -379,22 +311,8 @@ const Locations: React.FC<LocationsProps> = ({
                       "ml-6",
                       customClassNames?.organizerContactInput?.publicDisplayCheckbox?.container
                     )}>
-                    <CheckboxField
-                      name={`locations[${index}].displayLocationPublicly`}
-                      data-testid="display-location"
-                      disabled={disableLocationProp}
-                      defaultChecked={defaultLocation?.displayLocationPublicly}
-                      description={t("display_location_label")}
-                      className={customClassNames?.organizerContactInput?.publicDisplayCheckbox?.checkbox}
-                      onChange={(e) => {
-                        const fieldValues = getValues("locations")[index];
-                        updateLocationField(index, {
-                          ...fieldValues,
-                          displayLocationPublicly: e.target.checked,
-                        });
-                      }}
-                      informationIconText={t("display_location_info_badge")}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 </div>
               )}
@@ -403,49 +321,8 @@ const Locations: React.FC<LocationsProps> = ({
         })}
         {(validLocations.length === 0 || showEmptyLocationSelect) && (
           <div className="flex">
-            <LocationSelect
-              defaultMenuIsOpen={showEmptyLocationSelect}
-              placeholder={t("select")}
-              options={locationOptions}
-              value={selectedNewOption}
-              isDisabled={disableLocationProp}
-              defaultValue={defaultValue}
-              isSearchable={false}
-              className={classNames(
-                "block w-full min-w-0 flex-1 rounded-sm text-sm",
-                customClassNames?.locationSelect?.selectWrapper
-              )}
-              customClassNames={customClassNames?.locationSelect}
-              menuPlacement="auto"
-              onChange={(e: SingleValueLocationOption) => {
-                setShowEmptyLocationSelect(false);
-                if (e?.value) {
-                  const newLocationType = e.value;
-                  const eventLocationType = getEventLocationType(newLocationType);
-                  if (!eventLocationType) {
-                    return;
-                  }
-
-                  const canAppendLocation =
-                    eventLocationType.organizerInputType ||
-                    !validLocations.find((location) => location.type === newLocationType);
-
-                  if (canAppendLocation) {
-                    append({
-                      type: newLocationType,
-                      ...(e.credentialId && {
-                        credentialId: e.credentialId,
-                        teamName: e.teamName ?? undefined,
-                      }),
-                    });
-                    setSelectedNewOption(e);
-                  } else {
-                    showToast(t("location_already_exists"), "warning");
-                    setSelectedNewOption(null);
-                  }
-                }
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         )}
         {validLocations.some(
@@ -461,12 +338,8 @@ const Locations: React.FC<LocationsProps> = ({
                 t={t}
                 i18nKey="event_type_requires_google_calendar"
                 components={[
-                  <Link
-                    key="event_type_requires_google_calendar"
-                    className="cursor-pointer text-blue-500 underline"
-                    href="/apps/google-calendar">
-                    here
-                  </Link>,
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$,
                 ]}
               />
             </p>
@@ -502,12 +375,8 @@ const Locations: React.FC<LocationsProps> = ({
             t={t}
             i18nKey="cant_find_the_right_conferencing_app_visit_our_app_store"
             components={[
-              <Link
-                key="cant_find_the_right_conferencing_app_visit_our_app_store"
-                className="cursor-pointer text-blue-500 underline"
-                href="/apps/categories/conferencing">
-                App Store
-              </Link>,
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$,
             ]}
           />
         </p>

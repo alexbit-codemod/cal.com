@@ -20,7 +20,9 @@ const validateRequest = (req: NextRequest) => {
   const url = new URL(req.url);
   const apiKey = req.headers.get("authorization") || url.searchParams.get("apiKey");
   if (![process.env.CRON_API_KEY, `Bearer ${process.env.CRON_SECRET}`].includes(`${apiKey}`)) {
-    throw new HttpError({ statusCode: 401, message: "Unauthorized" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 
@@ -32,7 +34,9 @@ export async function handleCreateCredentials() {
 
   if (!delegationCredentials.length) {
     return {
-      message: "No enabled delegation credentials found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       success: 0,
       failures: 0,
     };
@@ -118,7 +122,9 @@ async function handleDeleteCredentials() {
 
   if (!delegationCredentials.length) {
     return {
-      message: "No disabled delegation credentials found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       success: 0,
       failures: 0,
     };
@@ -156,12 +162,16 @@ const handler = async (request: NextRequest) => {
     if (r.status === "fulfilled") {
       return {
         ...r.value,
-        message: `Successfully executed ${index === 0 ? "create" : "delete"} credentials`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
     }
     return {
       ...r.reason,
-      message: `Failed to execute ${index === 0 ? "create" : "delete"} credentials`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   });
   return NextResponse.json(response);

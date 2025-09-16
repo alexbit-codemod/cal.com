@@ -141,9 +141,13 @@ describe("Event types Endpoints", () => {
 
     it("should create an event type", async () => {
       const body: CreateEventTypeInput_2024_04_15 = {
-        title: "Test Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `event-types-event-type-${randomString()}`,
-        description: "A description of the test event type.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 60,
         hidden: false,
         disableGuests: true,
@@ -180,7 +184,9 @@ describe("Event types Endpoints", () => {
     });
 
     it("should update event type", async () => {
-      const newTitle = "Updated title";
+      const newTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       const body: UpdateEventTypeInput_2024_04_15 = {
         title: newTitle,
@@ -251,14 +257,20 @@ describe("Event types Endpoints", () => {
         {
           name: bookingFieldName,
           type: BaseField.radio,
-          label: "Location",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           options: [
             {
-              label: "Via Bari 10, Roma, 90119, Italy",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Via Bari 10, Roma, 90119, Italy",
             },
             {
-              label: "Via Reale 28, Roma, 9001, Italy",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Via Reale 28, Roma, 9001, Italy",
             },
           ],
@@ -266,7 +278,9 @@ describe("Event types Endpoints", () => {
             {
               id: "user",
               type: "user",
-              label: "User",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               fieldRequired: true,
             },
           ],

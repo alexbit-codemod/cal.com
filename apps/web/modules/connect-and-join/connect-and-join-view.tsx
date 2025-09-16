@@ -51,24 +51,9 @@ function ConnectAndJoin() {
   return (
     <div className="mx-8 mt-12 block items-start sm:flex">
       {session ? (
-        <EmptyScreen
-          headline={t("instant_tab_title")}
-          Icon="phone-call"
-          description={t("uprade_to_create_instant_bookings")}
-          buttonRaw={
-            <div className="flex flex-col items-center justify-center	gap-4">
-              {meetingUrl ? (
-                <div className="text-default flex flex-col items-center gap-2 text-center text-sm font-normal">
-                  <ServerTrans
-                    t={t}
-                    i18nKey="some_other_host_already_accepted_the_meeting"
-                    components={[
-                      <Link
-                        key="continue-to-meeting-link"
-                        className="inline-block cursor-pointer underline"
-                        href={meetingUrl}>
-                        Continue to Meeting
-                      </Link>,
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$,
                     ]}
                   />
                 </div>

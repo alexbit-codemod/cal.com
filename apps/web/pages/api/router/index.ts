@@ -18,7 +18,9 @@ export default defaultHandler({
       res.setHeader("Access-Control-Allow-Origin", "*");
       const routedUrlData = await getRoutedUrl({ req, query: { ...params } });
       if (routedUrlData?.notFound) {
-        return res.status(404).json({ status: "error", data: { message: "Form not found" } });
+        return res.status(404).json({ status: "error", data: { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         } });
       }
 
       if (routedUrlData?.redirect?.destination) {
@@ -37,7 +39,9 @@ export default defaultHandler({
 
       return res
         .status(500)
-        .json({ status: "error", data: { message: "Neither Route nor custom message found." } });
+        .json({ status: "error", data: { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         } });
     }),
   }),
 });

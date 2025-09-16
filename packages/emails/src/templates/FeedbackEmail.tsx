@@ -10,10 +10,14 @@ export interface Feedback {
 export const FeedbackEmail = (props: Feedback & Partial<React.ComponentProps<typeof BaseEmailHtml>>) => {
   return (
     <BaseEmailHtml subject="Feedback" title="Feedback">
-      <Info label="Username" description={props.username} withSpacer />
-      <Info label="Email" description={props.email} withSpacer />
-      <Info label="Rating" description={props.rating} withSpacer />
-      <Info label="Comment" description={props.comment} withSpacer />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </BaseEmailHtml>
   );
 };

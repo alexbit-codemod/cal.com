@@ -12,18 +12,18 @@ export const BasicExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-2">
-        <Button onClick={() => setOpen(true)}>Open Basic Dialog</Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent
             title="Basic Dialog"
             description="This is a basic dialog with a title and description.">
-            <p className="text-default text-sm">
-              Dialogs are used to display content that requires user attention or interaction. They appear
-              above the page content and must be closed before interacting with the page again.
-            </p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DialogFooter>
               <DialogClose />
-              <Button>Action</Button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </DialogFooter>
           </DialogContent>
         </Dialog>

@@ -167,32 +167,20 @@ export function AllApps({ apps, searchText, categories, userAdminTeams }: AllApp
 
   return (
     <div>
-      <CategoryTab
-        selectedCategory={selectedCategory}
-        searchText={searchText}
-        categories={categories}
-        onCategoryChange={handleCategoryChange}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {filteredApps.length ? (
         <div
           className="grid gap-3 lg:grid-cols-4 [@media(max-width:1270px)]:grid-cols-3 [@media(max-width:500px)]:grid-cols-1 [@media(max-width:730px)]:grid-cols-1"
           ref={appsContainerRef}>
           {filteredApps.map((app) => (
-            <AppCard
-              key={app.name}
-              app={app}
-              searchText={searchText}
-              credentials={app.credentials}
-              userAdminTeams={userAdminTeams}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ))}{" "}
         </div>
       ) : (
-        <EmptyScreen
-          Icon="search"
-          headline={t("no_results")}
-          description={searchText ? searchText?.toString() : ""}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </div>
   );

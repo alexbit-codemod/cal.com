@@ -21,13 +21,7 @@ export function OrgBanner(props: OrgBannerProps) {
     return <div className={classNames("bg-muted", props.className)}>{props.fallback}</div>;
   }
   return (
-    <Image
-      data-testid={props?.["data-testid"]}
-      src={imageSrc}
-      alt={alt}
-      className={props.className}
-      width={width}
-      height={height}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }

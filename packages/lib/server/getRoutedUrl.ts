@@ -245,7 +245,9 @@ const _getRoutedUrl = async (context: Pick<GetServerSidePropsContext, "query" | 
       ...pageProps,
       form: serializableForm,
       message: null,
-      errorMessage: "Unhandled type of action",
+      errorMessage: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   };
 };

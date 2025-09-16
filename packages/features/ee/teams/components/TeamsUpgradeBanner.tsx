@@ -30,18 +30,7 @@ export function TeamsUpgradeBanner({ data }: TeamsUpgradeBannerProps) {
   if (!membership) return null;
 
   return (
-    <TopBanner
-      text={t("team_upgrade_banner_description", { teamName: membership.team.name })}
-      variant="warning"
-      actions={
-        <button
-          className="border-b border-b-black"
-          onClick={() => {
-            publishTeamMutation.mutate({ teamId: membership.team.id });
-          }}>
-          {t("upgrade_banner_action")}
-        </button>
-      }
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }

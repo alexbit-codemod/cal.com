@@ -46,12 +46,16 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
     },
   });
 
-  if (!prevTeam) throw new TRPCError({ code: "NOT_FOUND", message: "Team not found." });
+  if (!prevTeam) throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   if (input.bookingLimits) {
     const isValid = validateIntervalLimitOrder(input.bookingLimits);
     if (!isValid)
-      throw new TRPCError({ code: "BAD_REQUEST", message: "Booking limits must be in ascending order." });
+      throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
   }
 
   const data: Prisma.TeamUpdateArgs["data"] = {

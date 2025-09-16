@@ -15,27 +15,36 @@ export const TableNewExampleComponent = () => (
   <TableNew>
     <TableHeader>
       <TableRow>
-        <TableHead>Header Column 1</TableHead>
-        <TableHead>Header Column 2</TableHead>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </TableRow>
     </TableHeader>
     <TableBody>
       <TableRow>
-        <TableCell>Row 1, Cell 1</TableCell>
-        <TableCell>Row 1, Cell 2</TableCell>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </TableRow>
       <TableRow>
-        <TableCell>Row 2, Cell 1</TableCell>
-        <TableCell>Row 2, Cell 2</TableCell>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </TableRow>
     </TableBody>
     <TableFooter>
       <TableRow>
-        <TableCell>Row 3(footer), Cell 1</TableCell>
-        <TableCell>Row 3(footer), Cell 2</TableCell>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </TableRow>
     </TableFooter>
-    <TableCaption>Table Caption</TableCaption>
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   </TableNew>
 );
 
@@ -43,18 +52,24 @@ export const TableExampleComponent = () => (
   <Table>
     <Table.Header>
       <Table.Row>
-        <Table.ColumnTitle>Title Column 1</Table.ColumnTitle>
-        <Table.ColumnTitle>Title Column 2</Table.ColumnTitle>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </Table.Row>
     </Table.Header>
     <Table.Body>
       <Table.Row>
-        <Table.Cell>Row 1, Cell 1</Table.Cell>
-        <Table.Cell>Row 1, Cell 2</Table.Cell>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </Table.Row>
       <Table.Row>
-        <Table.Cell>Row 2, Cell 1</Table.Cell>
-        <Table.Cell>Row 2, Cell 2</Table.Cell>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </Table.Row>
       <Table.Row>
         <TableActions

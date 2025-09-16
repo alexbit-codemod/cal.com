@@ -54,7 +54,9 @@ async function handler(request: NextRequest) {
     });
 
     const response = {
-      message: `Team created successfully. We also made user with ID=${checkoutSessionMetadata.ownerId} the owner of this team.`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       team: schemaTeamReadPublic.parse(finalizedTeam),
       owner: schemaMembershipPublic.parse(finalizedTeam.members[0]),
     };
@@ -78,21 +80,27 @@ async function getCheckoutSession(sessionId: string) {
   const checkoutSession = await stripe.checkout.sessions.retrieve(sessionId, {
     expand: ["subscription"],
   });
-  if (!checkoutSession) throw new HttpError({ statusCode: 404, message: "Checkout session not found" });
+  if (!checkoutSession) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   return checkoutSession;
 }
 
 function validateCheckoutSession(checkoutSession: Stripe.Response<Stripe.Checkout.Session>) {
   if (checkoutSession.payment_status !== "paid")
-    throw new HttpError({ statusCode: 402, message: "Payment required" });
+    throw new HttpError({ statusCode: 402, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 }
 
 function getCheckoutSessionSubscription(checkoutSession: Stripe.Response<Stripe.Checkout.Session>) {
   if (!checkoutSession.subscription) {
     throw new HttpError({
       statusCode: 400,
-      message: "Can't publish team/org without subscription",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -107,7 +115,9 @@ function getCheckoutSessionMetadata(
   if (!parseCheckoutSessionMetadata.success) {
     throw new HttpError({
       statusCode: 400,
-      message: `Incorrect metadata in checkout session. Error: ${parseCheckoutSessionMetadata.error}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

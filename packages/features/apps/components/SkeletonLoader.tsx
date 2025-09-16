@@ -4,7 +4,8 @@ import { SkeletonText } from "@calcom/ui/components/skeleton";
 export function SkeletonLoader({ className }: { className?: string }) {
   return (
     <>
-      <ShellSubHeading title={<div className="bg-subtle h-6 w-32" />} {...{ className }} />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <ul className="bg-default border-subtle divide-subtle -mx-4 animate-pulse divide-y rounded-md border sm:mx-0 sm:overflow-hidden">
         <SkeletonItem />
         <SkeletonItem />

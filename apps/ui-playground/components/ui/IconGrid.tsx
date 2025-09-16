@@ -163,11 +163,8 @@ const CopyMenu: React.FC<CopyMenuProps> = ({ name, onCopy }) => {
   return (
     <div className="absolute inset-2 flex items-center justify-center bg-black/10 opacity-0 transition-opacity group-hover:opacity-100">
       <div className="bg-default space-y-1 rounded-md p-2 shadow-lg">
-        <button
-          onClick={() => onCopy(`<Icon name="${name}" className="h-4 w-4" />`)}
-          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">
-          Copy Component
-        </button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );
@@ -342,13 +339,8 @@ export const IconGrid: React.FC<IconGridProps> = ({ className }) => {
       <Toaster position="bottom-right" />
       <div className={className}>
         <div className="mb-8">
-          <input
-            type="text"
-            placeholder="Search icons..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="border-subtle bg-default text-emphasis focus:ring-emphasis placeholder:text-subtle w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-2"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {filteredIcons.map((iconName) => (

@@ -55,7 +55,9 @@ export class PrismaExceptionFilter implements ExceptionFilter {
       ...userContext,
     });
 
-    let message = "There was an error, please try again later.";
+    let message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     let statusCode = HttpStatus.INTERNAL_SERVER_ERROR;
     let errorCode = INTERNAL_SERVER_ERROR;
     if (error instanceof PrismaClientKnownRequestError) {
@@ -63,17 +65,23 @@ export class PrismaExceptionFilter implements ExceptionFilter {
         case "P2002": // Unique constraint failed
           errorCode = CONFLICT;
           statusCode = HttpStatus.CONFLICT;
-          message = "Invalid Input: Trying to create a record that already exists.";
+          message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           break;
         case "P2025": // Record not found
           errorCode = NOT_FOUND;
           statusCode = HttpStatus.NOT_FOUND;
-          message = "Invalid Query: The requested record was not found.";
+          message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           break;
         case "P2003": // Foreign key constraint failed
           errorCode = BAD_REQUEST;
           statusCode = HttpStatus.BAD_REQUEST;
-          message = "Invalid input: The referenced data does not exist.";
+          message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           break;
         default:
           break;

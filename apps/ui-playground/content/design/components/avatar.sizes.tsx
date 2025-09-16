@@ -12,7 +12,8 @@ export const SizesExample: React.FC = () => (
     <div className="flex items-center gap-4">
       {sizes.map((size) => (
         <div key={size} className="flex flex-col items-center gap-2">
-          <Avatar size={size} alt={`${size} avatar`} imageSrc={sampleImage} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <span className="text-subtle text-xs">{size}</span>
         </div>
       ))}
@@ -20,7 +21,8 @@ export const SizesExample: React.FC = () => (
     <div className="mt-2 flex items-center gap-4">
       {sizes.map((size) => (
         <div key={size} className="flex flex-col items-center gap-2">
-          <Avatar size={size} alt={`${size} avatar`} imageSrc={sampleImage} shape="square" />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <span className="text-subtle text-xs">{size}</span>
         </div>
       ))}

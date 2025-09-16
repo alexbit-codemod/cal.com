@@ -791,7 +791,9 @@ export default class GoogleCalendarService implements Calendar {
         async () =>
           new AxiosLikeResponseToFetchResponse({
             status: 200,
-            statusText: "OK",
+            statusText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             data: {
               items: await this.getAllCalendars(calendar),
             },

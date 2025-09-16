@@ -75,8 +75,9 @@ function App() {
   }, []);
   return (
     <>
-      <h1>
-        There is <code>Cal</code> component below me
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$ component below me
       </h1>
       <Cal
         calOrigin="http://localhost:3000"

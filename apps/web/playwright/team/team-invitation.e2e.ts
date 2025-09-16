@@ -139,7 +139,9 @@ test.describe("Team", () => {
     users,
   }) => {
     const t = await localize("en");
-    const teamEventSlugAndTitle = "managed-event-test";
+    const teamEventSlugAndTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     const teamMatesObj = [{ name: "teammate-1" }, { name: "teammate-2" }];
     const teamOwner = await users.create(
       { name: `team-owner-${Date.now()}` },

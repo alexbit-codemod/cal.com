@@ -19,12 +19,16 @@ const appCredentialWebhookRequestBodySchema = z.object({
 
 async function postHandler(request: NextRequest) {
   if (!APP_CREDENTIAL_SHARING_ENABLED) {
-    return NextResponse.json({ message: "Credential sharing is not enabled" }, { status: 403 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 403 });
   }
 
   const secretHeader = request.headers.get(CREDENTIAL_SYNC_SECRET_HEADER_NAME);
   if (secretHeader !== CREDENTIAL_SYNC_SECRET) {
-    return NextResponse.json({ message: "Invalid credential sync secret" }, { status: 403 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 403 });
   }
 
   try {
@@ -40,7 +44,9 @@ async function postHandler(request: NextRequest) {
     const user = await prisma.user.findUnique({ where: { id: reqBody.userId } });
 
     if (!user) {
-      return NextResponse.json({ message: "User not found" }, { status: 404 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 404 });
     }
 
     const app = await prisma.app.findUnique({
@@ -49,14 +55,18 @@ async function postHandler(request: NextRequest) {
     });
 
     if (!app) {
-      return NextResponse.json({ message: "App not found" }, { status: 404 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 404 });
     }
 
     const appMetadata = appStoreMetadata[app.dirName as keyof typeof appStoreMetadata];
 
     if (!appMetadata) {
       return NextResponse.json(
-        { message: "App not found. Ensure that you have the correct app slug" },
+        { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         },
         { status: 404 }
       );
     }
@@ -85,7 +95,9 @@ async function postHandler(request: NextRequest) {
           key: keys,
         },
       });
-      return NextResponse.json({ message: `Credentials updated for userId: ${reqBody.userId}` });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     } else {
       await prisma.credential.create({
         data: {
@@ -95,11 +107,15 @@ async function postHandler(request: NextRequest) {
           type: appMetadata.type,
         },
       });
-      return NextResponse.json({ message: `Credentials created for userId: ${reqBody.userId}` });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
   } catch (error) {
     console.error("Error processing app credential webhook:", error);
-    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
   }
 }
 

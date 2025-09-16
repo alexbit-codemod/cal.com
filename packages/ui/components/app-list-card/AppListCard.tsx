@@ -67,11 +67,8 @@ export const AppListCard = (props: AppListCardProps & { highlight?: boolean }) =
       )}>
       <div className="flex items-start gap-x-3 px-4 py-4 sm:px-6">
         {logo ? (
-          <img
-            className={classNames(logo.includes("-dark") && "dark:invert", "h-10 w-10 flex-shrink-0")}
-            src={logo}
-            alt={`${title} logo`}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : null}
         <div className="flex min-w-0 grow flex-col gap-y-1">
           <div className="flex items-center gap-x-2">
@@ -81,7 +78,8 @@ export const AppListCard = (props: AppListCardProps & { highlight?: boolean }) =
             </h3>
             <div className="flex flex-shrink-0 items-center gap-x-2">
               {isDefault && <Badge variant="green">{t("default")}</Badge>}
-              {isTemplate && <Badge variant="red">Template</Badge>}
+              {isTemplate && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$}
             </div>
           </div>
           <ListItemText
@@ -102,12 +100,8 @@ export const AppListCard = (props: AppListCardProps & { highlight?: boolean }) =
           <div className="flex-shrink-0">
             <Badge variant="gray">
               <div className="flex items-center">
-                <Avatar
-                  className="mr-2"
-                  alt={credentialOwner.name || "Nameless"}
-                  size="xs"
-                  imageSrc={getPlaceholderAvatar(credentialOwner.avatar, credentialOwner?.name as string)}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 {credentialOwner.name}
               </div>
             </Badge>

@@ -55,7 +55,9 @@ export class OrganizationsOrganizationsController {
   @ApiOperation({
     summary: "Create an organization within an organization",
     description:
-      "Requires the user to have at least the 'ORG_ADMIN' role within the organization. Additionally, for platform, the plan must be 'SCALE' or higher to access this endpoint.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   async createOrganization(
     @Param("orgId", ParseIntPipe) managerOrganizationId: number,
@@ -80,7 +82,9 @@ export class OrganizationsOrganizationsController {
   @ApiOperation({
     summary: "Get an organization within an organization",
     description:
-      "Requires the user to have at least the 'ORG_ADMIN' role within the organization. Additionally, for platform, the plan must be 'SCALE' or higher to access this endpoint.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @UseGuards(IsManagedOrgInManagerOrg)
   async getOrganization(
@@ -99,7 +103,9 @@ export class OrganizationsOrganizationsController {
   @ApiOperation({
     summary: "Get all organizations within an organization",
     description:
-      "Requires the user to have at least the 'ORG_ADMIN' role within the organization. Additionally, for platform, the plan must be 'SCALE' or higher to access this endpoint.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   async getOrganizations(
     @Param("orgId", ParseIntPipe) managerOrganizationId: number,
@@ -120,7 +126,9 @@ export class OrganizationsOrganizationsController {
   @ApiOperation({
     summary: "Update an organization within an organization",
     description:
-      "Requires the user to have at least the 'ORG_ADMIN' role within the organization. Additionally, for platform, the plan must be 'SCALE' or higher to access this endpoint.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @UseGuards(IsManagedOrgInManagerOrg)
   @HttpCode(HttpStatus.OK)
@@ -145,7 +153,9 @@ export class OrganizationsOrganizationsController {
   @ApiOperation({
     summary: "Delete an organization within an organization",
     description:
-      "Requires the user to have at least the 'ORG_ADMIN' role within the organization. Additionally, for platform, the plan must be 'SCALE' or higher to access this endpoint.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @UseGuards(IsManagedOrgInManagerOrg)
   async deleteOrganization(

@@ -33,7 +33,8 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({
       switchOnClick={(e) => {
         setRequirePayment(e);
       }}
-      description={<>Add lightning payments to your events and booking</>}
+      description={// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
       disableSwitch={shouldDisableSwitch}
       switchTooltip={shouldDisableSwitch ? t("other_payment_app_enabled") : undefined}>
       <EventTypeAppSettingsInterface

@@ -11,28 +11,32 @@ export const IconsExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="space-y-8">
       <div>
-        <h3 className="text-default mb-4 text-sm">Start Icon</h3>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Row>
           {colors.map((color) => (
             <div key={color} className="flex flex-col items-center gap-2">
               <Button color={color} StartIcon="calendar">
                 {color}
               </Button>
-              <span className="text-subtle text-xs">Start Icon</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           ))}
         </Row>
       </div>
 
       <div>
-        <h3 className="text-default mb-4 text-sm">End Icon</h3>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Row>
           {colors.map((color) => (
             <div key={color} className="flex flex-col items-center gap-2">
               <Button color={color} EndIcon="arrow-right">
                 {color}
               </Button>
-              <span className="text-subtle text-xs">End Icon</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           ))}
         </Row>

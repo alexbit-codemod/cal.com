@@ -471,7 +471,9 @@ describe("Slots 2024-04-15 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${eventTypeId}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -518,7 +520,9 @@ describe("Slots 2024-04-15 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${seatedEventTypeId}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -601,7 +605,9 @@ describe("Slots 2024-04-15 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${seatedEventTypeId}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {

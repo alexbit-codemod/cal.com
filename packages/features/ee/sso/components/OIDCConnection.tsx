@@ -102,51 +102,24 @@ const CreateConnectionDialog = ({
               control={form.control}
               name="clientId"
               render={({ field: { value } }) => (
-                <TextField
-                  name="clientId"
-                  label="Client id"
-                  data-testid="sso-oidc-client-id"
-                  value={value}
-                  onChange={(e) => {
-                    form.setValue("clientId", e?.target.value);
-                  }}
-                  type="text"
-                  required
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             />
             <Controller
               control={form.control}
               name="clientSecret"
               render={({ field: { value } }) => (
-                <TextField
-                  name="clientSecret"
-                  label="Client secret"
-                  data-testid="sso-oidc-client-secret"
-                  value={value}
-                  onChange={(e) => {
-                    form.setValue("clientSecret", e?.target.value);
-                  }}
-                  type="text"
-                  required
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             />
             <Controller
               control={form.control}
               name="wellKnownUrl"
               render={({ field: { value } }) => (
-                <TextField
-                  name="wellKnownUrl"
-                  label="Well-Known URL"
-                  data-testid="sso-oidc-well-known-url"
-                  value={value}
-                  onChange={(e) => {
-                    form.setValue("wellKnownUrl", e?.target.value);
-                  }}
-                  type="text"
-                  required
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             />
           </div>

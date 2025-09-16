@@ -29,9 +29,13 @@ export const setPasswordHandler = async ({ ctx, input }: UpdateOptions) => {
     },
   });
 
-  if (!user) throw new TRPCError({ code: "BAD_REQUEST", message: "User not found" });
+  if (!user) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   if (!user.password?.hash)
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Password not set by default" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const generatedPassword = createHash("md5")
     .update(`${user?.email ?? ""}${process.env.CALENDSO_ENCRYPTION_KEY}`)
@@ -41,7 +45,9 @@ export const setPasswordHandler = async ({ ctx, input }: UpdateOptions) => {
   if (!isCorrectPassword)
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "The password set by default doesn't match your existing one. Contact an app admin.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   const hashedPassword = await hashPassword(newPassword);

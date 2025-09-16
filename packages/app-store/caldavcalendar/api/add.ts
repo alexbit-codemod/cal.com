@@ -53,11 +53,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const adminUrl = `${parsedUrl.protocol}//${parsedUrl.hostname}${
             parsedUrl.port ? `:${parsedUrl.port}` : ""
           }/admin/?/settings/standard/`;
-          message = `Couldn\'t connect to caldav account, please verify WebDAV authentication type is set to "Basic"`;
+          message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           return res.status(500).json({ message, actionUrl: adminUrl });
         }
       }
-      return res.status(500).json({ message: "Could not add this caldav account" });
+      return res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     return res

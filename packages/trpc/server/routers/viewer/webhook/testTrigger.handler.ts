@@ -20,7 +20,9 @@ export const testTriggerHandler = async ({ ctx: _ctx, input }: TestTriggerOption
 
   const data: EventPayloadType = {
     type: "Test",
-    title: "Test trigger event",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     description: "",
     startTime: new Date().toISOString(),
     endTime: new Date().toISOString(),

@@ -244,7 +244,8 @@ const SlotItem = ({
                 <HoverCard.Content side="top" align="end" sideOffset={2}>
                   <div className="text-emphasis bg-inverted w-[var(--booker-timeslots-width)] rounded-md p-3">
                     <div className="flex items-center gap-2">
-                      <p>Busy</p>
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     </div>
                     <p className="text-muted">
                       {overlappingTimeStart} - {overlappingTimeEnd}

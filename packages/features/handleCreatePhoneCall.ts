@@ -16,7 +16,9 @@ export const handleCreatePhoneCall = async ({
   input: TCreatePhoneCallSchema;
 }) => {
   if (!user?.profile?.organization) {
-    throw new TRPCError({ code: "UNAUTHORIZED", message: "User is not part of an organization" });
+    throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   await checkRateLimitAndThrowError({

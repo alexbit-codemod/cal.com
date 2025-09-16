@@ -7,7 +7,9 @@ const rule = createRule({
   meta: {
     fixable: "code",
     docs: {
-      description: "Importing router from 'next/router' is deprecated, use 'next/navigation' instead",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       recommended: "error",
     },
     messages: {

@@ -308,9 +308,13 @@ describe("Event types Endpoints", () => {
       const scheduleId = falseTestSchedule.id;
 
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -321,10 +325,14 @@ describe("Event types Endpoints", () => {
         bookingFields: [
           {
             type: "select",
-            label: "select which language you want to learn",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             slug: "select-language",
             required: true,
-            placeholder: "select language",
+            placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             options: ["javascript", "python", "cobol"],
           },
         ],
@@ -340,9 +348,13 @@ describe("Event types Endpoints", () => {
 
     it("should not be able to create phone-only event type", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Phone coding consultation",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "phone-coding-consultation",
-        description: "Our team will review your codebase.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -354,14 +366,18 @@ describe("Event types Endpoints", () => {
           {
             type: "email",
             required: false,
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             hidden: true,
           },
           {
             type: "phone",
             slug: "attendeePhoneNumber",
             required: true,
-            label: "Phone number",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             hidden: false,
           },
         ],
@@ -380,9 +396,13 @@ describe("Event types Endpoints", () => {
 
     it("should not allow creating an event type with integration not installed on user", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -402,15 +422,23 @@ describe("Event types Endpoints", () => {
     it("should create an event type", async () => {
       const nameBookingField: NameDefaultFieldInput_2024_06_14 = {
         type: "name",
-        label: "Your name sir / madam",
-        placeholder: "john doe",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         disableOnPrefill: false,
       };
 
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         lengthInMinutesOptions: [30, 60, 90],
         locations: [
@@ -432,20 +460,28 @@ describe("Event types Endpoints", () => {
           nameBookingField,
           {
             type: "select",
-            label: "select which language you want to learn",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             slug: "select-language",
             required: true,
-            placeholder: "select language",
+            placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             options: ["javascript", "python", "cobol"],
             disableOnPrefill: true,
             hidden: false,
           },
           {
             type: "url",
-            label: "Video Url",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             slug: "video-url",
             required: true,
-            placeholder: "add video url",
+            placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             disableOnPrefill: true,
             hidden: false,
           },
@@ -544,10 +580,14 @@ describe("Event types Endpoints", () => {
             { ...defaultResponseBookingFieldLocation },
             {
               type: "select",
-              label: "select which language you want to learn",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "select-language",
               required: true,
-              placeholder: "select language",
+              placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               options: ["javascript", "python", "cobol"],
               disableOnPrefill: true,
               hidden: false,
@@ -555,10 +595,14 @@ describe("Event types Endpoints", () => {
             },
             {
               type: "url",
-              label: "Video Url",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "video-url",
               required: true,
-              placeholder: "add video url",
+              placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               disableOnPrefill: true,
               hidden: false,
               isDefault: false,
@@ -677,9 +721,13 @@ describe("Event types Endpoints", () => {
 
     it("should return an error when creating an event type with seats enabled and multiple locations", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class-2",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -709,9 +757,13 @@ describe("Event types Endpoints", () => {
 
     it("should return an error when trying to enable seats for an event type with multiple locations", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class 3",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class-3",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -759,9 +811,13 @@ describe("Event types Endpoints", () => {
 
     it("should return an error when creating an event type with seats enabled and confirmationPolicy enabled", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class 4",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class-4",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         scheduleId: firstSchedule.id,
         confirmationPolicy: {
@@ -784,9 +840,13 @@ describe("Event types Endpoints", () => {
 
     it("should return an error when trying to enable seats for an event type with confirmationPolicy enabled", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class 5",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class-5",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         confirmationPolicy: {
           type: ConfirmationPolicyEnum.ALWAYS,
@@ -827,9 +887,13 @@ describe("Event types Endpoints", () => {
 
     it("should return an error when trying to set multiple locations for an event type with seats enabled", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class 6",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class-6",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         scheduleId: firstSchedule.id,
         seats: {
@@ -877,9 +941,13 @@ describe("Event types Endpoints", () => {
 
     it("should return an error when creating an event type with confirmationPolicy enabled and seats enabled", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class 7",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class-7",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         confirmationPolicy: {
           type: ConfirmationPolicyEnum.ALWAYS,
@@ -902,9 +970,13 @@ describe("Event types Endpoints", () => {
 
     it("should return an error when trying to enable confirmationPolicy for an event type with seats enabled", async () => {
       const body: CreateEventTypeInput_2024_06_14 = {
-        title: "Coding class 8",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class-8",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         seats: {
           seatsPerTimeSlot: 4,
@@ -946,19 +1018,29 @@ describe("Event types Endpoints", () => {
     it("should update event type", async () => {
       const nameBookingField: NameDefaultFieldInput_2024_06_14 = {
         type: "name",
-        label: "Your name sir / madam",
-        placeholder: "john doe",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         disableOnPrefill: true,
       };
 
       const notesBookingField: NotesDefaultFieldInput_2024_06_14 = {
         slug: "notes",
-        label: "lemme take some notes",
-        placeholder: "write your notes here",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         required: true,
       };
 
-      const newTitle = "Coding class in Italian!";
+      const newTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       const body: UpdateEventTypeInput_2024_06_14 = {
         title: newTitle,
@@ -973,10 +1055,14 @@ describe("Event types Endpoints", () => {
           nameBookingField,
           {
             type: "select",
-            label: "select which language you want to learn",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             slug: "select-language",
             required: true,
-            placeholder: "select language",
+            placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             options: ["javascript", "python", "cobol"],
             disableOnPrefill: false,
             hidden: false,
@@ -1052,10 +1138,14 @@ describe("Event types Endpoints", () => {
             { ...defaultResponseBookingFieldLocation },
             {
               type: "select",
-              label: "select which language you want to learn",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "select-language",
               required: true,
-              placeholder: "select language",
+              placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               options: ["javascript", "python", "cobol"],
               disableOnPrefill: false,
               hidden: false,
@@ -1403,9 +1493,13 @@ describe("Event types Endpoints", () => {
 
     it("should not allow creating an event type with input of event-types version 2024_04_15", async () => {
       const body: CreateEventTypeInput_2024_04_15 = {
-        title: "Coding class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-class",
-        description: "Let's learn how to code like a pro.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 60,
         locations: [{ type: "integrations:daily" }],
       };
@@ -1419,8 +1513,12 @@ describe("Event types Endpoints", () => {
 
     it("should return system bookingFields stored in database", async () => {
       const legacyEventTypeInput = {
-        title: "legacy event type",
-        description: "legacy event type description",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 40,
         hidden: false,
         slug: "legacy-event-type",
@@ -1430,27 +1528,39 @@ describe("Event types Endpoints", () => {
           {
             name: "name",
             type: "name",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system",
             required: true,
-            defaultLabel: "your_name",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "email",
             type: "email",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system",
             required: true,
-            defaultLabel: "email_address",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "location",
             type: "radioInput",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system",
             required: false,
             placeholder: "",
-            defaultLabel: "location",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             getOptionsAt: "locations",
             optionsInputs: {
               phone: { type: "phone", required: true, placeholder: "" },
@@ -1462,31 +1572,49 @@ describe("Event types Endpoints", () => {
             name: "title",
             type: "text",
             hidden: true,
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: true,
-            defaultLabel: "what_is_this_meeting_about",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             defaultPlaceholder: "",
           },
           {
             name: "guests",
             type: "multiemail",
             hidden: false,
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "additional_guests",
-            defaultPlaceholder: "email",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "rescheduleReason",
             type: "textarea",
-            views: [{ id: "reschedule", label: "Reschedule View" }],
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            views: [{ id: "reschedule", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "reason_for_reschedule",
-            defaultPlaceholder: "reschedule_placeholder",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "attendeePhoneNumber",
@@ -1496,21 +1624,31 @@ describe("Event types Endpoints", () => {
               {
                 id: "default",
                 type: "default",
-                label: "Default",
+                label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             ],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "phone_number",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "notes",
             type: "textarea",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "additional_notes",
-            defaultPlaceholder: "share_additional_notes",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
         ],
       };
@@ -1532,23 +1670,33 @@ describe("Event types Endpoints", () => {
       const userDefinedBookingField = {
         name: "team",
         type: "textarea",
-        label: "your team",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         sources: [
           {
             id: "user",
             type: "user",
-            label: "User",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             fieldRequired: true,
           },
         ],
         editable: "user",
         required: true,
-        placeholder: "FC Barcelona",
+        placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
 
       const legacyEventTypeInput = {
-        title: "legacy event type two",
-        description: "legacy event type description two",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 40,
         hidden: false,
         slug: "legacy-event-type-two",
@@ -1559,27 +1707,39 @@ describe("Event types Endpoints", () => {
           {
             name: "name",
             type: "name",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system",
             required: true,
-            defaultLabel: "your_name",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "email",
             type: "email",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system",
             required: true,
-            defaultLabel: "email_address",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "location",
             type: "radioInput",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system",
             required: false,
             placeholder: "",
-            defaultLabel: "location",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             getOptionsAt: "locations",
             optionsInputs: {
               phone: { type: "phone", required: true, placeholder: "" },
@@ -1591,31 +1751,49 @@ describe("Event types Endpoints", () => {
             name: "title",
             type: "text",
             hidden: true,
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: true,
-            defaultLabel: "what_is_this_meeting_about",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             defaultPlaceholder: "",
           },
           {
             name: "guests",
             type: "multiemail",
             hidden: false,
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "additional_guests",
-            defaultPlaceholder: "email",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "rescheduleReason",
             type: "textarea",
-            views: [{ id: "reschedule", label: "Reschedule View" }],
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            views: [{ id: "reschedule", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "reason_for_reschedule",
-            defaultPlaceholder: "reschedule_placeholder",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "attendeePhoneNumber",
@@ -1625,21 +1803,31 @@ describe("Event types Endpoints", () => {
               {
                 id: "default",
                 type: "default",
-                label: "Default",
+                label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             ],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "phone_number",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "notes",
             type: "textarea",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "additional_notes",
-            defaultPlaceholder: "share_additional_notes",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
         ],
       };
@@ -1676,23 +1864,33 @@ describe("Event types Endpoints", () => {
       const unknownSystemField = {
         name: "unknown-whatever",
         type: "unknown-whatever",
-        label: "your team",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         sources: [
           {
             id: "user",
             type: "user",
-            label: "User",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             fieldRequired: true,
           },
         ],
         editable: "user",
         required: true,
-        placeholder: "FC Barcelona",
+        placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
 
       const eventTypeInput = {
-        title: "unknown field event type two",
-        description: "unknown field event type description two",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 40,
         hidden: false,
         slug: "unknown-field-type-two",
@@ -1722,8 +1920,12 @@ describe("Event types Endpoints", () => {
 
     it("should return event type with default bookingFields if they are not defined", async () => {
       const eventTypeInput = {
-        title: "undefined booking fields",
-        description: "undefined booking fields",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 40,
         hidden: false,
         slug: `undefined-booking-fields-${randomString()}`,
@@ -1813,7 +2015,9 @@ describe("Event types Endpoints", () => {
 
       it("should create first event type", async () => {
         const body: CreateEventTypeInput_2024_06_14 = {
-          title: "first created coding class",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "first-created-coding-class",
           lengthInMinutes: 60,
           locations: [
@@ -1843,7 +2047,9 @@ describe("Event types Endpoints", () => {
       it("should create second event type using first as input", async () => {
         const body = {
           ...firstCreatedEventType,
-          title: "second created coding class",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "second-created-coding-class",
         };
 
@@ -1870,7 +2076,9 @@ describe("Event types Endpoints", () => {
 
       it("should create event type with cal video settings", async () => {
         const body: CreateEventTypeInput_2024_06_14 = {
-          title: "event type with cal video settings",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "event-type-with-cal-video-settings",
           lengthInMinutes: 60,
           calVideoSettings: {
@@ -1910,9 +2118,13 @@ describe("Event types Endpoints", () => {
 
       it("should create an event type with guests disabled", async () => {
         const body: CreateEventTypeInput_2024_06_14 = {
-          title: "Coding class guests disabled",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "coding-class-guests-disabled",
-          description: "Let's learn how to code like a pro.",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           lengthInMinutes: 60,
           disableGuests: true,
         };
@@ -2080,8 +2292,12 @@ describe("Event types Endpoints", () => {
 
     it("should return integration location with link and credentialId", async () => {
       const eventTypeInput = {
-        title: "event type discord",
-        description: "event type description",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 40,
         hidden: false,
         slug: "discord-event-type",
@@ -2118,8 +2334,12 @@ describe("Event types Endpoints", () => {
 
     it("should return unsupported location", async () => {
       const eventTypeInput = {
-        title: "event type not existing",
-        description: "event type description",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         length: 40,
         hidden: false,
         slug: "not-existing-event-type",
@@ -2152,7 +2372,9 @@ describe("Event types Endpoints", () => {
 
       it("should create an event type with hidden=true", async () => {
         const createPayload = {
-          title: "Hidden Event",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "hidden-event",
           lengthInMinutes: 30,
           hidden: true,

@@ -26,19 +26,27 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
       res.redirect(redirectAfterSuccessOrError);
       return;
     }
-    throw new HttpError({ statusCode: 400, message: "`code` must be a string" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!req.session?.user?.id) {
-    throw new HttpError({ statusCode: 401, message: "You must be logged in to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const { client_id, client_secret } = await getAppKeysFromSlug("closecom");
 
   if (!client_id || typeof client_id !== "string")
-    return res.status(400).json({ message: "Close.com client_id missing." });
+    return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   if (!client_secret || typeof client_secret !== "string")
-    return res.status(400).json({ message: "Close.com client_secret missing." });
+    return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   try {
     const response = await fetch("https://api.close.com/oauth2/token/", {

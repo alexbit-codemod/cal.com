@@ -43,16 +43,8 @@ export const EventLocations = ({ event }: { event: BookerEvent }) => {
                   {locations.map((location, index) => (
                     <li key={`${location.type}-${index}`} className="mt-1">
                       <div className="flex flex-row items-center">
-                        <img
-                          src={getEventLocationType(location.type)?.iconUrl}
-                          className={classNames(
-                            "h-3 w-3 opacity-70 ltr:mr-[10px] rtl:ml-[10px] dark:opacity-100 ",
-                            !getEventLocationType(location.type)?.iconUrl?.startsWith("/app-store")
-                              ? "dark:invert-[.65]"
-                              : ""
-                          )}
-                          alt={`${getEventLocationType(location.type)?.label} icon`}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                         <span>{getLocationToDisplay(location)}</span>
                       </div>
                     </li>

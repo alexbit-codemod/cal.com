@@ -24,7 +24,9 @@ export default async function getAttributesForTeamHandler({
   if (!isMemberOfTeam) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "You are not a member of this team",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

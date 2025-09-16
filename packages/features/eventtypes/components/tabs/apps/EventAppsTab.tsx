@@ -94,43 +94,12 @@ export const EventAppsTab = ({ eventType }: { eventType: EventType }) => {
       <div>
         <div className="flex flex-col gap-4 before:border-0">
           {(isManagedEventType || isChildrenManagedEventType) && (
-            <Alert
-              severity={appsDisableProps.isLocked ? "neutral" : "info"}
-              className="mb-2"
-              title={
-                <ServerTrans
-                  t={t}
-                  i18nKey={`${lockedText}_${isManagedEventType ? "for_members" : "by_team_admins"}`}
-                />
-              }
-              actions={<div className="flex h-full items-center">{appsDisableProps.LockedIcon}</div>}
-              message={
-                <ServerTrans
-                  t={t}
-                  i18nKey={`apps_${lockedText}_${
-                    isManagedEventType ? "for_members" : "by_team_admins"
-                  }_description`}
-                />
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
           {!isPending && !installedApps?.length ? (
-            <EmptyScreen
-              Icon="grid-3x3"
-              headline={t("empty_installed_apps_headline")}
-              description={t("empty_installed_apps_description")}
-              buttonRaw={
-                appsDisableProps.disabled ? (
-                  <Button StartIcon="lock" color="secondary" disabled>
-                    {t("locked_by_team_admin")}
-                  </Button>
-                ) : (
-                  <Button target="_blank" color="secondary" href="/apps">
-                    {t("empty_installed_apps_button")}{" "}
-                  </Button>
-                )
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ) : null}
           {cardsForAppsWithTeams.map((apps) => apps.map((cards) => cards))}
           {installedApps.map((app) => {
@@ -163,9 +132,8 @@ export const EventAppsTab = ({ eventType }: { eventType: EventType }) => {
                   t={t}
                   i18nKey="available_apps_desc"
                   components={[
-                    <Link key="available_apps_desc" className="cursor-pointer underline" href="/apps">
-                      App Store
-                    </Link>,
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
                   ]}
                 />
               </Section.Description>

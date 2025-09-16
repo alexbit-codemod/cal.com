@@ -55,20 +55,8 @@ export function WhenInfo(props: {
 
   return (
     <div>
-      <Info
-        label={`${t("when")} ${recurringInfo !== "" ? ` - ${recurringInfo}` : ""}`}
-        lineThrough={
-          !!props.calEvent.cancellationReason && !props.calEvent.cancellationReason.includes("$RCH$")
-        }
-        description={
-          <span data-testid="when">
-            {recurringEvent?.count ? `${t("starting")} ` : ""}
-            {getRecipientStart(`dddd, LL | ${timeFormat}`)} - {getRecipientEnd(timeFormat)}{" "}
-            <span style={{ color: "#4B5563" }}>({timeZone})</span>
-          </span>
-        }
-        withSpacer
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 }

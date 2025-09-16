@@ -113,7 +113,9 @@ export const getUserSession = async (ctx: TRPCContextInner) => {
         safeStringify({ profileId: session.profileId, userId: user?.id })
       );
       // TODO: Test that logout should happen automatically
-      throw new TRPCError({ code: "UNAUTHORIZED", message: "Profile not found or not authorized" });
+      throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
   }
 
@@ -125,7 +127,9 @@ export const getUserSession = async (ctx: TRPCContextInner) => {
     }
 
     if (!upId) {
-      throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "No upId found for session" });
+      throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     sessionWithUpId = {
       ...session,

@@ -54,7 +54,9 @@ async function createTestData({
   // Create test event type
   const eventType = await prisma.eventType.create({
     data: {
-      title: "Test Event Type",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: "test-event-type",
       length: 60,
       userId: user.id,
@@ -66,7 +68,9 @@ async function createTestData({
   const booking = await prisma.booking.create({
     data: {
       uid: `test-booking-${timestamp}-${randomSuffix}`,
-      title: "Test Booking",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       startTime: new Date(),
       endTime: new Date(Date.now() + 60 * 60 * 1000),
       userId: user.id,
@@ -515,7 +519,9 @@ describe("InsightsBookingService Integration Tests", () => {
       // Create a user-scoped event type (not team-scoped)
       const userEventType = await prisma.eventType.create({
         data: {
-          title: "User Event Type",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "user-event-type",
           length: 60,
           userId: testData.user.id,
@@ -527,7 +533,9 @@ describe("InsightsBookingService Integration Tests", () => {
       const userBooking = await prisma.booking.create({
         data: {
           uid: `user-booking-${Date.now()}-${Math.random().toString(36).substring(7)}`,
-          title: "User Booking",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: new Date(),
           endTime: new Date(Date.now() + 60 * 60 * 1000),
           userId: testData.user.id,

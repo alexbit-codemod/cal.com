@@ -130,13 +130,8 @@ export default function WorkflowDetailsPage(props: Props) {
       <div className="z-1 my-8 sm:my-0 md:flex">
         <div className="pl-2 pr-3 md:sticky md:top-6 md:h-0 md:pl-0">
           <div className="mb-5">
-            <TextField
-              data-testid="workflow-name"
-              disabled={props.readOnly}
-              label={`${t("workflow_name")}:`}
-              type="text"
-              {...form.register("name")}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           {isOrg ? (
             <div className="flex">
@@ -153,17 +148,8 @@ export default function WorkflowDetailsPage(props: Props) {
             control={form.control}
             render={() => {
               return (
-                <MultiSelectCheckbox
-                  options={allOptions}
-                  isDisabled={props.readOnly || form.getValues("selectAll")}
-                  className="w-full md:w-64"
-                  setSelected={setSelectedOptions}
-                  selected={form.getValues("selectAll") ? allOptions : selectedOptions}
-                  setValue={(s: Option[]) => {
-                    form.setValue("activeOn", s);
-                  }}
-                  countText={isOrg ? "count_team" : "nr_event_type"}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               );
             }}
           />
@@ -171,18 +157,8 @@ export default function WorkflowDetailsPage(props: Props) {
             <Controller
               name="selectAll"
               render={({ field: { value, onChange } }) => (
-                <CheckboxField
-                  description={isOrg ? t("apply_to_all_teams") : t("apply_to_all_event_types")}
-                  disabled={props.readOnly}
-                  onChange={(e) => {
-                    onChange(e);
-                    if (e.target.value) {
-                      setSelectedOptions(allOptions);
-                      form.setValue("activeOn", allOptions);
-                    }
-                  }}
-                  checked={value}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             />
           </div>

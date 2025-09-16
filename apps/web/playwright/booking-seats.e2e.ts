@@ -24,7 +24,9 @@ test.describe("Booking with Seats", () => {
     await page.goto("/event-types");
     // We wait until loading is finished
     await page.waitForSelector('[data-testid="event-types"]');
-    const eventTitle = "My 2-seated event";
+    const eventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     await createNewSeatedEventType(page, { eventTitle });
     await expect(page.locator(`text=Event type updated successfully`)).toBeVisible();
   });

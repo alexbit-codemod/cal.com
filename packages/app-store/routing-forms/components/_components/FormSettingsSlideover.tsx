@@ -73,41 +73,16 @@ export const FormSettingsSlideover = ({
           <SheetTitle>{t("form_settings")}</SheetTitle>
         </SheetHeader>
         <div className="mt-6 flex-1 overflow-y-auto">
-          <TextField
-            type="text"
-            containerClassName="mb-6"
-            placeholder={t("title")}
-            {...hookForm.register("name")}
-            data-testid="name"
-          />
-          <TextAreaField
-            rows={3}
-            id="description"
-            data-testid="description"
-            placeholder={t("form_description_placeholder")}
-            {...hookForm.register("description")}
-            defaultValue={form.description || ""}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
 
           <div className="mt-6">
             {form.teamId ? (
               <div className="flex flex-col">
-                <TeamMemberSelect
-                  teamMembers={form.teamMembers}
-                  selectedMembers={sendUpdatesTo}
-                  onChange={(memberIds) => {
-                    hookForm.setValue("settings.sendUpdatesTo", memberIds, { shouldDirty: true });
-                    hookForm.setValue("settings.emailOwnerOnSubmission", false, {
-                      shouldDirty: true,
-                    });
-                  }}
-                  onSelectAll={(selectAll) => {
-                    hookForm.setValue("settings.sendToAll", selectAll, { shouldDirty: true });
-                  }}
-                  selectAllEnabled={true}
-                  sendToAll={sendToAll}
-                  placeholder={t("select_members")}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             ) : (
               <Controller

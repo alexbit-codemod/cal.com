@@ -120,39 +120,14 @@ const IntegrationsContainer = ({
           const emptyHeaderCategory = getAppCategoryTitle(variant || "other", true);
 
           return (
-            <EmptyScreen
-              Icon={emptyIcon[variant || "other"]}
-              headline={t("no_category_apps", {
-                category: emptyHeaderCategory,
-              })}
-              description={t(`no_category_apps_description_${variant || "other"}`)}
-              buttonRaw={
-                <Button
-                  color="secondary"
-                  data-testid={`connect-${variant || "other"}-apps`}
-                  href={variant ? `/apps/categories/${variant}` : "/apps/categories/other"}>
-                  {t(`connect_${variant || "other"}_apps`)}
-                </Button>
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           );
         }
         return (
           <div className="border-subtle rounded-md border p-7">
-            <ShellSubHeading
-              title={t(variant || "other")}
-              subtitle={t(`installed_app_${variant || "other"}_description`)}
-              className="mb-6"
-              actions={
-                <Button
-                  data-testid="add-apps"
-                  href={variant ? `/apps/categories/${variant}` : "/apps"}
-                  color="secondary"
-                  StartIcon="plus">
-                  {t("add")}
-                </Button>
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             <AppList
               handleDisconnect={handleDisconnect}

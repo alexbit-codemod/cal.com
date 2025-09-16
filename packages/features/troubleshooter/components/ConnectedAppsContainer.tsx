@@ -5,19 +5,9 @@ import { TroubleshooterListItemHeader } from "./TroubleshooterListItemContainer"
 
 function ConnectedAppsItem() {
   return (
-    <TroubleshooterListItemHeader
-      title="Google Cal"
-      subtitle="google@calendar.com"
-      prefixSlot={
-        <>
-          <div className="h-4 w-4 self-center rounded-[4px] bg-blue-500" />
-        </>
-      }
-      suffixSlot={
-        <div>
-          <Badge variant="green" withDot size="sm">
-            Connected
-          </Badge>
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       }
     />

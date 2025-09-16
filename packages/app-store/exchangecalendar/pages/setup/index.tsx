@@ -71,11 +71,8 @@ export default function ExchangeSetup() {
           <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
             <div>
               {/* eslint-disable @next/next/no-img-element */}
-              <img
-                src="/api/app-store/exchangecalendar/icon.svg"
-                alt="Microsoft Exchange"
-                className="h-12 w-12 max-w-2xl"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <div className="grow">
               <h1 className="text-default">{t("exchange_add")}</h1>
@@ -100,26 +97,12 @@ export default function ExchangeSetup() {
                     }
                   }}>
                   <fieldset className="space-y-4" disabled={form.formState.isSubmitting}>
-                    <TextField
-                      required
-                      type="url"
-                      {...form.register("url")}
-                      label={t("url")}
-                      placeholder="https://example.com/Ews/Exchange.asmx"
-                      inputMode="url"
-                    />
-                    <EmailField
-                      required
-                      {...form.register("username")}
-                      label={t("email_address")}
-                      placeholder="john.doe@example.com"
-                    />
-                    <PasswordField
-                      required
-                      {...form.register("password")}
-                      label={t("password")}
-                      autoComplete="password"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <Controller
                       name="authenticationMethod"
                       control={form.control}
@@ -128,17 +111,8 @@ export default function ExchangeSetup() {
                           (method) => method.value === ExchangeAuthentication.NTLM
                         );
                         return (
-                          <SelectField
-                            label={t("exchange_authentication")}
-                            options={authenticationMethods}
-                            defaultValue={ntlmAuthenticationMethod}
-                            onChange={(authentication) => {
-                              if (authentication) {
-                                onChange(authentication.value);
-                                form.setValue("authenticationMethod", authentication.value);
-                              }
-                            }}
-                          />
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                         );
                       }}
                     />
@@ -151,23 +125,15 @@ export default function ExchangeSetup() {
                             (exchangeVersion) => exchangeVersion.value === ExchangeVersion.Exchange2016
                           );
                           return (
-                            <SelectField
-                              label={t("exchange_version")}
-                              options={exchangeVersions}
-                              defaultValue={exchangeVersion2016}
-                              onChange={(version) => {
-                                onChange(version?.value);
-                                if (version) {
-                                  form.setValue("exchangeVersion", version.value);
-                                }
-                              }}
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           );
                         }}
                       />
                     ) : null}
                   </fieldset>
-                  {errorMessage && <Alert severity="error" title={errorMessage} className="my-4" />}
+                  {errorMessage && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$}
                   <div className="mt-4 flex justify-end space-x-2 rtl:space-x-reverse">
                     <Button type="button" color="secondary" onClick={() => router.back()}>
                       {t("cancel")}

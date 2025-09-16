@@ -101,7 +101,9 @@ test.describe("Organization Settings", () => {
           page,
           switchTestId: `${ctx.org.id}-seo-indexing-switch`,
           expectedChecked: true,
-          waitForMessage: "Your team has been updated successfully.",
+          waitForMessage: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       });
 

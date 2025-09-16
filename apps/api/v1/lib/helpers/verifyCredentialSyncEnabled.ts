@@ -17,7 +17,9 @@ export const verifyCredentialSyncEnabled: NextMiddleware = async (req, res, next
     req.headers[process.env.CALCOM_CREDENTIAL_SYNC_HEADER_NAME || "calcom-credential-sync-secret"] !==
     process.env.CALCOM_CREDENTIAL_SYNC_SECRET
   ) {
-    return res.status(401).json({ message: "Invalid credential sync secret" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   await next();

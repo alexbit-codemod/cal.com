@@ -11,7 +11,9 @@ export class CancelBookingInput_2024_08_13 {
   @IsOptional()
   @ApiPropertyOptional({
     description:
-      "For recurring non-seated booking - if true, cancel booking with the bookingUid of the individual recurrence and all recurrences that come after it.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   cancelSubsequentBookings?: boolean;
 }
@@ -20,7 +22,9 @@ export class CancelSeatedBookingInput_2024_08_13 {
   @ApiProperty({
     type: String,
     example: "3be561a9-31f1-4b8e-aefc-9d9a085f0dd1",
-    description: "Uid of the specific seat within booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   seatUid!: string;

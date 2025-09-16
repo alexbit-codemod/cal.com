@@ -29,7 +29,9 @@ async function ensureSignupIsEnabled(body: Record<string, string>) {
   if (process.env.NEXT_PUBLIC_DISABLE_SIGNUP === "true" || signupDisabled) {
     throw new HttpError({
       statusCode: 403,
-      message: "Signup is disabled",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 }
@@ -63,7 +65,9 @@ async function handler(req: NextRequest) {
       return NextResponse.json({ message: e.message }, { status: e.statusCode });
     }
     logger.error(e);
-    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
   }
 }
 

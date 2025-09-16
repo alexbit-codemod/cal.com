@@ -56,19 +56,7 @@ export function EventTypeSelect() {
   }, [eventTypes, selectedEventQueryParam, setSelectedEventType]);
 
   return (
-    <SelectField
-      label="Event Type"
-      options={options}
-      isDisabled={isPending || options.length === 0}
-      value={options.find((option) => option.value === selectedEventType?.slug) || options[0]}
-      onChange={(option) => {
-        if (!option) return;
-        setSelectedEventType({
-          slug: option.value,
-          id: option.id,
-          duration: option.duration,
-        });
-      }}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }

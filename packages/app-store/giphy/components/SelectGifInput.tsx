@@ -19,28 +19,17 @@ export default function SelectGifInput(props: ISelectGifInput) {
     <div className="flex flex-col items-start space-x-2 space-y-2 rtl:space-x-reverse">
       {selectedGif && (
         <div className="min-h-[200px]">
-          <img alt="Selected Gif Image" src={selectedGif} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )}
       <div className="flex">
         {selectedGif ? (
-          <Button
-            color="minimal"
-            type="button"
-            StartIcon="pencil"
-            onClick={() => setShowDialog(true)}
-            disabled={props.disabled}>
-            Change
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
-          <Button
-            color="minimal"
-            type="button"
-            StartIcon="plus"
-            onClick={() => setShowDialog(true)}
-            disabled={props.disabled}>
-            Add from Giphy
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
 
         {selectedGif && (

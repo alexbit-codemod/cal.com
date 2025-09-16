@@ -139,7 +139,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
     // Create an event type for routing form to route to
     orgAdminData.eventType = await prismaWriteService.prisma.eventType.create({
       data: {
-        title: "Test Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event-type",
         length: 30,
         userId: orgAdminData.user.id,
@@ -149,7 +151,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
 
     nonOrgAdminData.eventType = await prismaWriteService.prisma.eventType.create({
       data: {
-        title: "Test Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event-type",
         length: 30,
         userId: nonOrgAdminData.user.id,
@@ -159,7 +163,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
 
     const routingFormData = {
       name: "Test Routing Form",
-      description: "Test Description",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       disabled: false,
       routes: [
         {
@@ -194,14 +200,18 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
         {
           id: "question1",
           type: "text",
-          label: "Question 1",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: true,
           identifier: "question1",
         },
         {
           id: "question2",
           type: "text",
-          label: "Question 2",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: false,
           identifier: "question2",
         },
@@ -540,7 +550,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
         await prismaWriteService.prisma.app_RoutingForms_Form.create({
           data: {
             name: "Test Routing Form with Invalid Event Type",
-            description: "Test Description",
+            description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             disabled: false,
             routes: [
               {
@@ -579,7 +591,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
               {
                 id: "question1",
                 type: "text",
-                label: "Question 1",
+                label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
                 required: true,
                 identifier: "question1",
               },
@@ -616,7 +630,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
       const externalRoutingForm = await prismaWriteService.prisma.app_RoutingForms_Form.create({
         data: {
           name: "Test External Routing Form",
-          description: "Test Description for External Redirect",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           disabled: false,
           routes: [
             {
@@ -654,7 +670,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
             {
               id: "question1",
               type: "text",
-              label: "Question 1",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
               identifier: "question1",
             },
@@ -742,7 +760,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
       const otherorgAdminUserRoutingForm = await prismaWriteService.prisma.app_RoutingForms_Form.create({
         data: {
           name: "Other User's Routing Form",
-          description: "Test Description",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           disabled: false,
           routes: [
             {
@@ -775,7 +795,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
             {
               id: "question1",
               type: "text",
-              label: "Question 1",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
               identifier: "question1",
             },

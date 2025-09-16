@@ -69,17 +69,8 @@ const ConnectedVideoStepInner = ({
           return (
             <li key={item.name}>
               {item.name && item.logo && (
-                <AppConnectionItem
-                  type={item.type}
-                  title={item.name}
-                  isDefault={item.slug === defaultConferencingApp}
-                  description={item.description}
-                  dependencyData={item.dependencyData}
-                  logo={item.logo}
-                  slug={item.slug}
-                  installed={item.userCredentialIds.length > 0}
-                  defaultInstall={!defaultConferencingApp && item.appData?.location?.linkType === "dynamic"}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             </li>
           );

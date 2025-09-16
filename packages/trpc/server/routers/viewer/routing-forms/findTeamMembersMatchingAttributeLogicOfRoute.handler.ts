@@ -106,14 +106,18 @@ export const findTeamMembersMatchingAttributeLogicOfRouteHandler = async ({
   if (!form) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Form not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!form.teamId) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "This form is not associated with a team",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -121,7 +125,9 @@ export const findTeamMembersMatchingAttributeLogicOfRouteHandler = async ({
   if (!formOrgId) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "This form is not associated with an organization",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -133,21 +139,27 @@ export const findTeamMembersMatchingAttributeLogicOfRouteHandler = async ({
   if (!serializableForm.fields) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Form fields not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!route) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Route not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (isRouter(route)) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "This route is a global router which is not supported",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -173,7 +185,9 @@ export const findTeamMembersMatchingAttributeLogicOfRouteHandler = async ({
     // Legacy route actions do not have eventTypeId.
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "The route action is missing eventTypeId.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -183,7 +197,9 @@ export const findTeamMembersMatchingAttributeLogicOfRouteHandler = async ({
   if (!eventType) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Event type not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -265,7 +281,9 @@ export const findTeamMembersMatchingAttributeLogicOfRouteHandler = async ({
   if (!matchingHosts.length) {
     throw new TRPCError({
       code: "INTERNAL_SERVER_ERROR",
-      message: "No matching team members found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

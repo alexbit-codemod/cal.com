@@ -21,24 +21,34 @@ export class ScheduleAvailabilityInput_2024_06_11 {
   @ApiProperty({
     type: [String],
     example: ["Monday", "Tuesday"],
-    description: "Array of days when schedule is active.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: WEEK_DAYS,
   })
   days!: WeekDay[];
 
   @IsString()
-  @Matches(TIME_FORMAT_HH_MM, { message: "startTime must be a valid time format HH:MM" })
+  @Matches(TIME_FORMAT_HH_MM, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     example: "08:00",
-    description: "startTime must be a valid time in format HH:MM e.g. 08:00",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   startTime!: string;
 
   @IsString()
-  @Matches(TIME_FORMAT_HH_MM, { message: "endTime must be a valid time format HH:MM" })
+  @Matches(TIME_FORMAT_HH_MM, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     example: "15:00",
-    description: "endTime must be a valid time in format HH:MM e.g. 15:00",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   endTime!: string;
 }
@@ -51,18 +61,26 @@ export class ScheduleOverrideInput_2024_06_11 {
   date!: string;
 
   @IsString()
-  @Matches(TIME_FORMAT_HH_MM, { message: "startTime must be a valid time format HH:MM" })
+  @Matches(TIME_FORMAT_HH_MM, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     example: "12:00",
-    description: "startTime must be a valid time in format HH:MM e.g. 12:00",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   startTime!: string;
 
   @IsString()
-  @Matches(TIME_FORMAT_HH_MM, { message: "endTime must be a valid time format HH:MM" })
+  @Matches(TIME_FORMAT_HH_MM, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     example: "13:00",
-    description: "endTime must be a valid time in format HH:MM e.g. 13:00",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   endTime!: string;
 }
@@ -79,7 +97,9 @@ export class CreateScheduleInput_2024_06_11 {
   @ApiProperty({
     type: String,
     example: "Europe/Rome",
-    description: "Timezone is used to calculate available times when an event using the schedule is booked.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   timeZone!: string;
 
@@ -90,7 +110,9 @@ export class CreateScheduleInput_2024_06_11 {
   @ApiPropertyOptional({
     type: [ScheduleAvailabilityInput_2024_06_11],
     description:
-      "Each object contains days and times when the user is available. If not passed, the default availability is Monday to Friday from 09:00 to 17:00.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: [
       {
         days: ["Monday", "Tuesday"],
@@ -110,8 +132,9 @@ export class CreateScheduleInput_2024_06_11 {
   @ApiProperty({
     type: Boolean,
     example: true,
-    description: `Each user should have 1 default schedule. If you specified \`timeZone\` when creating managed user, then the default schedule will be created with that timezone.
-    Default schedule means that if an event type is not tied to a specific schedule then the default schedule is used.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   isDefault!: boolean;
 
@@ -121,7 +144,9 @@ export class CreateScheduleInput_2024_06_11 {
   @Type(() => ScheduleOverrideInput_2024_06_11)
   @ApiPropertyOptional({
     type: [ScheduleOverrideInput_2024_06_11],
-    description: "Need to change availability for a specific date? Add an override.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: [
       {
         date: "2024-05-20",

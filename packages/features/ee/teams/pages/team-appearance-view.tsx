@@ -108,27 +108,12 @@ const ProfileView = ({ team }: ProfileViewProps) => {
               </div>
             </div>
             <div className="border-subtle flex flex-col justify-between border-x px-6 py-8 sm:flex-row">
-              <ThemeLabel
-                variant="system"
-                value="system"
-                label={t("theme_system")}
-                defaultChecked={team.theme === null}
-                register={themeForm.register}
-              />
-              <ThemeLabel
-                variant="light"
-                value="light"
-                label={t("light")}
-                defaultChecked={team.theme === "light"}
-                register={themeForm.register}
-              />
-              <ThemeLabel
-                variant="dark"
-                value="dark"
-                label={t("dark")}
-                defaultChecked={team.theme === "dark"}
-                register={themeForm.register}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <SectionBottomActions className="mb-6" align="end">
               <Button
@@ -154,41 +139,14 @@ const ProfileView = ({ team }: ProfileViewProps) => {
           </Form>
 
           <div className="mt-6 flex flex-col gap-6">
-            <SettingsToggle
-              toggleSwitchAtTheEnd={true}
-              title={t("disable_cal_branding", { appName: APP_NAME })}
-              disabled={mutation?.isPending}
-              description={t("removes_cal_branding", { appName: APP_NAME })}
-              checked={hideBrandingValue}
-              onCheckedChange={(checked) => {
-                setHideBrandingValue(checked);
-                mutation.mutate({ id: team.id, hideBranding: checked });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
-            <SettingsToggle
-              toggleSwitchAtTheEnd={true}
-              title={t("hide_book_a_team_member")}
-              disabled={mutation?.isPending}
-              description={t("hide_book_a_team_member_description", { appName: APP_NAME })}
-              checked={hideBookATeamMember ?? false}
-              onCheckedChange={(checked) => {
-                setHideBookATeamMember(checked);
-                mutation.mutate({ id: team.id, hideBookATeamMember: checked });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
-            <SettingsToggle
-              toggleSwitchAtTheEnd={true}
-              title={t("hide_team_profile_link")}
-              disabled={mutation?.isPending}
-              description={t("hide_team_profile_link_description")}
-              checked={hideTeamProfileLink ?? false}
-              onCheckedChange={(checked) => {
-                setHideTeamProfileLink(checked);
-                mutation.mutate({ id: team.id, hideTeamProfileLink: checked });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </>
       ) : (

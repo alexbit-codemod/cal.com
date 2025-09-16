@@ -86,17 +86,13 @@ export default function Authorize() {
     <div className="flex min-h-screen items-center justify-center">
       <div className="bg-default border-subtle mt-2 max-w-xl rounded-md border px-9 pb-3 pt-2">
         <div className="flex items-center justify-center">
-          <Avatar
-            alt=""
-            fallback={<Icon name="plus" className="text-subtle h-6 w-6" />}
-            className="items-center"
-            imageSrc={client.logo}
-            size="lg"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <div className="relative -ml-6 h-24 w-24">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="bg-default flex h-[70px] w-[70px] items-center  justify-center rounded-full">
-                <img src="/cal-com-icon.svg" alt="Logo" className="h-16 w-16 rounded-full" />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             </div>
           </div>

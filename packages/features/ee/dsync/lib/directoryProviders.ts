@@ -1,22 +1,32 @@
 export const directoryProviders = [
   {
-    label: "Azure SCIM v2.0",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "azure-scim-v2",
   },
   {
-    label: "Okta SCIM v2.0",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "okta-scim-v2",
   },
   {
-    label: "JumpCloud v2.0",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "jumpcloud-scim-v2",
   },
   {
-    label: "OneLogin SCIM v2.0",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "onelogin-scim-v2",
   },
   {
-    label: "SCIM Generic v2.0",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "generic-scim-v2",
   },
 ];

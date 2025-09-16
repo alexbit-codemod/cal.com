@@ -70,7 +70,9 @@ async function checkPermissions(req: NextApiRequest, body: z.infer<typeof schema
   if (bookingId) {
     // Ensure that the booking the attendee is being added to belongs to the user
     const booking = await prisma.booking.findFirst({ where: { id: bookingId, userId } });
-    if (!booking) throw new HttpError({ statusCode: 403, message: "You don't have access to the booking" });
+    if (!booking) throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 

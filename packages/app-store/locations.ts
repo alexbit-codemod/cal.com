@@ -95,12 +95,18 @@ export const defaultLocations: DefaultEventLocationType[] = [
   {
     default: true,
     type: DefaultEventLocationTypeEnum.AttendeeInPerson,
-    label: "in_person_attendee_address",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     variable: "address",
     organizerInputType: null,
-    messageForOrganizer: "Cal will ask your invitee to enter an address before scheduling.",
+    messageForOrganizer: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     attendeeInputType: "attendeeAddress",
-    attendeeInputPlaceholder: "enter_address",
+    attendeeInputPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     defaultValueVariable: "attendeeAddress",
     iconUrl: "/map-pin-dark.svg",
     category: "in person",
@@ -109,12 +115,18 @@ export const defaultLocations: DefaultEventLocationType[] = [
   {
     default: true,
     type: DefaultEventLocationTypeEnum.SomewhereElse,
-    label: "custom_attendee_location",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     variable: "address",
     organizerInputType: null,
-    messageForOrganizer: "Cal will ask your invitee to enter any location before scheduling.",
+    messageForOrganizer: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     attendeeInputType: "somewhereElse",
-    attendeeInputPlaceholder: "any_location",
+    attendeeInputPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     defaultValueVariable: "somewhereElse",
     iconUrl: "/message-pin.svg",
     category: "other",
@@ -123,9 +135,13 @@ export const defaultLocations: DefaultEventLocationType[] = [
   {
     default: true,
     type: DefaultEventLocationTypeEnum.InPerson,
-    label: "in_person",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     organizerInputType: "text",
-    messageForOrganizer: "Provide an Address or Place",
+    messageForOrganizer: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     // HACK:
     variable: "locationAddress",
     defaultValueVariable: "address",
@@ -138,7 +154,9 @@ export const defaultLocations: DefaultEventLocationType[] = [
     type: DefaultEventLocationTypeEnum.Conferencing,
     iconUrl: "/link.svg",
     organizerInputType: null,
-    label: "organizer_default_conferencing_app",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     variable: "hostDefault",
     defaultValueVariable: "hostDefault",
     category: "conferencing",
@@ -148,10 +166,14 @@ export const defaultLocations: DefaultEventLocationType[] = [
   {
     default: true,
     type: DefaultEventLocationTypeEnum.Link,
-    label: "link_meeting",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     organizerInputType: "text",
     variable: "locationLink",
-    messageForOrganizer: "Provide a Meeting Link",
+    messageForOrganizer: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     defaultValueVariable: "link",
     iconUrl: "/link.svg",
     category: "other",
@@ -160,13 +182,19 @@ export const defaultLocations: DefaultEventLocationType[] = [
   {
     default: true,
     type: DefaultEventLocationTypeEnum.Phone,
-    label: "attendee_phone_number",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     variable: "phone",
     organizerInputType: null,
     attendeeInputType: "phone",
-    attendeeInputPlaceholder: `enter_phone_number`,
+    attendeeInputPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     defaultValueVariable: "phone",
-    messageForOrganizer: "Cal will ask your invitee to enter a phone number before scheduling.",
+    messageForOrganizer: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     // This isn't inputType phone because organizer doesn't need to provide it.
     // inputType: "phone"
     iconUrl: "/phone.svg",
@@ -176,8 +204,12 @@ export const defaultLocations: DefaultEventLocationType[] = [
   {
     default: true,
     type: DefaultEventLocationTypeEnum.UserPhone,
-    label: "organizer_phone_number",
-    messageForOrganizer: "Provide your phone number",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    messageForOrganizer: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     organizerInputType: "phone",
     variable: "locationPhoneNumber",
     defaultValueVariable: "hostPhoneNumber",
@@ -230,7 +262,9 @@ for (const [appName, meta] of Object.entries(appStoreMetadata)) {
     }
     const newLocation = {
       ...location,
-      messageForOrganizer: location.messageForOrganizer || `Set ${location.label} link`,
+      messageForOrganizer: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       iconUrl: meta.logo,
       // For All event location apps, locationLink is where we store the input
       // TODO: locationLink and link seems redundant. We can modify the code to keep just one of them.
@@ -243,7 +277,9 @@ for (const [appName, meta] of Object.entries(appStoreMetadata)) {
       newLocation.organizerInputType = location.organizerInputType || "text";
       if (newLocation.organizerInputPlaceholder?.match(/https?:\/\//)) {
         // HACK: Translation ends up removing https? if it's in the beginning :(
-        newLocation.organizerInputPlaceholder = ` ${newLocation.organizerInputPlaceholder}`;
+        newLocation.organizerInputPlaceholder = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
       }
     } else {
       newLocation.organizerInputType = null;

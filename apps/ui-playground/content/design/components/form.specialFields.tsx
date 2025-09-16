@@ -26,26 +26,15 @@ export const SpecialFieldsExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <InputField
-          label="Age"
-          type="number"
-          {...form.register("age", { valueAsNumber: true })}
-          error={form.formState.errors.age?.message}
-        />
-        <InputField
-          label="Phone"
-          type="tel"
-          addOnLeading="+"
-          {...form.register("phone")}
-          error={form.formState.errors.phone?.message}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <div className="flex justify-end space-x-2">
-          <Button color="minimal" type="button" onClick={() => form.reset()}>
-            Reset
-          </Button>
-          <Button type="submit" loading={form.formState.isSubmitting}>
-            Submit
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </form>
     </RenderComponentWithSnippet>

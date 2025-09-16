@@ -15,7 +15,9 @@ const PaymentDataSchema = z.object({
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { reference, status } = req.query;
   if (!reference) {
-    throw new HttpCode({ statusCode: 204, message: "Reference not found" });
+    throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const payment = await prisma.payment.findFirst({
@@ -53,15 +55,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
 
   if (!payment) {
-    throw new HttpCode({ statusCode: 204, message: "Payment not found" });
+    throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   const key = payment.booking?.user?.credentials?.[0].key;
   if (!key) {
-    throw new HttpCode({ statusCode: 204, message: "Credential not found" });
+    throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!payment.booking || !payment.booking.user || !payment.booking.eventType) {
-    throw new HttpCode({ statusCode: 204, message: "Booking not correct" });
+    throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (status !== "completed") {

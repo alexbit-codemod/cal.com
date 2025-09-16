@@ -37,8 +37,12 @@ const unlinkConnectedAccount = async ({ ctx }: UpdateProfileOptions) => {
       identityProviderId: null,
     },
   });
-  if (!_user) return { message: "account_unlinked_error" };
-  return { message: "account_unlinked_success" };
+  if (!_user) return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 };
 
 export default unlinkConnectedAccount;

@@ -46,7 +46,9 @@ export class RouterController {
       return { status: "success", data: { message: routedUrlData.props.message ?? "" }, redirect: false };
     }
 
-    return { status: "success", data: { message: "No Route nor custom message found." }, redirect: false };
+    return { status: "success", data: { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, redirect: false };
   }
 
   private async handleRedirect(destination: string): Promise<ApiResponse<unknown> & { redirect: boolean }> {

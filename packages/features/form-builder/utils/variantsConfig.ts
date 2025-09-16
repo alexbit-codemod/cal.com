@@ -12,8 +12,12 @@ type Translate = ReturnType<typeof useLocale>["t"];
 function getTranslatedConfigVariants(configVariants: ConfigVariants, translate: Translate) {
   return Object.entries(configVariants).reduce((variantsConfigVariants, [variantName, variant]) => {
     const translatedFields = variant.fields.map((field) => {
-      const label = field.label ?? "";
-      const placeholder = field.placeholder ?? "";
+      const label = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
+      const placeholder = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       return {
         ...field,
         label: translate(label),

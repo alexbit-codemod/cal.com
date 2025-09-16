@@ -35,26 +35,14 @@ const CopyMenu: React.FC<CopyMenuProps> = ({ color, className, onCopy }) => {
   return (
     <div className="absolute inset-2 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
       <div className="bg-default space-y-1 rounded-md p-2 shadow-lg">
-        <button
-          onClick={() => onCopy(formats.hex)}
-          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">
-          Copy as HEX
-        </button>
-        <button
-          onClick={() => onCopy(formats.rgb)}
-          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">
-          Copy as RGB
-        </button>
-        <button
-          onClick={() => onCopy(formats.hsl)}
-          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">
-          Copy as HSL
-        </button>
-        <button
-          onClick={() => onCopy(formats.tailwind)}
-          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">
-          Copy Tailwind Class
-        </button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );
@@ -85,7 +73,8 @@ export const TypeTable: React.FC<TypeTableProps> = ({ sections }) => {
               {section.colors.map((color, colorIndex) => (
                 <div key={colorIndex} className="border-subtle bg-default overflow-hidden rounded-lg border">
                   <div className="group relative">
-                    <div className={`h-36 w-full ${color.className}`} title={color.value} />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <CopyMenu color={color.value} className={color.className} onCopy={handleCopy} />
                   </div>
                   <div className="space-y-1 p-2">

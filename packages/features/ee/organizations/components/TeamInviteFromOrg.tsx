@@ -31,7 +31,8 @@ export default function TeamInviteFromOrg({
   return (
     <div className="bg-muted border-subtle flex flex-col rounded-md border p-4">
       <div className="-my-1">
-        <TextField placeholder="Search..." onChange={(e) => setSearchQuery(e.target.value)} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <hr className="border-subtle -mx-4 mt-2" />
       <div className="scrollbar min-h-48 flex max-h-48 flex-col space-y-0.5 overflow-y-scroll pt-2">
@@ -74,7 +75,8 @@ function UserToInviteItem({
         isSelected ? "bg-emphasis" : "hover:bg-subtle "
       )}>
       <div className="flex items-center space-x-2 rtl:space-x-reverse">
-        <Avatar size="sm" alt="Users avatar" asChild imageSrc={member.user.avatarUrl} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <label
           htmlFor={`${member.user.id}`}
           className="text-emphasis cursor-pointer text-sm font-medium leading-none">

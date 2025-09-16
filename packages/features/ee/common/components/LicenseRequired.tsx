@@ -39,31 +39,13 @@ const LicenseRequired = ({ children, as = "", ...rest }: LicenseRequiredProps) =
       ) : process.env.NODE_ENV === "development" ? (
         /** We only show a warning in development mode, but allow the feature to be displayed for development/testing purposes */
         <>
-          <Alert
-            className="mb-4"
-            severity="warning"
-            title={
-              <>
-                {t("enterprise_license_locally")} {t("enterprise_license_sales")}{" "}
-                <a className="underline" href="https://go.cal.com/get-license">
-                  {t("contact_sales")}
-                </a>
-              </>
-            }
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {children}
         </>
       ) : (
-        <EmptyScreen
-          Icon="triangle-alert"
-          headline={t("enterprise_license")}
-          buttonRaw={
-            <Button color="secondary" href="https://go.cal.com/get-license">
-              {t(`contact_sales`)}
-            </Button>
-          }
-          description={t("enterprise_license_sales")}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </Component>
   );

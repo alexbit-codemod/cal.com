@@ -28,7 +28,9 @@ type TBookingRedirect = {
 export const outOfOfficeCreateOrUpdate = async ({ ctx, input }: TBookingRedirect) => {
   const { startDate, endDate } = input.dateRange;
   if (!startDate || !endDate) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "start_date_and_end_date_required" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const startTimeUtc = dayjs.utc(startDate).add(input.startDateOffset, "minute").startOf("day");
@@ -36,7 +38,9 @@ export const outOfOfficeCreateOrUpdate = async ({ ctx, input }: TBookingRedirect
 
   // If start date is after end date throw error
   if (startTimeUtc.isAfter(endTimeUtc)) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "start_date_must_be_before_end_date" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   let oooUserId = ctx.user.id;
@@ -50,7 +54,9 @@ export const outOfOfficeCreateOrUpdate = async ({ ctx, input }: TBookingRedirect
   if (!!input.forUserId) {
     isAdmin = await isAdminForUser(ctx.user.id, input.forUserId);
     if (!isAdmin) {
-      throw new TRPCError({ code: "NOT_FOUND", message: "only_admin_can_create_ooo" });
+      throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     oooUserId = input.forUserId;
     const oooForUser = await prisma.user.findUnique({
@@ -69,7 +75,9 @@ export const outOfOfficeCreateOrUpdate = async ({ ctx, input }: TBookingRedirect
   let toUserId: number | null = null;
 
   if (input.toTeamUserId === oooUserId) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "cannot_redirect_to_self" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (input.toTeamUserId) {
@@ -97,14 +105,18 @@ export const outOfOfficeCreateOrUpdate = async ({ ctx, input }: TBookingRedirect
     if (!user) {
       throw new TRPCError({
         code: "NOT_FOUND",
-        message: input.forUserId ? "forward_to_team_member_only" : "user_not_found",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
     toUserId = user?.id;
   }
 
   if (!input.reasonId) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "reason_id_required" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Prevent infinite redirects but consider time ranges
@@ -134,9 +146,9 @@ export const outOfOfficeCreateOrUpdate = async ({ ctx, input }: TBookingRedirect
   if (existingOutOfOfficeEntry) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: input.forUserId
-        ? "ooo_team_redirect_infinite_not_allowed"
-        : "booking_redirect_infinite_not_allowed",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -149,7 +161,9 @@ export const outOfOfficeCreateOrUpdate = async ({ ctx, input }: TBookingRedirect
   });
 
   if (isDuplicateOutOfOfficeEntry && isDuplicateOutOfOfficeEntry?.uuid !== input.uuid) {
-    throw new TRPCError({ code: "CONFLICT", message: "out_of_office_entry_already_exists" });
+    throw new TRPCError({ code: "CONFLICT", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Get the existing redirected user from existing out of office entry to send that user appropriate email.

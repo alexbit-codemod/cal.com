@@ -71,16 +71,8 @@ export const ChildrenEventTypeSelect = ({
 
   return (
     <>
-      <Select
-        name={props.name}
-        placeholder={t("select")}
-        options={options}
-        className={customClassNames?.assignToSelect?.select}
-        innerClassNames={customClassNames?.assignToSelect?.innerClassNames}
-        value={value}
-        isMulti
-        {...props}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {/* This class name conditional looks a bit odd but it allows a seamless transition when using autoanimate
        - Slides down from the top instead of just teleporting in from nowhere*/}
       <ul
@@ -97,15 +89,8 @@ export const ChildrenEventTypeSelect = ({
                 "flex flex-row items-center gap-3 p-3",
                 customClassNames?.selectedChildrenList?.listItem?.container
               )}>
-              <Avatar
-                size="mdLg"
-                className={classNames(
-                  "overflow-visible",
-                  customClassNames?.selectedChildrenList?.listItem?.avatar
-                )}
-                imageSrc={children.owner.avatar}
-                alt={children.owner.name || children.owner.email || ""}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div className="flex w-full flex-row justify-between">
                 <div className="flex flex-col">
                   <span

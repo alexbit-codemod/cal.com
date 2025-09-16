@@ -16,7 +16,8 @@ export const BasicExample: React.FC = () => {
         <div className="w-full max-w-[300px] space-y-6">
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-default text-sm">Single Value: {singleValue[0]}%</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <RangeSlider
               value={singleValue}
@@ -30,9 +31,8 @@ export const BasicExample: React.FC = () => {
         <div className="w-full max-w-[300px] space-y-6">
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-default text-sm">
-                Range: {rangeValue[0]}% - {rangeValue[1]}%
-              </span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <RangeSlider
               value={rangeValue}
@@ -47,7 +47,8 @@ export const BasicExample: React.FC = () => {
         <div className="w-full max-w-[300px] space-y-6">
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-default text-sm">Step Size 25: {steppedValue[0]}%</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <RangeSlider
               value={steppedValue}
@@ -61,7 +62,8 @@ export const BasicExample: React.FC = () => {
         <div className="w-full max-w-[300px] space-y-6">
           <div className="space-y-2">
             <div className="flex justify-between">
-              <span className="text-default text-sm">Disabled: 50%</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <RangeSlider value={[50]} max={100} step={1} disabled aria-label="Disabled" />
           </div>

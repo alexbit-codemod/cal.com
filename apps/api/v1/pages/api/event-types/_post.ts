@@ -306,7 +306,9 @@ async function postHandler(req: NextApiRequest) {
 
   return {
     event_type: schemaEventTypeReadPublic.parse(eventType),
-    message: "Event type created successfully",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 }
 
@@ -317,7 +319,9 @@ async function checkPermissions(req: NextApiRequest) {
   if (!isSystemWideAdmin && body.userId)
     throw new HttpError({
       statusCode: 401,
-      message: "ADMIN required for `userId`",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   if (
     body.teamId &&
@@ -328,11 +332,15 @@ async function checkPermissions(req: NextApiRequest) {
   )
     throw new HttpError({
       statusCode: 401,
-      message: "ADMIN required for `teamId`",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   /* Admin users are required to pass in a userId or teamId */
   if (isSystemWideAdmin && !body.userId && !body.teamId)
-    throw new HttpError({ statusCode: 400, message: "`userId` or `teamId` required" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 }
 
 export default defaultResponder(postHandler);

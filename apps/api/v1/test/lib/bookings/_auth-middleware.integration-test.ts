@@ -58,7 +58,9 @@ describe("Booking ownership and access in Middleware", () => {
           create: {
             id: 2,
             uid: "2",
-            title: "Booking 2",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             eventTypeId: 1,
             startTime: "2024-08-30T06:45:00.000Z",
             endTime: "2024-08-30T07:45:00.000Z",
@@ -146,7 +148,9 @@ describe("Booking ownership and access in Middleware", () => {
     prismock.eventType.create({
       data: {
         id: 1,
-        title: "Event 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "event",
         length: 60,
         bookings: {
@@ -159,7 +163,9 @@ describe("Booking ownership and access in Middleware", () => {
     prismock.eventType.create({
       data: {
         id: 2,
-        title: "Event 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "event",
         length: 60,
         teamId: 1,
@@ -209,7 +215,9 @@ describe("Booking ownership and access in Middleware", () => {
       data: {
         id: 1,
         uid: "1",
-        title: "Booking 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         userId: 1,
         startTime: "2024-08-30T06:45:00.000Z",
         endTime: "2024-08-30T07:45:00.000Z",

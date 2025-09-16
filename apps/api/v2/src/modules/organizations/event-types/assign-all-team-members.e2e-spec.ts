@@ -254,7 +254,9 @@ describe("Assign all team members", () => {
   describe("should setup event types using assignAllTeamMembers true", () => {
     it("should be able to setup team event type if no hosts nor assignAllTeamMembers provided", async () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
-        title: "Coding consultation round robin",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `organizations-event-types-round-robin-${randomString()}`,
         lengthInMinutes: 60,
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -282,7 +284,9 @@ describe("Assign all team members", () => {
 
     it("should setup collective event type assignAllTeamMembers true", async () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
-        title: "Coding consultation collective",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `assign-all-team-members-collective-${randomString()}`,
         lengthInMinutes: 60,
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -322,7 +326,9 @@ describe("Assign all team members", () => {
 
     it("should setup round robin event type assignAllTeamMembers true", async () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
-        title: "Coding consultation round robin",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `assign-all-team-members-round-robin-${randomString()}`,
         lengthInMinutes: 60,
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -369,7 +375,9 @@ describe("Assign all team members", () => {
     it("should update round robin event type", async () => {
       if (!roundRobinEventType) {
         const setupBody: CreateTeamEventTypeInput_2024_06_14 = {
-          title: "Coding consultation round robin",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: `assign-all-team-members-round-robin-${randomString()}`,
           lengthInMinutes: 60,
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -390,7 +398,9 @@ describe("Assign all team members", () => {
       }
 
       const body: UpdateTeamEventTypeInput_2024_06_14 = {
-        title: "Coding consultation round robin updated",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
 
       return request(app.getHttpServer())
@@ -431,7 +441,9 @@ describe("Assign all team members", () => {
 
     it("should setup managed event type assignAllTeamMembers true", async () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
-        title: "Coding consultation managed",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `assign-all-team-members-managed-${randomString()}`,
         lengthInMinutes: 60,
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment

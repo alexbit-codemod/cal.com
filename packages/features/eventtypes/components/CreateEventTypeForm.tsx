@@ -44,40 +44,13 @@ export default function CreateEventTypeForm({
         handleSubmit(values);
       }}>
       <div className="mt-3 space-y-6 pb-11">
-        <TextField
-          label={t("title")}
-          placeholder={t("quick_chat")}
-          data-testid="event-type-quick-chat"
-          {...register("title")}
-          onChange={(e) => {
-            form.setValue("title", e?.target.value);
-            if (form.formState.touchedFields["slug"] === undefined) {
-              form.setValue("slug", slugify(e?.target.value));
-            }
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
         {urlPrefix && urlPrefix.length >= 21 ? (
           <div>
-            <TextField
-              label={isPlatform ? "Slug" : `${t("url")}: ${urlPrefix}`}
-              required
-              addOnLeading={
-                !isPlatform ? (
-                  <Tooltip content={!isManagedEventType ? pageSlug : t("username_placeholder")}>
-                    <span className="max-w-24 md:max-w-56">
-                      {`/${!isManagedEventType ? pageSlug : t("username_placeholder")}/`}
-                    </span>
-                  </Tooltip>
-                ) : undefined
-              }
-              containerClassName="[&>div]:gap-0"
-              className="pl-0"
-              {...register("slug")}
-              onChange={(e) => {
-                form.setValue("slug", slugify(e?.target.value), { shouldTouch: true });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             {isManagedEventType && !isPlatform && (
               <p className="mt-2 text-sm text-gray-600">{t("managed_event_url_clarification")}</p>
@@ -85,26 +58,8 @@ export default function CreateEventTypeForm({
           </div>
         ) : (
           <div>
-            <TextField
-              label={isPlatform ? "Slug" : t("url")}
-              required
-              addOnLeading={
-                !isPlatform ? (
-                  <Tooltip
-                    content={`${urlPrefix}/${!isManagedEventType ? pageSlug : t("username_placeholder")}/`}>
-                    <span className="max-w-24 md:max-w-56">
-                      {`${urlPrefix}/${!isManagedEventType ? pageSlug : t("username_placeholder")}/`}
-                    </span>
-                  </Tooltip>
-                ) : undefined
-              }
-              containerClassName="[&>div]:gap-0"
-              className="pl-0"
-              {...register("slug")}
-              onChange={(e) => {
-                form.setValue("slug", slugify(e?.target.value), { shouldTouch: true });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             {isManagedEventType && !isPlatform && (
               <p className="mt-2 text-sm text-gray-600">{t("managed_event_url_clarification")}</p>
             )}
@@ -112,41 +67,16 @@ export default function CreateEventTypeForm({
         )}
         <>
           {isPlatform ? (
-            <TextAreaField {...register("description")} placeholder={t("quick_video_meeting")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ) : (
-            <Editor
-              getText={() => md.render(form.getValues("description") || "")}
-              setText={(value: string) => form.setValue("description", turndown(value))}
-              excludedToolbarItems={["blockType", "link"]}
-              placeholder={t("quick_video_meeting")}
-              firstRender={firstRender}
-              setFirstRender={setFirstRender}
-              maxHeight="200px"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
 
           <div className="relative">
-            <TextField
-              type="number"
-              required
-              min={MIN_EVENT_DURATION_MINUTES}
-              max={MAX_EVENT_DURATION_MINUTES}
-              placeholder="15"
-              label={t("duration")}
-              className="pr-4"
-              {...register("length", {
-                valueAsNumber: true,
-                min: {
-                  value: MIN_EVENT_DURATION_MINUTES,
-                  message: t("duration_min_error", { min: MIN_EVENT_DURATION_MINUTES }),
-                },
-                max: {
-                  value: MAX_EVENT_DURATION_MINUTES,
-                  message: t("duration_max_error", { max: MAX_EVENT_DURATION_MINUTES }),
-                },
-              })}
-              addOnSuffix={t("minutes")}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </>
       </div>

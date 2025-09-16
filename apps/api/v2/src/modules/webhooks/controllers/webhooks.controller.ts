@@ -86,7 +86,9 @@ export class WebhooksController {
   @Get("/")
   @ApiOperation({
     summary: "Get all webhooks",
-    description: "Gets a paginated list of webhooks for the authenticated user.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async getWebhooks(
     @GetUser() user: UserWithProfile,

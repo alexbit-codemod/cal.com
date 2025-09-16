@@ -41,22 +41,8 @@ const TwoFactorAuthView = () => {
   return (
     <>
       {canSetupTwoFactor && <Alert severity="neutral" message={t("2fa_disabled")} />}
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        data-testid="two-factor-switch"
-        title={t("two_factor_auth")}
-        description={t("add_an_extra_layer_of_security")}
-        checked={user?.twoFactorEnabled ?? false}
-        onCheckedChange={() =>
-          user?.twoFactorEnabled ? setDisableModalOpen(true) : setEnableModalOpen(true)
-        }
-        Badge={
-          <Badge className="mx-2 text-xs" variant={user?.twoFactorEnabled ? "success" : "gray"}>
-            {user?.twoFactorEnabled ? t("enabled") : t("disabled")}
-          </Badge>
-        }
-        switchContainerClassName="rounded-t-none border-t-0"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
       <EnableTwoFactorModal
         open={enableModalOpen}

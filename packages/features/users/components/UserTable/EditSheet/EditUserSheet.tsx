@@ -73,7 +73,8 @@ export function EditUserSheet({
                   <div className="border-sublte bg-default w-full rounded-xl border p-4">
                     <OrganizationBanner />
                     <div className="bg-default ml-3 w-fit translate-y-[-50%] rounded-full p-1 ring-1 ring-[#0000000F]">
-                      <Avatar asChild size="lg" alt={`${loadedUser?.name} avatar`} imageSrc={avatarURL} />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     </div>
                     <h2 className="text-emphasis font-sans text-2xl font-semibold">
                       {loadedUser?.name || "Nameless User"}
@@ -86,27 +87,18 @@ export function EditUserSheet({
                 <SheetBody className="flex flex-col space-y-4 p-4">
                   <div className="mb-4 flex flex-col space-y-4">
                     <h3 className="text-emphasis mb-1 text-base font-semibold">{t("profile")}</h3>
-                    <DisplayInfo
-                      label="Cal"
-                      value={removeProtocol(
-                        `${orgBranding?.fullDomain ?? WEBAPP_URL}/${loadedUser?.username}`
-                      )}
-                      icon="external-link"
-                    />
-                    <DisplayInfo label={t("email")} value={loadedUser?.email ?? ""} icon="at-sign" />
-                    <DisplayInfo label={t("role")} value={[loadedUser?.role ?? ""]} icon="fingerprint" />
-                    <DisplayInfo label={t("timezone")} value={loadedUser?.timeZone ?? ""} icon="clock" />
-                    <DisplayInfo
-                      label={t("teams")}
-                      value={!teamNames || teamNames.length === 0 ? "" : teamNames}
-                      icon="users"
-                      coloredBadges
-                    />
-                    <DisplayInfo
-                      label={t("availability")}
-                      value={!schedulesNames || schedulesNames.length === 0 ? "" : schedulesNames}
-                      icon="calendar"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   {usersAttributes && usersAttributes?.length > 0 && (
                     <div className="mt-4 flex flex-col">
@@ -114,15 +106,8 @@ export function EditUserSheet({
                       <div className="flex flex-col space-y-4">
                         {usersAttributes.map((attribute, index) => (
                           <>
-                            <DisplayInfo
-                              key={index}
-                              label={attribute.name}
-                              value={
-                                ["TEXT", "NUMBER", "SINGLE_SELECT"].includes(attribute.type)
-                                  ? attribute.options[0].value
-                                  : attribute.options.map((option) => option.value)
-                              }
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           </>
                         ))}
                       </div>

@@ -43,14 +43,18 @@ class RoutingFormResponseIdValidator implements ValidatorConstraintInterface {
 export class GetAvailableSlotsInput_2024_04_15 {
   @IsDateString({ strict: true })
   @ApiProperty({
-    description: "Start date string starting from which to fetch slots in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2022-06-14T00:00:00.000Z",
   })
   startTime!: string;
 
   @IsDateString({ strict: true })
   @ApiProperty({
-    description: "End date string until which to fetch slots in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2022-06-14T23:59:59.999Z",
   })
   endTime!: string;
@@ -58,14 +62,18 @@ export class GetAvailableSlotsInput_2024_04_15 {
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @IsOptional()
-  @ApiPropertyOptional({ description: "Event Type ID for which slots are being fetched.", example: 100 })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 100 })
   eventTypeId?: number;
 
   @IsString()
   @IsOptional()
   @ApiPropertyOptional({
     description:
-      "Slug of the event type for which slots are being fetched. If event slug is provided then username must be provided too as query parameter `usernameList[]=username`",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   eventTypeSlug?: string;
 
@@ -75,7 +83,9 @@ export class GetAvailableSlotsInput_2024_04_15 {
   @ApiPropertyOptional({
     type: [String],
     description:
-      "Only if eventTypeSlug is provided or for dynamic events - list of usernames for which slots are being fetched.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "usernameList[]=bob",
   })
   usernameList?: string[];
@@ -88,8 +98,12 @@ export class GetAvailableSlotsInput_2024_04_15 {
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @IsOptional()
-  @Min(1, { message: "Duration must be a positive number" })
-  @ApiPropertyOptional({ description: "Only for dynamic events - length of returned slots." })
+  @Min(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   duration?: number;
 
   @IsOptional()
@@ -104,12 +118,16 @@ export class GetAvailableSlotsInput_2024_04_15 {
 
   @IsString()
   @IsOptional()
-  @ApiPropertyOptional({ description: "Organization slug." })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   orgSlug?: string;
 
   @IsString()
   @IsEnum(SlotFormat, {
-    message: "slotFormat must be either 'range' or 'time'",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Transform(({ value }) => {
     if (!value) return undefined;
@@ -117,7 +135,9 @@ export class GetAvailableSlotsInput_2024_04_15 {
   })
   @IsOptional()
   @ApiPropertyOptional({
-    description: "Format of slot times in response. Use 'range' to get start and end times.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "range",
     enum: SlotFormat,
   })
@@ -217,7 +237,9 @@ export class RemoveSelectedSlotInput_2024_04_15 {
   @IsString()
   @IsOptional()
   @ApiProperty({
-    description: "Unique identifier for the slot to be removed.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "e2a7bcf9-cc7b-40a0-80d3-657d391775a6",
     required: true,
   })
@@ -226,24 +248,32 @@ export class RemoveSelectedSlotInput_2024_04_15 {
 
 export class ReserveSlotInput_2024_04_15 {
   @IsInt()
-  @ApiProperty({ description: "Event Type ID for which timeslot is being reserved.", example: 100 })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 100 })
   eventTypeId!: number;
 
   @IsDateString()
   @ApiProperty({
-    description: "Start date of the slot in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2022-06-14T00:00:00.000Z",
   })
   slotUtcStartDate!: string;
 
   @IsDateString()
-  @ApiProperty({ description: "End date of the slot in UTC timezone.", example: "2022-06-14T00:30:00.000Z" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "2022-06-14T00:30:00.000Z" })
   slotUtcEndDate!: string;
 
   @IsString()
   @IsOptional()
   @ApiPropertyOptional({
-    description: "Optional but only for events with seats. Used to retrieve booking of a seated event.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   bookingUid?: string;
 

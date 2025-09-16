@@ -27,8 +27,10 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
     <main
       className={`flex min-h-screen flex-col ${inter.className} main text-default flex min-h-full w-full flex-col items-center overflow-visible`}>
       <Navbar username={props.calUsername} />
-      <h1 className="my-4 text-2xl font-semibold">{props.calUsername} Bookings</h1>
-      {isLoading && <p>Loading...</p>}
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      {isLoading && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
       {!isLoading &&
         pastBookings &&
         upcomingBookings &&
@@ -63,9 +65,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                   </div>
                 </div>
                 <div className="px-6">
-                  <p>
-                    {booking?.hosts?.[0]?.name} and {booking.attendees[0].name}
-                  </p>{" "}
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$${" "}
                   <p />
                 </div>
               </div>

@@ -39,6 +39,8 @@ export const updateOIDCHandler = async ({ ctx, input }: UpdateOIDCOptions) => {
     });
   } catch (err) {
     console.error("Error updating OIDC connection", err);
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Updating OIDC Connection failed." });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };

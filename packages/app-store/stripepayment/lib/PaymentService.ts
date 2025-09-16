@@ -305,10 +305,14 @@ export class PaymentService implements IAbstractPaymentService {
         "amount must convert to at least": "amount_must_convert_to_at_least",
       };
 
-      let userMessage = "could_not_charge_card";
+      let userMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       if (error instanceof Error) {
-        const errorMessage = error.message.toLowerCase();
+        const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
 
         for (const [key, message] of Object.entries(errorMappings)) {
           if (errorMessage.includes(key)) {

@@ -40,7 +40,8 @@ export default function MemberListItem(props: Props) {
               <div className="mb-1 flex items-center">
                 <span className="text-default mr-1 text-sm font-bold leading-4">{name}</span>
 
-                {!props.member.accepted && <TeamPill color="orange" text={t("pending")} />}
+                {!props.member.accepted && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$}
                 {props.member.role && <TeamRole role={props.member.role} />}
               </div>
               <div className="text-default flex items-center">

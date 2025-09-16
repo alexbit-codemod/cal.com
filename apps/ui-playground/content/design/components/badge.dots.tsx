@@ -25,7 +25,8 @@ export const DotsExample: React.FC = () => (
           <Badge variant={variant} withDot>
             {variant}
           </Badge>
-          <span className="text-subtle text-xs">Dot</span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       ))}
     </div>

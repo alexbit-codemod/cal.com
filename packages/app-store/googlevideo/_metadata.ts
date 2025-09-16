@@ -11,7 +11,9 @@ export const metadata = {
   category: "conferencing",
   categories: ["conferencing"],
   type: "google_video",
-  title: "Google Meet",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   variant: "conferencing",
   logo: "logo.webp",
   publisher: "Cal.com",
@@ -22,7 +24,9 @@ export const metadata = {
     location: {
       linkType: "dynamic",
       type: "integrations:google:meet",
-      label: "Google Meet",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   },
   dirName: "googlevideo",

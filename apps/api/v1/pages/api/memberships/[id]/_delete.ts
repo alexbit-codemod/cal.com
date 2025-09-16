@@ -39,7 +39,9 @@ export async function deleteHandler(req: NextApiRequest) {
   const userId_teamId = membershipIdSchema.parse(query);
   await checkPermissions(req);
   await prisma.membership.delete({ where: { userId_teamId } });
-  return { message: `Membership with id: ${query.id} deleted successfully` };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }
 
 async function checkPermissions(req: NextApiRequest) {
@@ -60,7 +62,9 @@ async function checkPermissions(req: NextApiRequest) {
   });
 
   if (!memberShipToBeDeleted) {
-    throw new HttpError({ statusCode: 404, message: "Membership not found" });
+    throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // If a user is deleting their own membership, then they can do it
@@ -79,14 +83,18 @@ async function checkPermissions(req: NextApiRequest) {
 
   if (!currentUserMembership) {
     // Current User isn't a member of the team
-    throw new HttpError({ statusCode: 403, message: "You are not a member of the team" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (
     PRIVILEGE_ORDER.indexOf(memberShipToBeDeleted.role) === -1 ||
     PRIVILEGE_ORDER.indexOf(currentUserMembership.role) === -1
   ) {
-    throw new HttpError({ statusCode: 400, message: "Invalid role" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // If Role that is being deleted comes before the current User's Role, or it's the same ROLE, throw error
@@ -95,7 +103,9 @@ async function checkPermissions(req: NextApiRequest) {
   ) {
     throw new HttpError({
       statusCode: 403,
-      message: "You don't have the appropriate role to delete this membership",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 }

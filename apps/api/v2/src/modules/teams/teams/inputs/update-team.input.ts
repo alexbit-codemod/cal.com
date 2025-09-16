@@ -6,12 +6,16 @@ import { Metadata, METADATA_DOCS, ValidateMetadata } from "@calcom/platform-type
 export class UpdateTeamDto {
   @IsString()
   @Length(1)
-  @ApiPropertyOptional({ description: "Name of the team", example: "CalTeam" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "CalTeam" })
   readonly name?: string;
 
   @IsOptional()
   @IsString()
-  @ApiPropertyOptional({ type: String, description: "Team slug", example: "caltel" })
+  @ApiPropertyOptional({ type: String, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "caltel" })
   readonly slug?: string;
 
   @IsOptional()
@@ -19,7 +23,9 @@ export class UpdateTeamDto {
   @ApiPropertyOptional({
     type: String,
     example: "https://i.cal.com/api/avatar/b0b58752-68ad-4c0d-8024-4fa382a77752.png",
-    description: `URL of the teams logo image`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   readonly logoUrl?: string;
 
@@ -88,7 +94,9 @@ export class UpdateTeamDto {
   @ApiPropertyOptional({
     type: String,
     example: "https://i.cal.com/api/avatar/949be534-7a88-4185-967c-c020b0c0bef3.png",
-    description: `URL of the teams banner image which is shown on booker`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   readonly bannerUrl?: string;
 
@@ -102,7 +110,9 @@ export class UpdateTeamDto {
   @ApiPropertyOptional({
     type: String,
     example: "America/New_York",
-    description: `Timezone is used to create teams's default schedule from Monday to Friday from 9AM to 5PM. It will default to Europe/London if not passed.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   readonly timeZone?: string;
 

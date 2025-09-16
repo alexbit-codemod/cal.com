@@ -51,31 +51,13 @@ export default function OAuthView() {
             });
           }}>
           <div className="">
-            <TextField
-              {...oAuthForm.register("name")}
-              label="Client name"
-              type="text"
-              id="name"
-              placeholder=""
-              className="mb-3"
-              required
-            />
-            <TextField
-              {...oAuthForm.register("redirectUri")}
-              label="Redirect URI"
-              type="text"
-              id="redirectUri"
-              placeholder=""
-              required
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div className="mb-5 mt-5 flex items-center">
-              <Avatar
-                alt=""
-                fallback={<Icon name="plus" className="text-subtle h-6 w-6" />}
-                className="mr-5 items-center"
-                imageSrc={logo}
-                size="lg"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <ImageUploader
                 target="avatar"
                 id="avatar-upload"

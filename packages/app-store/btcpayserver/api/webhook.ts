@@ -20,7 +20,9 @@ function verifyBTCPaySignature(rawBody: Buffer, expectedSignature: string, webho
   const computedSignature = hmac.digest("hex");
   const hexRegex = /^[0-9a-fA-F]+$/;
   if (!hexRegex.test(computedSignature) || !hexRegex.test(expectedSignature)) {
-    throw new HttpCode({ statusCode: 400, message: "signature mismatch" });
+    throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   return computedSignature;
 }
@@ -42,50 +44,74 @@ const SUPPORTED_INVOICE_EVENTS = ["InvoiceSettled", "InvoiceProcessing"];
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    if (req.method !== "POST") throw new HttpCode({ statusCode: 405, message: "Method Not Allowed" });
+    if (req.method !== "POST") throw new HttpCode({ statusCode: 405, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const rawBody = await getRawBody(req);
-    const bodyAsString = rawBody.toString();
+    const bodyAsString = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     const signature = req.headers["btcpay-sig"] || req.headers["BTCPay-Sig"];
     if (!signature || typeof signature !== "string" || !signature.startsWith("sha256="))
-      throw new HttpCode({ statusCode: 401, message: "Missing or invalid signature format" });
+      throw new HttpCode({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
 
     const webhookData = btcpayWebhookSchema.safeParse(JSON.parse(bodyAsString));
-    if (!webhookData.success) return res.status(400).json({ message: "Invalid webhook payload" });
+    if (!webhookData.success) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
     const data = webhookData.data;
     if (!SUPPORTED_INVOICE_EVENTS.includes(data.type))
-      return res.status(200).send({ message: "Webhook received but ignored" });
+      return res.status(200).send({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
 
     const bookingPaymentRepository = new BookingPaymentRepository();
     const payment = await bookingPaymentRepository.findByExternalIdIncludeBookingUserCredentials(
       data.invoiceId,
       appConfig.type
     );
-    if (!payment) throw new HttpCode({ statusCode: 404, message: "Cal.com: payment not found" });
-    if (payment.success) return res.status(200).send({ message: "Payment already registered" });
+    if (!payment) throw new HttpCode({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
+    if (payment.success) return res.status(200).send({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const key = payment.booking?.user?.credentials?.[0].key;
-    if (!key) throw new HttpCode({ statusCode: 404, message: "Cal.com: credentials not found" });
+    if (!key) throw new HttpCode({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
     const parsedKey = btcpayCredentialKeysSchema.safeParse(key);
     if (!parsedKey.success)
-      throw new HttpCode({ statusCode: 400, message: "Cal.com: Invalid BTCPay credentials" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
 
     const { webhookSecret, storeId } = parsedKey.data;
     if (storeId !== data.storeId)
-      throw new HttpCode({ statusCode: 400, message: "Cal.com: Store ID mismatch" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
 
     const expectedSignature = signature.split("=")[1];
     const computedSignature = verifyBTCPaySignature(rawBody, expectedSignature, webhookSecret);
 
     if (computedSignature.length !== expectedSignature.length) {
-      throw new HttpCode({ statusCode: 400, message: "signature mismatch" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const isValid = crypto.timingSafeEqual(
       Buffer.from(computedSignature, "hex"),
       Buffer.from(expectedSignature, "hex")
     );
-    if (!isValid) throw new HttpCode({ statusCode: 400, message: "signature mismatch" });
+    if (!isValid) throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
     await handlePaymentSuccess(payment.id, payment.bookingId);
     return res.status(200).json({ success: true });

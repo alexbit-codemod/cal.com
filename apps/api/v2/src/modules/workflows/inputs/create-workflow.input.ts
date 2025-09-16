@@ -47,7 +47,9 @@ import {
 
 export class WorkflowActivationDto {
   @ApiProperty({
-    description: "Whether the workflow is active for all the event-types",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: false,
     type: Boolean,
   })
@@ -56,7 +58,9 @@ export class WorkflowActivationDto {
 
   @ApiPropertyOptional({
     description:
-      "List of event-types IDs the workflow applies to, required if isActiveOnAllEventTypes is false",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: [698191],
     type: [Number],
   })
@@ -93,17 +97,23 @@ export type TriggerDtoType =
   BaseWorkflowTriggerDto
 )
 export class CreateWorkflowDto {
-  @ApiProperty({ description: "Name of the workflow", example: "Platform Test Workflow" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "Platform Test Workflow" })
   @IsString()
   name!: string;
 
-  @ApiProperty({ description: "Activation settings for the workflow", type: WorkflowActivationDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: WorkflowActivationDto })
   @ValidateNested()
   @Type(() => WorkflowActivationDto)
   activation!: WorkflowActivationDto;
 
   @ApiProperty({
-    description: "Trigger configuration for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(OnBeforeEventTriggerDto) },
       { $ref: getSchemaPath(OnAfterEventTriggerDto) },
@@ -139,7 +149,9 @@ export class CreateWorkflowDto {
     | OnAfterCalVideoHostsNoShowTriggerDto;
 
   @ApiProperty({
-    description: "Steps to execute as part of the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(WorkflowEmailAddressStepDto) },
       { $ref: getSchemaPath(WorkflowEmailAttendeeStepDto) },
@@ -152,7 +164,9 @@ export class CreateWorkflowDto {
     type: "array",
   })
   @ValidateNested({ each: true })
-  @ArrayMinSize(1, { message: "Your workflow must contain at least one step." })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Type(() => BaseWorkflowStepDto, {
     discriminator: {
       property: "action",

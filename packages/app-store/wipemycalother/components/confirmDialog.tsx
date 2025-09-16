@@ -86,14 +86,12 @@ export const ConfirmDialog = (props: IConfirmDialogWipe) => {
             <Icon name="clock" className="m-auto h-5 w-5" />
           </div>
           <div className="pt-1">
-            <DialogHeader title="Wipe My Calendar" />
-            <p className="text-subtle mt-2 text-sm">
-              This will cancel all upcoming meetings from: <br />{" "}
-              <strong className="text-emphasis">
-                {initialDate.format(dateFormat)} - {endDate.format(dateFormat)}
-              </strong>
-            </p>
-            <p className="mb-2 mt-6 text-sm">Are you sure? This can&apos;t be undone</p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
 

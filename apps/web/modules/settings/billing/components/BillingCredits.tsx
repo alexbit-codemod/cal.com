@@ -126,13 +126,8 @@ export default function BillingCredits() {
           t={t}
           i18nKey="view_and_manage_credits_description"
           components={[
-            <Link
-              key="Credit System"
-              className="underline underline-offset-2"
-              target="_blank"
-              href="https://cal.com/help/billing-and-usage/messaging-credits">
-              Learn more
-            </Link>,
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$,
           ]}
         />
         <div className="-mx-6 mt-6">
@@ -142,11 +137,8 @@ export default function BillingCredits() {
           {creditsData.credits.totalMonthlyCredits > 0 ? (
             <div className="mb-4">
               <Label>{t("monthly_credits")}</Label>
-              <ProgressBar
-                color="green"
-                percentageValue={teamCreditsPercentageUsed}
-                label={`${Math.max(0, Math.round(teamCreditsPercentageUsed))}%`}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div className="text-subtle">
                 <div>
                   {t("total_credits", {
@@ -174,20 +166,8 @@ export default function BillingCredits() {
             <div className="-mb-1 mr-auto">
               <Label>{t("buy_additional_credits")}</Label>
               <div className="flex flex-col">
-                <TextField
-                  required
-                  type="number"
-                  {...register("quantity", {
-                    required: t("error_required_field"),
-                    min: { value: 50, message: t("minimum_of_credits_required") },
-                    valueAsNumber: true,
-                  })}
-                  label=""
-                  containerClassName="w-60"
-                  onChange={(e) => setValue("quantity", Number(e.target.value))}
-                  min={50}
-                  addOnSuffix={<>{t("credits")}</>}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 {errors.quantity && <InputError message={errors.quantity.message ?? t("invalid_input")} />}
               </div>
             </div>

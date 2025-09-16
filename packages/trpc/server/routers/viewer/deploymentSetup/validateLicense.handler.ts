@@ -17,7 +17,9 @@ export const validateLicenseHandler = async ({ input }: ValidateLicenseOptions) 
   if (process.env.NEXT_PUBLIC_IS_E2E === "1") {
     return {
       valid: true,
-      message: "License key is valid (E2E mode)",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
 
@@ -26,13 +28,17 @@ export const validateLicenseHandler = async ({ input }: ValidateLicenseOptions) 
 
     return {
       valid: isValid,
-      message: isValid ? "License key is valid" : "License key is invalid",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   } catch (error) {
     console.error("License validation failed:", error);
     return {
       valid: false,
-      message: "License key validation failed",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
 };

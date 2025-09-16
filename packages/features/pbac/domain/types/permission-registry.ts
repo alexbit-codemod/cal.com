@@ -107,10 +107,14 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_all",
     },
     [CrudAction.All]: {
-      description: "All actions on all resources",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "system",
       i18nKey: "pbac_resource_all",
-      descriptionI18nKey: "pbac_desc_all_actions_all_resources",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization], // Only organizations should have "All" permissions
     },
   },
@@ -119,34 +123,54 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_role",
     },
     [CrudAction.Create]: {
-      description: "Create roles",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "role",
       i18nKey: "pbac_action_create",
-      descriptionI18nKey: "pbac_desc_create_roles",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Read]: {
-      description: "View roles",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "role",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_roles",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Update]: {
-      description: "Update roles",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "role",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_update_roles",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Delete]: {
-      description: "Delete roles",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "role",
       i18nKey: "pbac_action_delete",
-      descriptionI18nKey: "pbac_desc_delete_roles",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Manage]: {
-      description: "Manage roles on all sub-teams",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "role",
       i18nKey: "pbac_action_manage",
-      descriptionI18nKey: "pbac_desc_manage_roles",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization], // Only organizations should have "Manage" permissions
     },
   },
@@ -155,34 +179,54 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_event_type",
     },
     [CrudAction.Create]: {
-      description: "Create event types",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "event",
       i18nKey: "pbac_action_create",
-      descriptionI18nKey: "pbac_desc_create_event_types",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Read]: {
-      description: "View event types",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "event",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_event_types",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Update]: {
-      description: "Update event types",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "event",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_update_event_types",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Delete]: {
-      description: "Delete event types",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "event",
       i18nKey: "pbac_action_delete",
-      descriptionI18nKey: "pbac_desc_delete_event_types",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Manage]: {
-      description: "Manage event types",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "event",
       i18nKey: "pbac_action_manage",
-      descriptionI18nKey: "pbac_desc_manage_event_types",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization], // Only organizations should have "Manage" permissions
     },
   },
@@ -191,53 +235,85 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_team",
     },
     [CrudAction.Create]: {
-      description: "Create teams",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_create",
-      descriptionI18nKey: "pbac_desc_create_teams",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CrudAction.Read]: {
-      description: "View team details",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_team_details",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Update]: {
-      description: "Update settings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_update_team_settings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Delete]: {
-      description: "Delete team",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_delete",
-      descriptionI18nKey: "pbac_desc_delete_team",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CustomAction.Invite]: {
-      description: "Invite team members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_invite",
-      descriptionI18nKey: "pbac_desc_invite_team_members",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CustomAction.Remove]: {
-      description: "Remove team members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_remove",
-      descriptionI18nKey: "pbac_desc_remove_team_members",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CustomAction.ChangeMemberRole]: {
-      description: "Change role of team members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_change_member_role",
-      descriptionI18nKey: "pbac_desc_change_team_member_role",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Manage]: {
-      description: "Manage team members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "team",
       i18nKey: "pbac_action_manage",
-      descriptionI18nKey: "pbac_desc_manage_team_members",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization], // Only organizations should have "Manage" permissions
     },
   },
@@ -246,59 +322,91 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_organization",
     },
     [CrudAction.Create]: {
-      description: "Create organization",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_create",
-      descriptionI18nKey: "pbac_desc_create_organization",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CrudAction.Read]: {
-      description: "View organization details",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_organization_details",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CustomAction.ListMembers]: {
-      description: "List organization members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_list_members",
-      descriptionI18nKey: "pbac_desc_list_organization_members",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CustomAction.Invite]: {
-      description: "Invite organization members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_invite",
-      descriptionI18nKey: "pbac_desc_invite_organization_members",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CustomAction.Remove]: {
-      description: "Remove organization members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_remove",
-      descriptionI18nKey: "pbac_desc_remove_organization_members",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CustomAction.ManageBilling]: {
-      description: "Manage organization billing",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_manage_billing",
-      descriptionI18nKey: "pbac_desc_manage_organization_billing",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CustomAction.ChangeMemberRole]: {
-      description: "Change role of team members",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_change_member_role",
-      descriptionI18nKey: "pbac_desc_change_organization_member_role",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CrudAction.Update]: {
-      description: "Edit organization settings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "org",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_edit_organization_settings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
   },
@@ -307,42 +415,66 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_booking",
     },
     [CrudAction.Read]: {
-      description: "View bookings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "booking",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_bookings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CustomAction.ReadTeamBookings]: {
-      description: "View team bookings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "booking",
       i18nKey: "pbac_action_read_team_bookings",
-      descriptionI18nKey: "pbac_desc_view_team_bookings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Team],
     },
     [CustomAction.ReadOrgBookings]: {
-      description: "View organization bookings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "booking",
       i18nKey: "pbac_action_read_org_bookings",
-      descriptionI18nKey: "pbac_desc_view_organization_bookings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
     [CustomAction.ReadRecordings]: {
-      description: "View booking recordings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "booking",
       i18nKey: "pbac_action_read_recordings",
-      descriptionI18nKey: "pbac_desc_view_booking_recordings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Update]: {
-      description: "Update bookings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "booking",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_update_bookings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Manage]: {
-      description: "Manage bookings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "booking",
       i18nKey: "pbac_action_manage",
-      descriptionI18nKey: "pbac_desc_manage_bookings",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization], // Only organizations should have "Manage" permissions
     },
   },
@@ -351,10 +483,14 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_insights",
     },
     [CrudAction.Read]: {
-      description: "View team insights and analytics",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "insights",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_team_insights",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   },
   [Resource.Workflow]: {
@@ -362,34 +498,54 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_workflow",
     },
     [CrudAction.Create]: {
-      description: "Create workflows",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "workflow",
       i18nKey: "pbac_action_create",
-      descriptionI18nKey: "pbac_desc_create_workflows",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Read]: {
-      description: "View workflows",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "workflow",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_workflows",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Update]: {
-      description: "Update workflows",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "workflow",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_update_workflows",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Delete]: {
-      description: "Delete workflows",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "workflow",
       i18nKey: "pbac_action_delete",
-      descriptionI18nKey: "pbac_desc_delete_workflows",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Manage]: {
-      description: "Manage workflows",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "workflow",
       i18nKey: "pbac_action_manage",
-      descriptionI18nKey: "pbac_desc_manage_workflows",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
   },
@@ -398,28 +554,44 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_attributes",
     },
     [CrudAction.Read]: {
-      description: "View organization attributes",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "attributes",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_organization_attributes",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Update]: {
-      description: "Update organization attributes",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "attributes",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_update_organization_attributes",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Delete]: {
-      description: "Delete organization attributes",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "attributes",
       i18nKey: "pbac_action_delete",
-      descriptionI18nKey: "pbac_desc_delete_organization_attributes",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Create]: {
-      description: "Create organization attributes",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "attributes",
       i18nKey: "pbac_action_create",
-      descriptionI18nKey: "pbac_desc_create_organization_attributes",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   },
   [Resource.RoutingForm]: {
@@ -427,34 +599,54 @@ export const PERMISSION_REGISTRY: PermissionRegistry = {
       i18nKey: "pbac_resource_routing_form",
     },
     [CrudAction.Create]: {
-      description: "Create routing forms",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "routing",
       i18nKey: "pbac_action_create",
-      descriptionI18nKey: "pbac_desc_create_routing_forms",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Read]: {
-      description: "View routing forms",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "routing",
       i18nKey: "pbac_action_read",
-      descriptionI18nKey: "pbac_desc_view_routing_forms",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Update]: {
-      description: "Update routing forms",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "routing",
       i18nKey: "pbac_action_update",
-      descriptionI18nKey: "pbac_desc_update_routing_forms",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Delete]: {
-      description: "Delete routing forms",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "routing",
       i18nKey: "pbac_action_delete",
-      descriptionI18nKey: "pbac_desc_delete_routing_forms",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [CrudAction.Manage]: {
-      description: "Manage routing forms",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       category: "routing",
       i18nKey: "pbac_action_manage",
-      descriptionI18nKey: "pbac_desc_manage_routing_forms",
+      descriptionI18nKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       scope: [Scope.Organization],
     },
   },

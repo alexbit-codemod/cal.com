@@ -55,7 +55,9 @@ describe("Organizations Teams Routing Forms Responses", () => {
       formFillerId: `${randomString()}`,
       response: {
         "participant-field": {
-          label: "participant",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: "mamut",
         },
       },
@@ -111,7 +113,9 @@ describe("Organizations Teams Routing Forms Responses", () => {
     // Create an event type for routing form to route to
     routingEventType = await prismaWriteService.prisma.eventType.create({
       data: {
-        title: "Test Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event-type",
         length: 30,
         userId: user.id,
@@ -143,14 +147,18 @@ describe("Organizations Teams Routing Forms Responses", () => {
         {
           id: "participant-field",
           type: "text",
-          label: "participant",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: true,
           identifier: "participant",
         },
         {
           id: "question2-field",
           type: "text",
-          label: "question2",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: false,
           identifier: "question2",
         },
@@ -309,13 +317,17 @@ describe("Organizations Teams Routing Forms Responses", () => {
         // Create a routing form that belongs to the other team
         const otherTeamRoutingForm = await routingFormsRepositoryFixture.create({
           name: "Other Team's Routing Form",
-          description: "Test Description",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           position: 0,
           disabled: false,
           fields: [
             {
               type: "text",
-              label: "Question 1",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
             },
           ],
@@ -452,7 +464,9 @@ describe("Organizations Teams Routing Forms Responses", () => {
       const eventTypeRoutingForm = await prismaWriteService.prisma.app_RoutingForms_Form.create({
         data: {
           name: "Test Event Type Routing Form",
-          description: "Test Description",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           disabled: false,
           routes: [
             {
@@ -491,14 +505,18 @@ describe("Organizations Teams Routing Forms Responses", () => {
             {
               id: "question1",
               type: "text",
-              label: "Question 1",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
               identifier: "question1",
             },
             {
               id: "question2",
               type: "text",
-              label: "Question 2",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: false,
               identifier: "question2",
             },
@@ -544,7 +562,9 @@ describe("Organizations Teams Routing Forms Responses", () => {
       const routingFormWithInvalidEventType = await prismaWriteService.prisma.app_RoutingForms_Form.create({
         data: {
           name: "Test Routing Form with Invalid Event Type",
-          description: "Test Description",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           disabled: false,
           routes: [
             {
@@ -583,7 +603,9 @@ describe("Organizations Teams Routing Forms Responses", () => {
             {
               id: "question1",
               type: "text",
-              label: "Question 1",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
               identifier: "question1",
             },
@@ -619,7 +641,9 @@ describe("Organizations Teams Routing Forms Responses", () => {
       const externalRoutingForm = await prismaWriteService.prisma.app_RoutingForms_Form.create({
         data: {
           name: "Test External Routing Form",
-          description: "Test Description for External Redirect",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           disabled: false,
           routes: [
             {
@@ -657,7 +681,9 @@ describe("Organizations Teams Routing Forms Responses", () => {
             {
               id: "question1",
               type: "text",
-              label: "Question 1",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
               identifier: "question1",
             },

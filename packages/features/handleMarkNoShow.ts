@@ -53,7 +53,9 @@ class ResponsePayload {
   constructor() {
     this.attendees = [];
     this.noShowHost = false;
-    this.message = "";
+    this.message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
   }
 
   setAttendees(attendees: { email: string; noShow: boolean }[]) {
@@ -138,7 +140,9 @@ const handleMarkNoShow = async ({
     if (error instanceof Error) {
       logger.error(error.message);
     }
-    throw new HttpError({ statusCode: 500, message: "Failed to update no-show status" });
+    throw new HttpError({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 
@@ -227,7 +231,9 @@ const assertCanAccessBooking = async (bookingUid: string, userId?: number) => {
   const booking = await bookingRepo.findBookingByUidAndUserId({ bookingUid, userId });
 
   if (!booking)
-    throw new HttpError({ statusCode: 403, message: "You are not allowed to access this booking" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const isUpcoming = new Date(booking.endTime) >= new Date();
   const isOngoing = isUpcoming && new Date() >= new Date(booking.startTime);
@@ -235,7 +241,9 @@ const assertCanAccessBooking = async (bookingUid: string, userId?: number) => {
   if (!isBookingInPast && !isOngoing) {
     throw new HttpError({
       statusCode: 403,
-      message: "Cannot mark no-show before the meeting has started.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 };

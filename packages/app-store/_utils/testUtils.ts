@@ -20,7 +20,9 @@ export function internalServerErrorResponse({
   status?: number;
   statusText?: string;
 }) {
-  return generateJsonResponse({ json, status: 500, statusText: "Internal Server Error" });
+  return generateJsonResponse({ json, status: 500, statusText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }
 
 export function generateTextResponse({

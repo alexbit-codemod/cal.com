@@ -34,13 +34,8 @@ export const UserStatsTable = ({ data }: { data: UserStatsData }) => {
             count={Number.isInteger(item.count) ? item.count : item.count.toFixed(1)}
             className="py-3">
             <div className="flex items-center">
-              <Avatar
-                alt={item.user.name || ""}
-                size="sm"
-                imageSrc={getUserAvatarUrl({ avatarUrl: item.user.avatarUrl })}
-                title={item.user.name || ""}
-                className="mr-3"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div className="text-default text-sm font-medium">{item.user.name}</div>
             </div>
           </ChartCardItem>

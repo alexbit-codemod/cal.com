@@ -119,15 +119,11 @@ function NewFormDialog({
             });
           }}>
           <div className="mt-3 space-y-5">
-            <TextField label={t("title")} required placeholder={t("a_routing_form")} {...register("name")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div className="mb-5">
-              <TextAreaField
-                id="description"
-                label={t("description")}
-                {...register("description")}
-                data-testid="description"
-                placeholder={t("form_description_placeholder")}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             {/* Disable this feature for new forms till we get it fully working with Routing Form with Attributes. This isn't much used feature */}
             {/* {action === "duplicate" && (

@@ -38,7 +38,9 @@ async function authMiddleware(req: NextApiRequest) {
     },
   });
 
-  if (!user) throw new HttpError({ statusCode: 404, message: "User not found" });
+  if (!user) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const filteredBookings = user?.bookings?.filter((booking) => booking.id === id);
   const userIsHost = !!filteredBookings?.length;
@@ -82,7 +84,9 @@ async function authMiddleware(req: NextApiRequest) {
   const userHasTeamBookings = !!teamBookingsAsOwnerOrAdmin.length;
 
   if (!userIsHost && !userHasTeamBookings)
-    throw new HttpError({ statusCode: 403, message: "You are not authorized" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 }
 
 export default authMiddleware;

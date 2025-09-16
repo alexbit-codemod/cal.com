@@ -63,7 +63,9 @@ export class OAuthClientsController {
   @HttpCode(HttpStatus.CREATED)
   @MembershipRoles([MembershipRole.ADMIN, MembershipRole.OWNER])
   @DocsCreatedResponse({
-    description: "Create an OAuth client",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: CreateOAuthClientResponseDto,
   })
   @ApiOperation({ summary: "Create an OAuth client" })

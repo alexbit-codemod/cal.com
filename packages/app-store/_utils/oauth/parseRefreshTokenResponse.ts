@@ -12,7 +12,9 @@ export const minimumTokenResponseSchema = z
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message:
-          "Missing a field that defines a token expiry date. Check the specific app package to see how token expiry is defined.",
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
       });
     }
   });

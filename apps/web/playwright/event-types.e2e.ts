@@ -54,7 +54,9 @@ test.describe("Event Types tests", () => {
 
     test("can add new event type", async ({ page }) => {
       const nonce = randomString(3);
-      const eventTitle = `hello ${nonce}`;
+      const eventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       await createNewUserEventType(page, { eventTitle });
       await page.goto("/event-types");
       await expect(page.locator(`text='${eventTitle}'`)).toBeVisible();
@@ -62,7 +64,9 @@ test.describe("Event Types tests", () => {
 
     test("new event type appears first in the list", async ({ page }) => {
       const nonce = randomString(3);
-      const eventTitle = `hello ${nonce}`;
+      const eventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       await createNewUserEventType(page, { eventTitle });
       await page.goto("/event-types");
       const firstEvent = page.locator("[data-testid=event-types] > li a").first();
@@ -72,7 +76,9 @@ test.describe("Event Types tests", () => {
 
     test("enabling recurring event comes with default options", async ({ page }) => {
       const nonce = randomString(3);
-      const eventTitle = `my recurring event ${nonce}`;
+      const eventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       await createNewUserEventType(page, { eventTitle });
 
       // fix the race condition
@@ -392,7 +398,9 @@ test.describe("Event Types tests", () => {
       page,
     }) => {
       const nonce = randomString(3);
-      const eventTitle = `Conflict event ${nonce}`;
+      const eventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       await createNewUserEventType(page, { eventTitle });
       await page.goto("/event-types");
       await page.click(`text=${eventTitle}`);
@@ -590,7 +598,9 @@ test.describe("Event Types tests", () => {
 });
 
 const selectAttendeePhoneNumber = async (page: Page) => {
-  const locationOptionText = "Attendee Phone Number";
+  const locationOptionText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   await page.getByTestId("location-select").click();
   await page.locator(`text=${locationOptionText}`).click();
 };

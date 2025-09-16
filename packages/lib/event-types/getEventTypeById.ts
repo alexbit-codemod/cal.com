@@ -170,7 +170,9 @@ export const getEventTypeById = async ({
       if (isTrpcCall) {
         throw new TRPCError({
           code: "NOT_FOUND",
-          message: "The event type doesn't have user and no fallback user was found",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       } else {
         throw Error("The event type doesn't have user and no fallback user was found");
@@ -192,7 +194,9 @@ export const getEventTypeById = async ({
   if (!currentUser?.id && !eventType.teamId) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Could not find user or team",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

@@ -226,27 +226,39 @@ async function main() {
     await prisma.eventType.createMany({
       data: [
         {
-          title: "Team Meeting",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "team-sales",
-          description: "Team Meeting",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           length: 60,
           teamId: insightsTeam.id,
           schedulingType: "ROUND_ROBIN",
           assignAllTeamMembers: true,
         },
         {
-          title: "Team Lunch",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "team-python",
-          description: "Team Lunch",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           length: 30,
           teamId: insightsTeam.id,
           schedulingType: "ROUND_ROBIN",
           assignAllTeamMembers: true,
         },
         {
-          title: "Team javascript",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "team-javascript",
-          description: "Team Coffee",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           length: 15,
           teamId: insightsTeam.id,
           schedulingType: "ROUND_ROBIN",
@@ -297,8 +309,12 @@ async function main() {
   // Create bookings for the team events
   const baseBooking = {
     uid: "demoUID",
-    title: "Team Meeting should be changed in shuffle",
-    description: "Team Meeting Should be changed in shuffle",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     startTime: dayjs().toISOString(),
     endTime: dayjs().toISOString(),
     userId: insightsTeamMembers[0].user.id, // Use first org member as default
@@ -478,9 +494,13 @@ async function createPerformanceData() {
 
     // Create events for every Member id
     const createEvents = extraMembersIds.map((memberId) => ({
-      title: `Single Event User - ${memberId.id}`,
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: `single-event-user-${memberId.id}`,
-      description: `Single Event User - ${memberId.id}`,
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       length: 30,
       userId: memberId.id,
       users: {
@@ -508,8 +528,12 @@ async function createPerformanceData() {
     // Create bookings for every single event
     const baseBooking = {
       uid: "demo performance data  booking",
-      title: "Single Event Booking Perf",
-      description: "Single Event Booking Perf",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       startTime: dayjs().toISOString(),
       endTime: dayjs().toISOString(),
       eventTypeId: singleEventsCreated[0].id,

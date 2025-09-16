@@ -26,7 +26,9 @@ export const toggleHandler = async ({ input, ctx }: ToggleOptions) => {
   const appMetadata = localApps.find((localApp) => localApp.slug === slug);
 
   if (!appMetadata) {
-    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "App metadata could not be found" });
+    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const app = await prisma.app.upsert({

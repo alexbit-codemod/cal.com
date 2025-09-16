@@ -182,7 +182,8 @@ export function SaveFilterSegmentButton() {
         </Button>
       </DialogTrigger>
       <DialogContent data-testid="save-filter-segment-dialog">
-        <DialogHeader title={t("save_segment")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Form form={form} handleSubmit={onSubmit}>
           {selectedSegment ? (
             <div className="mb-4">
@@ -190,12 +191,10 @@ export function SaveFilterSegmentButton() {
                 defaultValue="update"
                 onValueChange={(value: string) => setSaveMode(value as "create" | "update")}
                 className="space-y-2">
-                <RadioField
-                  id="update_segment"
-                  label={t("override_segment", { name: selectedSegment.name })}
-                  value="update"
-                />
-                <RadioField id="create_segment" label={t("create_new_segment")} value="create" />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </RadioGroup>
             </div>
           ) : null}
@@ -211,27 +210,14 @@ export function SaveFilterSegmentButton() {
             {isAdminOrOwner && saveMode === "create" && (
               <>
                 <div className="-ml-2 mt-4">
-                  <Switch
-                    id="teamSegment"
-                    label={t("save_for_team")}
-                    checked={isTeamSegment}
-                    onCheckedChange={setIsTeamSegment}
-                    labelOnLeading
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
 
                 {isTeamSegment && teams && teams.length > 0 && (
                   <div>
-                    <Select<{ value: string; label: string }>
-                      options={teams.map((team) => ({
-                        value: team.id.toString(),
-                        label: team.name,
-                      }))}
-                      onChange={(option) => setSelectedTeamId(parseInt(option?.value || "0"))}
-                      placeholder={t("select_team")}
-                      data-testid="save-filter-segment-team-select"
-                      required
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 )}
               </>

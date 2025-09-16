@@ -13,12 +13,10 @@ export default function Home(props: { calUsername: string; calEmail: string }) {
       <div
         className={` h-[100vh] w-full items-center justify-center gap-y-3  font-mono lg:flex ${inter.className} gap-16 `}>
         <div className="ml-32">
-          <h1 className={`${poppins.className} w-[100%] pb-3 text-7xl font-bold`}>
-            The all in one Scheduling marketplace
-          </h1>
-          <p className={`w-[70%] font-normal ${inter.className} pb-3 text-2xl`}>
-            To get started, connect your google calendar.
-          </p>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <div className="flex flex-row gap-4">
             <Connect.GoogleCalendar
               redir="http://localhost:4321/calendars"
@@ -43,13 +41,8 @@ export default function Home(props: { calUsername: string; calEmail: string }) {
           </div>
         </div>
         <div className="hidden lg:block">
-          <img
-            width="76%"
-            height="76%"
-            className="rounded-lg shadow-2xl"
-            alt="cover image"
-            src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2668&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
     </main>

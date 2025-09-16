@@ -40,25 +40,8 @@ function CalendarList(props: Props) {
       success={({ data }) => (
         <List>
           {data.items.map((item) => (
-            <AppListCard
-              title={item.name}
-              key={item.name}
-              logo={item.logo}
-              description={item.description}
-              shouldHighlight
-              slug={item.slug}
-              actions={
-                <InstallAppButton
-                  type={item.type}
-                  render={(buttonProps) => (
-                    <Button color="secondary" {...buttonProps}>
-                      {t("connect")}
-                    </Button>
-                  )}
-                  onChanged={() => props.onChanged()}
-                />
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ))}
         </List>
       )}
@@ -156,26 +139,16 @@ export function CalendarListContainer({
       ) : fromOnboarding ? (
         <>
           {!!data?.connectedCalendars.length && (
-            <ShellSubHeading
-              className="mt-4"
-              title={<SubHeadingTitleWithConnections title={t("connect_additional_calendar")} />}
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$}
             />
           )}
           <CalendarList onChanged={onChanged} />
         </>
       ) : (
-        <EmptyScreen
-          Icon="calendar"
-          headline={t("no_category_apps", {
-            category: t("calendar").toLowerCase(),
-          })}
-          description={t(`no_category_apps_description_calendar`)}
-          buttonRaw={
-            <Button color="secondary" data-testid="connect-calendar-apps" href="/apps/categories/calendar">
-              {t(`connect_calendar_apps`)}
-            </Button>
-          }
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </SettingsHeader>
   );

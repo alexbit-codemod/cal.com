@@ -46,7 +46,8 @@ export const OutOfOfficeInSlots = (props: IOutOfOfficeInSlotsProps) => {
                 t={t}
                 i18nKey="ooo_slots_returning"
                 values={{ displayName: toUser.displayName }}
-                components={[<strong key="username">username</strong>]}
+                components={[// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$]}
               />
             </p>
           )}

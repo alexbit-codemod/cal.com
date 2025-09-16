@@ -65,7 +65,9 @@ export async function POST(req: Request) {
     }
 
     if (!plainCustomerId) {
-      return NextResponse.json({ message: "Plain customer not found" }, { status: 404 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 404 });
     }
 
     const { data, error } = await plain.createThread({
@@ -90,6 +92,8 @@ export async function POST(req: Request) {
     return NextResponse.json(data);
   } catch (err) {
     log.error(`Error submitting plain contact form: `, safeStringify(err));
-    return NextResponse.json({ message: "Unexpected error occured" }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
   }
 }

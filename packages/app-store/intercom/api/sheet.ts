@@ -28,14 +28,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Create text components for the recap
   const confirmedText: TextComponent = {
     type: "text",
-    text: `Confirmed: ${eventType.title}`,
+    text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     style: "header",
     align: "left",
   };
 
   const detailsText: TextComponent = {
     type: "text",
-    text: `You are scheduled with ${organizer.name} on ${formattedDate}`,
+    text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     style: "paragraph",
     align: "left",
   };

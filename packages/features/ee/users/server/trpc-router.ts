@@ -40,10 +40,14 @@ const userBodySchema = User.pick({
 const authedAdminProcedureWithRequestedUser = authedAdminProcedure.use(async ({ ctx, next, getRawInput }) => {
   const { prisma } = ctx;
   const parsed = userIdSchema.safeParse(await getRawInput());
-  if (!parsed.success) throw new TRPCError({ code: "BAD_REQUEST", message: "User id is required" });
+  if (!parsed.success) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   const { userId: id } = parsed.data;
   const user = await prisma.user.findUnique({ where: { id } });
-  if (!user) throw new TRPCError({ code: "NOT_FOUND", message: "User not found" });
+  if (!user) throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   return next({
     ctx: {
       user: ctx.user,
@@ -66,7 +70,9 @@ export const userAdminRouter = router({
   add: authedAdminProcedure.input(userBodySchema).mutation(async ({ ctx, input }) => {
     const { prisma } = ctx;
     const user = await prisma.user.create({ data: { ...input, creationSource: CreationSource.WEBAPP } });
-    return { user, message: `User with id: ${user.id} added successfully` };
+    return { user, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }),
   update: authedAdminProcedureWithRequestedUser
     .input(userBodySchema.partial())
@@ -140,11 +146,15 @@ export const userAdminRouter = router({
 
         return userInternal;
       });
-      return { user, message: `User with id: ${user.id} updated successfully` };
+      return { user, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       };
     }),
   delete: authedAdminProcedureWithRequestedUser.input(userIdSchema).mutation(async ({ ctx }) => {
     const { prisma, requestedUser } = ctx;
     await prisma.user.delete({ where: { id: requestedUser.id } });
-    return { message: `User with id: ${requestedUser.id} deleted successfully` };
+    return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }),
 });

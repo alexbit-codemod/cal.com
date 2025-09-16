@@ -53,7 +53,9 @@ export class OrgTeamsVerifiedResourcesController {
   constructor(private readonly verifiedResourcesService: VerifiedResourcesService) {}
   @ApiOperation({
     summary: "Request email verification code",
-    description: `Sends a verification code to the email`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Roles("TEAM_ADMIN")
   @Throttle({
@@ -83,7 +85,9 @@ export class OrgTeamsVerifiedResourcesController {
 
   @ApiOperation({
     summary: "Request phone number verification code",
-    description: `Sends a verification code to the phone number`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @Roles("TEAM_ADMIN")
@@ -109,7 +113,9 @@ export class OrgTeamsVerifiedResourcesController {
 
   @ApiOperation({
     summary: "Verify an email for an org team",
-    description: `Use code to verify an email`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @Roles("TEAM_ADMIN")
@@ -135,7 +141,9 @@ export class OrgTeamsVerifiedResourcesController {
 
   @ApiOperation({
     summary: "Verify a phone number for an org team",
-    description: `Use code to verify a phone number`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @Roles("TEAM_ADMIN")

@@ -173,9 +173,13 @@ describe("Managed user bookings 2024-08-13", () => {
 
   it("should create an event type for managed user", async () => {
     const body: CreateEventTypeInput_2024_06_14 = {
-      title: "Managed user bookings first managed user event type",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: "managed-user-bookings-first-managed-user-event-type",
-      description: "Managed user bookings first managed user event type description",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       lengthInMinutes: 30,
     };
 
@@ -618,7 +622,9 @@ describe("Managed user bookings 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2030, 0, 9, 13, 0, 0)),
         endTime: new Date(Date.UTC(2030, 0, 9, 14, 0, 0)),
-        title: "Booking requiring confirmation",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: `booking-requiring-confirmation-${randomString()}`,
         eventType: {
           connect: {
@@ -670,7 +676,9 @@ describe("Managed user bookings 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2030, 0, 9, 15, 0, 0)),
         endTime: new Date(Date.UTC(2030, 0, 9, 16, 0, 0)),
-        title: "Booking requiring rejection",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: `booking-requiring-rejection-${randomString()}`,
         eventType: {
           connect: {
@@ -737,7 +745,9 @@ describe("Managed user bookings 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2030, 0, 9, 17, 0, 0)),
         endTime: new Date(Date.UTC(2030, 0, 9, 18, 0, 0)),
-        title: "Regular user booking requiring confirmation",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: `regular-user-booking-${randomString()}`,
         eventType: {
           connect: {

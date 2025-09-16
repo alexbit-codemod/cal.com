@@ -11,7 +11,9 @@ export const metadata = {
   logo: "icon.svg",
   publisher: "Cal.com",
   slug: "zapier",
-  title: "Zapier",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "zapier_automation",
   url: "https://cal.com/apps/zapier",
   variant: "automation",

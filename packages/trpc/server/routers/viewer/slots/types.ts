@@ -7,10 +7,14 @@ const isValidDateString = (val: string) => !isNaN(Date.parse(val));
 
 export const getScheduleSchemaObject = z.object({
   startTime: z.string().refine(isValidDateString, {
-    message: "startTime must be a valid date string",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   }),
   endTime: z.string().refine(isValidDateString, {
-    message: "endTime must be a valid date string",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   }),
   // Event type ID
   eventTypeId: z.coerce.number().int().optional(),
@@ -58,7 +62,9 @@ export const getScheduleSchema = getScheduleSchemaObject
     "You need to either pass an eventTypeId OR an usernameList/eventTypeSlug combination"
   )
   .refine(({ startTime, endTime }) => new Date(endTime).getTime() > new Date(startTime).getTime(), {
-    message: "endTime must be after startTime",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     path: ["endTime"],
   });
 

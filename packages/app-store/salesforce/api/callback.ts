@@ -15,12 +15,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const state = decodeOAuthState(req);
 
   if (code === undefined && typeof code !== "string") {
-    res.status(400).json({ message: "`code` must be a string" });
+    res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return;
   }
 
   if (!req.session?.user?.id) {
-    return res.status(401).json({ message: "You must be logged in to do this" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   let consumerKey = "";
@@ -28,8 +32,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const appKeys = await getAppKeysFromSlug("salesforce");
   if (typeof appKeys.consumer_key === "string") consumerKey = appKeys.consumer_key;
   if (typeof appKeys.consumer_secret === "string") consumerSecret = appKeys.consumer_secret;
-  if (!consumerKey) return res.status(400).json({ message: "Salesforce consumer key missing." });
-  if (!consumerSecret) return res.status(400).json({ message: "Salesforce consumer secret missing." });
+  if (!consumerKey) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!consumerSecret) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const conn = new jsforce.Connection({
     oauth2: {

@@ -8,7 +8,9 @@ const startDate = dayjs().set("hour", 11).set("minute", 0);
 export const events: CalendarEvent[] = [
   {
     id: 1,
-    title: "Event 1",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     start: startDate.add(10, "minutes").toDate(),
     end: startDate.add(45, "minutes").toDate(),
     options: {
@@ -20,7 +22,9 @@ export const events: CalendarEvent[] = [
   },
   {
     id: 2,
-    title: "Event 2",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     start: startDate.add(1, "day").toDate(),
     end: startDate.add(1, "day").add(30, "minutes").toDate(),
     source: "Booking",
@@ -31,7 +35,9 @@ export const events: CalendarEvent[] = [
   },
   {
     id: 2,
-    title: "Event 3",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     start: startDate.add(2, "day").toDate(),
     end: startDate.add(2, "day").add(60, "minutes").toDate(),
     source: "Booking",
@@ -43,7 +49,9 @@ export const events: CalendarEvent[] = [
   },
   {
     id: 3,
-    title: "Event 4",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     start: startDate.add(3, "day").toDate(),
     end: startDate.add(3, "day").add(2, "hour").add(30, "minutes").toDate(),
     source: "Booking",
@@ -54,7 +62,9 @@ export const events: CalendarEvent[] = [
   },
   {
     id: 5,
-    title: "Event 4 Overlap",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     start: startDate.add(3, "day").add(30, "minutes").toDate(),
     end: startDate.add(3, "day").add(2, "hour").add(45, "minutes").toDate(),
     source: "Booking",

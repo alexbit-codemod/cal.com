@@ -98,9 +98,11 @@ export function EventTypesList({ table, teamId }: Props) {
         </PopoverTrigger>
         <PopoverContent className="w-[200px] p-0 shadow-md" align="start" sideOffset={12}>
           <Command>
-            <CommandInput placeholder={t("search")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <CommandList>
-              <CommandEmpty>No results found.</CommandEmpty>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <CommandGroup>
                 {eventTypeGroups &&
                   eventTypeGroups.map((data) => {
@@ -119,29 +121,8 @@ export function EventTypesList({ table, teamId }: Props) {
                             (selectedEvents.has(event.id) || areAllUsersHostForEventType) &&
                             !removeHostFromEvents.has(event.id);
                           return (
-                            <ListItem
-                              onSelect={() => {
-                                if (!isSelected) {
-                                  if (areAllUsersHostForEventType) {
-                                    removeValue(removeHostFromEvents, setRemoveHostFromEvents, [event.id]);
-                                  } else {
-                                    // Add current event
-                                    addValue(selectedEvents, setSelectedEvents, [event.id]);
-                                  }
-                                } else {
-                                  if (areAllUsersHostForEventType) {
-                                    // remove selected users as hosts
-                                    addValue(removeHostFromEvents, setRemoveHostFromEvents, [event.id]);
-                                  } else {
-                                    // remove current event
-                                    removeValue(selectedEvents, setSelectedEvents, [event.id]);
-                                  }
-                                }
-                              }}
-                              key={event.id}
-                              text={event.title}
-                              isSelected={isSelected}
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           );
                         })}
                       </Fragment>

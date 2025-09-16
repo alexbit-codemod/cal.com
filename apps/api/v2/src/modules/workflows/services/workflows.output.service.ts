@@ -68,11 +68,15 @@ export class WorkflowsOutputService {
           recipient = ATTENDEE;
           break;
         case SMS_ATTENDEE:
-          text = step.reminderBody ?? "";
+          text = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           recipient = ATTENDEE;
           break;
         case WHATSAPP_ATTENDEE:
-          text = step.reminderBody ?? "";
+          text = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           recipient = ATTENDEE;
           break;
         case EMAIL_ADDRESS:
@@ -82,7 +86,9 @@ export class WorkflowsOutputService {
           break;
         case SMS_NUMBER:
         case WHATSAPP_NUMBER:
-          text = step.reminderBody ?? "";
+          text = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           recipient = PHONE_NUMBER;
           phone = step.sendTo ?? "";
           break;

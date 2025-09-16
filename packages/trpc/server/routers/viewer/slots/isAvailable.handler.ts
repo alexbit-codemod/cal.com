@@ -36,7 +36,9 @@ export const isAvailableHandler = async ({
   const eventType = await eventTypeRepo.findByIdMinimal({ id: eventTypeId });
 
   if (!eventType) {
-    throw new HttpError({ statusCode: 404, message: "Event type not found" });
+    throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Check each slot's availability

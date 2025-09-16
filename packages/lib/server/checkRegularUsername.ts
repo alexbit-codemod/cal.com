@@ -22,7 +22,9 @@ export async function checkRegularUsername(_username: string, currentOrgDomain?:
     return {
       available: false as const,
       premium,
-      message: "A user exists with that username",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
 

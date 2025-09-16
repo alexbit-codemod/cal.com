@@ -32,12 +32,16 @@ async function getHandler(req: NextRequest) {
   const checkoutSession = await stripe.checkout.sessions.retrieve(session_id, {
     expand: ["subscription"],
   });
-  if (!checkoutSession) throw new HttpError({ statusCode: 404, message: "Checkout session not found" });
+  if (!checkoutSession) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const subscription = checkoutSession.subscription as Stripe.Subscription;
 
   if (checkoutSession.payment_status !== "paid")
-    throw new HttpError({ statusCode: 402, message: "Payment required" });
+    throw new HttpError({ statusCode: 402, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   // Let's query to ensure that the team metadata carried over from the checkout session.
   const parseCheckoutSessionMetadata = checkoutSessionMetadataSchema.safeParse(checkoutSession.metadata);
@@ -53,7 +57,9 @@ async function getHandler(req: NextRequest) {
   if (!checkoutSession.metadata?.userId) {
     throw new HttpError({
       statusCode: 400,
-      message: "Can't publish team/org without userId",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

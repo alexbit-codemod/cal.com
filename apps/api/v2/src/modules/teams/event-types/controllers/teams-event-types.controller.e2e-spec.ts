@@ -66,7 +66,9 @@ describe("Organizations Event Types Endpoints", () => {
         const setupBody: CreateTeamEventTypeInput_2024_06_14 = {
           title: `teams-event-types-managed-${randomString()}`,
           slug: `teams-event-types-managed-${randomString()}`,
-          description: "Our team will review your codebase.",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           lengthInMinutes: 60,
           locations: [
             {
@@ -189,9 +191,13 @@ describe("Organizations Event Types Endpoints", () => {
       const userId = falseTestUser.id;
 
       const body: CreateTeamEventTypeInput_2024_06_14 = {
-        title: "Coding consultation",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-consultation",
-        description: "Our team will review your codebase.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -214,9 +220,13 @@ describe("Organizations Event Types Endpoints", () => {
 
     it("should not be able to create phone-only event type", async () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
-        title: "Phone coding consultation",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "phone-coding-consultation",
-        description: "Our team will review your codebase.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -240,14 +250,18 @@ describe("Organizations Event Types Endpoints", () => {
           {
             type: "email",
             required: false,
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             hidden: true,
           },
           {
             type: "phone",
             slug: "attendeePhoneNumber",
             required: true,
-            label: "Phone number",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             hidden: false,
           },
         ],
@@ -264,9 +278,13 @@ describe("Organizations Event Types Endpoints", () => {
 
     it("should not allow creating an event type with integration not installed on team", async () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
-        title: "Coding consultation",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "coding-consultation",
-        description: "Our team will review your codebase.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -292,7 +310,9 @@ describe("Organizations Event Types Endpoints", () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
         title: `teams-event-types-collective-${randomString()}`,
         slug: `teams-event-types-collective-${randomString()}`,
-        description: "Our team will review your codebase.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -303,10 +323,14 @@ describe("Organizations Event Types Endpoints", () => {
         bookingFields: [
           {
             type: "select",
-            label: "select which language is your codebase in",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             slug: "select-language",
             required: true,
-            placeholder: "select language",
+            placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             options: ["javascript", "python", "cobol"],
           },
         ],
@@ -400,7 +424,9 @@ describe("Organizations Event Types Endpoints", () => {
       const body: CreateTeamEventTypeInput_2024_06_14 = {
         title: `teams-event-types-managed-${randomString()}`,
         slug: `teams-event-types-managed-${randomString()}`,
-        description: "Our team will review your codebase.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         lengthInMinutes: 60,
         locations: [
           {
@@ -573,7 +599,9 @@ describe("Organizations Event Types Endpoints", () => {
 
     it("should not be able to update non existing event-type", async () => {
       const body: UpdateTeamEventTypeInput_2024_06_14 = {
-        title: "Clean code consultation",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
 
       return request(app.getHttpServer())
@@ -627,7 +655,9 @@ describe("Organizations Event Types Endpoints", () => {
     it("should update managed event-type", async () => {
       await ensureManagedEventType();
 
-      const newTitle = `teams-event-types-managed-updated-${randomString()}`;
+      const newTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       const newHosts: UpdateTeamEventTypeInput_2024_06_14["hosts"] = [
         {
           userId: teamMember1.id,

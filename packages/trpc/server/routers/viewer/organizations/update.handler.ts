@@ -110,7 +110,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
   // A user can only have one org so we pass in their currentOrgId here
   const currentOrgId = ctx.user?.organization?.id || input.orgId;
 
-  if (!currentOrgId) throw new TRPCError({ code: "BAD_REQUEST", message: "Organization ID is required." });
+  if (!currentOrgId) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const membership = await prisma.membership.findFirst({
     where: {
@@ -122,7 +124,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
     },
   });
 
-  if (!membership) throw new TRPCError({ code: "UNAUTHORIZED", message: "User role is required." });
+  if (!membership) throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const { canEdit } = await getResourcePermissions({
     userId: ctx.user.id,
@@ -148,7 +152,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
       },
     });
     if (userConflict.some((t) => t.id !== currentOrgId))
-      throw new TRPCError({ code: "CONFLICT", message: "Slug already in use." });
+      throw new TRPCError({ code: "CONFLICT", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
   }
 
   const prevOrganisation = await prisma.team.findUnique({
@@ -163,7 +169,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
     },
   });
 
-  if (!prevOrganisation) throw new TRPCError({ code: "NOT_FOUND", message: "Organisation not found." });
+  if (!prevOrganisation) throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const { mergeMetadata } = getMetadataHelpers(teamMetadataSchema.unwrap(), prevOrganisation.metadata ?? {});
 

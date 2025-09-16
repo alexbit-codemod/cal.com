@@ -63,24 +63,8 @@ export const LockEventTypeSwitch = ({ currentOrg }: GeneralViewProps) => {
 
   return (
     <>
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        title={t("lock_org_users_eventtypes")}
-        disabled={mutation?.isPending}
-        description={t("lock_org_users_eventtypes_description")}
-        checked={lockEventTypeCreationForUsers}
-        onCheckedChange={(checked) => {
-          if (!checked) {
-            mutation.mutate({
-              lockEventTypeCreation: checked,
-            });
-          } else {
-            setShowModal(true);
-          }
-          setLockEventTypeCreationForUsers(checked);
-        }}
-        switchContainerClassName="mt-6"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {showModal && (
         <Dialog
           open={showModal}
@@ -96,7 +80,8 @@ export const LockEventTypeSwitch = ({ currentOrg }: GeneralViewProps) => {
             <Form form={formMethods} handleSubmit={onSubmit}>
               <div className="flex flex-row space-x-3">
                 <div className="w-full pt-1">
-                  <DialogHeader title={t("lock_event_types_modal_header")} />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <RadioArea.Group
                     id="currentEventTypeOptions"
                     onValueChange={(val: CurrentEventTypeOptions) => {

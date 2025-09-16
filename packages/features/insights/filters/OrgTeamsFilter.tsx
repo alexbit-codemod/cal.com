@@ -74,12 +74,8 @@ export const OrgTeamsFilter = () => {
 
   const PrefixComponent =
     orgTeamsType !== undefined && (imageUrl || placeholder) ? (
-      <Avatar
-        alt={`${placeholder} logo`}
-        imageSrc={getPlaceholderAvatar(imageUrl, placeholder)}
-        size="xs"
-        className="mr-2"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     ) : null;
 
   const teams = (data || [])
@@ -89,39 +85,18 @@ export const OrgTeamsFilter = () => {
   return (
     <AnimatedPopover text={text} PrefixComponent={PrefixComponent} popoverTriggerClassNames="mb-0">
       <FilterCheckboxFieldsContainer>
-        <FilterSearchField
-          placeholder={t("search")}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Divider />
 
         {isOrgDataAvailable && (
-          <FilterCheckboxField
-            id="all"
-            testId="org-teams-filter-item"
-            icon={<Icon name="layers" className="h-4 w-4" />}
-            checked={orgTeamsType === "org"}
-            onChange={(e) => {
-              if (e.target.checked) {
-                onSelected({ type: "org", teamId: currentOrgId });
-              } else {
-                resetSelection();
-              }
-            }}
-            label={t("all")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
 
-        <FilterCheckboxField
-          id="yours"
-          testId="org-teams-filter-item"
-          icon={
-            <Avatar
-              alt={`${currentUserName} avatar`}
-              imageSrc={getPlaceholderAvatar(session.data?.user.avatarUrl, currentUserName)}
-              size="xsm"
-            />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           }
           checked={orgTeamsType === "yours"}
           onChange={(e) => {
@@ -137,25 +112,9 @@ export const OrgTeamsFilter = () => {
         {teams.length > 0 && <Divider />}
         {teams.map((team) => {
           return (
-            <FilterCheckboxField
-              testId="org-teams-filter-item"
-              key={team.id}
-              id={team.name || ""}
-              label={team.name || ""}
-              checked={selectedTeamId === team.id && orgTeamsType === "team"}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  onSelected({ type: "team", teamId: team.id });
-                } else if (!e.target.checked) {
-                  resetSelection();
-                }
-              }}
-              icon={
-                <Avatar
-                  alt={team.name || ""}
-                  imageSrc={getPlaceholderAvatar(team.logoUrl, team.name)}
-                  size="xs"
-                />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               }
             />
           );

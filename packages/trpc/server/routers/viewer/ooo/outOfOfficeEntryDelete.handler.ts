@@ -17,7 +17,9 @@ type TBookingRedirectDelete = {
 
 export const outOfOfficeEntryDelete = async ({ ctx, input }: TBookingRedirectDelete) => {
   if (!input.outOfOfficeUid) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "out_of_office_id_required" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   let oooUserId = ctx.user.id;
@@ -27,7 +29,9 @@ export const outOfOfficeEntryDelete = async ({ ctx, input }: TBookingRedirectDel
   if (input.userId && input.userId !== ctx.user.id) {
     const isAdmin = await isAdminForUser(ctx.user.id, input.userId);
     if (!isAdmin) {
-      throw new TRPCError({ code: "NOT_FOUND", message: "only_admin_can_delete_ooo" });
+      throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     oooUserId = input.userId;
     const oooUser = await prisma.user.findUnique({
@@ -59,7 +63,9 @@ export const outOfOfficeEntryDelete = async ({ ctx, input }: TBookingRedirectDel
   });
 
   if (!deletedOutOfOfficeEntry) {
-    throw new TRPCError({ code: "NOT_FOUND", message: "booking_redirect_not_found" });
+    throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Return early if no redirect user is set, and no email needs to be send.

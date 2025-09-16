@@ -9,7 +9,9 @@ export class UserOooOutputDto {
   @IsInt()
   @Expose()
   @ApiProperty({
-    description: "The ID of the user.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2,
   })
   readonly userId!: number;
@@ -17,7 +19,9 @@ export class UserOooOutputDto {
   @IsInt()
   @IsOptional()
   @ApiPropertyOptional({
-    description: "The ID of the user covering for the out of office period, if applicable.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2,
   })
   @Expose()
@@ -26,7 +30,9 @@ export class UserOooOutputDto {
   @IsInt()
   @Expose()
   @ApiProperty({
-    description: "The ID of the ooo entry.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2,
   })
   readonly id!: number;
@@ -34,14 +40,18 @@ export class UserOooOutputDto {
   @IsString()
   @Expose()
   @ApiProperty({
-    description: "The UUID of the ooo entry.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2,
   })
   readonly uuid!: string;
 
   @IsDateString()
   @ApiProperty({
-    description: "The start date and time of the out of office period in ISO 8601 format in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2023-05-01T00:00:00.000Z",
   })
   @Expose()
@@ -49,7 +59,9 @@ export class UserOooOutputDto {
 
   @IsDateString()
   @ApiProperty({
-    description: "The end date and time of the out of office period in ISO 8601 format in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2023-05-10T23:59:59.999Z",
   })
   @Expose()
@@ -58,7 +70,9 @@ export class UserOooOutputDto {
   @IsString()
   @IsOptional()
   @ApiPropertyOptional({
-    description: "Optional notes for the out of office entry.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Vacation in Hawaii",
   })
   @Expose()
@@ -67,7 +81,9 @@ export class UserOooOutputDto {
   @IsEnum(OutOfOfficeReason)
   @IsOptional()
   @ApiPropertyOptional({
-    description: "the reason for the out of office entry, if applicable",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "vacation",
     enum: OutOfOfficeReason,
   })

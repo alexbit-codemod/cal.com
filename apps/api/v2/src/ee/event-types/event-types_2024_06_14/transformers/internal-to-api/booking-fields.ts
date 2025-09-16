@@ -502,12 +502,16 @@ export const systemBeforeFieldName: NameSystemField = {
   type: "name",
   name: "name",
   editable: "system",
-  defaultLabel: "your_name",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   required: true,
   variant: "fullName",
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },
@@ -551,14 +555,18 @@ export const systemBeforeFieldNameSplit: NameSystemField = {
 };
 
 export const systemBeforeFieldEmail: EmailSystemField = {
-  defaultLabel: "email_address",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "email",
   name: "email",
   required: true,
   editable: "system",
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },
@@ -566,7 +574,9 @@ export const systemBeforeFieldEmail: EmailSystemField = {
 };
 
 export const systemBeforeFieldPhone: PhoneSystemField = {
-  defaultLabel: "phone_number",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "phone",
   name: "attendeePhoneNumber",
   required: false,
@@ -574,7 +584,9 @@ export const systemBeforeFieldPhone: PhoneSystemField = {
   editable: "system-but-optional",
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },
@@ -582,7 +594,9 @@ export const systemBeforeFieldPhone: PhoneSystemField = {
 };
 
 export const systemBeforeFieldLocation: LocationReasonSystemField = {
-  defaultLabel: "location",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "radioInput",
   name: "location",
   editable: "system",
@@ -608,7 +622,9 @@ export const systemBeforeFieldLocation: LocationReasonSystemField = {
   },
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },
@@ -616,7 +632,9 @@ export const systemBeforeFieldLocation: LocationReasonSystemField = {
 };
 
 export const systemAfterFieldTitle: TitleSystemField = {
-  defaultLabel: "what_is_this_meeting_about",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "text",
   name: "title",
   editable: "system-but-optional",
@@ -625,7 +643,9 @@ export const systemAfterFieldTitle: TitleSystemField = {
   defaultPlaceholder: "",
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },
@@ -633,15 +653,21 @@ export const systemAfterFieldTitle: TitleSystemField = {
 };
 
 export const systemAfterFieldNotes: NotesSystemField = {
-  defaultLabel: "additional_notes",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "textarea",
   name: "notes",
   editable: "system-but-optional",
   required: false,
-  defaultPlaceholder: "share_additional_notes",
+  defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },
@@ -649,16 +675,22 @@ export const systemAfterFieldNotes: NotesSystemField = {
 };
 
 export const systemAfterFieldGuests: GuestsSystemField = {
-  defaultLabel: "additional_guests",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "multiemail",
   editable: "system-but-optional",
   name: "guests",
-  defaultPlaceholder: "email",
+  defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   required: false,
   hidden: false,
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },
@@ -666,21 +698,29 @@ export const systemAfterFieldGuests: GuestsSystemField = {
 };
 
 export const systemAfterFieldRescheduleReason: RescheduleReasonSystemField = {
-  defaultLabel: "reason_for_reschedule",
+  defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "textarea",
   editable: "system-but-optional",
   name: "rescheduleReason",
-  defaultPlaceholder: "reschedule_placeholder",
+  defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   required: false,
   views: [
     {
       id: "reschedule",
-      label: "Reschedule View",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   ],
   sources: [
     {
-      label: "Default",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: "default",
       type: "default",
     },

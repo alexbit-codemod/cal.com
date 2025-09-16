@@ -92,9 +92,11 @@ export function TeamListBulkAction({ table }: Props) {
         {/* We dont really use shadows much - but its needed here  */}
         <PopoverContent className="w-[200px] p-0 shadow-md" align="start" sideOffset={12}>
           <Command>
-            <CommandInput placeholder={t("search")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <CommandList>
-              <CommandEmpty>No results found.</CommandEmpty>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <CommandGroup>
                 {teams &&
                   teams.map((option) => {

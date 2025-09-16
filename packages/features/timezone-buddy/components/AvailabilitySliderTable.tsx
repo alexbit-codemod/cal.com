@@ -156,7 +156,8 @@ function AvailabilitySliderTableContent(props: { isOrg: boolean }) {
           return (
             <div className="flex flex-col text-center">
               <span className="text-default text-sm font-medium">{time}</span>
-              <span className="text-subtle text-xs leading-none">GMT {offsetFormatted}</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           );
         },

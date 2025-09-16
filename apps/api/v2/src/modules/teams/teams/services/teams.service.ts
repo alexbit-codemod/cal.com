@@ -31,7 +31,9 @@ export class TeamsService {
     );
     if (existingTeam) {
       throw new BadRequestException({
-        message: `You already have created a team with name=${input.name}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -52,13 +54,17 @@ export class TeamsService {
     if (!checkoutSession.url) {
       await this.teamsRepository.delete(pendingTeam.id);
       throw new InternalServerErrorException({
-        message: `Failed generating team Stripe checkout session URL which is why team creation was cancelled. Please contact support.`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     return {
       message:
-        "Your team will be created once we receive your payment. Please complete the payment using the payment link.",
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       paymentLink: checkoutSession.url,
       pendingTeam,
     };

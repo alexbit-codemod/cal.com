@@ -98,7 +98,8 @@ export const EventOccurences = ({ event }: { event: Pick<BookerEvent, "recurring
       })}
       {warning && (
         <div className="-ml-4 mr-4 mt-2 flex">
-          <Alert severity="warning" title={t("enter_number_between_range", { maxOccurences })} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )}
     </>

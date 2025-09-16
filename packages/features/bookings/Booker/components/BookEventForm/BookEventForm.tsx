@@ -93,13 +93,8 @@ export const BookEventForm = ({
   if (eventQuery.isPending || !eventQuery.data) return <FormSkeleton />;
   if (!timeslot)
     return (
-      <EmptyScreen
-        headline={t("timeslot_missing_title")}
-        description={t("timeslot_missing_description")}
-        Icon="calendar"
-        buttonText={t("timeslot_missing_cta")}
-        buttonOnClick={onCancel}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
 
   if (!eventType) {
@@ -132,39 +127,14 @@ export const BookEventForm = ({
         />
         {errors.hasFormErrors || errors.hasDataErrors ? (
           <div data-testid="booking-fail">
-            <Alert
-              ref={errorRef}
-              className="my-2"
-              severity="info"
-              title={rescheduleUid ? t("reschedule_fail") : t("booking_fail")}
-              message={getError({
-                globalError: errors.formErrors,
-                dataError: errors.dataErrors,
-                t,
-                responseVercelIdHeader,
-                timeFormat,
-                timezone,
-                language: i18n.language,
-              })}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         ) : isTimeslotUnavailable ? (
           <div data-testid="slot-not-allowed-to-book">
-            <Alert
-              severity="info"
-              title={t("unavailable_timeslot_title")}
-              message={
-                <ServerTrans
-                  t={t}
-                  i18nKey="timeslot_unavailable_book_a_new_time"
-                  components={[
-                    <button
-                      key="please-select-a-new-time-button"
-                      type="button"
-                      className="underline"
-                      onClick={onCancel}>
-                      Please select a new time
-                    </button>,
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
                   ]}
                 />
               }
@@ -178,20 +148,10 @@ export const BookEventForm = ({
               t={t}
               i18nKey="signing_up_terms"
               components={[
-                <Link
-                  className="text-emphasis hover:underline"
-                  key="terms"
-                  href={`${WEBSITE_TERMS_URL}`}
-                  target="_blank">
-                  Terms
-                </Link>,
-                <Link
-                  className="text-emphasis hover:underline"
-                  key="privacy"
-                  href={`${WEBSITE_PRIVACY_POLICY_URL}`}
-                  target="_blank">
-                  Privacy Policy.
-                </Link>,
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$,
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$,
               ]}
             />
           </div>

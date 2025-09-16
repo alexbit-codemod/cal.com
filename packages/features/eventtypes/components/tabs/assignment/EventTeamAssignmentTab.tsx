@@ -125,13 +125,8 @@ const FixedHostHelper = ({ t }: { t: TFunction }) => (
     t={t}
     i18nKey="fixed_host_helper"
     components={[
-      <Link
-        key="fixed_host_helper"
-        className="underline underline-offset-2"
-        target="_blank"
-        href="https://cal.com/docs/enterprise-features/teams/round-robin-scheduling#fixed-hosts">
-        Learn more
-      </Link>,
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$,
     ]}
   />
 );
@@ -248,21 +243,8 @@ const FixedHosts = ({
           onCheckedChange={handleFixedHostsToggle}
           childrenClassName={classNames("lg:ml-0", customClassNames?.children)}>
           <div className="border-subtle flex flex-col gap-6 rounded-bl-md rounded-br-md border border-t-0 px-6">
-            <AddMembersWithSwitch
-              data-testid="fixed-hosts-select"
-              groupId={null}
-              placeholder={t("add_a_member")}
-              teamId={teamId}
-              teamMembers={teamMembers}
-              customClassNames={customClassNames?.addMembers}
-              value={value}
-              onChange={onChange}
-              assignAllTeamMembers={assignAllTeamMembers}
-              setAssignAllTeamMembers={setAssignAllTeamMembers}
-              automaticAddAllEnabled={!isRoundRobinEvent}
-              isFixed={true}
-              onActive={handleFixedHostsActivation}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </SettingsToggle>
       )}
@@ -421,23 +403,8 @@ const RoundRobinHosts = ({
     containerClassName?: string;
   }) => {
     return (
-      <AddMembersWithSwitch
-        placeholder={t("add_a_member")}
-        teamId={teamId}
-        teamMembers={teamMembers}
-        value={value}
-        onChange={onChange}
-        assignAllTeamMembers={assignAllTeamMembers}
-        setAssignAllTeamMembers={setAssignAllTeamMembers}
-        isSegmentApplicable={isSegmentApplicable}
-        automaticAddAllEnabled={true}
-        isRRWeightsEnabled={isRRWeightsEnabled}
-        isFixed={false}
-        groupId={groupId}
-        containerClassName={containerClassName || (assignAllTeamMembers ? "-mt-4" : "")}
-        onActive={() => handleMembersActivation(groupId)}
-        customClassNames={customClassNames?.addMembers}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   };
 
@@ -526,13 +493,8 @@ const RoundRobinHosts = ({
                 <div key={index} className="border-subtle my-4 rounded-md border p-4 pb-0">
                   <div className="-mb-4 flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <input
-                        type="text"
-                        value={group.name ?? ""}
-                        onChange={(e) => handleGroupNameChange(group.id, e.target.value)}
-                        className="border-none bg-transparent p-0 text-sm font-medium focus:outline-none focus:ring-0"
-                        placeholder={`Group ${groupNumber}`}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     </div>
                     <button
                       type="button"
@@ -924,12 +886,8 @@ export const EventTeamAssignmentTab = ({
                   <Controller
                     name="includeNoShowInRRCalculation"
                     render={({ field: { value, onChange } }) => (
-                      <SettingsToggle
-                        title={t("include_no_show_in_rr_calculation")}
-                        labelClassName="mt-1.5"
-                        checked={value}
-                        onCheckedChange={(val) => onChange(val)}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                   />
                 </div>

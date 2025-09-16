@@ -5,7 +5,9 @@ import { IsEmail, IsString } from "class-validator";
 export class VerifyEmailInput {
   @ApiProperty({
     type: String,
-    description: "Email to verify.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "example@acme.com",
   })
   @IsEmail()
@@ -14,7 +16,9 @@ export class VerifyEmailInput {
 
   @ApiProperty({
     type: String,
-    description: "verification code sent to the email to verify",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "1ABG2C",
   })
   @Expose()

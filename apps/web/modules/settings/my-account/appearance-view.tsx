@@ -170,30 +170,12 @@ const AppearanceView = ({
           });
         }}>
         <div className="border-subtle flex flex-col justify-between border-x px-6 py-8 sm:flex-row">
-          <ThemeLabel
-            variant="system"
-            value="system"
-            label={t("theme_system")}
-            defaultChecked={user.appTheme === null}
-            register={userAppThemeFormMethods.register}
-            fieldName="appTheme"
-          />
-          <ThemeLabel
-            variant="light"
-            value="light"
-            label={t("light")}
-            defaultChecked={user.appTheme === "light"}
-            register={userAppThemeFormMethods.register}
-            fieldName="appTheme"
-          />
-          <ThemeLabel
-            variant="dark"
-            value="dark"
-            label={t("dark")}
-            defaultChecked={user.appTheme === "dark"}
-            register={userAppThemeFormMethods.register}
-            fieldName="appTheme"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <SectionBottomActions className="mb-6" align="end">
           <Button
@@ -229,27 +211,12 @@ const AppearanceView = ({
               });
             }}>
             <div className="border-subtle flex flex-col justify-between border-x px-6 py-8 sm:flex-row">
-              <ThemeLabel
-                variant="system"
-                value="system"
-                label={t("theme_system")}
-                defaultChecked={user.theme === null}
-                register={userThemeFormMethods.register}
-              />
-              <ThemeLabel
-                variant="light"
-                value="light"
-                label={t("light")}
-                defaultChecked={user.theme === "light"}
-                register={userThemeFormMethods.register}
-              />
-              <ThemeLabel
-                variant="dark"
-                value="dark"
-                label={t("dark")}
-                defaultChecked={user.theme === "dark"}
-                register={userThemeFormMethods.register}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <SectionBottomActions className="mb-6" align="end">
               <Button
@@ -274,15 +241,8 @@ const AppearanceView = ({
                 mutation.mutate(values);
               }
             }}>
-            <BookerLayoutSelector
-              isDark={selectedThemeIsDark}
-              name="metadata.defaultBookerLayouts"
-              title={t("bookerlayout_user_settings_title")}
-              description={t("bookerlayout_user_settings_description")}
-              isDisabled={isBookerLayoutFormSubmitting || !isBookerLayoutFormDirty}
-              isLoading={mutation.isPending}
-              user={user}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Form>
 
           <Form
@@ -387,19 +347,8 @@ const AppearanceView = ({
         Preview
       </Button> */}
 
-          <SettingsToggle
-            toggleSwitchAtTheEnd={true}
-            title={t("disable_cal_branding", { appName: APP_NAME })}
-            disabled={!hasPaidPlan || mutation?.isPending}
-            description={t("removes_cal_branding", { appName: APP_NAME })}
-            checked={hasPaidPlan ? hideBrandingValue : false}
-            Badge={<UpgradeTeamsBadge />}
-            onCheckedChange={(checked) => {
-              setHideBrandingValue(checked);
-              mutation.mutate({ hideBranding: checked });
-            }}
-            switchContainerClassName="mt-6"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       )}
     </SettingsHeader>

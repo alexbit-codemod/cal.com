@@ -84,19 +84,8 @@ export const DisableAllEmailsSetting = ({
           </DialogFooter>
         </DialogContent>
       </Dialog>
-      <SettingsToggle
-        labelClassName={classNames("text-sm", customClassNames?.label)}
-        toggleSwitchAtTheEnd={true}
-        switchContainerClassName={classNames(
-          "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-          customClassNames?.container
-        )}
-        descriptionClassName={customClassNames?.description}
-        title={title}
-        description={t("disable_all_emails_description")}
-        checked={!!checked}
-        onCheckedChange={() => (checked ? onCheckedChange(!checked) : setDialogOpen(true))}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 };

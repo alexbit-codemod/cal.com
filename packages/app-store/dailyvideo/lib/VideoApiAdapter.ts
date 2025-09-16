@@ -497,7 +497,9 @@ const DailyVideoApiAdapter = (): VideoApiAdapter => {
           getBatchProcessJobs.parse
         );
         if (!batchProcessorJobs.data.length) {
-          return { message: `No Batch processor jobs found for recording id ${recordingId}` };
+          return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+           };
         }
 
         const transcriptJobId = batchProcessorJobs.data.filter(

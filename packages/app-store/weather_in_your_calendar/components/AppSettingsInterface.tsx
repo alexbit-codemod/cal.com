@@ -11,14 +11,8 @@ export default function AppSettings() {
 
   return (
     <div className="space-y-4 text-sm">
-      <TextField
-        placeholder="San Francisco"
-        value={location}
-        name="Enter City"
-        onChange={async (e) => {
-          setLocation(e.target.value);
-        }}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <Button
         href={`webcal://weather-in-calendar.com/cal/weather-cal.php?city=${location}&units=${unit}&temperature=day`}>
         {t("add_to_calendar")}

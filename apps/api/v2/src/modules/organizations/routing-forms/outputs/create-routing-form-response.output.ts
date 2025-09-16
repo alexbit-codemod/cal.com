@@ -11,7 +11,9 @@ import {
 class Routing {
   @ApiProperty({
     type: String,
-    description: "The ID of the queued form response. Only present if the form response was queued.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "123",
   })
   @IsString()
@@ -21,7 +23,9 @@ class Routing {
 
   @ApiProperty({
     type: Number,
-    description: "The ID of the routing form response.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 123,
   })
   @IsInt()
@@ -31,7 +35,9 @@ class Routing {
 
   @ApiProperty({
     type: [Number],
-    description: "Array of team member IDs that were routed to handle this booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: [101, 102],
   })
   @IsArray()
@@ -40,7 +46,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The email of the team member assigned to handle this booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "john.doe@example.com",
   })
   @IsString()
@@ -49,7 +57,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: Boolean,
-    description: "Whether to skip contact owner assignment from CRM integration.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()
@@ -58,7 +68,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The CRM application slug for integration.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "salesforce",
   })
   @IsString()
@@ -67,7 +79,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The CRM owner record type for contact assignment.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Account",
   })
   @IsString()
@@ -78,7 +92,9 @@ class Routing {
 export class CreateRoutingFormResponseOutputData {
   @ApiPropertyOptional({
     type: Number,
-    description: "The ID of the event type that was routed to.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 123,
   })
   @IsNumber()
@@ -89,7 +105,9 @@ export class CreateRoutingFormResponseOutputData {
   @Type(() => Routing)
   @ApiPropertyOptional({
     type: Routing,
-    description: "The routing information that could be passed as is to the booking API.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: {
       eventTypeId: 123,
       routing: {
@@ -105,7 +123,9 @@ export class CreateRoutingFormResponseOutputData {
   @IsOptional()
   @ApiPropertyOptional({
     type: String,
-    description: "A custom message to be displayed to the user in case of routing to a custom page.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "This is a custom message.",
   })
   routingCustomMessage?: string;
@@ -114,7 +134,9 @@ export class CreateRoutingFormResponseOutputData {
   @IsOptional()
   @ApiPropertyOptional({
     type: String,
-    description: "The external redirect URL to be used in case of routing to a non cal.com event type URL.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "https://example.com/",
   })
   routingExternalRedirectUrl?: string;

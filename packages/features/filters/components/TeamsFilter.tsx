@@ -75,53 +75,22 @@ export const TeamsFilter = ({
         popoverTriggerClassNames={popoverTriggerClassNames}
         prefix={`${t("teams")}: `}>
         <FilterCheckboxFieldsContainer>
-          <FilterSearchField
-            placeholder={t("search")}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
 
-          <FilterCheckboxField
-            id="all"
-            icon={<Icon name="layers" className="h-4 w-4" />}
-            checked={!query.teamIds && !isUserInQuery}
-            onChange={removeAllQueryParams}
-            label={t("all")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
 
-          <FilterCheckboxField
-            id="yours"
-            icon={<Icon name="user" className="h-4 w-4" />}
-            checked={!!isUserInQuery}
-            onChange={(e) => {
-              if (e.target.checked) {
-                if (useProfileFilter) pushItemToKey("upIds", upId);
-                else pushItemToKey("userIds", userId);
-              } else if (!e.target.checked) {
-                if (useProfileFilter) removeItemByKeyAndValue("upIds", upId);
-                else removeItemByKeyAndValue("userIds", userId);
-              }
-            }}
-            label={t("yours")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <Divider />
           {teams
             ?.filter((team) => !team?.isOrganization)
             .filter((team) => team.name.toLowerCase().includes(search.toLowerCase()))
             .map((team) => (
-              <FilterCheckboxField
-                key={team.id}
-                id={team.name}
-                label={team.name}
-                checked={!!query.teamIds?.includes(team.id)}
-                onChange={(e) => {
-                  if (e.target.checked) {
-                    pushItemToKey("teamIds", team.id);
-                  } else if (!e.target.checked) {
-                    removeItemByKeyAndValue("teamIds", team.id);
-                  }
-                }}
-                icon={<Avatar alt={team?.name} imageSrc={getOrgOrTeamAvatar(team)} size="xs" />}
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$}
               />
             ))}
         </FilterCheckboxFieldsContainer>

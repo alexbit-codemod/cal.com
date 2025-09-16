@@ -199,7 +199,9 @@ class Paypal {
       });
 
       if (!response.ok) {
-        const message = `${response.statusText}: ${JSON.stringify(await response.json())}`;
+        const message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         throw new Error(message);
       }
 
@@ -276,7 +278,9 @@ class Paypal {
       webhook_id: options.body.webhook_id,
     });
 
-    const bodyToString = `${stringy.slice(0, -1)},"webhook_event":${options.body.webhook_event}}`;
+    const bodyToString = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     try {
       const response = await this.fetcher(`/v1/notifications/verify-webhook-signature`, {

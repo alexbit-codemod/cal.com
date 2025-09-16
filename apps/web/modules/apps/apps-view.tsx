@@ -38,15 +38,8 @@ function AppsSearch({
 }) {
   const { t } = useLocale();
   return (
-    <TextField
-      addOnLeading={<Icon name="search" className="text-subtle h-4 w-4" />}
-      addOnClassname="!border-muted"
-      containerClassName={classNames("focus:!ring-offset-0 m-1", className)}
-      type="search"
-      autoComplete="false"
-      onChange={onChange}
-      placeholder={t("search")}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }
 
@@ -90,12 +83,8 @@ export default function Apps({ isAdmin, categories, appStore, userAdminTeams }: 
             <RecentAppsSlider items={appStore} />
           </>
         )}
-        <AllApps
-          apps={appStore}
-          searchText={searchText}
-          categories={categories.map((category) => category.name)}
-          userAdminTeams={userAdminTeams}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </AppsLayout>
   );

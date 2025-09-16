@@ -18,18 +18,24 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const {
     data: { org: slug },
   } = parsedQuery;
-  if (!slug) return res.status(400).json({ message: "Org is needed" });
+  if (!slug) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const org = await prisma.team.findFirst({
     where: { slug },
     select: { children: true, isOrganization: true },
   });
 
-  if (!org) return res.status(400).json({ message: "Org doesn't exist" });
+  if (!org) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const isOrganization = org.isOrganization;
 
-  if (!isOrganization) return res.status(400).json({ message: "Team is not an org" });
+  if (!isOrganization) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   return res.status(200).json({ slugs: org.children.map((ch) => ch.slug) });
 }

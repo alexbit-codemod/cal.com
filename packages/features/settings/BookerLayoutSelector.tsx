@@ -186,18 +186,10 @@ const BookerLayoutFields = ({
         {bookerLayoutOptions.map((layout) => (
           <div className="w-full" key={layout}>
             <label>
-              <img
-                className="mb-3 w-full max-w-none cursor-pointer"
-                src={`/bookerlayout_${layout}${isDark ? "_dark" : ""}.svg`}
-                alt="Layout preview"
-              />
-              <CheckboxField
-                value={layout}
-                name={`bookerlayout_${layout}`}
-                description={t(`bookerlayout_${layout}`)}
-                checked={toggleValues[layout]}
-                onChange={(ev) => onLayoutToggleChange(layout, ev.target.checked)}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </label>
           </div>
         ))}
@@ -233,20 +225,10 @@ const BookerLayoutFields = ({
             t={t}
             i18nKey="bookerlayout_override_global_settings"
             components={[
-              <Link
-                key="appearance-link"
-                target="_blank"
-                href="/settings/my-account/appearance"
-                className="underline">
-                Appearance
-              </Link>,
-              <Button
-                key="override-button"
-                onClick={onOverrideSettings}
-                color="minimal"
-                className="h-fit p-0 font-normal underline hover:bg-transparent focus-visible:bg-transparent">
-                Override
-              </Button>,
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$,
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$,
             ]}
           />
         </p>

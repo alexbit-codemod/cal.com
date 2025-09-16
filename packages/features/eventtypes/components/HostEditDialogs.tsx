@@ -238,19 +238,8 @@ export const WeightDialog = (props: IDialog & { customClassNames?: WeightDialogC
             {t("weight_for_user", { userName: option.label })}
           </Label>
           <div className={classNames("w-36", customClassNames?.weightInput?.container)}>
-            <TextField
-              required
-              min={0}
-              className={customClassNames?.weightInput?.input}
-              labelClassName={customClassNames?.weightInput?.label}
-              addOnClassname={customClassNames?.weightInput?.addOn}
-              label={t("Weight")}
-              value={newWeight}
-              defaultValue={option.weight ?? 100}
-              type="number"
-              onChange={(e) => setNewWeight(parseInt(e.target.value))}
-              addOnSuffix={<>%</>}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
         <DialogFooter>

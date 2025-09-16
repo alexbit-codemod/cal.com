@@ -198,7 +198,8 @@ const OtherTeamProfileView = () => {
                   name="logoUrl"
                   render={({ field: { value, onChange } }) => (
                     <>
-                      <Avatar alt="" imageSrc={getPlaceholderAvatar(value, team?.name)} size="lg" />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       <div className="ms-4">
                         <ImageUploader
                           target="logo"
@@ -220,12 +221,8 @@ const OtherTeamProfileView = () => {
                 name="name"
                 render={({ field: { value, onChange } }) => (
                   <div className="mt-8">
-                    <TextField
-                      name="name"
-                      label={t("team_name")}
-                      value={value}
-                      onChange={(e) => onChange(e?.target.value)}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 )}
               />
@@ -234,32 +231,15 @@ const OtherTeamProfileView = () => {
                 name="slug"
                 render={({ field: { value, onChange } }) => (
                   <div className="mt-8">
-                    <TextField
-                      name="slug"
-                      label={t("team_url")}
-                      value={value}
-                      addOnLeading={
-                        team?.parent ? `${team.parent.slug}.${subdomainSuffix()}/` : `${WEBAPP_URL}/team/`
-                      }
-                      onChange={(e) => {
-                        form.clearErrors("slug");
-                        onChange(slugify(e?.target.value, true));
-                      }}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 )}
               />
               <div className="mt-8">
                 <Label>{t("about")}</Label>
-                <Editor
-                  getText={() => md.render(form.getValues("bio") || "")}
-                  setText={(value: string) => form.setValue("bio", turndown(value))}
-                  excludedToolbarItems={["blockType"]}
-                  disableLists
-                  firstRender={firstRender}
-                  setFirstRender={setFirstRender}
-                  height="80px"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
               <p className="text-default mt-2 text-sm">{t("team_description")}</p>
               <Button color="primary" className="mt-8" type="submit" loading={mutation.isPending}>
@@ -268,15 +248,8 @@ const OtherTeamProfileView = () => {
               {IS_TEAM_BILLING_ENABLED_CLIENT &&
                 team.slug === null &&
                 (team.metadata as Prisma.JsonObject)?.requestedSlug && (
-                  <Button
-                    color="secondary"
-                    className="ml-2 mt-8"
-                    type="button"
-                    onClick={() => {
-                      publishMutation.mutate({ teamId: team.id });
-                    }}>
-                    Publish
-                  </Button>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
             </Form>
           ) : (

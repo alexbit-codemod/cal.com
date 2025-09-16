@@ -94,7 +94,9 @@ async function checkPermissions(req: NextApiRequest, body: z.infer<typeof schema
   const { isSystemWideAdmin } = req;
   if (isSystemWideAdmin) return;
   if (body.userId) {
-    throw new HttpError({ statusCode: 403, message: "Non admin cannot change the owner of a schedule" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   //_auth-middleware takes care of verifying the ownership of schedule.
 }

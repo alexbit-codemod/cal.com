@@ -18,7 +18,9 @@ export async function findTokenByToken({ token }: { token: string }) {
   if (!foundToken) {
     throw new HttpError({
       statusCode: 401,
-      message: "Invalid Token",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -30,7 +32,9 @@ export function throwIfTokenExpired(expires?: Date) {
   if (dayjs(expires).isBefore(dayjs())) {
     throw new HttpError({
       statusCode: 401,
-      message: "Token expired",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 }
@@ -52,13 +56,17 @@ export async function validateAndGetCorrectedUsernameForTeam({
   if (!teamUserValidation.isValid) {
     throw new HttpError({
       statusCode: 409,
-      message: "Username or email is already taken",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   if (!teamUserValidation.username) {
     throw new HttpError({
       statusCode: 422,
-      message: "Invalid username",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   return teamUserValidation.username;

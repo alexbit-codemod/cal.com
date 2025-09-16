@@ -31,7 +31,9 @@ export const changePasswordHandler = async ({ input, ctx }: ChangePasswordOption
       },
     });
     if (!userWithPassword?.password?.hash) {
-      throw new TRPCError({ code: "FORBIDDEN", message: "THIRD_PARTY_IDENTITY_PROVIDER_ENABLED" });
+      throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
   }
 
@@ -42,20 +44,28 @@ export const changePasswordHandler = async ({ input, ctx }: ChangePasswordOption
   const currentPassword = currentPasswordQuery?.hash;
 
   if (!currentPassword) {
-    throw new TRPCError({ code: "NOT_FOUND", message: "MISSING_PASSWORD" });
+    throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const passwordsMatch = await verifyPassword(oldPassword, currentPassword);
   if (!passwordsMatch) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "incorrect_password" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (oldPassword === newPassword) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "new_password_matches_old_password" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!validPassword(newPassword)) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "password_hint_min" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const hashedPassword = await hashPassword(newPassword);

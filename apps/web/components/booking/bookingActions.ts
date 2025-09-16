@@ -40,7 +40,9 @@ export function getPendingActions(context: BookingActionContext): ActionType[] {
   const actions: ActionType[] = [
     {
       id: "reject",
-      label: (isTabRecurring || isTabUnconfirmed) && isRecurring ? t("reject_all") : t("reject"),
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       icon: "ban",
       disabled: false, // This would be controlled by mutation state in the component
     },
@@ -52,7 +54,9 @@ export function getPendingActions(context: BookingActionContext): ActionType[] {
     actions.push({
       id: "confirm",
       bookingId: booking.id,
-      label: (isTabRecurring || isTabUnconfirmed) && isRecurring ? t("confirm_all") : t("confirm"),
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       icon: "check" as const,
       disabled: false, // This would be controlled by mutation state in the component
     });
@@ -66,7 +70,9 @@ export function getCancelEventAction(context: BookingActionContext): ActionType 
 
   return {
     id: "cancel",
-    label: isTabRecurring && isRecurring ? t("cancel_all_remaining") : t("cancel_event"),
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     href: `/booking/${booking.uid}?cancel=true${
       isTabRecurring && isRecurring ? "&allRemainingBookings=true" : ""
     }${booking.seatsReferences.length ? `&seatReferenceUid=${getSeatReferenceUid()}` : ""}`,
@@ -169,7 +175,9 @@ export function getAfterEventActions(context: BookingActionContext): ActionType[
     booking.status === BookingStatus.ACCEPTED && booking.paid && booking.payment[0]?.paymentOption === "HOLD"
       ? {
           id: "charge_card",
-          label: cardCharged ? t("no_show_fee_charged") : t("collect_no_show_fee"),
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           icon: "credit-card",
           disabled: cardCharged,
         }
@@ -177,7 +185,9 @@ export function getAfterEventActions(context: BookingActionContext): ActionType[
     {
       id: "no_show",
       label:
-        attendeeList.length === 1 && attendeeList[0].noShow ? t("unmark_as_no_show") : t("mark_as_no_show"),
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       icon: attendeeList.length === 1 && attendeeList[0].noShow ? "eye" : "eye-off",
       disabled: false, // This would be controlled by booking state in the component
     },

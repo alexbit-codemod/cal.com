@@ -28,7 +28,9 @@ export default async function handler(body: Record<string, string>) {
   const userEmail = email.toLowerCase();
 
   if (!username) {
-    return NextResponse.json({ message: "Invalid username" }, { status: 422 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 422 });
   }
 
   let foundToken: { id: number; teamId: number | null; expires: Date } | null = null;
@@ -50,10 +52,14 @@ export default async function handler(body: Record<string, string>) {
     });
     if (!userValidation.isValid) {
       logger.error("User validation failed", { userValidation });
-      return NextResponse.json({ message: "Username or email is already taken" }, { status: 409 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 409 });
     }
     if (!userValidation.username) {
-      return NextResponse.json({ message: "Invalid username" }, { status: 422 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 422 });
     }
     correctedUsername = userValidation.username;
   }
@@ -84,7 +90,9 @@ export default async function handler(body: Record<string, string>) {
       if (isCheckingUsernameInGlobalNamespace) {
         const isUsernameAvailable = !(await isUsernameReservedDueToMigration(correctedUsername));
         if (!isUsernameAvailable) {
-          return NextResponse.json({ message: "A user exists with that username" }, { status: 409 });
+          return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+           }, { status: 409 });
         }
       }
 
@@ -132,13 +140,17 @@ export default async function handler(body: Record<string, string>) {
   } else {
     const isUsernameAvailable = !(await isUsernameReservedDueToMigration(correctedUsername));
     if (!isUsernameAvailable) {
-      return NextResponse.json({ message: "A user exists with that username" }, { status: 409 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 409 });
     }
     if (IS_PREMIUM_USERNAME_ENABLED) {
       const checkUsername = await checkPremiumUsername(correctedUsername);
       if (checkUsername.premium) {
         return NextResponse.json(
-          { message: "Sign up from https://cal.com/signup to claim your premium username" },
+          { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+           },
           { status: 422 }
         );
       }
@@ -175,5 +187,7 @@ export default async function handler(body: Record<string, string>) {
     });
   }
 
-  return NextResponse.json({ message: "Created user" }, { status: 201 });
+  return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }, { status: 201 });
 }

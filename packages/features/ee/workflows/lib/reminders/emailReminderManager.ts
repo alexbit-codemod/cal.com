@@ -135,7 +135,9 @@ export const scheduleEmailReminder = async (args: scheduleEmailReminderArgs) => 
 
   let emailContent = {
     emailSubject,
-    emailBody: `<body style="white-space: pre-wrap;">${emailBody}</body>`,
+    emailBody: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
   const bookerUrl = evt.bookerUrl ?? WEBSITE_URL;
 

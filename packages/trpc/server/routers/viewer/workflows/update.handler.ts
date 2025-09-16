@@ -350,14 +350,18 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
           newStep.template === WorkflowTemplates.CUSTOM && oldStep.template !== WorkflowTemplates.CUSTOM;
 
         if (isChangingToCustomTemplate) {
-          throw new TRPCError({ code: "UNAUTHORIZED", message: "Not available on free plan" });
+          throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+           });
         }
 
         //if email body or subject was changed, change to predefined template
         if (newStep.emailSubject !== oldStep.emailSubject || newStep.reminderBody !== oldStep.reminderBody) {
           // already existing custom templates can't be updated
           if (newStep.template === WorkflowTemplates.CUSTOM) {
-            throw new TRPCError({ code: "UNAUTHORIZED", message: "Not available on free plan" });
+            throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             });
           }
 
           // on free plans always use predefined templates
@@ -436,7 +440,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
       .map(async (newStep) => {
         if (!hasPaidPlan && isEmailAction(newStep.action)) {
           if (newStep.template === WorkflowTemplates.CUSTOM) {
-            throw new TRPCError({ code: "UNAUTHORIZED", message: "Not available on free plan" });
+            throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             });
           }
           // on free plans always use predefined templates
           const { emailBody, emailSubject } = await getEmailTemplateText(newStep.template, {

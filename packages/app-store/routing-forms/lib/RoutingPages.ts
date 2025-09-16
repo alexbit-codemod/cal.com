@@ -3,15 +3,21 @@ import { RouteActionType } from "../zod";
 
 export const RoutingPages: { label: string; value: NonNullable<LocalRoute["action"]>["type"] }[] = [
   {
-    label: "Custom Page",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RouteActionType.CustomPageMessage,
   },
   {
-    label: "External Redirect",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RouteActionType.ExternalRedirectUrl,
   },
   {
-    label: "Event Redirect",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RouteActionType.EventTypeRedirectUrl,
   },
 ];

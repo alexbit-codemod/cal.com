@@ -184,14 +184,8 @@ export const AddActionDialog = (props: IAddActionDialog) => {
                     control={form.control}
                     name="sendTo"
                     render={({ field: { value, onChange } }) => (
-                      <PhoneInput
-                        className="rounded-md"
-                        placeholder={t("enter_phone_number")}
-                        id="sendTo"
-                        required
-                        value={value}
-                        onChange={onChange}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                   />
                   {form.formState.errors.sendTo && (
@@ -202,7 +196,8 @@ export const AddActionDialog = (props: IAddActionDialog) => {
             )}
             {isEmailAddressNeeded && (
               <div className="mt-5">
-                <EmailField required label={t("email_address")} {...form.register("sendTo")} />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
             {isSenderIdNeeded && (
@@ -216,7 +211,8 @@ export const AddActionDialog = (props: IAddActionDialog) => {
                       </span>
                     </Tooltip>
                   </div>
-                  <Input type="text" placeholder={SENDER_ID} maxLength={11} {...form.register(`senderId`)} />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 {form.formState.errors && form.formState?.errors?.senderId && (
                   <p className="mt-1 text-xs text-red-500">{t("sender_id_error_message")}</p>
@@ -226,7 +222,8 @@ export const AddActionDialog = (props: IAddActionDialog) => {
             {showSender(form.getValues("action")) && (
               <div className="mt-5">
                 <Label>{t("sender_name")}</Label>
-                <Input type="text" placeholder={SENDER_NAME} {...form.register(`senderName`)} />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
             {canRequirePhoneNumber(form.getValues("action")) && (
@@ -235,11 +232,8 @@ export const AddActionDialog = (props: IAddActionDialog) => {
                   name="numberRequired"
                   control={form.control}
                   render={() => (
-                    <CheckboxField
-                      defaultChecked={form.getValues("numberRequired") || false}
-                      description={t("make_phone_number_required")}
-                      onChange={(e) => form.setValue("numberRequired", e.target.checked)}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   )}
                 />
               </div>

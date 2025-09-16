@@ -22,7 +22,9 @@ export class ApiKeysController {
 
   @ApiOperation({
     summary: "Refresh API Key",
-    description: `Generate a new API key and delete the current one. Provide API key to refresh as a Bearer token in the Authorization header (e.g. "Authorization: Bearer <apiKey>").`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_HEADER)
   @Post("/refresh")

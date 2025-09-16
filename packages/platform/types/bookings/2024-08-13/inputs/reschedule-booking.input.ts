@@ -8,7 +8,9 @@ owner will have to confirm the rescheduled booking.`;
 export class RescheduleBookingInput_2024_08_13 {
   @IsDateString()
   @ApiProperty({
-    description: "Start time in ISO 8601 format for the new booking",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2024-08-13T10:00:00Z",
   })
   start!: string;
@@ -16,7 +18,9 @@ export class RescheduleBookingInput_2024_08_13 {
   @IsOptional()
   @ApiPropertyOptional({ description: RESCHEDULED_BY_DOCS })
   @Validate((value: string) => !value || isEmail(value), {
-    message: "Invalid rescheduledBy email format",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   rescheduledBy?: string;
 
@@ -24,7 +28,9 @@ export class RescheduleBookingInput_2024_08_13 {
   @IsOptional()
   @ApiPropertyOptional({
     example: "User requested reschedule",
-    description: "Reason for rescheduling the booking",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   reschedulingReason?: string;
 }
@@ -32,7 +38,9 @@ export class RescheduleBookingInput_2024_08_13 {
 export class RescheduleSeatedBookingInput_2024_08_13 {
   @IsDateString()
   @ApiProperty({
-    description: "Start time in ISO 8601 format for the new booking",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2024-08-13T10:00:00Z",
   })
   start!: string;
@@ -40,14 +48,18 @@ export class RescheduleSeatedBookingInput_2024_08_13 {
   @IsOptional()
   @ApiPropertyOptional({ description: RESCHEDULED_BY_DOCS })
   @Validate((value: string) => !value || isEmail(value), {
-    message: "Invalid rescheduledBy email format",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   rescheduledBy?: string;
 
   @ApiProperty({
     type: String,
     example: "3be561a9-31f1-4b8e-aefc-9d9a085f0dd1",
-    description: "Uid of the specific seat within booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   seatUid!: string;

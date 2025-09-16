@@ -98,19 +98,8 @@ export default function Page({ requestId, isRequestExpired, csrfToken }: PagePro
             }}>
             <input name="csrfToken" type="hidden" defaultValue={csrfToken} hidden />
             <div className="mt-1">
-              <PasswordField
-                {...formMethods.register("new_password", {
-                  minLength: {
-                    message: t("password_hint_min"),
-                    value: 7, // We don't have user here so we can't check if they are admin or not
-                  },
-                  pattern: {
-                    message: "Should contain a number, uppercase and lowercase letters",
-                    value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).*$/gm,
-                  },
-                })}
-                label={t("new_password")}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
 
             <div>

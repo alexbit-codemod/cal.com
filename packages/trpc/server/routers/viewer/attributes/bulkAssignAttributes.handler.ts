@@ -19,7 +19,9 @@ const bulkAssignAttributesHandler = async ({ input, ctx }: GetOptions) => {
   if (!org.id) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You need to be part of an organization to use this feature",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -44,7 +46,9 @@ const bulkAssignAttributesHandler = async ({ input, ctx }: GetOptions) => {
   if (attributes.length !== input.attributes.length) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You do not have access to these attributes",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -73,7 +77,9 @@ const bulkAssignAttributesHandler = async ({ input, ctx }: GetOptions) => {
 
   return {
     success: true,
-    message: `Attributes assigned successfully for ${successCount} users. Failed for ${failureCount} users.`,
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     results,
   };
 };

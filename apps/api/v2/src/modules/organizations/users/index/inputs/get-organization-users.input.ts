@@ -15,17 +15,23 @@ export class GetOrganizationsUsersInput extends GetUsersInput {
   })
   @ApiPropertyOptional({
     type: [String],
-    description: "Filter by assigned attribute option ids. ids must be separated by a comma.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?assignedOptionIds=aaaaaaaa-bbbb-cccc-dddd-eeeeee1eee,aaaaaaaa-bbbb-cccc-dddd-eeeeee2eee",
   })
   @IsArray()
   @IsString({ each: true })
-  @ArrayMinSize(1, { message: "assignedOptionIds must contain at least 1 attribute option id" })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   assignedOptionIds?: string[];
 
   @ApiPropertyOptional({
     type: String,
-    description: "Query operator used to filter assigned options, AND by default.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "NONE",
   })
   @IsOptional()
@@ -42,11 +48,15 @@ export class GetOrganizationsUsersInput extends GetUsersInput {
   })
   @ApiPropertyOptional({
     type: [Number],
-    description: "Filter by teamIds. Team ids must be separated by a comma.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?teamIds=100,200",
   })
   @IsArray()
   @IsNumber({}, { each: true })
-  @ArrayMinSize(1, { message: "teamIds must contain at least 1 team id" })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   teamIds?: number[];
 }

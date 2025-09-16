@@ -28,7 +28,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       );
       return;
     }
-    res.status(400).json({ message: "No code returned" });
+    res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return;
   }
 
@@ -37,8 +39,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const appKeys = await getAppKeysFromSlug("office365-calendar");
   if (typeof appKeys.client_id === "string") clientId = appKeys.client_id;
   if (typeof appKeys.client_secret === "string") clientSecret = appKeys.client_secret;
-  if (!clientId) return res.status(400).json({ message: "Office 365 client_id missing." });
-  if (!clientSecret) return res.status(400).json({ message: "Office 365 client_secret missing." });
+  if (!clientId) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!clientSecret) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const toUrlEncoded = (payload: Record<string, string>) =>
     Object.keys(payload)
@@ -148,7 +154,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       });
     } catch (error) {
-      let errorMessage = "something_went_wrong";
+      let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
         // it is possible a selectedCalendar was orphaned, in this situation-
         // we want to recover by connecting the existing selectedCalendar to the new Credential.
@@ -160,7 +168,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           return;
         }
         // else
-        errorMessage = "account_already_linked";
+        errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
       }
       await prisma.credential.delete({ where: { id: credential.id } });
       res.redirect(

@@ -97,7 +97,9 @@ export async function getBooking(bookingId: number) {
     },
   });
 
-  if (!booking) throw new HttpCode({ statusCode: 204, message: "No booking found" });
+  if (!booking) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   type EventTypeRaw = Awaited<ReturnType<typeof getEventType>>;
   let eventTypeRaw: EventTypeRaw | null = null;
@@ -109,7 +111,9 @@ export async function getBooking(bookingId: number) {
 
   const { user: userWithoutDelegationCredentials } = booking;
 
-  if (!userWithoutDelegationCredentials) throw new HttpCode({ statusCode: 204, message: "No user found" });
+  if (!userWithoutDelegationCredentials) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   const user = await enrichUserWithDelegationCredentials({
     user: userWithoutDelegationCredentials,
   });

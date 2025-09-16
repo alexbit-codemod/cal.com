@@ -29,7 +29,9 @@ export const adminUpdateHandler = async ({ input }: AdminUpdateOptions) => {
 
   if (!existingOrg) {
     throw new HttpError({
-      message: "Organization not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       statusCode: 404,
     });
   }
@@ -98,7 +100,9 @@ async function throwIfSlugConflicts({ id, slug }: { id: number; slug: string }) 
 
   if (organizationsWithSameSlug.length > 1) {
     throw new HttpError({
-      message: "There can only be one organization with a given slug",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       statusCode: 400,
     });
   }
@@ -112,7 +116,9 @@ async function throwIfSlugConflicts({ id, slug }: { id: number; slug: string }) 
   // If foundOrg isn't same as the org being edited
   if (foundOrg.id !== id) {
     throw new HttpError({
-      message: "Organization or a Team with same slug already exists",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       statusCode: 400,
     });
   }

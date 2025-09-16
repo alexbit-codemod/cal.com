@@ -116,7 +116,8 @@ export function CreateButton(props: CreateBtnProps) {
                 <DropdownItem
                   type="button"
                   data-testid={`option${option.teamId ? "-team" : ""}-${idx}`}
-                  CustomStartIcon={<Avatar alt={option.label || ""} imageSrc={option.image} size="sm" />}
+                  CustomStartIcon={// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$}
                   onClick={() =>
                     !!CreateDialog
                       ? openModal(option)

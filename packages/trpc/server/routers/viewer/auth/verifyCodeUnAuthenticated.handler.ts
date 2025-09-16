@@ -24,7 +24,9 @@ export const verifyCodeUnAuthenticated = async (input: ZVerifyCodeInputSchema) =
 
   const isValidToken = totpRawCheck(code, secret, { step: 900 });
 
-  if (!isValidToken) throw new TRPCError({ code: "BAD_REQUEST", message: "invalid_code" });
+  if (!isValidToken) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   return isValidToken;
 };

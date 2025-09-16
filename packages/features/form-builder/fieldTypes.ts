@@ -9,33 +9,49 @@ const configMap: Record<FieldType, Omit<z.infer<typeof fieldTypeConfigSchema>, "
   // - Anything that you want to show in App UI only.
   // - Default values that are shown in UI that are supposed to be changed for existing bookingFields as well if user is using default values
   name: {
-    label: "Name",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "name",
     isTextType: true,
     systemOnly: true,
     variantsConfig: {
-      toggleLabel: 'Split "Full name" into "First name" and "Last name"',
+      toggleLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       defaultVariant: "fullName",
       variants: {
         firstAndLastName: {
-          label: "first_last_name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           fieldsMap: {
             firstName: {
-              defaultLabel: "first_name",
+              defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               canChangeRequirability: false,
             },
             lastName: {
-              defaultLabel: "last_name",
+              defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               canChangeRequirability: true,
             },
           },
         },
         fullName: {
-          label: "your_name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           fieldsMap: {
             fullName: {
-              defaultLabel: "your_name",
-              defaultPlaceholder: "example_name",
+              defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
+              defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               canChangeRequirability: false,
             },
           },
@@ -66,7 +82,9 @@ const configMap: Record<FieldType, Omit<z.infer<typeof fieldTypeConfigSchema>, "
               {
                 name: "fullName",
                 type: "text",
-                label: "your_name",
+                label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
                 required: true,
               },
             ],
@@ -76,32 +94,44 @@ const configMap: Record<FieldType, Omit<z.infer<typeof fieldTypeConfigSchema>, "
     },
   },
   email: {
-    label: "Email",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "email",
     isTextType: true,
   },
   phone: {
-    label: "Phone",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "phone",
     isTextType: true,
   },
   address: {
-    label: "Address",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "address",
     isTextType: true,
   },
   text: {
-    label: "Short Text",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "text",
     isTextType: true,
   },
   number: {
-    label: "Number",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "number",
     isTextType: true,
   },
   textarea: {
-    label: "Long Text",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "textarea",
     isTextType: true,
     supportsLengthCheck: {
@@ -110,7 +140,9 @@ const configMap: Record<FieldType, Omit<z.infer<typeof fieldTypeConfigSchema>, "
     },
   },
   select: {
-    label: "Select",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "select",
     needsOptions: true,
     isTextType: true,
@@ -122,12 +154,16 @@ const configMap: Record<FieldType, Omit<z.infer<typeof fieldTypeConfigSchema>, "
     isTextType: false,
   },
   multiemail: {
-    label: "Multiple Emails",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "multiemail",
     isTextType: true,
   },
   radioInput: {
-    label: "Radio Input",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "radioInput",
     isTextType: false,
     systemOnly: true,
@@ -136,24 +172,32 @@ const configMap: Record<FieldType, Omit<z.infer<typeof fieldTypeConfigSchema>, "
     // needsOptions: true,
   },
   checkbox: {
-    label: "Checkbox Group",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "checkbox",
     needsOptions: true,
     isTextType: false,
   },
   radio: {
-    label: "Radio Group",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "radio",
     needsOptions: true,
     isTextType: false,
   },
   boolean: {
-    label: "Checkbox",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "boolean",
     isTextType: false,
   },
   url: {
-    label: "URL",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "url",
     isTextType: true,
   },

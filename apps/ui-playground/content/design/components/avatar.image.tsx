@@ -10,12 +10,16 @@ export const ImageExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="flex items-center gap-8">
       <div className="flex flex-col items-center gap-2">
-        <Avatar size="md" alt="With image" imageSrc={sampleImage} />
-        <span className="text-subtle text-xs">With Image</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <div className="flex flex-col items-center gap-2">
-        <Avatar size="md" alt="Without image" imageSrc="https://cal.com/avatar.svg" />
-        <span className="text-subtle text-xs">Without Image</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   </RenderComponentWithSnippet>

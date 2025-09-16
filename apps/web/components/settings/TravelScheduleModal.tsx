@@ -121,16 +121,8 @@ const TravelScheduleModal = ({
           )}
           <div className="text-error mt-1 text-sm">{errorMessage}</div>
           <div className="mt-3">
-            <SettingsToggle
-              labelClassName="mt-1 font-normal"
-              title={t("schedule_tz_without_end_date")}
-              checked={isNoEndDate}
-              onCheckedChange={(e) => {
-                setEndDate(!e ? startDate : undefined);
-                setIsNoEndDate(e);
-                setErrorMessage("");
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <Label className="mt-6">{t("timezone")}</Label>
           <TimezoneSelect

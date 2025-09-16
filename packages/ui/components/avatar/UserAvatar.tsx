@@ -44,12 +44,8 @@ function OrganizationIndicator({
   const indicatorSize = size && indicatorBySize[size];
   return (
     <div className={classNames("absolute bottom-0 right-0 z-10", indicatorSize)}>
-      <img
-        data-testid="organization-logo"
-        src={getPlaceholderAvatar(organization.logoUrl, organization.slug)}
-        alt={user.username || ""}
-        className="flex h-full items-center justify-center rounded-full"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 }
@@ -67,5 +63,6 @@ export function UserAvatar(props: UserAvatarProps) {
       props.indicator
     );
 
-  return <Avatar {...rest} alt={user.name || "Nameless User"} imageSrc={previewSrc} indicator={indicator} />;
+  return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$;
 }

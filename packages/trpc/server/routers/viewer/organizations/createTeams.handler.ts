@@ -136,25 +136,33 @@ export const createTeamsHandler = async ({ ctx, input }: CreateTeamsOptions) => 
 
 class NotAuthorizedError extends TRPCError {
   constructor() {
-    super({ code: "FORBIDDEN", message: "not_authorized" });
+    super({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 
 class InvalidMetadataError extends TRPCError {
   constructor() {
-    super({ code: "BAD_REQUEST", message: "invalid_organization_metadata" });
+    super({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 
 class NoOrganizationError extends TRPCError {
   constructor() {
-    super({ code: "BAD_REQUEST", message: "no_organization_found" });
+    super({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 
 class NoOrganizationSlugError extends TRPCError {
   constructor() {
-    super({ code: "BAD_REQUEST", message: "no_organization_slug" });
+    super({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 
@@ -326,7 +334,9 @@ async function addTeamRedirect({
     // This should not happen as org onboarding ensures teams have slugs
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "No slug for team. Not adding the redirect",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   if (!orgSlug) {

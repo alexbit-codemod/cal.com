@@ -14,18 +14,15 @@ export const FormExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-2">
-        <Button color="secondary" onClick={() => setOpen(true)}>
-          Open Form Dialog
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent title="Feedback Form" description="Please provide your feedback below">
             <div>
-              <TextAreaField
-                name="feedback"
-                label={
-                  <>
-                    Your Feedback
-                    <span className="text-subtle font-normal"> (Optional)</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </>
                 }
                 value={formInput}
@@ -34,18 +31,14 @@ export const FormExample: React.FC = () => {
             </div>
             <DialogFooter>
               <DialogClose />
-              <Button
-                onClick={() => {
-                  setOpen(false);
-                  setFormInput("");
-                }}>
-                Submit Feedback
-              </Button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </DialogFooter>
           </DialogContent>
         </Dialog>
         <div className="mt-6">
-          <h4 className="text-emphasis text-sm font-medium">Current Form Input:</h4>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <pre className="text-default bg-subtle mt-2 rounded-md p-4 text-sm">
             {formInput || "No input yet"}
           </pre>

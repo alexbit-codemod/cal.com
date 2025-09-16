@@ -25,7 +25,9 @@ export const eventOwnerProcedure = authedProcedure
         users: z.array(z.number()).optional().default([]),
       })
       .refine((data) => data.id !== undefined || data.eventTypeId !== undefined, {
-        message: "At least one of 'id' or 'eventTypeId' must be present",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         path: ["id", "eventTypeId"],
       })
   )
@@ -151,7 +153,9 @@ export function ensureUniqueBookingFields(fields: TUpdateInputSchema["bookingFie
     if (discoveredFields[field.name]) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: `Duplicate booking field name: ${field.name}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -173,13 +177,17 @@ export function ensureEmailOrPhoneNumberIsPresent(fields: TUpdateInputSchema["bo
   if (emailField?.hidden && attendeePhoneNumberField?.hidden) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `Both Email and Attendee Phone Number cannot be hidden`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   if (!emailField?.required && !attendeePhoneNumberField?.required) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `At least Email or Attendee Phone Number need to be required field.`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 }

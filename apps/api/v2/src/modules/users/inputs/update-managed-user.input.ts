@@ -19,7 +19,9 @@ export class UpdateManagedUserInput {
 
   @IsOptional()
   @IsIn([12, 24])
-  @ApiPropertyOptional({ example: 12, enum: [12, 24], description: "Must be 12 or 24" })
+  @ApiPropertyOptional({ example: 12, enum: [12, 24], description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   timeFormat?: TimeFormat;
 
   @IsNumber()
@@ -52,13 +54,17 @@ export class UpdateManagedUserInput {
   @ApiPropertyOptional({
     type: String,
     example: "https://cal.com/api/avatar/2b735186-b01b-46d3-87da-019b8f61776b.png",
-    description: `URL of the user's avatar image`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   avatarUrl?: string;
 
   @ApiPropertyOptional({
     type: String,
-    description: "Bio",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "I am a bio",
   })
   @IsOptional()
@@ -68,14 +74,18 @@ export class UpdateManagedUserInput {
   @ApiPropertyOptional({
     type: Object,
     description:
-      "You can store any additional data you want here. Metadata must have at most 50 keys, each key up to 40 characters, and values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { key: "value" },
   })
   @IsObject()
   @IsOptional()
   @ValidateMetadata({
     message:
-      "Metadata must have at most 50 keys, each key up to 40 characters, and values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   metadata?: Record<string, string | boolean | number>;
 }

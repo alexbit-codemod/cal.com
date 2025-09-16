@@ -83,13 +83,8 @@ const ApiKeysView = ({ apiKeys: data }: Props) => {
               </div>
             </>
           ) : (
-            <EmptyScreen
-              Icon="link"
-              headline={t("create_first_api_key")}
-              description={t("create_first_api_key_description", { appName: APP_NAME })}
-              className="rounded-b-lg rounded-t-none border-t-0"
-              buttonRaw={<NewApiKeyButton />}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         </div>
       </LicenseRequired>

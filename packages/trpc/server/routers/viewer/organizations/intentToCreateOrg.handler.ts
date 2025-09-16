@@ -42,13 +42,17 @@ export const intentToCreateOrgHandler = async ({ input, ctx }: CreateOptions) =>
       throw new TRPCError({
         code: "BAD_REQUEST",
         // TODO: We need to send translation keys from here and frontend should translate it
-        message: "License is not valid",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
 
   const loggedInUser = ctx.user;
-  if (!loggedInUser) throw new TRPCError({ code: "UNAUTHORIZED", message: "You are not authorized." });
+  if (!loggedInUser) throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const IS_USER_ADMIN = loggedInUser.role === UserPermissionRole.ADMIN;
   log.debug("User authorization check", safeStringify({ userId: loggedInUser.id, isAdmin: IS_USER_ADMIN }));
@@ -60,7 +64,9 @@ export const intentToCreateOrgHandler = async ({ input, ctx }: CreateOptions) =>
     );
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "You can only create organization where you are the owner",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -70,7 +76,9 @@ export const intentToCreateOrgHandler = async ({ input, ctx }: CreateOptions) =>
     // Issue: As the onboarding link(which has onboardingId) could be used by unwanted person to pay and then invite some unwanted members to the organization.
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `No user found with email ${orgOwnerEmail}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   log.debug("Found organization owner", safeStringify({ orgOwnerId: orgOwner.id, email: orgOwner.email }));

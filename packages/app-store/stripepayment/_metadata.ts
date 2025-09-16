@@ -15,7 +15,9 @@ export const metadata = {
   categories: ["payment"],
   logo: "icon.svg",
   publisher: "Cal.com",
-  title: "Stripe",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "stripe_payment",
   url: "https://cal.com/",
   docsUrl: "https://stripe.com/docs",

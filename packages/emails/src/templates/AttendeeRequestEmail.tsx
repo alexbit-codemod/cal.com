@@ -5,26 +5,7 @@ export const AttendeeRequestEmail = (props: React.ComponentProps<typeof Attendee
   const date = new AttendeeScheduledEmailClass(props.calEvent, props.attendee).getFormattedDate();
 
   return (
-    <AttendeeScheduledEmail
-      title={props.calEvent.attendees[0].language.translate(
-        props.calEvent.recurringEvent?.count ? "booking_submitted_recurring" : "booking_submitted"
-      )}
-      subtitle={
-        <>
-          {props.calEvent.attendees[0].language.translate(
-            props.calEvent.recurringEvent?.count
-              ? "user_needs_to_confirm_or_reject_booking_recurring"
-              : "user_needs_to_confirm_or_reject_booking",
-            { user: props.calEvent.organizer.name }
-          )}
-        </>
-      }
-      headerType="calendarCircle"
-      subject={props.calEvent.attendees[0].language.translate("booking_submitted_subject", {
-        title: props.calEvent.title,
-        date,
-      })}
-      {...props}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };

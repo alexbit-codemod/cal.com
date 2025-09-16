@@ -342,7 +342,9 @@ export const getRichDescriptionHTML = (
         const words = manageLinkText.split(" ");
         const lastWord = words.pop();
         if (lastWord && lastWord.includes("http")) {
-          const textWithoutLink = words.join(" ").trim();
+          const textWithoutLink = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           return `<p><strong>${textWithoutLink}</strong> <a href="${lastWord}">Click here</a></p>`;
         }
         return `<p>${manageLinkText}</p>`;

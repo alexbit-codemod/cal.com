@@ -138,24 +138,11 @@ const NonGroupOption = ({
     <div key={option.id}>
       <div className="flex items-center gap-2" key={option.id}>
         <div className="flex w-full">
-          <Input {...form.register(`options.${index}.value`)} placeholder={t("enter_option_value")} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
-        <Button
-          type="button"
-          variant="icon"
-          StartIcon="x"
-          color="minimal"
-          className="mb-2"
-          disabled={index === 0 && form.getValues("options").length === 1}
-          onClick={() => {
-            if (option.assignedUsers && option.assignedUsers > 0) {
-              setDeleteOptionDialog({ id: index, open: true });
-            } else {
-              removeOption(index);
-            }
-          }}
-          title={t("remove_option")}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <Input {...form.register(`options.${index}.id`)} className="hidden" />
     </div>
@@ -212,17 +199,8 @@ const GroupOption = ({
       <div className="mb-2 flex items-center gap-2" key={option.id}>
         <div className="flex w-full items-center justify-between gap-2">
           <Input {...form.register(`options.${index}.value`)} className="!mb-0 w-36" />
-          <SelectField
-            isMulti
-            placeholder={t("choose_an_option")}
-            options={nonGroupOptionsSelectFieldOptions}
-            value={nonGroupOptionsSelectFieldSelectedValue}
-            onChange={(chosenNonGroupOptions) => {
-              const newContains = chosenNonGroupOptions.map((opt) => opt.value);
-              form.setValue(`options.${index}.contains`, newContains);
-            }}
-            containerClassName="w-full"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <Button
           type="button"
@@ -374,14 +352,8 @@ export function AttributeForm({ initialValues, onSubmit, header }: AttributeForm
         name="isLocked"
         render={({ field: { value, onChange } }) => {
           return (
-            <SettingsToggle
-              title={t("lock_attribute_for_assignment")}
-              description={t("lock_attribute_for_assignment_description")}
-              checked={value}
-              onCheckedChange={(checked) => {
-                onChange(checked);
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           );
         }}
       />
@@ -390,32 +362,19 @@ export function AttributeForm({ initialValues, onSubmit, header }: AttributeForm
           name="isWeightsEnabled"
           render={({ field: { value, onChange } }) => {
             return (
-              <SettingsToggle
-                title={t("attribute_weight_enabled")}
-                description={t("attribute_weight_enabled_description")}
-                checked={value}
-                onCheckedChange={(checked) => {
-                  onChange(checked);
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             );
           }}
         />
       )}
-      <InputField label={t("name")} required {...form.register("attrName")} />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <Controller
         name="type"
         render={({ field: { value, onChange } }) => (
-          <SelectField
-            label="Type"
-            options={AttributeTypeOptions}
-            onChange={(option) => {
-              if (!option) return;
-              onChange(option.value);
-            }}
-            value={AttributeTypeOptions.find((attr) => attr.value === value)}
-            required
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
       {["SINGLE_SELECT", "MULTI_SELECT"].includes(watchedType) && (

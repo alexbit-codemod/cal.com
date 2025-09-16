@@ -522,21 +522,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     <Controller
                       name={`steps.${step.stepNumber - 1}.sendTo`}
                       render={({ field: { value, onChange } }) => (
-                        <PhoneInput
-                          placeholder={t("phone_number")}
-                          id={`steps.${step.stepNumber - 1}.sendTo`}
-                          className="min-w-fit sm:rounded-r-none sm:rounded-bl-md sm:rounded-tl-md"
-                          required
-                          disabled={props.readOnly}
-                          value={value}
-                          onChange={(val) => {
-                            const isAlreadyVerified = !!verifiedNumbers
-                              ?.concat([])
-                              .find((number) => number.replace(/\s/g, "") === val?.replace(/\s/g, ""));
-                            setNumberVerified(isAlreadyVerified);
-                            onChange(val);
-                          }}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       )}
                     />
                     <Button
@@ -569,16 +556,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     !props.readOnly && (
                       <>
                         <div className="mt-3 flex">
-                          <TextField
-                            className="h-[36px] rounded-r-none border-r-transparent"
-                            placeholder="Verification code"
-                            disabled={props.readOnly}
-                            value={verificationCode}
-                            onChange={(e) => {
-                              setVerificationCode(e.target.value);
-                            }}
-                            required
-                          />
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                           <Button
                             color="secondary"
                             className="-ml-[3px] h-[36px] min-w-fit py-0 sm:block sm:rounded-bl-none sm:rounded-tl-none "
@@ -617,13 +596,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                             </span>
                           </Tooltip>
                         </div>
-                        <Input
-                          type="text"
-                          placeholder={SENDER_ID}
-                          disabled={props.readOnly}
-                          maxLength={11}
-                          {...form.register(`steps.${step.stepNumber - 1}.sender`)}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       </div>
                       {form.formState.errors.steps &&
                         form.formState?.errors?.steps[step.stepNumber - 1]?.sender && (
@@ -634,12 +608,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     <>
                       <div className="pt-4">
                         <Label>{t("sender_name")}</Label>
-                        <Input
-                          type="text"
-                          disabled={props.readOnly}
-                          placeholder={SENDER_NAME}
-                          {...form.register(`steps.${step.stepNumber - 1}.senderName`)}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       </div>
                     </>
                   )}
@@ -651,16 +621,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     name={`steps.${step.stepNumber - 1}.numberRequired`}
                     control={form.control}
                     render={() => (
-                      <CheckboxField
-                        disabled={props.readOnly}
-                        defaultChecked={
-                          form.getValues(`steps.${step.stepNumber - 1}.numberRequired`) || false
-                        }
-                        description={t("make_phone_number_required")}
-                        onChange={(e) =>
-                          form.setValue(`steps.${step.stepNumber - 1}.numberRequired`, e.target.checked)
-                        }
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                   />
                 </div>
@@ -672,21 +634,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     <Controller
                       name={`steps.${step.stepNumber - 1}.sendTo`}
                       render={({ field: { value, onChange } }) => (
-                        <EmailField
-                          required
-                          containerClassName="w-full"
-                          className="h-10 min-w-fit sm:rounded-r-none sm:rounded-bl-md sm:rounded-tl-md"
-                          placeholder={t("email_address")}
-                          value={value}
-                          disabled={props.readOnly}
-                          onChange={(val) => {
-                            const isAlreadyVerified = !!verifiedEmails
-                              ?.concat([])
-                              .find((email) => email === val.target.value);
-                            setEmailVerified(isAlreadyVerified);
-                            onChange(val);
-                          }}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       )}
                     />
                     <Button
@@ -722,16 +671,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     !props.readOnly && (
                       <>
                         <div className="mt-3 flex">
-                          <TextField
-                            className="h-[36px] rounded-r-none border-r-transparent"
-                            placeholder="Verification code"
-                            disabled={props.readOnly}
-                            value={verificationCode}
-                            onChange={(e) => {
-                              setVerificationCode(e.target.value);
-                            }}
-                            required
-                          />
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                           <Button
                             color="secondary"
                             className="-ml-[3px] h-[36px] min-w-fit py-0 sm:block sm:rounded-bl-none sm:rounded-tl-none "
@@ -871,30 +812,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                     {isEmailSubjectNeeded ? t("email_body") : t("text_message")}
                   </Label>
                 </div>
-                <Editor
-                  getText={() => {
-                    return props.form.getValues(`steps.${step.stepNumber - 1}.reminderBody`) || "";
-                  }}
-                  setText={(text: string) => {
-                    props.form.setValue(`steps.${step.stepNumber - 1}.reminderBody`, text);
-                    props.form.clearErrors();
-                  }}
-                  variables={DYNAMIC_TEXT_VARIABLES}
-                  addVariableButtonTop={isSMSAction(step.action)}
-                  height="200px"
-                  updateTemplate={updateTemplate}
-                  firstRender={firstRender}
-                  setFirstRender={setFirstRender}
-                  editable={
-                    !props.readOnly &&
-                    !isWhatsappAction(step.action) &&
-                    (hasActiveTeamPlan || isSMSAction(step.action))
-                  }
-                  excludedToolbarItems={
-                    !isSMSAction(step.action) ? [] : ["blockType", "bold", "italic", "link"]
-                  }
-                  plainText={isSMSAction(step.action)}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
 
                 {form.formState.errors.steps &&
                   form.formState?.errors?.steps[step.stepNumber - 1]?.reminderBody && (
@@ -908,19 +827,8 @@ export default function WorkflowStepContainer(props: WorkflowStepProps) {
                       name={`steps.${step.stepNumber - 1}.includeCalendarEvent`}
                       control={form.control}
                       render={() => (
-                        <CheckboxField
-                          disabled={props.readOnly}
-                          defaultChecked={
-                            form.getValues(`steps.${step.stepNumber - 1}.includeCalendarEvent`) || false
-                          }
-                          description={t("include_calendar_event")}
-                          onChange={(e) =>
-                            form.setValue(
-                              `steps.${step.stepNumber - 1}.includeCalendarEvent`,
-                              e.target.checked
-                            )
-                          }
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       )}
                     />
                   </div>

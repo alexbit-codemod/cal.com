@@ -8,7 +8,8 @@ export default function TemplateCard({ template }: { template: Template }) {
       <div className="flex items-start justify-start">
         <div>
           <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-md p-1">
-            <img className="h-8" alt={template.app} src={`/api/app-store/zapier/${template.icon}`} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
         <div className="mr-4">
@@ -20,16 +21,14 @@ export default function TemplateCard({ template }: { template: Template }) {
       </div>
       <div className="hidden w-full sm:block">
         <div className="float-right">
-          <Button color="secondary" className=" w-[90px]" target="_blank" href={template.link}>
-            Use Zap
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
       <div className="mt-2 block w-full sm:hidden">
         <div className="float-right">
-          <Button color="secondary" className="w-[90px]" target="_blank" href={template.link}>
-            Use Zap
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
     </div>

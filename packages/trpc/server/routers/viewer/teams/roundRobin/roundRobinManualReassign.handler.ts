@@ -22,7 +22,9 @@ export const roundRobinManualReassignHandler = async ({ ctx, input }: RoundRobin
   const isAllowed = await bookingRepo.doesUserIdHaveAccessToBooking({ userId: ctx.user.id, bookingId });
 
   if (!isAllowed) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "You do not have permission" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   await roundRobinManualReassignment({

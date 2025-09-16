@@ -12,11 +12,15 @@ async function handler(req: NextRequest) {
   const { client_id, client_secret, grant_type } = await parseUrlFormData(req);
 
   if (!client_id || !client_secret) {
-    return NextResponse.json({ message: "Missing client id or secret" }, { status: 400 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
   }
 
   if (grant_type !== "refresh_token") {
-    return NextResponse.json({ message: "grant type invalid" }, { status: 400 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
   }
 
   const [hashedSecret] = generateSecret(client_secret);
@@ -32,7 +36,9 @@ async function handler(req: NextRequest) {
   });
 
   if (!client) {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   const secretKey = process.env.CALENDSO_ENCRYPTION_KEY || "";
@@ -43,11 +49,15 @@ async function handler(req: NextRequest) {
     const refreshToken = req.headers.get("authorization")?.split(" ")[1] || "";
     decodedRefreshToken = jwt.verify(refreshToken, secretKey) as OAuthTokenPayload;
   } catch {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   if (!decodedRefreshToken || decodedRefreshToken.token_type !== "Refresh Token") {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   const payload: OAuthTokenPayload = {

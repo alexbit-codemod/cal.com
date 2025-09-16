@@ -30,7 +30,9 @@ export class PhoneNumberService {
     if (!data || !data.phone_number?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -91,7 +93,9 @@ export class PhoneNumberService {
       });
       throw new HttpError({
         statusCode: 500,
-        message: "Failed to create phone number",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -110,7 +114,9 @@ export class PhoneNumberService {
     if (!phoneNumber?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -128,20 +134,26 @@ export class PhoneNumberService {
     if (!phoneNumberToDelete) {
       throw new HttpError({
         statusCode: 404,
-        message: "Phone number not found or you don't have permission to delete it.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (phoneNumberToDelete.subscriptionStatus === PhoneNumberSubscriptionStatus.ACTIVE) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is still active",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
     if (phoneNumberToDelete.subscriptionStatus === PhoneNumberSubscriptionStatus.CANCELLED) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is already cancelled",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -170,7 +182,9 @@ export class PhoneNumberService {
     if (!phoneNumber?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -183,7 +197,9 @@ export class PhoneNumberService {
       });
       throw new HttpError({
         statusCode: 500,
-        message: `Failed to get phone number '${phoneNumber}'`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -195,14 +211,18 @@ export class PhoneNumberService {
     if (!phoneNumber?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (!data || Object.keys(data).length === 0) {
       throw new HttpError({
         statusCode: 400,
-        message: "Update data is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -216,7 +236,9 @@ export class PhoneNumberService {
       });
       throw new HttpError({
         statusCode: 500,
-        message: `Failed to update phone number '${phoneNumber}'`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -237,7 +259,9 @@ export class PhoneNumberService {
     if (!phoneNumber?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -255,7 +279,9 @@ export class PhoneNumberService {
     if (!phoneNumberRecord) {
       throw new HttpError({
         statusCode: 404,
-        message: "Phone number not found or you don't have permission to update it.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -287,7 +313,9 @@ export class PhoneNumberService {
       outboundProviderAgentId: outboundAgentId,
     });
 
-    return { message: "Phone number updated successfully" };
+    return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
 
   private async validateTeamPermissions(userId: number, teamId?: number) {
@@ -299,7 +327,9 @@ export class PhoneNumberService {
       if (!canManage) {
         throw new HttpError({
           statusCode: 403,
-          message: "You don't have permission to import phone numbers for this team.",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     }
@@ -316,7 +346,9 @@ export class PhoneNumberService {
       if (!agent) {
         throw new HttpError({
           statusCode: 403,
-          message: "You don't have permission to use the selected agent.",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     }
@@ -338,14 +370,18 @@ export class PhoneNumberService {
       if (!agent) {
         throw new HttpError({
           statusCode: 403,
-          message: `You don't have permission to use the selected ${type} agent.`,
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
 
       if (teamId && agent.teamId !== teamId) {
         throw new HttpError({
           statusCode: 403,
-          message: `Selected ${type} agent does not belong to the specified team.`,
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     }
@@ -370,7 +406,9 @@ export class PhoneNumberService {
           phoneNumber: transactionState.retellPhoneNumber.phone_number,
         });
       } catch (cleanupError) {
-        const compensationFailureMessage = `Failed to cleanup Retell phone number ${transactionState.retellPhoneNumber.phone_number} after transaction failure. Manual cleanup required.`;
+        const compensationFailureMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
 
         this.logger.error(compensationFailureMessage, {
           phoneNumber: transactionState.retellPhoneNumber.phone_number,

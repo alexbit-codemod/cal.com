@@ -12,7 +12,9 @@ export const createGoogleCalendarEventFixture = (
     created: "2024-01-01T00:00:00Z",
     updated: "2024-01-01T00:00:00Z",
     summary: "Test Meeting",
-    description: "Test description",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     creator: {
       email: "creator@example.com",
       displayName: "Creator Name",
@@ -51,7 +53,9 @@ export const createGoogleCalendarEventFixture = (
         {
           entryPointType: "video",
           uri: "https://meet.google.com/abc-def-ghi",
-          label: "meet.google.com/abc-def-ghi",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       conferenceSolution: {
@@ -76,14 +80,18 @@ export const googleEventWithConferenceData = createGoogleCalendarEventFixture({
       {
         entryPointType: "video",
         uri: "https://meet.google.com/abc-def-ghi",
-        label: "Google Meet",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         pin: "123456",
         regionCode: "US",
       },
       {
         entryPointType: "phone",
         uri: "tel:+1-555-123-4567",
-        label: "Phone",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         pin: "789012",
       },
     ],

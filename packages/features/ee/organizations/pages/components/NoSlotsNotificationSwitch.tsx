@@ -31,20 +31,8 @@ export const NoSlotsNotificationSwitch = ({ currentOrg }: GeneralViewProps) => {
 
   return (
     <>
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        title={t("organization_no_slots_notification_switch_title")}
-        disabled={mutation?.isPending}
-        description={t("organization_no_slots_notification_switch_description")}
-        checked={notificationActive}
-        onCheckedChange={(checked) => {
-          mutation.mutate({
-            adminGetsNoSlotsNotification: checked,
-          });
-          setNotificationActive(checked);
-        }}
-        switchContainerClassName="mt-6"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 };

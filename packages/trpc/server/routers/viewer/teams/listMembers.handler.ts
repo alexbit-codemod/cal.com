@@ -38,7 +38,9 @@ export const listMembersHandler = async ({ ctx, input }: ListMembersHandlerOptio
   if (!canAccessMembers) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You are not authorized to see members of any teams",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

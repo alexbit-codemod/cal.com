@@ -84,7 +84,9 @@ export async function moveUserToOrg({
   if (userWithSameUsernameInOrg && userWithSameUsernameInOrg.id !== userId) {
     throw new HttpError({
       statusCode: 400,
-      message: `Username ${targetOrgUsername} already exists for orgId: ${targetOrgId} for some other user`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -99,7 +101,9 @@ export async function moveUserToOrg({
   if (!nonOrgUserName) {
     throw new HttpError({
       statusCode: 400,
-      message: `User with id: ${userId} doesn't have a non-org username`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -137,14 +141,18 @@ export async function removeUserFromOrg({ targetOrgId, userId }: { targetOrgId: 
   if (!userToRemoveFromOrg) {
     throw new HttpError({
       statusCode: 400,
-      message: `User with id: ${userId} not found`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (userToRemoveFromOrg.organizationId !== targetOrgId) {
     throw new HttpError({
       statusCode: 400,
-      message: `User with id: ${userId} is not part of orgId: ${targetOrgId}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -160,7 +168,9 @@ export async function removeUserFromOrg({ targetOrgId, userId }: { targetOrgId: 
   if (!userToRemoveFromOrgMetadata.migratedToOrgFrom) {
     throw new HttpError({
       statusCode: 400,
-      message: `User with id: ${userId} wasn't migrated. So, there is nothing to revert`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -168,7 +178,9 @@ export async function removeUserFromOrg({ targetOrgId, userId }: { targetOrgId: 
   if (!nonOrgUserName) {
     throw new HttpError({
       statusCode: 500,
-      message: `User with id: ${userId} doesn't have a non-org username`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -225,7 +237,9 @@ async function setOrgSlugIfNotSet(
   if (!orgMetadata?.requestedSlug) {
     throw new HttpError({
       statusCode: 400,
-      message: `Org with id: ${targetOrgId} doesn't have a slug. Tried using requestedSlug but that's also not present. So, all migration done but failed to set the Organization slug. Please set it manually`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   await setOrgSlug({
@@ -246,7 +260,9 @@ function assertUserPartOfOrgAndRemigrationAllowed(
     if (userToMoveToOrg.organizationId !== targetOrgId) {
       throw new HttpError({
         statusCode: 400,
-        message: `User ${targetOrgUsername} already exists for different Org with orgId: ${targetOrgId}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     } else {
       log.debug(`Redoing migration for userId: ${userId} to orgId:${targetOrgId}`);
@@ -267,7 +283,9 @@ async function getTeamOrThrowError(targetOrgId: number) {
   if (!team) {
     throw new HttpError({
       statusCode: 400,
-      message: `Org with id: ${targetOrgId} not found`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   return team;
@@ -283,14 +301,18 @@ function assertUserPartOfOtherOrg(
 ): asserts userToMoveToOrg {
   if (!userToMoveToOrg) {
     throw new HttpError({
-      message: `User ${userName ? userName : `ID:${userId}`} is part of an org already`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       statusCode: 400,
     });
   }
 
   if (userToMoveToOrg.organizationId && userToMoveToOrg.organizationId !== targetOrgId) {
     throw new HttpError({
-      message: `User is already a part of different organization ID: ${userToMoveToOrg.organizationId}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       statusCode: 400,
     });
   }
@@ -298,10 +320,14 @@ function assertUserPartOfOtherOrg(
 
 function assertUserIdOrUserName(userId: number | undefined, userName: string | undefined) {
   if (!userId && !userName) {
-    throw new HttpError({ statusCode: 400, message: "userId or userName is required" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   if (userId && userName) {
-    throw new HttpError({ statusCode: 400, message: "Provide either userId or userName" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 
@@ -584,7 +610,9 @@ async function dbRemoveTeamFromOrg({ teamId }: { teamId: number }) {
   if (!team) {
     throw new HttpError({
       statusCode: 400,
-      message: `Team with id: ${teamId} not found`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -613,7 +641,9 @@ async function dbRemoveTeamFromOrg({ teamId }: { teamId: number }) {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
       if (e.code === "P2002") {
         throw new HttpError({
-          message: `Looks like the team's name is already taken by some other team outside the org or an org itself. Please change this team's name or the other team/org's name. If you rename the team that you are trying to remove from the org, you will have to manually remove the redirect from the database for that team as the slug would have changed.`,
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           statusCode: 400,
         });
       }

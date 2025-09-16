@@ -101,10 +101,12 @@ export function DatePickerWithRange({
                   {format(dates.startDate, "LLL dd, y")} - {format(dates.endDate, "LLL dd, y")}
                 </>
               ) : (
-                <>{format(dates.startDate, "LLL dd, y")} - End</>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )
             ) : (
-              <span>Pick a date</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           </Button>
         </Popover.Trigger>

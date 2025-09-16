@@ -54,35 +54,10 @@ export const AsyncExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-4 md:w-80">
-        <Select
-          options={asyncOptions}
-          onInputChange={(value) => {
-            if (value) {
-              loadOptions(value);
-            }
-          }}
-          isLoading={isLoading}
-          placeholder="Search for a country..."
-          noOptionsMessage={({ inputValue }) =>
-            inputValue ? "No countries found" : "Start typing to search..."
-          }
-          onChange={handleValueChange}
-        />
-        <Select
-          options={asyncOptions}
-          onInputChange={(value) => {
-            if (value) {
-              loadOptions(value);
-            }
-          }}
-          isLoading={isLoading}
-          placeholder="Search for a country... (small)"
-          noOptionsMessage={({ inputValue }) =>
-            inputValue ? "No countries found" : "Start typing to search..."
-          }
-          onChange={handleValueChange}
-          size="sm"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );

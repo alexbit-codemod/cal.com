@@ -191,7 +191,8 @@ export function Segment({
 }) {
   const { attributes, isPending } = useAttributes(teamId);
   const { t } = useLocale();
-  if (isPending) return <span>Loading...</span>;
+  if (isPending) return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$;
   if (!attributes) {
     console.log("Error fetching attributes");
     return <span>{t("something_went_wrong")}</span>;

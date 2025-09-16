@@ -45,7 +45,9 @@ export async function deleteHandler(req: NextApiRequest) {
   const { id } = schemaQueryIdParseInt.parse(query);
   await checkPermissions(req);
   await prisma.eventType.delete({ where: { id } });
-  return { message: `Event Type with id: ${id} deleted successfully` };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }
 
 async function checkPermissions(req: NextApiRequest) {
@@ -55,7 +57,9 @@ async function checkPermissions(req: NextApiRequest) {
 
   const eventType = await prisma.eventType.findFirst({ where: { id } });
 
-  if (!eventType) throw new HttpError({ statusCode: 403, message: "Forbidden" });
+  if (!eventType) throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   /** Only event type owners or team owners for team events can delete it */
   if (eventType.teamId) return await checkTeamEventEditPermission(req, { teamId: eventType.teamId });
@@ -63,7 +67,9 @@ async function checkPermissions(req: NextApiRequest) {
   if (eventType.parentId) return await checkParentEventOwnership(req);
 
   if (eventType.userId && eventType.userId !== userId)
-    throw new HttpError({ statusCode: 403, message: "Forbidden" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 }
 
 export default defaultResponder(deleteHandler);

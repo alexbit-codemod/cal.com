@@ -8,13 +8,17 @@ import { encodeOAuthState } from "../../_utils/oauth/encodeOAuthState";
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!req.session?.user?.id) {
-    return res.status(401).json({ message: "You must be logged in to do this" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const { client_id } = await getAppKeysFromSlug("closecom");
 
   if (!client_id || typeof client_id !== "string")
-    return res.status(400).json({ message: "Close.com client_id missing." });
+    return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const state = encodeOAuthState(req) ?? "";
 

@@ -201,7 +201,8 @@ export const TestForm = ({
         {!showResults ? (
           <>
             {isDialog ? (
-              <DialogHeader title={t("test_routing_form")} subtitle={t("test_preview_description")} />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             ) : !showRRData ? (
               <div className="mb-6 flex items-center justify-between">
                 <h3 className="text-emphasis text-xl font-semibold">{t("preview")}</h3>
@@ -249,7 +250,8 @@ export const TestForm = ({
         ) : (
           <>
             {isDialog ? (
-              <DialogHeader title={t("test_routing_form")} subtitle={t("test_preview_description")} />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             ) : !showRRData ? (
               <div className="mb-6 flex items-center justify-between">
                 <h3 className="text-emphasis text-xl font-semibold">{t("results")}</h3>

@@ -309,16 +309,8 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
         </Section.SubSection>
 
         <Section.SubSection>
-          <WriteToObjectSettings
-            bookingAction={BookingActionEnum.ON_BOOKING}
-            optionLabel={t("salesforce_on_booking_write_to_record", { record: createEventOn })}
-            optionEnabled={onBookingWriteToRecord}
-            writeToObjectData={onBookingWriteToRecordFields}
-            optionSwitchOnChange={(checked) => {
-              setAppData("onBookingWriteToRecord", checked);
-            }}
-            updateWriteToObjectData={(data) => setAppData("onBookingWriteToRecordFields", data)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </Section.SubSection>
 
         <Section.SubSection>
@@ -432,7 +424,8 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
                         }}
                       />
                     </Section.SubSectionHeader>
-                    <Alert severity="info" title={t("skip_rr_description")} />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </Section.SubSection>
                 </>
               ) : null}
@@ -441,16 +434,8 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
         ) : null}
 
         <Section.SubSection>
-          <WriteToObjectSettings
-            bookingAction={BookingActionEnum.ON_CANCEL}
-            optionLabel={t("salesforce_on_cancel_write_to_event")}
-            optionEnabled={onCancelWriteToEventRecord}
-            writeToObjectData={onCancelWriteToEventRecordFields}
-            optionSwitchOnChange={(checked) => {
-              setAppData("onCancelWriteToEventRecord", checked);
-            }}
-            updateWriteToObjectData={(data) => setAppData("onCancelWriteToEventRecordFields", data)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </Section.SubSection>
 
         <Section.SubSection>
@@ -469,11 +454,8 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
           </Section.SubSectionHeader>
           {sendNoShowAttendeeData ? (
             <Section.SubSectionContent classNames={{ container: "p-3" }}>
-              <Label
-                htmlFor="send-no-show-attendee-data-field-name"
-                className="text-subtle text-sm font-medium">
-                Field name to check (must be checkbox data type)
-              </Label>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <InputField
                 id="send-no-show-attendee-data-field-name"
                 size="sm"

@@ -356,21 +356,8 @@ export const MultiplePrivateLinksController = ({
                 </p>
                 {selectedType === "usage" && (
                   <div className="mt-2 w-[180px]">
-                    <NumberInput
-                      required
-                      min={1}
-                      data-testid="private-link-usage-count"
-                      placeholder={t("number_of_uses")}
-                      value={maxUsageCount === null ? "" : maxUsageCount}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                        const value = e.target.value === "" ? null : parseInt(e.target.value);
-                        if (e.target.value === "") {
-                          setMaxUsageCount(null);
-                        } else if (!isNaN(Number(value)) && Number(value) > 0) {
-                          setMaxUsageCount(value);
-                        }
-                      }}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 )}
               </RadioArea.Item>

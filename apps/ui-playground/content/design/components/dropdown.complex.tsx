@@ -20,25 +20,38 @@ export const ComplexExample: React.FC = () => (
       <div className="flex flex-col items-center gap-2">
         <Dropdown>
           <DropdownMenuTrigger asChild>
-            <Button color="secondary">Open</Button>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel>My account</DropdownMenuLabel>
-            <DropdownItem>Profile</DropdownItem>
-            <DropdownItem>Billing</DropdownItem>
-            <DropdownItem>Settings</DropdownItem>
-            <DropdownItem>Keyboard Shortcuts</DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DropdownMenuSeparator />
-            <DropdownMenuLabel>Team</DropdownMenuLabel>
-            <DropdownItem>Invite users</DropdownItem>
-            <DropdownItem>New team</DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DropdownMenuSeparator />
-            <DropdownItem>Github</DropdownItem>
-            <DropdownItem>Support</DropdownItem>
-            <DropdownItem>API</DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuContent>
         </Dropdown>
-        <span className="text-subtle text-xs">Complex Menu</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       {/* Example 2: Avatar with Icons */}
@@ -46,24 +59,31 @@ export const ComplexExample: React.FC = () => (
         <Dropdown>
           <DropdownMenuTrigger asChild>
             <button className="cursor-pointer">
-              <Avatar size="md" imageSrc="https://cal.com/stakeholder/peer.jpg" alt="Avatar" />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel>peer@cal.com</DropdownMenuLabel>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DropdownMenuSeparator />
-            <DropdownItem StartIcon="user">My account</DropdownItem>
-            <DropdownItem StartIcon="map">Plan</DropdownItem>
-            <DropdownItem StartIcon="credit-card">Billing</DropdownItem>
-            <DropdownItem StartIcon="link">Integrations</DropdownItem>
-            <DropdownItem StartIcon="upload">Module</DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DropdownMenuSeparator />
-            <DropdownItem className="text-error" StartIcon="log-out">
-              Log out
-            </DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuContent>
         </Dropdown>
-        <span className="text-subtle text-xs">With Icons</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       {/* Example 3: Simple Actions */}
@@ -73,13 +93,18 @@ export const ComplexExample: React.FC = () => (
             <Button variant="icon" color="secondary" StartIcon="calendar" />
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownItem>Rename</DropdownItem>
-            <DropdownItem>Duplicate</DropdownItem>
-            <DropdownItem>Move</DropdownItem>
-            <DropdownItem color="destructive">Delete</DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuContent>
         </Dropdown>
-        <span className="text-subtle text-xs">Simple Actions</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   </RenderComponentWithSnippet>

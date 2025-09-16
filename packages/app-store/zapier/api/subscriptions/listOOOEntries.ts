@@ -45,13 +45,17 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     "READ_PROFILE",
   ]);
   if (!authorizedAccount && !validKey) {
-    res.status(401).json({ message: "Unauthorized" });
+    res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return;
   }
   const oooEntries = await listOOOEntries(validKey, authorizedAccount);
 
   if (!oooEntries) {
-    res.status(500).json({ message: "Unable to get out of office entries list." });
+    res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return;
   }
   if (oooEntries.length === 0) {

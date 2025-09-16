@@ -42,9 +42,9 @@ const initialConfig = {
 
 const TestWrapper = ({ children }: { children: string | JSX.Element }) => (
   <LexicalComposer initialConfig={initialConfig}>
-    <RichTextPlugin
-      contentEditable={<ContentEditable />}
-      placeholder={<div>Enter some text...</div>}
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
       ErrorBoundary={LexicalErrorBoundary}
     />
     <HistoryPlugin />

@@ -14,14 +14,18 @@ export const metadata = {
   url: "https://zoom.us/",
   category: "conferencing",
   slug: "zoom",
-  title: "Zoom Video",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   email: "help@cal.com",
   appData: {
     location: {
       default: false,
       linkType: "dynamic",
       type: "integrations:zoom",
-      label: "Zoom Video",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   },
   dirName: "zoomvideo",

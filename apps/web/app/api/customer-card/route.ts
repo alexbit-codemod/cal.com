@@ -39,9 +39,15 @@ const customerCardDisplay = (
       },
       {
         componentText: {
-          text: "Basic Information",
-          textColor: "NORMAL",
-          textSize: "L",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textSize: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       },
       {
@@ -54,39 +60,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Name",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: name || "Unknown",
-              },
-            },
-          ],
-        },
-      },
-      {
-        componentSpacer: {
-          spacerSize: "M",
-        },
-      },
-      {
-        componentRow: {
-          rowMainContent: [
-            {
-              componentText: {
-                text: "Email",
-                textColor: "MUTED",
-              },
-            },
-          ],
-          rowAsideContent: [
-            {
-              componentText: {
-                text: email || "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -102,15 +90,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Username",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: username || "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -126,15 +120,51 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "User ID",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: id || "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+              },
+            },
+          ],
+        },
+      },
+      {
+        componentSpacer: {
+          spacerSize: "M",
+        },
+      },
+      {
+        componentRow: {
+          rowMainContent: [
+            {
+              componentText: {
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+              },
+            },
+          ],
+          rowAsideContent: [
+            {
+              componentText: {
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -153,9 +183,15 @@ const customerCardDisplay = (
       // Account Settings Section Title
       {
         componentText: {
-          text: "Account Settings",
-          textColor: "NORMAL",
-          textSize: "L",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textSize: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       },
       {
@@ -168,39 +204,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Time Zone",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: timeZone || "Unknown",
-              },
-            },
-          ],
-        },
-      },
-      {
-        componentSpacer: {
-          spacerSize: "M",
-        },
-      },
-      {
-        componentRow: {
-          rowMainContent: [
-            {
-              componentText: {
-                text: "Identity Provider",
-                textColor: "MUTED",
-              },
-            },
-          ],
-          rowAsideContent: [
-            {
-              componentText: {
-                text: identityProvider || "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -216,15 +234,51 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Last Active At",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: lastActiveAt ? dayjs(lastActiveAt).fromNow() : "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+              },
+            },
+          ],
+        },
+      },
+      {
+        componentSpacer: {
+          spacerSize: "M",
+        },
+      },
+      {
+        componentRow: {
+          rowMainContent: [
+            {
+              componentText: {
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+              },
+            },
+          ],
+          rowAsideContent: [
+            {
+              componentText: {
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -243,9 +297,15 @@ const customerCardDisplay = (
       // Team Information Section Title
       {
         componentText: {
-          text: "Team Information",
-          textColor: "NORMAL",
-          textSize: "L",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textSize: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       },
       {
@@ -258,15 +318,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Team Name",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: teamName || "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -282,15 +348,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Team Slug",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: teamSlug || "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -306,15 +378,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Is Organization",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentBadge: {
-                badgeLabel: isOrganization ? "Yes" : "No",
+                badgeLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
                 badgeColor: isOrganization ? "GREEN" : "RED",
               },
             },
@@ -333,9 +411,15 @@ const customerCardDisplay = (
       },
       {
         componentText: {
-          text: "Security & Billing",
-          textColor: "NORMAL",
-          textSize: "M",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
+          textSize: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       },
       {
@@ -348,15 +432,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Stripe Customer ID",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentText: {
-                text: stripeCustomerId || "Unknown",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
@@ -372,15 +462,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Email Verified?",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentBadge: {
-                badgeLabel: emailVerified === null ? "No" : emailVerified ? "Yes" : "No",
+                badgeLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
                 badgeColor: emailVerified === null ? "RED" : emailVerified ? "GREEN" : "RED",
               },
             },
@@ -397,15 +493,21 @@ const customerCardDisplay = (
           rowMainContent: [
             {
               componentText: {
-                text: "Two Factor Enabled?",
-                textColor: "MUTED",
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],
           rowAsideContent: [
             {
               componentBadge: {
-                badgeLabel: twoFactorEnabled === null ? "No" : twoFactorEnabled ? "Yes" : "No",
+                badgeLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
                 badgeColor: twoFactorEnabled === null ? "RED" : twoFactorEnabled ? "GREEN" : "RED",
               },
             },
@@ -492,9 +594,15 @@ async function handler(request: NextRequest) {
             },
             {
               componentText: {
-                textSize: "L",
-                textColor: "MUTED",
-                text: "User does not exist!",
+                textSize: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                textColor: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
+                text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             },
           ],

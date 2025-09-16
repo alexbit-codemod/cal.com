@@ -12,7 +12,8 @@ export default function Router({ form, message, errorMessage }: inferSSRProps<ty
   return (
     <>
       <Head>
-        <title>{form?.name} | Cal.com Forms</title>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </Head>
       <div className="mx-auto my-0 max-w-3xl md:my-24">
         <div className="w-full max-w-4xl ltr:mr-2 rtl:ml-2">

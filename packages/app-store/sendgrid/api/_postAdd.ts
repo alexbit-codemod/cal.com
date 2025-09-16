@@ -13,14 +13,18 @@ export async function getHandler(req: NextApiRequest) {
   const session = checkSession(req);
 
   const { api_key } = req.body;
-  if (!api_key) throw new HttpError({ statusCode: 400, message: "No Api Key provided to check" });
+  if (!api_key) throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   let encrypted;
   try {
     encrypted = symmetricEncrypt(JSON.stringify({ api_key }), process.env.CALENDSO_ENCRYPTION_KEY || "");
   } catch (reason) {
     logger.error("Could not add Sendgrid app", reason);
-    throw new HttpError({ statusCode: 500, message: "Invalid length - CALENDSO_ENCRYPTION_KEY" });
+    throw new HttpError({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const data = {
@@ -36,7 +40,9 @@ export async function getHandler(req: NextApiRequest) {
     });
   } catch (reason) {
     logger.error("Could not add Sendgrid app", reason);
-    throw new HttpError({ statusCode: 500, message: "Could not add Sendgrid app" });
+    throw new HttpError({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   return { url: getInstalledAppPath({ variant: "other", slug: "sendgrid" }) };

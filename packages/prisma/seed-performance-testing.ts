@@ -31,19 +31,25 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
       },
       eventTypes: [
         {
-          title: "30min",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "30min",
           length: 30,
           _bookings: [
             {
               uid: uuid(),
-              title: "30min",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               startTime: dayjs().add(1, "day").toDate(),
               endTime: dayjs().add(1, "day").add(30, "minutes").toDate(),
             },
             {
               uid: uuid(),
-              title: "30min",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               startTime: dayjs().add(2, "day").toDate(),
               endTime: dayjs().add(2, "day").add(30, "minutes").toDate(),
               status: BookingStatus.PENDING,
@@ -51,12 +57,16 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
           ],
         },
         {
-          title: "60min",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "60min",
           length: 60,
         },
         {
-          title: "Multiple duration",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "multiple-duration",
           length: 75,
           metadata: {
@@ -64,44 +74,58 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
           },
         },
         {
-          title: "paid",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "paid",
           length: 60,
           price: 100,
         },
         {
-          title: "In person meeting",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "in-person",
           length: 60,
           locations: [{ type: "inPerson", address: "London" }],
         },
         {
-          title: "Zoom Event",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "zoom",
           length: 60,
           locations: [{ type: zoomMeta.appData?.location?.type }],
         },
         {
-          title: "Daily Event",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "daily",
           length: 60,
           locations: [{ type: dailyMeta.appData?.location?.type }],
         },
         {
-          title: "Google Meet",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "google-meet",
           length: 60,
           locations: [{ type: googleMeetMeta.appData?.location?.type }],
         },
         {
-          title: "Yoga class",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "yoga-class",
           length: 30,
           recurringEvent: { freq: 2, count: 12, interval: 1 },
           _bookings: [
             {
               uid: uuid(),
-              title: "Yoga class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("yoga-class").toString("base64"),
               startTime: dayjs().add(1, "day").toDate(),
               endTime: dayjs().add(1, "day").add(30, "minutes").toDate(),
@@ -109,7 +133,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Yoga class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("yoga-class").toString("base64"),
               startTime: dayjs().add(1, "day").add(1, "week").toDate(),
               endTime: dayjs().add(1, "day").add(1, "week").add(30, "minutes").toDate(),
@@ -117,7 +143,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Yoga class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("yoga-class").toString("base64"),
               startTime: dayjs().add(1, "day").add(2, "week").toDate(),
               endTime: dayjs().add(1, "day").add(2, "week").add(30, "minutes").toDate(),
@@ -125,7 +153,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Yoga class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("yoga-class").toString("base64"),
               startTime: dayjs().add(1, "day").add(3, "week").toDate(),
               endTime: dayjs().add(1, "day").add(3, "week").add(30, "minutes").toDate(),
@@ -133,7 +163,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Yoga class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("yoga-class").toString("base64"),
               startTime: dayjs().add(1, "day").add(4, "week").toDate(),
               endTime: dayjs().add(1, "day").add(4, "week").add(30, "minutes").toDate(),
@@ -141,7 +173,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Yoga class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("yoga-class").toString("base64"),
               startTime: dayjs().add(1, "day").add(5, "week").toDate(),
               endTime: dayjs().add(1, "day").add(5, "week").add(30, "minutes").toDate(),
@@ -149,8 +183,12 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Seeded Yoga class",
-              description: "seeded",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
+              description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
               startTime: dayjs().subtract(4, "day").toDate(),
               endTime: dayjs().subtract(4, "day").add(30, "minutes").toDate(),
@@ -158,8 +196,12 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Seeded Yoga class",
-              description: "seeded",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
+              description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
               startTime: dayjs().subtract(4, "day").add(1, "week").toDate(),
               endTime: dayjs().subtract(4, "day").add(1, "week").add(30, "minutes").toDate(),
@@ -167,8 +209,12 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Seeded Yoga class",
-              description: "seeded",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
+              description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
               startTime: dayjs().subtract(4, "day").add(2, "week").toDate(),
               endTime: dayjs().subtract(4, "day").add(2, "week").add(30, "minutes").toDate(),
@@ -176,8 +222,12 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Seeded Yoga class",
-              description: "seeded",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
+              description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
               startTime: dayjs().subtract(4, "day").add(3, "week").toDate(),
               endTime: dayjs().subtract(4, "day").add(3, "week").add(30, "minutes").toDate(),
@@ -186,7 +236,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
           ],
         },
         {
-          title: "Tennis class",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "tennis-class",
           length: 60,
           recurringEvent: { freq: 2, count: 10, interval: 2 },
@@ -194,7 +246,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
           _bookings: [
             {
               uid: uuid(),
-              title: "Tennis class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("tennis-class").toString("base64"),
               startTime: dayjs().add(2, "day").toDate(),
               endTime: dayjs().add(2, "day").add(60, "minutes").toDate(),
@@ -202,7 +256,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Tennis class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("tennis-class").toString("base64"),
               startTime: dayjs().add(2, "day").add(2, "week").toDate(),
               endTime: dayjs().add(2, "day").add(2, "week").add(60, "minutes").toDate(),
@@ -210,7 +266,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Tennis class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("tennis-class").toString("base64"),
               startTime: dayjs().add(2, "day").add(4, "week").toDate(),
               endTime: dayjs().add(2, "day").add(4, "week").add(60, "minutes").toDate(),
@@ -218,7 +276,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Tennis class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("tennis-class").toString("base64"),
               startTime: dayjs().add(2, "day").add(8, "week").toDate(),
               endTime: dayjs().add(2, "day").add(8, "week").add(60, "minutes").toDate(),
@@ -226,7 +286,9 @@ async function _createManyDifferentUsersWithDifferentEventTypesAndBookings({
             },
             {
               uid: uuid(),
-              title: "Tennis class",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               recurringEventId: Buffer.from("tennis-class").toString("base64"),
               startTime: dayjs().add(2, "day").add(10, "week").toDate(),
               endTime: dayjs().add(2, "day").add(10, "week").add(60, "minutes").toDate(),
@@ -251,19 +313,25 @@ async function createAUserWithManyBookings() {
     },
     eventTypes: [
       {
-        title: "30min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "30min",
         length: 30,
         _numBookings: 100,
       },
       {
-        title: "60min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "60min",
         length: 60,
         _numBookings: 100,
       },
       {
-        title: "Multiple duration",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "multiple-duration",
         length: 75,
         metadata: {
@@ -272,41 +340,53 @@ async function createAUserWithManyBookings() {
         _numBookings: 100,
       },
       {
-        title: "paid",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "paid",
         length: 60,
         price: 100,
         _numBookings: 100,
       },
       {
-        title: "Zoom Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "zoom",
         length: 60,
         locations: [{ type: zoomMeta.appData?.location?.type }],
         _numBookings: 100,
       },
       {
-        title: "Daily Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "daily",
         length: 60,
         locations: [{ type: dailyMeta.appData?.location?.type }],
         _numBookings: 100,
       },
       {
-        title: "Google Meet",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "google-meet",
         length: 60,
         locations: [{ type: googleMeetMeta.appData?.location?.type }],
         _numBookings: 100,
       },
       {
-        title: "Yoga class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "yoga-class",
         length: 30,
         _numBookings: 100,
       },
       {
-        title: "Tennis class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "tennis-class",
         length: 60,
         recurringEvent: { freq: 2, count: 10, interval: 2 },

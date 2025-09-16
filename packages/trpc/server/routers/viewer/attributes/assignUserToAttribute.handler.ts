@@ -20,7 +20,9 @@ const assignUserToAttributeHandler = async ({ input, ctx }: GetOptions) => {
   if (!org.id) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You need to be apart of an organization to use this feature",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -44,7 +46,9 @@ const assignUserToAttributeHandler = async ({ input, ctx }: GetOptions) => {
   if (attributes.length !== input.attributes.length) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You do not have access to these attributes",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -73,7 +77,9 @@ const assignUserToAttributeHandler = async ({ input, ctx }: GetOptions) => {
   if (attributeOptions.length !== attributeOptionIds.length) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You do not have access to these attribute options",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -89,7 +95,9 @@ const assignUserToAttributeHandler = async ({ input, ctx }: GetOptions) => {
   if (!membership) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "This user is not apart of your organization",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -221,11 +229,9 @@ const assignUserToAttributeHandler = async ({ input, ctx }: GetOptions) => {
 
   return {
     success: true,
-    message: lockedAttributesFromDb.length
-      ? `Attributes assigned successfully. Locked attributes ${lockedAttributesFromDb
-          .map((attribute) => attribute.name)
-          .join(", ")} were not assigned.`
-      : "Attributes assigned successfully.",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 };
 

@@ -25,7 +25,9 @@ async function postHandler(req: NextApiRequest) {
   };
 
   if (!isSystemWideAdmin && bodyUserId)
-    throw new HttpError({ statusCode: 403, message: `ADMIN required for userId` });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   if (isSystemWideAdmin && bodyUserId) {
     const where: Prisma.UserWhereInput = { id: bodyUserId };
@@ -39,7 +41,9 @@ async function postHandler(req: NextApiRequest) {
       ...apiKeyPublicSchema.parse(result),
       key: `${process.env.API_KEY_PREFIX ?? "cal_"}${apiKey}`,
     },
-    message: "API key created successfully. Save the `key` value as it won't be displayed again.",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 }
 

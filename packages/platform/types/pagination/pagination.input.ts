@@ -3,7 +3,9 @@ import { Transform } from "class-transformer";
 import { IsNumber, Min, Max, IsOptional } from "class-validator";
 
 export class Pagination {
-  @ApiPropertyOptional({ description: "The number of items to return", example: 10 })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 10 })
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @Min(1)
@@ -11,7 +13,9 @@ export class Pagination {
   @IsOptional()
   limit?: number;
 
-  @ApiPropertyOptional({ description: "The number of items to skip", example: 0 })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 0 })
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @Min(0)
@@ -25,7 +29,9 @@ const DEFAULT_SKIP = 0;
 
 export class SkipTakePagination {
   @ApiPropertyOptional({
-    description: "Maximum number of items to return",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 25,
     default: DEFAULT_TAKE,
     minimum: 1,
@@ -39,7 +45,9 @@ export class SkipTakePagination {
   take: number = DEFAULT_TAKE;
 
   @ApiPropertyOptional({
-    description: "Number of items to skip",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 0,
     default: DEFAULT_SKIP,
     minimum: 0,

@@ -201,7 +201,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
   if (finalSeatsPerTimeSlot && finalRecurringEvent) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Recurring Events and Offer Seats cannot be active at the same time.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -277,26 +279,34 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
   if (bookingLimits) {
     const isValid = validateIntervalLimitOrder(bookingLimits);
     if (!isValid)
-      throw new TRPCError({ code: "BAD_REQUEST", message: "Booking limits must be in ascending order." });
+      throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     data.bookingLimits = bookingLimits;
   }
 
   if (maxActiveBookingsPerBooker) {
     if (maxActiveBookingsPerBooker && maxActiveBookingsPerBooker < 1) {
-      throw new TRPCError({ code: "BAD_REQUEST", message: "Booker booking limit must be greater than 0." });
+      throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     if (maxActiveBookingsPerBooker && (recurringEvent || eventType.recurringEvent)) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: "Recurring Events and booker active bookings limit cannot be active at the same time.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (eventType.maxActiveBookingsPerBooker && recurringEvent) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: "Recurring Events and booker active bookings limit cannot be active at the same time.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -306,13 +316,17 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
   if (durationLimits) {
     const isValid = validateIntervalLimitOrder(durationLimits);
     if (!isValid)
-      throw new TRPCError({ code: "BAD_REQUEST", message: "Duration limits must be in ascending order." });
+      throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     data.durationLimits = durationLimits;
   }
 
   if (offsetStart !== undefined) {
     if (offsetStart < 0) {
-      throw new TRPCError({ code: "BAD_REQUEST", message: "Offset start time must be zero or greater." });
+      throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     data.offsetStart = offsetStart;
   }
@@ -371,7 +385,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
       if (!teamId || !restrictionSchedule) {
         throw new TRPCError({
           code: "UNAUTHORIZED",
-          message: "The restriction schedule is not owned by you or your team",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
       const hasMembership = await membershipRepo.hasMembership({
@@ -381,7 +397,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
       if (!hasMembership) {
         throw new TRPCError({
           code: "UNAUTHORIZED",
-          message: "The restriction schedule is not owned by you or your team",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     }
@@ -667,7 +685,9 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
       if (e.code === "P2002") {
         // instead of throwing a 500 error, catch the conflict and throw a 400 error.
-        throw new TRPCError({ message: "error_event_type_url_duplicate", code: "BAD_REQUEST" });
+        throw new TRPCError({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , code: "BAD_REQUEST" });
       }
     }
     throw e;

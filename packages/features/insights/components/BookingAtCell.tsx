@@ -30,7 +30,8 @@ export function BookingAtCell({ row, rowId }: { row: RoutingFormTableRow; rowId:
     <HoverCard>
       <HoverCardTrigger asChild>
         <div className="flex items-center gap-2" key={`${cellId}-booking-${rowId}`}>
-          <Avatar size="xs" imageSrc={row.bookingUserAvatarUrl ?? ""} alt={row.bookingUserName ?? ""} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <Link href={`/booking/${row.bookingUid}`}>
             <Badge variant="gray">{dayjs(row.bookingCreatedAt).format("MMM D, YYYY HH:mm")}</Badge>
           </Link>
@@ -40,7 +41,8 @@ export function BookingAtCell({ row, rowId }: { row: RoutingFormTableRow; rowId:
         <HoverCardContent>
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <Avatar size="sm" imageSrc={row.bookingUserAvatarUrl ?? ""} alt={row.bookingUserName ?? ""} />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div>
                 <p className="text-sm font-medium">{row.bookingUserName}</p>
                 <p className="group/booking_status_email text-subtle flex items-center text-xs">
@@ -58,7 +60,8 @@ export function BookingAtCell({ row, rowId }: { row: RoutingFormTableRow; rowId:
               </div>
             </div>
             <div className="text-emphasis mt-4 flex items-center gap-2 text-xs">
-              <span>Status:</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <BookingStatusBadge bookingStatus={row.bookingStatus} />
             </div>
           </div>

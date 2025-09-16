@@ -142,7 +142,9 @@ export function getQueryBuilderConfigForAttributes({
       const widgetType = widget.type;
       const valueOfFieldOptions = (() => {
         const formFieldsOptions = dynamicOperandFields.map((field) => ({
-          title: `Value of field '${field.label}'`,
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: buildDynamicOperandFieldVariable(field.id),
         }));
         return formFieldsOptions;

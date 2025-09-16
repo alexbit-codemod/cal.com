@@ -84,19 +84,11 @@ export const BooleanToggleGroup = function BooleanToggleGroup({
         onValueChange(boolean(yesNoValue));
       }}
       {...passThrough}>
-      <ToggleGroupItemPrimitive
-        className={classNames(boolean(yesNoValue) ? selectedClass : unselectedClass)}
-        disabled={disabled}
-        value="yes">
-        Yes
-      </ToggleGroupItemPrimitive>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <ToggleGroupItemPrimitive
-        disabled={disabled}
-        className={classNames(!boolean(yesNoValue) ? selectedClass : unselectedClass)}
-        value="no">
-        No
-      </ToggleGroupItemPrimitive>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </ToggleGroupPrimitive>
   );
 };

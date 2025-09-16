@@ -119,9 +119,9 @@ function FormCard({ formName, fields }: FormCardProps) {
             </ResponsiveContainer>
           </div>
         ) : (
-          <div className="mt-4 p-4 text-center text-gray-500">
-            No data available for selected field
-            <div className="mt-2 text-xs">Data: {JSON.stringify(selectedFieldData, null, 2)}</div>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         )}
       </div>

@@ -9,26 +9,14 @@ import { ErrorToast, showToast, SuccessToast, WarningToast } from "@calcom/ui/co
 export const BasicExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="space-x-2">
-      <Button
-        onClick={() => {
-          showToast("This is a basic toast message", "success");
-        }}>
-        Show Toast
-      </Button>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <Button
-        onClick={() => {
-          showToast("This toast will disappear in 2 seconds", "success", { duration: 2000 });
-        }}>
-        Custom Duration
-      </Button>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <Button
-        onClick={() => {
-          showToast("This toast will persist until dismissed", "success", { duration: Infinity });
-        }}>
-        Persistent Toast
-      </Button>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   </RenderComponentWithSnippet>
 );
@@ -47,9 +35,8 @@ export const RawToastComponents = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-4">
-        <Button onClick={handleReplay} disabled={toastVisible}>
-          Replay Toasts
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <div className="flex flex-col gap-2">
           <SuccessToast
             message="This is a basic toast message"

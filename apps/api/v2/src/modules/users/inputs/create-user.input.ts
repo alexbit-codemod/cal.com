@@ -22,7 +22,9 @@ import { TimeZoneValidator } from "../validators/timeZoneValidator";
 import { WeekdayValidator } from "../validators/weekdayValidator";
 
 export class CreateUserInput {
-  @ApiProperty({ type: String, description: "User email address", example: "user@example.com" })
+  @ApiProperty({ type: String, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "user@example.com" })
   @IsEmail()
   @Transform(({ value }) => {
     if (typeof value === "string") {
@@ -32,7 +34,9 @@ export class CreateUserInput {
   @Expose()
   email!: string;
 
-  @ApiProperty({ type: String, required: false, description: "Username", example: "user123" })
+  @ApiProperty({ type: String, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "user123" })
   @IsOptional()
   @IsString()
   @Transform(({ value }) => {
@@ -43,7 +47,9 @@ export class CreateUserInput {
   @Expose()
   username?: string;
 
-  @ApiProperty({ type: String, required: false, description: "Preferred weekday", example: "Monday" })
+  @ApiProperty({ type: String, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "Monday" })
   @IsOptional()
   @IsString()
   @Validate(WeekdayValidator)
@@ -53,7 +59,9 @@ export class CreateUserInput {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Brand color in HEX format",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "#FFFFFF",
   })
   @IsOptional()
@@ -63,7 +71,9 @@ export class CreateUserInput {
 
   @ApiPropertyOptional({
     type: String,
-    description: "Bio",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "I am a bio",
   })
   @IsOptional()
@@ -74,14 +84,18 @@ export class CreateUserInput {
   @ApiPropertyOptional({
     type: Object,
     description:
-      "You can store any additional data you want here. Metadata must have at most 50 keys, each key up to 40 characters, and values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { key: "value" },
   })
   @IsObject()
   @IsOptional()
   @ValidateMetadata({
     message:
-      "Metadata must have at most 50 keys, each key up to 40 characters, and values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @Expose()
   @Transform(
@@ -95,7 +109,9 @@ export class CreateUserInput {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Dark brand color in HEX format",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "#000000",
   })
   @IsOptional()
@@ -103,48 +119,62 @@ export class CreateUserInput {
   @Expose()
   darkBrandColor?: string;
 
-  @ApiProperty({ type: Boolean, required: false, description: "Hide branding", example: false })
+  @ApiProperty({ type: Boolean, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: false })
   @IsOptional()
   @IsBoolean()
   @Expose()
   hideBranding?: boolean;
 
-  @ApiProperty({ type: String, required: false, description: "Time zone", example: "America/New_York" })
+  @ApiProperty({ type: String, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "America/New_York" })
   @IsOptional()
   @IsString()
   @Validate(TimeZoneValidator)
   @Expose()
   timeZone?: string;
 
-  @ApiProperty({ type: String, required: false, description: "Theme", example: "dark" })
+  @ApiProperty({ type: String, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "dark" })
   @IsOptional()
   @IsString()
   @Validate(ThemeValidator)
   @Expose()
   theme?: string | null;
 
-  @ApiProperty({ type: String, required: false, description: "Application theme", example: "light" })
+  @ApiProperty({ type: String, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "light" })
   @IsOptional()
   @IsString()
   @Validate(ThemeValidator)
   @Expose()
   appTheme?: string | null;
 
-  @ApiProperty({ type: Number, required: false, description: "Time format", example: 24 })
+  @ApiProperty({ type: Number, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 24 })
   @IsOptional()
   @IsNumber()
   @Validate(TimeFormatValidator)
   @Expose()
   timeFormat?: number;
 
-  @ApiProperty({ type: Number, required: false, description: "Default schedule ID", example: 1, minimum: 0 })
+  @ApiProperty({ type: Number, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 1, minimum: 0 })
   @IsOptional()
   @IsNumber()
   @Min(0)
   @Expose()
   defaultScheduleId?: number;
 
-  @ApiProperty({ type: String, required: false, description: "Locale", example: "en", default: "en" })
+  @ApiProperty({ type: String, required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "en", default: "en" })
   @IsOptional()
   @IsString()
   @Validate(LocaleValidator)
@@ -154,7 +184,9 @@ export class CreateUserInput {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Avatar URL",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "https://example.com/avatar.jpg",
   })
   @IsOptional()

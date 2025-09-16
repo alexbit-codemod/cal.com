@@ -127,11 +127,15 @@ export class TeamService {
       },
     });
 
-    if (!verificationToken) throw new TRPCError({ code: "NOT_FOUND", message: "Invite not found" });
+    if (!verificationToken) throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     if (!verificationToken.teamId || !verificationToken.team)
       throw new TRPCError({
         code: "NOT_FOUND",
-        message: "Invite token is not associated with any team",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
 
     try {
@@ -149,7 +153,9 @@ export class TeamService {
         if (e.code === "P2002") {
           throw new TRPCError({
             code: "FORBIDDEN",
-            message: "This user is a member of this team / has a pending invitation.",
+            message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           });
         }
       } else throw e;
@@ -212,7 +218,9 @@ export class TeamService {
     });
 
     if (!membership) {
-      throw new TRPCError({ code: "NOT_FOUND", message: "Membership not found" });
+      throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     return membership;
@@ -233,7 +241,9 @@ export class TeamService {
     });
 
     if (!team) {
-      throw new TRPCError({ code: "NOT_FOUND", message: "Team not found" });
+      throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     return team;
@@ -263,7 +273,9 @@ export class TeamService {
     });
 
     if (!user) {
-      throw new TRPCError({ code: "NOT_FOUND", message: "User not found" });
+      throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     return user;

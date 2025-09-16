@@ -165,36 +165,8 @@ const LicenseSelection = (
                   name="licenseKey"
                   control={formMethods.control}
                   render={({ field: { onBlur, onChange, value } }) => (
-                    <TextField
-                      name="licenseKey"
-                      label={t("license_key")}
-                      className={classNames(
-                        "group-hover:border-emphasis mb-0",
-                        (checkLicenseLoading || (errors.licenseKey === undefined && isDirty)) && "border-r-0"
-                      )}
-                      placeholder="cal_live_XXXXXXXXXXX"
-                      value={licenseKeyInput}
-                      addOnClassname={classNames(
-                        "hover:border-default",
-                        errors.licenseKey === undefined && isDirty && "group-hover:border-emphasis"
-                      )}
-                      addOnSuffix={
-                        checkLicenseLoading ? (
-                          <Icon name="loader" className="h-5 w-5 animate-spin" />
-                        ) : licenseValidation?.valid && licenseTouched ? (
-                          <Icon name="check" className="h-5 w-5 text-green-700" />
-                        ) : undefined
-                      }
-                      color={errors.licenseKey ? "warn" : ""}
-                      onBlur={(e) => {
-                        setLicenseTouched(true);
-                        onBlur();
-                      }}
-                      onChange={(e) => {
-                        setLicenseKeyInput(e.target.value);
-                        onChange(e.target.value);
-                      }}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   )}
                 />
                 {errors.licenseKey && (
@@ -207,17 +179,8 @@ const LicenseSelection = (
                   name="signatureToken"
                   control={formMethods.control}
                   render={({ field: { onBlur, onChange, value } }) => (
-                    <TextField
-                      name="signatureToken"
-                      label={t("signature_token_optional")}
-                      placeholder="cal_sk_XXXXXXXXXXX"
-                      value={value || ""}
-                      onBlur={onBlur}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                        onChange(e.target.value);
-                        formMethods.setValue("signatureToken", e.target.value);
-                      }}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   )}
                 />
                 <p className="text-subtle mt-1 text-sm">{t("signature_token_description")}</p>

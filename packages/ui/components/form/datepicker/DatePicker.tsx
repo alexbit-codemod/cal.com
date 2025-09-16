@@ -42,7 +42,8 @@ const DatePicker = ({ minDate, disabled, date, onDatesChange, className }: Props
             color="secondary"
             EndIcon="calendar"
             className={classNames("justify-between text-left font-normal", !date && "text-subtle")}>
-            {date ? <>{format(date, "LLL dd, y")}</> : <span>Pick a date</span>}
+            {date ? <>{format(date, "LLL dd, y")}</> : // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$}
           </Button>
         </Popover.Trigger>
         <Popover.Content

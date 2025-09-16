@@ -180,16 +180,14 @@ const PremiumTextfield = (props: ICustomUsernameProps) => {
   };
 
   let paymentMsg = !currentUsername ? (
-    <span className="text-xs text-orange-400">
-      You need to reserve your premium username for {getPremiumPlanPriceValue()}
-    </span>
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   ) : null;
 
   if (recentAttemptPaymentStatus && recentAttemptPaymentStatus !== "paid") {
     paymentMsg = (
-      <span className="text-sm text-red-500">
-        Your payment could not be completed. Your username is still not reserved
-      </span>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 

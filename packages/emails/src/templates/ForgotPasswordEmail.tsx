@@ -23,7 +23,8 @@ export const ForgotPasswordEmail = (
       <p style={{ fontWeight: 400, lineHeight: "24px" }}>
         <>{props.language("someone_requested_password_reset")}</>
       </p>
-      <CallToAction label={props.language("change_password")} href={props.resetLink} />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
       <div style={{ lineHeight: "6px" }}>
         <p style={{ fontWeight: 400, lineHeight: "24px" }}>

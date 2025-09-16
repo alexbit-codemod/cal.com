@@ -144,16 +144,8 @@ export function Card({
       <div>
         {icon && icon}
         {image && (
-          <img
-            src={image}
-            // Stops eslint complaining - not smart enough to realise it comes from ...imageProps
-            alt={imageProps?.alt}
-            className={classNames(
-              imageProps?.className,
-              cvaCardTypeByVariant({ variant, structure: "image" })
-            )}
-            {...imageProps}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
         <h5
           title={title}
@@ -198,7 +190,8 @@ export function Card({
               strokeLinejoin="round"
             />
           </svg>
-          <img alt="play feature video" src={thumbnailUrl} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </a>
       )}
 

@@ -91,16 +91,8 @@ export const EventMetaBlock = ({
       )}
       {...rest}>
       {iconUrl ? (
-        <img
-          src={iconUrl}
-          alt=""
-          // @TODO: Use SVG's instead of images, so we can get rid of the filter.
-          className={classNames(
-            "mr-2 mt-[2px] h-4 w-4 flex-shrink-0",
-            isDark === undefined && "[filter:invert(0.5)_brightness(0.5)]",
-            (isDark === undefined || isDark) && "dark:[filter:invert(0.65)_brightness(0.9)]"
-          )}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       ) : (
         <>
           {customIcon ||

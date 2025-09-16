@@ -16,7 +16,9 @@ const stripeWebhookProductHandler = (handlers: Handlers) => async (data: Data) =
   // Only handle subscription invoices
   if (!invoice.subscription) {
     log.warn("Not a subscription invoice, skipping");
-    return { success: false, message: "Not a subscription invoice, skipping" };
+    return { success: false, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
 
   // Get the product ID from the first subscription item
@@ -25,7 +27,9 @@ const stripeWebhookProductHandler = (handlers: Handlers) => async (data: Data) =
 
   if (!productId) {
     log.warn("No product ID found in invoice, skipping");
-    return { success: false, message: "No product ID found in invoice, skipping" };
+    return { success: false, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
 
   const handlerGetter = handlers[productId as keyof typeof handlers];
@@ -35,13 +39,17 @@ const stripeWebhookProductHandler = (handlers: Handlers) => async (data: Data) =
    */
   if (!handlerGetter) {
     log.warn(`Skipping product: ${productId} because no handler found`);
-    return { success: false, message: `Skipping product: ${productId} because no handler found` };
+    return { success: false, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
   const handler = (await handlerGetter())?.default;
   // auto catch unsupported Stripe products.
   if (!handler) {
     log.warn(`Skipping product: ${productId} because no handler found`);
-    return { success: false, message: `Skipping product: ${productId} because no handler found` };
+    return { success: false, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
   return await handler(data);
 };

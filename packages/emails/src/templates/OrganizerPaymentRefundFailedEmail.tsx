@@ -52,17 +52,8 @@ function RefundInformation(props: React.ComponentProps<typeof OrganizerPaymentRe
       {paymentInfo.id && (
         <tr>
           <td align="center" style={{ fontSize: "0px", padding: "10px 25px", wordBreak: "break-word" }}>
-            <div
-              style={{
-                fontFamily: "Roboto, Helvetica, sans-serif",
-                fontSize: "16px",
-                fontWeight: 400,
-                lineHeight: "24px",
-                textAlign: "center",
-                color: "#494949",
-              }}>
-              Payment {paymentInfo.id}
-            </div>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </td>
         </tr>
       )}

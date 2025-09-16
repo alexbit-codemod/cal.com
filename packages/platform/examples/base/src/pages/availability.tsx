@@ -34,19 +34,14 @@ export default function Availability(props: { calUsername: string; calEmail: str
     <main className={`flex min-h-screen flex-col ${inter.className}`}>
       <Navbar username={props.calUsername} />
       <div>
-        <h1 className="mx-10 my-4 text-2xl font-semibold">Availability Settings</h1>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
         <div className="mx-10 mb-4 flex flex-col gap-4">
-          <button
-            onClick={handleValidate}
-            className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
-            Validate Form
-          </button>
-          <button
-            onClick={handleSubmit}
-            className="rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
-            Submit Form
-          </button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
 
         <AvailabilitySettings

@@ -614,48 +614,15 @@ const CopyTimes = ({
         <p className="h6 text-emphasis pb-3 pl-1 text-xs font-medium uppercase">{t("copy_times_to")}</p>
         <ol className="space-y-2">
           <li key="select all">
-            <CheckboxField
-              description={t("select_all")}
-              descriptionAsLabel
-              value={t("select_all")}
-              checked={selected.length === 7}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  setSelected([0, 1, 2, 3, 4, 5, 6]);
-                } else if (!e.target.checked) {
-                  setSelected([]);
-                }
-              }}
-              ref={(ref) => {
-                if (ref) {
-                  itteratablesByKeyRef.current.push(ref as HTMLInputElement);
-                }
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
           {weekdayNames(i18n.language, weekStart).map((weekday, num) => {
             const weekdayIndex = (num + weekStart) % 7;
             return (
               <li key={weekday}>
-                <CheckboxField
-                  description={weekday}
-                  descriptionAsLabel
-                  value={weekdayIndex}
-                  checked={selected.includes(weekdayIndex) || disabled === weekdayIndex}
-                  disabled={disabled === weekdayIndex}
-                  onChange={(e) => {
-                    if (e.target.checked && !selected.includes(weekdayIndex)) {
-                      setSelected(selected.concat([weekdayIndex]));
-                    } else if (!e.target.checked && selected.includes(weekdayIndex)) {
-                      setSelected(selected.filter((item) => item !== weekdayIndex));
-                    }
-                  }}
-                  ref={(ref) => {
-                    if (ref && disabled !== weekdayIndex) {
-                      itteratablesByKeyRef.current.push(ref as HTMLInputElement);
-                    }
-                  }}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </li>
             );
           })}

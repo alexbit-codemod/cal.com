@@ -90,9 +90,9 @@ export function sendWebhookPayload(
         secret: undefined,
       },
       message:
-        triggerEvent === WebhookTriggerEvents.AFTER_GUESTS_CAL_VIDEO_NO_SHOW
-          ? `Guest didn't join the call or didn't join before ${maxStartTimeHumanReadable}`
-          : `Host with email ${hostEmail} didn't join the call or didn't join before ${maxStartTimeHumanReadable}`,
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
     },
   }).catch((e) => {
     console.error(

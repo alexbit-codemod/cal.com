@@ -27,14 +27,18 @@ async function getHandler(request: NextRequest) {
     const session = await getServerSession({ req: legacyReq });
 
     if (!session?.user?.id) {
-      return NextResponse.json({ message: "You must be logged in to do this" }, { status: 401 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 401 });
     }
 
     const code = request.nextUrl.searchParams.get("code");
     const state = request.nextUrl.searchParams.get("state");
 
     if (!state) {
-      return NextResponse.json({ message: "No state provided" }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
     }
 
     const parsedState = stateSchema.parse(JSON.parse(state));
@@ -46,16 +50,22 @@ async function getHandler(request: NextRequest) {
     });
 
     if (!code || typeof code !== "string") {
-      return NextResponse.json({ message: "`code` must be a string" }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
     }
 
     const { client_id, client_secret } = await getAppKeysFromSlug("google-calendar");
 
     if (!client_id || typeof client_id !== "string")
-      return NextResponse.json({ message: "Google client_id missing." }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
 
     if (!client_secret || typeof client_secret !== "string")
-      return NextResponse.json({ message: "Google client_secret missing." }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
 
     const redirect_uri = `${WEBAPP_URL}/api/teams/googleworkspace/callback`;
     const oAuth2Client = new OAuth2Client(client_id, client_secret, redirect_uri);

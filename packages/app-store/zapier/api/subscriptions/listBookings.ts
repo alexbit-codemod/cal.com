@@ -13,7 +13,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const bookings = await listBookings(validKey, authorizedAccount);
 
   if (!bookings) {
-    return res.status(500).json({ message: "Unable to get bookings." });
+    return res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   if (bookings.length === 0) {
     const userInfo = validKey

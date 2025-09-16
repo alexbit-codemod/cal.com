@@ -31,11 +31,8 @@ export const CreditBalanceLimitReachedEmail = (
           <>{user.t("credit_limit_reached_message", { teamName: team.name })}</>
         </p>
         <div style={{ textAlign: "center", marginTop: "24px" }}>
-          <CallToAction
-            label={user.t("buy_credits")}
-            href={`${WEBAPP_URL}/settings/teams/${team.id}/billing`}
-            endIconName="linkIcon"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>{" "}
       </V2BaseEmailHtml>
     );
@@ -50,11 +47,8 @@ export const CreditBalanceLimitReachedEmail = (
         <>{user.t("credit_limit_reached_message_user")}</>
       </p>
       <div style={{ textAlign: "center", marginTop: "24px" }}>
-        <CallToAction
-          label={user.t("buy_credits")}
-          href={`${WEBAPP_URL}/settings/billing`}
-          endIconName="linkIcon"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </V2BaseEmailHtml>
   );

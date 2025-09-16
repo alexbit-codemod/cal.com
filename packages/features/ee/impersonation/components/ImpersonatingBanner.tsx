@@ -16,27 +16,8 @@ function ImpersonatingBanner({ data }: ImpersonatingBannerProps) {
 
   return (
     <>
-      <TopBanner
-        text={t("impersonating_user_warning", { user: data.user.username })}
-        variant="warning"
-        actions={
-          canReturnToSelf ? (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                signIn("impersonation-auth", { returnToId });
-              }}>
-              <button className="text-emphasis hover:underline" data-testid="stop-impersonating-button">
-                {t("impersonating_stop_instructions")}
-              </button>
-            </form>
-          ) : (
-            <a className="border-b border-b-black" href="/auth/logout">
-              {t("impersonating_stop_instructions")}
-            </a>
-          )
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 }

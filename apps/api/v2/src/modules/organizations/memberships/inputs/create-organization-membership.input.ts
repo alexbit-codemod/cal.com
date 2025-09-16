@@ -15,7 +15,9 @@ export class CreateOrgMembershipDto {
   @IsEnum(MembershipRole)
   @ApiProperty({
     enum: ["MEMBER", "OWNER", "ADMIN"],
-    description: "If you are platform customer then managed users should only have MEMBER role.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   readonly role: MembershipRole = MembershipRole.MEMBER;
 

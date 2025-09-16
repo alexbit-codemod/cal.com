@@ -27,7 +27,9 @@ export const Handler = async ({ ctx, input }: Options) => {
   const isLoggedInUserPartOfOrg = !!user.organization.id;
 
   if (!isLoggedInUserPartOfOrg) {
-    throw new TRPCError({ code: "UNAUTHORIZED", message: "Logged in user is not member of Organization" });
+    throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const tOrganizer = await getTranslation(user?.locale ?? "en", "common");
@@ -63,16 +65,22 @@ export const Handler = async ({ ctx, input }: Options) => {
 
   // Check if logged in user belong to current team
   if (!instantMeetingToken) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "token_not_found" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!instantMeetingToken.booking?.id) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "token_invalid_expired" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Check if token has not expired
   if (instantMeetingToken.expires < new Date()) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "token_invalid_expired" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Check if Booking is already accepted by any other user
@@ -150,7 +158,9 @@ export const Handler = async ({ ctx, input }: Options) => {
   const locationVideoCallUrl = bookingMetadataSchema.parse(updatedBooking.metadata || {})?.videoCallUrl;
 
   if (!locationVideoCallUrl) {
-    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "meeting_url_not_found" });
+    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const videoCallReference = updatedBooking.references.find((reference) => reference.type.includes("_video"));

@@ -32,7 +32,9 @@ export const addSecondaryEmailHandler = async ({ ctx, input }: AddSecondaryEmail
   });
 
   if (existingPrimaryEmail) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Email already taken" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const existingSecondaryEmail = await prisma.secondaryEmail.findUnique({
@@ -42,7 +44,9 @@ export const addSecondaryEmailHandler = async ({ ctx, input }: AddSecondaryEmail
   });
 
   if (existingSecondaryEmail) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Email already taken" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const updatedData = await prisma.secondaryEmail.create({
@@ -58,6 +62,8 @@ export const addSecondaryEmailHandler = async ({ ctx, input }: AddSecondaryEmail
 
   return {
     data: updatedData,
-    message: "Secondary email added successfully",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 };

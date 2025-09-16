@@ -89,7 +89,9 @@ const createTestEventType = async (
 
   return prisma.eventType.create({
     data: {
-      title: overrides?.title ?? `Test Event ${timestamp}`,
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: overrides?.slug ?? `test-event-${timestamp}`,
       teamId,
       length: overrides?.length ?? 30,
@@ -304,19 +306,25 @@ describe("TeamService.removeMembers Integration Tests", () => {
 
       // Create multiple event types for the team
       const teamEvent1 = await createTestEventType(regularTeamTestData.team.id, {
-        title: "Team Event 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "team-event-1",
       });
 
       const teamEvent2 = await createTestEventType(regularTeamTestData.team.id, {
-        title: "Team Event 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "team-event-2",
       });
 
       // Create an event type for another team (should not be affected)
       const otherTeam = await createTestTeam({ name: "Other Team" });
       const otherTeamEvent = await createTestEventType(otherTeam.id, {
-        title: "Other Team Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "other-team-event",
       });
 
@@ -377,12 +385,16 @@ describe("TeamService.removeMembers Integration Tests", () => {
     it("should delete managed event types when removing from team", async () => {
       // Create parent event types
       const parentEventType1 = await createTestEventType(regularTeamTestData.team.id, {
-        title: "Parent Team Event 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "parent-team-event-1",
       });
 
       const parentEventType2 = await createTestEventType(regularTeamTestData.team.id, {
-        title: "Parent Team Event 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "parent-team-event-2",
       });
 
@@ -390,14 +402,18 @@ describe("TeamService.removeMembers Integration Tests", () => {
       const managedEventType1 = await createTestEventType(regularTeamTestData.team.id, {
         userId: orgTestData.members[0].id,
         parentId: parentEventType1.id,
-        title: "Managed Event 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-event-1",
       });
 
       const managedEventType2 = await createTestEventType(regularTeamTestData.team.id, {
         userId: orgTestData.members[0].id,
         parentId: parentEventType2.id,
-        title: "Managed Event 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-event-2",
       });
 
@@ -405,7 +421,9 @@ describe("TeamService.removeMembers Integration Tests", () => {
       const otherUserManagedEvent = await createTestEventType(regularTeamTestData.team.id, {
         userId: orgTestData.members[1].id,
         parentId: parentEventType1.id,
-        title: "Other User Managed Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "other-user-managed-event",
       });
 
@@ -766,7 +784,9 @@ describe("TeamService.removeMembers Integration Tests", () => {
 
       // Create event type in sub-team
       const apiEventType = await createTestEventType(apiSubTeam.id, {
-        title: "API Team Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
 
       // Add user as host (like in API v2 test)
@@ -822,12 +842,16 @@ describe("TeamService.removeMembers Integration Tests", () => {
 
       // Create parent event types in both sub-teams
       const parentEventInTeam1 = await createTestEventType(orgTestData.teams[0].team.id, {
-        title: "Parent Event Team 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "parent-event-team-1",
       });
 
       const parentEventInTeam2 = await createTestEventType(secondSubTeam.id, {
-        title: "Parent Event Team 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "parent-event-team-2",
       });
 
@@ -835,14 +859,18 @@ describe("TeamService.removeMembers Integration Tests", () => {
       const managedEventTeam1 = await createTestEventType(orgTestData.teams[0].team.id, {
         userId: orgTestData.members[0].id,
         parentId: parentEventInTeam1.id,
-        title: "User1 Managed Event Team 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "user1-managed-event-team-1",
       });
 
       const managedEventTeam2 = await createTestEventType(secondSubTeam.id, {
         userId: orgTestData.members[0].id,
         parentId: parentEventInTeam2.id,
-        title: "User1 Managed Event Team 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "user1-managed-event-team-2",
       });
 
@@ -850,7 +878,9 @@ describe("TeamService.removeMembers Integration Tests", () => {
       const managedEventUser2 = await createTestEventType(orgTestData.teams[0].team.id, {
         userId: orgTestData.members[1].id,
         parentId: parentEventInTeam1.id,
-        title: "User2 Managed Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "user2-managed-event",
       });
 

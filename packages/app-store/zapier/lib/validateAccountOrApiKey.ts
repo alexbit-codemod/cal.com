@@ -10,11 +10,15 @@ export async function validateAccountOrApiKey(req: NextApiRequest, requiredScope
   if (!apiKey) {
     const token = req.headers.authorization?.split(" ")[1] || "";
     const authorizedAccount = await isAuthorized(token, requiredScopes);
-    if (!authorizedAccount) throw new HttpError({ statusCode: 401, message: "Unauthorized" });
+    if (!authorizedAccount) throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return { account: authorizedAccount, appApiKey: undefined };
   }
 
   const validKey = await findValidApiKey(apiKey, "zapier");
-  if (!validKey) throw new HttpError({ statusCode: 401, message: "API key not valid" });
+  if (!validKey) throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   return { account: null, appApiKey: validKey };
 }

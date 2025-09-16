@@ -192,7 +192,9 @@ test.describe("Organization:", () => {
         await page.goto(`/${user1.username}+${user2.username}`);
         await selectFirstAvailableTimeSlotNextMonth(page);
         await bookTimeSlot(page, {
-          title: "Test meeting",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
         await expect(page.getByTestId("success-page")).toBeVisible();
         // All the teammates should be in the booking

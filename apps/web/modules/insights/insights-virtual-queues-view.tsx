@@ -25,19 +25,8 @@ export default function InsightsVirtualQueuesPage() {
   return (
     <>
       <Label>{t("routing_form")}</Label>
-      <Select
-        placeholder="Select project"
-        options={routingForms?.map((form) => ({ label: form.name, value: form.id })) ?? []}
-        isLoading={isRoutingFormsLoading}
-        className="w-60"
-        onChange={(e) => {
-          if (e && routingForms) {
-            const form = routingForms.find((form) => form.id === e.value);
-            setSelectedForm(form);
-          }
-        }}
-        value={selectedForm ? { label: selectedForm.name, value: selectedForm.id } : undefined}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div className="mt-10">
         {selectedForm ? (
           <TestForm form={selectedForm} supportsTeamMembersMatchingLogic={true} showRRData={true} />

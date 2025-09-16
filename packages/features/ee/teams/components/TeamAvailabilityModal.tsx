@@ -41,11 +41,8 @@ export default function TeamAvailabilityModal(props: Props) {
         <div className="grid h-[400px] grid-cols-2 space-x-11 rtl:space-x-reverse">
           <div className="col-span-1">
             <div className="flex">
-              <Avatar
-                size="md"
-                imageSrc={`${WEBAPP_URL}/${props.member?.username}/avatar.png`}
-                alt={props.member?.name || ""}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div className="flex items-center justify-center ">
                 <span className="text-subtle ml-2 text-base font-semibold leading-4">
                   {props.member?.name}

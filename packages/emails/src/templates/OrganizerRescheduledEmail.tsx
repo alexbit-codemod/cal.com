@@ -1,10 +1,6 @@
 import { OrganizerScheduledEmail } from "./OrganizerScheduledEmail";
 
 export const OrganizerRescheduledEmail = (props: React.ComponentProps<typeof OrganizerScheduledEmail>) => (
-  <OrganizerScheduledEmail
-    title="event_has_been_rescheduled"
-    headerType="calendarCircle"
-    subject="event_type_has_been_rescheduled_on_time_date"
-    {...props}
-  />
+  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
 );

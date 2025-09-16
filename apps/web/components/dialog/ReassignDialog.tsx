@@ -213,11 +213,8 @@ export const ReassignDialog = ({
               <div className="mb-2">
                 <Label className="text-emphasis mt-6">{t("select_team_member")}</Label>
                 <div className="mt-2">
-                  <Input
-                    type="text"
-                    placeholder={t("search")}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="scroll-bar flex h-[150px] flex-col gap-0.5 overflow-y-scroll rounded-md border p-1">
                     {teamMemberOptions.map((member) => (
                       <label
@@ -315,12 +312,8 @@ export const ReassignDialog = ({
               ? t("reassign_unavailable_team_member_description")
               : t("reassign_available_team_member_description")}
           </p>
-          <TextAreaField
-            name="reassignReason"
-            label={t("reassign_reason")}
-            onChange={(e) => form.setValue("reassignReason", e.target.value)}
-            required={confirmationModal?.membersStatus === "unavailable"}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </ConfirmationDialogContent>
       </Dialog>
     </>

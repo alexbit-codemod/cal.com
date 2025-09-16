@@ -41,9 +41,13 @@ const generateCheckoutSession = async ({
   if (!checkoutSession.url)
     throw new TRPCError({
       code: "INTERNAL_SERVER_ERROR",
-      message: "Failed retrieving a checkout session URL.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
-  return { url: checkoutSession.url, message: "Payment required to publish team" };
+  return { url: checkoutSession.url, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 };
 
 export const createHandler = async ({ ctx, input }: CreateOptions) => {
@@ -53,7 +57,9 @@ export const createHandler = async ({ ctx, input }: CreateOptions) => {
 
   // For orgs we want to create teams under the org
   if (user.profile?.organizationId && !user.organization.isOrgAdmin) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "org_admins_can_create_new_teams" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const slugCollisions = await prisma.team.findFirst({
@@ -63,7 +69,9 @@ export const createHandler = async ({ ctx, input }: CreateOptions) => {
     },
   });
 
-  if (slugCollisions) throw new TRPCError({ code: "BAD_REQUEST", message: "team_url_taken" });
+  if (slugCollisions) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   if (user.profile?.organizationId) {
     const nameCollisions = await isSlugTakenBySomeUserInTheOrganization({
@@ -71,7 +79,9 @@ export const createHandler = async ({ ctx, input }: CreateOptions) => {
       slug: slug,
     });
 
-    if (nameCollisions) throw new TRPCError({ code: "BAD_REQUEST", message: "team_slug_exists_as_user" });
+    if (nameCollisions) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // If the user is not a part of an org, then make them pay before creating the team
@@ -128,7 +138,9 @@ export const createHandler = async ({ ctx, input }: CreateOptions) => {
 
   return {
     url: `${WEBAPP_URL}/settings/teams/${createdTeam.id}/onboard-members`,
-    message: "Team billing is disabled, not generating a checkout session.",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     team: createdTeam,
   };
 };

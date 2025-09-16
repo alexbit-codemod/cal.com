@@ -72,7 +72,9 @@ export class OrganizationsConferencingController {
   @PlatformPlan("ESSENTIALS")
   @ApiParam({
     name: "app",
-    description: "Conferencing application type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: [GOOGLE_MEET],
     required: true,
   })
@@ -98,7 +100,9 @@ export class OrganizationsConferencingController {
   @PlatformPlan("ESSENTIALS")
   @ApiParam({
     name: "app",
-    description: "Conferencing application type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: [ZOOM, OFFICE_365_VIDEO],
     required: true,
   })
@@ -162,7 +166,9 @@ export class OrganizationsConferencingController {
   @ApiOperation({ summary: "Set team default conferencing application" })
   @ApiParam({
     name: "app",
-    description: "Conferencing application type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: [GOOGLE_MEET, ZOOM, OFFICE_365_VIDEO, CAL_VIDEO],
     required: true,
   })
@@ -186,7 +192,9 @@ export class OrganizationsConferencingController {
   @ApiOperation({ summary: "Get team default conferencing application" })
   @ApiParam({
     name: "app",
-    description: "Conferencing application type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: [GOOGLE_MEET, ZOOM, OFFICE_365_VIDEO, CAL_VIDEO],
     required: true,
   })
@@ -209,7 +217,9 @@ export class OrganizationsConferencingController {
   @ApiOperation({ summary: "Disconnect team conferencing application" })
   @ApiParam({
     name: "app",
-    description: "Conferencing application type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: [GOOGLE_MEET, ZOOM, OFFICE_365_VIDEO],
     required: true,
   })

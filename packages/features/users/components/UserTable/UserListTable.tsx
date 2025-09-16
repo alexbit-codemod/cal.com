@@ -282,13 +282,8 @@ function UserListTableContent({ org, attributes, teams, facetedTeamValues }: Use
           const { username, email, avatarUrl } = row.original;
           return (
             <div className="flex items-center gap-2">
-              <Avatar
-                size="sm"
-                alt={username || email}
-                imageSrc={getUserAvatarUrl({
-                  avatarUrl,
-                })}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div className="">
                 <div
                   data-testid={`member-${username}-username`}

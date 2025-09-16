@@ -39,7 +39,9 @@ export const createEventTypeInput = z.object({
   .partial({ hidden: true, locations: true })
   .refine((data) => (data.teamId ? data.teamId && data.schedulingType : true), {
     path: ["schedulingType"],
-    message: "You must select a scheduling type for team events",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   });
 
   export const EventTypeDuplicateInput = z.object({

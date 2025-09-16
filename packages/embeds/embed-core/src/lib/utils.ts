@@ -7,9 +7,13 @@ export const getErrorString = ({
   errorCode: string | undefined;
   errorMessage: string | undefined;
 }) => {
-  const defaultErrorMessage = "Something went wrong.";
+  const defaultErrorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   if (errorCode === "404") {
-    errorMessage = errorMessage ?? "Cal Link seems to be wrong.";
+    errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     return `Error Code: 404. ${errorMessage}`;
   } else if (errorCode === "routerError") {
     errorMessage = errorMessage ?? defaultErrorMessage;

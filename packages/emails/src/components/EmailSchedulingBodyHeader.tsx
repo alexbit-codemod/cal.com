@@ -44,21 +44,8 @@ const EmailSchedulingBodyHeader = (props: { headerType: BodyHeadType; headStyles
           }}>
           <Row border="0" role="presentation" style={{ borderCollapse: "collapse", borderSpacing: "0px" }}>
             <td style={{ width: 64 }}>
-              <img
-                height="64"
-                src={image}
-                style={{
-                  border: "0",
-                  display: "block",
-                  outline: "none",
-                  textDecoration: "none",
-                  height: "64px",
-                  width: "100%",
-                  fontSize: "13px",
-                }}
-                width="64"
-                alt=""
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </td>
           </Row>
         </td>

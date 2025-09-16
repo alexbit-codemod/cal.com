@@ -21,7 +21,9 @@ async function deleteUsers() {
 beforeAll(async () => {
   const event = await prisma.eventType.create({
     data: {
-      title: "Test Event",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: "test-event",
       length: 15,
     },
@@ -107,7 +109,9 @@ const createUserWithBookings = async ({
             create: commonAttendeesData,
           },
           uid: `uuid-${email}-booking${index + 1}`,
-          title: `${email} Booking ${index + 1}`,
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           eventTypeId,
           ...booking,
         })),
@@ -223,7 +227,9 @@ describe("getLuckyUser Integration tests", () => {
           {
             eventTypeId: commonEventTypeId,
             createdAt: new Date("2022-01-25T05:30:00.000Z"),
-            title: "Test User 1 Booking",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             attendees: {
               create: [
                 {
@@ -282,7 +288,9 @@ describe("getLuckyUser Integration tests", () => {
           {
             eventTypeId: commonEventTypeId,
             createdAt: new Date("2022-01-25T05:30:00.000Z"),
-            title: "Test User 1 Booking",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             attendees: {
               create: [
                 {
@@ -316,7 +324,9 @@ describe("getLuckyUser Integration tests", () => {
           // User2 is fixed user, User 3 was selected as round robin host but did not show up so this booking should be counted for User 3
           {
             uid: "uuid-test-user2-booking2",
-            title: `Test User 2 Booking 2`,
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             createdAt: new Date("2022-01-25T07:30:00.000Z"),
             eventTypeId: commonEventTypeId,
             attendees: {
@@ -340,7 +350,9 @@ describe("getLuckyUser Integration tests", () => {
         bookings: [
           {
             uid: "uuid-test-user3-booking1",
-            title: `Test User 3 Booking`,
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             createdAt: new Date("2022-01-25T04:30:00.000Z"),
             attendees: {
               create: [
@@ -383,7 +395,9 @@ describe("getLuckyUser Integration tests", () => {
           {
             uid: "uuid-test-user1-booking1",
             createdAt: new Date("2022-01-25T07:30:00.000Z"),
-            title: "Test user 1 Booking",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             noShowHost: null,
             eventTypeId: commonEventTypeId,
             attendees: {
@@ -406,7 +420,9 @@ describe("getLuckyUser Integration tests", () => {
         bookings: [
           {
             uid: "uuid-test-user2-booking1",
-            title: "Test User 2 Booking",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             createdAt: new Date("2022-01-25T06:30:00.000Z"),
             noShowHost: null,
             eventTypeId: commonEventTypeId,

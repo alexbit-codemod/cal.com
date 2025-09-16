@@ -8,7 +8,9 @@ export class UpdateCalendarEventAttendee {
   @IsString()
   @ApiPropertyOptional({
     type: String,
-    description: "Email address of the attendee",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   email!: string;
 
@@ -16,7 +18,9 @@ export class UpdateCalendarEventAttendee {
   @IsOptional()
   @ApiPropertyOptional({
     type: String,
-    description: "Display name of the attendee",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   name?: string;
 
@@ -26,28 +30,36 @@ export class UpdateCalendarEventAttendee {
     enum: CalendarEventResponseStatus,
     enumName: "CalendarEventResponseStatus",
     nullable: true,
-    description: "Response status of the attendee",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   responseStatus?: CalendarEventResponseStatus | null;
 
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Indicates if this attendee is the current user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   self?: boolean;
 
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Indicates if this attendee's attendance is optional",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   optional?: boolean;
 
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Indicates if this attendee is the host",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   host?: boolean;
 
@@ -75,7 +87,9 @@ export class UpdateUnifiedCalendarEventInput {
       time: { type: "string", format: "date-time" },
       timeZone: { type: "string" },
     },
-    description: "Start date and time of the calendar event with timezone information",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   start?: UpdateDateTimeWithZone;
 
@@ -88,7 +102,9 @@ export class UpdateUnifiedCalendarEventInput {
       time: { type: "string", format: "date-time" },
       timeZone: { type: "string" },
     },
-    description: "End date and time of the calendar event with timezone information",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   end?: UpdateDateTimeWithZone;
 
@@ -96,7 +112,9 @@ export class UpdateUnifiedCalendarEventInput {
   @IsOptional()
   @ApiPropertyOptional({
     type: String,
-    description: "Title of the calendar event",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   title?: string;
 
@@ -105,7 +123,9 @@ export class UpdateUnifiedCalendarEventInput {
   @ApiPropertyOptional({
     type: String,
     nullable: true,
-    description: "Detailed description of the calendar event",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   description?: string | null;
 
@@ -117,7 +137,9 @@ export class UpdateUnifiedCalendarEventInput {
     type: [UpdateCalendarEventAttendee],
     nullable: true,
     description:
-      "List of attendees. CAUTION: You must pass the entire array with all updated values. Any attendees not included in this array will be removed from the event.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   attendees?: UpdateCalendarEventAttendee[];
 
@@ -127,7 +149,9 @@ export class UpdateUnifiedCalendarEventInput {
     enum: CalendarEventStatus,
     enumName: "CalendarEventStatus",
     nullable: true,
-    description: "Status of the event (accepted, pending, declined, cancelled)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: CalendarEventStatus.ACCEPTED,
   })
   status?: CalendarEventStatus | null;

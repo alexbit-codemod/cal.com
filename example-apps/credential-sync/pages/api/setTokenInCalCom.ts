@@ -62,6 +62,8 @@ export default async function handler(req: NextApiRequest, res) {
     }
   } catch (error) {
     console.error(error);
-    return res.status(400).json({ message: "Internal Server Error", error: error.message });
+    return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , error: error.message });
   }
 }

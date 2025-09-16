@@ -218,9 +218,8 @@ export const ResultsView = ({
                     <div className="border-subtle bg-default z-10 rounded-lg border p-1 ">
                       <Icon name="activity" className="h-4 w-4" />
                     </div>
-                    <span className="text-emphasis text-sm font-medium leading-none">
-                      Attribute logic matched
-                    </span>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <Badge
                     data-testid="attribute-logic-matched"
@@ -233,7 +232,8 @@ export const ResultsView = ({
                     <div className="border-subtle bg-default z-10 rotate-180 rounded-lg border p-1">
                       <Icon name="split" className="h-4 w-4" />
                     </div>
-                    <span className="text-emphasis text-sm font-medium leading-none">Attribute fallback</span>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <Badge
                     data-testid="attribute-logic-fallback-matched"
@@ -246,7 +246,8 @@ export const ResultsView = ({
                     <div className="border-subtle bg-default z-10 rounded-lg border p-1">
                       <Icon name="user" className="h-4 w-4" />
                     </div>
-                    <span className="text-emphasis text-sm font-medium leading-none">Contact owner</span>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <Badge variant={membersMatchResult.contactOwnerEmail ? "success" : "gray"}>
                     {membersMatchResult.contactOwnerEmail || "Not found"}
@@ -269,13 +270,8 @@ export const ResultsView = ({
                         t={t}
                         i18nKey="routing_preview_more_info_found_insights"
                         components={[
-                          <Link
-                            key="routing_insights"
-                            className="underline underline-offset-2"
-                            target="_blank"
-                            href="/insights/router-position">
-                            Routing Insights
-                          </Link>,
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$,
                         ]}
                       />
                     </span>

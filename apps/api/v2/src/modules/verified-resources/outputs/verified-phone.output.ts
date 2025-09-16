@@ -17,7 +17,9 @@ export class UserVerifiedPhoneOutputData {
   @Expose()
   @IsNumber()
   @ApiProperty({
-    description: "The unique identifier for the verified email.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 789,
   })
   id!: number;
@@ -25,7 +27,9 @@ export class UserVerifiedPhoneOutputData {
   @Expose()
   @IsString()
   @ApiProperty({
-    description: "The verified phone number.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "+37255556666",
     format: "phone",
   })
@@ -34,7 +38,9 @@ export class UserVerifiedPhoneOutputData {
   @Expose()
   @IsNumber()
   @ApiProperty({
-    description: "The ID of the associated user, if applicable.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 45,
   })
   userId!: number;
@@ -44,7 +50,9 @@ export class TeamVerifiedPhoneOutputData {
   @Expose()
   @IsNumber()
   @ApiProperty({
-    description: "The unique identifier for the verified email.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 789,
   })
   id!: number;
@@ -52,7 +60,9 @@ export class TeamVerifiedPhoneOutputData {
   @Expose()
   @IsString()
   @ApiProperty({
-    description: "The verified phone number.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "+37255556666",
     format: "phone",
   })
@@ -62,7 +72,9 @@ export class TeamVerifiedPhoneOutputData {
   @IsNumber()
   @IsOptional()
   @ApiProperty({
-    description: "The ID of the associated user, if applicable.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 45,
     nullable: true,
     required: false,
@@ -72,7 +84,9 @@ export class TeamVerifiedPhoneOutputData {
   @Expose()
   @IsNumber()
   @ApiProperty({
-    description: "The ID of the associated team, if applicable.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 89,
   })
   teamId!: number;

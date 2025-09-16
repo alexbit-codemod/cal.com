@@ -8,29 +8,14 @@ import { showToast } from "@calcom/ui/components/toast";
 export const VariantsExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="space-x-2">
-      <Button
-        color="primary"
-        onClick={() => {
-          showToast("This is a success message", "success");
-        }}>
-        Success
-      </Button>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <Button
-        color="minimal"
-        onClick={() => {
-          showToast("This is a warning message", "warning");
-        }}>
-        Warning
-      </Button>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <Button
-        color="destructive"
-        onClick={() => {
-          showToast("This is an error message", "error");
-        }}>
-        Error
-      </Button>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   </RenderComponentWithSnippet>
 );

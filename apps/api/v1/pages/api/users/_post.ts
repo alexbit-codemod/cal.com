@@ -91,7 +91,9 @@ import { schemaUserCreateBodyParams } from "~/lib/validations/user";
 async function postHandler(req: NextApiRequest) {
   const { isSystemWideAdmin } = req;
   // If user is not ADMIN, return unauthorized.
-  if (!isSystemWideAdmin) throw new HttpError({ statusCode: 401, message: "You are not authorized" });
+  if (!isSystemWideAdmin) throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   const data = await schemaUserCreateBodyParams.parseAsync(req.body);
   const user = await UserCreationService.createUser({
     data: { ...data, creationSource: CreationSource.API_V1 },

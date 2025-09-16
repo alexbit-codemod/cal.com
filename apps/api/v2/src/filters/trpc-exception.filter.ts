@@ -38,64 +38,94 @@ export const TRPC_ERROR_MAP: Record<(typeof TRPC_ERROR_CODE)[keyof typeof TRPC_E
   {
     [TRPC_ERROR_CODE.UNAUTHORIZED]: {
       statusCode: 401,
-      message: "You are not authorized to access this resource",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.FORBIDDEN]: {
       statusCode: 403,
-      message: "You don't have necessary permissions to access this resource",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.NOT_FOUND]: {
       statusCode: 404,
-      message: "The requested resource was not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.INTERNAL_SERVER_ERROR]: {
       statusCode: 500,
-      message: "An unexpected error occurred on the server. Please try again later",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.BAD_REQUEST]: {
       statusCode: 400,
-      message: "Bad request: Please check your request data and try again",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.CONFLICT]: {
       statusCode: 409,
-      message: "Could not process the request due to a resource conflict with the current state",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.TOO_MANY_REQUESTS]: {
       statusCode: 429,
-      message: "You have exceeded the allowed number of requests",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.PAYLOAD_TOO_LARGE]: {
       statusCode: 413,
-      message: "The request payload is too large",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.CLIENT_CLOSED_REQUEST]: {
       statusCode: 499,
-      message: "The client closed the connection before the server could finish processing the request",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.METHOD_NOT_SUPPORTED]: {
       statusCode: 405,
-      message: "The requested method is not supported for this resource",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.NOT_IMPLEMENTED]: {
       statusCode: 501,
-      message: "The requested method is not implemented on the server",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.PRECONDITION_FAILED]: {
       statusCode: 412,
-      message: "The server does not meet one of the preconditions that the requester put on the request",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.TIMEOUT]: {
       statusCode: 408,
-      message: "The request took too long to complete. Please try again later",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     [TRPC_ERROR_CODE.UNPROCESSABLE_CONTENT]: {
       statusCode: 422,
       message:
-        "The server was unable to process the request because the request payload is semantically incorrect or because the request is syntactically incorrect",
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
     },
     [TRPC_ERROR_CODE.PARSE_ERROR]: {
       statusCode: 400,
-      message: "The request could not be parsed due to invalid syntax.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   };
 

@@ -10,12 +10,8 @@ export const BasicExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="not-prose space-y-4">
       {severities.map((severity) => (
-        <Alert
-          key={severity}
-          severity={severity}
-          title={`${severity.charAt(0).toUpperCase() + severity.slice(1)} Alert`}
-          message={`This is a ${severity} alert message to show important information to users.`}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       ))}
     </div>
   </RenderComponentWithSnippet>

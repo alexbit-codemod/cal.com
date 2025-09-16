@@ -65,7 +65,8 @@ export default function EmptyScreen(props: { isFilteredView: boolean }) {
   // new workflow example when 'after meetings ends' trigger is implemented: Send custom thank you email to attendee after event (Smile icon),
 
   if (props.isFilteredView) {
-    return <ClassicEmptyScreen Icon="zap" headline={t("no_workflows")} description={t("change_filter")} />;
+    return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$;
   }
 
   return (
@@ -80,20 +81,16 @@ export default function EmptyScreen(props: { isFilteredView: boolean }) {
             {t("no_workflows_description")}
           </p>
           <div className="mt-8 ">
-            <CreateButtonWithTeamsList
-              subtitle={t("new_workflow_subtitle").toUpperCase()}
-              createFunction={(teamId?: number) => createMutation.mutate({ teamId })}
-              buttonText={t("create_workflow")}
-              isPending={createMutation.isPending}
-              includeOrg={true}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
       </div>
       <div className="flex flex-row items-center justify-center">
         <div className="grid-cols-none items-center lg:grid lg:grid-cols-3 xl:mx-20">
           {workflowsExamples.map((example, index) => (
-            <WorkflowExample key={index} Icon={example.icon} text={example.text} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ))}
         </div>
       </div>

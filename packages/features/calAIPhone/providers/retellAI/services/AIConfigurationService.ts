@@ -50,7 +50,9 @@ export class AIConfigurationService {
           await this.retellRepository.deleteLLM(llmId);
           this.logger.info(`Successfully cleaned up orphaned LLM ${llmId} after setup failure`);
         } catch (cleanupError) {
-          const errorMessage = `Failed to cleanup LLM ${llmId} after AI configuration setup failure. This will cause billing charges.`;
+          const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           this.logger.error(errorMessage, {
             llmId,
             originalError: error instanceof Error ? error.message : String(error),

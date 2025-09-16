@@ -144,23 +144,8 @@ export function TeamsListing({
             )
           }
           isParentLoading={<SkeletonLoaderTeamList />}>
-          <EmptyScreen
-            Icon="users"
-            headline={t("create_team_to_get_started")}
-            description={t("create_first_team_and_invite_others")}
-            buttonRaw={
-              <Button
-                color="secondary"
-                data-testid="create-team-btn"
-                disabled={!!isCreateTeamButtonDisabled}
-                tooltip={
-                  isCreateTeamButtonDisabled ? t("org_admins_can_create_new_teams") : t("create_new_team")
-                }
-                onClick={() => router.push(`${WEBAPP_URL}/settings/teams/new?returnTo=${WEBAPP_URL}/teams`)}>
-                {t(`create_new_team`)}
-              </Button>
-            }
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </UpgradeTip>
       )}
 

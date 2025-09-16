@@ -34,7 +34,9 @@ export class RolesGuard implements CanActivate {
   }
 
   throwForbiddenError(user: ApiAuthGuardUser, orgId: string, teamId: string, allowedRole: string) {
-    let errorMessage = `RolesGuard - user with id=${user.id} does not have the minimum required role=${allowedRole} within`;
+    let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     if (orgId) {
       errorMessage += ` organization with id=${orgId}`;
     }

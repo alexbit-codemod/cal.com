@@ -33,20 +33,8 @@ export const DisablePhoneOnlySMSNotificationsSwitch = ({ currentOrg }: GeneralVi
 
   return (
     <>
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        title={t("organization_disable_phone_only_sms_notifications_switch_title")}
-        disabled={mutation?.isPending}
-        description={t("organization_disable_phone_only_sms_notifications_switch_description")}
-        checked={disablePhoneOnlySMSNotificationsActive}
-        onCheckedChange={(checked) => {
-          mutation.mutate({
-            disablePhoneOnlySMSNotifications: checked,
-          });
-          setDisablePhoneOnlySMSNotificationsActive(checked);
-        }}
-        switchContainerClassName="mt-6"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 };

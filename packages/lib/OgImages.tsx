@@ -100,14 +100,8 @@ export const constructGenericImage = ({ title, description }: GenericImageProps)
 
 const Wrapper = ({ children, variant = "light", rotateBackground }: WrapperProps) => (
   <div tw="flex w-full h-full">
-    <img
-      tw="flex absolute left-0 top-0 w-full h-[110%]"
-      style={rotateBackground ? { transform: "rotate(180deg)" } : undefined}
-      src={`${WEBAPP_URL}/social-bg-${variant}-lines.jpg`}
-      alt="background"
-      width="1200"
-      height="600"
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
     <div tw="flex flex-col w-full h-full px-[80px] py-[70px] items-start justify-center">{children}</div>
   </div>
 );
@@ -137,7 +131,8 @@ export const Meeting = ({ title, users = [], profile }: MeetingImageProps) => {
     <Wrapper variant="dark">
       <div tw="h-full flex flex-col justify-start">
         <div tw="flex items-center justify-center" style={{ fontFamily: "cal", fontWeight: 300 }}>
-          <img src={`${WEBAPP_URL}/${LOGO}`} width="350" alt="Logo" />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {avatars.length > 0 && (
             <div style={{ color: "#111827" }} tw="font-bold text-[92px] mx-8 bottom-2">
               /
@@ -145,14 +140,8 @@ export const Meeting = ({ title, users = [], profile }: MeetingImageProps) => {
           )}
           <div tw="flex flex-row">
             {avatars.slice(0, 3).map((avatar) => (
-              <img
-                tw="rounded-full mr-[-36px] border-[6px] border-[#CDCED2]"
-                key={avatar}
-                src={avatar}
-                alt="Profile picture"
-                width="160"
-                height="160"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             ))}
             {avatars.length > 3 && (
               <div tw="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-black text-inverted text-[54px] font-bold">
@@ -162,11 +151,8 @@ export const Meeting = ({ title, users = [], profile }: MeetingImageProps) => {
           </div>
         </div>
         <div style={{ color: "#111827" }} tw="relative flex text-[54px] w-full flex-col mt-auto">
-          <div
-            tw="flex w-[1040px] overflow-hidden"
-            style={{ whiteSpace: "nowrap", fontFamily: "cal", textOverflow: "ellipsis" }}>
-            Meet {joinMultipleNames(names)}
-          </div>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <div
             tw="flex mt-3 w-[1040px] overflow-hidden"
             style={{ whiteSpace: "nowrap", fontFamily: "inter", textOverflow: "ellipsis" }}>
@@ -212,13 +198,15 @@ const VisualBlur = ({ visualSlug }: { visualSlug: string }) => {
 
 export const App = ({ name, description, slug }: AppImageProps) => (
   <Wrapper>
-    <img src={`${WEBAPP_URL}/${LOGO}`} width="150" alt="Logo" tw="absolute right-[48px] top-[48px]" />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
 
     <VisualBlur visualSlug={slug} />
 
     <div tw="flex items-center w-full">
       <div tw="flex">
-        <img src={`${WEBAPP_URL}${slug}`} alt="App icon" width="172" height="172" />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
     <div style={{ color: "#111827" }} tw="flex mt-auto w-full flex-col">
@@ -236,7 +224,8 @@ export const Generic = ({ title, description }: GenericImageProps) => (
   <Wrapper>
     <div tw="h-full flex flex-col justify-start">
       <div tw="flex items-center justify-center" style={{ fontFamily: "cal", fontWeight: 300 }}>
-        <img src={`${WEBAPP_URL}/cal-logo-word-black.svg`} width="350" alt="Logo" />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       <div style={{ color: "#111827" }} tw="relative flex text-[54px] w-full flex-col mt-auto">
@@ -255,14 +244,10 @@ export const ScreenShot = ({ image, fallbackImage }: ScreenshotImageProps) => (
   <Wrapper rotateBackground>
     <div tw="relative h-full w-full flex flex-col justify-center items-center">
       <div tw="relative mt-[140px] flex rounded-2xl" style={{ boxShadow: "0 0 45px -3px rgba(0,0,0,.3)" }}>
-        <img
-          src={fallbackImage}
-          tw="absolute inset-0 rounded-2xl"
-          width="1024"
-          height="576"
-          alt="screenshot"
-        />
-        <img src={image} width="1024" height="576" tw="rounded-2xl" alt="screenshot" />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   </Wrapper>

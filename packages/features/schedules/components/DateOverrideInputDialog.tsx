@@ -136,7 +136,8 @@ const DateOverrideForm = ({
       }}
       className="p-6 sm:flex sm:p-0 xl:flex-row">
       <div className="sm:border-subtle w-full sm:border-r sm:p-4 sm:pr-6 md:p-8">
-        <DialogHeader title={t("date_overrides_dialog_title")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <BookerStoreProvider>
           <DatePicker
             excludedDates={excludedDates}
@@ -167,12 +168,8 @@ const DateOverrideForm = ({
                   <DayRanges name="range" userTimeFormat={userTimeFormat} />
                 )}
               </div>
-              <Switch
-                label={t("date_overrides_mark_all_day_unavailable_one")}
-                checked={datesUnavailable}
-                onCheckedChange={setDatesUnavailable}
-                data-testid="date-override-mark-unavailable"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <div className="mt-4 flex flex-row-reverse sm:mt-0">
               <Button

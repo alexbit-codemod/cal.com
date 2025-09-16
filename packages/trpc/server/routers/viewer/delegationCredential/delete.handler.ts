@@ -14,7 +14,9 @@ export default async function handler({
   const { id } = input;
 
   // We might want to consider allowing this in the future. Right now, toggling off DelegationCredential achieves similar but non-destructive effect
-  throw new TRPCError({ code: "BAD_REQUEST", message: "Not allowed" });
+  throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   await DelegationCredentialRepository.deleteById({ id });
 
   return { id };

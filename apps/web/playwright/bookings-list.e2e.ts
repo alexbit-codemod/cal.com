@@ -24,7 +24,9 @@ test.describe("Bookings", () => {
       const secondUser = await users.create();
 
       const bookingWhereFirstUserIsOrganizerFixture = await createBooking({
-        title: "Booking as organizer",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         bookingsFixture: bookings,
         // Create a booking 3 days from today
         relativeDate: 3,
@@ -39,7 +41,9 @@ test.describe("Bookings", () => {
       const bookingWhereFirstUserIsOrganizer = await bookingWhereFirstUserIsOrganizerFixture.self();
 
       const bookingWhereFirstUserIsAttendeeFixture = await createBooking({
-        title: "Booking as attendee",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         bookingsFixture: bookings,
         organizer: secondUser,
         // Booking created 2 days from today
@@ -96,7 +100,9 @@ test.describe("Bookings", () => {
       const secondUser = await users.create();
 
       const bookingWhereFirstUserIsOrganizerFixture = await createBooking({
-        title: "Booking as organizer",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         bookingsFixture: bookings,
         // Create a booking 3 days ago
         relativeDate: -3,
@@ -134,7 +140,9 @@ test.describe("Bookings", () => {
         triggerEvent: "BOOKING_NO_SHOW_UPDATED",
         createdAt: "[redacted/dynamic]",
         payload: {
-          message: "first@cal.com marked as no-show",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           attendees: [{ email: "first@cal.com", noShow: true }],
           bookingUid: bookingWhereFirstUserIsOrganizer?.uid,
           bookingId: bookingWhereFirstUserIsOrganizer?.id,
@@ -147,7 +155,9 @@ test.describe("Bookings", () => {
       const secondUser = await users.create();
 
       const bookingWhereFirstUserIsOrganizerFixture = await createBooking({
-        title: "Booking as organizer",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         bookingsFixture: bookings,
         // Create a booking 4 days ago
         relativeDate: -4,
@@ -187,7 +197,9 @@ test.describe("Bookings", () => {
       const { adminUser, memberUser, managedEvent } = await setupManagedEvent({ users });
 
       const bookingFixture = await createBooking({
-        title: "Managed Event Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         bookingsFixture: bookings,
         // Create a booking 3 days ago
         relativeDate: -3,
@@ -223,7 +235,9 @@ test.describe("Bookings", () => {
         triggerEvent: "BOOKING_NO_SHOW_UPDATED",
         createdAt: "[redacted/dynamic]",
         payload: {
-          message: "first@cal.com marked as no-show",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           attendees: [{ email: "first@cal.com", noShow: true }],
           bookingUid: booking?.uid,
           bookingId: booking?.id,
@@ -297,7 +311,9 @@ test.describe("Bookings", () => {
 
     //Create a TeamEventType booking where ThirdUser is attendee
     const thirdUserAttendeeTeamEventBookingFixture = await createBooking({
-      title: "ThirdUser is Attendee for TeamEvent",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       bookingsFixture: bookings,
       relativeDate: 6,
       organizer: firstUser,
@@ -308,7 +324,9 @@ test.describe("Bookings", () => {
 
     //Create a IndividualEventType booking where ThirdUser,SecondUser are attendees and FirstUser is organizer
     const thirdUserAttendeeIndividualBookingFixture = await createBooking({
-      title: "ThirdUser is Attendee and FirstUser is Organizer",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       bookingsFixture: bookings,
       relativeDate: 3,
       organizer: firstUser,
@@ -322,7 +340,9 @@ test.describe("Bookings", () => {
 
     //Create a IndividualEventType booking where ThirdUser is organizer and FirstUser,SecondUser are attendees
     const thirdUserOrganizerBookingFixture = await createBooking({
-      title: "ThirdUser is Organizer and FirstUser is Attendee",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       bookingsFixture: bookings,
       organizer: thirdUser,
       relativeDate: 2,
@@ -336,7 +356,9 @@ test.describe("Bookings", () => {
 
     //Create a booking where FirstUser is organizer and SecondUser is attendee
     await createBooking({
-      title: "FirstUser is Organizer and SecondUser is Attendee",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       bookingsFixture: bookings,
       organizer: firstUser,
       relativeDate: 4,
@@ -449,7 +471,9 @@ test.describe("Bookings", () => {
       organizerEventType: eventType,
       attendees: [{ name: "test user", email: "test@example.com", timeZone: "Europe/Paris" }],
       relativeDate: 0,
-      title: "Booking from test user",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
     // teammate-2

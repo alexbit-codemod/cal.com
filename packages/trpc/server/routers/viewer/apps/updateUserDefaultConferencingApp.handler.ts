@@ -28,10 +28,14 @@ export const updateUserDefaultConferencingAppHandler = async ({
   const foundApp = getApps(credentials, true).filter((app) => app.slug === input.appSlug)[0];
   const appLocation = foundApp?.appData?.location;
 
-  if (!foundApp || !appLocation) throw new TRPCError({ code: "BAD_REQUEST", message: "App not installed" });
+  if (!foundApp || !appLocation) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   if (appLocation.linkType === "static" && !input.appLink) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "App link is required" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (appLocation.linkType === "static" && appLocation.urlRegExp) {
@@ -40,7 +44,9 @@ export const updateUserDefaultConferencingAppHandler = async ({
       .regex(new RegExp(appLocation.urlRegExp), "Invalid App Link")
       .parse(input.appLink);
     if (!validLink) {
-      throw new TRPCError({ code: "BAD_REQUEST", message: "Invalid app link" });
+      throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
   }
 

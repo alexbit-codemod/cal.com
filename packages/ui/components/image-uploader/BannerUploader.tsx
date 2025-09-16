@@ -54,14 +54,8 @@ function CropContainer({
           onZoomChange={setZoom}
         />
       </div>
-      <Slider
-        value={zoom}
-        min={1}
-        max={3}
-        step={0.1}
-        label={t("slide_zoom_drag_instructions")}
-        changeHandler={handleZoomSliderChange}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 }
@@ -161,7 +155,8 @@ export default function BannerUploader({
                   </p>
                 ) : (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img className="h-full w-full" src={imageSrc} alt={target} />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
               </div>
             )}
@@ -169,14 +164,8 @@ export default function BannerUploader({
             <label
               data-testid="open-upload-image-filechooser"
               className="bg-subtle hover:bg-muted hover:text-emphasis border-subtle text-default mt-8 cursor-pointer rounded-sm border px-3 py-1 text-xs font-medium leading-4 transition focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:ring-offset-1">
-              <input
-                onInput={onInputFile}
-                type="file"
-                name={id}
-                placeholder={t("upload_image")}
-                className="text-default pointer-events-none absolute mt-4 opacity-0 "
-                accept="image/*"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               {t("choose_a_file")}
             </label>
             {uploadInstruction && (

@@ -20,20 +20,10 @@ const BrokenVideoIntegration = (props: { location: string; eventTypeId?: number 
       t={props.t}
       values={{ location: props.location }}
       components={[
-        <a
-          key="broken-video-action-link-1"
-          className="cursor-pointer text-blue-500 underline"
-          href={
-            props.eventTypeId ? `${WEBAPP_URL}/event-types/${props.eventTypeId}` : `${WEBAPP_URL}/event-types`
-          }>
-          change your location on the event type
-        </a>,
-        <a
-          key="broken-video-action-link-2"
-          className="cursor-pointer text-blue-500 underline"
-          href={`${WEBAPP_URL}/apps/installed`}>
-          removing and adding the app again.
-        </a>,
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$,
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$,
       ]}
     />
   );
@@ -79,17 +69,8 @@ export const BrokenIntegrationEmail = (
     }
 
     return (
-      <BaseScheduledEmail
-        timeZone={calEvent.organizer.timeZone}
-        t={t}
-        timeFormat={timeFormat}
-        locale={locale}
-        subject={t("broken_integration")}
-        title={t("problem_adding_video_link")}
-        subtitle={<BrokenVideoIntegration location={location} eventTypeId={calEvent.eventTypeId} t={t} />}
-        headerType="xCircle"
-        {...props}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 
@@ -106,30 +87,13 @@ export const BrokenIntegrationEmail = (
     }
 
     return (
-      <BaseScheduledEmail
-        timeZone={calEvent.organizer.timeZone}
-        t={t}
-        timeFormat={timeFormat}
-        locale={locale}
-        subject={t("broken_integration")}
-        title={t("problem_updating_calendar")}
-        subtitle={<BrokenCalendarIntegration calendar={calendar} eventTypeId={calEvent.eventTypeId} t={t} />}
-        headerType="xCircle"
-        {...props}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 
   return (
-    <BaseScheduledEmail
-      timeZone={calEvent.organizer.timeZone}
-      t={t}
-      timeFormat={timeFormat}
-      locale={locale}
-      subject={t("broken_integration")}
-      title={t("problem_updating_calendar")}
-      headerType="xCircle"
-      {...props}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };

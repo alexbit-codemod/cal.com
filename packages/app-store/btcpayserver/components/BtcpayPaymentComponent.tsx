@@ -33,7 +33,8 @@ export const BtcpayPaymentComponent = (props: IPaymentComponentProps) => {
   const { copyToClipboard, isCopied } = useCopy();
   const wrongUrl = (
     <>
-      <p className="mt-3 text-center">Couldn&apos;t obtain payment URL</p>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 
@@ -51,30 +52,22 @@ export const BtcpayPaymentComponent = (props: IPaymentComponentProps) => {
       {!iframeLoaded && (
         <div className="flex items-center justify-center">
           <Spinner className="mr-2 h-5 w-5" />
-          <p>Loading payment page...</p>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )}
 
       <div className={`w-full ${iframeLoaded ? "block" : "hidden"}`}>
-        <iframe
-          src={checkoutUrl}
-          title="BTCPay Payment"
-          className="h-[1000px] w-full rounded-md border-0"
-          onLoad={() => setIframeLoaded(true)}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       <div className="flex flex-row flex-wrap items-center justify-center gap-4">
-        <Button
-          size="sm"
-          color="secondary"
-          onClick={() => copyToClipboard(checkoutUrl)}
-          className="text-subtle rounded-md"
-          StartIcon={isCopied ? "clipboard-check" : "clipboard"}>
-          Copy Payment Link
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        <Button onClick={handleOpenInNewTab}>Open in New Tab</Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );

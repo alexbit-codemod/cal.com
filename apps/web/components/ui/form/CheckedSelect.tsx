@@ -24,23 +24,12 @@ export const CheckedSelect = ({
   const { t } = useLocale();
   return (
     <>
-      <Select
-        name={props.name}
-        placeholder={props.placeholder || t("select")}
-        isSearchable={false}
-        options={options}
-        value={value}
-        isMulti
-        {...props}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {value.map((option) => (
         <div key={option.value} className="border p-2 font-medium">
-          <Avatar
-            className="inline ltr:mr-2 rtl:ml-2"
-            size="sm"
-            imageSrc={option.avatar}
-            alt={option.label}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {option.label}
           <Icon
             name="x"

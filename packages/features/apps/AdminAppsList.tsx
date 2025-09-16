@@ -83,34 +83,8 @@ const IntegrationContainer = ({
 
   return (
     <li>
-      <AppListCard
-        logo={app.logo}
-        description={app.description}
-        title={app.name}
-        isTemplate={app.isTemplate}
-        actions={
-          <div className="flex items-center justify-self-end">
-            {app.keys && (
-              <Button color="secondary" className="mr-2" onClick={() => showKeyModal()}>
-                <Icon name="pencil" />
-              </Button>
-            )}
-
-            <Switch
-              checked={app.enabled}
-              onClick={() => {
-                if (app.enabled) {
-                  setDisableDialog(true);
-                } else if (app.keys) {
-                  showKeyModal(true);
-                } else {
-                  enableAppMutation.mutate({ slug: app.slug, enabled: !app.enabled });
-                }
-              }}
-            />
-          </div>
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
       <Dialog open={disableDialog} onOpenChange={setDisableDialog}>
         <ConfirmationDialogContent
@@ -244,15 +218,8 @@ const EditKeysModal: FC<{
                 control={formMethods.control}
                 defaultValue={keys && keys[key] ? keys?.[key] : ""}
                 render={({ field: { value } }) => (
-                  <TextField
-                    label={key}
-                    key={key}
-                    name={key}
-                    value={value}
-                    onChange={(e) => {
-                      formMethods.setValue(key, e?.target.value);
-                    }}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
               />
             ))}
@@ -308,11 +275,8 @@ const AdminAppsListContainer = () => {
 
   if (!apps || apps.length === 0) {
     return (
-      <EmptyScreen
-        Icon="circle-alert"
-        headline={t("no_available_apps")}
-        description={t("no_available_apps_description")}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 

@@ -44,7 +44,9 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "text",
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "name",
           required: true,
         },
@@ -59,7 +61,9 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "text",
-          label: "Email",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "email",
           required: true,
         },
@@ -125,7 +129,9 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "text",
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "name",
           required: true,
         },
@@ -135,7 +141,9 @@ test.describe("Insights > Routing Filters", () => {
     const booking1 = await prisma.booking.create({
       data: {
         uid: `booking-${uuidv4()}`,
-        title: "Test Booking 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: new Date(),
         endTime: new Date(Date.now() + 60 * 60 * 1000),
         userId: user1.id,
@@ -146,7 +154,9 @@ test.describe("Insights > Routing Filters", () => {
     const booking2 = await prisma.booking.create({
       data: {
         uid: `booking-${uuidv4()}`,
-        title: "Test Booking 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: new Date(),
         endTime: new Date(Date.now() + 60 * 60 * 1000),
         userId: user2.id,
@@ -161,7 +171,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "John Doe",
           },
         },
@@ -175,7 +187,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "Jane Smith",
           },
         },
@@ -219,7 +233,9 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "text",
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "name",
           required: true,
         },
@@ -230,7 +246,9 @@ test.describe("Insights > Routing Filters", () => {
     const booking1 = await prisma.booking.create({
       data: {
         uid: `booking-${uuidv4()}`,
-        title: "Test Booking 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: new Date(),
         endTime: new Date(Date.now() + 60 * 60 * 1000),
         userId: owner.id,
@@ -250,7 +268,9 @@ test.describe("Insights > Routing Filters", () => {
     const booking2 = await prisma.booking.create({
       data: {
         uid: `booking-${uuidv4()}`,
-        title: "Test Booking 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: new Date(),
         endTime: new Date(Date.now() + 60 * 60 * 1000),
         userId: owner.id,
@@ -271,7 +291,9 @@ test.describe("Insights > Routing Filters", () => {
       data: {
         formFillerId: "test-filler-1",
         formId: form.id,
-        response: { [fieldId]: { label: "Name", value: "Response 1" } },
+        response: { [fieldId]: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , value: "Response 1" } },
         routedToBookingUid: booking1.uid,
       },
     });
@@ -280,7 +302,9 @@ test.describe("Insights > Routing Filters", () => {
       data: {
         formFillerId: "test-filler-2",
         formId: form.id,
-        response: { [fieldId]: { label: "Name", value: "Response 2" } },
+        response: { [fieldId]: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , value: "Response 2" } },
         routedToBookingUid: booking2.uid,
       },
     });
@@ -342,7 +366,9 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "text",
-          label: "Description",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "description",
           required: true,
         },
@@ -356,7 +382,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Description",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "This is a test description",
           },
         },
@@ -369,7 +397,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Description",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "Another description for testing",
           },
         },
@@ -382,7 +412,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Description",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "",
           },
         },
@@ -439,7 +471,9 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "number",
-          label: "Rating",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "rating",
           required: true,
         },
@@ -453,7 +487,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: 1,
           },
         },
@@ -466,7 +502,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: 3,
           },
         },
@@ -479,7 +517,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: 5,
           },
         },
@@ -543,23 +583,31 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "select",
-          label: "Location",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "location",
           required: true,
           options: [
             {
               id: locationOptionId1,
-              label: "New York",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
             {
               id: locationOptionId2,
-              label: "London",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ],
         },
         {
           type: "multiselect",
-          label: "Skills",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "skills",
           required: true,
           options: [
@@ -573,7 +621,9 @@ test.describe("Insights > Routing Filters", () => {
             },
             {
               id: skillOptionId3,
-              label: "React",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ],
         },
@@ -588,11 +638,15 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [locationFieldId]: {
-            label: "Location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: locationOptionId1,
           },
           [skillFieldId]: {
-            label: "Skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: [skillOptionId1, skillOptionId2],
           },
         },
@@ -605,11 +659,15 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [locationFieldId]: {
-            label: "Location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: locationOptionId2,
           },
           [skillFieldId]: {
-            label: "Skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: [skillOptionId2, skillOptionId3],
           },
         },
@@ -649,7 +707,9 @@ test.describe("Insights > Routing Filters", () => {
       fields: [
         {
           type: "text",
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "name",
           required: true,
         },
@@ -666,7 +726,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "Old Response",
           },
         },
@@ -680,7 +742,9 @@ test.describe("Insights > Routing Filters", () => {
         formId: form.id,
         response: {
           [fieldId]: {
-            label: "Name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "Recent Response",
           },
         },

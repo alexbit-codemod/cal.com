@@ -6,7 +6,9 @@ export class RefreshApiKeyInput {
   @IsInt()
   @Min(1)
   @ApiPropertyOptional({
-    description: "For how many days is managed organization api key valid. Defaults to 30 days.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 60,
     default: 30,
     minimum: 1,
@@ -15,6 +17,8 @@ export class RefreshApiKeyInput {
 
   @IsOptional()
   @IsBoolean()
-  @ApiPropertyOptional({ description: "If true, organization api key never expires.", example: true })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: true })
   readonly apiKeyNeverExpires?: boolean;
 }

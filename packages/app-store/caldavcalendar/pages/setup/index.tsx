@@ -29,11 +29,8 @@ export default function CalDavCalendarSetup() {
         <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
           <div>
             {/* eslint-disable @next/next/no-img-element */}
-            <img
-              src="/api/app-store/caldavcalendar/icon.svg"
-              alt="CalDav Calendar"
-              className="h-12 w-12 max-w-2xl"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="flex w-10/12 flex-col">
             <h1 className="text-default">{t("connect_caldav")}</h1>
@@ -61,43 +58,18 @@ export default function CalDavCalendarSetup() {
                   }
                 }}>
                 <fieldset className="space-y-2" disabled={form.formState.isSubmitting}>
-                  <TextField
-                    required
-                    type="text"
-                    {...form.register("url")}
-                    label={t("calendar_url")}
-                    placeholder="https://example.com/calendar"
-                  />
-                  <TextField
-                    required
-                    type="text"
-                    {...form.register("username")}
-                    label={t("username")}
-                    placeholder="rickroll"
-                  />
-                  <TextField
-                    required
-                    type="password"
-                    {...form.register("password")}
-                    label={t("password")}
-                    placeholder="•••••••••••••"
-                    autoComplete="password"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </fieldset>
 
                 {errorMessage && (
-                  <Alert
-                    severity="error"
-                    title={errorMessage}
-                    actions={
-                      errorActionUrl !== "" ? (
-                        <Button
-                          href={errorActionUrl}
-                          color="secondary"
-                          target="_blank"
-                          className="ml-5 w-32 !p-5">
-                          Go to Admin
-                        </Button>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       ) : undefined
                     }
                     className="my-4"

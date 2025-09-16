@@ -6,13 +6,7 @@ import { EmptyScreen } from "@calcom/ui/components/empty-screen";
 
 export const CustomIconExample: React.FC = () => (
   <RenderComponentWithSnippet>
-    <EmptyScreen
-      Icon="user"
-      iconClassName="text-emphasis h-12 w-12"
-      headline="No team members"
-      description="Add team members to collaborate"
-      buttonText="Add Members"
-      buttonOnClick={() => alert("Add Members clicked")}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   </RenderComponentWithSnippet>
 );

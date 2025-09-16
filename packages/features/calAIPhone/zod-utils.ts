@@ -7,7 +7,9 @@ const requiredFields = z.object({
   yourPhoneNumber: z.string().refine((val) => isValidPhoneNumber(val)),
   numberToCall: z.string().refine((val) => isValidPhoneNumber(val)),
   calApiKey: z.string().trim().min(1, {
-    message: "Please enter CAL API Key",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   }),
   eventTypeId: z.number(),
   enabled: z.boolean().default(false),

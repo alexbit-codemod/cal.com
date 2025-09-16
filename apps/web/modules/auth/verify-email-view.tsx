@@ -32,26 +32,8 @@ function VerifyEmailPage() {
     <div className="h-[100vh] w-full ">
       <div className="flex h-full w-full flex-col items-center justify-center">
         <div className="max-w-3xl">
-          <EmptyScreen
-            border
-            dashedBorder={false}
-            Icon="mail-open"
-            headline={t("check_your_email")}
-            description={t("verify_email_page_body", { email: session?.user?.email, appName: APP_NAME })}
-            className="bg-default"
-            buttonRaw={
-              <Button
-                color="minimal"
-                className="underline"
-                loading={mutation.isPending}
-                onClick={() => {
-                  showToast(t("send_email"), "success");
-                  mutation.mutate();
-                }}>
-                {t("resend_email")}
-              </Button>
-            }
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
     </div>

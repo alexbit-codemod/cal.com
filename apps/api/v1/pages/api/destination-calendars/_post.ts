@@ -79,7 +79,9 @@ async function postHandler(req: NextApiRequest) {
   if (userCredentials.length === 0)
     throw new HttpError({
       statusCode: 400,
-      message: "Bad request, credential id invalid",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   const calendarCredentials = getCalendarCredentialsWithoutDelegation(userCredentials);
@@ -93,7 +95,9 @@ async function postHandler(req: NextApiRequest) {
   if (!calendar?.credentialId)
     throw new HttpError({
       statusCode: 400,
-      message: "Bad request, credential id invalid",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   const credentialId = calendar.credentialId;
 
@@ -104,7 +108,9 @@ async function postHandler(req: NextApiRequest) {
     if (!eventType)
       throw new HttpError({
         statusCode: 400,
-        message: "Bad request, eventTypeId invalid",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     parsedBody.userId = undefined;
   }
@@ -115,7 +121,9 @@ async function postHandler(req: NextApiRequest) {
 
   return {
     destinationCalendar: schemaDestinationCalendarReadPublic.parse(destination_calendar),
-    message: "Destination calendar created successfully",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 }
 
@@ -127,15 +135,21 @@ async function checkPermissions(req: NextApiRequest, userId: number) {
   if (!isSystemWideAdmin && body.userId)
     throw new HttpError({
       statusCode: 401,
-      message: "ADMIN required for `userId`",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   /* Admin users are required to pass in a userId */
   if (isSystemWideAdmin && !body.userId)
-    throw new HttpError({ statusCode: 400, message: "`userId` required" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   /* User should only be able to create for their own destination calendars*/
   if (!isSystemWideAdmin && body.eventTypeId) {
     const ownsEventType = await prisma.eventType.findFirst({ where: { id: body.eventTypeId, userId } });
-    if (!ownsEventType) throw new HttpError({ statusCode: 401, message: "Unauthorized" });
+    if (!ownsEventType) throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   // TODO:: Add support for team event types with validation
 }

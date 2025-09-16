@@ -10,7 +10,9 @@ async function handler(req: NextRequest) {
   const account = await isAuthorized(token, requiredScopes);
 
   if (!account) {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   return NextResponse.json({ username: account.name }, { status: 201 });

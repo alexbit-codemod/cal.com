@@ -66,8 +66,10 @@ function AlbySetupCallback() {
 
   return (
     <div>
-      {error && <p>Authorization failed: {error}</p>}
-      {!error && <p>Connecting...</p>}
+      {error && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
+      {!error && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
     </div>
   );
 }
@@ -130,12 +132,10 @@ function AlbySetupPage(props: IAlbySetupProps) {
 
   const albyIcon = (
     <>
-      <img className="h-12 w-12 dark:hidden" src="/api/app-store/alby/icon-borderless.svg" alt="Alby Icon" />
-      <img
-        className="hidden h-12 w-12 dark:block"
-        src="/api/app-store/alby/icon-borderless-dark.svg"
-        alt="Alby Icon"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 
@@ -146,10 +146,8 @@ function AlbySetupPage(props: IAlbySetupProps) {
           <div className="bg-default border-subtle m-auto flex max-w-[43em] flex-col items-center justify-center gap-4 overflow-auto rounded border p-4 md:p-10">
             {!props.lightningAddress ? (
               <>
-                <p className="text-default">
-                  Create or connect to an existing Alby account to receive lightning payments for your paid
-                  bookings.
-                </p>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <button
                   className="font-body flex h-10 w-56 items-center justify-center gap-2 rounded-md font-bold text-black shadow transition-all hover:brightness-90 active:scale-95"
                   style={{
@@ -158,26 +156,28 @@ function AlbySetupPage(props: IAlbySetupProps) {
                   type="button"
                   onClick={connectWithAlby}>
                   {albyIcon}
-                  <span className="mr-2">Connect with Alby</span>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </button>
               </>
             ) : (
               <>
                 {albyIcon}
-                <p>Alby Connected!</p>
-                <Badge>Email: {props.email}</Badge>
-                <Badge>Lightning Address: {props.lightningAddress}</Badge>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </>
             )}
 
             {/* TODO: remove when invoices are generated using user identifier */}
-            <div className="mt-4 rounded bg-blue-50 p-3 text-sm text-blue-700 dark:bg-blue-950 dark:text-blue-300">
-              <Icon name="info" className="mb-0.5 inline-flex h-4 w-4" /> Your Alby lightning address will be
-              used to generate invoices. If you update your lightning address, please disconnect and setup the
-              Alby app again.
-            </div>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Link href="/apps/alby">
-              <Button color="secondary">Go to App Store Listing</Button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </Link>
           </div>
         </div>

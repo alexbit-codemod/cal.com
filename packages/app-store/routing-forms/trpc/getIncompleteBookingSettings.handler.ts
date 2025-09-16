@@ -42,7 +42,9 @@ const getInCompleteBookingSettingsHandler = async (options: GetIncompleteBooking
   if (!form) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Form not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

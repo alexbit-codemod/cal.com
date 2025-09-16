@@ -3,10 +3,14 @@ import type { AppFrontendPayload as App } from "@calcom/types/App";
 export const _SBApps: App[] = [
   {
     name: "Google Calendar",
-    description: "Google Calendar",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     installed: true,
     type: "google_calendar",
-    title: "Google Calendar",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     variant: "calendar",
     category: "calendar",
     categories: ["calendar"],
@@ -19,7 +23,9 @@ export const _SBApps: App[] = [
   },
   {
     name: "Zoom Video",
-    description: "Zoom Video",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "zoom_video",
     categories: ["video"],
     variant: "conferencing",
@@ -28,14 +34,18 @@ export const _SBApps: App[] = [
     url: "https://zoom.us/",
     category: "video",
     slug: "zoom",
-    title: "Zoom Video",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     email: "help@cal.com",
     appData: {
       location: {
         default: false,
         linkType: "dynamic",
         type: "integrations:zoom",
-        label: "Zoom Video",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       },
     },
     dirName: "zoomvideo",

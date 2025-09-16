@@ -19,22 +19,10 @@ export const BasicExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-4 md:w-80">
-        <Select
-          options={options}
-          value={singleValue}
-          onChange={(newValue) => setSingleValue(newValue)}
-          isClearable
-          placeholder="Choose a flavor..."
-          size="md"
-        />
-        <Select
-          options={options}
-          value={singleValue}
-          onChange={(newValue) => setSingleValue(newValue)}
-          isClearable
-          placeholder="Small size select..."
-          size="sm"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );

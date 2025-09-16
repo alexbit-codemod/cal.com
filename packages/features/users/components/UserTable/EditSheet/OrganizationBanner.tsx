@@ -16,7 +16,8 @@ export function OrganizationBanner() {
           height: currentOrganisation && currentOrganisation?.bannerUrl ? "auto" : "110px",
         }}>
         {currentOrganisation && currentOrganisation?.bannerUrl && (
-          <img src={currentOrganisation?.bannerUrl} alt="Organization Banner" className="rounded-lg" />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       </div>
     </>

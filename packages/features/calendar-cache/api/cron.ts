@@ -15,7 +15,9 @@ const log = logger.getSubLogger({ prefix: ["CalendarCacheCron"] });
 const validateRequest = (req: NextApiRequest) => {
   const apiKey = req.headers.authorization || req.query.apiKey;
   if (![process.env.CRON_API_KEY, `Bearer ${process.env.CRON_SECRET}`].includes(`${apiKey}`)) {
-    throw new HttpError({ statusCode: 401, message: "Unauthorized" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 
@@ -81,7 +83,9 @@ const handleCalendarsToUnwatch = async () => {
           await cc.unwatchCalendar({ calendarId: externalId, eventTypeIds });
           await SelectedCalendarRepository.removeUnwatchingError({ id });
         } catch (error) {
-          let errorMessage = "Unknown error";
+          let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           if (error instanceof Error) {
             errorMessage = error.message;
           }
@@ -125,7 +129,9 @@ const handleCalendarsToWatch = async () => {
           await cc.watchCalendar({ calendarId: externalId, eventTypeIds });
           await SelectedCalendarRepository.removeWatchingError({ id });
         } catch (error) {
-          let errorMessage = "Unknown error";
+          let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ;
           if (error instanceof Error) {
             errorMessage = error.message;
           }

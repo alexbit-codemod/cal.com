@@ -75,31 +75,14 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
   return (
     <>
       {recurringEventDefined && (
-        <Alert className="mt-2" severity="warning" title={t("warning_recurring_event_payment")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
       {!recurringEventDefined && requirePayment && (
         <>
           <div className="mt-4 block items-center justify-start sm:flex sm:space-x-2">
-            <TextField
-              data-testid="stripe-price-input"
-              label={t("price")}
-              className="h-[38px]"
-              addOnLeading={
-                <>{selectedCurrency.value ? getCurrencySymbol("en", selectedCurrency.value) : ""}</>
-              }
-              addOnSuffix={currency.toUpperCase()}
-              addOnClassname="h-[38px]"
-              step="0.01"
-              min="0.5"
-              type="number"
-              required
-              placeholder="Price"
-              disabled={disabled}
-              onChange={(e) => {
-                setAppData("price", convertToSmallestCurrencyUnit(Number(e.target.value), currency));
-              }}
-              value={price > 0 ? convertFromSmallestToPresentableCurrencyUnit(price, currency) : undefined}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="mt-5 w-60">
             <label className="text-default mb-1 block text-sm font-medium" htmlFor="currency">
@@ -153,7 +136,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
           </div>
 
           {seatsEnabled && paymentOption === "HOLD" && (
-            <Alert className="mt-2" severity="warning" title={t("seats_and_no_show_fee_error")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
 
           {paymentOption !== "HOLD" && (
@@ -171,8 +155,10 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
                     setAppData("refundCountCalendarDays", undefined);
                   }
                 }}>
-                <RadioField className="w-fit" value={RefundPolicy.ALWAYS} label={t("always")} id="always" />
-                <RadioField className="w-fit" value={RefundPolicy.NEVER} label={t("never")} id="never" />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <div className={classNames("text-default mb-2 flex flex-wrap items-center text-sm")}>
                   <RadioGroup.Item
                     className="min-w-4 bg-default border-default flex h-4 w-4 cursor-pointer items-center rounded-full border focus:border-2 focus:outline-none ltr:mr-2 rtl:ml-2"
@@ -182,20 +168,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
                   </RadioGroup.Item>
                   <div className="flex items-center">
                     <span className="me-2 ms-2">&nbsp;{t("if_cancelled")}</span>
-                    <TextField
-                      labelSrOnly
-                      type="number"
-                      className={classNames(
-                        "border-default my-0 block w-16 text-sm [appearance:textfield] ltr:mr-2 rtl:ml-2"
-                      )}
-                      placeholder="2"
-                      disabled={disabled}
-                      min={0}
-                      defaultValue={getAppData("refundDaysCount")}
-                      required={getAppData("refundPolicy") === RefundPolicy.DAYS}
-                      value={getAppData("refundDaysCount") ?? ""}
-                      onChange={(e) => setAppData("refundDaysCount", parseInt(e.currentTarget.value))}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <Select
                       options={options}
                       isSearchable={false}

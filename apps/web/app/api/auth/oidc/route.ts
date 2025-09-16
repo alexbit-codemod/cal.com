@@ -16,7 +16,9 @@ async function handler(req: NextRequest) {
   const tenant = searchParams.get("tenant");
 
   if (!code || !state) {
-    return NextResponse.json({ message: "Code and state are required" }, { status: 400 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
   }
 
   const { oauthController } = await jackson();
@@ -26,7 +28,9 @@ async function handler(req: NextRequest) {
 
     if (!redirect_url) {
       throw new HttpError({
-        message: "No redirect URL found",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         statusCode: 500,
       });
     }

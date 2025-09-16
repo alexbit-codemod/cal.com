@@ -28,7 +28,9 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
     if (!eventType || eventType.userId !== user.id) {
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: "You are not authorized to create a schedule for this event type",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }

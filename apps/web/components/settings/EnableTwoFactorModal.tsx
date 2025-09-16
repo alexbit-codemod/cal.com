@@ -175,14 +175,8 @@ const EnableTwoFactorModal = ({ onEnable, onCancel, open, onOpenChange }: Enable
         <WithStep step={SetupStep.ConfirmPassword} current={step}>
           <form onSubmit={handleSetup}>
             <div className="mb-4">
-              <PasswordField
-                label={t("password")}
-                name="password"
-                id="password"
-                required
-                value={password}
-                onInput={(e) => setPassword(e.currentTarget.value)}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               {errorMessage && <p className="mt-1 text-sm text-red-700">{errorMessage}</p>}
             </div>
           </form>
@@ -192,7 +186,8 @@ const EnableTwoFactorModal = ({ onEnable, onCancel, open, onOpenChange }: Enable
             <div className="-mt-3 flex justify-center">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={dataUri} alt="" />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               }
             </div>
             <p data-testid="two-factor-secret" className="mb-4 text-center font-mono text-xs">

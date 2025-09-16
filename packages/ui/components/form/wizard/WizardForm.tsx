@@ -68,14 +68,8 @@ export function WizardForm({
             {currentStepData.description}
           </p>
           {!disableNavigation && (
-            <Steps
-              maxSteps={maxSteps}
-              currentStep={currentStep}
-              nextStep={nextStep}
-              stepLabel={stepLabel}
-              data-testid="wizard-step-component"
-              disableNavigation={disableNavigation}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         </div>
       </div>

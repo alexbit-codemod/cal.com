@@ -54,7 +54,8 @@ const ChooseLicense = (
             <div className={classNames("bg-default h-full cursor-pointer space-y-2 rounded-md border p-4")}>
               <h2 className="font-cal text-emphasis text-xl">{t("custom_plan")}</h2>
               <p className="font-medium text-green-800">{t("contact_sales")}</p>
-              <p className="text-subtle">Build on top of Cal.com</p>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <ul className="text-subtle ml-4 list-disc text-left text-xs">
                 <li>{t("no_need_to_keep_your_code_open_source")}</li>
                 <li>{t("repackage_rebrand_resell")}</li>

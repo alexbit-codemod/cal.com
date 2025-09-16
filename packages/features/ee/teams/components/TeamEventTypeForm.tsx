@@ -50,37 +50,12 @@ export const TeamEventTypeForm = ({
           {...register("teamId", { valueAsNumber: true })}
           value={teamId}
         />
-        <TextField
-          label={t("title")}
-          placeholder={t("quick_chat")}
-          data-testid="event-type-quick-chat"
-          {...register("title")}
-          onChange={(e) => {
-            form.setValue("title", e?.target.value);
-            if (formState.touchedFields["slug"] === undefined) {
-              form.setValue("slug", slugify(e?.target.value));
-            }
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         {urlPrefix && urlPrefix.length >= 21 ? (
           <div>
-            <TextField
-              label={isPlatform ? "Slug" : `${t("url")}: ${urlPrefix}`}
-              required
-              addOnLeading={
-                !isPlatform ? (
-                  <Tooltip content={!isManagedEventType ? `team/${teamSlug}` : t("username_placeholder")}>
-                    <span className="max-w-24 md:max-w-56">
-                      /{!isManagedEventType ? `team/${teamSlug}` : t("username_placeholder")}/
-                    </span>
-                  </Tooltip>
-                ) : undefined
-              }
-              {...register("slug")}
-              onChange={(e) => {
-                form.setValue("slug", slugify(e?.target.value), { shouldTouch: true });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             {isManagedEventType && !isPlatform && (
               <p className="mt-2 text-sm text-gray-600">{t("managed_event_url_clarification")}</p>
@@ -88,26 +63,8 @@ export const TeamEventTypeForm = ({
           </div>
         ) : (
           <div>
-            <TextField
-              label={isPlatform ? "Slug" : t("url")}
-              required
-              addOnLeading={
-                !isPlatform ? (
-                  <Tooltip
-                    content={`${urlPrefix}/${
-                      !isManagedEventType ? `team/${teamSlug}` : t("username_placeholder")
-                    }/`}>
-                    <span className="max-w-24 md:max-w-56">
-                      {urlPrefix}/{!isManagedEventType ? `team/${teamSlug}` : t("username_placeholder")}/
-                    </span>
-                  </Tooltip>
-                ) : undefined
-              }
-              {...register("slug")}
-              onChange={(e) => {
-                form.setValue("slug", slugify(e?.target.value), { shouldTouch: true });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             {isManagedEventType && !isPlatform && (
               <p className="mt-2 text-sm text-gray-600">{t("managed_event_url_clarification")}</p>
             )}

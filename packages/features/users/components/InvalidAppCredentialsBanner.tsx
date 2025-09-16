@@ -36,14 +36,7 @@ export function InvalidAppCredentialBanner({ name, slug }: InvalidAppCredentialB
   };
 
   return (
-    <TopBanner
-      text={` ${t("invalid_credential", { appName: name })} `}
-      variant="warning"
-      actions={
-        <button className="border-b border-b-black" onClick={handleClick}>
-          {t("invalid_credential_action")}
-        </button>
-      }
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }

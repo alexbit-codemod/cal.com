@@ -211,9 +211,8 @@ export default function MemberInvitationModal(props: MemberInvitationModalProps)
                 t={t}
                 i18nKey="invite_new_member_description"
                 components={[
-                  <span key="invite_new_member_description" className="text-emphasis font-medium">
-                    cost an extra seat ($15/m)
-                  </span>,
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$,
                 ]}
               />
             </span>
@@ -255,14 +254,8 @@ export default function MemberInvitationModal(props: MemberInvitationModalProps)
                 }}
                 render={({ field: { onChange }, fieldState: { error } }) => (
                   <>
-                    <TextField
-                      label={t("email")}
-                      id="inviteUser"
-                      name="inviteUser"
-                      placeholder="email@example.com"
-                      required
-                      onChange={(e) => onChange(e.target.value.trim().toLowerCase())}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     {error && <span className="text-sm text-red-800">{error.message}</span>}
                   </>
                 )}
@@ -287,24 +280,8 @@ export default function MemberInvitationModal(props: MemberInvitationModalProps)
                   render={({ field: { onChange, value }, fieldState: { error } }) => (
                     <>
                       {/* TODO: Make this a fancy email input that styles on a successful email. */}
-                      <TextAreaField
-                        name="emails"
-                        label={t("invite_via_email")}
-                        rows={4}
-                        autoCorrect="off"
-                        placeholder="john@doe.com, alex@smith.com"
-                        required
-                        value={value}
-                        onChange={(e) => {
-                          const targetValues = e.target.value.split(/[\n,]/);
-                          const emails =
-                            targetValues.length === 1
-                              ? targetValues[0].trim().toLocaleLowerCase()
-                              : targetValues.map((email) => email.trim().toLocaleLowerCase());
-
-                          return onChange(emails);
-                        }}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       {error && <span className="text-sm text-red-800">{error.message}</span>}
                     </>
                   )}

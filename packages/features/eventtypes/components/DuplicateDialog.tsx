@@ -118,64 +118,24 @@ const DuplicateDialog = () => {
             duplicateMutation.mutate(values);
           }}>
           <div className="-mt-2 space-y-5">
-            <TextField
-              label={t("title")}
-              placeholder={t("quick_chat")}
-              {...register("title")}
-              onChange={(e) => {
-                form.setValue("title", e?.target.value);
-                if (form.formState.touchedFields["slug"] === undefined) {
-                  form.setValue("slug", slugify(e?.target.value));
-                }
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             {process.env.NEXT_PUBLIC_WEBSITE_URL !== undefined &&
             process.env.NEXT_PUBLIC_WEBSITE_URL?.length >= 21 ? (
-              <TextField
-                label={`${t("url")}: ${process.env.NEXT_PUBLIC_WEBSITE_URL}`}
-                required
-                addOnLeading={<>/{pageSlug}/</>}
-                {...register("slug")}
-                onChange={(e) => {
-                  form.setValue("slug", slugify(e?.target.value), { shouldTouch: true });
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             ) : (
-              <TextField
-                label={t("url")}
-                required
-                addOnLeading={
-                  <>
-                    {process.env.NEXT_PUBLIC_WEBSITE_URL}/{pageSlug}/
-                  </>
-                }
-                {...register("slug")}
-                 onChange={(e) => {
-                  form.setValue("slug", slugify(e?.target.value), { shouldTouch: true });
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
 
-            <Editor
-              getText={() => md.render(form.getValues("description") || "")}
-              setText={(value: string) => form.setValue("description", turndown(value))}
-              excludedToolbarItems={["blockType", "link"]}
-              placeholder={t("quick_video_meeting")}
-              firstRender={firstRender}
-              setFirstRender={setFirstRender}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             <div className="relative">
-              <TextField
-                type="number"
-                required
-                min="1"
-                placeholder="15"
-                label={t("duration")}
-                {...register("length", { valueAsNumber: true })}
-                addOnSuffix={t("minutes")}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           </div>
           <DialogFooter showDivider className="mt-10">

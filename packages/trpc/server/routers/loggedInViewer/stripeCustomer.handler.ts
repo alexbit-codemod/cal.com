@@ -29,7 +29,9 @@ export const stripeCustomerHandler = async ({ ctx }: StripeCustomerOptions) => {
   });
 
   if (!user) {
-    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "User not found" });
+    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const metadata = userMetadata.parse(user.metadata);
@@ -59,7 +61,9 @@ export const stripeCustomerHandler = async ({ ctx }: StripeCustomerOptions) => {
   // Fetch stripe customer
   const customer = await billingService.getCustomer(stripeCustomerId);
   if (customer.deleted) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "No stripe customer found" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const username = customer?.metadata?.username || null;

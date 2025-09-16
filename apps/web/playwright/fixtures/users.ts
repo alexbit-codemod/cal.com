@@ -307,12 +307,22 @@ export const createUsersFixture = (
       let defaultEventTypes: SupportedTestEventTypes[] = opts?.overrideDefaultEventTypes
         ? []
         : [
-            { title: "30 min", slug: "30-min", length: 30 },
-            { title: "Paid", slug: "paid", length: 30, price: 1000 },
-            { title: "Opt in", slug: "opt-in", requiresConfirmation: true, length: 30 },
-            { title: "Seated", slug: "seated", seatsPerTimeSlot: 2, length: 30 },
+            { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            , slug: "30-min", length: 30 },
+            { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            , slug: "paid", length: 30, price: 1000 },
+            { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            , slug: "opt-in", requiresConfirmation: true, length: 30 },
+            { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            , slug: "seated", seatsPerTimeSlot: 2, length: 30 },
             {
-              title: "Multiple duration",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "multiple-duration",
               length: 30,
               metadata: { multipleDuration: [30, 60, 90] },
@@ -542,20 +552,28 @@ export const createUsersFixture = (
               ],
               teamEvents: [
                 {
-                  title: "Team Sales",
+                  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   slug: "team-sales",
                   schedulingType: "ROUND_ROBIN",
                   assignAllTeamMembers: true,
                   length: 60,
-                  description: "Team Sales",
+                  description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                 },
                 {
-                  title: "Team Javascript",
+                  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   slug: "team-javascript",
                   schedulingType: "ROUND_ROBIN",
                   assignAllTeamMembers: true,
                   length: 60,
-                  description: "Team Javascript",
+                  description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                 },
               ],
             },

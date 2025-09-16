@@ -38,11 +38,8 @@ export const OrganizationAdminNoSlotsEmail = (
         />
       </p>
       <div style={{ marginTop: "3rem", marginBottom: "0.75rem" }}>
-        <CallToAction
-          label={props.language("org_admin_no_slots|cta")}
-          href={props.editLink}
-          endIconName="linkIcon"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </BaseEmailHtml>
   );

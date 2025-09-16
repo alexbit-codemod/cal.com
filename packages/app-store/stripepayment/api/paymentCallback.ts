@@ -27,7 +27,9 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
   if (!stripeCustomer)
     throw new HttpError({
       statusCode: 404,
-      message: "Stripe customer not found or deleted",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       url: req.url,
       method: req.method,
     });
@@ -52,7 +54,9 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (!user)
-    throw new HttpError({ statusCode: 404, message: "User not found", url: req.url, method: req.method });
+    throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , url: req.url, method: req.method });
 
   if (checkoutSession.payment_status === "paid" && stripeCustomer.metadata.username) {
     try {
@@ -75,7 +79,9 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
         url: req.url,
         method: req.method,
         message:
-          "We have received your payment. Your premium username could still not be reserved. Please contact support@cal.com and mention your premium username",
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
       });
     }
   }

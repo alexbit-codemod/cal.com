@@ -21,13 +21,17 @@ const extractAuthToken = (req: NextRequest) => {
   let access_token;
   if (!tokenParse.success) {
     log.error(`Error parsing request query: ${tokenParse.error} trace ${uid}`);
-    throw new HttpError({ statusCode: 401, message: `Unauthorized trace: ${uid}` });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   access_token = tokenParse.data.access_token;
   arr = arr.concat(access_token);
   if (arr[0].length > 0) return arr[0];
 
-  throw new HttpError({ statusCode: 401, message: `Unauthorized trace: ${uid}` });
+  throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 };
 
 const requestQuery = z.object({

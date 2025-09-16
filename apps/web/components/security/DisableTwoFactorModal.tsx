@@ -68,7 +68,8 @@ const DisableTwoFactorAuthModal = ({ onDisable, onCancel }: DisableTwoFactorAuth
     <Dialog open={true}>
       <DialogContent>
         <Form form={form} handleSubmit={handleDisable}>
-          <TwoFactorModalHeader title={t("disable_2fa")} description={t("disable_2fa_recommendation")} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
 
           <div className="mb-4">
             <PasswordField

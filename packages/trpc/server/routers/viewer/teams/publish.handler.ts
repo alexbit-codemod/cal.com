@@ -24,7 +24,9 @@ const parseMetadataOrThrow = (metadata: Prisma.JsonValue) => {
   const parsedMetadata = teamMetadataSchema.safeParse(metadata);
 
   if (!parsedMetadata.success || !parsedMetadata.data)
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Invalid team metadata" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   return parsedMetadata.data;
 };
 
@@ -48,9 +50,13 @@ const generateCheckoutSession = async ({
   if (!checkoutSession.url)
     throw new TRPCError({
       code: "INTERNAL_SERVER_ERROR",
-      message: "Failed retrieving a checkout session URL.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
-  return { url: checkoutSession.url, message: "Payment required to publish team" };
+  return { url: checkoutSession.url, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 };
 
 async function checkPermissions({ ctx, input }: PublishOptions) {
@@ -71,14 +77,18 @@ export const publishHandler = async ({ ctx, input }: PublishOptions) => {
   } catch (error) {
     /** We return the url for client redirect if needed */
     if (error instanceof Redirect) return { url: error.url };
-    let message = "Unknown Error on publishHandler";
+    let message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     if (error instanceof Error) message = error.message;
     throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message });
   }
 
   return {
     url: `${WEBAPP_URL}/settings/teams/${teamId}/profile`,
-    message: "Team published successfully",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 };
 

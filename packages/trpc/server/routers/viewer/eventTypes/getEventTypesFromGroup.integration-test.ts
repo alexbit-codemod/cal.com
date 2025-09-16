@@ -52,7 +52,9 @@ describe("getEventTypesFromGroup", async () => {
   const createManagedEventTypes = async () => {
     const childEventType = await prisma.eventType.create({
       data: {
-        title: "Child Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-event-type",
         schedulingType: null,
         length: 30,
@@ -62,7 +64,9 @@ describe("getEventTypesFromGroup", async () => {
 
     const parentEventType = await prisma.eventType.create({
       data: {
-        title: "Managed Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-event-type",
         schedulingType: SchedulingType.MANAGED,
         length: 30,

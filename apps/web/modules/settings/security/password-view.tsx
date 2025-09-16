@@ -197,22 +197,12 @@ const PasswordView = ({ user }: PasswordViewProps) => {
             )}
             <div className="w-full sm:grid sm:grid-cols-2 sm:gap-x-6">
               <div>
-                <PasswordField {...formMethods.register("oldPassword")} label={t("old_password")} />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
               <div>
-                <PasswordField
-                  {...formMethods.register("newPassword", {
-                    minLength: {
-                      message: t(isUser ? "password_hint_min" : "password_hint_admin_min"),
-                      value: passwordMinLength,
-                    },
-                    pattern: {
-                      message: "Should contain a number, uppercase and lowercase letters",
-                      value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).*$/gm,
-                    },
-                  })}
-                  label={t("new_password")}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             </div>
             <p className="text-default mt-4 w-full text-sm">

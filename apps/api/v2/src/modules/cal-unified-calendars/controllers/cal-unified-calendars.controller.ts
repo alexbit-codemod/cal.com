@@ -37,7 +37,9 @@ export class CalUnifiedCalendarsController {
   @ApiParam({
     name: "eventUid",
     description:
-      "The Google Calendar event ID. You can retrieve this by getting booking references from the following endpoints:\n\n- For team events: https://cal.com/docs/api-reference/v2/orgs-teams-bookings/get-booking-references-for-a-booking\n\n- For user events: https://cal.com/docs/api-reference/v2/bookings/get-booking-references-for-a-booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: String,
   })
   @Get("/:calendar/event/:eventUid")
@@ -47,7 +49,9 @@ export class CalUnifiedCalendarsController {
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @ApiOperation({
     summary: "Get meeting details from calendar",
-    description: "Returns detailed information about a meeting including attendance metrics",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async getCalendarEventDetails(
     @Param("calendar") calendar: string,
@@ -75,7 +79,9 @@ export class CalUnifiedCalendarsController {
   @ApiParam({
     name: "eventUid",
     description:
-      "The Google Calendar event ID. You can retrieve this by getting booking references from the following endpoints:\n\n- For team events: https://cal.com/docs/api-reference/v2/orgs-teams-bookings/get-booking-references-for-a-booking\n\n- For user events: https://cal.com/docs/api-reference/v2/bookings/get-booking-references-for-a-booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: String,
   })
   @Patch("/:calendar/events/:eventUid")
@@ -84,7 +90,9 @@ export class CalUnifiedCalendarsController {
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @ApiOperation({
     summary: "Update meeting details in calendar",
-    description: "Updates event information in the specified calendar provider",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async updateCalendarEvent(
     @Param("calendar") calendar: string,

@@ -155,7 +155,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       await schedulesService.createUserSchedule(user.id, userSchedule);
 
       const event = await eventTypesRepositoryFixture.create(
-        { title: "frisbee match", slug: `slots-2024-09-04-event-type-${randomString()}`, length: 60 },
+        { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , slug: `slots-2024-09-04-event-type-${randomString()}`, length: 60 },
         user.id
       );
       eventTypeId = event.id;
@@ -164,7 +166,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
 
       const seatedEvent = await eventTypesRepositoryFixture.create(
         {
-          title: "peer coding",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: seatedEventTypeSlug,
           length: 60,
           seatsPerTimeSlot: 5,
@@ -178,7 +182,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
 
       const variableLengthEvent = await eventTypesRepositoryFixture.create(
         {
-          title: "frisbee match",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: `slots-2024-09-04-variable-length-event-type-${randomString()}`,
           length: 15,
           metadata: { multipleDuration: [15, 30, 45, 60, 180] },
@@ -790,7 +796,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${eventTypeId}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -835,7 +843,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${seatedEventType.id}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -964,7 +974,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${seatedEventType.id}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -1456,7 +1468,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
         await schedulesService.createUserSchedule(oooTestUser.id, oooUserSchedule);
 
         const event = await eventTypesRepositoryFixture.create(
-          { title: "frisbee match", slug: `slots-2024-09-04-event-type-${randomString()}`, length: 60 },
+          { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          , slug: `slots-2024-09-04-event-type-${randomString()}`, length: 60 },
           oooTestUser.id
         );
         oooTestUserEventType = event;
@@ -1510,7 +1524,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
           const booking = await bookingsRepositoryFixture.create({
             status: "ACCEPTED",
             uid: testBookingUid,
-            title: "booking title",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime,
             endTime: "2050-09-12T12:00:00.000Z",
             eventType: {
@@ -1550,7 +1566,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
           const booking = await bookingsRepositoryFixture.create({
             status: "PENDING",
             uid: testBookingUid,
-            title: "booking title",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime,
             endTime: "2050-09-12T12:00:00.000Z",
             eventType: {
@@ -1590,7 +1608,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
           const booking = await bookingsRepositoryFixture.create({
             status: "AWAITING_HOST",
             uid: testBookingUid,
-            title: "booking title",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime,
             endTime: "2050-09-12T12:00:00.000Z",
             eventType: {
@@ -1632,7 +1652,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
           const booking = await bookingsRepositoryFixture.create({
             status: "CANCELLED",
             uid: testBookingUid,
-            title: "booking title",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime,
             endTime: "2050-09-12T12:00:00.000Z",
             eventType: {
@@ -1681,7 +1703,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
           const booking = await bookingsRepositoryFixture.create({
             status: "REJECTED",
             uid: testBookingUid,
-            title: "booking title",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime,
             endTime: "2050-09-12T12:00:00.000Z",
             eventType: {
@@ -1742,7 +1766,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       const getBookingPayload = (startTime: string, endTime: string) => ({
         status: "ACCEPTED" as const,
         uid: `test-booking-overlap-${randomString()}`,
-        title: "Overlap Test Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime,
         eventType: { connect: { id: eventTypeId } },
@@ -1751,7 +1777,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
         user: { connect: { id: user.id } },
       });
 
-      const expectedErrorMessage = "Can't reserve a slot if the event is already booked.";
+      const expectedErrorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       describe("slot overlaps booking", () => {
         it("should fail if slot reservation (10:00-11:00) starts during an existing booking (09:30-10:30)", async () => {
           const booking = await bookingsRepositoryFixture.create(getBookingPayload(T0930, T1030));

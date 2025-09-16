@@ -48,7 +48,8 @@ describe("Dialog", () => {
         preventCloseOnOutsideClick={props.preventCloseOnOutsideClick}
         enableOverflow={props.enableOverflow}>
         <div className="flex flex-row space-x-4">
-          <DialogHeader title={props.title} subtitle={props.subtitle} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <p>{content}</p>
           <DialogFooter showDivider={props.showDivider}>
             <DialogClose color={props.color}>{props.color ? "Custom Close" : undefined}</DialogClose>

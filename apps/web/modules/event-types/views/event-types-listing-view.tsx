@@ -118,18 +118,8 @@ const InfiniteTeamsTab: FC<InfiniteTeamsTabProps> = (props) => {
 
   return (
     <div>
-      <TextField
-        className="max-w-64"
-        addOnLeading={<Icon name="search" className="text-subtle h-4 w-4" />}
-        containerClassName="max-w-64 focus:!ring-offset-0 mb-4"
-        type="search"
-        value={searchTerm}
-        autoComplete="false"
-        onChange={(e) => {
-          setSearchTerm(e.target.value);
-        }}
-        placeholder={t("search")}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {!!activeEventTypeGroup && (
         <InfiniteEventTypeList
           pages={query?.data?.pages}
@@ -202,7 +192,8 @@ const Item = ({
         {readOnly ? (
           <div>
             {content()}
-            <EventTypeDescription eventType={type} shortenDescription />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         ) : (
           <Link href={`/event-types/${type.id}?tabName=setup`} title={type.title}>
@@ -225,10 +216,8 @@ const Item = ({
                 </Badge>
               )}
             </div>
-            <EventTypeDescription
-              eventType={{ ...type, descriptionAsSafeHTML: type.safeDescription }}
-              shortenDescription
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Link>
         )}
       </div>
@@ -833,17 +822,8 @@ const CreateFirstEventTypeView = ({ slug, searchTerm }: { slug: string; searchTe
   const { t } = useLocale();
 
   return (
-    <EmptyScreen
-      Icon="link"
-      headline={searchTerm ? t("no_result_found_for", { searchTerm }) : t("new_event_type_heading")}
-      description={t("new_event_type_description")}
-      className="mb-16"
-      buttonRaw={
-        <Button href={`?dialog=new&eventPage=${slug}`} variant="button">
-          {t("create")}
-        </Button>
-      }
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };
 

@@ -20,7 +20,9 @@ export function handleCustomInputs(
 }
 
 function validateInput(etcInput: EventTypeCustomInput, value: string | boolean | undefined) {
-  const errorMessage = `Missing ${etcInput.type} customInput: '${etcInput.label}'`;
+  const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
 
   if (etcInput.type === "BOOL") {
     validateBooleanInput(value, errorMessage);
@@ -42,7 +44,9 @@ function validatePhoneInput(value: string | boolean | undefined, errorMessage: s
     errorMap: () => ({ message: errorMessage }),
   })
     .refine((val) => isValidPhoneNumber(val), {
-      message: "Phone number is invalid",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     })
     .parse(value);
 }

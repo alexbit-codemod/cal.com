@@ -29,7 +29,8 @@ export const ResponseEmail = ({
           }}>
           <p style={{ fontWeight: 400, lineHeight: "24px" }}>
             <a href={`${WEBAPP_URL}/routing-forms/form-edit/${form.id}`} style={{ color: "#3e3e3e" }}>
-              <>Manage this form</>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </a>
           </p>
         </div>
@@ -46,7 +47,8 @@ export const ResponseEmail = ({
                 .join(", ")
             : field?.options?.find((opt) => opt.id === fieldResponse.value)?.label || fieldResponse.value;
 
-        return <Info withSpacer key={index} label={fieldResponse.label} description={description} />;
+        return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$;
       })}
     </BaseEmailHtml>
   );

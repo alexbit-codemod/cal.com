@@ -333,13 +333,17 @@ async function createOrganizationAndAddMembersAndTeams({
             },
             eventTypes: [
               {
-                title: "30min",
+                title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
                 slug: "30min",
                 length: 30,
                 _bookings: [
                   {
                     uid: uuid(),
-                    title: "30min",
+                    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    ,
                     startTime: dayjs().add(1, "day").toDate(),
                     endTime: dayjs().add(1, "day").add(30, "minutes").toDate(),
                   },
@@ -473,7 +477,9 @@ async function createOrganizationAndAddMembersAndTeams({
   for (const member of orgMembersInDBWithProfileId) {
     await prisma.eventType.create({
       data: {
-        title: `${member.name} Event`,
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `${member.username}-event`,
         length: 15,
         owner: {
@@ -560,7 +566,9 @@ async function createOrganizationAndAddMembersAndTeams({
     // Create event for each team
     await prisma.eventType.create({
       data: {
-        title: `${team.teamData.name} Event 1`,
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `${team.teamData.slug}-event-1`,
         schedulingType: SchedulingType.ROUND_ROBIN,
         length: 15,
@@ -637,13 +645,17 @@ async function main() {
     },
     eventTypes: [
       {
-        title: "30min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "30min",
         length: 30,
         hidden: true,
       },
       {
-        title: "60min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "60min",
         length: 30,
       },
@@ -660,19 +672,25 @@ async function main() {
     },
     eventTypes: [
       {
-        title: "30min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "30min",
         length: 30,
         _bookings: [
           {
             uid: uuid(),
-            title: "30min",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime: dayjs().add(1, "day").toDate(),
             endTime: dayjs().add(1, "day").add(30, "minutes").toDate(),
           },
           {
             uid: uuid(),
-            title: "30min",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime: dayjs().add(2, "day").toDate(),
             endTime: dayjs().add(2, "day").add(30, "minutes").toDate(),
             status: BookingStatus.PENDING,
@@ -680,7 +698,9 @@ async function main() {
           {
             // hardcode UID so that we can easily test rescheduling in embed
             uid: "qm3kwt3aTnVD7vmP9tiT2f",
-            title: "30min Seeded Booking",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             startTime: dayjs().add(3, "day").toDate(),
             endTime: dayjs().add(3, "day").add(30, "minutes").toDate(),
             status: BookingStatus.PENDING,
@@ -688,12 +708,16 @@ async function main() {
         ],
       },
       {
-        title: "60min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "60min",
         length: 60,
       },
       {
-        title: "Multiple duration",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "multiple-duration",
         length: 75,
         metadata: {
@@ -701,44 +725,58 @@ async function main() {
         },
       },
       {
-        title: "paid",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "paid",
         length: 60,
         price: 100,
       },
       {
-        title: "In person meeting",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "in-person",
         length: 60,
         locations: [{ type: "inPerson", address: "London" }],
       },
       {
-        title: "Zoom Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "zoom",
         length: 60,
         locations: [{ type: zoomMeta.appData?.location?.type }],
       },
       {
-        title: "Daily Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "daily",
         length: 60,
         locations: [{ type: dailyMeta.appData?.location?.type }],
       },
       {
-        title: "Google Meet",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "google-meet",
         length: 60,
         locations: [{ type: googleMeetMeta.appData?.location?.type }],
       },
       {
-        title: "Yoga class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "yoga-class",
         length: 30,
         recurringEvent: { freq: 2, count: 12, interval: 1 },
         _bookings: [
           {
             uid: uuid(),
-            title: "Yoga class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("yoga-class").toString("base64"),
             startTime: dayjs().add(1, "day").toDate(),
             endTime: dayjs().add(1, "day").add(30, "minutes").toDate(),
@@ -746,7 +784,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Yoga class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("yoga-class").toString("base64"),
             startTime: dayjs().add(1, "day").add(1, "week").toDate(),
             endTime: dayjs().add(1, "day").add(1, "week").add(30, "minutes").toDate(),
@@ -754,7 +794,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Yoga class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("yoga-class").toString("base64"),
             startTime: dayjs().add(1, "day").add(2, "week").toDate(),
             endTime: dayjs().add(1, "day").add(2, "week").add(30, "minutes").toDate(),
@@ -762,7 +804,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Yoga class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("yoga-class").toString("base64"),
             startTime: dayjs().add(1, "day").add(3, "week").toDate(),
             endTime: dayjs().add(1, "day").add(3, "week").add(30, "minutes").toDate(),
@@ -770,7 +814,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Yoga class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("yoga-class").toString("base64"),
             startTime: dayjs().add(1, "day").add(4, "week").toDate(),
             endTime: dayjs().add(1, "day").add(4, "week").add(30, "minutes").toDate(),
@@ -778,7 +824,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Yoga class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("yoga-class").toString("base64"),
             startTime: dayjs().add(1, "day").add(5, "week").toDate(),
             endTime: dayjs().add(1, "day").add(5, "week").add(30, "minutes").toDate(),
@@ -786,8 +834,12 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Seeded Yoga class",
-            description: "seeded",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
             startTime: dayjs().subtract(4, "day").toDate(),
             endTime: dayjs().subtract(4, "day").add(30, "minutes").toDate(),
@@ -795,8 +847,12 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Seeded Yoga class",
-            description: "seeded",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
             startTime: dayjs().subtract(4, "day").add(1, "week").toDate(),
             endTime: dayjs().subtract(4, "day").add(1, "week").add(30, "minutes").toDate(),
@@ -804,8 +860,12 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Seeded Yoga class",
-            description: "seeded",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
             startTime: dayjs().subtract(4, "day").add(2, "week").toDate(),
             endTime: dayjs().subtract(4, "day").add(2, "week").add(30, "minutes").toDate(),
@@ -813,8 +873,12 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Seeded Yoga class",
-            description: "seeded",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("seeded-yoga-class").toString("base64"),
             startTime: dayjs().subtract(4, "day").add(3, "week").toDate(),
             endTime: dayjs().subtract(4, "day").add(3, "week").add(30, "minutes").toDate(),
@@ -823,7 +887,9 @@ async function main() {
         ],
       },
       {
-        title: "Tennis class",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "tennis-class",
         length: 60,
         recurringEvent: { freq: 2, count: 10, interval: 2 },
@@ -831,7 +897,9 @@ async function main() {
         _bookings: [
           {
             uid: uuid(),
-            title: "Tennis class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("tennis-class").toString("base64"),
             startTime: dayjs().add(2, "day").toDate(),
             endTime: dayjs().add(2, "day").add(60, "minutes").toDate(),
@@ -839,7 +907,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Tennis class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("tennis-class").toString("base64"),
             startTime: dayjs().add(2, "day").add(2, "week").toDate(),
             endTime: dayjs().add(2, "day").add(2, "week").add(60, "minutes").toDate(),
@@ -847,7 +917,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Tennis class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("tennis-class").toString("base64"),
             startTime: dayjs().add(2, "day").add(4, "week").toDate(),
             endTime: dayjs().add(2, "day").add(4, "week").add(60, "minutes").toDate(),
@@ -855,7 +927,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Tennis class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("tennis-class").toString("base64"),
             startTime: dayjs().add(2, "day").add(8, "week").toDate(),
             endTime: dayjs().add(2, "day").add(8, "week").add(60, "minutes").toDate(),
@@ -863,7 +937,9 @@ async function main() {
           },
           {
             uid: uuid(),
-            title: "Tennis class",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             recurringEventId: Buffer.from("tennis-class").toString("base64"),
             startTime: dayjs().add(2, "day").add(10, "week").toDate(),
             endTime: dayjs().add(2, "day").add(10, "week").add(60, "minutes").toDate(),
@@ -883,12 +959,16 @@ async function main() {
     },
     eventTypes: [
       {
-        title: "30min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "30min",
         length: 30,
       },
       {
-        title: "60min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "60min",
         length: 60,
       },
@@ -904,12 +984,16 @@ async function main() {
     },
     eventTypes: [
       {
-        title: "30min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "30min",
         length: 30,
       },
       {
-        title: "60min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "60min",
         length: 30,
       },
@@ -926,7 +1010,9 @@ async function main() {
     },
     eventTypes: [
       {
-        title: "30min",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "30min",
         length: 30,
       },
@@ -972,13 +1058,17 @@ async function main() {
         createMany: {
           data: [
             {
-              title: "Collective Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "collective-seeded-team-event",
               length: 15,
               schedulingType: "COLLECTIVE",
             },
             {
-              title: "Round Robin Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "round-robin-seeded-team-event",
               length: 15,
               schedulingType: "ROUND_ROBIN",
@@ -1035,7 +1125,9 @@ async function main() {
       },
       eventTypes: [
         {
-          title: "15min",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "15min",
           length: 15,
         },
@@ -1060,13 +1152,17 @@ async function main() {
         createMany: {
           data: [
             {
-              title: "Collective Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "collective-seeded-team-event",
               length: 15,
               schedulingType: "COLLECTIVE",
             },
             {
-              title: "Round Robin Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "round-robin-seeded-team-event",
               length: 15,
               schedulingType: "ROUND_ROBIN",
@@ -1109,13 +1205,17 @@ async function main() {
         createMany: {
           data: [
             {
-              title: "Collective Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "collective-seeded-team-event",
               length: 15,
               schedulingType: "COLLECTIVE",
             },
             {
-              title: "Round Robin Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "round-robin-seeded-team-event",
               length: 15,
               schedulingType: "ROUND_ROBIN",
@@ -1158,13 +1258,17 @@ async function main() {
         createMany: {
           data: [
             {
-              title: "Collective Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "collective-seeded-team-event",
               length: 15,
               schedulingType: "COLLECTIVE",
             },
             {
-              title: "Round Robin Seeded Team Event",
+              title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               slug: "round-robin-seeded-team-event",
               length: 15,
               schedulingType: "ROUND_ROBIN",

@@ -158,7 +158,8 @@ const PlainContactForm = () => {
           style={{ maxWidth: "450px", maxHeight: "650px" }}
           className="!bg-muted no-scrollbar mb-2 mr-8 w-[450px] overflow-hidden overflow-y-scroll px-6 py-4">
           <div className="flex w-full justify-between">
-            <p className="mb-5 text-lg font-semibold">Contact support</p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Button
               color="minimal"
               variant="button"
@@ -171,30 +172,24 @@ const PlainContactForm = () => {
           <div>
             {isSubmitted ? (
               <div className="py-4 text-center">
-                <h4 className="mb-2 text-lg font-medium ">Message Sent</h4>
-                <p className="text-subtle mb-4 text-sm">
-                  Thank you for contacting us. We&apos;ll get back to you as soon as possible.
-                </p>
-                <Button color="primary" className="my-2" onClick={resetForm} variant="button" size="base">
-                  Send Another Message
-                </Button>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div>
-                  <Label htmlFor="message">Describe the issue</Label>
-                  <TextArea
-                    id="message"
-                    name="message"
-                    value={data.message}
-                    onChange={(e) => setData((prev) => ({ ...prev, message: e.target.value }))}
-                    placeholder="Please describe the issue you're facing, e.g. 'Busy slots are marked available', ..., etc."
-                    required
-                    rows={4}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <div>
-                  <Label>Attachments (optional)</Label>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <FileUploader
                     id="contact-attachments"
                     buttonMsg="Add Files"
@@ -218,15 +213,11 @@ const PlainContactForm = () => {
                     className="w-full">
                     <div className="flex w-full justify-center">
                       {isSubmitting ? (
-                        <div className="flex items-center">
-                          <Icon name="loader" className="mr-2 h-4 w-4 animate-spin rounded-full" />
-                          Sending
-                        </div>
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       ) : (
-                        <>
-                          <Icon name="send" className="mr-2 h-4 w-4" />
-                          Send Message
-                        </>
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       )}
                     </div>
                   </Button>

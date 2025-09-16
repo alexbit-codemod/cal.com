@@ -47,7 +47,9 @@ export const createBookingsFixture = (page: Page, workerInfo: WorkerInfo) => {
       const booking = await prisma.booking.create({
         data: {
           uid: uid,
-          title: title || "30min",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: startTime || startDate,
           endTime: endTime || endDateParam || dayjs().add(1, "day").add(30, "minutes").toDate(),
           user: {

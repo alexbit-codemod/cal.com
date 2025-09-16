@@ -323,15 +323,8 @@ const ProfileView = ({ user }: Props) => {
             <div className="mb-10">
               <p className="text-subtle mb-4 text-sm">{t("delete_account_confirmation_message")}</p>
               {isCALIdentityProvider && (
-                <PasswordField
-                  data-testid="password"
-                  name="password"
-                  id="password"
-                  autoComplete="current-password"
-                  required
-                  label="Password"
-                  ref={passwordRef}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
 
               {user?.twoFactorEnabled && isCALIdentityProvider && (
@@ -340,7 +333,8 @@ const ProfileView = ({ user }: Props) => {
                 </Form>
               )}
 
-              {hasDeleteErrors && <Alert severity="error" title={deleteErrorMessage} />}
+              {hasDeleteErrors && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$}
             </div>
             <DialogFooter showDivider>
               <DialogClose />
@@ -378,17 +372,11 @@ const ProfileView = ({ user }: Props) => {
                 <p className="text-subtle leading-none">{tempFormValues?.email}</p>
               </div>
             </div>
-            <PasswordField
-              data-testid="password"
-              name="password"
-              id="password"
-              autoComplete="current-password"
-              required
-              label="Password"
-              ref={passwordRef}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
-            {confirmPasswordErrorMessage && <Alert severity="error" title={confirmPasswordErrorMessage} />}
+            {confirmPasswordErrorMessage && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$}
           </div>
           <DialogFooter showDivider>
             <Button
@@ -643,7 +631,8 @@ const ProfileForm = ({
           <span className="flex-1">{t("tip_username_plus")}</span>
         </p>
         <div className="mt-6">
-          <TextField label={t("full_name")} {...formMethods.register("name")} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="mt-6">
           <Label>{t("email")}</Label>
@@ -685,17 +674,8 @@ const ProfileForm = ({
         </div>
         <div className="mt-6">
           <Label>{t("about")}</Label>
-          <Editor
-            getText={() => md.render(formMethods.getValues("bio") || "")}
-            setText={(value: string) => {
-              formMethods.setValue("bio", turndown(value), { shouldDirty: true });
-            }}
-            excludedToolbarItems={["blockType"]}
-            disableLists
-            firstRender={firstRender}
-            setFirstRender={setFirstRender}
-            height="120px"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         {usersAttributes && usersAttributes?.length > 0 && (
           <div className="mt-6 flex flex-col">
@@ -703,17 +683,8 @@ const ProfileForm = ({
             <div className="flex flex-col space-y-4">
               {usersAttributes.map((attribute, index) => (
                 <>
-                  <DisplayInfo
-                    key={index}
-                    label={attribute.name}
-                    labelClassname="font-normal text-sm text-subtle"
-                    valueClassname="text-emphasis inline-flex items-center gap-1 font-normal text-sm leading-5"
-                    value={
-                      ["TEXT", "NUMBER", "SINGLE_SELECT"].includes(attribute.type)
-                        ? attribute.options[0].value
-                        : attribute.options.map((option) => option.value)
-                    }
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </>
               ))}
             </div>
@@ -723,7 +694,8 @@ const ProfileForm = ({
         so essentially there's no point in allowing them to disconnect, since when they log in they will get logged into the same account */}
         {!isCALIdentityProvider && user.email !== user.identityProviderEmail && (
           <div className="mt-6">
-            <Label>Connected accounts</Label>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div className="flex items-center">
               <span className="text-default text-sm capitalize">{user.identityProvider.toLowerCase()}</span>
               {user.identityProviderEmail && (

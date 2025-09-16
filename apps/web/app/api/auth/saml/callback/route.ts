@@ -25,14 +25,20 @@ async function handler(req: NextRequest) {
     if (error) {
       const uid = uuid();
       log.error(`Error authenticating user with error ${error} for relayState ${requestData?.RelayState}`);
-      return NextResponse.json({ message: `Error authorizing user. trace: ${uid}` }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
     }
   } catch (error) {
     log.error(`Error processing SAML response`, error);
-    return NextResponse.json({ message: `Error processing SAML response. trace: ${uid}` }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
   }
 
-  return NextResponse.json({ message: "No redirect URL provided" }, { status: 400 });
+  return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }, { status: 400 });
 }
 
 export const POST = defaultResponderForAppDir(handler);

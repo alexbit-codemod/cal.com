@@ -101,7 +101,9 @@ async function getHandler(req: NextApiRequest) {
   const { userId, isSystemWideAdmin } = req;
 
   if (!isSystemWideAdmin && req.query.userId)
-    throw new HttpError({ statusCode: 403, message: "ADMIN required" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const userIds = req.query.userId ? extractUserIdsFromQuery(req) : [userId];
 

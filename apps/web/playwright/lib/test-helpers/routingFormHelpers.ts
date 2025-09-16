@@ -320,34 +320,44 @@ export async function createRoutingForm(config: CreateRoutingFormConfig) {
           {
             id: form.formFieldLocation.id,
             type: "select",
-            label: "Location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             options: formFieldLocationOptions,
             required: true,
           },
           {
             id: form.formFieldSkills.id,
             type: "multiselect",
-            label: "skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             options: formFieldSkillsOptions,
             required: true,
           },
           {
             id: form.formFieldEmail.id,
             type: "email",
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
           },
           {
             id: form.formFieldName.id,
             identifier: "name",
             type: "text",
-            label: "Name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: false,
           },
           {
             id: form.formFieldRating.id,
             type: "number",
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: false,
           },
         ],
@@ -491,13 +501,17 @@ export async function createRoutingForm(config: CreateRoutingFormConfig) {
           {
             id: "c4296635-9f12-47b1-8153-c3a854649182",
             type: "text",
-            label: "Test field",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
           },
           {
             id: multiSelectLegacyFieldUuid,
             type: "multiselect",
-            label: "Multi Select(with Legacy `selectText`)",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             identifier: "multi",
             selectText: "Option-1\nOption-2",
             required: false,
@@ -505,7 +519,9 @@ export async function createRoutingForm(config: CreateRoutingFormConfig) {
           {
             id: multiSelectFieldUuid,
             type: "multiselect",
-            label: "Multi Select",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             identifier: "multi-new-format",
             options: [
               {
@@ -522,7 +538,9 @@ export async function createRoutingForm(config: CreateRoutingFormConfig) {
           {
             id: legacySelectFieldUuid,
             type: "select",
-            label: "Legacy Select",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             identifier: "test-select",
             selectText: "Option-1\nOption-2",
             required: false,
@@ -530,7 +548,9 @@ export async function createRoutingForm(config: CreateRoutingFormConfig) {
           {
             id: selectFieldUuid,
             type: "select",
-            label: "Select",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             identifier: "test-select-new-format",
             options: [
               {

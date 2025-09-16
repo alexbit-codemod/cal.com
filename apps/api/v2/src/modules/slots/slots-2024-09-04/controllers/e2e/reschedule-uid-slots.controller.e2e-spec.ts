@@ -79,7 +79,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
 
       const event = await eventTypesRepositoryFixture.create(
         {
-          title: "reschedule test meeting",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: `reschedule-uid-event-type-${randomString()}`,
           length: 60,
         },
@@ -91,7 +93,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       // Create an existing booking that will be used for reschedule testing
       existingBooking = await bookingsRepositoryFixture.create({
         uid: `reschedule-booking-uid-${randomString()}`,
-        title: "existing booking for reschedule",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: bookedStartTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {

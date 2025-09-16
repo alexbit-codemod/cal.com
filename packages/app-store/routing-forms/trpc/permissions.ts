@@ -24,7 +24,9 @@ export async function checkPermissionOnExistingRoutingForm({
   if (!form) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Form not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -32,7 +34,9 @@ export async function checkPermissionOnExistingRoutingForm({
   if (!form.teamId && form.userId !== userId) {
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "You don't have permission to this personal-scoped routing form",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -49,7 +53,9 @@ export async function checkPermissionOnExistingRoutingForm({
     if (!hasPermission) {
       throw new TRPCError({
         code: "FORBIDDEN",
-        message: `You don't have "${permission}" permission for this routing form`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }

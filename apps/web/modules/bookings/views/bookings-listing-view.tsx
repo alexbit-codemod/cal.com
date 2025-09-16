@@ -386,7 +386,8 @@ function BookingsContent({ status }: BookingsProps) {
       <main className="w-full">
         <div className="flex w-full flex-col">
           {query.status === "error" && (
-            <Alert severity="error" title={t("something_went_wrong")} message={query.error.message} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
           {query.status !== "error" && (
             <>
@@ -419,14 +420,8 @@ function BookingsContent({ status }: BookingsProps) {
                 LoaderView={<SkeletonLoader />}
                 EmptyView={
                   <div className="flex items-center justify-center pt-2 xl:pt-0">
-                    <EmptyScreen
-                      Icon="calendar"
-                      headline={t("no_status_bookings_yet", { status: t(status).toLowerCase() })}
-                      description={t("no_status_bookings_yet_description", {
-                        status: t(status).toLowerCase(),
-                        description: t(descriptionByStatus[status]),
-                      })}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 }
               />

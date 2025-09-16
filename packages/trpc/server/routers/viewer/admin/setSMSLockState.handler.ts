@@ -17,7 +17,9 @@ const setSMSLockState = async ({ input }: GetOptions) => {
   const { userId, username, teamId, teamSlug, lock } = input;
   if (userId) {
     const userToUpdate = await prisma.user.findUnique({ where: { id: userId } });
-    if (!userToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: "User not found" });
+    if (!userToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const updatedUser = await prisma.user.update({
       where: {
         id: userId,
@@ -35,7 +37,9 @@ const setSMSLockState = async ({ input }: GetOptions) => {
         profiles: { none: {} },
       },
     });
-    if (!userToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: "User not found" });
+    if (!userToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const updatedUser = await prisma.user.update({
       where: {
         id: userToUpdate.id,
@@ -52,7 +56,9 @@ const setSMSLockState = async ({ input }: GetOptions) => {
         id: teamId,
       },
     });
-    if (!teamToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: "Team not found" });
+    if (!teamToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const updatedTeam = await prisma.team.update({
       where: {
         id: teamId,
@@ -70,7 +76,9 @@ const setSMSLockState = async ({ input }: GetOptions) => {
         parentId: null,
       },
     });
-    if (!teamToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: "Team not found" });
+    if (!teamToUpdate) throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const updatedTeam = await prisma.team.update({
       where: {
         id: teamToUpdate.id,
@@ -82,7 +90,9 @@ const setSMSLockState = async ({ input }: GetOptions) => {
     });
     return { name: updatedTeam.slug, locked: lock };
   }
-  throw new TRPCError({ code: "BAD_REQUEST", message: "Input data missing" });
+  throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 };
 
 export default setSMSLockState;

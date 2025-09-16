@@ -78,7 +78,9 @@ import {
 @DocsTags("Bookings")
 @ApiHeader({
   name: "cal-api-version",
-  description: `Must be set to ${VERSION_2024_08_13}`,
+  description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   example: VERSION_2024_08_13,
   required: true,
   schema: {
@@ -98,26 +100,9 @@ export class BookingsController_2024_08_13 {
   @Post("/")
   @ApiOperation({
     summary: "Create a booking",
-    description: `
-      POST /v2/bookings is used to create regular bookings, recurring bookings and instant bookings. The request bodies for all 3 are almost the same except:
-      If eventTypeId in the request body is id of a regular event, then regular booking is created.
-
-      If it is an id of a recurring event type, then recurring booking is created.
-
-      Meaning that the request bodies are equal but the outcome depends on what kind of event type it is with the goal of making it as seamless for developers as possible.
-
-      For team event types it is possible to create instant meeting. To do that just pass \`"instant": true\` to the request body.
-
-      The start needs to be in UTC aka if the timezone is GMT+2 in Rome and meeting should start at 11, then UTC time should have hours 09:00 aka without time zone.
-
-      Finally, there are 2 ways to book an event type belonging to an individual user:
-      1. Provide \`eventTypeId\` in the request body.
-      2. Provide \`eventTypeSlug\` and \`username\` and optionally \`organizationSlug\` if the user with the username is within an organization.
-
-      And 2 ways to book and event type belonging to a team:
-      1. Provide \`eventTypeId\` in the request body.
-      2. Provide \`eventTypeSlug\` and \`teamSlug\` and optionally \`organizationSlug\` if the team with the teamSlug is within an organization.
-      `,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiBody({
     schema: {
@@ -128,7 +113,9 @@ export class BookingsController_2024_08_13 {
       ],
     },
     description:
-      "Accepts different types of booking input: Create Booking (Option 1), Create Instant Booking (Option 2), or Create Recurring Booking (Option 3)",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @ApiExtraModels(
     CreateBookingInput_2024_08_13,
@@ -158,13 +145,9 @@ export class BookingsController_2024_08_13 {
   @UseGuards(BookingUidGuard)
   @ApiOperation({
     summary: "Get a booking",
-    description: `\`:bookingUid\` can be
-
-      1. uid of a normal booking
-
-      2. uid of one of the recurring booking recurrences
-
-      3. uid of recurring booking which will return an array of all recurring booking recurrences (stored as recurringBookingUid on one of the individual recurrences).`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async getBooking(@Param("bookingUid") bookingUid: string): Promise<GetBookingOutput_2024_08_13> {
     const booking = await this.bookingsService.getBooking(bookingUid);
@@ -179,7 +162,9 @@ export class BookingsController_2024_08_13 {
   @UseGuards(BookingUidGuard)
   @ApiOperation({
     summary: "Get all the recordings for the booking",
-    description: `Fetches all the recordings for the booking \`:bookingUid\``,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async getBookingRecordings(@Param("bookingUid") bookingUid: string): Promise<GetBookingRecordingsOutput> {
     const recordings = await this.calVideoService.getRecordings(bookingUid);
@@ -194,7 +179,9 @@ export class BookingsController_2024_08_13 {
   @UseGuards(BookingUidGuard)
   @ApiOperation({
     summary: "Get all the transcripts download links for the booking",
-    description: `Fetches all the transcripts download links for the booking \`:bookingUid\``,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async getBookingTranscripts(@Param("bookingUid") bookingUid: string): Promise<GetBookingTranscriptsOutput> {
     const transcripts = await this.calVideoService.getTranscripts(bookingUid);
@@ -233,7 +220,9 @@ export class BookingsController_2024_08_13 {
   @UseGuards(BookingUidGuard)
   @ApiOperation({
     summary: "Reschedule a booking",
-    description: "Reschedule a booking or seated booking",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiBody({
     schema: {
@@ -243,7 +232,9 @@ export class BookingsController_2024_08_13 {
       ],
     },
     description:
-      "Accepts different types of reschedule booking input: Reschedule Booking (Option 1) or Reschedule Seated Booking (Option 2)",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @ApiExtraModels(RescheduleBookingInput_2024_08_13, RescheduleSeatedBookingInput_2024_08_13)
   async rescheduleBooking(
@@ -266,16 +257,9 @@ export class BookingsController_2024_08_13 {
   @HttpCode(HttpStatus.OK)
   @ApiOperation({
     summary: "Cancel a booking",
-    description: `:bookingUid can be :bookingUid of an usual booking, individual recurrence or recurring booking to cancel all recurrences.
-    
-    \nCancelling seated bookings:
-    It is possible to cancel specific seat within a booking as an attendee or all of the seats as the host.
-    \n1. As an attendee - provide :bookingUid in the request URL \`/bookings/:bookingUid/cancel\` and seatUid in the request body \`{"seatUid": "123-123-123"}\` . This will remove this particular attendance from the booking.
-    \n2. As the host - host can cancel booking for all attendees aka for every seat. Provide :bookingUid in the request URL \`/bookings/:bookingUid/cancel\` and cancellationReason in the request body \`{"cancellationReason": "Will travel"}\` and \`Authorization: Bearer token\` request header where token is event type owner (host) credential. This will cancel the booking for all attendees.
-    
-    \nCancelling recurring seated bookings:
-    For recurring seated bookings it is not possible to cancel all of them with 1 call
-    like with non-seated recurring bookings by providing recurring bookind uid - you have to cancel each recurrence booking by its bookingUid + seatUid.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiBody({
     schema: {
@@ -285,7 +269,9 @@ export class BookingsController_2024_08_13 {
       ],
     },
     description:
-      "Accepts different types of cancel booking input: Cancel Booking (Option 1) or Cancel Seated Booking (Option 2)",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @ApiExtraModels(CancelBookingInput_2024_08_13, CancelSeatedBookingInput_2024_08_13)
   async cancelBooking(
@@ -309,7 +295,9 @@ export class BookingsController_2024_08_13 {
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @ApiOperation({
     summary: "Mark a booking absence",
-    description: "The provided authorization header refers to the owner of the booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async markNoShow(
     @Param("bookingUid") bookingUid: string,
@@ -332,7 +320,9 @@ export class BookingsController_2024_08_13 {
   @ApiOperation({
     summary: "Reassign a booking to auto-selected host",
     description:
-      "Currently only supports reassigning host for round robin bookings. The provided authorization header refers to the owner of the booking.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   async reassignBooking(
     @Param("bookingUid") bookingUid: string,
@@ -354,7 +344,9 @@ export class BookingsController_2024_08_13 {
   @ApiOperation({
     summary: "Reassign a booking to a specific host",
     description:
-      "Currently only supports reassigning host for round robin bookings. The provided authorization header refers to the owner of the booking.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   async reassignBookingToUser(
     @Param("bookingUid") bookingUid: string,
@@ -382,7 +374,9 @@ export class BookingsController_2024_08_13 {
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @ApiOperation({
     summary: "Confirm a booking",
-    description: "The provided authorization header refers to the owner of the booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async confirmBooking(
     @Param("bookingUid") bookingUid: string,
@@ -403,7 +397,9 @@ export class BookingsController_2024_08_13 {
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @ApiOperation({
     summary: "Decline a booking",
-    description: "The provided authorization header refers to the owner of the booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async declineBooking(
     @Param("bookingUid") bookingUid: string,
@@ -425,7 +421,9 @@ export class BookingsController_2024_08_13 {
   @ApiOperation({
     summary: "Get 'Add to Calendar' links for a booking",
     description:
-      "Retrieve calendar links for a booking that can be used to add the event to various calendar services. Returns links for Google Calendar, Microsoft Office, Microsoft Outlook, and a downloadable ICS file.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @HttpCode(HttpStatus.OK)
   async getCalendarLinks(@Param("bookingUid") bookingUid: string): Promise<CalendarLinksOutput_2024_08_13> {

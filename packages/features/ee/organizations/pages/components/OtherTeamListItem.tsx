@@ -40,12 +40,8 @@ export default function OtherTeamListItem(props: Props) {
 
   const teamInfo = (
     <div className="item-center flex px-5 py-5">
-      <Avatar
-        size="md"
-        imageSrc={getPlaceholderAvatar(team.logoUrl, team.name)}
-        alt="Team Logo"
-        className="inline-flex justify-center"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div className="ms-3 inline-block truncate">
         <span className="text-default text-sm font-bold">{team.name}</span>
         <span className="text-muted block text-xs">

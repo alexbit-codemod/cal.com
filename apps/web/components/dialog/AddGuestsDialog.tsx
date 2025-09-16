@@ -61,14 +61,11 @@ export const AddGuestsDialog = (props: IAddGuestsDialog) => {
             <Icon name="user-plus" className="m-auto h-6 w-6" />
           </div>
           <div className="w-full pt-1">
-            <DialogHeader title={t("additional_guests")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div className="bg-default">
-              <MultiEmail
-                label={t("add_emails")}
-                value={multiEmailValue}
-                readOnly={false}
-                setValue={setMultiEmailValue}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
 
             {isInvalidEmail && (

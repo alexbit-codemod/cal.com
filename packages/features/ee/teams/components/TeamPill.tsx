@@ -38,5 +38,6 @@ export function TeamRole(props: TeamRoleProps) {
     [MembershipRole.ADMIN]: "red",
     [MembershipRole.MEMBER]: undefined,
   };
-  return <TeamPill text={t(role.toLowerCase())} color={keys[role]} {...rest} />;
+  return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$;
 }

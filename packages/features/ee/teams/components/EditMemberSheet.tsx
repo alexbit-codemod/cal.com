@@ -163,12 +163,14 @@ export function EditMemberSheet({
       externalId ? (
         <div className="ltr:mr-2 rtl:ml-2 ">
           <Tooltip content={externalId}>
-            <img className="h-5 w-5" src={logo} alt={`${name} logo`} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Tooltip>
         </div>
       ) : (
         <div className="ltr:mr-2 rtl:ml-2">
-          <img className="h-5 w-5" src={logo} alt={`${name} logo`} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )
     ) : null;
@@ -194,7 +196,8 @@ export function EditMemberSheet({
                   }}
                 />
                 <div className="bg-default ml-3 w-fit translate-y-[-50%] rounded-full p-1 ring-1 ring-[#0000000F]">
-                  <Avatar asChild size="lg" alt={`${name} avatar`} imageSrc={selectedUser.avatarUrl} />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <Skeleton as="p" waitForTranslation={false}>
                   <h2 className="text-emphasis font-sans text-2xl font-semibold">
@@ -211,14 +214,13 @@ export function EditMemberSheet({
             <SheetBody className="flex flex-col space-y-4 p-4">
               <div className="mb-4 flex flex-col space-y-4">
                 <h3 className="text-emphasis mb-1 text-base font-semibold">{t("profile")}</h3>
-                <DisplayInfo label="Cal" value={bookingLink} icon="external-link" />
-                <DisplayInfo label={t("email")} value={selectedUser.email} icon="at-sign" />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 {!editMode ? (
-                  <DisplayInfo
-                    label={t("role")}
-                    value={[selectedUser.customRole?.name || selectedUser.role]}
-                    icon="fingerprint"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 ) : (
                   <div className="flex items-center gap-6">
                     <div className="flex w-[110px] items-center gap-2">
@@ -227,18 +229,8 @@ export function EditMemberSheet({
                     </div>
                     <div className="flex flex-1">
                       {shouldUseSelect ? (
-                        <Select
-                          value={options.find((option) => option.value === form.watch("role"))}
-                          onChange={(selectedOption: any) => {
-                            if (selectedOption) {
-                              form.setValue("role", selectedOption.value);
-                            }
-                          }}
-                          options={options}
-                          isDisabled={isLoadingRoles}
-                          placeholder={isLoadingRoles ? t("loading") : t("select_role")}
-                          className="flex-1"
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       ) : (
                         <ToggleGroup
                           isFullWidth

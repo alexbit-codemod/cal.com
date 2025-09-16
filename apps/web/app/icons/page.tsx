@@ -35,13 +35,10 @@ export default async function IconsPage() {
         <IconSprites />
         <div className="bg-default m-auto min-w-full rounded-md p-10 text-right ltr:text-left">
           <h1 className="text-emphasis font-cal text-2xl font-medium">{t("icons_showcase")}</h1>
-          <IconGrid title="Regular Icons" icons={icons} />
-          <IconGrid
-            title="Filled Icons"
-            icons={icons}
-            rootClassName="bg-inverted text-inverted"
-            iconClassName="fill-blue-500"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
     </div>

@@ -10,14 +10,8 @@ export const CustomIconColorExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="not-prose space-y-4">
       {severities.map((severity) => (
-        <Alert
-          key={severity}
-          severity={severity}
-          CustomIcon="bell"
-          customIconColor="text-emphasis"
-          title={`${severity.charAt(0).toUpperCase() + severity.slice(1)} Alert with Custom Icon Color`}
-          message="This alert uses a custom icon color."
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       ))}
     </div>
   </RenderComponentWithSnippet>

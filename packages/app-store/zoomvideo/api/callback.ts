@@ -27,7 +27,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   );
 
   if (result.status !== 200) {
-    let errorMessage = "Something is wrong with Zoom API";
+    let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     try {
       const responseBody = await result.json();
       errorMessage = responseBody.error;
@@ -51,7 +53,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const userId = req.session?.user.id;
   if (!userId) {
-    return res.status(404).json({ message: "No user found" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   /**
    * With this we take care of no duplicate zoom_video key for a single user

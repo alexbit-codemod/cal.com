@@ -33,7 +33,9 @@ export class GetBookingsOutput_2024_08_13 {
       ],
     },
     description:
-      "Array of booking data, which can contain either BookingOutput objects or RecurringBookingOutput objects",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   data!: (
     | BookingOutput_2024_08_13

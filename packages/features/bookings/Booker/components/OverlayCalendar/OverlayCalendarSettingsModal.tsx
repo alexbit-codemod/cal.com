@@ -65,19 +65,15 @@ export function OverlayCalendarSettingsModal({
             ) : (
               <>
                 {connectedCalendars.length === 0 ? (
-                  <EmptyScreen
-                    Icon="calendar"
-                    headline={t("no_calendar_installed")}
-                    description={t("no_calendar_installed_description")}
-                    buttonText={t("add_a_calendar")}
-                    buttonOnClick={onClickNoCalendar}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 ) : (
                   <>
                     {connectedCalendars.map((item) => (
                       <Fragment key={item.credentialId}>
                         {item.error && !item.calendars && (
-                          <Alert severity="error" title={item.error.message} />
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                         )}
                         {item?.error === undefined && item.calendars && (
                           <ListItem className="flex-col rounded-md">
@@ -85,18 +81,8 @@ export function OverlayCalendarSettingsModal({
                               {
                                 // eslint-disable-next-line @next/next/no-img-element
                                 item.integration.logo && (
-                                  <img
-                                    className={classNames(
-                                      "h-10 w-10",
-                                      item.integration.logo.includes("-dark") && "dark:invert"
-                                    )}
-                                    src={
-                                      isPlatform
-                                        ? `https://app.cal.com${item.integration.logo}`
-                                        : item.integration.logo
-                                    }
-                                    alt={`${item.integration.title} logo`}
-                                  />
+                                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                                  $$$
                                 )
                               }
                               <div className="flex-grow truncate pl-2">

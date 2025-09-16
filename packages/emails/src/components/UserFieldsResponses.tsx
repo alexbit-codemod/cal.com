@@ -14,19 +14,8 @@ export function UserFieldsResponses(props: { calEvent: CalendarEvent; t: TFuncti
     <>
       {Object.keys(labelValueMap).map((key) =>
         labelValueMap[key] !== "" ? (
-          <Info
-            key={key}
-            label={t(key)}
-            description={
-              typeof labelValueMap[key] === "boolean"
-                ? labelValueMap[key]
-                  ? t("yes")
-                  : t("no")
-                : `${labelValueMap[key] ? labelValueMap[key] : ""}`
-            }
-            withSpacer
-            isLabelHTML
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : null
       )}
     </>

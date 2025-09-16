@@ -62,31 +62,14 @@ export function BulkEditDefaultForEventsModal({
           <div className="flex flex-col space-y-2">
             {eventTypes.length > 0 && (
               <div className="flex items-center space-x-2 rounded-md px-3 pb-2.5 pt-1">
-                <CheckboxField
-                  description={t("select_all")}
-                  descriptionAsLabel
-                  onChange={(e) => {
-                    form.setValue("eventTypeIds", e.target.checked ? eventTypes.map((e) => e.id) : []);
-                  }}
-                  checked={eventTypesSelected.length === eventTypes.length}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
             {eventTypes.map((eventType) => (
               <div key={eventType.id} className="bg-muted flex items-center space-x-2 rounded-md px-3 py-2.5">
-                <CheckboxField
-                  description={eventType.title}
-                  descriptionAsLabel
-                  checked={eventTypesSelected.includes(eventType.id)}
-                  onChange={(e) => {
-                    form.setValue(
-                      "eventTypeIds",
-                      e.target.checked
-                        ? [...eventTypesSelected, eventType.id]
-                        : eventTypesSelected.filter((id) => id !== eventType.id)
-                    );
-                  }}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             ))}
           </div>

@@ -21,7 +21,9 @@ export const getHashedLinkHandler = async ({ ctx, input }: GetHashedLinkOptions)
   if (!linkId) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Missing link ID",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -32,7 +34,9 @@ export const getHashedLinkHandler = async ({ ctx, input }: GetHashedLinkOptions)
   if (!hashedLink) {
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: "Hashed link not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -43,7 +47,9 @@ export const getHashedLinkHandler = async ({ ctx, input }: GetHashedLinkOptions)
   if (!hasPermission) {
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "You don't have permission to access this link",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

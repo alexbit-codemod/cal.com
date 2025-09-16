@@ -178,11 +178,8 @@ export const MonthlyDigestEmail = (
             : null}
         </div>
         <div style={{ marginTop: "30px", marginBottom: "30px" }}>
-          <CallToAction
-            label="View all stats"
-            href={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/insights?teamId=${props.team.id}`}
-            endIconName="white-arrow-right"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
       <div style={{ lineHeight: "6px" }}>

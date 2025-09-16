@@ -8,17 +8,23 @@ import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 import appConfig from "../config.json";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ message: "Method not allowed" });
+  if (req.method !== "GET") return res.status(405).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   const appKeys = await getAppKeysFromSlug(appConfig.slug);
   let client_id = "";
   if (typeof appKeys.client_id === "string") client_id = appKeys.client_id;
-  if (!client_id) return res.status(400).json({ message: "pipedrive client id missing." });
+  if (!client_id) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   // Check that user is authenticated
   req.session = await getServerSession({ req });
   const { teamId } = req.query;
   const user = req.session?.user;
   if (!user) {
-    throw new HttpError({ statusCode: 401, message: "You must be logged in to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   const userId = user.id;
   await createDefaultInstallation({

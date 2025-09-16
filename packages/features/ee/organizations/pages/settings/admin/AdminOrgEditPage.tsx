@@ -62,18 +62,14 @@ export const OrgForm = ({
 
   return (
     <Form form={form} className="space-y-4" handleSubmit={onSubmit}>
-      <TextField label="Name" placeholder="example" required {...form.register("name")} />
-      <TextField label="Slug" placeholder="example" required {...form.register("slug")} />
-      <p className="text-default mt-2 text-sm">
-        Changing the slug would delete the previous organization domain and DNS and setup new domain and DNS
-        for the organization.
-      </p>
-      <TextField
-        label="Domain for which invitations are auto-accepted"
-        placeholder="abc.com"
-        required
-        {...form.register("organizationSettings.orgAutoAcceptEmail")}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <Button type="submit" color="primary" loading={mutation.isPending}>
         {t("save")}
       </Button>

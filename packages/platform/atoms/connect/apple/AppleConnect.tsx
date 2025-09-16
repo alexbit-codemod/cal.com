@@ -123,10 +123,11 @@ export const AppleConnect: FC<Partial<Omit<OAuthConnectProps, "redir">>> = ({
         </DialogTrigger>
         <DialogContent className="bg-default text-default">
           <DialogHeader>
-            <DialogTitle>Connect to Apple Server</DialogTitle>
-            <DialogDescription>
-              Generate an app specific password to use with Cal.com at{" "}
-              <span className="font-bold">https://appleid.apple.com/account/manage</span>. Your credentials
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$. Your credentials
               will be stored and encrypted.
             </DialogDescription>
           </DialogHeader>
@@ -150,40 +151,16 @@ export const AppleConnect: FC<Partial<Omit<OAuthConnectProps, "redir">>> = ({
               className="space-y-4"
               disabled={form.formState.isSubmitting}
               data-testid="apple-calendar-form">
-              <TextField
-                required
-                type="text"
-                {...form.register("username")}
-                label="Apple ID"
-                placeholder="appleid@domain.com"
-                data-testid="apple-calendar-email"
-              />
-              <PasswordField
-                required
-                {...form.register("password")}
-                label="Password"
-                placeholder="•••••••••••••"
-                autoComplete="password"
-                data-testid="apple-calendar-password"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </fieldset>
             <div className="mt-5 justify-end space-x-2 rtl:space-x-reverse sm:mt-4 sm:flex">
-              <Button
-                disabled={isSaving}
-                type="button"
-                color="secondary"
-                className="md:rounded-md"
-                onClick={() => setIsDialogOpen(false)}>
-                Cancel
-              </Button>
-              <Button
-                disabled={isSaving}
-                type="submit"
-                className="border-none md:rounded-md"
-                loading={form.formState.isSubmitting}
-                data-testid="apple-calendar-login-button">
-                Save
-              </Button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           </Form>
         </DialogContent>

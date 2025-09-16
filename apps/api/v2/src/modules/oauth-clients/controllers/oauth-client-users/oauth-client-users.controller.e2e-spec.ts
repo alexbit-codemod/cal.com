@@ -816,7 +816,9 @@ describe("OAuth Client Users Endpoints", () => {
         team: {
           connect: { id: team1.id },
         },
-        title: "Collective Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "collective-event-type",
         length: 30,
         assignAllTeamMembers: true,
@@ -829,7 +831,9 @@ describe("OAuth Client Users Endpoints", () => {
         team: {
           connect: { id: team1.id },
         },
-        title: "Managed Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-event-type",
         length: 60,
         assignAllTeamMembers: true,
@@ -843,7 +847,9 @@ describe("OAuth Client Users Endpoints", () => {
         team: {
           connect: { id: team2.id },
         },
-        title: "Collective Event Type team 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "collective-event-type-team-2",
         length: 30,
         assignAllTeamMembers: true,
@@ -856,7 +862,9 @@ describe("OAuth Client Users Endpoints", () => {
         team: {
           connect: { id: team2.id },
         },
-        title: "Managed Event Type team 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-event-type-team-2",
         length: 60,
         assignAllTeamMembers: true,

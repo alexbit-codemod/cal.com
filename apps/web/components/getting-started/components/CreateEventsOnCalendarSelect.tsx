@@ -21,14 +21,8 @@ const CreateEventsOnCalendarSelect = (props: ICreateEventsOnCalendarSelectProps)
             {t("create_events_on")}
           </label>
           <div className="mt-2">
-            <DestinationCalendarSelector
-              value={calendar ? calendar.externalId : undefined}
-              onChange={(calendar) => {
-                mutation.mutate(calendar);
-              }}
-              hidePlaceholder
-              calendarsQueryData={connectedCalendarsQuery.data}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
       </div>

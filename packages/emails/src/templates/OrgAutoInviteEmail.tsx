@@ -30,21 +30,8 @@ export const OrgAutoInviteEmail = (
           })}
         </>
       </p>
-      <img
-        style={{
-          borderRadius: "16px",
-          height: "270px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        src={
-          IS_PRODUCTION
-            ? `${WEBAPP_URL}/emails/calendar-email-hero.png`
-            : "http://localhost:3000/emails/calendar-email-hero.png"
-        }
-        alt=""
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <p
         style={{
           fontWeight: 400,
@@ -60,13 +47,8 @@ export const OrgAutoInviteEmail = (
         </>
       </p>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <CallToAction
-          label={props.language("email_user_cta", {
-            entity: "organization",
-          })}
-          href={props.joinLink}
-          endIconName="linkIcon"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       <div className="">

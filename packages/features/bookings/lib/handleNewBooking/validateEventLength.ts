@@ -23,8 +23,12 @@ const _validateEventLength = ({
   const reqEventLength = dayjs(reqBodyEnd).diff(dayjs(reqBodyStart), "minutes");
   const validEventLengths = eventTypeMultipleDuration?.length ? eventTypeMultipleDuration : [eventTypeLength];
   if (!validEventLengths.includes(reqEventLength)) {
-    logger.warn({ message: "NewBooking: Invalid event length" });
-    throw new HttpError({ statusCode: 400, message: "Invalid event length" });
+    logger.warn({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 

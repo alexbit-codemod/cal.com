@@ -20,10 +20,8 @@ export const WithIconExample = () => {
         </Section.Header>
         {isOpen && (
           <Section.Content>
-            <p>
-              This section demonstrates how to include an icon in the header and uses FormKit auto-animate for
-              smooth transitions when toggling content visibility.
-            </p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Section.Content>
         )}
       </Section>

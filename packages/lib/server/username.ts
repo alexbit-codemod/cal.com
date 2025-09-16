@@ -71,15 +71,21 @@ const processResult = (
     case "ok":
       return {
         statusCode: 200,
-        message: "Username is available",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
     case "username_exists":
       return {
         statusCode: 418,
-        message: "A user exists with that username or email",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
     case "is_premium":
-      return { statusCode: 402, message: "This is a premium username." };
+      return { statusCode: 402, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       };
   }
 };
 

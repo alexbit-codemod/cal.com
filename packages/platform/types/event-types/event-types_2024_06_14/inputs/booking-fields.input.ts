@@ -29,7 +29,9 @@ export class NameDefaultFieldInput_2024_06_14 {
   @DocsProperty({
     example: "name",
     description:
-      "only allowed value for type is `name`. Used for having 1 booking field for both first name and last name.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   type!: "name";
 
@@ -48,9 +50,9 @@ export class NameDefaultFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if URL contains query parameter `&name=bob`,\
-      the name field will be prefilled with this value and disabled. In case of Booker atom need to pass 'name' to defaultFormValues prop with the desired value e.g. `defaultFormValues={{name: 'bob'}}`. See guide https://cal.com/docs/platform/guides/booking-fields",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 }
@@ -60,7 +62,9 @@ export class SplitNameDefaultFieldInput_2024_06_14 {
   @DocsProperty({
     example: "splitName",
     description:
-      "only allowed value for type is `splitName`. Used to have 2 booking fields - 1 for first name and 1 for last name.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   type!: "splitName";
 
@@ -86,7 +90,9 @@ export class SplitNameDefaultFieldInput_2024_06_14 {
 
   @IsBoolean()
   @IsOptional()
-  @DocsProperty({ description: "First name field is required but last name field is not by default." })
+  @DocsProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   lastNameRequired?: boolean;
 
   @IsBoolean()
@@ -94,9 +100,9 @@ export class SplitNameDefaultFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if URL contains query parameter `&firstName=bob&lastName=jones`,\
-      the first name and last name fields will be prefilled with this value and disabled. In case of Booker atom need to pass 'firstName' and 'lastName' to defaultFormValues prop e.g. `defaultFormValues={{firstName: 'bob', lastName: 'doe'}}` or pass 'name' prop but as a string containing name and surname e.g. `defaultFormValues={{name: 'bob doe'}}`.  See guide https://cal.com/docs/platform/guides/booking-fields",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 }
@@ -105,7 +111,9 @@ export class EmailDefaultFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
   @DocsProperty({
     example: "email",
-    description: "only allowed value for type is `email`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "email";
 
@@ -117,18 +125,18 @@ export class EmailDefaultFieldInput_2024_06_14 {
   @IsBoolean()
   @IsOptional()
   @DocsPropertyOptional({
-    description: `Can be set to false only for organization team event types and if you also pass booking field {type: "phone", slug: "attendeePhoneNumber", required: true, hidden: false, label: "whatever label"} of booking field type PhoneFieldInput_2024_06_14 - this is done
-      to enable phone only bookings where during the booking attendee can provide only their phone number and not provide email, so you must pass to the email booking field {hidden: true, required: false}.
-      If true show under event type settings but don't show this booking field in the Booker. If false show in both.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   required = true;
 
   @IsBoolean()
   @IsOptional()
   @DocsPropertyOptional({
-    description: `Can be set to true only for organization team event types and if you also pass booking field {type: "phone", slug: "attendeePhoneNumber", required: true, hidden: false, label: "whatever label"} of booking field type PhoneFieldInput_2024_06_14 - this is done
-      to enable phone only bookings where during the booking attendee can provide only their phone number and not provide email, so you must pass to the email booking field {hidden: true, required: false}.
-      If true show under event type settings but don't show this booking field in the Booker. If false show in both.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   hidden?: boolean;
 
@@ -142,16 +150,18 @@ export class EmailDefaultFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if URL contains query parameter `&email=bob@gmail.com`,\
-      the email field will be prefilled with this value and disabled. In case of Booker atom need to pass 'email' to defaultFormValues prop with the desired value e.g. `defaultFormValues={{email: 'bob@gmail.com'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 }
 
 export class TitleDefaultFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldSlugs)
-  @DocsProperty({ example: "title", description: "only allowed value for type is `title`" })
+  @DocsProperty({ example: "title", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   slug!: "title";
 
   @IsBoolean()
@@ -163,7 +173,9 @@ export class TitleDefaultFieldInput_2024_06_14 {
   @IsOptional()
   @DocsPropertyOptional({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 
@@ -182,9 +194,9 @@ export class TitleDefaultFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if URL contains query parameter `&title=journey`,\
-      the title field will be prefilled with this value and disabled. In case of Booker atom need to pass 'title' to defaultFormValues prop with the desired value e.g. `defaultFormValues={{title: 'very important meeting'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 }
@@ -194,7 +206,9 @@ export class LocationDefaultFieldInput_2024_06_14 {
   @DocsProperty({
     example: "location",
     description:
-      "only allowed value for type is `location`. This booking field is displayed only when event type has 2 or more locations in order to allow person doing the booking pick the location.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   slug!: "location";
 
@@ -206,7 +220,9 @@ export class LocationDefaultFieldInput_2024_06_14 {
 
 export class NotesDefaultFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldSlugs)
-  @DocsProperty({ example: "notes", description: "only allowed value for type is `notes`" })
+  @DocsProperty({ example: "notes", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   slug!: "notes";
 
   @IsBoolean()
@@ -218,7 +234,9 @@ export class NotesDefaultFieldInput_2024_06_14 {
   @IsOptional()
   @DocsPropertyOptional({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 
@@ -237,16 +255,18 @@ export class NotesDefaultFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if URL contains query parameter `&notes=journey`,\
-      the notes field will be prefilled with this value and disabled. In case of Booker atom need to pass 'notes' to defaultFormValues prop with the desired value e.g. `defaultFormValues={{notes: 'bring notebook and paper'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 }
 
 export class GuestsDefaultFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldSlugs)
-  @DocsProperty({ example: "guests", description: "only allowed value for type is `guests`" })
+  @DocsProperty({ example: "guests", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   slug!: "guests";
 
   @IsBoolean()
@@ -258,7 +278,9 @@ export class GuestsDefaultFieldInput_2024_06_14 {
   @IsOptional()
   @DocsPropertyOptional({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 
@@ -277,9 +299,9 @@ export class GuestsDefaultFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if URL contains query parameter `&guests=bob@cal.com`,\
-      the guests field will be prefilled with this value and disabled. In case of Booker atom need to pass 'guests' to defaultFormValues prop with the desired value e.g. `defaultFormValues={{guests: ['bob@gmail.com', 'alice@gmail.com']}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 }
@@ -288,7 +310,9 @@ export class RescheduleReasonDefaultFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldSlugs)
   @DocsProperty({
     example: "rescheduleReason",
-    description: "only allowed value for type is `rescheduleReason`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   slug!: "rescheduleReason";
 
@@ -301,7 +325,9 @@ export class RescheduleReasonDefaultFieldInput_2024_06_14 {
   @IsOptional()
   @DocsPropertyOptional({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 
@@ -320,22 +346,25 @@ export class RescheduleReasonDefaultFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if URL contains query parameter `&rescheduleReason=travel`,\
-      the rescheduleReason field will be prefilled with this value and disabled. In case of Booker atom need to pass 'rescheduleReason' to defaultFormValues prop with the desired value e.g. `defaultFormValues={{rescheduleReason: 'bob'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 }
 
 export class PhoneFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "phone", description: "only allowed value for type is `phone`" })
+  @DocsProperty({ example: "phone", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "phone";
 
   @IsString()
   @DocsProperty({
-    description: `Unique identifier for the field in format \`some-slug\`. It is used to access response to this booking field during the booking. Special slug is \`attendeePhoneNumber\` - if you create
-      a phone input field with this slug for organization team event type you can create an organization team event type that can be booked using phone without requiring an email by setting {"type": "email", "required": false, "hidden": true} to the email booking field input in the request body.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "some-slug",
   })
   slug!: string;
@@ -358,9 +387,9 @@ export class PhoneFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `phone` and the URL contains query parameter `&phone=1234567890`,\
-      the phone field will be prefilled with this value and disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value e.g. `defaultFormValues={{phone: '+37122222222'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -368,20 +397,26 @@ export class PhoneFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class AddressFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "address", description: "only allowed value for type is `address`" })
+  @DocsProperty({ example: "address", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "address";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -405,9 +440,9 @@ export class AddressFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `address` and the URL contains query parameter `&address=1234 Main St, London`,\
-      the address field will be prefilled with this value and disabled.  In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value e.g. `defaultFormValues={{address: 'mainstreat 10, new york'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -415,20 +450,26 @@ export class AddressFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class TextFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "text", description: "only allowed value for type is `text`" })
+  @DocsProperty({ example: "text", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "text";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -452,9 +493,9 @@ export class TextFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `friend` and the URL contains query parameter `&friend=bob`,\
-      the text field will be prefilled with this value and disabled.  In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value e.g. `defaultFormValues={{friend: 'bob'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -462,20 +503,26 @@ export class TextFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class UrlFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "url", description: "only allowed value for type is `url`" })
+  @DocsProperty({ example: "url", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "url";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -499,9 +546,9 @@ export class UrlFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `videourl` and the URL contains query parameter `&videourl=https://youtube.com/abc`the url field will be prefilled with this value and disabled. \
-      In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{videourl: 'https://caltube.com/123'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -509,20 +556,26 @@ export class UrlFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class NumberFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "number", description: "only allowed value for type is `number`" })
+  @DocsProperty({ example: "number", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "number";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -546,9 +599,9 @@ export class NumberFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `calories` and the URL contains query parameter `&calories=3000`,\
-      the number field will be prefilled with this value and disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{calories: 3000}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -556,20 +609,26 @@ export class NumberFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class TextAreaFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "textarea", description: "only allowed value for type is `textarea`" })
+  @DocsProperty({ example: "textarea", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "textarea";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -593,9 +652,9 @@ export class TextAreaFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `reflection` and the URL contains query parameter `&reflection=Today I shipped a feature`,\
-      the text area will be prefilled with this value and disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{reflection: 'Today i shipped a feature'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -603,20 +662,26 @@ export class TextAreaFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class SelectFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "select", description: "only allowed value for type is `select`" })
+  @DocsProperty({ example: "select", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "select";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -644,9 +709,9 @@ export class SelectFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `language` and options of this select field are ['english', 'italian'] and the URL contains query parameter `&language=italian`,\
-      the 'italian' will be selected and the select field will be disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{language: 'italian'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -654,20 +719,26 @@ export class SelectFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class MultiSelectFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "multiselect", description: "only allowed value for type is `multiselect`" })
+  @DocsProperty({ example: "multiselect", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "multiselect";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -689,9 +760,9 @@ export class MultiSelectFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `language` and the URL contains query parameter `&language=en&language=it`,\
-      the 'en' and 'it' will be selected and the select field will be disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{language: ['en', 'it']}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -699,20 +770,26 @@ export class MultiSelectFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class MultiEmailFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "multiemail", description: "only allowed value for type is `multiemail`" })
+  @DocsProperty({ example: "multiemail", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "multiemail";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -736,9 +813,9 @@ export class MultiEmailFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `consultants` and the URL contains query parameter `&consultants=alice@gmail.com&consultants=bob@gmail.com`,\
-      the these emails will be added and none more can be added. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{consultants: ['alice@gmail.com', 'bob@gmail.com']}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -746,20 +823,26 @@ export class MultiEmailFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class CheckboxGroupFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "checkbox", description: "only allowed value for type is `checkbox`" })
+  @DocsProperty({ example: "checkbox", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "checkbox";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -781,9 +864,9 @@ export class CheckboxGroupFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `notify` and the URL contains query parameter `&notify=true`,\
-      the checkbox will be selected and the checkbox field will be disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{notify: true}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -791,20 +874,26 @@ export class CheckboxGroupFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class RadioGroupFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "radio", description: "only allowed value for type is `radio`" })
+  @DocsProperty({ example: "radio", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "radio";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -826,9 +915,9 @@ export class RadioGroupFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `language` and options of this select field are ['english', 'italian'] and the URL contains query parameter `&language=italian`,\
-      the 'italian' radio button will be selected and the select field will be disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{language: 'italian'}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -836,20 +925,26 @@ export class RadioGroupFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }
 
 export class BooleanFieldInput_2024_06_14 {
   @IsIn(inputBookingFieldTypes)
-  @DocsProperty({ example: "boolean", description: "only allowed value for type is `boolean`" })
+  @DocsProperty({ example: "boolean", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "boolean";
 
   @IsString()
   @DocsProperty({
     description:
-      "Unique identifier for the field in format `some-slug`. It is used to access response to this booking field during the booking",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "some-slug",
   })
   slug!: string;
@@ -867,9 +962,9 @@ export class BooleanFieldInput_2024_06_14 {
   @DocsPropertyOptional({
     type: Boolean,
     description:
-      "Disable this booking field if the URL contains query parameter with key equal to the slug and prefill it with the provided value.\
-      For example, if the slug is `notify` and the URL contains query parameter `&notify=true`,\
-      the checkbox will be selected and the checkbox field will be disabled. In case of Booker atom need to pass slug you used for this booking field to defaultFormValues prop with the desired value  e.g. `defaultFormValues={{notify: true}}`. See guide https://cal.com/docs/platform/guides/booking-field",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   disableOnPrefill?: boolean;
 
@@ -877,7 +972,9 @@ export class BooleanFieldInput_2024_06_14 {
   @IsOptional()
   @DocsProperty({
     description:
-      "If true show under event type settings but don't show this booking field in the Booker. If false show in both.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hidden?: boolean;
 }

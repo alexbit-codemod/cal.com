@@ -17,11 +17,15 @@ export class GetOrganizationsBookingsInput extends GetBookingsInput_2024_08_13 {
     return value;
   })
   @IsNumber({}, { each: true })
-  @ArrayMinSize(1, { message: "userIds must contain at least 1 user id" })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings by ids of users within your organization.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?userIds=100,200",
   })
   userIds?: number[];

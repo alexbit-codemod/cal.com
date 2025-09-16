@@ -78,7 +78,8 @@ function AddFilterButtonComponent<TData>(
         )}
         <PopoverContent className="w-[200px] p-0" align="start">
           <Command>
-            <CommandInput placeholder={t("search")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <CommandList>
               <CommandEmpty>{t("no_columns_found")}</CommandEmpty>
               {availableColumns.map((column) => {

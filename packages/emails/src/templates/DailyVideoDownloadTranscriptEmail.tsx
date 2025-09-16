@@ -24,21 +24,8 @@ export const DailyVideoDownloadTranscriptEmail = (
       })}>
       <div style={{ width: "89px", marginBottom: "35px" }}>
         <a href={WEBAPP_URL} target="_blank" rel="noreferrer">
-          <img
-            height="19"
-            src={image}
-            style={{
-              border: "0",
-              display: "block",
-              outline: "none",
-              textDecoration: "none",
-              height: "19px",
-              width: "100%",
-              fontSize: "13px",
-            }}
-            width="89"
-            alt=""
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </a>
       </div>
       <p
@@ -77,16 +64,8 @@ export const DailyVideoDownloadTranscriptEmail = (
               }}>
               <>{props.title}</>
             </p>
-            <p
-              style={{
-                fontWeight: 400,
-                lineHeight: "24px",
-                marginBottom: "24px",
-                marginTop: "0px",
-                color: "black",
-              }}>
-              {props.date} Transcript {index + 1}
-            </p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         );
       })}

@@ -10,7 +10,9 @@ export class AssignedOptionOutput extends OptionOutput {
   @ApiProperty({
     type: Array,
     required: true,
-    description: "Ids of the users assigned to the attribute option.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: [124, 224],
   })
   assignedUserIds!: number[];

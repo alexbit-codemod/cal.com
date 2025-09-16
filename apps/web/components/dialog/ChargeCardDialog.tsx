@@ -48,7 +48,8 @@ export const ChargeCardDialog = (props: IRescheduleDialog) => {
             <Icon name="credit-card" className="m-auto h-6 w-6" />
           </div>
           <div className="pt-1">
-            <DialogHeader title={t("charge_card")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <p>{t("charge_card_dialog_body", currencyStringParams)}</p>
 
             {chargeError && (

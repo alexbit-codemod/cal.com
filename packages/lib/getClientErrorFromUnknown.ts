@@ -4,7 +4,9 @@ import { HttpError } from "./http-error";
 
 export function getClientErrorFromUnknown(cause: unknown): Error {
   if (cause instanceof HttpError) {
-    const message = `${cause.statusCode}: ${cause.message}`;
+    const message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     return new Error(message);
   }
   if (cause instanceof TRPCClientError) {

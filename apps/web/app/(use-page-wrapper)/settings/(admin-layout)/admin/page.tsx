@@ -9,5 +9,6 @@ export const generateMetadata = async () =>
     "/settings/admin"
   );
 
-const Page = () => <h1>Admin index</h1>;
+const Page = () => // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+$$$;
 export default Page;

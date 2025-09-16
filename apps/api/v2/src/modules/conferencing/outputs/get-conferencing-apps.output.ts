@@ -7,22 +7,30 @@ import { ERROR_STATUS, GOOGLE_MEET_TYPE, SUCCESS_STATUS } from "@calcom/platform
 export class ConferencingAppsOutputDto {
   @Expose()
   @IsNumber()
-  @ApiProperty({ description: "Id of the conferencing app credentials" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   id!: number;
 
-  @ApiProperty({ example: GOOGLE_MEET_TYPE, description: "Type of conferencing app" })
+  @ApiProperty({ example: GOOGLE_MEET_TYPE, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Expose()
   @IsString()
   type!: string;
 
-  @ApiProperty({ description: "Id of the user associated to the conferencing app" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Expose()
   @IsNumber()
   userId!: number;
 
   @ApiPropertyOptional({
     example: true,
-    description: "Whether if the connection is working or not.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     nullable: true,
   })
   @Expose()

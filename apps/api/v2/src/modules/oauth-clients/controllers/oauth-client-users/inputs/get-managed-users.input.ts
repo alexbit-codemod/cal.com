@@ -19,10 +19,14 @@ export class GetManagedUsersInput extends Pagination {
     }
     return value;
   })
-  @ArrayNotEmpty({ message: "emails cannot be empty." })
+  @ArrayNotEmpty({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiPropertyOptional({
     description:
-      "Filter managed users by email. If you want to filter by multiple emails, separate them with a comma.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "?emails=email1@example.com,email2@example.com",
   })
   emails?: string[];

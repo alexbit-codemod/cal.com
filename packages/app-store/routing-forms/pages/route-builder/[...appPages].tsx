@@ -311,27 +311,8 @@ const WeightedAttributesSelector = ({
         </div>
         <div className="bg-muted mt-1 rounded-xl p-2">
           {!!attributeIdForWeights ? (
-            <SelectField
-              size="sm"
-              containerClassName="data-testid-select-router"
-              label={t("attribute_for_weights")}
-              labelProps={{ className: "sr-only" }}
-              options={attributesWithWeightsEnabled.map((attribute) => {
-                return { value: attribute.id, label: attribute.name };
-              })}
-              value={{
-                value: attributeIdForWeights,
-                label: attributesWithWeightsEnabled.find(
-                  (attribute) => attribute.id === attributeIdForWeights
-                )?.name,
-              }}
-              onChange={(option) => {
-                if (option) {
-                  setAttributeIdForWeights(option.value);
-                  onChangeAttributeIdForWeights(route, option.value);
-                }
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ) : (
             <></>
           )}
@@ -494,9 +475,8 @@ const Route = ({
                 <span className="font-semibold">{route.name}</span>
               </Badge>
             </Link>
-            <p className="text-subtle mt-2 text-sm">
-              Fields available in <span className="font-bold">{route.name}</span> will be added to this form.
-            </p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </FormCard>
       </div>
@@ -529,7 +509,8 @@ const Route = ({
         <div className="border-subtle rounded-lg border p-1">
           <Icon name="zap" className="text-subtle h-4 w-4" />
         </div>
-        <span className="text-emphasis ml-2 text-sm font-medium">Conditions</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <Query
         {...withRaqbSettingsAndWidgets({
@@ -579,9 +560,8 @@ const Route = ({
             <div className="border-subtle rounded-lg border p-1">
               <Icon name="user-check" className="text-subtle h-4 w-4" />
             </div>
-            <span className="text-emphasis ml-2 text-sm font-medium">
-              And connect with specific team members
-            </span>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           {route.attributesQueryBuilderState && attributesQueryBuilderConfigWithRaqbSettingsAndWidgets && (
             <Query
@@ -608,7 +588,8 @@ const Route = ({
           <div className="border-subtle rounded-lg border p-1">
             <Icon name="blocks" className="text-subtle h-4 w-4" />
           </div>
-          <span className="text-emphasis ml-2 text-sm font-medium">Fallback</span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         {route.fallbackAttributesQueryBuilderState &&
           attributesQueryBuilderConfigWithRaqbSettingsAndWidgets && (
@@ -707,20 +688,8 @@ const Route = ({
                       }}
                     />
                   ) : route.action?.type === "externalRedirectUrl" ? (
-                    <TextField
-                      disabled={disabled}
-                      name="externalRedirectUrl"
-                      className="border-default flex flex-grow text-sm"
-                      containerClassName="flex-grow"
-                      type="url"
-                      required
-                      labelSrOnly
-                      value={route.action.value}
-                      onChange={(e) => {
-                        setRoute(route.id, { action: { ...route.action, value: e.target.value } });
-                      }}
-                      placeholder="https://example.com"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   ) : (
                     <div className="flex-grow">
                       <Select
@@ -758,21 +727,8 @@ const Route = ({
                       (!eventOptions.find((eventOption) => eventOption.value === route.action.value) ||
                         customEventTypeSlug.length) ? (
                         <>
-                          <TextField
-                            disabled={disabled}
-                            className="border-default flex w-full flex-grow text-sm"
-                            containerClassName="flex-grow mt-2"
-                            addOnLeading={eventTypePrefix}
-                            required
-                            value={customEventTypeSlug}
-                            onChange={(e) => {
-                              setCustomEventTypeSlug(e.target.value);
-                              setRoute(route.id, {
-                                action: { ...route.action, value: `${eventTypePrefix}${e.target.value}` },
-                              });
-                            }}
-                            placeholder="event-url"
-                          />
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                           <div className="mt-2 ">
                             <p className="text-subtle text-xs">
                               {fieldIdentifiers.length
@@ -796,7 +752,8 @@ const Route = ({
                   <div className="border-subtle rounded-lg border p-1">
                     <Icon name="arrow-right" className="text-subtle h-4 w-4" />
                   </div>
-                  <span className="text-emphasis ml-2 text-sm font-medium">Send booker to</span>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <div className="bg-muted flex w-full flex-col gap-2 rounded-xl p-2 text-sm lg:flex-row">
                   <div className="flex flex-grow items-center gap-2">
@@ -842,21 +799,8 @@ const Route = ({
                         }}
                       />
                     ) : route.action?.type === "externalRedirectUrl" ? (
-                      <TextField
-                        size="sm"
-                        disabled={disabled}
-                        name="externalRedirectUrl"
-                        className="border-default flex flex-grow text-sm"
-                        containerClassName="flex-grow"
-                        type="url"
-                        required
-                        labelSrOnly
-                        value={route.action.value}
-                        onChange={(e) => {
-                          setRoute(route.id, { action: { ...route.action, value: e.target.value } });
-                        }}
-                        placeholder="https://example.com"
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     ) : (
                       <div className="flex-grow">
                         <Select
@@ -894,21 +838,8 @@ const Route = ({
                         (!eventOptions.find((eventOption) => eventOption.value === route.action.value) ||
                           customEventTypeSlug.length) ? (
                           <>
-                            <TextField
-                              disabled={disabled}
-                              className="border-default flex w-full flex-grow text-sm"
-                              containerClassName="flex-grow mt-2"
-                              addOnLeading={eventTypePrefix}
-                              required
-                              value={customEventTypeSlug}
-                              onChange={(e) => {
-                                setCustomEventTypeSlug(e.target.value);
-                                setRoute(route.id, {
-                                  action: { ...route.action, value: `${eventTypePrefix}${e.target.value}` },
-                                });
-                              }}
-                              placeholder="event-url"
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                             <div className="mt-2 ">
                               <p className="text-subtle text-xs">
                                 {fieldIdentifiers.length
@@ -1321,16 +1252,8 @@ const Routes = ({
           );
         })}
         {mainRoutes.length === 0 ? (
-          <EmptyState
-            icon="menu"
-            header="Create your first route"
-            text="Routes determine where your form responses will be sent based on the answers provided."
-            buttonText={t("add_a_new_route")}
-            buttonOnClick={createRoute}
-            buttonStartIcon="plus"
-            buttonClassName="mt-6"
-            buttonDataTestId="add-route-button"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
           <Button
             color="minimal"

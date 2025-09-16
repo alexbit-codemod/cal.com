@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function CalcomApi(_: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: "Welcome to Cal.com API - docs are at https://developer.cal.com/api" });
+  res.status(200).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }

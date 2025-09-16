@@ -9,28 +9,18 @@ export const BorderExample: React.FC = () => (
     <div className="space-y-8">
       {/* Without Border */}
       <div>
-        <h4 className="text-emphasis mb-4 text-sm font-medium">Without Border</h4>
-        <EmptyScreen
-          Icon="grid-3x3"
-          headline="No apps installed"
-          description="Browse available apps in the marketplace"
-          buttonText="Browse Apps"
-          buttonOnClick={() => alert("Browse Apps clicked")}
-          border={false}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       {/* With Solid Border */}
       <div>
-        <h4 className="text-emphasis mb-4 text-sm font-medium">With Solid Border</h4>
-        <EmptyScreen
-          Icon="mail"
-          headline="No messages"
-          description="Your inbox is empty"
-          buttonText="Compose"
-          buttonOnClick={() => alert("Compose clicked")}
-          dashedBorder={false}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   </RenderComponentWithSnippet>

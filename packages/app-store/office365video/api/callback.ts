@@ -23,7 +23,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       );
       return;
     }
-    res.status(400).json({ message: "No code returned" });
+    res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return;
   }
 
@@ -32,8 +34,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const appKeys = await getAppKeysFromSlug("msteams");
   if (typeof appKeys.client_id === "string") clientId = appKeys.client_id;
   if (typeof appKeys.client_secret === "string") clientSecret = appKeys.client_secret;
-  if (!clientId) return res.status(400).json({ message: "Office 365 client_id missing." });
-  if (!clientSecret) return res.status(400).json({ message: "Office 365 client_secret missing." });
+  if (!clientId) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!clientSecret) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const toUrlEncoded = (payload: Record<string, string>) =>
     Object.keys(payload)
@@ -75,7 +81,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const userId = req.session?.user.id;
   if (!userId) {
-    return res.status(404).json({ message: "No user found" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   /**

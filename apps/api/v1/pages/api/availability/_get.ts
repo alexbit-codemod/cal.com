@@ -206,8 +206,12 @@ async function handler(req: NextApiRequest) {
     where: { id: teamId },
     select: { members: true },
   });
-  if (!team) throw new HttpError({ statusCode: 404, message: "teamId not found" });
-  if (!team.members) throw new HttpError({ statusCode: 404, message: "team has no members" });
+  if (!team) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!team.members) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   const allMemberIds = team.members.reduce((allMemberIds: number[], member) => {
     if (member.accepted) {
       allMemberIds.push(member.userId);
@@ -227,7 +231,9 @@ async function handler(req: NextApiRequest) {
     memberRoles[reqUserId] == MembershipRole.ADMIN ||
     memberRoles[reqUserId] == MembershipRole.OWNER ||
     isSystemWideAdmin;
-  if (!isUserAdminOrOwner) throw new HttpError({ statusCode: 403, message: "Forbidden" });
+  if (!isUserAdminOrOwner) throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   const availabilities = members.map(async (user) => {
     return {
       userId: user.id,
@@ -245,7 +251,9 @@ async function handler(req: NextApiRequest) {
   if (!settled)
     throw new HttpError({
       statusCode: 401,
-      message: "We had an issue retrieving all your members availabilities",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   return settled;
 }

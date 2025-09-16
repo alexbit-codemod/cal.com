@@ -21,25 +21,10 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
       switchChecked={enabled}
       teamId={eventType.team?.id || undefined}>
       <fieldset className="space-y-2" disabled={disabled}>
-        <TextField
-          disabled={disabled}
-          name="Script URL"
-          value={scriptURL}
-          defaultValue="https://us.umami.is/script.js"
-          placeholder="Enter the script source URL"
-          onChange={(e) => {
-            setAppData("SCRIPT_URL", e.target.value);
-          }}
-        />
-        <TextField
-          disabled={disabled}
-          name="Site ID"
-          value={siteId}
-          placeholder="Enter your Site ID"
-          onChange={(e) => {
-            setAppData("SITE_ID", e.target.value);
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </fieldset>
     </AppCard>
   );

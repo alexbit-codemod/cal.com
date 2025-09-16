@@ -28,33 +28,8 @@ function MultiEmail({ value, readOnly, label, setValue, placeholder }: MultiEmai
           <ul>
             {value.map((field, index) => (
               <li key={index}>
-                <EmailField
-                  disabled={readOnly}
-                  value={field}
-                  className={inputClassName}
-                  onChange={(e) => {
-                    const updatedValue = [...value];
-                    updatedValue[index] = e.target.value;
-                    setValue(updatedValue);
-                  }}
-                  placeholder={placeholder}
-                  label={<></>}
-                  required
-                  onClickAddon={() => {
-                    const updatedValue = [...value];
-                    updatedValue.splice(index, 1);
-                    setValue(updatedValue);
-                  }}
-                  addOnSuffix={
-                    !readOnly ? (
-                      <Tooltip content="Remove email">
-                        <button className="m-1" type="button">
-                          <Icon name="x" width={12} className="text-default" />
-                        </button>
-                      </Tooltip>
-                    ) : null
-                  }
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </li>
             ))}
           </ul>

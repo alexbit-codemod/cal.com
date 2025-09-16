@@ -16,7 +16,9 @@ export const checkIsInMaintenanceMode: NextMiddleware = async (req, res, next) =
   if (isInMaintenanceMode) {
     return res
       .status(503)
-      .json({ message: "API is currently under maintenance. Please try again at a later time." });
+      .json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
   }
 
   await next();

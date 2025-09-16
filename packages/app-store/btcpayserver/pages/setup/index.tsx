@@ -66,8 +66,10 @@ function BTCPaySetupCallback() {
 
   return (
     <div>
-      {error && <p>Authorization failed: {error}</p>}
-      {!error && <p>Connecting...</p>}
+      {error && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
+      {!error && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
     </div>
   );
 }
@@ -234,7 +236,8 @@ function BTCPaySetupPage(props: IBTCPaySetupProps) {
 
   const btcpayIcon = (
     <>
-      <img className="h-5 w-5" src="/app-store/btcpayserver/btcpay.svg" alt="BTCPay Server Icon" />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 
@@ -255,20 +258,13 @@ function BTCPaySetupPage(props: IBTCPaySetupProps) {
             <form className="w-full space-y-4" onSubmit={onSubmit}>
               <div className="bg-default border-subtle overflow-auto rounded border">
                 <div className="border-subtle flex items-center justify-between border-b-[1px] p-4 md:p-5">
-                  <h2 className="text-2xl font-semibold">BTCPay Server Information</h2>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <div className="w-full space-y-4 p-4 md:p-5">
                   <div className="w-full">
-                    <KeyField
-                      {...register("serverUrl", { required: true })}
-                      id="serverUrl"
-                      name="serverUrl"
-                      containerClassName="w-full"
-                      label="BTCPay Server Url"
-                      autoComplete="off"
-                      autoCorrect="off"
-                      defaultValue={keyData?.serverUrl || ""}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     {errors.serverUrl && (
                       <p data-testid="required" className="py-2 text-xs text-red-500">
                         {errors.serverUrl?.message}
@@ -277,16 +273,8 @@ function BTCPaySetupPage(props: IBTCPaySetupProps) {
                   </div>
 
                   <div className="w-full">
-                    <KeyField
-                      {...register("storeId", { required: true })}
-                      id="storeId"
-                      name="storeId"
-                      containerClassName="w-full"
-                      label="BTCPay Store Id"
-                      autoComplete="off"
-                      autoCorrect="off"
-                      defaultValue={keyData?.storeId || ""}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     {errors.storeId && (
                       <p data-testid="required" className="py-2 text-xs text-red-500">
                         {errors.storeId?.message}
@@ -295,16 +283,8 @@ function BTCPaySetupPage(props: IBTCPaySetupProps) {
                   </div>
 
                   <div className="w-full">
-                    <KeyField
-                      {...register("apiKey", { required: true })}
-                      id="apiKey"
-                      name="apiKey"
-                      containerClassName="w-full"
-                      label="API Key"
-                      autoComplete="off"
-                      autoCorrect="off"
-                      defaultValue={keyData?.apiKey || ""}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     {errors.apiKey && (
                       <p data-testid="required" className="py-2 text-xs text-red-500">
                         {errors.apiKey?.message}
@@ -316,9 +296,8 @@ function BTCPaySetupPage(props: IBTCPaySetupProps) {
               <div className="flex justify-end gap-4">
                 {isNewCredential ? (
                   <>
-                    <Button color="secondary" className="h-10" onClick={onCancel}>
-                      Cancel
-                    </Button>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <Button
                       className="h-10"
                       color="primary"
@@ -337,7 +316,8 @@ function BTCPaySetupPage(props: IBTCPaySetupProps) {
                 ) : (
                   <>
                     <Link href="/apps/btcpayserver" className="inline-block">
-                      <Button color="secondary">Go to App Store</Button>
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     </Link>
                   </>
                 )}

@@ -54,7 +54,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
   }, []);
 
   if (recurringEventDefined) {
-    return <Alert className="mt-2" severity="warning" title={t("warning_recurring_event_payment")} />;
+    return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$;
   }
 
   if (!requirePayment) {
@@ -64,26 +65,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
   return (
     <>
       <div className="mt-2 block items-center sm:flex">
-        <TextField
-          label="Price"
-          labelSrOnly
-          addOnLeading={currencySymbol}
-          addOnSuffix={currency}
-          step="0.01"
-          min="0.5"
-          type="number"
-          required
-          className="block w-full rounded-sm pl-2 text-sm"
-          placeholder="Price"
-          data-testid="paypal-price-input"
-          onChange={(e) => {
-            setAppData("price", convertToSmallestCurrencyUnit(Number(e.target.value), currency));
-            if (selectedCurrency) {
-              setAppData("currency", selectedCurrency.value);
-            }
-          }}
-          value={price > 0 ? convertFromSmallestToPresentableCurrencyUnit(price, currency) : undefined}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <div className="mt-5 w-60">
         <label className="text-default mb-1 block text-sm font-medium" htmlFor="currency">
@@ -107,9 +90,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
       </div>
 
       <div className="mt-4 w-60">
-        <label className="text-default mb-1 block text-sm font-medium" htmlFor="currency">
-          Payment option
-        </label>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Select<Option>
           data-testid="paypal-payment-option-select"
           defaultValue={
@@ -128,7 +110,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
         />
       </div>
       {seatsEnabled && paymentOption === "HOLD" && (
-        <Alert className="mt-2" severity="warning" title={t("seats_and_no_show_fee_error")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </>
   );

@@ -107,7 +107,9 @@ describe("Routing forms endpoints", () => {
       team: {
         connect: { id: team.id },
       },
-      title: "Collective Event Type Football",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: collectiveEventTypeFootballSlug,
       length: 60,
       assignAllTeamMembers: true,
@@ -150,7 +152,9 @@ describe("Routing forms endpoints", () => {
       team: {
         connect: { id: team.id },
       },
-      title: "Collective Event Type Basketball",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: collectiveEventTypeBasketballSlug,
       length: 60,
       assignAllTeamMembers: true,
@@ -189,7 +193,9 @@ describe("Routing forms endpoints", () => {
 
     routingForm = await routingFormsRepositoryFixture.create({
       name: "football or basketball",
-      description: "Do you want to play football or basketball?",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       routes: [
         {
           id: "baba89aa-4567-489a-bcde-f1961b1ae10c",
@@ -265,10 +271,16 @@ describe("Routing forms endpoints", () => {
         {
           id: "dcd8b978-fa11-47be-801a-5ca2cd4ec16e",
           type: "select",
-          label: "sport",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           options: [
-            { id: "755c11d1-fa46-4d03-8e15-d2c4ab3407d7", label: "football" },
-            { id: "4cbb1537-0ab9-4286-b4bf-08b08ff23372", label: "basketball" },
+            { id: "755c11d1-fa46-4d03-8e15-d2c4ab3407d7", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             },
+            { id: "4cbb1537-0ab9-4286-b4bf-08b08ff23372", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             },
           ],
           required: true,
         },

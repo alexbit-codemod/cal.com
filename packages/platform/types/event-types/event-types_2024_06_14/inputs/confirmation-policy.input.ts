@@ -12,14 +12,18 @@ import type { Disabled_2024_06_14 } from "./disabled.input";
 export class NoticeThreshold_2024_06_14 {
   @IsEnum(NoticeThresholdUnitEnum)
   @ApiProperty({
-    description: "The unit of time for the notice threshold (e.g., minutes, hours)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: NoticeThresholdUnitEnum.MINUTES,
   })
   unit!: NoticeThresholdUnitEnum;
 
   @IsInt()
   @ApiProperty({
-    description: "The time value for the notice threshold",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 30,
   })
   count!: number;
@@ -29,7 +33,9 @@ export class NoticeThreshold_2024_06_14 {
 export class BaseConfirmationPolicy_2024_06_14 {
   @IsEnum(ConfirmationPolicyEnum)
   @ApiProperty({
-    description: "The policy that determines when confirmation is required",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: [ConfirmationPolicyEnum.ALWAYS, ConfirmationPolicyEnum.TIME],
     example: ConfirmationPolicyEnum.ALWAYS,
   })
@@ -39,14 +45,18 @@ export class BaseConfirmationPolicy_2024_06_14 {
   @ValidateNested()
   @Type(() => NoticeThreshold_2024_06_14)
   @ApiPropertyOptional({
-    description: "The notice threshold required before confirmation is needed. Required when type is 'time'.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: NoticeThreshold_2024_06_14,
   })
   noticeThreshold?: NoticeThreshold_2024_06_14;
 
   @IsBoolean()
   @ApiProperty({
-    description: "Unconfirmed bookings still block calendar slots.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Boolean,
   })
   blockUnconfirmedBookingsInBooker!: boolean;

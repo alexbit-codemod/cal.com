@@ -59,7 +59,9 @@ export const addDnsRecord = async (domain: string) => {
       log.info(`CNAME already exists in Cloudflare: ${domain}`);
       return true;
     }
-    const errorMessage = `Failed to create dns-record in Cloudflare: ${domain}`;
+    const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     log.error(
       safeStringify({
         errorMessage,
@@ -115,12 +117,16 @@ export const deleteDnsRecord = async (domain: string) => {
     if (!searchResult.success || !searchResult.result) {
       log.error(
         safeStringify({
-          errorMessage: `Failed to search for dns-record in Cloudflare for ${domain}`,
+          errorMessage: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           searchData: searchResult,
         })
       );
       throw new HttpError({
-        message: `Something went wrong.`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         statusCode: 500,
       });
     }
@@ -128,12 +134,16 @@ export const deleteDnsRecord = async (domain: string) => {
     if (searchResult.result.length > 1) {
       log.error(
         safeStringify({
-          errorMessage: `Found more than one dns-record in Cloudflare for ${domain}`,
+          errorMessage: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           searchData: searchResult,
         })
       );
       throw new HttpError({
-        message: `Something went wrong.`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         statusCode: 400,
       });
     }
@@ -162,7 +172,9 @@ export const deleteDnsRecord = async (domain: string) => {
         })
       );
       throw new HttpError({
-        message: "Something went wrong.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         statusCode: 400,
       });
     }
@@ -203,7 +215,9 @@ async function api<T extends z.ZodType<unknown>>(
       })
     );
     throw new HttpError({
-      message: "Something went wrong",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       statusCode: 500,
     });
   }

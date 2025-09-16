@@ -17,16 +17,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({ eventTyp
     return (
       <Tooltip content={eventTypeURL}>
         <a download href={QR_URL} target="_blank" rel="noreferrer">
-          <img
-            className={classNames(
-              "hover:bg-muted border-default border transition hover:shadow-sm",
-              size >= 256 && "min-h-32"
-            )}
-            style={{ padding: size / 16, borderRadius: size / 20 }}
-            width={size}
-            src={QR_URL}
-            alt={eventTypeURL}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </a>
       </Tooltip>
     );
@@ -34,14 +26,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({ eventTyp
   return (
     <div className="flex w-full flex-col gap-5 text-sm">
       <div className="flex w-full">
-        <TextField
-          name="hello"
-          disabled={disabled}
-          value={additionalParameters}
-          onChange={(e) => setAdditionalParameters(e.target.value)}
-          label={t("additional_url_parameters")}
-          containerClassName="w-full"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       <div className="max-w-60 flex items-baseline gap-2">

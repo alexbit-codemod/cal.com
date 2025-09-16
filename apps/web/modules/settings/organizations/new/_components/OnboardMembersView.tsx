@@ -24,7 +24,8 @@ const AddNewTeamMembers = () => {
   const session = useSession();
 
   if (session.status === "loading") {
-    return <SkeletonContainer>Loading...</SkeletonContainer>;
+    return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$;
   }
   return <AddNewTeamMembersForm />;
 };
@@ -148,12 +149,8 @@ export const AddNewTeamMembersForm = () => {
         <div className="flex space-x-3">
           <form onSubmit={onSubmit} className="flex w-full items-end space-x-2">
             <div className="flex-grow">
-              <TextField
-                label={t("email")}
-                type="email"
-                {...register("email", { required: true })}
-                placeholder="colleague@company.com"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <Button type="submit" StartIcon="plus" color="secondary">
               {t("add")}
@@ -168,7 +165,8 @@ export const AddNewTeamMembersForm = () => {
             {invitedMembers.map((member) => (
               <li key={member.email} className="flex items-center justify-between px-5 py-2">
                 <div className="flex items-center space-x-3">
-                  <Avatar size="sm" alt={member.email} />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="flex gap-1">
                     <Tooltip content={member.email}>
                       <span className="text-subtle max-w-[250px] truncate text-sm">{member.email}</span>
@@ -188,7 +186,8 @@ export const AddNewTeamMembersForm = () => {
             {uniqueMembers?.map((member) => (
               <li key={member.email} className="flex items-center justify-between px-5 py-2">
                 <div className="flex items-center space-x-3">
-                  <Avatar size="sm" alt={member.email} imageSrc={member.avatarUrl} />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="flex gap-1">
                     <Tooltip content={member.email}>
                       <span className="text-emphasis text-sm font-medium">{member.name || member.email}</span>

@@ -10,7 +10,9 @@ import { decodeOAuthState } from "../../_utils/oauth/decodeOAuthState";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!req.query.code) {
-    res.status(401).json({ message: "Missing code" });
+    res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return;
   }
 
@@ -24,9 +26,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (typeof appKeys.client_id === "string") clientId = appKeys.client_id;
   if (typeof appKeys.client_secret === "string") clientSecret = appKeys.client_secret;
   if (typeof appKeys.base_url === "string") baseUrl = appKeys.base_url;
-  if (!clientId) return res.status(400).json({ message: "Tandem client_id missing." });
-  if (!clientSecret) return res.status(400).json({ message: "Tandem client_secret missing." });
-  if (!baseUrl) return res.status(400).json({ message: "Tandem base_url missing." });
+  if (!clientId) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!clientSecret) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!baseUrl) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const result = await fetch(`${baseUrl}/api/v1/oauth/v2/token`, {
     method: "POST",
@@ -40,7 +48,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const userId = req.session?.user.id;
   if (!userId) {
-    return res.status(404).json({ message: "No user found" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const existingCredentialTandemVideo = await prisma.credential.findMany({

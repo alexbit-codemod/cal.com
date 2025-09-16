@@ -169,7 +169,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
         team: {
           connect: { id: managerOrgTeam1.id },
         },
-        title: "Collective Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "manager-org-bookings-collective-event-type",
         length: 60,
         assignAllTeamMembers: true,
@@ -223,7 +225,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
 
       const nonOrgEventType = await eventTypesRepositoryFixture.create(
         {
-          title: "Non Org Event Type",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "non-org-event-type",
           length: 60,
           bookingFields: [],
@@ -257,7 +261,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2030, 0, 9, 13, 0, 0)),
         endTime: new Date(Date.UTC(2030, 0, 9, 14, 0, 0)),
-        title: "Manager Org Collective Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: `manager-org-collective-${randomString()}`,
         eventType: {
           connect: {
@@ -289,7 +295,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2030, 0, 8, 13, 0, 0)),
         endTime: new Date(Date.UTC(2030, 0, 8, 14, 0, 0)),
-        title: "Non-Org Booking 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: `non-org-booking-1-${randomString()}`,
         eventType: {
           connect: {
@@ -397,7 +405,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
         team: {
           connect: { id: managedOrgTeam1.id },
         },
-        title: "Collective Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-org-bookings-collective-event-type",
         length: 60,
         assignAllTeamMembers: true,
@@ -429,7 +439,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2030, 0, 11, 13, 0, 0)),
         endTime: new Date(Date.UTC(2030, 0, 11, 14, 0, 0)),
-        title: "Managed Org Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: `managed-org-booking-${randomString()}`,
         eventType: {
           connect: {

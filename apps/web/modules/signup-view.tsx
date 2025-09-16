@@ -386,47 +386,17 @@ export default function Signup({
                   }}>
                   {/* Username */}
                   {!isOrgInviteByLink ? (
-                    <UsernameField
-                      orgSlug={orgSlug}
-                      label={t("username")}
-                      username={watch("username") || ""}
-                      premium={premiumUsername}
-                      usernameTaken={usernameTaken}
-                      disabled={!!orgSlug}
-                      setUsernameTaken={(value) => setUsernameTaken(value)}
-                      data-testid="signup-usernamefield"
-                      setPremium={(value) => setPremiumUsername(value)}
-                      addOnLeading={
-                        orgSlug
-                          ? `${getOrgFullOrigin(orgSlug, { protocol: true }).replace(
-                              URL_PROTOCOL_REGEX,
-                              ""
-                            )}/`
-                          : `${process.env.NEXT_PUBLIC_WEBSITE_URL.replace(URL_PROTOCOL_REGEX, "")}/`
-                      }
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   ) : null}
                   {/* Email */}
-                  <TextField
-                    id="signup-email"
-                    {...register("email")}
-                    label={t("email")}
-                    type="email"
-                    autoComplete="email"
-                    disabled={prepopulateFormValues?.email}
-                    data-testid="signup-emailfield"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
 
                   {/* Password */}
                   {!isSamlSignup && (
-                    <PasswordField
-                      id="signup-password"
-                      data-testid="signup-passwordfield"
-                      autoComplete="new-password"
-                      label={t("password")}
-                      {...register("password")}
-                      hintErrors={["caplow", "min", "num"]}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   )}
                   {/* Cloudflare Turnstile Captcha */}
                   {CLOUDFLARE_SITE_ID ? (
@@ -438,11 +408,8 @@ export default function Signup({
                     />
                   ) : null}
 
-                  <CheckboxField
-                    data-testid="signup-cookie-content-checkbox"
-                    onChange={() => handleConsentChange(userConsentToCookie)}
-                    description={t("cookie_consent_checkbox")}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   {errors.apiError && (
                     <Alert
                       className="mb-3"
@@ -522,11 +489,8 @@ export default function Signup({
                       color="primary"
                       loading={isGoogleLoading}
                       CustomStartIcon={
-                        <img
-                          className={classNames("text-subtle  mr-2 h-4 w-4", premiumUsername && "opacity-50")}
-                          src="/google-icon-colored.svg"
-                          alt="Continue with Google Icon"
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       }
                       className={classNames("w-full justify-center rounded-md text-center")}
                       data-testid="continue-with-google-button"
@@ -611,20 +575,10 @@ export default function Signup({
                     t={t}
                     i18nKey="signing_up_terms"
                     components={[
-                      <Link
-                        className="text-emphasis hover:underline"
-                        key="terms"
-                        href={`${WEBSITE_TERMS_URL}`}
-                        target="_blank">
-                        Terms
-                      </Link>,
-                      <Link
-                        className="text-emphasis hover:underline"
-                        key="privacy"
-                        href={`${WEBSITE_PRIVACY_POLICY_URL}`}
-                        target="_blank">
-                        Privacy Policy.
-                      </Link>,
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$,
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$,
                     ]}
                   />
                 </div>
@@ -636,59 +590,39 @@ export default function Signup({
               <>
                 <div className="-mt-4 mb-6 mr-12 grid w-full grid-cols-3 gap-5 pr-4 sm:gap-3 lg:grid-cols-4">
                   <div>
-                    <img
-                      src="/product-cards/product-of-the-day.svg"
-                      className="h-[34px] w-full dark:invert"
-                      alt="Cal.com was Product of the Day at ProductHunt"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <div>
-                    <img
-                      src="/product-cards/product-of-the-week.svg"
-                      className="h-[34px] w-full dark:invert"
-                      alt="Cal.com was Product of the Week at ProductHunt"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <div>
-                    <img
-                      src="/product-cards/product-of-the-month.svg"
-                      className="h-[34px] w-full dark:invert"
-                      alt="Cal.com was Product of the Month at ProductHunt"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 </div>
                 <div className="mb-6 mr-12 grid w-full grid-cols-3 gap-5 pr-4 sm:gap-3 lg:grid-cols-4">
                   <div>
-                    <img
-                      src="/product-cards/producthunt.svg"
-                      className="h-[54px] w-full"
-                      alt="ProductHunt Rating of 5 Stars"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <div>
-                    <img
-                      src="/product-cards/google-reviews.svg"
-                      className="h-[54px] w-full"
-                      alt="Google Reviews Rating of 4.7 Stars"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <div>
-                    <img
-                      src="/product-cards/g2.svg"
-                      className="h-[54px] w-full"
-                      alt="G2 Rating of 4.7 Stars"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 </div>
               </>
             )}
             <div className="border-default hidden rounded-bl-2xl rounded-br-none rounded-tl-2xl border border-r-0 border-dashed bg-black/[3%] dark:bg-white/5 lg:block lg:py-[6px] lg:pl-[6px]">
-              <img className="block dark:hidden" src="/mock-event-type-list.svg" alt="Cal.com Booking Page" />
-              <img
-                className="hidden dark:block"
-                src="/mock-event-type-list-dark.svg"
-                alt="Cal.com Booking Page"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <div className="mr-12 mt-8 hidden h-full w-full grid-cols-3 gap-4 overflow-hidden lg:grid">
               {FEATURES.map((feature, index) => (

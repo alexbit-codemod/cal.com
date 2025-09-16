@@ -397,12 +397,8 @@ const BookerComponent = ({
                 area="meta"
                 className="max-w-screen flex w-full flex-col md:w-[var(--booker-meta-width)]">
                 {!hideEventTypeDetails && orgBannerUrl && (
-                  <img
-                    loading="eager"
-                    className="-mb-9 h-16 object-cover object-top ltr:rounded-tl-md rtl:rounded-tr-md sm:h-auto"
-                    alt="org banner"
-                    src={orgBannerUrl}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
                 {!hideEventTypeDetails && (
                   <EventMeta

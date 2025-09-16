@@ -109,7 +109,8 @@ function DelegationListItem({ delegation, toggleDelegation, onEdit, onDelete }: 
             <span>{delegation.serviceAccountClientId}</span>
             <InfoBadge content={t("add_client_id_in_google_workspace_with_below_scope")} />
           </div>
-          <span className="text-muted mt-2">https://www.googleapis.com/auth/calendar</span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <div className="mt-2 flex items-center space-x-2">
             <Badge variant="default">{delegation.workspacePlatform.name}</Badge>
             <Badge variant="gray">{delegation.domain}</Badge>
@@ -248,7 +249,8 @@ function DelegationFormFields({
   const form = useFormContext();
   return (
     <div className="space-y-4">
-      <TextField label={t("domain")} {...form.register("domain")} />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <Controller
         name="workspacePlatformSlug"
         control={form.control}
@@ -256,23 +258,14 @@ function DelegationFormFields({
           const platformOptions = getWorkspacePlatformOptions(workspacePlatforms);
           const selectedPlatform = platformOptions.find((opt) => opt.value === value);
           return (
-            <SelectField
-              required
-              label={t("workspace_platform")}
-              onChange={(option) => onChange(option?.value)}
-              value={selectedPlatform}
-              options={platformOptions}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           );
         }}
       />
       {isCreate && (
-        <TextAreaField
-          required
-          label={t("service_account_key")}
-          placeholder="{...}"
-          {...form.register("serviceAccountKey")}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </div>
   );
@@ -423,13 +416,8 @@ function DelegationCredentialList() {
           {/* <AddDwDButton /> */}
         </>
       ) : (
-        <EmptyScreen
-          Icon="link"
-          headline={t("add_delegation_credential")}
-          description={t("delegation_credential_description")}
-          className="rounded-b-lg rounded-t-none border-t-0"
-          buttonRaw={<AddDwDButton />}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
 
       {createEditDialog.delegation ? (

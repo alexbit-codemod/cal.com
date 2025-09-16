@@ -8,6 +8,8 @@ type CtxOrReq = { req: NextApiRequest; ctx?: never } | { ctx: { req: NextApiRequ
 
 export const ensureSession = async (ctxOrReq: CtxOrReq) => {
   const session = await getSession(ctxOrReq);
-  if (!session?.user.id) throw new HttpError({ statusCode: 401, message: "Unauthorized" });
+  if (!session?.user.id) throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   return session;
 };

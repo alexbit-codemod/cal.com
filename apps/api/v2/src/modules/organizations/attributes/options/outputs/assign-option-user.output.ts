@@ -6,15 +6,21 @@ import { IsString, ValidateNested } from "class-validator";
 
 class AssignOptionUserOutputData {
   @IsString()
-  @ApiProperty({ type: String, required: true, description: "The ID of the option assigned to the user" })
+  @ApiProperty({ type: String, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   id!: string;
 
   @IsString()
-  @ApiProperty({ type: Number, required: true, description: "The ID form the org membership for the user" })
+  @ApiProperty({ type: Number, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   memberId!: number;
 
   @IsString()
-  @ApiProperty({ type: String, required: true, description: "The value of the option" })
+  @ApiProperty({ type: String, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   attributeOptionId!: string;
 }
 

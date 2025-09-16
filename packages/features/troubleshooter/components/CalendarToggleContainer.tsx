@@ -44,7 +44,8 @@ function CalendarToggleItem(props: CalendarToggleItemProps) {
       }>
       <div className="[&>*]:text-emphasis flex flex-col gap-3">
         {props.calendars?.map((calendar) => {
-          return <Switch key={calendar.name} checked={calendar.active} label={calendar.name} disabled />;
+          return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$;
         })}
       </div>
     </TroubleshooterListItemContainer>
@@ -97,19 +98,8 @@ export function CalendarToggleContainer() {
             // // Add calendar to color map using externalId (what we use on the backend to determine source)
             // addToColorMap(foundPrimary?.externalId, color);
             return (
-              <CalendarToggleItem
-                key={calendar.credentialId}
-                title={calendar.integration.name}
-                colorDot="#000000"
-                subtitle={foundPrimary?.name ?? "Nameless Calendar"}
-                status={calendar.error ? "not_found" : "connected"}
-                calendars={calendar.calendars?.map((item) => {
-                  return {
-                    active: item.isSelected,
-                    name: item.name,
-                  };
-                })}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             );
           })}
           <Button color="secondary" className="justify-center gap-2" href="/settings/my-account/calendars">

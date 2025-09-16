@@ -17,7 +17,9 @@ export class MarkAbsentBookingOutput_2024_08_13 {
       { $ref: getSchemaPath(RecurringBookingOutput_2024_08_13) },
     ],
     description:
-      "Booking data, which can be either a BookingOutput object or a RecurringBookingOutput object",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @ValidateNested()
   @Type(() => Object)

@@ -47,7 +47,9 @@ import { SUCCESS_STATUS, X_CAL_SECRET_KEY } from "@calcom/platform-constants";
 @DocsTags("Platform / Managed Users")
 @ApiHeader({
   name: X_CAL_SECRET_KEY,
-  description: "OAuth client secret key",
+  description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   required: true,
 })
 export class OAuthClientUsersController {
@@ -165,7 +167,9 @@ export class OAuthClientUsersController {
   @HttpCode(HttpStatus.OK)
   @ApiOperation({
     summary: "Force refresh tokens",
-    description: `If you have lost managed user access or refresh token, then you can get new ones by using OAuth credentials. ${TOKENS_DOCS}`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @MembershipRoles([MembershipRole.ADMIN, MembershipRole.OWNER])
   async forceRefresh(

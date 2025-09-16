@@ -117,14 +117,8 @@ export default function ForgotPassword(props: PageProps) {
               } as CSSProperties
             }>
             <input name="csrfToken" type="hidden" defaultValue={csrfToken} hidden />
-            <EmailField
-              onChange={handleChange}
-              id="email"
-              name="email"
-              label={t("email_address")}
-              placeholder="john.doe@example.com"
-              required
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div className="space-y-2">
               <Button
                 className="w-full justify-center bg-white hover:bg-black hover:text-white"

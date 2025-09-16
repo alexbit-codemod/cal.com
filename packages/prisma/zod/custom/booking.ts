@@ -10,7 +10,9 @@ export const bookingCreateBodySchema = z.object({
   eventTypeSlug: z.string().optional(),
   rescheduleUid: z.string().optional(),
   recurringEventId: z.string().optional(),
-  rescheduledBy: z.string().email({ message: "Invalid email" }).optional(),
+  rescheduledBy: z.string().email({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }).optional(),
   start: z.string(),
   timeZone: timeZoneSchema,
   user: z.union([z.string(), z.array(z.string())]).optional(),

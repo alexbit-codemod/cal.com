@@ -27,61 +27,20 @@ export function LocationInfo(props: { calEvent: CalendarEvent; t: TFunction }) {
 
   if (meetingUrl) {
     return (
-      <Info
-        label={t("where")}
-        withSpacer
-        description={
-          <a
-            href={meetingUrl}
-            target="_blank"
-            title={t("meeting_url")}
-            style={{ color: "#101010" }}
-            rel="noreferrer">
-            {providerName || "Link"}
-          </a>
-        }
-        extraInfo={
-          meetingUrl && (
-            <div style={{ color: "#494949", fontWeight: 400, lineHeight: "24px" }}>
-              <>
-                {t("meeting_url")}:{" "}
-                <a href={meetingUrl} title={t("meeting_url")} style={{ color: "#3E3E3E" }}>
-                  {meetingUrl}
-                </a>
-              </>
-            </div>
-          )
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 
   if (isPhone) {
     return (
-      <Info
-        label={t("where")}
-        withSpacer
-        description={
-          <a href={`tel:${location}`} title="Phone" style={{ color: "#3E3E3E" }}>
-            {location}
-          </a>
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 
   return (
-    <Info
-      label={t("where")}
-      withSpacer
-      description={providerName || location}
-      extraInfo={
-        (providerName === "Zoom" || providerName === "Google") && props.calEvent.requiresConfirmation ? (
-          <p style={{ color: "#494949", fontWeight: 400, lineHeight: "24px" }}>
-            <>{t("meeting_url_provided_after_confirmed")}</>
-          </p>
-        ) : null
-      }
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }

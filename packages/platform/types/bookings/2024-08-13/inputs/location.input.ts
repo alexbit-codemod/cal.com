@@ -19,7 +19,9 @@ export class BookingInputAddressLocation_2024_08_13 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "address",
-    description: "only allowed value for type is `address` - it refers to address defined by the organizer.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "address";
 }
@@ -28,7 +30,9 @@ export class BookingInputLinkLocation_2024_08_13 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "link",
-    description: "only allowed value for type is `link` - it refers to link defined by the organizer.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "link";
 }
@@ -68,7 +72,9 @@ export type Integration_2024_08_13 = (typeof supportedIntegrations)[number];
 
 export class BookingInputIntegrationLocation_2024_08_13 {
   @IsIn(inputLocations)
-  @DocsProperty({ example: "integration", description: "only allowed value for type is `integration`" })
+  @DocsProperty({ example: "integration", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "integration";
 
   @IsIn(supportedIntegrations)
@@ -80,7 +86,9 @@ export class BookingInputPhoneLocation_2024_08_13 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "phone",
-    description: "only allowed value for type is `phone` - it refers to phone defined by the organizer.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "phone";
 }
@@ -90,7 +98,9 @@ export class BookingInputOrganizersDefaultAppLocation_2024_08_13 {
   @DocsProperty({
     example: "organizersDefaultApp",
     description:
-      "only available for team event types and the only allowed value for type is `organizersDefaultApp` - it refers to the default app defined by the organizer.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   type!: "organizersDefaultApp";
 }
@@ -99,7 +109,9 @@ export class BookingInputAttendeeAddressLocation_2024_08_13 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "attendeeAddress",
-    description: "only allowed value for type is `attendeeAddress`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "attendeeAddress";
 
@@ -110,7 +122,9 @@ export class BookingInputAttendeeAddressLocation_2024_08_13 {
 }
 export class BookingInputAttendeePhoneLocation_2024_08_13 {
   @IsIn(inputLocations)
-  @DocsProperty({ example: "attendeePhone", description: "only allowed value for type is `attendeePhone`" })
+  @DocsProperty({ example: "attendeePhone", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "attendeePhone";
 
   @IsPhoneNumber()
@@ -122,7 +136,9 @@ export class BookingInputAttendeeDefinedLocation_2024_08_13 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "attendeeDefined",
-    description: "only allowed value for type is `attendeeDefined`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "attendeeDefined";
 
@@ -144,7 +160,9 @@ export type BookingInputLocation_2024_08_13 =
 
 @ValidatorConstraint({ async: true })
 class BookingInputLocationValidator_2024_08_13 implements ValidatorConstraintInterface {
-  private validationMessage = "";
+  private validationMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
 
   private classTypeMap: { [key: string]: new () => BookingInputLocation_2024_08_13 } = {
     address: BookingInputAddressLocation_2024_08_13,
@@ -167,13 +185,17 @@ class BookingInputLocationValidator_2024_08_13 implements ValidatorConstraintInt
 
     const { type } = location;
     if (!type) {
-      this.validationMessage = `BookingInputLocationValidator_2024_08_13 - Booking 'location' must have a 'type' property.`;
+      this.validationMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       return false;
     }
 
     const ClassType = this.classTypeMap[type];
     if (!ClassType) {
-      this.validationMessage = `BookingInputLocationValidator_2024_08_13 - Unsupported booking location type '${type}'. Valid types are address, link, integration, phone, attendeePhone, attendeeAddress, attendeeDefined and organizersDefaultApp.`;
+      this.validationMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       return false;
     }
 
@@ -181,7 +203,9 @@ class BookingInputLocationValidator_2024_08_13 implements ValidatorConstraintInt
     const errors = await validate(instance);
     if (errors.length > 0) {
       const message = errors.flatMap((error) => Object.values(error.constraints || {})).join(", ");
-      this.validationMessage = `BookingInputLocationValidator_2024_08_13 - Validation failed for ${type} location: ${message}`;
+      this.validationMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       return false;
     }
 

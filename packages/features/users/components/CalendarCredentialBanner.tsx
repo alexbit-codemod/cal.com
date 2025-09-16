@@ -15,15 +15,8 @@ function CalendarCredentialBanner({ data }: CalendarCredentialBannerProps) {
 
   return (
     <>
-      <TopBanner
-        text={`${t("something_went_wrong")} ${t("calendar_error")}`}
-        variant="error"
-        actions={
-          <Link href="/apps/installed/calendar" className="border-b border-b-black">
-            {t("check_here")}
-          </Link>
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 }

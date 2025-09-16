@@ -95,7 +95,9 @@ describe("OrganizationsRoutingFormsResponsesController", () => {
     routingForm = await prismaWriteService.prisma.app_RoutingForms_Form.create({
       data: {
         name: "Test Routing Form",
-        description: "Test Description",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         disabled: false,
         routes: JSON.stringify([]),
         fields: JSON.stringify([]),

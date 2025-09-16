@@ -344,13 +344,8 @@ function MemberListContent(props: Props) {
             })();
           return (
             <div className="flex items-center gap-2">
-              <Avatar
-                size="sm"
-                alt={username || email}
-                imageSrc={getUserAvatarUrl({
-                  avatarUrl,
-                })}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div data-testid={`member-${username}`}>
                 <div data-testid="member-name" className="text-emphasis text-sm font-medium leading-none">
                   {memberName}
@@ -382,15 +377,8 @@ function MemberListContent(props: Props) {
           return (
             <div className="flex h-full flex-wrap items-center gap-2">
               {!accepted && (
-                <Badge
-                  data-testid="member-pending"
-                  variant="orange"
-                  className="text-xs"
-                  onClick={() => {
-                    table.getColumn("role")?.setFilterValue(["PENDING"]);
-                  }}>
-                  Pending
-                </Badge>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
               <Badge
                 data-testid="member-role"

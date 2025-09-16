@@ -105,27 +105,12 @@ const OrgAppearanceView = ({
           </div>
         </div>
         <div className="border-subtle flex flex-col justify-between border-x px-6 py-8 sm:flex-row">
-          <ThemeLabel
-            variant="system"
-            value="system"
-            label={t("theme_system")}
-            defaultChecked={currentOrg.theme === null}
-            register={themeForm.register}
-          />
-          <ThemeLabel
-            variant="light"
-            value="light"
-            label={t("light")}
-            defaultChecked={currentOrg.theme === "light"}
-            register={themeForm.register}
-          />
-          <ThemeLabel
-            variant="dark"
-            value="dark"
-            label={t("dark")}
-            defaultChecked={currentOrg.theme === "dark"}
-            register={themeForm.register}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <SectionBottomActions className="mb-6" align="end">
           <Button
@@ -150,48 +135,14 @@ const OrgAppearanceView = ({
         />
       </Form>
 
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        title={t("disable_cal_branding", { appName: APP_NAME })}
-        disabled={mutation?.isPending}
-        description={t("removes_cal_branding", { appName: APP_NAME })}
-        checked={hideBrandingValue}
-        onCheckedChange={(checked) => {
-          setHideBrandingValue(checked);
-          mutation.mutate({ hideBranding: checked });
-        }}
-        switchContainerClassName="mt-6"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <SettingsToggle
-        data-testid={`${currentOrg?.id}-seo-indexing-switch`}
-        toggleSwitchAtTheEnd={true}
-        title={t("seo_indexing")}
-        description={t("allow_seo_indexing")}
-        disabled={mutation.isPending}
-        checked={allowSEOIndexingValue}
-        onCheckedChange={(checked) => {
-          setAllowSEOIndexingValue(checked);
-          mutation.mutate({ allowSEOIndexing: checked });
-        }}
-        switchContainerClassName="mt-6"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        title={t("disable_org_url_label")}
-        description={t("disable_org_url_description", {
-          orgSlug: currentOrg?.slug,
-          destination: currentOrg?.organizationSettings?.orgAutoAcceptEmail,
-        })}
-        disabled={mutation.isPending}
-        checked={orgProfileRedirectsToVerifiedDomainValue}
-        onCheckedChange={(checked) => {
-          setOrgProfileRedirectsToVerifiedDomainValue(checked);
-          mutation.mutate({ orgProfileRedirectsToVerifiedDomain: checked });
-        }}
-        switchContainerClassName="mt-6"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 };

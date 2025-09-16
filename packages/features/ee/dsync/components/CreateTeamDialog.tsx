@@ -18,17 +18,8 @@ const CreateTeamDialog = (props: CreateTeamDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent type="creation" title={t("create_new_team")} description={t("team_will_be_under_org")}>
-        <CreateANewTeamForm
-          inDialog
-          submitLabel="Create"
-          onCancel={() => onOpenChange(false)}
-          onSuccess={async () => {
-            await utils.viewer.dsync.teamGroupMapping.get.invalidate();
-            await utils.viewer.teams.list.invalidate();
-            revalidateTeamsList();
-            onOpenChange(false);
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </DialogContent>
     </Dialog>
   );

@@ -82,60 +82,46 @@ export const BaseScheduledEmail = (
       subtitle={props.subtitle || <>{t("emailed_you_and_any_other_attendees")}</>}>
       {props.calEvent.rejectionReason && (
         <>
-          <Info label={t("rejection_reason")} description={props.calEvent.rejectionReason} withSpacer />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       )}
       {props.calEvent.cancellationReason && (
-        <Info
-          label={t(
-            props.calEvent.cancellationReason.startsWith("$RCH$")
-              ? "reason_for_reschedule"
-              : "cancellation_reason"
-          )}
-          description={
-            !!props.calEvent.cancellationReason && props.calEvent.cancellationReason.replace("$RCH$", "")
-          } // Removing flag to distinguish reschedule from cancellation
-          withSpacer
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
       {props.reassigned && !props.reassigned.byUser && (
         <>
-          <Info
-            label={t("reassigned_to")}
-            description={
-              <PersonInfo name={props.reassigned.name || undefined} email={props.reassigned.email} />
-            }
-            withSpacer
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       )}
       {props.reassigned && props.reassigned.byUser && (
         <>
-          <Info label={t("reassigned_by")} description={props.reassigned.byUser} withSpacer />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {props.reassigned?.reason && (
-            <Info label={t("reason")} description={props.reassigned.reason} withSpacer />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         </>
       )}
-      {rescheduledBy && <Info label={t("rescheduled_by")} description={rescheduledBy} withSpacer />}
-      <Info label={t("what")} description={props.calEvent.title} withSpacer />
+      {rescheduledBy && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <WhenInfo timeFormat={timeFormat} calEvent={props.calEvent} t={t} timeZone={timeZone} locale={locale} />
       <WhoInfo calEvent={props.calEvent} t={t} />
       <LocationInfo calEvent={props.calEvent} t={t} />
-      <Info label={t("description")} description={props.calEvent.description} withSpacer formatted />
-      <Info label={t("additional_notes")} description={props.calEvent.additionalNotes} withSpacer formatted />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {props.includeAppsStatus && <AppsStatus calEvent={props.calEvent} t={t} />}
       <UserFieldsResponses t={t} calEvent={props.calEvent} isOrganizer={props.isOrganizer} />
       {props.calEvent.paymentInfo?.amount && (
-        <Info
-          label={props.calEvent.paymentInfo.paymentOption === "HOLD" ? t("no_show_fee") : t("price")}
-          description={formatPrice(
-            props.calEvent.paymentInfo.amount,
-            props.calEvent.paymentInfo.currency,
-            props.attendee.language.locale
-          )}
-          withSpacer
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </BaseEmailHtml>
   );

@@ -26,21 +26,27 @@ import {
 
 export class WorkflowMessageOutputDto {
   @ApiProperty({
-    description: "Subject of the message",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Reminder: Your Meeting {EVENT_NAME} - {EVENT_DATE_ddd, MMM D, YYYY h:mma} with Cal.com",
   })
   @Expose()
   subject!: string;
 
   @ApiPropertyOptional({
-    description: "HTML content of the message",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "<p>Reminder for {EVENT_NAME}.</p>",
   })
   @Expose()
   html?: string;
 
   @ApiPropertyOptional({
-    description: "Text content of the message (used for SMS/WhatsApp)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Reminder for {EVENT_NAME}.",
   })
   @Expose()
@@ -48,48 +54,68 @@ export class WorkflowMessageOutputDto {
 }
 
 export class WorkflowStepOutputDto {
-  @ApiProperty({ description: "Unique identifier of the step", example: 67244 })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 67244 })
   @Expose()
   id!: number;
 
-  @ApiProperty({ description: "Step number in the workflow sequence", example: 1 })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 1 })
   @Expose()
   stepNumber!: number;
 
-  @ApiProperty({ description: "Action to perform", example: EMAIL_HOST, enum: STEP_ACTIONS })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: EMAIL_HOST, enum: STEP_ACTIONS })
   @Expose()
   action!: StepAction;
 
-  @ApiProperty({ description: "Intended recipient type", example: HOST, enum: RECIPIENT_TYPES })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: HOST, enum: RECIPIENT_TYPES })
   @Expose()
   recipient!: RecipientType;
 
-  @ApiPropertyOptional({ description: "Verified Email  if action is EMAIL_ADDRESS", example: 31214 })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 31214 })
   @Expose()
   email?: string;
 
   @ApiPropertyOptional({
-    description: "Verified Phone if action is SMS_NUMBER or WHATSAPP_NUMBER",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   phone?: string;
 
-  @ApiProperty({ description: "Template type used", example: REMINDER, enum: TEMPLATES })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: REMINDER, enum: TEMPLATES })
   @Expose()
   template!: TemplateType;
 
   @ApiPropertyOptional({
-    description: "Whether a calendar event (.ics) was included (for email actions)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @Expose()
   includeCalendarEvent = false;
 
-  @ApiProperty({ description: "Displayed sender name used for this step", example: "Cal.com Notifications" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "Cal.com Notifications" })
   @Expose()
   sender!: string;
 
-  @ApiProperty({ description: "Message content for this step", type: WorkflowMessageOutputDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: WorkflowMessageOutputDto })
   @Expose()
   @ValidateNested()
   @Type(() => WorkflowMessageOutputDto)
@@ -97,12 +123,16 @@ export class WorkflowStepOutputDto {
 }
 
 export class WorkflowTriggerOffsetOutputDto {
-  @ApiProperty({ description: "Time value for offset", example: 24 })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 24 })
   @Expose()
   value!: number;
 
   @ApiProperty({
-    description: "Unit for the offset time",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: HOUR,
     enum: TIME_UNITS,
   })
@@ -112,7 +142,9 @@ export class WorkflowTriggerOffsetOutputDto {
 
 export class WorkflowTriggerOutputDto {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: BEFORE_EVENT,
     enum: WORKFLOW_TRIGGER_TYPES,
   })
@@ -120,7 +152,9 @@ export class WorkflowTriggerOutputDto {
   type!: WorkflowTriggerType;
 
   @ApiPropertyOptional({
-    description: "Offset details (present for BEFORE_EVENT/AFTER_EVENT)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: WorkflowTriggerOffsetOutputDto,
   })
   @Expose()
@@ -131,14 +165,18 @@ export class WorkflowTriggerOutputDto {
 
 export class WorkflowActivationOutputDto {
   @ApiProperty({
-    description: "Whether the workflow is active for all event types associated with the team/user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: false,
   })
   @Expose()
   isActiveOnAllEventTypes?: boolean = false;
 
   @ApiPropertyOptional({
-    description: "List of Event Type IDs the workflow is specifically active on (if not active on all)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: [698191, 698192],
   })
   @Expose()
@@ -149,49 +187,67 @@ export class WorkflowActivationOutputDto {
 // --- Main Workflow Output DTO ---
 
 export class WorkflowOutput {
-  @ApiProperty({ description: "Unique identifier of the workflow", example: 101 })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 101 })
   @Expose()
   id!: number;
 
-  @ApiProperty({ description: "Name of the workflow", example: "Platform Test Workflow" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "Platform Test Workflow" })
   @Expose()
   name!: string;
 
   @ApiPropertyOptional({
-    description: "ID of the user who owns the workflow (if not team-owned)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2313,
   })
   @Expose()
   userId?: number;
 
-  @ApiPropertyOptional({ description: "ID of the team owning the workflow", example: 4214321 })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 4214321 })
   @Expose()
   teamId?: number;
 
-  @ApiProperty({ description: "Activation settings (scope)", type: WorkflowActivationOutputDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: WorkflowActivationOutputDto })
   @Expose()
   @ValidateNested()
   @Type(() => WorkflowActivationOutputDto)
   activation!: WorkflowActivationOutputDto;
 
-  @ApiProperty({ description: "Trigger configuration", type: WorkflowTriggerOutputDto })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: WorkflowTriggerOutputDto })
   @Expose()
   @ValidateNested()
   @Type(() => WorkflowTriggerOutputDto)
   trigger!: WorkflowTriggerOutputDto;
 
-  @ApiProperty({ description: "Steps comprising the workflow", type: [WorkflowStepOutputDto] })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , type: [WorkflowStepOutputDto] })
   @Expose()
   @IsArray()
   @ValidateNested({ each: true })
   @Type(() => WorkflowStepOutputDto)
   steps!: WorkflowStepOutputDto[];
 
-  @ApiPropertyOptional({ description: "Timestamp of creation", example: "2024-05-12T10:00:00.000Z" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "2024-05-12T10:00:00.000Z" })
   @Expose()
   createdAt?: Date | string;
 
-  @ApiPropertyOptional({ description: "Timestamp of last update", example: "2024-05-12T11:30:00.000Z" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "2024-05-12T11:30:00.000Z" })
   @Expose()
   updatedAt?: Date | string;
 }
@@ -200,7 +256,9 @@ export class WorkflowOutput {
 
 export class GetWorkflowsOutput {
   @ApiProperty({
-    description: "Indicates the status of the response",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: SUCCESS_STATUS,
     enum: [SUCCESS_STATUS, ERROR_STATUS],
   })
@@ -209,7 +267,9 @@ export class GetWorkflowsOutput {
   status!: typeof SUCCESS_STATUS | typeof ERROR_STATUS;
 
   @ApiProperty({
-    description: "List of workflows",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: [WorkflowOutput],
   })
   @Expose()
@@ -221,7 +281,9 @@ export class GetWorkflowsOutput {
 
 export class GetWorkflowOutput {
   @ApiProperty({
-    description: "Indicates the status of the response",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: SUCCESS_STATUS,
     enum: [SUCCESS_STATUS, ERROR_STATUS],
   })
@@ -230,7 +292,9 @@ export class GetWorkflowOutput {
   status!: typeof SUCCESS_STATUS | typeof ERROR_STATUS;
 
   @ApiProperty({
-    description: "workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: [WorkflowOutput],
   })
   @Expose()

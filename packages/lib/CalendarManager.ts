@@ -92,7 +92,9 @@ export const getConnectedCalendars = async (
             integration: safeToSendIntegration,
             credentialId,
             error: {
-              message: "No primary calendar found",
+              message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           };
         }
@@ -111,12 +113,16 @@ export const getConnectedCalendars = async (
           calendars,
         };
       } catch (error) {
-        let errorMessage = "Could not get connected calendars";
+        let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
 
         // Here you can expect for specific errors
         if (error instanceof Error) {
           if (error.message === "invalid_grant") {
-            errorMessage = "Access token expired or revoked";
+            errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ;
           }
         }
 

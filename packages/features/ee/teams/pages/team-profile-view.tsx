@@ -365,12 +365,8 @@ const TeamProfileForm = ({ team, teamId }: TeamProfileFormProps) => {
 
                 return (
                   <>
-                    <Avatar
-                      alt={form.getValues("name")}
-                      data-testid="profile-upload-logo"
-                      imageSrc={getPlaceholderAvatar(value, form.getValues("name"))}
-                      size="lg"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <div className="ms-4 flex gap-2">
                       <ImageUploader
                         target="logo"
@@ -397,12 +393,8 @@ const TeamProfileForm = ({ team, teamId }: TeamProfileFormProps) => {
           control={form.control}
           name="name"
           render={({ field: { name, value, onChange } }) => (
-            <TextField
-              name={name}
-              label={t("team_name")}
-              value={value}
-              onChange={(e) => onChange(e?.target.value)}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         />
         <Controller
@@ -410,58 +402,20 @@ const TeamProfileForm = ({ team, teamId }: TeamProfileFormProps) => {
           name="slug"
           render={({ field: { value } }) => (
             <div className="mt-8">
-              <TextField
-                name="slug"
-                label={t("team_url")}
-                value={value}
-                data-testid="team-url"
-                addOnClassname="testid-leading-text-team-url"
-                addOnLeading={`${getTeamUrlSync(
-                  { orgSlug: team.parent ? team.parent.slug : null, teamSlug: null },
-                  {
-                    protocol: false,
-                  }
-                )}`}
-                onChange={(e) => {
-                  form.clearErrors("slug");
-                  form.setValue("slug", slugify(e?.target.value, true), { shouldDirty: true });
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
         />
 
         <div className="mt-8">
-          <TextField
-            name="id"
-            label={t("team_id")}
-            value={teamId}
-            disabled={true}
-            addOnSuffix={
-              <Tooltip content={t("copy_to_clipboard")}>
-                <Button
-                  color="minimal"
-                  size="sm"
-                  type="button"
-                  aria-label="copy team id"
-                  onClick={() => handleCopy(teamId.toString())}>
-                  <Icon name="copy" className="ml-1 h-4 w-4" />
-                </Button>
-              </Tooltip>
-            }
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="mt-8">
           <Label>{t("about")}</Label>
-          <Editor
-            getText={() => md.render(form.getValues("bio") || "")}
-            setText={(value: string) => form.setValue("bio", turndown(value), { shouldDirty: true })}
-            excludedToolbarItems={["blockType"]}
-            disableLists
-            firstRender={firstRender}
-            setFirstRender={setFirstRender}
-            height="80px"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <p className="text-default mt-2 text-sm">{t("team_description")}</p>
       </div>

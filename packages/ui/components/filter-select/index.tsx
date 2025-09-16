@@ -60,7 +60,8 @@ export function FilterSelect({
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0" align="start">
         <Command>
-          <CommandInput placeholder={placeholder ?? title} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <CommandList>
             <CommandEmpty>{emptyText}</CommandEmpty>
             <CommandGroup data-testId={`${testId}-group`}>
@@ -90,9 +91,8 @@ export function FilterSelect({
               <>
                 <CommandSeparator />
                 <CommandGroup>
-                  <CommandItem onSelect={() => onChange(null)} className="justify-center text-center">
-                    Clear filter
-                  </CommandItem>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </CommandGroup>
               </>
             )}

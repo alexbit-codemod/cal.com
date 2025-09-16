@@ -79,7 +79,9 @@ export function checkInputEmailIsValid(email: string) {
   if (!isEmail(email))
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `Invite failed because ${email} is not a valid email address`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 }
 
@@ -101,7 +103,9 @@ export async function getTeamOrThrow(teamId: number) {
   if (!team)
     throw new TRPCError({
       code: "NOT_FOUND",
-      message: `Team not found`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   return { ...team, metadata: teamMetadataSchema.parse(team.metadata) };
@@ -122,7 +126,9 @@ export async function getUniqueInvitationsOrThrowIfEmpty(invitations: Invitation
   if (uniqueInvitations.length === 0) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "You must provide at least one email address to invite.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -690,7 +696,9 @@ export const sendExistingUserTeamInviteEmails = async ({
     if (!currentUserTeamName) {
       throw new TRPCError({
         code: "INTERNAL_SERVER_ERROR",
-        message: "The team doesn't have a name",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 

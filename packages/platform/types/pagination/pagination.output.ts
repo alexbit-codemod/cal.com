@@ -3,7 +3,9 @@ import { IsBoolean, IsInt, Min } from "class-validator";
 
 export class PaginationMetaDto {
   @ApiProperty({
-    description: "The total number of items available across all pages, matching the query criteria.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 123,
     minimum: 0,
   })
@@ -13,7 +15,9 @@ export class PaginationMetaDto {
 
   @ApiProperty({
     description:
-      "The number of items remaining to be fetched *after* the current page. Calculated as: `totalItems - (skip + itemsPerPage)`.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 103, // e.g., if totalItems=123, skip=10, itemsPerPage=10 -> 123 - (10 + 10) = 103
     minimum: 0,
   })
@@ -22,7 +26,9 @@ export class PaginationMetaDto {
   remainingItems!: number;
 
   @ApiProperty({
-    description: "The number of items returned in the current page.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 10,
   })
   @IsInt()
@@ -30,7 +36,9 @@ export class PaginationMetaDto {
   returnedItems!: number;
 
   @ApiProperty({
-    description: "The maximum number of items requested per page.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 10,
     minimum: 1,
   })
@@ -39,7 +47,9 @@ export class PaginationMetaDto {
   itemsPerPage!: number;
 
   @ApiProperty({
-    description: "The current page number being returned.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2, // e.g., if skip=10, itemsPerPage=10 -> page 2
     minimum: 1,
   })
@@ -48,7 +58,9 @@ export class PaginationMetaDto {
   currentPage!: number;
 
   @ApiProperty({
-    description: "The total number of pages available.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 13, // e.g., if totalItems=123, itemsPerPage=10 -> 13 pages
     minimum: 0, // Can be 0 if totalItems is 0
   })
@@ -57,14 +69,18 @@ export class PaginationMetaDto {
   totalPages!: number;
 
   @ApiProperty({
-    description: "Indicates if there is a subsequent page available after the current one.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()
   hasNextPage!: boolean;
 
   @ApiProperty({
-    description: "Indicates if there is a preceding page available before the current one.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()

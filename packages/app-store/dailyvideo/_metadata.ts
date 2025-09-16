@@ -14,14 +14,18 @@ export const metadata = {
   publisher: "Cal.com",
   category: "conferencing",
   slug: "daily-video",
-  title: "Cal Video",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   isGlobal: true,
   email: "help@cal.com",
   appData: {
     location: {
       linkType: "dynamic",
       type: "integrations:daily",
-      label: "Cal Video",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   },
   key: { apikey: process.env.DAILY_API_KEY },

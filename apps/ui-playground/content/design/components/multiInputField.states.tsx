@@ -20,7 +20,8 @@ export const StatesExample: React.FC = () => {
         <div className="space-y-6">
           <div className="space-y-4">
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Default State</h3>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <MultiOptionInput<FormValues>
                 fieldArrayName="defaultOptions"
                 optionPlaceholders={["First option", "Second option", "Third option"]}
@@ -29,7 +30,8 @@ export const StatesExample: React.FC = () => {
             </div>
 
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Disabled State</h3>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <MultiOptionInput<FormValues>
                 fieldArrayName="disabledOptions"
                 optionPlaceholders={["Disabled option 1", "Disabled option 2"]}
@@ -39,7 +41,8 @@ export const StatesExample: React.FC = () => {
             </div>
 
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Minimum Options (2)</h3>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <MultiOptionInput<FormValues>
                 fieldArrayName="minOptions"
                 optionPlaceholders={["Required option 1", "Required option 2", "Optional option"]}

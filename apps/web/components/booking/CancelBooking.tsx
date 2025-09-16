@@ -48,24 +48,11 @@ const InternalNotePresetsSelect = ({
   return (
     <div className="mb-4 flex flex-col">
       <Label>{t("internal_booking_note")}</Label>
-      <Select
-        className="mb-2"
-        options={[
-          ...internalNotePresets?.map((preset) => ({
-            label: preset.name,
-            value: preset.id,
-          })),
-          { label: t("other"), value: "other" },
-        ]}
-        onChange={handleSelectChange}
-        placeholder={t("internal_booking_note")}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {showOtherInput && (
-        <TextArea
-          rows={3}
-          placeholder={t("internal_booking_note_description")}
-          onChange={(e) => onPresetSelect?.({ value: "other", label: e.target.value })}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </div>
   );
@@ -170,15 +157,8 @@ export default function CancelBooking(props: Props) {
 
           <Label>{props.isHost ? t("cancellation_reason_host") : t("cancellation_reason")}</Label>
 
-          <TextArea
-            data-testid="cancel_reason"
-            ref={cancelBookingRef}
-            placeholder={t("cancellation_reason_placeholder")}
-            value={cancellationReason}
-            onChange={(e) => setCancellationReason(e.target.value)}
-            className="mb-4 mt-2 w-full "
-            rows={3}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {props.isHost ? (
             <div className="-mt-2 mb-4 flex items-center gap-2">
               <Icon name="info" className="text-subtle h-4 w-4" />

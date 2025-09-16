@@ -8,27 +8,37 @@ enum SortOrder {
 }
 
 export class GetRoutingFormsParams {
-  @ApiPropertyOptional({ type: Number, description: "Number of routing forms to skip" })
+  @ApiPropertyOptional({ type: Number, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Transform(({ value }) => value && parseInt(value))
   @IsOptional()
   skip?: number;
 
-  @ApiPropertyOptional({ type: Number, description: "Number of routing forms to take" })
+  @ApiPropertyOptional({ type: Number, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Transform(({ value }) => value && parseInt(value))
   @IsOptional()
   take?: number;
 
-  @ApiPropertyOptional({ enum: SortOrder, description: "Sort by creation time" })
+  @ApiPropertyOptional({ enum: SortOrder, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @IsEnum(SortOrder)
   sortCreatedAt?: "asc" | "desc";
 
-  @ApiPropertyOptional({ enum: SortOrder, description: "Sort by update time" })
+  @ApiPropertyOptional({ enum: SortOrder, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @IsEnum(SortOrder)
   sortUpdatedAt?: "asc" | "desc";
 
-  @ApiPropertyOptional({ type: Boolean, description: "Filter by disabled status" })
+  @ApiPropertyOptional({ type: Boolean, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @Transform(({ value }) => {
     if (value === "true") return true;
@@ -38,7 +48,9 @@ export class GetRoutingFormsParams {
   @IsBoolean()
   disabled?: boolean;
 
-  @ApiPropertyOptional({ type: String, description: "Filter by name" })
+  @ApiPropertyOptional({ type: String, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @IsString()
   name?: string;
@@ -46,7 +58,9 @@ export class GetRoutingFormsParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by forms created after this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()
@@ -57,7 +71,9 @@ export class GetRoutingFormsParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by forms created before this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()
@@ -68,7 +84,9 @@ export class GetRoutingFormsParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by forms updated after this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()
@@ -79,7 +97,9 @@ export class GetRoutingFormsParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by forms updated before this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()

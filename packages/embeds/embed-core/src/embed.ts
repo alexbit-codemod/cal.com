@@ -308,7 +308,9 @@ export class Cal {
     const iframe = (this.iframe = document.createElement("iframe"));
     iframe.className = "cal-embed";
     iframe.name = `cal-embed=${this.namespace}`;
-    iframe.title = `Book a call`;
+    iframe.title = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     this.loadInIframe({ calLink, config, calOrigin, iframe });
     return iframe;

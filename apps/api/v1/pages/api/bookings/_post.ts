@@ -225,7 +225,9 @@ async function handler(req: NextApiRequest) {
   if (req.body.eventTypeId !== undefined && typeof req.body.eventTypeId !== "number") {
     throw new HttpError({
       statusCode: 400,
-      message: "Bad request, eventTypeId must be a number",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

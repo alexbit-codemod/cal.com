@@ -15,7 +15,9 @@ function transformSelectValue({
   field: Pick<Field, "options" | "type">;
   idOrLabel: string;
 }) {
-  idOrLabel = idOrLabel.trim();
+  idOrLabel = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   const options = field.options;
   if (!options) {
     return idOrLabel;

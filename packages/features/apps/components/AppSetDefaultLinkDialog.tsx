@@ -68,13 +68,8 @@ export function AppSetDefaultLinkDialog({
             setLocationType(undefined);
           }}>
           <>
-            <TextField
-              type="text"
-              required
-              {...form.register("link")}
-              placeholder={locationType.organizerInputPlaceholder ?? ""}
-              label={locationType.label ?? ""}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             <DialogFooter showDivider className="mt-8">
               <DialogClose />

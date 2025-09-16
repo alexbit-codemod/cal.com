@@ -21,7 +21,9 @@ export function checkPostMethod(req: NextRequest) {
   if (!POST_METHODS_ALLOWED_API_ROUTES.some((route) => pathname.startsWith(route)) && req.method === "POST") {
     return new NextResponse(null, {
       status: 405,
-      statusText: "Method Not Allowed",
+      statusText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       headers: {
         Allow: "GET",
       },

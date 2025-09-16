@@ -572,19 +572,8 @@ export const EventAdvancedTab = ({
 
   return (
     <div className="flex flex-col space-y-4">
-      <calendarComponents.CalendarSettings
-        verifiedSecondaryEmails={verifiedSecondaryEmails}
-        userEmail={userEmail}
-        calendarsQuery={calendarsQuery}
-        isTeamEventType={!!team}
-        isChildrenManagedEventType={isChildrenManagedEventType}
-        customClassNames={customClassNames}
-        eventNameLocked={eventNameLocked}
-        eventNamePlaceholder={eventNamePlaceholder}
-        setShowEventNameTip={setShowEventNameTip}
-        showToast={showToast}
-        eventType={eventType}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {showBookerLayoutSelector && (
         <BookerLayoutSelector
           fallbackToUserSettings
@@ -605,27 +594,8 @@ export const EventAdvancedTab = ({
           </p>
         </div>
         <div className="border-subtle bg-default rounded-lg border p-5">
-          <FormBuilder
-            showPhoneAndEmailToggle
-            title={t("confirmation")}
-            description={t("what_booker_should_provide")}
-            addFieldLabel={t("add_a_booking_question")}
-            formProp="bookingFields"
-            {...shouldLockDisableProps("bookingFields")}
-            dataStore={{
-              options: {
-                locations: {
-                  // FormBuilder doesn't handle plural for non-english languages. So, use english(Location) only. This is similar to 'Workflow'
-                  source: { label: "Location" },
-                  value: getLocationsOptionsForSelect(formMethods.getValues("locations") ?? [], t),
-                },
-              },
-            }}
-            shouldConsiderRequired={(field: BookingField) => {
-              // Location field has a default value at backend so API can send no location but we don't allow it in UI and thus we want to show it as required to user
-              return field.name === "location" ? true : field.required;
-            }}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
       <RequiresConfirmationController
@@ -643,40 +613,16 @@ export const EventAdvancedTab = ({
           <Controller
             name="disableCancelling"
             render={({ field: { onChange } }) => (
-              <SettingsToggle
-                labelClassName="text-sm"
-                toggleSwitchAtTheEnd={true}
-                switchContainerClassName="border-subtle rounded-lg border py-6 px-4 sm:px-6"
-                title={t("disable_cancelling")}
-                data-testid="disable-cancelling-toggle"
-                {...disableCancellingLocked}
-                description={t("description_disable_cancelling")}
-                checked={disableCancelling}
-                onCheckedChange={(val) => {
-                  setDisableCancelling(val);
-                  onChange(val);
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           />
 
           <Controller
             name="disableRescheduling"
             render={({ field: { onChange } }) => (
-              <SettingsToggle
-                labelClassName="text-sm"
-                toggleSwitchAtTheEnd={true}
-                switchContainerClassName="border-subtle rounded-lg border py-6 px-4 sm:px-6"
-                title={t("disable_rescheduling")}
-                data-testid="disable-rescheduling-toggle"
-                {...disableReschedulingLocked}
-                description={t("description_disable_rescheduling")}
-                checked={disableRescheduling}
-                onCheckedChange={(val) => {
-                  setDisableRescheduling(val);
-                  onChange(val);
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           />
         </>
@@ -685,83 +631,29 @@ export const EventAdvancedTab = ({
       <Controller
         name="canSendCalVideoTranscriptionEmails"
         render={({ field: { value, onChange } }) => (
-          <SettingsToggle
-            labelClassName={classNames(
-              "text-sm",
-              customClassNames?.canSendCalVideoTranscriptionEmails?.label
-            )}
-            toggleSwitchAtTheEnd={true}
-            switchContainerClassName={classNames(
-              "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-              customClassNames?.canSendCalVideoTranscriptionEmails?.container
-            )}
-            title={t("send_cal_video_transcription_emails")}
-            data-testid="send-cal-video-transcription-emails"
-            {...sendCalVideoTranscriptionEmailsProps}
-            description={t("description_send_cal_video_transcription_emails")}
-            descriptionClassName={customClassNames?.canSendCalVideoTranscriptionEmails?.description}
-            checked={value}
-            onCheckedChange={(e) => onChange(e)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
       <Controller
         name="requiresBookerEmailVerification"
         render={({ field: { value, onChange } }) => (
-          <SettingsToggle
-            labelClassName={classNames("text-sm", customClassNames?.bookerEmailVerification?.label)}
-            toggleSwitchAtTheEnd={true}
-            switchContainerClassName={classNames(
-              "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-              customClassNames?.bookerEmailVerification?.container
-            )}
-            title={t("requires_booker_email_verification")}
-            data-testid="requires-booker-email-verification"
-            {...requiresBookerEmailVerificationProps}
-            description={t("description_requires_booker_email_verification")}
-            descriptionClassName={customClassNames?.bookerEmailVerification?.description}
-            checked={value}
-            onCheckedChange={(e) => onChange(e)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
       <Controller
         name="hideCalendarNotes"
         render={({ field: { value, onChange } }) => (
-          <SettingsToggle
-            labelClassName={classNames("text-sm", customClassNames?.calendarNotes?.label)}
-            toggleSwitchAtTheEnd={true}
-            switchContainerClassName={classNames(
-              "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-              customClassNames?.calendarNotes?.container
-            )}
-            descriptionClassName={customClassNames?.calendarNotes?.description}
-            data-testid="disable-notes"
-            title={t("disable_notes")}
-            {...hideCalendarNotesLocked}
-            description={t("disable_notes_description")}
-            checked={value}
-            onCheckedChange={(e) => onChange(e)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
       <Controller
         name="hideCalendarEventDetails"
         render={({ field: { value, onChange } }) => (
-          <SettingsToggle
-            labelClassName={classNames("text-sm", customClassNames?.eventDetailsVisibility?.label)}
-            toggleSwitchAtTheEnd={true}
-            switchContainerClassName={classNames(
-              "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-              customClassNames?.eventDetailsVisibility?.container
-            )}
-            descriptionClassName={customClassNames?.eventDetailsVisibility?.description}
-            title={t("hide_calendar_event_details")}
-            {...hideCalendarEventDetailsLocked}
-            description={t("description_hide_calendar_event_details")}
-            checked={value}
-            onCheckedChange={(e) => onChange(e)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
       <Controller
@@ -792,18 +684,8 @@ export const EventAdvancedTab = ({
                   "border-subtle rounded-b-lg border border-t-0 p-6",
                   customClassNames?.bookingRedirect?.redirectUrlInput?.container
                 )}>
-                <TextField
-                  className={classNames("w-full", customClassNames?.bookingRedirect?.redirectUrlInput?.input)}
-                  label={t("redirect_success_booking")}
-                  labelClassName={customClassNames?.bookingRedirect?.redirectUrlInput?.label}
-                  labelSrOnly
-                  disabled={successRedirectUrlLocked.disabled}
-                  placeholder={t("external_redirect_url")}
-                  data-testid="external-redirect-url"
-                  required={redirectUrlVisible}
-                  type="text"
-                  {...formMethods.register("successRedirectUrl")}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
 
                 <div
                   className={classNames(
@@ -813,16 +695,8 @@ export const EventAdvancedTab = ({
                   <Controller
                     name="forwardParamsSuccessRedirect"
                     render={({ field: { value, onChange } }) => (
-                      <CheckboxField
-                        description={t("forward_params_redirect")}
-                        disabled={successRedirectUrlLocked.disabled}
-                        className={customClassNames?.bookingRedirect?.forwardParamsCheckbox?.checkbox}
-                        descriptionClassName={
-                          customClassNames?.bookingRedirect?.forwardParamsCheckbox?.description
-                        }
-                        onChange={(e) => onChange(e)}
-                        checked={value}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                   />
                 </div>
@@ -936,33 +810,8 @@ export const EventAdvancedTab = ({
                   name="seatsPerTimeSlot"
                   render={({ field: { value, onChange } }) => (
                     <div>
-                      <TextField
-                        required
-                        name="seatsPerTimeSlot"
-                        labelSrOnly
-                        label={t("number_of_seats")}
-                        type="number"
-                        disabled={seatsLocked.disabled}
-                        //For old events if value > MAX_SEATS_PER_TIME_SLOT
-                        value={value > MAX_SEATS_PER_TIME_SLOT ? MAX_SEATS_PER_TIME_SLOT : value ?? 1}
-                        step={1}
-                        placeholder="1"
-                        min={1}
-                        max={MAX_SEATS_PER_TIME_SLOT}
-                        containerClassName={classNames(
-                          "max-w-80",
-                          customClassNames?.seatsOptions?.seatsInput.container
-                        )}
-                        addOnClassname={customClassNames?.seatsOptions?.seatsInput.addOn}
-                        className={customClassNames?.seatsOptions?.seatsInput?.input}
-                        labelClassName={customClassNames?.seatsOptions?.seatsInput?.label}
-                        addOnSuffix={t("seats")}
-                        onChange={(e) => {
-                          const enteredValue = parseInt(e.target.value);
-                          onChange(Math.min(enteredValue, MAX_SEATS_PER_TIME_SLOT));
-                        }}
-                        data-testid="seats-per-time-slot"
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       <div
                         className={classNames(
                           "mt-4",
@@ -971,17 +820,8 @@ export const EventAdvancedTab = ({
                         <Controller
                           name="seatsShowAttendees"
                           render={({ field: { value, onChange } }) => (
-                            <CheckboxField
-                              data-testid="show-attendees"
-                              description={t("show_attendees")}
-                              className={customClassNames?.seatsOptions?.showAttendeesCheckbox?.checkbox}
-                              descriptionClassName={
-                                customClassNames?.seatsOptions?.showAttendeesCheckbox?.description
-                              }
-                              disabled={seatsLocked.disabled}
-                              onChange={(e) => onChange(e)}
-                              checked={value}
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           )}
                         />
                       </div>
@@ -993,18 +833,8 @@ export const EventAdvancedTab = ({
                         <Controller
                           name="seatsShowAvailabilityCount"
                           render={({ field: { value, onChange } }) => (
-                            <CheckboxField
-                              description={t("show_available_seats_count")}
-                              disabled={seatsLocked.disabled}
-                              onChange={(e) => onChange(e)}
-                              checked={value}
-                              className={
-                                customClassNames?.seatsOptions?.showAvalableSeatCountCheckbox?.checkbox
-                              }
-                              descriptionClassName={
-                                customClassNames?.seatsOptions?.showAvalableSeatCountCheckbox?.description
-                              }
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           )}
                         />
                       </div>
@@ -1013,28 +843,16 @@ export const EventAdvancedTab = ({
                 />
               </div>
             </SettingsToggle>
-            {noShowFeeEnabled && <Alert severity="warning" title={t("seats_and_no_show_fee_error")} />}
+            {noShowFeeEnabled && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$}
           </>
         )}
       />
       <Controller
         name="hideOrganizerEmail"
         render={({ field: { value, onChange } }) => (
-          <SettingsToggle
-            labelClassName={classNames("text-sm", customClassNames?.hideOrganizerEmail?.label)}
-            toggleSwitchAtTheEnd={true}
-            switchContainerClassName={classNames(
-              "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-              customClassNames?.hideOrganizerEmail?.container
-            )}
-            title={t("hide_organizer_email")}
-            {...hideOrganizerEmailLocked}
-            description={t("hide_organizer_email_description")}
-            descriptionClassName={customClassNames?.hideOrganizerEmail?.description}
-            checked={value}
-            onCheckedChange={(e) => onChange(e)}
-            data-testid="hide-organizer-email"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
       <Controller
@@ -1100,36 +918,16 @@ export const EventAdvancedTab = ({
       <Controller
         name="allowReschedulingPastBookings"
         render={({ field: { value, onChange } }) => (
-          <SettingsToggle
-            labelClassName={classNames("text-sm")}
-            toggleSwitchAtTheEnd={true}
-            switchContainerClassName={classNames("border-subtle rounded-lg border py-6 px-4 sm:px-6")}
-            title={t("allow_rescheduling_past_events")}
-            {...reschedulingPastBookingsLocked}
-            description={t("allow_rescheduling_past_events_description")}
-            checked={value}
-            onCheckedChange={(e) => onChange(e)}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
 
       <Controller
         name="allowReschedulingCancelledBookings"
         render={({ field: { onChange } }) => (
-          <SettingsToggle
-            labelClassName="text-sm"
-            toggleSwitchAtTheEnd={true}
-            switchContainerClassName="border-subtle rounded-lg border py-6 px-4 sm:px-6"
-            title={t("allow_rescheduling_cancelled_bookings")}
-            data-testid="allow-rescheduling-cancelled-bookings-toggle"
-            {...allowReschedulingCancelledBookingsLocked}
-            description={t("description_allow_rescheduling_cancelled_bookings")}
-            checked={allowReschedulingCancelledBookings}
-            onCheckedChange={(val) => {
-              setallowReschedulingCancelledBookings(val);
-              onChange(val);
-            }}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       />
       {!isPlatform && (
@@ -1161,16 +959,8 @@ export const EventAdvancedTab = ({
                     );
                   }}>
                   <div className="border-subtle rounded-b-lg border border-t-0 p-6">
-                    <SelectField
-                      className="w-full"
-                      label={t("custom_reply_to_email_title")}
-                      required={!!customReplyToEmail}
-                      placeholder={t("select_verified_email")}
-                      data-testid="custom-reply-to-email-input"
-                      value={value ? { label: value, value } : undefined}
-                      onChange={(option) => onChange(option?.value || null)}
-                      options={verifiedEmails?.map((email) => ({ label: email, value: email })) || []}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 </SettingsToggle>
               </>
@@ -1268,19 +1058,8 @@ export const EventAdvancedTab = ({
         <Controller
           name="rescheduleWithSameRoundRobinHost"
           render={({ field: { value, onChange } }) => (
-            <SettingsToggle
-              labelClassName={classNames("text-sm", customClassNames?.roundRobinReschedule?.label)}
-              toggleSwitchAtTheEnd={true}
-              switchContainerClassName={classNames(
-                "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-                customClassNames?.roundRobinReschedule?.container
-              )}
-              title={t("reschedule_with_same_round_robin_host_title")}
-              description={t("reschedule_with_same_round_robin_host_description")}
-              descriptionClassName={customClassNames?.roundRobinReschedule?.description}
-              checked={value}
-              onCheckedChange={(e) => onChange(e)}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         />
       )}
@@ -1289,19 +1068,8 @@ export const EventAdvancedTab = ({
           name="metadata.disableStandardEmails.confirmation.attendee"
           render={({ field: { value, onChange } }) => (
             <>
-              <SettingsToggle
-                labelClassName={classNames("text-sm", customClassNames?.emailNotifications?.label)}
-                toggleSwitchAtTheEnd={true}
-                switchContainerClassName={classNames(
-                  "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-                  customClassNames?.emailNotifications?.container
-                )}
-                title={t("disable_attendees_confirmation_emails")}
-                description={t("disable_attendees_confirmation_emails_description")}
-                descriptionClassName={customClassNames?.emailNotifications?.description}
-                checked={value}
-                onCheckedChange={(e) => onChange(e)}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </>
           )}
         />
@@ -1312,19 +1080,8 @@ export const EventAdvancedTab = ({
           defaultValue={!!formMethods.getValues("seatsPerTimeSlot")}
           render={({ field: { value, onChange } }) => (
             <>
-              <SettingsToggle
-                labelClassName={classNames("text-sm", customClassNames?.emailNotifications?.label)}
-                toggleSwitchAtTheEnd={true}
-                switchContainerClassName={classNames(
-                  "border-subtle rounded-lg border py-6 px-4 sm:px-6",
-                  customClassNames?.emailNotifications?.container
-                )}
-                descriptionClassName={customClassNames?.emailNotifications?.description}
-                title={t("disable_host_confirmation_emails")}
-                description={t("disable_host_confirmation_emails_description")}
-                checked={value}
-                onCheckedChange={(e) => onChange(e)}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </>
           )}
         />

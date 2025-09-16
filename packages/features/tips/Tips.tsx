@@ -209,21 +209,8 @@ function Tips() {
                 top: -baseOriginalList.indexOf(tip) * 10,
                 opacity: `${1 - baseOriginalList.indexOf(tip) / 7}`,
               }}>
-              <Card
-                variant="SidebarCard"
-                thumbnailUrl={tip.thumbnailUrl}
-                mediaLink={isTopTip ? tip.mediaLink : undefined}
-                title={tip.title}
-                description={tip.description}
-                learnMore={isTopTip ? { href: tip.href, text: t("learn_more") } : undefined}
-                actionButton={
-                  isTopTip ? { onClick: () => handleRemoveItem(tip.id), child: t("dismiss") } : undefined
-                }
-                containerProps={{
-                  tabIndex: isTopTip ? undefined : -1,
-                  "aria-hidden": isTopTip ? undefined : "true",
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           </div>
         );

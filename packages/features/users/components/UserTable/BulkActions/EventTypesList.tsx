@@ -102,9 +102,11 @@ export function EventTypesList({ table, orgTeams }: Props) {
         </PopoverTrigger>
         <PopoverContent className="w-[200px] p-0 shadow-md" align="start" sideOffset={12}>
           <Command>
-            <CommandInput placeholder={t("search")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <CommandList>
-              <CommandEmpty>No results found.</CommandEmpty>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <CommandGroup>
                 {teams &&
                   teams.map((team) => {
@@ -123,37 +125,8 @@ export function EventTypesList({ table, orgTeams }: Props) {
                     );
                     return (
                       <Fragment key={team.teamId}>
-                        <ListItem
-                          isTeam
-                          onSelect={() => {
-                            if (!isSelected) {
-                              // Add current team and its event
-                              addValue(selectedTeams, setSelectedTeams, [teamId]);
-                              addValue(selectedEvents, setSelectedEvents, ids);
-                              setRemoveHostFromEvents(new Set());
-                            } else {
-                              const eventIdsWhereAllUsersAreHosts = events
-                                .filter((event) =>
-                                  selectedUsers.every((user) =>
-                                    event.hosts.some((host) => host.userId === user.id)
-                                  )
-                                )
-                                .map((event) => event.id);
-
-                              addValue(
-                                removeHostFromEvents,
-                                setRemoveHostFromEvents,
-                                eventIdsWhereAllUsersAreHosts
-                              );
-                              // Remove selected team and its event
-                              removeValue(selectedEvents, setSelectedEvents, ids);
-                              removeValue(selectedTeams, setSelectedTeams, [teamId]);
-                            }
-                          }}
-                          isSelected={isSelected}
-                          text={team.profile.name || ""}
-                          key={team.profile.name}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                         {events.map((event) => {
                           const hosts = event.hosts;
                           const areAllUsersHostForEventType = selectedUsers.every((user) =>
@@ -163,42 +136,8 @@ export function EventTypesList({ table, orgTeams }: Props) {
                             (selectedEvents.has(event.id) || areAllUsersHostForEventType) &&
                             !removeHostFromEvents.has(event.id);
                           return (
-                            <ListItem
-                              isTeam={false}
-                              onSelect={() => {
-                                if (!isSelected) {
-                                  if (areAllUsersHostForEventType) {
-                                    removeValue(removeHostFromEvents, setRemoveHostFromEvents, [event.id]);
-                                  } else {
-                                    // Add current event and its team
-                                    addValue(selectedEvents, setSelectedEvents, [event.id]);
-                                    addValue(selectedTeams, setSelectedTeams, [teamId]);
-                                  }
-                                } else {
-                                  if (areAllUsersHostForEventType) {
-                                    // remove selected users as hosts
-                                    addValue(removeHostFromEvents, setRemoveHostFromEvents, [event.id]);
-                                  } else {
-                                    // remove current event and its team
-                                    removeValue(selectedEvents, setSelectedEvents, [event.id]);
-                                    // if no event from current team is selected, remove the team
-                                    setSelectedEvents((selectedEvents) => {
-                                      if (!ids.some((id) => selectedEvents.has(id))) {
-                                        setSelectedTeams((selectedTeams) => {
-                                          const updatedTeams = new Set(selectedTeams);
-                                          updatedTeams.delete(teamId);
-                                          return updatedTeams;
-                                        });
-                                      }
-                                      return selectedEvents;
-                                    });
-                                  }
-                                }
-                              }}
-                              key={event.id}
-                              text={event.title}
-                              isSelected={isSelected}
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           );
                         })}
                       </Fragment>

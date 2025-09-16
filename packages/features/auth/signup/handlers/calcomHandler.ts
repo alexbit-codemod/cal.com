@@ -61,7 +61,9 @@ const handler: CustomNextApiHandler = async (body, usernameStatus) => {
   if (!username) {
     throw new HttpError({
       statusCode: 422,
-      message: "Invalid username",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -86,14 +88,18 @@ const handler: CustomNextApiHandler = async (body, usernameStatus) => {
     if (!usernameAndEmailValidation.isValid) {
       throw new HttpError({
         statusCode: 409,
-        message: "Username or email is already taken",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (!usernameAndEmailValidation.username) {
       throw new HttpError({
         statusCode: 422,
-        message: "Invalid username",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -218,13 +224,17 @@ const handler: CustomNextApiHandler = async (body, usernameStatus) => {
   if (checkoutSessionId) {
     console.log("Created user but missing payment", checkoutSessionId);
     return NextResponse.json(
-      { message: "Created user but missing payment", checkoutSessionId },
+      { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      , checkoutSessionId },
       { status: 402 }
     );
   }
 
   return NextResponse.json(
-    { message: "Created user", stripeCustomerId: customer.stripeCustomerId },
+    { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , stripeCustomerId: customer.stripeCustomerId },
     { status: 201 }
   );
 };

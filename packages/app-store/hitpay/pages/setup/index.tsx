@@ -64,8 +64,10 @@ function HitPaySetupCallback() {
 
   return (
     <div>
-      {error && <p>Authorization failed: {error}</p>}
-      {!error && <p>Connecting...</p>}
+      {error && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
+      {!error && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
     </div>
   );
 }
@@ -191,7 +193,8 @@ function HitPaySetupPage(props: IHitPaySetupProps) {
 
   const hitpayIcon = (
     <>
-      <img className="h-5 w-5" src="/app-store/hitpay/icon.svg" alt="HitPay Icon" />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 
@@ -206,37 +209,23 @@ function HitPaySetupPage(props: IHitPaySetupProps) {
       <div className="bg-default flex h-screen items-center justify-center">
         {showContent ? (
           <div className="flex w-full w-full max-w-[43em] flex-col items-center justify-center space-y-4 p-4 lg:space-y-5">
-            <div className="rounded bg-blue-50 p-3 text-sm text-blue-700 dark:bg-blue-950 dark:text-blue-300">
-              <Icon name="info" className="mb-0.5 inline-flex h-4 w-4" /> Create or connect to an existing
-              HitPay account to receive payments for your paid bookings.
-            </div>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             <form className="w-full space-y-4" onSubmit={onSubmit}>
               <div className="bg-default border-subtle overflow-auto rounded border">
                 <div className="border-subtle flex items-center justify-between border-b-[1px] p-4 md:p-5">
-                  <h2 className="text-2xl font-semibold">Account Information</h2>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="ml-auto flex items-center">
-                    <Switch
-                      onCheckedChange={(value) => SetIsSandbox(value as boolean)}
-                      checked={isSandbox}
-                      label="Sandbox"
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 </div>
                 <div className="w-full space-y-4 p-4 md:p-5">
                   <div className="w-full">
-                    <KeyField
-                      {...register("apiKey", {
-                        required: true,
-                      })}
-                      id="apiKey"
-                      name="apiKey"
-                      containerClassName="w-full"
-                      label={t("api_key")}
-                      autoComplete="off"
-                      autoCorrect="off"
-                      defaultValue={keyData?.apiKey || ""}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
 
                     {errors.apiKey && (
                       <p data-testid="required" className="py-2 text-xs text-red-500">
@@ -245,18 +234,8 @@ function HitPaySetupPage(props: IHitPaySetupProps) {
                     )}
                   </div>
                   <div className="w-full">
-                    <KeyField
-                      {...register("saltKey", {
-                        required: true,
-                      })}
-                      id="saltKey"
-                      name="saltKey"
-                      containerClassName="w-full"
-                      label="Salt"
-                      autoComplete="off"
-                      autoCorrect="off"
-                      defaultValue={keyData?.saltKey || ""}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
 
                     {errors.saltKey && (
                       <p data-testid="required" className="py-2 text-xs text-red-500">
@@ -268,9 +247,8 @@ function HitPaySetupPage(props: IHitPaySetupProps) {
               </div>
               {!props.prod && !props.sandbox ? (
                 <div className="flex justify-end gap-4">
-                  <Button color="secondary" className="h-10 text-base" onClick={onCancel}>
-                    Cancel
-                  </Button>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <button
                     className="font-body flex h-10 w-56 items-center justify-center gap-2 rounded-md font-bold text-black shadow transition-all hover:brightness-90 active:scale-95"
                     style={{
@@ -279,17 +257,18 @@ function HitPaySetupPage(props: IHitPaySetupProps) {
                     type="submit"
                     disabled={loading}>
                     {hitpayIcon}
-                    <span className="mr-2">Connect with HitPay</span>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </button>
                 </div>
               ) : (
                 <div className="flex justify-end gap-4">
                   <Link href="/apps/hitpay" className="inline-block">
-                    <Button color="secondary">Go to App Store</Button>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </Link>
-                  <Button color="primary" type="submit" disabled={!updatable}>
-                    Update
-                  </Button>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
               )}
             </form>

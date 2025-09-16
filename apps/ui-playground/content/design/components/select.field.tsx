@@ -21,42 +21,24 @@ export const FieldExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-4 md:w-80">
-        <SelectField
-          label="Flavor"
-          options={options}
-          onChange={handleValueChange}
-          placeholder="Choose a flavor..."
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        <SelectField
-          label="Required Field"
-          options={options}
-          required
-          onChange={handleValueChange}
-          placeholder="This field is required..."
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        <SelectField label="With Error" options={options} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <div className="mt-4 space-y-4 md:w-80">
-        <SelectField
-          label="Flavor"
-          options={options}
-          onChange={handleValueChange}
-          placeholder="Choose a flavor... (small)"
-          size="sm"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        <SelectField
-          label="Required Field"
-          options={options}
-          required
-          onChange={handleValueChange}
-          placeholder="This field is required... (small)"
-          size="sm"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        <SelectField label="With Error (small)" options={options} size="sm" />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );

@@ -36,7 +36,9 @@ export const createDomain = async (domain: string) => {
     // Looks like Vercel changed the response format, so sometimes zod parsing fails
     log.error(
       safeStringify({
-        errorMessage: "Failed to parse Vercel domain creation response",
+        errorMessage: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         zodError: parsedResponse.error,
         response: responseJson,
       })
@@ -77,7 +79,9 @@ export const deleteDomain = async (domain: string) => {
 function handleDomainCreationError(error: { code?: string | null; domain?: string | null }) {
   // Domain is already owned by another team but you can request delegation to access it
   if (error.code === "forbidden") {
-    const errorMessage = "Domain is already owned by another team";
+    const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     log.error(
       safeStringify({
         errorMessage,
@@ -91,7 +95,9 @@ function handleDomainCreationError(error: { code?: string | null; domain?: strin
   }
 
   if (error.code === "domain_taken") {
-    const errorMessage = "Domain is already being used by a different project";
+    const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     log.error(
       safeStringify({
         errorMessage,
@@ -109,7 +115,9 @@ function handleDomainCreationError(error: { code?: string | null; domain?: strin
     return true;
   }
 
-  const errorMessage = `Failed to create domain on Vercel: ${error.domain}`;
+  const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   log.error(safeStringify({ errorMessage, vercelError: error }));
   throw new HttpError({
     message: errorMessage,
@@ -125,7 +133,9 @@ function handleDomainDeletionError(error: { code?: string | null; domain?: strin
 
   // Domain is already owned by another team but you can request delegation to access it
   if (error.code === "forbidden") {
-    const errorMessage = "Domain is owned by another team";
+    const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     log.error(
       safeStringify({
         errorMessage,
@@ -138,7 +148,9 @@ function handleDomainDeletionError(error: { code?: string | null; domain?: strin
     });
   }
 
-  const errorMessage = `Failed to take action for domain: ${error.domain}`;
+  const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   log.error(safeStringify({ errorMessage, vercelError: error }));
   throw new HttpError({
     message: errorMessage,

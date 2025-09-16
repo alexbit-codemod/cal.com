@@ -5,8 +5,12 @@ import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowE
 import { HttpError } from "@calcom/lib/http-error";
 
 export const rateLimitApiKey: NextMiddleware = async (req, res, next) => {
-  if (!req.userId) return res.status(401).json({ message: "No userId provided" });
-  if (!req.query.apiKey) return res.status(401).json({ message: "No apiKey provided" });
+  if (!req.userId) return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!req.query.apiKey) return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   // TODO: Add a way to add trusted api keys
   try {
@@ -27,7 +31,9 @@ export const rateLimitApiKey: NextMiddleware = async (req, res, next) => {
           });
 
           if (didLock) {
-            return res.status(429).json({ message: "Too many requests" });
+            return res.status(429).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             });
           }
         } catch (error) {
           if (error instanceof Error && error.message === "No user found for this API key.") {
@@ -41,7 +47,9 @@ export const rateLimitApiKey: NextMiddleware = async (req, res, next) => {
     if (error instanceof HttpError) {
       return res.status(error.statusCode).json({ message: error.message });
     }
-    return res.status(429).json({ message: "Rate limit exceeded" });
+    return res.status(429).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   await next();

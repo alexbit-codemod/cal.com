@@ -55,7 +55,8 @@ const AdditionalCalendarSelector = ({ isPending }: AdditionalCalendarSelectorPro
                   return (
                     <DropdownItem {...props} color="minimal" type="button">
                       <span className="flex items-center gap-x-2">
-                        {data.image && <img className="h-5 w-5" src={data.image} alt={data.label} />}
+                        {data.image && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$}
                         {`${t("add")} ${data.label}`}
                       </span>
                     </DropdownItem>

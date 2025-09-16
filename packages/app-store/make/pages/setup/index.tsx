@@ -72,7 +72,8 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
         <div className="bg-default m-auto max-w-[43em] overflow-auto rounded pb-10 md:p-10">
           <div className="md:flex md:flex-row">
             <div className="invisible md:visible">
-              <img className="h-11" src="/api/app-store/make/icon.svg" alt="Make Logo" />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <div className="ml-2 ltr:mr-2 rtl:ml-2 md:ml-5">
               <div className="text-default">{t("setting_up_make")}</div>
@@ -85,7 +86,8 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
                   </Button>
                 ) : (
                   <>
-                    <div className="mt-8 text-sm font-semibold">Your event types:</div>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     {!newApiKeys[""] ? (
                       <Button color="secondary" onClick={() => generateApiKey()} className="mb-4 mt-2">
                         {t("generate_api_key")}
@@ -120,12 +122,8 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
                     t={t}
                     i18nKey="make_setup_instructions_1"
                     components={[
-                      <a
-                        key="make-invite-link"
-                        href={inviteLink}
-                        className="ml-1 mr-1 text-orange-600 underline">
-                        Make Invite Link
-                      </a>,
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$,
                     ]}
                   />
                 </li>

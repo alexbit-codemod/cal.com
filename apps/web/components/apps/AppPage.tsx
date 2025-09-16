@@ -253,13 +253,8 @@ export const AppPage = ({
                 onSuccess={() => appDbQuery.refetch()}
               />
             ) : (
-              <DisconnectIntegration
-                buttonProps={{ color: "secondary" }}
-                label={t("disconnect")}
-                credentialId={Number(existingCredentials[0].id)}
-                teamId={existingCredentials[0].teamId}
-                onSuccess={() => appDbQuery.refetch()}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           </>
         )}
@@ -280,12 +275,8 @@ export const AppPage = ({
                   <iframe allowFullScreen {...descriptionItem.iframe} />
                 </div>
               ) : (
-                <img
-                  key={descriptionItem}
-                  src={descriptionItem}
-                  alt={`Screenshot of app ${name}`}
-                  className="mr-4 h-auto max-h-80 max-w-[90%] snap-center rounded-md object-contain last:mb-0 md:max-h-min lg:mb-4 lg:mr-0  lg:max-w-full"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )
             )
           ) : (
@@ -301,11 +292,8 @@ export const AppPage = ({
         <div className="mb-8 flex pt-4">
           <header>
             <div className="mb-4 flex items-center">
-              <img
-                className={classNames(logo.includes("-dark") && "dark:invert", "min-h-16 min-w-16 h-16 w-16")}
-                src={logo}
-                alt={name}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <h1 className="font-cal text-emphasis ml-4 text-3xl">{name}</h1>
             </div>
             <h2 className="text-default text-sm font-medium">
@@ -333,9 +321,8 @@ export const AppPage = ({
               </a>
             </h2>
             {isTemplate && (
-              <Badge variant="red" className="mt-4">
-                Template - Available in Dev Environment only for testing
-              </Badge>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           </header>
         </div>

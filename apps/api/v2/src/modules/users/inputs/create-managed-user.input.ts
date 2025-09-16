@@ -13,12 +13,18 @@ export class CreateManagedUserInput {
   email!: string;
 
   @IsString()
-  @ApiProperty({ example: "Alice Smith", description: "Managed user's name is used in emails" })
+  @ApiProperty({ example: "Alice Smith", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   name!: string;
 
   @IsOptional()
-  @IsIn([12, 24], { message: "timeFormat must be a number either 12 or 24" })
-  @ApiPropertyOptional({ example: 12, enum: [12, 24], description: "Must be a number 12 or 24" })
+  @IsIn([12, 24], { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
+  @ApiPropertyOptional({ example: 12, enum: [12, 24], description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   timeFormat?: TimeFormat;
 
   @IsOptional()
@@ -34,9 +40,9 @@ export class CreateManagedUserInput {
   @CapitalizeTimeZone()
   @ApiPropertyOptional({
     example: "America/New_York",
-    description: `Timezone is used to create user's default schedule from Monday to Friday from 9AM to 5PM. If it is not passed then user does not have
-      a default schedule and it must be created manually via the /schedules endpoint. Until the schedule is created, the user can't access availability atom to set his / her availability nor booked.
-      It will default to Europe/London if not passed.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   timeZone?: string;
 
@@ -50,13 +56,17 @@ export class CreateManagedUserInput {
   @ApiPropertyOptional({
     type: String,
     example: "https://cal.com/api/avatar/2b735186-b01b-46d3-87da-019b8f61776b.png",
-    description: `URL of the user's avatar image`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   avatarUrl?: string;
 
   @ApiPropertyOptional({
     type: String,
-    description: "Bio",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "I am a bio",
   })
   @IsOptional()
@@ -66,14 +76,18 @@ export class CreateManagedUserInput {
   @ApiPropertyOptional({
     type: Object,
     description:
-      "You can store any additional data you want here. Metadata must have at most 50 keys, each key up to 40 characters, and values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { key: "value" },
   })
   @IsObject()
   @IsOptional()
   @ValidateMetadata({
     message:
-      "Metadata must have at most 50 keys, each key up to 40 characters, and values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   metadata?: Record<string, string | boolean | number>;
 }

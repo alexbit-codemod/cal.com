@@ -26,22 +26,8 @@ const AssignAllTeamMembers = ({
     <Controller<FormValues>
       name="assignAllTeamMembers"
       render={() => (
-        <SettingsToggle
-          data-testid="assign-all-team-members-toggle"
-          title={t("automatically_add_all_team_members")}
-          labelClassName={classNames("mt-[3px] text-sm", customClassNames?.label)}
-          switchContainerClassName={customClassNames?.container}
-          checked={assignAllTeamMembers}
-          onCheckedChange={(active) => {
-            setValue("assignAllTeamMembers", active, { shouldDirty: true });
-            setAssignAllTeamMembers(active);
-            if (active) {
-              onActive();
-            } else if (!!onInactive) {
-              onInactive();
-            }
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     />
   );

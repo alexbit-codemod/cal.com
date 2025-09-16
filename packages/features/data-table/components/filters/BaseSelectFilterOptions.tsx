@@ -123,7 +123,8 @@ export function BaseSelectFilterOptions<
 
   return (
     <Command data-testid={`${testIdPrefix}-${column.id}`}>
-      <CommandInput placeholder={t("search")} data-testid={`select-filter-options-search-${column.id}`} />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <CommandList>
         <CommandEmpty>{t("no_options_available")}</CommandEmpty>
         {options.map((option, index) => {

@@ -17,11 +17,8 @@ export function OtherTeamsListing({ teams }: OtherTeamsListingProps) {
       {teams && teams.length > 0 ? (
         <OtherTeamList teams={teams} />
       ) : (
-        <EmptyScreen
-          headline={t("no_other_teams_found")}
-          title={t("no_other_teams_found")}
-          description={t("no_other_teams_found_description")}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </>
   );

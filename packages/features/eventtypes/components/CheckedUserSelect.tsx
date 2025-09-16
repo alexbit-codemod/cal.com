@@ -29,15 +29,8 @@ export const CheckedUserSelect = ({
 
   return (
     <>
-      <Select
-        name={props.name}
-        placeholder={props.placeholder || t("select")}
-        isSearchable={false}
-        options={options}
-        value={value}
-        isMulti
-        {...props}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {value.length > 0 ? (
         <div className="mt-6">
           <Label>{t("assigned_to")}</Label>
@@ -48,7 +41,8 @@ export const CheckedUserSelect = ({
                   <li
                     key={option.value}
                     className={`flex px-3 py-2 ${index === value.length - 1 ? "" : "border-b"}`}>
-                    <Avatar size="sm" imageSrc={option.avatar} alt={option.label} />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <p className="my-auto ml-3 text-sm text-gray-900">{option.label}</p>
                     <Icon
                       name="x"
@@ -63,11 +57,8 @@ export const CheckedUserSelect = ({
         </div>
       ) : (
         <div className="mt-6">
-          <EmptyScreen
-            Icon="user-plus"
-            headline={t("no_assigned_members")}
-            description={t("start_assigning_members_above")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )}
     </>

@@ -64,35 +64,14 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
   return (
     <>
       {recurringEventDefined && (
-        <Alert className="mt-2" severity="warning" title={t("warning_recurring_event_payment")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
       {!recurringEventDefined && requirePayment && (
         <>
           <div className="mt-4 block items-center justify-start sm:flex sm:space-x-2">
-            <TextField
-              data-testid="stripe-price-input"
-              label={t("price")}
-              className="h-[38px]"
-              addOnLeading={
-                <>{selectedCurrency.value ? getCurrencySymbol("en", selectedCurrency.value) : ""}</>
-              }
-              addOnSuffix={currency.toUpperCase()}
-              addOnClassname="h-[38px]"
-              step="1"
-              min="1"
-              type="number"
-              required
-              placeholder="Price"
-              disabled={disabled}
-              onChange={(e) => {
-                setAppData("price", convertToSmallestCurrencyUnit(Number(e.target.value), currency));
-              }}
-              value={
-                price > 0
-                  ? disableDecimalPlace(convertFromSmallestToPresentableCurrencyUnit(price, currency))
-                  : undefined
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="mt-5 w-60">
             <label className="text-default mb-1 block text-sm font-medium" htmlFor="currency">
@@ -114,7 +93,8 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
             />
           </div>
           {seatsEnabled && paymentOption === "HOLD" && (
-            <Alert className="mt-2" severity="warning" title={t("seats_and_no_show_fee_error")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         </>
       )}

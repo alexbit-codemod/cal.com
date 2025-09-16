@@ -38,15 +38,21 @@ export class GetBookingsInput_2024_08_13 {
     }
     return value;
   })
-  @ArrayNotEmpty({ message: "status cannot be empty." })
+  @ArrayNotEmpty({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsEnum(Status, {
     each: true,
-    message: "Invalid status. Allowed are upcoming, recurring, past, cancelled, unconfirmed",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     required: false,
     description:
-      "Filter bookings by status. If you want to filter by multiple statuses, separate them with a comma.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "?status=upcoming,past",
     enum: Status,
     isArray: true,
@@ -58,7 +64,9 @@ export class GetBookingsInput_2024_08_13 {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings by the attendee's email address.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "example@domain.com",
   })
   @Transform(({ value }) => {
@@ -76,7 +84,9 @@ export class GetBookingsInput_2024_08_13 {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings by the attendee's name.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "John Doe",
   })
   attendeeName?: string;
@@ -86,7 +96,9 @@ export class GetBookingsInput_2024_08_13 {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings by the booking Uid.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2NtaeaVcKfpmSZ4CthFdfk",
   })
   bookingUid?: string;
@@ -103,12 +115,16 @@ export class GetBookingsInput_2024_08_13 {
   })
   @IsArray()
   @IsNumber({}, { each: true })
-  @ArrayMinSize(1, { message: "eventTypeIds must contain at least 1 event type id" })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
     description:
-      "Filter bookings by event type ids belonging to the user. Event type ids must be separated by a comma.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "?eventTypeIds=100,200",
   })
   eventTypeIds?: number[];
@@ -119,7 +135,9 @@ export class GetBookingsInput_2024_08_13 {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings by event type id belonging to the user.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?eventTypeId=100",
   })
   eventTypeId?: number;
@@ -136,11 +154,15 @@ export class GetBookingsInput_2024_08_13 {
   })
   @IsArray()
   @IsNumber({}, { each: true })
-  @ArrayMinSize(1, { message: "teamIds must contain at least 1 team id" })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings by team ids that user is part of. Team ids must be separated by a comma.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?teamIds=50,60",
   })
   teamsIds?: number[];
@@ -151,67 +173,93 @@ export class GetBookingsInput_2024_08_13 {
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings by team id that user is part of",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?teamId=50",
   })
   teamId?: number;
 
   @IsOptional()
-  @IsISO8601({ strict: true }, { message: "fromDate must be a valid ISO 8601 date." })
+  @IsISO8601({ strict: true }, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings with start after this date string.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?afterStart=2025-03-07T10:00:00.000Z",
   })
   afterStart?: string;
 
   @IsOptional()
-  @IsISO8601({ strict: true }, { message: "toDate must be a valid ISO 8601 date." })
+  @IsISO8601({ strict: true }, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings with end before this date string.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?beforeEnd=2025-03-07T11:00:00.000Z",
   })
   beforeEnd?: string;
 
   @IsOptional()
-  @IsISO8601({ strict: true }, { message: "fromDate must be a valid ISO 8601 date." })
+  @IsISO8601({ strict: true }, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings that have been created after this date string.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?afterCreatedAt=2025-03-07T10:00:00.000Z",
   })
   afterCreatedAt?: string;
 
   @IsOptional()
-  @IsISO8601({ strict: true }, { message: "toDate must be a valid ISO 8601 date." })
+  @IsISO8601({ strict: true }, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings that have been created before this date string.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?beforeCreatedAt=2025-03-14T11:00:00.000Z",
   })
   beforeCreatedAt?: string;
 
   @IsOptional()
-  @IsISO8601({ strict: true }, { message: "fromDate must be a valid ISO 8601 date." })
+  @IsISO8601({ strict: true }, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings that have been updated after this date string.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?afterUpdatedAt=2025-03-07T10:00:00.000Z",
   })
   afterUpdatedAt?: string;
 
   @IsOptional()
-  @IsISO8601({ strict: true }, { message: "toDate must be a valid ISO 8601 date." })
+  @IsISO8601({ strict: true }, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter bookings that have been updated before this date string.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?beforeUpdatedAt=2025-03-14T11:00:00.000Z",
   })
   beforeUpdatedAt?: string;
@@ -219,11 +267,15 @@ export class GetBookingsInput_2024_08_13 {
   // note(Lauris): sort
   @IsOptional()
   @IsEnum(SortOrder, {
-    message: 'SortStart must be either "asc" or "desc".',
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     required: false,
-    description: "Sort results by their start time in ascending or descending order.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?sortStart=asc OR ?sortStart=desc",
     enum: SortOrder,
   })
@@ -231,11 +283,15 @@ export class GetBookingsInput_2024_08_13 {
 
   @IsOptional()
   @IsEnum(SortOrder, {
-    message: 'SortEnd must be either "asc" or "desc".',
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     required: false,
-    description: "Sort results by their end time in ascending or descending order.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?sortEnd=asc OR ?sortEnd=desc",
     enum: SortOrder,
   })
@@ -243,12 +299,16 @@ export class GetBookingsInput_2024_08_13 {
 
   @IsOptional()
   @IsEnum(SortOrder, {
-    message: 'SortCreated must be either "asc" or "desc".',
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     required: false,
     description:
-      "Sort results by their creation time (when booking was made) in ascending or descending order.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "?sortCreated=asc OR ?sortCreated=desc",
     enum: SortOrder,
   })
@@ -256,19 +316,25 @@ export class GetBookingsInput_2024_08_13 {
 
   @IsOptional()
   @IsEnum(SortOrder, {
-    message: 'SortCreated must be either "asc" or "desc".',
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     required: false,
     description:
-      "Sort results by their updated time (for example when booking status changes) in ascending or descending order.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "?sortUpdated=asc OR ?sortUpdated=desc",
     enum: SortOrder,
   })
   sortUpdatedAt?: SortOrderType;
 
   // note(Lauris): pagination
-  @ApiProperty({ required: false, description: "The number of items to return", example: 10, default: 100 })
+  @ApiProperty({ required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 10, default: 100 })
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @Min(1)
@@ -276,7 +342,9 @@ export class GetBookingsInput_2024_08_13 {
   @IsOptional()
   take?: number;
 
-  @ApiProperty({ required: false, description: "The number of items to skip", example: 0, default: 0 })
+  @ApiProperty({ required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 0, default: 0 })
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @Min(0)

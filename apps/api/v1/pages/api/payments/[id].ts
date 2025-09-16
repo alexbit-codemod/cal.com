@@ -53,14 +53,18 @@ export async function paymentById(
       .then((data) => schemaPaymentPublic.parse(data))
       .then((payment) => {
         if (!userWithBookings?.bookings.map((b) => b.id).includes(payment.bookingId)) {
-          res.status(401).json({ message: "Unauthorized" });
+          res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+           });
         } else {
           res.status(200).json({ payment });
         }
       })
       .catch((error: Error) =>
         res.status(404).json({
-          message: `Payment with id: ${safeQuery.data.id} not found`,
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           error,
         })
       );

@@ -26,14 +26,11 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
       switchChecked={enabled}
       teamId={eventType.team?.id || undefined}>
       <div className="mt-2 text-sm">
-        <div className="flex">
-          <span className="ltr:mr-2 rtl:ml-2">
-            <Icon name={isSunrise ? "sunrise" : "sunset"} />
-          </span>
-          I am an AppCard for Event with Title: {eventType.title}
-        </div>{" "}
-        <div className="mt-2">
-          Edit <span className="italic">packages/app-store/{app.slug}/EventTypeAppCardInterface.tsx</span> to
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$${" "}
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$ to
           play with me
         </div>
       </div>

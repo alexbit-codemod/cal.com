@@ -15,13 +15,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Get user id
   const calcomUserId = req.session?.user?.id;
   if (!calcomUserId) {
-    return res.status(401).json({ message: "You must be logged in to do this" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const vitalClient = await initVitalClient();
 
   if (!vitalClient || !vitalEnv)
-    return res.status(400).json({ message: "Missing vital client, try calling `initVitalClient`" });
+    return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   // Create a user on vital
   let userVital;

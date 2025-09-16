@@ -35,7 +35,9 @@ async function handler(req: NextApiRequest) {
   const args: Prisma.AttendeeFindManyArgs = isSystemWideAdmin ? {} : { where: { booking: { userId } } };
   const data = await prisma.attendee.findMany(args);
   const attendees = data.map((attendee) => schemaAttendeeReadPublic.parse(attendee));
-  if (!attendees) throw new HttpError({ statusCode: 404, message: "No attendees were found" });
+  if (!attendees) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   return { attendees };
 }
 

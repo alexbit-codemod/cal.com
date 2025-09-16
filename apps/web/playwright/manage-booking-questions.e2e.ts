@@ -83,7 +83,9 @@ test.describe("Manage Booking Questions", () => {
           question: {
             name: "agree-to-terms",
             type: "Checkbox",
-            label: "Agree to [terms](https://example.com/terms)",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
           },
         });
@@ -156,14 +158,18 @@ test.describe("Manage Booking Questions", () => {
               ],
               responses: {
                 name: {
-                  label: "your_name",
+                  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   value: {
                     firstName: "John",
                     lastName: "Doe",
                   },
                 },
                 email: {
-                  label: "email_address",
+                  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   value: "booker@example.com",
                 },
               },
@@ -301,8 +307,12 @@ async function runTestStepsCommonForTeamAndUserEventType(
       question: {
         name: "how-are-you",
         type: "Address",
-        label: "How are you?",
-        placeholder: "I'm fine, thanks",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         required: true,
       },
     });
@@ -379,15 +389,21 @@ async function runTestStepsCommonForTeamAndUserEventType(
 
           expect(payload.responses).toMatchObject({
             email: {
-              label: "email_address",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "booker@example.com",
             },
             "how-are-you": {
-              label: "How are you?",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "I am great!",
             },
             name: {
-              label: "your_name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Booker",
             },
           });
@@ -399,7 +415,9 @@ async function runTestStepsCommonForTeamAndUserEventType(
 
           expect(payload.userFieldsResponses).toMatchObject({
             "how-are-you": {
-              label: "How are you?",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "I am great!",
             },
           });
@@ -740,7 +758,9 @@ async function expectWebhookToBeCalled(
 
 test.describe("Text area min and max characters text", () => {
   test("Create a new event", async ({ page, users }) => {
-    const eventTitle = `Min Max Characters Test`;
+    const eventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     const fieldType = fieldTypesConfigMap["textarea"];
     const MAX_LENGTH = fieldType?.supportsLengthCheck?.maxLength;
 

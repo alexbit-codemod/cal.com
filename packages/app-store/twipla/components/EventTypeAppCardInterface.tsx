@@ -19,15 +19,8 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
       }}
       switchChecked={enabled}
       teamId={eventType.team?.id || undefined}>
-      <TextField
-        disabled={disabled}
-        name="Site ID"
-        value={siteId}
-        placeholder="Enter your Site ID"
-        onChange={(e) => {
-          setAppData("SITE_ID", e.target.value);
-        }}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </AppCard>
   );
 };

@@ -25,9 +25,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 
   if (!deleteEventSubscription) {
-    return res.status(500).json({ message: "Could not delete subscription." });
+    return res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
-  res.status(204).json({ message: "Subscription is deleted." });
+  res.status(204).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }
 
 export default defaultHandler({

@@ -68,10 +68,12 @@ export function RenameSegmentDialog({
         }
       }}>
       <DialogContent>
-        <DialogHeader title={t("rename_segment")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Form form={form} handleSubmit={handleSubmit}>
           <div className="space-y-4">
-            <TextField required type="text" label={t("name")} {...form.register("name")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DialogFooter>
               <Button type="submit" loading={isPending}>
                 {t("save")}

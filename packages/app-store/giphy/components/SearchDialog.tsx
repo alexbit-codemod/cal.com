@@ -130,18 +130,8 @@ export const SearchDialog = (props: ISearchDialog) => {
           className="flex w-full justify-center space-x-2 space-y-2 rtl:space-x-reverse"
           onSubmit={handleFormSubmit}>
           <div className="relative block w-full pt-2">
-            <Input
-              type="text"
-              placeholder={
-                selectedMode === MODE_SEARCH
-                  ? t("search_giphy")
-                  : "https://media.giphy.com/media/some-id/giphy.gif"
-              }
-              value={keyword}
-              onChange={(event) => {
-                setKeyword(event.target.value);
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <Button type="submit" tabIndex={-1} color="secondary" loading={isPending}>
             {t("search")}
@@ -173,23 +163,20 @@ export const SearchDialog = (props: ISearchDialog) => {
                   </svg>
                 </div>
               ) : (
-                <img className="h-[200px] pb-3 pt-3" src={gifImage} alt={`Gif from Giphy for ${keyword}`} />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             </div>
           </div>
         )}
-        {errorMessage && <Alert severity="error" title={errorMessage} className="my-4" />}
+        {errorMessage && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$}
         {gifImage && selectedMode === MODE_SEARCH && (
           <div className="mt-4 flex items-center justify-between space-x-2 rtl:space-x-reverse">
-            <div className="text-subtle text-sm font-light">Not the perfect GIF?</div>
-            <Button
-              size="sm"
-              color="secondary"
-              type="button"
-              loading={isPending}
-              onClick={() => searchGiphy(keyword, nextOffset)}>
-              Shuffle
-            </Button>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         )}
         <DialogFooter noSticky>

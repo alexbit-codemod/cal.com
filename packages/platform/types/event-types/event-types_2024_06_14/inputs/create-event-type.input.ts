@@ -128,28 +128,36 @@ export class CalVideoSettings {
   @IsOptional()
   @IsBoolean()
   @DocsPropertyOptional({
-    description: "If true, the organizer will not be able to record the meeting",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   disableRecordingForOrganizer?: boolean;
 
   @IsOptional()
   @IsBoolean()
   @DocsPropertyOptional({
-    description: "If true, the guests will not be able to record the meeting",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   disableRecordingForGuests?: boolean;
 
   @IsOptional()
   @IsUrl()
   @DocsPropertyOptional({
-    description: "URL to which participants are redirected when they exit the call",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   redirectUrlOnExit?: string | null;
 
   @IsOptional()
   @IsBoolean()
   @DocsPropertyOptional({
-    description: "If true, enables the automatic recording for the event when organizer joins the call",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   enableAutomaticRecordingForOrganizer?: boolean;
 }
@@ -169,7 +177,9 @@ class BaseCreateEventTypeInput {
   @DocsPropertyOptional({
     example: [15, 30, 60],
     description:
-      "If you want that user can choose between different lengths of the event you can specify them here. Must include the provided `lengthInMinutes`.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   lengthInMinutesOptions?: number[];
 
@@ -190,7 +200,9 @@ class BaseCreateEventTypeInput {
   @ValidateInputBookingFields_2024_06_14()
   @DocsPropertyOptional({
     description:
-      "Custom fields that can be added to the booking form when the event is booked by someone. By default booking form has name and email field.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     oneOf: [
       { $ref: getSchemaPath(NameDefaultFieldInput_2024_06_14) },
       { $ref: getSchemaPath(EmailDefaultFieldInput_2024_06_14) },
@@ -220,16 +232,18 @@ class BaseCreateEventTypeInput {
   @IsBoolean()
   @IsOptional()
   @DocsPropertyOptional({
-    description: "If true, person booking this event can't add guests via their emails.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   disableGuests?: boolean;
 
   @IsInt()
   @IsOptional()
   @DocsPropertyOptional({
-    description: `Number representing length of each slot when event is booked. By default it equal length of the event type.
-      If event length is 60 minutes then we would have slots 9AM, 10AM, 11AM etc. but if it was changed to 30 minutes then
-      we would have slots 9AM, 9:30AM, 10AM, 10:30AM etc. as the available times to book the 60 minute event.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   slotInterval?: number;
 
@@ -237,21 +251,27 @@ class BaseCreateEventTypeInput {
   @Min(0)
   @IsOptional()
   @DocsPropertyOptional({
-    description: "Minimum number of minutes before the event that a booking can be made.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   minimumBookingNotice?: number;
 
   @IsInt()
   @IsOptional()
   @DocsPropertyOptional({
-    description: "Time spaces that can be prepended before an event to give more time before it.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   beforeEventBuffer?: number;
 
   @IsInt()
   @IsOptional()
   @DocsPropertyOptional({
-    description: "Time spaces that can be appended after an event to give more time after it.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   afterEventBuffer?: number;
 
@@ -259,14 +279,18 @@ class BaseCreateEventTypeInput {
   @IsOptional()
   @DocsPropertyOptional({
     description:
-      "If you want that this event has different schedule than user's default one you can specify it here.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   scheduleId?: number;
 
   @IsOptional()
   @ValidateBookingLimitsCount()
   @DocsPropertyOptional({
-    description: "Limit how many times this event can be booked",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(BaseBookingLimitsCount_2024_06_14) },
       { $ref: getSchemaPath(Disabled_2024_06_14) },
@@ -279,14 +303,18 @@ class BaseCreateEventTypeInput {
   @IsBoolean()
   @DocsPropertyOptional({
     description:
-      "This will limit your availability for this event type to one slot per day, scheduled at the earliest available time.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   onlyShowFirstAvailableSlot?: boolean;
 
   @IsOptional()
   @ValidateBookingLimistsDuration()
   @DocsPropertyOptional({
-    description: "Limit total amount of time that this event can be booked",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(BaseBookingLimitsDuration_2024_06_14) },
       { $ref: getSchemaPath(Disabled_2024_06_14) },
@@ -298,7 +326,9 @@ class BaseCreateEventTypeInput {
   @IsOptional()
   @ValidateBookingWindow()
   @DocsPropertyOptional({
-    description: "Limit how far in the future this event can be booked",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(BusinessDaysWindow_2024_06_14) },
       { $ref: getSchemaPath(CalendarDaysWindow_2024_06_14) },
@@ -312,13 +342,17 @@ class BaseCreateEventTypeInput {
   @IsOptional()
   @IsInt()
   @Min(0)
-  @DocsPropertyOptional({ description: "Offset timeslots shown to bookers by a specified number of minutes" })
+  @DocsPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   offsetStart?: number;
 
   @IsOptional()
   @DocsPropertyOptional({
     description:
-      "Should booker have week, month or column view. Specify default layout and enabled layouts user can pick.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   @Type(() => BookerLayouts_2024_06_14)
   @ValidateNested()
@@ -328,7 +362,9 @@ class BaseCreateEventTypeInput {
   @ValidateConfirmationPolicy()
   @DocsPropertyOptional({
     description:
-      "Specify how the booking needs to be manually confirmed before it is pushed to the integrations and a confirmation mail is sent.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     oneOf: [
       { $ref: getSchemaPath(BaseConfirmationPolicy_2024_06_14) },
       { $ref: getSchemaPath(Disabled_2024_06_14) },
@@ -351,7 +387,9 @@ class BaseCreateEventTypeInput {
   })
   @ValidateNested()
   @DocsPropertyOptional({
-    description: "Create a recurring event type.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [{ $ref: getSchemaPath(Recurrence_2024_06_14) }, { $ref: getSchemaPath(Disabled_2024_06_14) }],
   })
   @Type(() => Object)
@@ -390,7 +428,9 @@ class BaseCreateEventTypeInput {
   })
   @ValidateNested()
   @DocsPropertyOptional({
-    description: "Create an event type with multiple seats.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [{ $ref: getSchemaPath(Seats_2024_06_14) }, { $ref: getSchemaPath(Disabled_2024_06_14) }],
   })
   @Type(() => Object)
@@ -399,10 +439,9 @@ class BaseCreateEventTypeInput {
   @IsOptional()
   @IsString()
   @DocsPropertyOptional({
-    description: `Customizable event name with valid variables:
-      {Event type title}, {Organiser}, {Scheduler}, {Location}, {Organiser first name},
-      {Scheduler first name}, {Scheduler last name}, {Event duration}, {LOCATION},
-      {HOST/ATTENDEE}, {HOST}, {ATTENDEE}, {USER}`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "{Event type title} between {Organiser} and {Scheduler}",
   })
   customName?: string;
@@ -425,7 +464,9 @@ class BaseCreateEventTypeInput {
   @IsOptional()
   @IsUrl()
   @DocsPropertyOptional({
-    description: "A valid URL where the booker will redirect to, once the booking is completed successfully",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "https://masterchief.com/argentina/flan/video/9129412",
   })
   successRedirectUrl?: string;
@@ -434,7 +475,9 @@ class BaseCreateEventTypeInput {
   @IsBoolean()
   @DocsPropertyOptional({
     description:
-      "Boolean to Hide organizer's email address from the booking screen, email notifications, and calendar events",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hideOrganizerEmail?: boolean;
 
@@ -442,7 +485,9 @@ class BaseCreateEventTypeInput {
   @ValidateNested()
   @Type(() => CalVideoSettings)
   @DocsPropertyOptional({
-    description: "Cal video settings for the event type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: CalVideoSettings,
   })
   calVideoSettings?: CalVideoSettings;
@@ -457,7 +502,9 @@ export class CreateEventTypeInput_2024_06_14 extends BaseCreateEventTypeInput {
   @ValidateLocations_2024_06_14()
   @DocsPropertyOptional({
     description:
-      "Locations where the event will take place. If not provided, cal video link will be used as the location.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     oneOf: [
       { $ref: getSchemaPath(InputAddressLocation_2024_06_14) },
       { $ref: getSchemaPath(InputLinkLocation_2024_06_14) },
@@ -483,7 +530,9 @@ export enum HostPriority {
 export class Host {
   @Expose()
   @IsInt()
-  @DocsProperty({ description: "Which user is the host of this event" })
+  @DocsProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   userId!: number;
 
   @IsOptional()
@@ -491,7 +540,9 @@ export class Host {
   @IsBoolean()
   @DocsPropertyOptional({
     description:
-      "Only relevant for round robin event types. If true then the user must attend round robin event always.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   mandatory?: boolean = false;
 
@@ -519,7 +570,9 @@ export class CreateTeamEventTypeInput_2024_06_14 extends BaseCreateEventTypeInpu
   @DocsProperty({
     enum: ["collective", "roundRobin", "managed"],
     example: "collective",
-    description: "The scheduling type for the team event - collective, roundRobin or managed.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   schedulingType!: keyof typeof SchedulingType;
 
@@ -530,14 +583,18 @@ export class CreateTeamEventTypeInput_2024_06_14 extends BaseCreateEventTypeInpu
   @DocsPropertyOptional({
     type: [Host],
     description:
-      "Hosts contain specific team members you want to assign to this event type, but if you want to assign all team members, use `assignAllTeamMembers: true` instead and omit this field. For platform customers the hosts can include userIds only of managed users.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hosts?: Host[];
 
   @IsBoolean()
   @IsOptional()
   @DocsPropertyOptional({
-    description: "If true, all current and future team members will be assigned to this event type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   assignAllTeamMembers?: boolean;
 
@@ -545,7 +602,9 @@ export class CreateTeamEventTypeInput_2024_06_14 extends BaseCreateEventTypeInpu
   @ValidateTeamLocations_2024_06_14()
   @DocsPropertyOptional({
     description:
-      "Locations where the event will take place. If not provided, cal video link will be used as the location.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     oneOf: [
       { $ref: getSchemaPath(InputAddressLocation_2024_06_14) },
       { $ref: getSchemaPath(InputLinkLocation_2024_06_14) },

@@ -33,26 +33,11 @@ export default function UpgradePage() {
     <Shell>
       <div className="max-w-screen-lg">
         {doesUserHaveOrgToUpgrade.data ? (
-          <EmptyScreen
-            headline={t("your_upgrade_is_here")}
-            description={t("your_upgrade_is_here_description")}
-            Icon="circle-arrow-up"
-            buttonRaw={
-              <Button
-                onClick={() => {
-                  publishOrgMutation.mutate();
-                }}>
-                {t("upgrade")}
-              </Button>
-            }
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
-          <EmptyScreen
-            headline={t("you_are_all_set")}
-            description={t("you_are_all_set_description")}
-            Icon="circle-check"
-            buttonRaw={<Button href="mailto:support@cal.com">{t("contact_support")}</Button>}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       </div>
     </Shell>

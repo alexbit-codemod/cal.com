@@ -8,22 +8,30 @@ enum SortOrder {
 }
 
 export class GetRoutingFormResponsesParams {
-  @ApiPropertyOptional({ type: Number, description: "Number of responses to skip" })
+  @ApiPropertyOptional({ type: Number, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Transform(({ value }) => value && parseInt(value))
   @IsOptional()
   skip?: number;
 
-  @ApiPropertyOptional({ type: Number, description: "Number of responses to take" })
+  @ApiPropertyOptional({ type: Number, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Transform(({ value }) => value && parseInt(value))
   @IsOptional()
   take?: number;
 
-  @ApiPropertyOptional({ enum: SortOrder, description: "Sort by creation time" })
+  @ApiPropertyOptional({ enum: SortOrder, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @IsEnum(SortOrder)
   sortCreatedAt?: "asc" | "desc";
 
-  @ApiPropertyOptional({ enum: SortOrder, description: "Sort by update time" })
+  @ApiPropertyOptional({ enum: SortOrder, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @IsEnum(SortOrder)
   sortUpdatedAt?: "asc" | "desc";
@@ -31,7 +39,9 @@ export class GetRoutingFormResponsesParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by responses created after this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()
@@ -40,7 +50,9 @@ export class GetRoutingFormResponsesParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by responses created before this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()
@@ -49,7 +61,9 @@ export class GetRoutingFormResponsesParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by responses created after this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()
@@ -58,13 +72,17 @@ export class GetRoutingFormResponsesParams {
   @ApiPropertyOptional({
     type: String,
     format: "date-time",
-    description: "Filter by responses updated before this date",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsOptional()
   @IsISO8601()
   beforeUpdatedAt?: string;
 
-  @ApiPropertyOptional({ type: String, description: "Filter by responses routed to a specific booking" })
+  @ApiPropertyOptional({ type: String, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @IsString()
   routedToBookingUid?: string;
@@ -80,11 +98,15 @@ export class GetRoutingFormsParams extends GetRoutingFormResponsesParams {
   })
   @ApiPropertyOptional({
     type: [Number],
-    description: "Filter by teamIds. Team ids must be separated by a comma.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?teamIds=100,200",
   })
   @IsArray()
   @IsNumber({}, { each: true })
-  @ArrayMinSize(1, { message: "teamIds must contain at least 1 team id" })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   teamIds?: number[];
 }

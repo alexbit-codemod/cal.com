@@ -477,7 +477,9 @@ export default class CloseCom {
       body: JSON.stringify(data),
     }).then(async (response) => {
       if (!response.ok) {
-        const message = `[Close.com app] An error has occurred: ${response.status}`;
+        const message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         this.log.error(await response.json());
         throw new Error(message);
       }

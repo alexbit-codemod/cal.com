@@ -83,7 +83,9 @@ function getApps(credentials: CredentialDataWithTeamName[], filterOnCredentials?
     if (appCredentials.length > 0 && appMeta?.appData?.location) {
       locationOption = {
         value: appMeta.appData.location.type,
-        label: appMeta.appData.location.label || "No label set",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         disabled: false,
       };
     }

@@ -25,14 +25,18 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
   if (!organizationOnboarding) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "organization_onboarding_not_found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (organizationOnboarding.stripeSubscriptionId) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "organization_has_subscription_already",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -48,7 +52,9 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
     // Intentionally throw vague error to avoid leaking information
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "organization_onboarding_not_found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

@@ -3,7 +3,9 @@ import type { Rule } from "eslint";
 const rule: Rule.RuleModule = {
   meta: {
     docs: {
-      description: "This rule is run on typescript!",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   },
   create: (context) => {
@@ -12,7 +14,9 @@ const rule: Rule.RuleModule = {
         if (node.id.type === "Identifier" && node.id.name !== "bla") {
           context.report({
             node,
-            message: 'All variabled should be named "bla"!',
+            message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           });
         }
       },

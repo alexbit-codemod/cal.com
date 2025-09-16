@@ -17,7 +17,9 @@ export function createEventTypeFixture(page: Page) {
       const editAvailability = (await localize("en"))("edit_availability");
 
       // Verify if the icon is rendered
-      await expect(page.locator("span").filter({ hasText: "Europe/London" }).locator("svg")).toBeVisible();
+      await expect(page.locator("span").filter({ hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }).locator("svg")).toBeVisible();
       await expect(page.getByText("Europe/London")).toBeVisible();
       await page.getByRole("link", { name: editAvailability }).click();
     },

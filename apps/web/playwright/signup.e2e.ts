@@ -66,7 +66,9 @@ test.describe("Email Signup Flow Test", async () => {
       await expect(continueWithEmailButton).toBeVisible();
       await continueWithEmailButton.click();
 
-      const alertMessage = "Username or email is already taken";
+      const alertMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       // Fill form
       await page.locator('input[name="username"]').fill("pro");
@@ -97,7 +99,9 @@ test.describe("Email Signup Flow Test", async () => {
       await expect(continueWithEmailButton).toBeVisible();
       await continueWithEmailButton.click();
 
-      const alertMessage = "Username or email is already taken";
+      const alertMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       // Fill form
       await page.locator('input[name="username"]').fill("randomuserwhodoesntexist");

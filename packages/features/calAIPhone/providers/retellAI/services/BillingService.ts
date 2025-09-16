@@ -33,7 +33,9 @@ export class BillingService {
     if (!phoneNumberPriceId) {
       throw new HttpError({
         statusCode: 500,
-        message: "Phone number price ID not configured. Please contact support.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -41,7 +43,9 @@ export class BillingService {
     if (!stripeCustomerId) {
       throw new HttpError({
         statusCode: 500,
-        message: "Failed to create Stripe customer.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -85,11 +89,15 @@ export class BillingService {
     if (!checkoutSession.url) {
       throw new HttpError({
         statusCode: 500,
-        message: "Failed to create checkout session.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
-    return { url: checkoutSession.url, message: "Payment required to purchase phone number" };
+    return { url: checkoutSession.url, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
 
   async cancelPhoneNumberSubscription({
@@ -116,14 +124,18 @@ export class BillingService {
     if (!phoneNumber) {
       throw new HttpError({
         statusCode: 404,
-        message: "Phone number not found or you don't have permission to cancel it.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (!phoneNumber.stripeSubscriptionId) {
       throw new HttpError({
         statusCode: 400,
-        message: "Phone number doesn't have an active subscription.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -145,12 +157,16 @@ export class BillingService {
         });
       }
 
-      return { success: true, message: "Phone number subscription cancelled successfully." };
+      return { success: true, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       };
     } catch (error) {
       this.logger.error("Error cancelling phone number subscription:", { error });
       throw new HttpError({
         statusCode: 500,
-        message: "Failed to cancel subscription. Please try again or contact support.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }

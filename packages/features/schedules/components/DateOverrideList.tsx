@@ -127,27 +127,8 @@ const DateOverrideList = ({
               }
             />
             <Tooltip content="Delete">
-              <Button
-                className="text-default h-5"
-                data-testid="delete-button"
-                title={t("date_overrides_delete_on_date", {
-                  date: isPlatform
-                    ? formatInTimeZone(new Date(item.ranges[0].start), "UTC", "h a")
-                    : new Intl.DateTimeFormat(i18n.language, {
-                        weekday: "long",
-                        month: "long",
-                        day: "numeric",
-                        timeZone: "UTC",
-                      }).format(item.ranges[0].start),
-                })}
-                color="destructive"
-                variant="icon"
-                StartIcon="trash-2"
-                onClick={() => {
-                  replace([...fields.filter((currentItem) => currentItem.id !== item.id)]);
-                  handleAvailabilityUpdate();
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </Tooltip>
           </div>
         </li>

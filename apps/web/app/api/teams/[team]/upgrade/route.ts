@@ -33,12 +33,16 @@ async function getHandler(req: NextRequest, { params }: { params: Promise<Params
       expand: ["subscription"],
     });
     if (!checkoutSession) {
-      throw new HttpError({ statusCode: 404, message: "Checkout session not found" });
+      throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const subscription = checkoutSession.subscription as Stripe.Subscription;
     if (checkoutSession.payment_status !== "paid") {
-      throw new HttpError({ statusCode: 402, message: "Payment required" });
+      throw new HttpError({ statusCode: 402, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     let team = await prisma.team.findFirst({
@@ -52,7 +56,9 @@ async function getHandler(req: NextRequest, { params }: { params: Promise<Params
 
       metadata = teamMetadataSchema.safeParse(prevTeam.metadata);
       if (!metadata.success) {
-        throw new HttpError({ statusCode: 400, message: "Invalid team metadata" });
+        throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         });
       }
 
       const { requestedSlug, ...newMetadata } = metadata.data || {};
@@ -82,14 +88,18 @@ async function getHandler(req: NextRequest, { params }: { params: Promise<Params
     if (!metadata) {
       metadata = teamMetadataSchema.safeParse(team.metadata);
       if (!metadata.success) {
-        throw new HttpError({ statusCode: 400, message: "Invalid team metadata" });
+        throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         });
       }
     }
 
     const session = await getServerSession({ req: buildLegacyRequest(await headers(), await cookies()) });
 
     if (!session) {
-      return NextResponse.json({ message: "Team upgraded successfully" });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const redirectUrl = team?.isOrganization

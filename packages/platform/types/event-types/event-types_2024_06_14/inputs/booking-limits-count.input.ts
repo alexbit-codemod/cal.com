@@ -15,7 +15,9 @@ export class BaseBookingLimitsCount_2024_06_14 {
   @IsInt()
   @Min(1)
   @ApiPropertyOptional({
-    description: "The number of bookings per day",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 1,
   })
   day?: number;
@@ -24,7 +26,9 @@ export class BaseBookingLimitsCount_2024_06_14 {
   @IsInt()
   @Min(1)
   @ApiPropertyOptional({
-    description: "The number of bookings per week",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2,
   })
   week?: number;
@@ -33,7 +37,9 @@ export class BaseBookingLimitsCount_2024_06_14 {
   @IsInt()
   @Min(1)
   @ApiPropertyOptional({
-    description: "The number of bookings per month",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 3,
   })
   month?: number;
@@ -42,7 +48,9 @@ export class BaseBookingLimitsCount_2024_06_14 {
   @IsInt()
   @Min(1)
   @ApiPropertyOptional({
-    description: "The number of bookings per year",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 4,
   })
   year?: number;

@@ -42,7 +42,9 @@ export async function deleteHandler(req: NextApiRequest) {
   const query = schemaQueryUserId.parse(req.query);
   // Here we only check for ownership of the user if the user is not admin, otherwise we let ADMIN's edit any user
   if (!isSystemWideAdmin && query.userId !== req.userId)
-    throw new HttpError({ statusCode: 403, message: "Forbidden" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const user = await prisma.user.findUnique({
     where: { id: query.userId },
@@ -52,11 +54,15 @@ export async function deleteHandler(req: NextApiRequest) {
       metadata: true,
     },
   });
-  if (!user) throw new HttpError({ statusCode: 404, message: "User not found" });
+  if (!user) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   await deleteUser(user);
 
-  return { message: `User with id: ${user.id} deleted successfully` };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }
 
 export default defaultResponder(deleteHandler);

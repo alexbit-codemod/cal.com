@@ -18,7 +18,9 @@ export const config = {
 
 const handleSubscriptionUpdate = async (event: Stripe.Event) => {
   const subscription = event.data.object as Stripe.Subscription;
-  if (!subscription.id) throw new HttpCode({ statusCode: 400, message: "Subscription ID not found" });
+  if (!subscription.id) throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const app = await prisma.credential.findFirst({
     where: {
@@ -27,7 +29,9 @@ const handleSubscriptionUpdate = async (event: Stripe.Event) => {
   });
 
   if (!app) {
-    throw new HttpCode({ statusCode: 202, message: "Received and discarded" });
+    throw new HttpCode({ statusCode: 202, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   await prisma.credential.update({
@@ -42,7 +46,9 @@ const handleSubscriptionUpdate = async (event: Stripe.Event) => {
 
 const handleSubscriptionDeleted = async (event: Stripe.Event) => {
   const subscription = event.data.object as Stripe.Subscription;
-  if (!subscription.id) throw new HttpCode({ statusCode: 400, message: "Subscription ID not found" });
+  if (!subscription.id) throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const app = await prisma.credential.findFirst({
     where: {
@@ -51,7 +57,9 @@ const handleSubscriptionDeleted = async (event: Stripe.Event) => {
   });
 
   if (!app) {
-    throw new HttpCode({ statusCode: 202, message: "Received and discarded" });
+    throw new HttpCode({ statusCode: 202, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // should we delete the credential here rather than marking as inactive?
@@ -76,15 +84,21 @@ const webhookHandlers: Record<string, WebhookHandler | undefined> = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== "POST") {
-      throw new HttpCode({ statusCode: 405, message: "Method Not Allowed" });
+      throw new HttpCode({ statusCode: 405, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const sig = req.headers["stripe-signature"];
     if (!sig) {
-      throw new HttpCode({ statusCode: 400, message: "Missing stripe-signature" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     if (!process.env.STRIPE_WEBHOOK_SECRET_APPS) {
-      throw new HttpCode({ statusCode: 500, message: "Missing process.env.STRIPE_WEBHOOK_SECRET_APPS" });
+      throw new HttpCode({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const requestBuffer = await buffer(req);
     const payload = requestBuffer.toString();
@@ -98,7 +112,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       /** Not really an error, just letting Stripe know that the webhook was received but unhandled */
       throw new HttpCode({
         statusCode: 202,
-        message: `Unhandled Stripe Webhook event type ${event.type}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   } catch (_err) {

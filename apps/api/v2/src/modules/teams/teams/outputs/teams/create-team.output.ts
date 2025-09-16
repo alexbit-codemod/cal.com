@@ -26,7 +26,9 @@ export class CreateTeamOutput {
 
   @ApiProperty({
     oneOf: [{ $ref: getSchemaPath(Output) }, { $ref: getSchemaPath(TeamOutputDto) }],
-    description: "Either an Output object or a TeamOutputDto.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   @ValidateNested()

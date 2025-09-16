@@ -30,7 +30,9 @@ export class CreateOAuthClientInput {
   @ApiProperty({
     type: [String],
     description:
-      'Array of permission keys like ["BOOKING_READ", "BOOKING_WRITE"]. Use ["*"] to grant all permissions.',
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     enum: [...Object.keys(PERMISSION_MAP), "*"],
   })
   permissions!: Array<keyof typeof PERMISSION_MAP | "*">;

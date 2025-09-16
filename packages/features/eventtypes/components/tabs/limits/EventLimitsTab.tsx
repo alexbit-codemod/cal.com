@@ -218,19 +218,8 @@ function RollingLimitRadioItem({
 
       <div>
         <div className="flex items-center">
-          <TextField
-            labelSrOnly
-            type="number"
-            className={classNames(
-              "border-default my-0 block w-16 text-sm [appearance:textfield]",
-              customClassNames?.textField
-            )}
-            placeholder="30"
-            disabled={isDisabled}
-            min={0}
-            max={rollingExcludeUnavailableDays ? ROLLING_WINDOW_PERIOD_MAX_DAYS_TO_CHECK : undefined}
-            {...formMethods.register("periodDays", { valueAsNumber: true })}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <Select
             options={options}
             isSearchable={false}
@@ -248,28 +237,8 @@ function RollingLimitRadioItem({
           <span className="me-2 ms-2">&nbsp;{t("into_the_future")}</span>
         </div>
         <div className="-ml-6 flex flex-col py-2">
-          <CheckboxField
-            checked={!!rollingExcludeUnavailableDays}
-            disabled={isDisabled}
-            description={t("always_show_x_days", {
-              x: periodDaysWatch,
-            })}
-            onChange={(e) => {
-              const isChecked = e.target.checked;
-              formMethods.setValue(
-                "periodDays",
-                Math.min(periodDaysWatch, ROLLING_WINDOW_PERIOD_MAX_DAYS_TO_CHECK)
-              );
-              formMethods.setValue(
-                "periodType",
-                getPeriodTypeFromUiValue({
-                  value: PeriodType.ROLLING,
-                  rollingExcludeUnavailableDays: isChecked,
-                }),
-                { shouldDirty: true }
-              );
-            }}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
     </div>
@@ -625,24 +594,8 @@ export const EventLimitsTab = ({ eventType, customClassNames }: EventLimitsTabPr
         render={({ field: { onChange, value } }) => {
           const isChecked = value;
           return (
-            <SettingsToggle
-              toggleSwitchAtTheEnd={true}
-              labelClassName={classNames("text-sm", customClassNames?.firstAvailableSlotOnly?.label)}
-              title={t("only_show_first_available_slot")}
-              description={t("only_show_first_available_slot_description")}
-              checked={isChecked}
-              {...onlyFirstAvailableSlotLocked}
-              onCheckedChange={(active) => {
-                onChange(active ?? false);
-              }}
-              switchContainerClassName={classNames(
-                "border-subtle mt-6 rounded-lg border py-6 px-4 sm:px-6",
-                isChecked && "rounded-b-none",
-                customClassNames?.firstAvailableSlotOnly?.container
-              )}
-              childrenClassName={customClassNames?.firstAvailableSlotOnly?.children}
-              descriptionClassName={customClassNames?.firstAvailableSlotOnly?.description}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           );
         }}
       />
@@ -787,24 +740,8 @@ export const EventLimitsTab = ({ eventType, customClassNames }: EventLimitsTabPr
             }
           }}>
           <div className={classNames("border-subtle rounded-b-lg border border-t-0 p-6")}>
-            <TextField
-              required
-              type="number"
-              containerClassName={classNames(
-                "max-w-80",
-                customClassNames?.offsetStartTimes?.offsetInput?.container
-              )}
-              labelClassName={customClassNames?.offsetStartTimes?.offsetInput?.label}
-              addOnClassname={customClassNames?.offsetStartTimes?.offsetInput?.addOn}
-              className={customClassNames?.offsetStartTimes?.offsetInput?.input}
-              label={t("offset_start")}
-              {...formMethods.register("offsetStart", { setValueAs: (value) => Number(value) })}
-              addOnSuffix={<>{t("minutes")}</>}
-              hint={t("offset_start_description", {
-                originalTime: offsetOriginalTime.toLocaleTimeString(i18n.language, { timeStyle: "short" }),
-                adjustedTime: offsetAdjustedTime.toLocaleTimeString(i18n.language, { timeStyle: "short" }),
-              })}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </SettingsToggle>
       )}
@@ -862,19 +799,8 @@ const IntervalLimitItem = ({
         customClassNames?.container
       )}
       key={limitKey}>
-      <TextField
-        required
-        type="number"
-        containerClassName={textFieldSuffix ? "w-32 sm:w-44 -mb-1 shrink" : "w-14 sm:w-16 mb-0 shrink"}
-        className={classNames("mb-0", customClassNames?.limitText)}
-        placeholder={`${value}`}
-        disabled={disabled}
-        min={step}
-        step={step}
-        defaultValue={value}
-        addOnSuffix={textFieldSuffix}
-        onChange={(e) => onLimitChange(limitKey, parseInt(e.target.value || "0", 10))}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <Select
         options={selectOptions}
         isSearchable={false}

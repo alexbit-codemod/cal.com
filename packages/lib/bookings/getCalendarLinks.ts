@@ -184,7 +184,9 @@ export const getCalendarLinks = ({
 
   // Create event name and description
   const eventName = getEventName(eventNameObject, true);
-  const eventDescription = eventType.description || "";
+  const eventDescription = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
 
   // Calculate start and end times
   const startTime = dayjs(booking.startTime);
@@ -232,22 +234,30 @@ export const getCalendarLinks = ({
 
   return [
     {
-      label: "Google Calendar",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: CalendarLinkType.GOOGLE_CALENDAR,
       link: googleCalendarLink,
     },
     {
-      label: "Microsoft Office",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: CalendarLinkType.MICROSOFT_OFFICE,
       link: microsoftOfficeLink,
     },
     {
-      label: "Microsoft Outlook",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: CalendarLinkType.MICROSOFT_OUTLOOK,
       link: microsoftOutlookLink,
     },
     {
-      label: "ICS",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       id: CalendarLinkType.ICS,
       link: icsFileLink,
     },

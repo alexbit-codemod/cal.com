@@ -162,7 +162,8 @@ export const AppForm = ({
 
   if (action === "edit" || action === "edit-template") {
     if (!slug) {
-      return <Text>--slug is required</Text>;
+      return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$;
     }
     if (!app) {
       return (
@@ -202,58 +203,56 @@ export const AppForm = ({
         )}
         {status === "done" && (
           <Box flexDirection="column" paddingTop={2} paddingBottom={2}>
-            <Text bold>
-              Just wait for a few seconds for process to exit and then you are good to go. Your{" "}
-              {isTemplate ? "Template" : "App"} code exists at {getAppDirPath(slug, isTemplate)}
-            </Text>
-            <Text>
-              Tip : Go and change the logo of your {isTemplate ? "template" : "app"} by replacing{" "}
-              {`${getAppDirPath(slug, isTemplate)}/static/icon.svg`}
-            </Text>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Newline />
-            <Text bold underline color="blue">
-              App Summary:
-            </Text>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Box flexDirection="column">
               <Box flexDirection="row">
-                <Text color="green">Slug: </Text>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Text>{slug}</Text>
               </Box>
               <Box flexDirection="row">
-                <Text color="green">{isTemplate ? "Template" : "App"} URL: </Text>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Text>{`http://localhost:3000/apps/${slug}`}</Text>
               </Box>
               <Box flexDirection="row">
-                <Text color="green">Name: </Text>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Text>{name}</Text>
               </Box>
               <Box flexDirection="row">
-                <Text color="green">Description: </Text>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Text>{description}</Text>
               </Box>
               <Box flexDirection="row">
-                <Text color="green">Category: </Text>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Text>{category}</Text>
               </Box>
               <Box flexDirection="row">
-                <Text color="green">Publisher Name: </Text>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Text>{publisher}</Text>
               </Box>
               <Box flexDirection="row">
-                <Text color="green">Publisher Email: </Text>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Text>{email}</Text>
               </Box>
-              <Text bold>
-                Next Step: Enable the app from http://localhost:3000/settings/admin/apps as admin user (Email:
-                admin@example.com, Pass: ADMINadmin2022!)
-              </Text>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </Box>
           </Box>
         )}
-        <Text italic color="gray">
-          Note: You should not rename app directory manually. Use cli only to do that as it needs to be
-          updated in DB as well
-        </Text>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </Box>
     );
   }
@@ -292,27 +291,8 @@ export const AppForm = ({
         <Box>
           <Label>{`${fieldLabel}`}</Label>
           {field?.type == "text" ? (
-            <TextInput
-              value={fieldValue}
-              placeholder={field?.defaultValue}
-              onSubmit={(value) => {
-                if (!value && !field.optional) {
-                  return;
-                }
-                setSlugFinalized(true);
-                setInputIndex((index) => {
-                  return index + 1;
-                });
-              }}
-              onChange={(value) => {
-                setAppInputData((appInputData) => {
-                  return {
-                    ...appInputData,
-                    [fieldName]: value,
-                  };
-                });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ) : (
             <SelectInput<string>
               items={field?.options}

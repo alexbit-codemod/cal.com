@@ -80,22 +80,8 @@ const CustomEventTypeModalForm: FC<CustomEventTypeModalFormProps> = (props) => {
         }
         handleSubmit(onSubmit)(e);
       }}>
-      <TextField
-        label={t("event_name_in_calendar")}
-        type="text"
-        placeholder={placeHolder_}
-        {...register("customEventName", {
-          validate: (value) => {
-            const validationResult = validateCustomEventName(value, event.bookingFields);
-            return typeof validationResult === "string"
-              ? t("invalid_event_name_variables", { item: validationResult })
-              : validationResult;
-          },
-        })}
-        containerClassName={customClassNames?.eventNameInput?.container}
-        labelClassName={customClassNames?.eventNameInput?.label}
-        className={classNames("mb-0", customClassNames?.eventNameInput?.input)}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div className="pt-6 text-sm">
         <div
           className={classNames(
@@ -340,13 +326,8 @@ const CustomEventTypeModalForm: FC<CustomEventTypeModalFormProps> = (props) => {
                 )}>
                 {previewText}
               </p>
-              <p
-                className={classNames(
-                  "text-default ml-1.5 text-[10px] font-normal",
-                  customClassNames?.previewSection?.previewEventBox?.eventTime
-                )}>
-                8 - 10 AM
-              </p>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           </div>
         </div>

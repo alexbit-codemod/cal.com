@@ -10,13 +10,9 @@ export default class CancelledSeatSMS extends SMSManager {
   getMessage(attendee: Person) {
     const t = attendee.language.translate;
 
-    const messageText = `${t("no_longer_attending", {
-      name: attendee.name,
-    })}\n\n${t("event_no_longer_attending_subject", {
-      name: this.calEvent.team?.name || this.calEvent.organizer.name,
-      date: this.getFormattedDate(attendee.timeZone, attendee.language.locale),
-      interpolation: { escapeValue: false },
-    })} `;
+    const messageText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     return `${messageText}`;
   }

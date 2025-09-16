@@ -173,12 +173,9 @@ export class ModalBox extends EmbedElement {
     this.collapseIframe();
 
     const message = this.dataset.message;
-    const errorMessage = this.dataset.errorCode
-      ? getErrorString({
-          errorCode: this.dataset.errorCode,
-          errorMessage: message,
-        })
-      : null;
+    const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     const messageToShow = errorMessage || message;
     if (messageToShow) {
       this.getMessageElement().innerText = messageToShow;

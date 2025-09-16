@@ -56,11 +56,11 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
       className={`flex min-h-screen flex-col ${inter.className} main text-default flex min-h-full w-full flex-col items-center overflow-visible`}>
       <Navbar username={props.calUsername} />
       <div>
-        <h1 className="mx-10 my-4 text-2xl font-semibold">
-          EventTypes{eventTypeId ? `: ${eventTypeId}` : ""}
-        </h1>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        {isLoadingEvents && !eventTypeId && <p>Loading...</p>}
+        {isLoadingEvents && !eventTypeId && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$}
 
         {!isLoadingEvents && !eventTypeId && Boolean(eventTypes?.length) && !rescheduleUid && (
           <div className="flex flex-col gap-4">
@@ -91,7 +91,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
 
         {!isLoadingTeamEvents && !eventTypeId && Boolean(teamEventTypes?.length) && !rescheduleUid && (
           <div className="flex flex-col gap-4">
-            <h1>Team event types</h1>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             {teamEventTypes?.map(
               (event: { id: number; slug: string; title: string; lengthInMinutes: number }) => {
                 const formatEventSlug = event.slug
@@ -769,16 +770,10 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
             />
 
             <div className="mt-4 flex justify-center gap-4">
-              <button
-                onClick={handleValidate}
-                className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
-                Validate Form
-              </button>
-              <button
-                onClick={handleSubmit}
-                className="rounded bg-green-500 px-4 py-2 text-white hover:bg-green-600">
-                Submit Form
-              </button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           </div>
         )}
@@ -786,7 +781,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
         {!eventTypeId && (
           <div className="mt-8 flex flex-row items-center justify-center gap-24">
             <div className="flex w-[30vw] flex-col gap-2">
-              <h1 className="font-semibold">Create Event Type</h1>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <CreateEventType
                 customClassNames={{
                   atomsWrapper: "border p-4 shadow-md rounded-md",
@@ -799,7 +795,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
             </div>
 
             <div className="flex w-[30vw] flex-col gap-2">
-              <h1 className="font-semibold">Create Team Event Type</h1>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               {teams?.[0]?.id && (
                 <CreateEventType
                   customClassNames={{

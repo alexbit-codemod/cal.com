@@ -65,12 +65,8 @@ export default function TeamInviteListItem(props: Props) {
 
   const teamInfo = (
     <div className="flex">
-      <Avatar
-        size="mdLg"
-        imageSrc={getPlaceholderAvatar(team.logoUrl, team.name)}
-        alt="Team Logo"
-        className=""
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div className="ms-3 inline-block">
         <span className="text-emphasis text-sm font-semibold">{team.name}</span>
         <span className="text-default block text-sm leading-5">

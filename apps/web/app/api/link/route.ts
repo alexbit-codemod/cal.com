@@ -99,7 +99,9 @@ async function handler(request: NextRequest) {
       reason,
     });
   } catch (e) {
-    let message = "Error confirming booking";
+    let message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     if (e instanceof TRPCError) message = (e as TRPCError).message;
     return NextResponse.redirect(`${url.origin}/booking/${bookingUid}?error=${encodeURIComponent(message)}`);
   }

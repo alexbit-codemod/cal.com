@@ -29,11 +29,8 @@ export default function AppleCalendarSetup() {
         <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
           <div>
             {/* eslint-disable @next/next/no-img-element */}
-            <img
-              src="/api/app-store/applecalendar/icon.svg"
-              alt="Apple Calendar"
-              className="h-12 w-12 max-w-2xl"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div>
             <h1 className="text-default dark:text-emphasis mb-3 font-semibold">
@@ -42,13 +39,8 @@ export default function AppleCalendarSetup() {
 
             <div className="mt-1 text-sm">
               {t("apple_server_generate_password", { appName: APP_NAME })}{" "}
-              <a
-                className="font-bold hover:underline"
-                href="https://appleid.apple.com/account/manage"
-                target="_blank"
-                rel="noopener noreferrer">
-                https://appleid.apple.com/account/manage
-              </a>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               . {t("credentials_stored_encrypted")}
             </div>
             <div className="my-2 mt-4">
@@ -78,25 +70,14 @@ export default function AppleCalendarSetup() {
                   className="space-y-4"
                   disabled={form.formState.isSubmitting}
                   data-testid="apple-calendar-form">
-                  <TextField
-                    required
-                    type="text"
-                    {...form.register("username")}
-                    label="Apple ID"
-                    placeholder="appleid@domain.com"
-                    data-testid="apple-calendar-email"
-                  />
-                  <PasswordField
-                    required
-                    {...form.register("password")}
-                    label={t("password")}
-                    placeholder="•••••••••••••"
-                    autoComplete="password"
-                    data-testid="apple-calendar-password"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </fieldset>
 
-                {errorMessage && <Alert severity="error" title={errorMessage} className="my-4" />}
+                {errorMessage && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$}
                 <div className="mt-5 justify-end space-x-2 rtl:space-x-reverse sm:mt-4 sm:flex">
                   <Button type="button" color="secondary" onClick={() => router.back()}>
                     {t("cancel")}

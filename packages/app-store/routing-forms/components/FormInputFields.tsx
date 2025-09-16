@@ -57,29 +57,8 @@ export default function FormInputFields(props: FormInputFieldsProps) {
                 {field.label}
               </label>
             </div>
-            <Component
-              value={response[field.id]?.value ?? ""}
-              placeholder={field.placeholder ?? ""}
-              // required property isn't accepted by query-builder types
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              /* @ts-ignore */
-              required={!!field.required}
-              listValues={options}
-              disabled={disabledFields?.includes(fieldIdentifier)}
-              data-testid={`form-field-${fieldIdentifier}`}
-              setValue={(value: number | string | string[]) => {
-                setResponse(() => {
-                  return {
-                    ...response,
-                    [field.id]: {
-                      label: field.label,
-                      identifier: field?.identifier,
-                      value: getFieldResponseForJsonLogic({ field, value }),
-                    },
-                  };
-                });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         );
       })}

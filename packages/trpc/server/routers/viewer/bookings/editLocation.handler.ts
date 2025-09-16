@@ -53,7 +53,9 @@ async function updateLocationInConnectedAppForBooking({
   if (results.length > 0 && results.every((res) => !res.success)) {
     const error = {
       errorCode: "BookingUpdateLocationFailed",
-      message: "Updating location failed",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
     logger.error(`Updating location failed`, safeStringify(error), safeStringify(results));
     throw new SystemError("Updating location failed");
@@ -290,5 +292,7 @@ export async function editLocationHandler({ ctx, input }: EditLocationOptions) {
     console.log("Error sending LocationChangeEmails", safeStringify(error));
   }
 
-  return { message: "Location updated" };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }

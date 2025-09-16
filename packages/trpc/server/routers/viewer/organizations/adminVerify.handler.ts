@@ -34,7 +34,9 @@ export const adminVerifyHandler = async ({ input }: AdminVerifyOptions) => {
   if (!foundOrg)
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "This team isn't an org or doesn't exist",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   const acceptedEmailDomain = foundOrg.members[0].user.email.split("@")[1];
@@ -123,7 +125,9 @@ export const adminVerifyHandler = async ({ input }: AdminVerifyOptions) => {
 
   return {
     ok: true,
-    message: `Verified Organization - Auto accepted all members ending in ${acceptedEmailDomain}`,
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 };
 

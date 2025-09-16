@@ -25,7 +25,9 @@ describe("RoutingFormResponseField", () => {
 
     const eventType = await prisma.eventType.create({
       data: {
-        title: "Test Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event",
         length: 60,
         userId: user.id,
@@ -41,19 +43,25 @@ describe("RoutingFormResponseField", () => {
           {
             id: "text-field-id",
             type: "text",
-            label: "Name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
           },
           {
             id: "number-field-id",
             type: "number",
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: false,
           },
           {
             id: "multiselect-field-id",
             type: "multiselect",
-            label: "Skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: false,
             options: [
               {
@@ -66,14 +74,18 @@ describe("RoutingFormResponseField", () => {
               },
               {
                 id: "skill-3",
-                label: "React",
+                label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             ],
           },
           {
             id: "email-field-id",
             type: "email",
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
           },
         ],
@@ -84,7 +96,9 @@ describe("RoutingFormResponseField", () => {
     const booking = await prisma.booking.create({
       data: {
         uid: `routing-form-response-field-${randomId}`,
-        title: "Test Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: new Date(),
         endTime: new Date(Date.now() + 60 * 60 * 1000),
         userId: user.id,
@@ -137,19 +151,27 @@ describe("RoutingFormResponseField", () => {
           formId: formId,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "John Doe",
             },
             "number-field-id": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: 5,
             },
             "multiselect-field-id": {
-              label: "Skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: ["skill-1", "skill-3"],
             },
             "email-field-id": {
-              label: "Email",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "john.doe@example.com",
             },
           },
@@ -203,19 +225,27 @@ describe("RoutingFormResponseField", () => {
           formId: formId,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: null,
             },
             "number-field-id": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: undefined,
             },
             "multiselect-field-id": {
-              label: "Skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: [],
             },
             "email-field-id": {
-              label: "Email",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "",
             },
           },
@@ -253,15 +283,21 @@ describe("RoutingFormResponseField", () => {
           formId: formId,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: 123, // Number instead of string
             },
             "number-field-id": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "five", // String instead of number
             },
             "multiselect-field-id": {
-              label: "Skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "skill-1", // String instead of array
             },
           },
@@ -288,15 +324,21 @@ describe("RoutingFormResponseField", () => {
           formId: formId,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Original Name",
             },
             "number-field-id": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: 3,
             },
             "multiselect-field-id": {
-              label: "Skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: ["skill-1"],
             },
           },
@@ -324,19 +366,27 @@ describe("RoutingFormResponseField", () => {
         data: {
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Updated Name",
             },
             "number-field-id": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: 5,
             },
             "multiselect-field-id": {
-              label: "Skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: ["skill-1", "skill-2"],
             },
             "email-field-id": {
-              label: "Email",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "new@example.com",
             },
           },
@@ -386,19 +436,27 @@ describe("RoutingFormResponseField", () => {
           formId: formId,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Test Name",
             },
             "number-field-id": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: 4,
             },
             "multiselect-field-id": {
-              label: "Skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: ["skill-1", "skill-2"],
             },
             "email-field-id": {
-              label: "Email",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "test@example.com",
             },
           },
@@ -421,11 +479,15 @@ describe("RoutingFormResponseField", () => {
         data: {
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Test Name",
             },
             "email-field-id": {
-              label: "Email",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "test@example.com",
             },
           },

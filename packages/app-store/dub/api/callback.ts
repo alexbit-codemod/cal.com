@@ -24,11 +24,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       );
       return;
     }
-    throw new HttpError({ statusCode: 400, message: "`code` must be a string" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!req.session?.user?.id) {
-    throw new HttpError({ statusCode: 401, message: "You must be logged in to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const { client_id, redirect_uris, client_secret } = await getParsedAppKeysFromSlug("dub", dubAppKeysSchema);
@@ -37,20 +41,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const result = await fetch(codeExchangeUrl, {
     method: "POST",
-    body: new URLSearchParams({
-      code,
-      client_id,
-      redirect_uri: redirect_uris,
-      client_secret,
-      grant_type: "authorization_code",
-    }).toString(),
+    body: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     },
   });
 
   if (result.status !== 200) {
-    let errorMessage = "Something wrong with Dub Api";
+    let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     try {
       const responseBody = await result.json();
       if (typeof responseBody?.error?.message === "string") {

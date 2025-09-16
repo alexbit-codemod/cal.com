@@ -42,7 +42,9 @@ export async function deleteHandler(req: NextApiRequest) {
   await prisma.user.updateMany({ where: { defaultScheduleId: id }, data: { defaultScheduleId: undefined } });
 
   await prisma.schedule.delete({ where: { id } });
-  return { message: `Schedule with id: ${id} deleted successfully` };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }
 
 export default defaultResponder(deleteHandler);

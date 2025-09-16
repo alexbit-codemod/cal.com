@@ -35,7 +35,9 @@ export class UserVerifiedResourcesController {
   constructor(private readonly verifiedResourcesService: VerifiedResourcesService) {}
   @ApiOperation({
     summary: "Request email verification code",
-    description: `Sends a verification code to the email`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @Post("/emails/verification-code/request")
@@ -58,7 +60,9 @@ export class UserVerifiedResourcesController {
 
   @ApiOperation({
     summary: "Request phone number verification code",
-    description: `Sends a verification code to the phone number`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @Post("/phones/verification-code/request")
@@ -78,7 +82,9 @@ export class UserVerifiedResourcesController {
 
   @ApiOperation({
     summary: "Verify an email",
-    description: `Use code to verify an email`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @Post("/emails/verification-code/verify")
@@ -97,7 +103,9 @@ export class UserVerifiedResourcesController {
 
   @ApiOperation({
     summary: "Verify a phone number",
-    description: `Use code to verify a phone number`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiHeader(API_KEY_OR_ACCESS_TOKEN_HEADER)
   @Post("/phones/verification-code/verify")

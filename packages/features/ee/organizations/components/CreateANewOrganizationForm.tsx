@@ -141,7 +141,8 @@ const CreateANewOrganizationFormChild = ({ session }: { session: Ensure<SessionC
                 control={newOrganizationFormMethods.control}
                 render={({ field: { value, onChange } }) => (
                   <>
-                    <Label htmlFor="billingPeriod">Billing Period</Label>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <ToggleGroup
                       isFullWidth
                       id="billingPeriod"
@@ -175,25 +176,8 @@ const CreateANewOrganizationFormChild = ({ session }: { session: Ensure<SessionC
             }}
             render={({ field: { value } }) => (
               <div className="flex">
-                <TextField
-                  containerClassName="w-full"
-                  placeholder="john@acme.com"
-                  name="orgOwnerEmail"
-                  disabled={!isAdmin}
-                  label={t("admin_email")}
-                  defaultValue={value}
-                  onChange={(e) => {
-                    const email = e?.target.value;
-                    newOrganizationFormMethods.setValue("orgOwnerEmail", email.trim());
-                    if (newOrganizationFormMethods.getValues("slug") === "") {
-                      const slug = deriveSlugFromEmail(email);
-                      newOrganizationFormMethods.setValue("slug", slug);
-                    }
-                    const name = deriveOrgNameFromEmail(email);
-                    newOrganizationFormMethods.setValue("name", name);
-                  }}
-                  autoComplete="off"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
           />
@@ -208,20 +192,8 @@ const CreateANewOrganizationFormChild = ({ session }: { session: Ensure<SessionC
             }}
             render={({ field: { value } }) => (
               <>
-                <TextField
-                  className="mt-2"
-                  placeholder="Acme"
-                  name="name"
-                  label={t("organization_name")}
-                  defaultValue={value}
-                  onChange={(e) => {
-                    newOrganizationFormMethods.setValue("name", e?.target.value.trim());
-                    if (newOrganizationFormMethods.formState.touchedFields["slug"] === undefined) {
-                      newOrganizationFormMethods.setValue("slug", slugify(e?.target.value));
-                    }
-                  }}
-                  autoComplete="off"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </>
             )}
           />
@@ -235,19 +207,8 @@ const CreateANewOrganizationFormChild = ({ session }: { session: Ensure<SessionC
               required: "Must enter organization slug",
             }}
             render={({ field: { value } }) => (
-              <TextField
-                name="slug"
-                label={t("organization_url")}
-                placeholder="acme"
-                addOnSuffix={`.${subdomainSuffix()}`}
-                defaultValue={value}
-                onChange={(e) => {
-                  newOrganizationFormMethods.setValue("slug", slugify(e?.target.value), {
-                    shouldTouch: true,
-                  });
-                  newOrganizationFormMethods.clearErrors("slug");
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           />
         </div>
@@ -261,19 +222,8 @@ const CreateANewOrganizationFormChild = ({ session }: { session: Ensure<SessionC
                   control={newOrganizationFormMethods.control}
                   render={({ field: { value, onChange } }) => (
                     <div className="flex">
-                      <TextField
-                        containerClassName="w-full"
-                        placeholder="30"
-                        name="seats"
-                        type="number"
-                        label="Seats (optional)"
-                        min={isAdmin ? 1 : MINIMUM_NUMBER_OF_ORG_SEATS}
-                        defaultValue={value || MINIMUM_NUMBER_OF_ORG_SEATS}
-                        onChange={(e) => {
-                          onChange(+e.target.value);
-                        }}
-                        autoComplete="off"
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     </div>
                   )}
                 />
@@ -284,19 +234,8 @@ const CreateANewOrganizationFormChild = ({ session }: { session: Ensure<SessionC
                   control={newOrganizationFormMethods.control}
                   render={({ field: { value, onChange } }) => (
                     <div className="flex">
-                      <TextField
-                        containerClassName="w-full"
-                        placeholder="30"
-                        name="pricePerSeat"
-                        type="number"
-                        addOnSuffix="$"
-                        label="Price per seat (optional)"
-                        defaultValue={value ?? ""}
-                        onChange={(e) => {
-                          onChange(+e.target.value);
-                        }}
-                        autoComplete="off"
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     </div>
                   )}
                 />
@@ -309,9 +248,8 @@ const CreateANewOrganizationFormChild = ({ session }: { session: Ensure<SessionC
         {isBillingEnabled && !isAdmin && (
           <>
             <div className="bg-subtle space-y-5  rounded-lg p-5">
-              <h3 className="font-cal text-default text-lg font-semibold leading-4">
-                Upgrade to Organizations
-              </h3>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <RadioArea.Group className={classNames("mt-1 flex flex-col gap-4")} value="ORGANIZATION">
                 <RadioArea.Item
                   className={classNames("bg-default w-full text-sm opacity-70")}

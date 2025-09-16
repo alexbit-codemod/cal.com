@@ -24,10 +24,14 @@ const helpscoutRequestBodySchema = z.object({
  */
 async function postHandler(request: NextRequest) {
   const hsSignature = request.headers.get("x-helpscout-signature");
-  if (!hsSignature) return NextResponse.json({ message: "Missing signature" }, { status: 400 });
+  if (!hsSignature) return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }, { status: 400 });
 
   if (!process.env.CALENDSO_ENCRYPTION_KEY)
-    return NextResponse.json({ message: "Missing encryption key" }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
 
   const legacyRequest = buildLegacyRequest(await headers(), await cookies());
 
@@ -36,7 +40,9 @@ async function postHandler(request: NextRequest) {
 
   try {
     const parsedBody = helpscoutRequestBodySchema.safeParse(JSON.parse(rawBody.toString()));
-    if (!parsedBody.success) return NextResponse.json({ message: "Invalid request body" }, { status: 400 });
+    if (!parsedBody.success) return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
 
     // Verify the signature
     const calculatedSig = createHmac("sha1", process.env.CALENDSO_ENCRYPTION_KEY)
@@ -44,7 +50,9 @@ async function postHandler(request: NextRequest) {
       .digest("base64");
 
     if (hsSignature !== calculatedSig)
-      return NextResponse.json({ message: "Invalid signature" }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
 
     const user = await webPrisma.user.findFirst({
       where: {
@@ -92,7 +100,9 @@ async function postHandler(request: NextRequest) {
     });
   } catch (error) {
     console.error("Error processing HelpScout request:", error);
-    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
   }
 }
 

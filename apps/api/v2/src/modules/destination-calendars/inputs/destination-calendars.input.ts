@@ -13,7 +13,9 @@ export class DestinationCalendarsInputBodyDto {
   @Expose()
   @ApiProperty({
     example: APPLE_CALENDAR_TYPE,
-    description: "The calendar service you want to integrate, as returned by the /calendars endpoint",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: [APPLE_CALENDAR_TYPE, GOOGLE_CALENDAR_TYPE, OFFICE_365_CALENDAR_TYPE],
     required: true,
   })
@@ -28,7 +30,9 @@ export class DestinationCalendarsInputBodyDto {
   @ApiProperty({
     example: "https://caldav.icloud.com/26962146906/calendars/1644422A-1945-4438-BBC0-4F0Q23A57R7S/",
     description:
-      "Unique identifier used to represent the specific calendar, as returned by the /calendars endpoint",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: "string",
     required: true,
   })

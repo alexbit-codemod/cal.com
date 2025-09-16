@@ -7,19 +7,25 @@ import { ERROR_STATUS, SUCCESS_STATUS } from "@calcom/platform-constants";
 export class CreateIcsFeedOutput {
   @IsInt()
   @Expose()
-  @ApiProperty({ example: 1234567890, description: "The id of the calendar credential" })
+  @ApiProperty({ example: 1234567890, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   readonly id!: number;
 
   @IsString()
   @Expose()
-  @ApiProperty({ example: "ics-feed_calendar", description: "The type of the calendar" })
+  @ApiProperty({ example: "ics-feed_calendar", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   readonly type!: string;
 
   @IsInt()
   @Expose()
   @ApiProperty({
     example: 1234567890,
-    description: "The user id of the user that created the calendar",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "integer",
   })
   readonly userId!: number | null;
@@ -29,19 +35,25 @@ export class CreateIcsFeedOutput {
   @ApiProperty({
     example: 1234567890,
     nullable: true,
-    description: "The team id of the user that created the calendar",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "integer",
   })
   readonly teamId!: number | null;
 
   @IsString()
   @Expose()
-  @ApiProperty({ example: "ics-feed", description: "The slug of the calendar" })
+  @ApiProperty({ example: "ics-feed", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   readonly appId!: string | null;
 
   @IsBoolean()
   @Expose()
-  @ApiProperty({ example: false, description: "Whether the calendar credentials are valid or not" })
+  @ApiProperty({ example: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   readonly invalid!: boolean | null;
 }
 

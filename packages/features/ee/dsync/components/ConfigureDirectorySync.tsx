@@ -48,11 +48,8 @@ const ConfigureDirectorySync = ({ organizationId }: { organizationId: number | n
   if (error || isError) {
     return (
       <div>
-        <EmptyScreen
-          headline="Error"
-          description={error.message || "Error getting dsync data"}
-          Icon="triangle-alert"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     );
   }

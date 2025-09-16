@@ -195,16 +195,8 @@ export const AppList = ({
       )}
 
       {bulkUpdateModal && (
-        <BulkEditDefaultForEventsModal
-          bulkUpdateFunction={handleBulkUpdateDefaultLocation}
-          open={bulkUpdateModal}
-          setOpen={setBulkUpdateModal}
-          isPending={isBulkUpdateDefaultLocationPending}
-          description={t("default_conferencing_bulk_description")}
-          eventTypes={eventTypes}
-          isEventTypesFetching={isEventTypesFetching}
-          handleBulkEditDialogToggle={handleBulkEditDialogToggle}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </>
   );
@@ -241,7 +233,8 @@ function ConnectOrDisconnectIntegrationMenuItem(props: {
   if (!installed) {
     return (
       <div className="flex items-center truncate">
-        <Alert severity="warning" title={t("not_installed")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     );
   }

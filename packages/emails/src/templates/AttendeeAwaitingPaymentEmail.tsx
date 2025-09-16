@@ -8,27 +8,18 @@ function ManageLink(props: React.ComponentProps<typeof AttendeeScheduledEmail>) 
 
   return (
     <CallToActionTable>
-      <CallToAction label={manageText} href={props.calEvent.paymentInfo.link} endIconName="linkIcon" />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </CallToActionTable>
   );
 }
 
 export const AttendeeAwaitingPaymentEmail = (props: React.ComponentProps<typeof AttendeeScheduledEmail>) => {
   return props.calEvent.paymentInfo?.paymentOption === "HOLD" ? (
-    <AttendeeScheduledEmail
-      title="meeting_awaiting_payment_method"
-      headerType="calendarCircle"
-      subject="awaiting_payment_subject"
-      callToAction={<ManageLink {...props} />}
-      {...props}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   ) : (
-    <AttendeeScheduledEmail
-      title="meeting_awaiting_payment"
-      headerType="calendarCircle"
-      subject="awaiting_payment_subject"
-      callToAction={<ManageLink {...props} />}
-      {...props}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };

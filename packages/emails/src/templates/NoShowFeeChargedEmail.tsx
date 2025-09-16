@@ -16,22 +16,7 @@ export const NoShowFeeChargedEmail = (
   if (!calEvent.paymentInfo?.amount) throw new Error("No payment info");
 
   return (
-    <BaseScheduledEmail
-      locale={locale}
-      title={t("no_show_fee_charged_text_body")}
-      headerType="calendarCircle"
-      timeFormat={timeFormat}
-      subtitle={
-        <>
-          {t("no_show_fee_charged_subtitle", {
-            amount: calEvent.paymentInfo.amount / 100,
-            formatParams: { amount: { currency: calEvent.paymentInfo?.currency } },
-          })}
-        </>
-      }
-      timeZone={props.attendee.timeZone}
-      {...props}
-      t={t}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };

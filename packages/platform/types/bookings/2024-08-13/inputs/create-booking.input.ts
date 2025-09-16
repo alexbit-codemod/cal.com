@@ -98,7 +98,9 @@ function RequireEmailOrPhone(validationOptions?: ValidationOptions) {
 class CreateBookingAttendee {
   @ApiProperty({
     type: String,
-    description: "The name of the attendee.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "John Doe",
   })
   @IsString()
@@ -106,18 +108,24 @@ class CreateBookingAttendee {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The email of the attendee.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "john.doe@example.com",
   })
   @IsOptional()
   @Validate((value: string) => !value || isEmail(value), {
-    message: "Invalid email format",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   email?: string;
 
   @ApiProperty({
     type: String,
-    description: "The time zone of the attendee.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "America/New_York",
   })
   @IsTimeZone()
@@ -125,18 +133,24 @@ class CreateBookingAttendee {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The phone number of the attendee in international format.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "+919876543210",
   })
   @IsOptional()
   @Validate((value: string) => !value || isValidPhoneNumber(value), {
-    message: "Invalid phone number format. Please use international format.",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   phoneNumber?: string;
 
   @ApiPropertyOptional({
     enum: BookingLanguage,
-    description: "The preferred language of the attendee. Used for booking confirmation.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: BookingLanguage.it,
     default: BookingLanguage.en,
   })
@@ -148,7 +162,9 @@ class CreateBookingAttendee {
 class Routing {
   @ApiProperty({
     type: Number,
-    description: "The ID of the routing form response that determined this booking assignment.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 123,
   })
   @IsInt()
@@ -156,7 +172,9 @@ class Routing {
 
   @ApiProperty({
     type: [Number],
-    description: "Array of team member IDs that were routed to handle this booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: [101, 102],
   })
   @IsArray()
@@ -165,7 +183,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The email of the team member assigned to handle this booking.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "john.doe@example.com",
   })
   @IsString()
@@ -174,7 +194,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: Boolean,
-    description: "Whether to skip contact owner assignment from CRM integration.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()
@@ -183,7 +205,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The CRM application slug for integration.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "salesforce",
   })
   @IsString()
@@ -192,7 +216,9 @@ class Routing {
 
   @ApiPropertyOptional({
     type: String,
-    description: "The CRM owner record type for contact assignment.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Account",
   })
   @IsString()
@@ -215,7 +241,9 @@ class Routing {
 export class CreateBookingInput_2024_08_13 {
   @ApiProperty({
     type: String,
-    description: "The start time of the booking in ISO 8601 format in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2024-08-13T09:00:00Z",
   })
   @IsDateString()
@@ -223,7 +251,9 @@ export class CreateBookingInput_2024_08_13 {
 
   @ApiProperty({
     type: CreateBookingAttendee,
-    description: "The attendee's details.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsDefined()
   @ValidateNested()
@@ -233,7 +263,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiPropertyOptional({
     type: Object,
     description:
-      "Booking field responses consisting of an object with booking field slug as keys and user response as values for custom booking fields added by you.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { customField: "customValue" },
     required: false,
   })
@@ -244,7 +276,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiPropertyOptional({
     type: Number,
     description:
-      "The ID of the event type that is booked. Required unless eventTypeSlug and username are provided as an alternative to identifying the event type.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 123,
   })
   @IsOptional()
@@ -254,7 +288,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiPropertyOptional({
     type: String,
     description:
-      "The slug of the event type. Required along with username / teamSlug and optionally organizationSlug if eventTypeId is not provided.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "my-event-type",
   })
   @IsOptional()
@@ -264,7 +300,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiPropertyOptional({
     type: String,
     description:
-      "The username of the event owner. Required along with eventTypeSlug and optionally organizationSlug if eventTypeId is not provided.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "john-doe",
   })
   @IsOptional()
@@ -274,7 +312,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiPropertyOptional({
     type: String,
     description:
-      "Team slug for team that owns event type for which slots are fetched. Required along with eventTypeSlug and optionally organizationSlug if the team is part of organization",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "john-doe",
   })
   @IsOptional()
@@ -284,7 +324,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiPropertyOptional({
     type: String,
     description:
-      "The organization slug. Optional, only used when booking with eventTypeSlug + username or eventTypeSlug + teamSlug.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "acme-corp",
   })
   @IsOptional()
@@ -293,7 +335,9 @@ export class CreateBookingInput_2024_08_13 {
 
   @ApiPropertyOptional({
     type: [String],
-    description: "An optional list of guest emails attending the event.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: ["guest1@example.com", "guest2@example.com"],
   })
   @IsArray()
@@ -304,7 +348,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiProperty({
     type: String,
     description:
-      "Deprecated - use 'location' instead. Meeting URL just for this booking. Displayed in email and calendar event. If not provided then cal video link will be generated.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "https://example.com/meeting",
     required: false,
     deprecated: true,
@@ -317,7 +363,9 @@ export class CreateBookingInput_2024_08_13 {
   @ValidateBookingLocation_2024_08_13()
   @ApiPropertyOptional({
     description:
-      "One of the event type locations. If instead of passing one of the location objects as required by schema you are still passing a string please use an object.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     oneOf: [
       { $ref: getSchemaPath(BookingInputAddressLocation_2024_08_13) },
       { $ref: getSchemaPath(BookingInputAttendeeAddressLocation_2024_08_13) },
@@ -336,7 +384,9 @@ export class CreateBookingInput_2024_08_13 {
   @ApiProperty({
     type: Object,
     description:
-      "You can store any additional data you want here. Metadata must have at most 50 keys, each key up to 40 characters, and string values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { key: "value" },
     required: false,
   })
@@ -344,7 +394,9 @@ export class CreateBookingInput_2024_08_13 {
   @IsOptional()
   @ValidateMetadata({
     message:
-      "Metadata must have at most 50 keys, each key up to 40 characters, and string values up to 500 characters.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   metadata?: Record<string, string>;
 
@@ -353,15 +405,18 @@ export class CreateBookingInput_2024_08_13 {
   @Min(1)
   @ApiPropertyOptional({
     example: 30,
-    description: `If it is an event type that has multiple possible lengths that attendee can pick from, you can pass the desired booking length here.
-    If not provided then event type default length will be used for the booking.`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   lengthInMinutes?: number;
 
   @ApiPropertyOptional({
     type: Routing,
     description:
-      "Routing information from routing forms that determined the booking assignment. Both responseId and teamMemberIds are required if provided.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: {
       responseId: 123,
       teamMemberIds: [101, 102],
@@ -376,7 +431,9 @@ export class CreateBookingInput_2024_08_13 {
 export class CreateInstantBookingInput_2024_08_13 extends CreateBookingInput_2024_08_13 {
   @ApiProperty({
     type: Boolean,
-    description: "Flag indicating if the booking is an instant booking. Only available for team events.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   @IsBoolean()
@@ -386,8 +443,9 @@ export class CreateInstantBookingInput_2024_08_13 extends CreateBookingInput_202
 export class CreateRecurringBookingInput_2024_08_13 extends CreateBookingInput_2024_08_13 {
   @ApiPropertyOptional({
     type: Number,
-    description: `The number of recurrences. If not provided then event type recurrence count will be used. Can't be more than
-    event type recurrence count`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 5,
     required: false,
   })

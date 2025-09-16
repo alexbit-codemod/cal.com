@@ -7,7 +7,9 @@ export class CreatePrivateLinkInput {
   @IsDate()
   @Type(() => Date)
   @ApiPropertyOptional({
-    description: "Expiration date for time-based links",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: String,
     format: "date-time",
     example: "2024-12-31T23:59:59.000Z",
@@ -19,7 +21,9 @@ export class CreatePrivateLinkInput {
   @Min(1)
   @ApiPropertyOptional({
     description:
-      "Maximum number of times the link can be used. If omitted and expiresAt is not provided, defaults to 1 (one time use).",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: Number,
     example: 10,
     minimum: 1,
@@ -31,7 +35,9 @@ export class CreatePrivateLinkInput {
 export class UpdatePrivateLinkInput {
   @IsString()
   @ApiProperty({
-    description: "The private link hash to update",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: String,
     example: "abc123def456",
   })
@@ -41,7 +47,9 @@ export class UpdatePrivateLinkInput {
   @IsDate()
   @Type(() => Date)
   @ApiPropertyOptional({
-    description: "New expiration date for time-based links",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Date,
     example: "2024-12-31T23:59:59.000Z",
   })
@@ -51,7 +59,9 @@ export class UpdatePrivateLinkInput {
   @IsInt()
   @Min(1)
   @ApiPropertyOptional({
-    description: "New maximum number of times the link can be used",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Number,
     example: 10,
     minimum: 1,
@@ -64,7 +74,9 @@ export class UpdatePrivateLinkBody {
   @IsDate()
   @Type(() => Date)
   @ApiPropertyOptional({
-    description: "New expiration date for time-based links",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Date,
     example: "2024-12-31T23:59:59.000Z",
   })
@@ -74,7 +86,9 @@ export class UpdatePrivateLinkBody {
   @IsInt()
   @Min(1)
   @ApiPropertyOptional({
-    description: "New maximum number of times the link can be used",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Number,
     example: 10,
     minimum: 1,

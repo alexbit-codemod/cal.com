@@ -186,11 +186,8 @@ function ServiceAccountFields() {
 
   return (
     <div className="space-y-4">
-      <TextAreaField
-        required
-        label={t("service_account_key")}
-        {...form.register("defaultServiceAccountKey")}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 }
@@ -422,9 +419,12 @@ function PlatformFormFields({ isCreate }: Pick<Props, "isCreate">) {
 
   return (
     <div className="space-y-4">
-      <TextField required label={t("name")} {...form.register("name")} />
-      <TextAreaField required label={t("description")} {...form.register("description")} />
-      {isCreate && <TextField required label={t("slug")} {...form.register("slug")} />}
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      {isCreate && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
       {isCreate && false && <ServiceAccountFields />}
     </div>
   );

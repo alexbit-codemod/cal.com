@@ -13,14 +13,14 @@ function AvailabiltyItem() {
       subtitle="Mon-Fri; 9:00 AM - 5:00 PM"
       suffixSlot={
         <div>
-          <Badge variant="green" withDot size="sm">
-            Connected
-          </Badge>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       }>
       <div className="flex flex-col gap-3">
         <p className="text-subtle text-sm font-medium leading-none">{t("date_overrides")}</p>
-        <Switch label="google@calendar.com" />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </TroubleshooterListItemContainer>
   );

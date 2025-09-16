@@ -117,15 +117,8 @@ const UserProfile = ({ user }: UserProfileProps) => {
     <form onSubmit={onSubmit}>
       <div className="flex flex-row items-center justify-start rtl:justify-end">
         {user && <UserAvatar size="lg" user={user} previewSrc={imageSrc} />}
-        <input
-          ref={avatarRef}
-          type="hidden"
-          name="avatar"
-          id="avatar"
-          placeholder="URL"
-          className="border-default focus:ring-empthasis mt-1 block w-full rounded-sm border px-3 py-2 text-sm focus:border-gray-800 focus:outline-none"
-          defaultValue={imageSrc}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <div className="flex items-center px-4">
           <ImageUploader
             target="avatar"
@@ -150,13 +143,8 @@ const UserProfile = ({ user }: UserProfileProps) => {
       </div>
       <fieldset className="mt-8">
         <Label className="text-default mb-2 block text-sm font-medium">{t("about")}</Label>
-        <Editor
-          getText={() => md.render(getValues("bio") || user?.bio || "")}
-          setText={(value: string) => setValue("bio", turndown(value))}
-          excludedToolbarItems={["blockType"]}
-          firstRender={firstRender}
-          setFirstRender={setFirstRender}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <p className="text-default mt-2 font-sans text-sm font-normal">{t("few_sentences_about_yourself")}</p>
       </fieldset>
       <Button

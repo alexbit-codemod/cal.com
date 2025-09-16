@@ -25,7 +25,9 @@ const validateRequest = (req: NextRequest) => {
   const url = new URL(req.url);
   const apiKey = req.headers.get("authorization") || url.searchParams.get("apiKey");
   if (![process.env.CRON_API_KEY, `Bearer ${process.env.CRON_SECRET}`].includes(`${apiKey}`)) {
-    throw new HttpError({ statusCode: 401, message: "Unauthorized" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 
@@ -254,7 +256,9 @@ export async function handleCreateSelectedCalendars() {
   log.info(`Found ${allDelegationUserCredentials.length} delegation user credentials to process`);
 
   if (!allDelegationUserCredentials.length) {
-    const message = "No delegation credentials found";
+    const message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     log.info(message);
     return {
       message,
@@ -300,7 +304,9 @@ export async function handleCreateSelectedCalendars() {
   );
 
   return {
-    message: "All selected calendars created",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     executedAt: new Date().toISOString(),
     success: totalSuccess,
     failures: totalFailures,

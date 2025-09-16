@@ -15,7 +15,9 @@ import {
 export class GetUserOutput {
   @IsInt()
   @Expose()
-  @ApiProperty({ type: Number, required: true, description: "The ID of the user", example: 1 })
+  @ApiProperty({ type: Number, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 1 })
   id!: number;
 
   @IsString()
@@ -24,7 +26,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The username of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "john_doe",
   })
   username!: string | null;
@@ -35,7 +39,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The name of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "John Doe",
   })
   name!: string | null;
@@ -45,7 +51,9 @@ export class GetUserOutput {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The email of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "john@example.com",
   })
   email!: string;
@@ -56,7 +64,9 @@ export class GetUserOutput {
     type: Date,
     nullable: true,
     required: false,
-    description: "The date when the email was verified",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2022-01-01T00:00:00Z",
   })
   emailVerified!: Date | null;
@@ -67,7 +77,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The bio of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "I am a software developer",
   })
   bio!: string | null;
@@ -78,7 +90,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The URL of the user's avatar",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "https://example.com/avatar.jpg",
   })
   avatarUrl!: string | null;
@@ -88,7 +102,9 @@ export class GetUserOutput {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The time zone of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "America/New_York",
   })
   timeZone!: string;
@@ -98,7 +114,9 @@ export class GetUserOutput {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The week start day of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Monday",
   })
   weekStart!: string;
@@ -109,7 +127,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The app theme of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "light",
   })
   appTheme!: string | null;
@@ -120,7 +140,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The theme of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "default",
   })
   theme!: string | null;
@@ -131,7 +153,9 @@ export class GetUserOutput {
     type: Number,
     nullable: true,
     required: false,
-    description: "The ID of the default schedule for the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 1,
   })
   defaultScheduleId!: number | null;
@@ -142,7 +166,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The locale of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "en-US",
   })
   locale!: string | null;
@@ -153,7 +179,9 @@ export class GetUserOutput {
     type: Number,
     nullable: true,
     required: false,
-    description: "The time format of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 12,
   })
   timeFormat!: number | null;
@@ -163,7 +191,9 @@ export class GetUserOutput {
   @ApiProperty({
     type: Boolean,
     required: true,
-    description: "Whether to hide branding for the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: false,
   })
   hideBranding!: boolean;
@@ -174,7 +204,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The brand color of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "#ffffff",
   })
   brandColor!: string | null;
@@ -185,7 +217,9 @@ export class GetUserOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The dark brand color of the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "#000000",
   })
   darkBrandColor!: string | null;
@@ -196,7 +230,9 @@ export class GetUserOutput {
     type: Boolean,
     nullable: true,
     required: false,
-    description: "Whether dynamic booking is allowed for the user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   allowDynamicBooking!: boolean | null;
@@ -206,7 +242,9 @@ export class GetUserOutput {
   @ApiProperty({
     type: Date,
     required: true,
-    description: "The date when the user was created",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2022-01-01T00:00:00Z",
   })
   createdDate!: Date;
@@ -217,7 +255,9 @@ export class GetUserOutput {
     type: Boolean,
     nullable: true,
     required: false,
-    description: "Whether the user is verified",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   verified!: boolean | null;
@@ -228,7 +268,9 @@ export class GetUserOutput {
     type: Number,
     nullable: true,
     required: false,
-    description: "The ID of the user who invited this user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 1,
   })
   invitedTo!: number | null;
@@ -256,7 +298,9 @@ export class GetUsersOutput {
   @ApiProperty({
     type: [GetUserOutput],
     required: true,
-    description: "The list of users",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: [{ id: 1, username: "john_doe", name: "John Doe", email: "john@example.com" }],
   })
   users!: GetUserOutput[];

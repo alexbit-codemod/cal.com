@@ -42,7 +42,9 @@ export const updateUserHandler = async ({ ctx, input }: UpdateUserOptions) => {
   const { id: userId, organizationId } = user;
 
   if (!organizationId)
-    throw new TRPCError({ code: "UNAUTHORIZED", message: "You must be a member of an organizaiton" });
+    throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const roleManager = await RoleManagementFactory.getInstance().createRoleManager(organizationId);
 
@@ -95,7 +97,9 @@ export const updateUserHandler = async ({ ctx, input }: UpdateUserOptions) => {
   });
 
   if (!requestedMember)
-    throw new TRPCError({ code: "UNAUTHORIZED", message: "User does not belong to your organization" });
+    throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const hasUsernameUpdated = input.username !== requestedMember.user.profiles[0]?.username;
 

@@ -53,13 +53,8 @@ const TimezoneChangeDialogContent = () => {
 
   return (
     <>
-      <DialogHeader
-        title={t("update_timezone_question")}
-        subtitle={t("update_timezone_description", {
-          formattedCurrentTz,
-          interpolation: { escapeValue: false },
-        })}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {/* todo: save this in db and auto-update when timezone changes (be able to disable??? if yes, /settings)
         <Checkbox description="Always update timezone" />
         */}

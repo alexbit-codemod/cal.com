@@ -156,7 +156,9 @@ const customTemplate = (
 
   const branding = !isBrandingDisabled ? `<br><br>_<br><br>Scheduling by ${APP_NAME}` : "";
 
-  const textHtml = `<body style="white-space: pre-wrap;">${dynamicText}${branding}</body>`;
+  const textHtml = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   return { text: dynamicText, html: textHtml };
 };
 

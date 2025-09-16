@@ -250,25 +250,8 @@ function EventWorkflowsTab(props: Props) {
       {!isPending ? (
         <>
           {(isManagedEventType || isChildrenManagedEventType) && (
-            <Alert
-              severity={workflowsDisableProps.isLocked ? "neutral" : "info"}
-              className="mb-2"
-              title={
-                <ServerTrans
-                  t={t}
-                  i18nKey={`${lockedText}_${isManagedEventType ? "for_members" : "by_team_admins"}`}
-                />
-              }
-              actions={<div className="flex h-full items-center">{workflowsDisableProps.LockedIcon}</div>}
-              message={
-                <ServerTrans
-                  t={t}
-                  i18nKey={`workflows_${lockedText}_${
-                    isManagedEventType ? "for_members" : "by_team_admins"
-                  }_description`}
-                />
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
           {data?.workflows && sortedWorkflows.length > 0 ? (
             <div>
@@ -288,21 +271,8 @@ function EventWorkflowsTab(props: Props) {
             </div>
           ) : (
             <div className="pt-2 before:border-0">
-              <EmptyScreen
-                Icon="zap"
-                headline={t("workflows")}
-                description={t("no_workflows_description")}
-                buttonRaw={
-                  <Button
-                    disabled={workflowsDisableProps.isLocked && !isManagedEventType}
-                    target="_blank"
-                    color="secondary"
-                    onClick={() => createMutation.mutate({ teamId: eventType.team?.id })}
-                    loading={createMutation.isPending}>
-                    {t("create_workflow")}
-                  </Button>
-                }
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
         </>

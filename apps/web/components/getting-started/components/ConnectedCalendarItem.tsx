@@ -24,7 +24,8 @@ const ConnectedCalendarItem = (prop: IConnectedCalendarItem) => {
   return (
     <>
       <div className="flex flex-row items-center p-4">
-        <img src={logo} alt={name} className="m-1 h-8 w-8" />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <div className="mx-4">
           <p className="font-sans text-sm font-bold leading-5">
             {name}
@@ -53,17 +54,8 @@ const ConnectedCalendarItem = (prop: IConnectedCalendarItem) => {
       <div>
         <ul className="p-4">
           {calendars?.map((calendar, i) => (
-            <UserCalendarSwitch
-              credentialId={calendar.credentialId}
-              key={calendar.externalId}
-              externalId={calendar.externalId}
-              title={calendar.name || "Nameless Calendar"}
-              name={calendar.name || "Nameless Calendar"}
-              type={integrationType}
-              isChecked={calendar.isSelected}
-              isLastItemInList={i === calendars.length - 1}
-              delegationCredentialId={calendar.delegationCredentialId}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ))}
         </ul>
       </div>

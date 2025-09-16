@@ -37,7 +37,9 @@ export async function ensureDelegationCredentialNotAlreadyConfigured({
   if (conflictingDelegationInCurrentOrg) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `Your organization already has delegation credential for ${conflictingDelegationInCurrentOrg.domain}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -48,7 +50,9 @@ export async function ensureDelegationCredentialNotAlreadyConfigured({
   if (differentOrgEnabledDelegations.length > 0) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `Domain ${domain} already has delegation credential enabled in another organization`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 }
@@ -90,7 +94,9 @@ export const handleDelegationCredentialError = (error: unknown) => {
   log.error("Error handling delegation credential:", safeStringify(error));
   throw new TRPCError({
     code: "INTERNAL_SERVER_ERROR",
-    message: "An error occurred while handling delegation credential settings.",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   });
 };
 

@@ -57,34 +57,18 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
       switchOnClick={(enabled) => {
         setRequirePayment(enabled);
       }}
-      description={<>Add a mock payment to your events</>}>
+      description={// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}>
       <>
         {recurringEventDefined ? (
-          <Alert className="mt-2" severity="warning" title={t("warning_recurring_event_payment")} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
           requirePayment && (
             <>
               <div className="mt-2 block items-center sm:flex">
-                <TextField
-                  id="test-mock-payment-app-price"
-                  label="Price"
-                  labelSrOnly
-                  addOnLeading={currencySymbol}
-                  addOnSuffix={currency}
-                  step="0.01"
-                  min="0.5"
-                  type="number"
-                  required
-                  className="block w-full rounded-sm pl-2 text-sm"
-                  placeholder="Price"
-                  onChange={(e) => {
-                    setAppData("price", Number(e.target.value) * 100);
-                    if (selectedCurrency) {
-                      setAppData("currency", selectedCurrency.value);
-                    }
-                  }}
-                  value={price > 0 ? price / 100 : undefined}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
               <div className="mt-5 w-60">
                 <label className="text-default mb-1 block text-sm font-medium" htmlFor="currency">
@@ -108,9 +92,8 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
               </div>
 
               <div className="mt-4 w-60">
-                <label className="text-default mb-1 block text-sm font-medium" htmlFor="currency">
-                  Payment option
-                </label>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <Select<Option>
                   defaultValue={
                     paymentOptionSelectValue

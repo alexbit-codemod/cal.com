@@ -33,7 +33,9 @@ import { OAuthClientGuard } from "../../guards/oauth-client-guard";
 @DocsTags("Platform / Webhooks")
 @ApiHeader({
   name: X_CAL_SECRET_KEY,
-  description: "OAuth client secret key",
+  description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   required: true,
 })
 export class OAuthClientWebhooksController {

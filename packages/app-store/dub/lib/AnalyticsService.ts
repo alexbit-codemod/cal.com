@@ -63,12 +63,9 @@ export default class DubService implements AnalyticsService {
         async () => {
           const response = await fetch(`https://api.dub.co/oauth/token`, {
             method: "POST",
-            body: new URLSearchParams({
-              client_id: this.client_id,
-              client_secret: this.client_secret,
-              grant_type: "refresh_token",
-              refresh_token: refreshToken,
-            }).toString(),
+            body: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
             },

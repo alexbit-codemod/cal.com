@@ -58,7 +58,9 @@ export const stripeWebhookHandler = (handlers: SWHandlers) => async (req: NextAp
     console.log("Unhandled Stripe Webhook event type", event.type);
     return {
       success: false,
-      message: `Unhandled Stripe Webhook event type ${event.type}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
   const handler = (await handlerGetter())?.default;
@@ -67,7 +69,9 @@ export const stripeWebhookHandler = (handlers: SWHandlers) => async (req: NextAp
     console.log("Unhandled Stripe Webhook event type", event.type);
     return {
       success: false,
-      message: `Unhandled Stripe Webhook event type ${event.type}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
   // @ts-expect-error - we know the handler is defined and accepts the data type

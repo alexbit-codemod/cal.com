@@ -22,13 +22,8 @@ export default function AppsLayout({ children, actions, emptyStore, isAdmin, ...
       <div className="flex flex-col xl:flex-row">
         <main className="w-full">
           {emptyStore ? (
-            <EmptyScreen
-              Icon="circle-alert"
-              headline={isAdmin ? t("no_apps") : t("no_apps_configured")}
-              description={isAdmin ? t("enable_in_settings") : t("please_contact_admin")}
-              buttonText={isAdmin ? t("apps_settings") : ""}
-              buttonOnClick={() => router.push("/settings/admin/apps/calendar")}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           ) : (
             <>{children}</>
           )}

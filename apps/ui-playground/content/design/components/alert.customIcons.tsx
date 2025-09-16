@@ -11,14 +11,8 @@ export const CustomIconsExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="not-prose space-y-4">
       {severities.map((severity, index) => (
-        <Alert
-          key={severity}
-          severity={severity}
-          // @ts-expect-error Didnt type this as IconName for CustomIcon
-          CustomIcon={customIcons[index % customIcons.length]}
-          title={`${severity.charAt(0).toUpperCase() + severity.slice(1)} Alert with Custom Icon`}
-          message="This alert uses a custom icon instead of the default one."
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       ))}
     </div>
   </RenderComponentWithSnippet>

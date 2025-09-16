@@ -20,19 +20,31 @@ export async function handleButtonAndInvitationStep(req: NextApiRequest): Promis
   const invitationTextInput: InputComponent = {
     type: "input",
     id: "invitation_input",
-    label: "Invitation text",
-    placeholder: "Schedule a meeting with me",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "Schedule a meeting with me",
-    aria_label: "Enter invitation text",
+    aria_label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 
   const bookingButtonTextInput: InputComponent = {
     type: "input",
     id: "booking_button_input",
-    label: "Booking button text",
-    placeholder: "Book now",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    placeholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "Book now",
-    aria_label: "Enter booking button text",
+    aria_label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 
   const spacer: SpacerComponent = {
@@ -43,7 +55,9 @@ export async function handleButtonAndInvitationStep(req: NextApiRequest): Promis
   const button: ButtonComponent = {
     type: "button",
     id: "booking_button",
-    label: "Create an invite",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     action: {
       type: "submit",
     },

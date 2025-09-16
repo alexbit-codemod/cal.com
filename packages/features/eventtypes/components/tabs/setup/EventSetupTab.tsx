@@ -118,61 +118,27 @@ export const EventSetupTab = (
             "border-subtle space-y-6 rounded-lg border p-6",
             customClassNames?.titleSection?.container
           )}>
-          <TextField
-            required
-            containerClassName={classNames(customClassNames?.titleSection?.titleInput?.container)}
-            labelClassName={classNames(customClassNames?.titleSection?.titleInput?.label)}
-            className={classNames(customClassNames?.titleSection?.titleInput?.input)}
-            label={t("title")}
-            {...(isManagedEventType || isChildrenManagedEventType ? titleLockedProps : {})}
-            defaultValue={eventType.title}
-            data-testid="event-title"
-            {...formMethods.register("title")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <div>
             {isPlatform ? (
-              <TextAreaField
-                {...formMethods.register("description", {
-                  disabled: descriptionLockedProps.disabled,
-                })}
-                placeholder={t("quick_video_meeting")}
-                className={customClassNames?.titleSection?.descriptionInput?.input}
-                labelProps={{
-                  className: customClassNames?.titleSection?.descriptionInput?.label,
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             ) : (
               <>
                 <Label htmlFor="editor">
                   {t("description")}
                   {(isManagedEventType || isChildrenManagedEventType) && shouldLockIndicator("description")}
                 </Label>
-                <Editor
-                  getText={() => md.render(formMethods.getValues("description") || "")}
-                  setText={(value: string) =>
-                    formMethods.setValue("description", turndown(value), { shouldDirty: true })
-                  }
-                  excludedToolbarItems={["blockType"]}
-                  placeholder={t("quick_video_meeting")}
-                  editable={!descriptionLockedProps.disabled}
-                  firstRender={firstRender}
-                  setFirstRender={setFirstRender}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </>
             )}
           </div>
           {!isPlatform && (
             <div className="[&_label]:my-1 [&_label]:font-normal">
-              <SettingsToggle
-                title={t("translate_description_button")}
-                checked={!!autoTranslateDescriptionEnabled}
-                onCheckedChange={(value) => {
-                  formMethods.setValue("autoTranslateDescriptionEnabled", value, { shouldDirty: true });
-                }}
-                disabled={!orgId}
-                tooltip={!orgId ? t("orgs_upgrade_to_enable_feature") : undefined}
-                data-testid="ai_translation_toggle"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
           {!isPlatform && interfaceLanguageOptions.length > 0 && (
@@ -203,35 +169,8 @@ export const EventSetupTab = (
               />
             </div>
           )}
-          <TextField
-            required
-            label={isPlatform ? "Slug" : t("URL")}
-            {...(isManagedEventType || isChildrenManagedEventType ? urlLockedProps : {})}
-            defaultValue={eventType.slug}
-            data-testid="event-slug"
-            containerClassName={classNames(
-              "[&>div]:gap-0",
-              customClassNames?.titleSection?.urlInput?.container
-            )}
-            labelClassName={classNames(customClassNames?.titleSection?.urlInput?.label)}
-            className={classNames("pl-0", customClassNames?.titleSection?.urlInput?.input)}
-            addOnLeading={
-              isPlatform ? undefined : (
-                <>
-                  {urlPrefix}/
-                  {!isManagedEventType
-                    ? team
-                      ? (hasOrgBranding ? "" : "team/") + team.slug
-                      : formMethods.getValues("users")[0].username
-                    : t("username_placeholder")}
-                  /
-                </>
-              )
-            }
-            {...formMethods.register("slug", {
-              setValueAs: (v) => slugify(v),
-            })}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div
           className={classNames(
@@ -331,59 +270,13 @@ export const EventSetupTab = (
               </div>
             </div>
           ) : (
-            <TextField
-              required
-              type="number"
-              containerClassName={classNames(
-                customClassNames?.durationSection?.singleDurationInput?.container
-              )}
-              labelClassName={classNames(customClassNames?.durationSection?.singleDurationInput?.label)}
-              className={classNames(customClassNames?.durationSection?.singleDurationInput?.input)}
-              data-testid="duration"
-              {...(isManagedEventType || isChildrenManagedEventType ? lengthLockedProps : {})}
-              label={t("duration")}
-              defaultValue={formMethods.getValues("length") ?? 15}
-              {...formMethods.register("length", {
-                valueAsNumber: true,
-                min: {
-                  value: MIN_EVENT_DURATION_MINUTES,
-                  message: t("duration_min_error", { min: MIN_EVENT_DURATION_MINUTES }),
-                },
-                max: {
-                  value: MAX_EVENT_DURATION_MINUTES,
-                  message: t("duration_max_error", { max: MAX_EVENT_DURATION_MINUTES }),
-                },
-              })}
-              addOnSuffix={<>{t("minutes")}</>}
-              min={MIN_EVENT_DURATION_MINUTES}
-              max={MAX_EVENT_DURATION_MINUTES}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
           {!lengthLockedProps.disabled && (
             <div className="!mt-4 [&_label]:my-1 [&_label]:font-normal">
-              <SettingsToggle
-                title={t("allow_booker_to_select_duration")}
-                checked={multipleDuration !== undefined}
-                disabled={seatsEnabled}
-                tooltip={seatsEnabled ? t("seat_options_doesnt_multiple_durations") : undefined}
-                labelClassName={customClassNames?.durationSection?.selectDurationToggle?.label}
-                descriptionClassName={customClassNames?.durationSection?.selectDurationToggle?.description}
-                switchContainerClassName={customClassNames?.durationSection?.selectDurationToggle?.container}
-                childrenClassName={customClassNames?.durationSection?.selectDurationToggle?.children}
-                onCheckedChange={() => {
-                  if (multipleDuration !== undefined) {
-                    setMultipleDuration(undefined);
-                    setSelectedMultipleDuration([]);
-                    setDefaultDuration(null);
-                    formMethods.setValue("metadata.multipleDuration", undefined, { shouldDirty: true });
-                    formMethods.setValue("length", eventType.length, { shouldDirty: true });
-                  } else {
-                    setMultipleDuration([]);
-                    formMethods.setValue("metadata.multipleDuration", [], { shouldDirty: true });
-                    formMethods.setValue("length", 0, { shouldDirty: true });
-                  }
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
         </div>

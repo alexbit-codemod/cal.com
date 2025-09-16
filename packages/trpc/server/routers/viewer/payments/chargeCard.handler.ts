@@ -44,7 +44,9 @@ export const chargeCardHandler = async ({ ctx, input }: ChargeCardHandlerOptions
   if (booking.payment[0].success) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `The no show fee for ${booking.id} has already been charged.`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -99,7 +101,9 @@ export const chargeCardHandler = async ({ ctx, input }: ChargeCardHandlerOptions
     });
 
     if (!userIsInTeam) {
-      throw new TRPCError({ code: "UNAUTHORIZED", message: "User is not in team" });
+      throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
   }
 
@@ -122,7 +126,9 @@ export const chargeCardHandler = async ({ ctx, input }: ChargeCardHandlerOptions
   }
 
   if (!paymentCredential?.app) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Invalid payment credential" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const paymentApp = (await appStore[
@@ -130,7 +136,9 @@ export const chargeCardHandler = async ({ ctx, input }: ChargeCardHandlerOptions
   ]?.()) as PaymentApp;
 
   if (!paymentApp?.lib?.PaymentService) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Payment service not found" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const PaymentService = paymentApp.lib.PaymentService as any;
@@ -140,7 +148,9 @@ export const chargeCardHandler = async ({ ctx, input }: ChargeCardHandlerOptions
     const paymentData = await paymentInstance.chargeCard(booking.payment[0]);
 
     if (!paymentData) {
-      throw new TRPCError({ code: "NOT_FOUND", message: `Could not generate payment data` });
+      throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     await sendNoShowFeeChargedEmail(
@@ -151,7 +161,9 @@ export const chargeCardHandler = async ({ ctx, input }: ChargeCardHandlerOptions
 
     return paymentData;
   } catch (err) {
-    let errorMessage = `Error processing payment with error ${err}`;
+    let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     if (err instanceof ErrorWithCode && err.code === ErrorCode.ChargeCardFailure) {
       errorMessage = err.message;
     }

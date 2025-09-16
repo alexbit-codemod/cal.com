@@ -9,7 +9,9 @@ export class MockFeaturesRepository implements IWatchlistRepository {
       id: "1",
       type: WatchlistType.EMAIL,
       value: "watchlisted@example.com",
-      description: "This is a watchlisted email",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       createdAt: new Date(),
       createdById: 1,
       updatedAt: new Date(),

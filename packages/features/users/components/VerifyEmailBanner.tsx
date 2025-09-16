@@ -19,21 +19,8 @@ function VerifyEmailBanner({ data }: VerifyEmailBannerProps) {
 
   return (
     <>
-      <TopBanner
-        icon="mail"
-        text={t("verify_email_banner_body", { appName: APP_NAME })}
-        variant="warning"
-        actions={
-          <a
-            className="underline hover:cursor-pointer"
-            onClick={() => {
-              mutation.mutate();
-              showToast(t("email_sent"), "success");
-            }}>
-            {t("resend_email")}
-          </a>
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 }

@@ -159,13 +159,8 @@ const Filter = (props: {
     <div className={classNames("-mb-2", noFilter ? "w-16" : "w-[100px]")}>
       <AnimatedPopover text={noFilter ? "All" : "Filtered"}>
         <div className="item-center focus-within:bg-subtle hover:bg-muted flex px-4 py-[6px] transition hover:cursor-pointer">
-          <Avatar
-            imageSrc={userAvatar || ""}
-            size="sm"
-            alt={`${user} Avatar`}
-            className="self-center"
-            asChild
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <label
             htmlFor="yourWorkflows"
             className="text-default ml-2 mr-auto self-center truncate text-sm font-medium">
@@ -195,13 +190,8 @@ const Filter = (props: {
           <div
             className="item-center focus-within:bg-subtle hover:bg-muted flex px-4 py-[6px] transition hover:cursor-pointer"
             key={`${profile.teamId || 0}`}>
-            <Avatar
-              imageSrc={profile.image || ""}
-              size="sm"
-              alt={`${profile.slug} Avatar`}
-              className="self-center"
-              asChild
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <label
               htmlFor={profile.slug || ""}
               className="text-default ml-2 mr-auto select-none self-center truncate text-sm font-medium hover:cursor-pointer">

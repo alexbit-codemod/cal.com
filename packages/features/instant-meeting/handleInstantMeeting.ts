@@ -141,7 +141,9 @@ const triggerBrowserNotifications = async (args: {
         },
       },
       title: title,
-      body: "User is waiting for you to join. Click to Connect",
+      body: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       url: connectAndJoinUrl,
       type: "INSTANT_MEETING",
       requireInteraction: false,
@@ -328,7 +330,9 @@ async function handler(req: NextApiRequest) {
   });
 
   return {
-    message: "Success",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     meetingTokenId: instantMeetingToken.id,
     bookingId: newBooking.id,
     bookingUid: newBooking.uid,

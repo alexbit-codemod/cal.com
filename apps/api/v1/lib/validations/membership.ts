@@ -54,11 +54,15 @@ export const membershipIdSchema = schemaQueryIdAsString
     const userIdInt = schemaQueryIdParseInt.safeParse({ id: userIdStr });
     const teamIdInt = schemaQueryIdParseInt.safeParse({ id: teamIdStr });
     if (!userIdInt.success) {
-      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "userId is not a number" });
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
       return z.NEVER;
     }
     if (!teamIdInt.success) {
-      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "teamId is not a number " });
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
       return z.NEVER;
     }
     return {

@@ -53,11 +53,8 @@ const AccountSelector: FC<AccountSelectorProps> = ({
           onClick();
         }
       }}>
-      <Avatar
-        alt={avatar || ""}
-        imageSrc={getPlaceholderAvatar(avatar, name)} // if no image, use default avatar
-        size="sm"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div className="text-md text-subtle pt-0.5 font-medium">
         {name}
         {alreadyInstalled ? <span className="text-subtle ml-2 text-sm">({t("already_installed")})</span> : ""}

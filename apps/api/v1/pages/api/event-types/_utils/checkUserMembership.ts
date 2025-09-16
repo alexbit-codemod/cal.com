@@ -30,14 +30,18 @@ export default async function checkUserMembership(req: NextApiRequest) {
   if (!parentEventType) {
     throw new HttpError({
       statusCode: 404,
-      message: "Event type not found.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!parentEventType.teamId) {
     throw new HttpError({
       statusCode: 400,
-      message: "This event type is not capable of having children.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -52,7 +56,9 @@ export default async function checkUserMembership(req: NextApiRequest) {
   if (!teamMember) {
     throw new HttpError({
       statusCode: 400,
-      message: "User is not a team member.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 }

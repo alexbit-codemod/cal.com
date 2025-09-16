@@ -79,45 +79,8 @@ const CheckedHostField = ({
     <div className="flex flex-col rounded-md">
       <div>
         {labelText ? <Label>{labelText}</Label> : <></>}
-        <CheckedTeamSelect
-          isOptionDisabled={(option) => !!value.find((host) => host.userId.toString() === option.value)}
-          onChange={(options) => {
-            onChange &&
-              onChange(
-                options.map((option) => ({
-                  isFixed,
-                  userId: parseInt(option.value, 10),
-                  priority: option.priority ?? 2,
-                  weight: option.weight ?? 100,
-                  scheduleId: option.defaultScheduleId,
-                  groupId: option.groupId,
-                }))
-              );
-          }}
-          value={(value || [])
-            .filter(({ isFixed: _isFixed }) => isFixed === _isFixed)
-            .reduce((acc, host) => {
-              const option = options.find((member) => member.value === host.userId.toString());
-              if (!option) return acc;
-
-              acc.push({
-                ...option,
-                priority: host.priority ?? 2,
-                isFixed,
-                weight: host.weight ?? 100,
-                groupId: host.groupId,
-              });
-
-              return acc;
-            }, [] as CheckedSelectOption[])}
-          controlShouldRenderValue={false}
-          options={options}
-          placeholder={placeholder}
-          isRRWeightsEnabled={isRRWeightsEnabled}
-          customClassNames={customClassNames}
-          groupId={groupId}
-          {...rest}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );
@@ -325,23 +288,8 @@ export function AddMembersWithSwitch({
             )}
           </div>
           <div className="mb-2">
-            <CheckedHostField
-              data-testid={rest["data-testid"]}
-              value={value}
-              onChange={onChange}
-              isFixed={isFixed}
-              className="mb-2"
-              options={teamMembers
-                .map((member) => ({
-                  ...member,
-                  groupId: groupId,
-                }))
-                .sort(sortByLabel)}
-              placeholder={placeholder ?? t("add_attendees")}
-              isRRWeightsEnabled={isRRWeightsEnabled}
-              groupId={groupId}
-              customClassNames={customClassNames?.teamMemberSelect}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </>
       );

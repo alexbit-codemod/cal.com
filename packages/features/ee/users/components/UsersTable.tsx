@@ -166,11 +166,8 @@ function UsersTableBare() {
 
   return (
     <div>
-      <TextField
-        placeholder="username or email"
-        label="Search"
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div
         className="border-subtle rounded-md border"
         ref={tableContainerRef}
@@ -181,11 +178,15 @@ function UsersTableBare() {
         }}>
         <Table>
           <Header>
-            <ColumnTitle widthClassNames="w-auto">User</ColumnTitle>
-            <ColumnTitle>Timezone</ColumnTitle>
-            <ColumnTitle>Role</ColumnTitle>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <ColumnTitle widthClassNames="w-auto">
-              <span className="sr-only">Edit</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </ColumnTitle>
           </Header>
 
@@ -194,12 +195,8 @@ function UsersTableBare() {
               <Row key={user.email}>
                 <Cell widthClassNames="w-auto">
                   <div className="min-h-10 flex ">
-                    <Avatar
-                      size="md"
-                      alt={`Avatar of ${user.username || "Nameless"}`}
-                      // @ts-expect-error - Figure it out later. Ideally we should show all the profiles here for the user.
-                      imageSrc={`${WEBAPP_URL}/${user.username}/avatar.png?orgId=${user.organizationId}`}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
 
                     <div className="text-subtle ml-4 font-medium">
                       <div className="flex gap-3">
@@ -353,7 +350,8 @@ const DeleteUserDialog = ({
         cancelBtnText="Cancel"
         variety="danger"
         onConfirm={onConfirm}>
-        <p>Are you sure you want to delete this user?</p>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </ConfirmationDialogContent>
     </Dialog>
   );

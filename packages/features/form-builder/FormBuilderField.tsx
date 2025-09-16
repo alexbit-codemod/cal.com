@@ -89,16 +89,8 @@ export const FormBuilderField = ({
         render={({ field: { value, onChange }, fieldState: { error } }) => {
           return (
             <div>
-              <ComponentForField
-                field={{ ...field, label, placeholder, hidden }}
-                value={value}
-                readOnly={readOnly || shouldBeDisabled}
-                setValue={(val: unknown) => {
-                  onChange(val);
-                }}
-                noLabel={noLabel}
-                translatedDefaultLabel={translatedDefaultLabel}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <ErrorMessage
                 name="responses"
                 errors={formState.errors}
@@ -272,16 +264,8 @@ export const ComponentForField = ({
   if (componentConfig.propsType === "text") {
     return (
       <WithLabel field={field} htmlFor={field.name} readOnly={readOnly} noLabel={noLabel}>
-        <componentConfig.factory
-          placeholder={field.placeholder}
-          minLength={field.minLength}
-          maxLength={field.maxLength}
-          name={field.name}
-          label={field.label}
-          readOnly={readOnly}
-          value={value as string}
-          setValue={setValue as (arg: typeof value) => void}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </WithLabel>
     );
   }
@@ -289,14 +273,8 @@ export const ComponentForField = ({
   if (componentConfig.propsType === "boolean") {
     return (
       <WithLabel field={field} htmlFor={field.name} readOnly={readOnly} noLabel={noLabel}>
-        <componentConfig.factory
-          name={field.name}
-          label={field.label}
-          readOnly={readOnly}
-          value={value as boolean}
-          setValue={setValue as (arg: typeof value) => void}
-          placeholder={field.placeholder}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </WithLabel>
     );
   }
@@ -304,14 +282,8 @@ export const ComponentForField = ({
   if (componentConfig.propsType === "textList") {
     return (
       <WithLabel field={field} htmlFor={field.name} readOnly={readOnly} noLabel={noLabel}>
-        <componentConfig.factory
-          placeholder={field.placeholder}
-          name={field.name}
-          label={field.label}
-          readOnly={readOnly}
-          value={value as string[]}
-          setValue={setValue as (arg: typeof value) => void}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </WithLabel>
     );
   }
@@ -323,14 +295,8 @@ export const ComponentForField = ({
 
     return (
       <WithLabel field={field} htmlFor={field.name} readOnly={readOnly} noLabel={noLabel}>
-        <componentConfig.factory
-          readOnly={readOnly}
-          value={value as string}
-          name={field.name}
-          placeholder={field.placeholder}
-          setValue={setValue as (arg: typeof value) => void}
-          options={field.options.map((o) => ({ ...o, title: o.label }))}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </WithLabel>
     );
   }
@@ -341,14 +307,8 @@ export const ComponentForField = ({
     }
     return (
       <WithLabel field={field} htmlFor={field.name} readOnly={readOnly} noLabel={noLabel}>
-        <componentConfig.factory
-          placeholder={field.placeholder}
-          name={field.name}
-          readOnly={readOnly}
-          value={value as string[]}
-          setValue={setValue as (arg: typeof value) => void}
-          options={field.options.map((o) => ({ ...o, title: o.label }))}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </WithLabel>
     );
   }
@@ -365,18 +325,8 @@ export const ComponentForField = ({
 
     return field.options.length ? (
       <WithLabel field={field} htmlFor={field.name} readOnly={readOnly} noLabel={noLabel}>
-        <componentConfig.factory
-          placeholder={field.placeholder}
-          readOnly={readOnly}
-          name={field.name}
-          label={field.label}
-          value={value as { value: string; optionValue: string }}
-          setValue={setValue as (arg: typeof value) => void}
-          optionsInputs={field.optionsInputs}
-          options={options}
-          required={field.required}
-          translatedDefaultLabel={translatedDefaultLabel}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </WithLabel>
     ) : null;
   }
@@ -388,15 +338,8 @@ export const ComponentForField = ({
     }
 
     return (
-      <componentConfig.factory
-        placeholder={field.placeholder}
-        readOnly={readOnly}
-        name={field.name}
-        variant={field.variant}
-        value={value as { value: string; optionValue: string }}
-        setValue={setValue as (arg: Record<string, string> | string) => void}
-        variants={translatedVariantsConfig.variants}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 

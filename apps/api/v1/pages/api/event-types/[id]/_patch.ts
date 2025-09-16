@@ -242,7 +242,9 @@ async function checkPermissions(req: NextApiRequest, body: z.infer<typeof schema
   if (isSystemWideAdmin) return;
   /** Only event type owners can modify it */
   const eventType = await prisma.eventType.findFirst({ where: { id, userId } });
-  if (!eventType) throw new HttpError({ statusCode: 403, message: "Forbidden" });
+  if (!eventType) throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   await checkTeamEventEditPermission(req, body);
 }
 

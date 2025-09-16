@@ -192,7 +192,9 @@ describe("OrganizationsTeamsWorkflowsController (E2E)", () => {
           sender: "CalcomE2EStep2",
           message: {
             subject: "Upcoming: {EVENT_NAME}",
-            text: "Reminder for your event {EVENT_NAME}.",
+            text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
         },
         {

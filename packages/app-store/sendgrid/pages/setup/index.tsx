@@ -41,20 +41,16 @@ export default function SendgridSetup() {
       <div className="bg-default m-auto rounded p-5 md:w-[520px] md:p-10">
         <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
           <div>
-            <img src="/api/app-store/sendgrid/logo.png" alt="Sendgrid" className="h-12 w-12 max-w-2xl" />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div>
             <h1 className="text-default">{t("provide_api_key")}</h1>
 
             <div className="mt-1 text-sm">
               {t("generate_api_key_description", { appName: "Sendgrid" })}{" "}
-              <a
-                className="text-indigo-400"
-                href="https://app.sendgrid.com/settings/api_keys"
-                target="_blank"
-                rel="noopener noreferrer">
-                Sendgrid
-              </a>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               . {t("it_stored_encrypted")}
             </div>
             <div className="my-2 mt-3">
@@ -81,18 +77,8 @@ export default function SendgridSetup() {
                     name="api_key"
                     control={form.control}
                     render={({ field: { onBlur, onChange } }) => (
-                      <TextField
-                        className="my-0"
-                        onBlur={onBlur}
-                        disabled={testPassed === true}
-                        name="api_key"
-                        placeholder="SG.xxxxxx..."
-                        onChange={async (e) => {
-                          onChange(e.target.value);
-                          form.setValue("api_key", e.target.value);
-                          await form.trigger("api_key");
-                        }}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                   />
                 </fieldset>

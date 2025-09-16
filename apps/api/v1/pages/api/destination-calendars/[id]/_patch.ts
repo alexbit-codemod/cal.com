@@ -134,7 +134,9 @@ async function getUserCredentials({
   if (!credentialId) {
     throw new HttpError({
       statusCode: 404,
-      message: `Destination calendar missing credential id`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   const userCredentials = await prisma.credential.findMany({
@@ -145,7 +147,9 @@ async function getUserCredentials({
   if (!userCredentials || userCredentials.length === 0) {
     throw new HttpError({
       statusCode: 400,
-      message: `Bad request, no associated credentials found`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   return userCredentials;
@@ -205,7 +209,9 @@ async function verifyCredentialsAndGetId({
     if (!calendar?.credentialId)
       throw new HttpError({
         statusCode: 400,
-        message: "Bad request, credential id invalid",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     return calendar?.credentialId;
   }
@@ -242,7 +248,9 @@ async function validateRequestAndOwnership({
     if (!destinationCalendarObject.eventTypeId) {
       throw new HttpError({
         statusCode: 400,
-        message: `The provided destination calendar can not be linked to an event type`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -254,7 +262,9 @@ async function validateRequestAndOwnership({
     if (!userEventType || userEventType.userId !== assignedUserId) {
       throw new HttpError({
         statusCode: 404,
-        message: `Event type with ID ${parsedBody.eventTypeId} not found`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -263,13 +273,17 @@ async function validateRequestAndOwnership({
     if (destinationCalendarObject.eventTypeId) {
       throw new HttpError({
         statusCode: 400,
-        message: `The provided destination calendar can only be linked to an event type`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
     if (destinationCalendarObject.userId !== assignedUserId) {
       throw new HttpError({
         statusCode: 403,
-        message: `Forbidden`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -299,7 +313,9 @@ async function getDestinationCalendar(id: number, prisma: PrismaClient) {
   if (!destinationCalendarObject) {
     throw new HttpError({
       statusCode: 404,
-      message: `Destination calendar with ID ${id} not found`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -308,10 +324,14 @@ async function getDestinationCalendar(id: number, prisma: PrismaClient) {
 
 function validateIntegrationInput(parsedBody: z.infer<typeof schemaDestinationCalendarEditBodyParams>) {
   if (parsedBody.integration && !parsedBody.externalId) {
-    throw new HttpError({ statusCode: 400, message: "External Id is required with integration value" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   if (!parsedBody.integration && parsedBody.externalId) {
-    throw new HttpError({ statusCode: 400, message: "Integration value is required with external ID" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 

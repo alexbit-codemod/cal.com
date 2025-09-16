@@ -21,22 +21,17 @@ export const CustomizationExample: React.FC = () => {
         <div className="space-y-6">
           <div className="space-y-4">
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Key-Value Pairs</h3>
-              <p className="text-subtle text-xs">Allows inputting keys and values</p>
-              <MultiOptionInput<FormValues>
-                fieldArrayName="keyValuePairs"
-                keyValueMode
-                keyLabel="Environment Variable"
-                valueLabel="Value"
-                optionPlaceholders={["NODE_ENV", "PORT", "DATABASE_URL"]}
-                valuePlaceholders={["production", "3000", "postgres://..."]}
-                defaultNumberOfOptions={3}
-                keyValueDelimiters={[":", "="]}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
 
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Custom Placeholders</h3>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <MultiOptionInput<FormValues>
                 fieldArrayName="customPlaceholders"
                 optionPlaceholders={["Enter your name", "Enter your email", "Enter your phone"]}
@@ -45,7 +40,8 @@ export const CustomizationExample: React.FC = () => {
             </div>
 
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Without Move Buttons</h3>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <MultiOptionInput<FormValues>
                 fieldArrayName="noMoveButtons"
                 optionPlaceholders={["Static option 1", "Static option 2"]}
@@ -55,13 +51,10 @@ export const CustomizationExample: React.FC = () => {
             </div>
 
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Custom Add Button Label</h3>
-              <MultiOptionInput<FormValues>
-                fieldArrayName="customLabel"
-                optionPlaceholders={["Social media link"]}
-                defaultNumberOfOptions={1}
-                addOptionLabel="Add another social media link"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           </div>
         </div>

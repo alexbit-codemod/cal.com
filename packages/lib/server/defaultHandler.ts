@@ -11,7 +11,9 @@ export const defaultHandler = (handlers: Handlers) => async (req: NextApiRequest
   if (!handler) {
     return res
       .status(405)
-      .json({ message: `Method Not Allowed (Allow: ${Object.keys(handlers).join(",")})` });
+      .json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
   }
 
   try {
@@ -19,6 +21,8 @@ export const defaultHandler = (handlers: Handlers) => async (req: NextApiRequest
     return;
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ message: "Something went wrong" });
+    return res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };

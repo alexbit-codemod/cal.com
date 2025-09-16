@@ -19,9 +19,9 @@ export default class EventRequestToRescheduleSMS extends SMSManager {
 
     const needToRescheduleOrCancelText = t("need_to_reschedule_or_cancel");
 
-    const messageText = `${needToRescheduleOrCancelText}: ${requestRescheduleSubtitle} \n\n${t(
-      "need_to_reschedule_or_cancel"
-    )} ${bookingUrl}`;
+    const messageText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     return messageText;
   }

@@ -308,7 +308,9 @@ export class UserAvailabilityService {
     );
 
     if (!dateFrom.isValid() || !dateTo.isValid()) {
-      throw new HttpError({ statusCode: 400, message: "Invalid time range given." });
+      throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const where: Prisma.UserWhereInput = {};
@@ -318,7 +320,9 @@ export class UserAvailabilityService {
     const user = initialData?.user || (await this.getUser(where));
 
     if (!user) {
-      throw new HttpError({ statusCode: 404, message: "No user found in getUserAvailability" });
+      throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     let eventType: EventType | null = initialData?.eventType || null;

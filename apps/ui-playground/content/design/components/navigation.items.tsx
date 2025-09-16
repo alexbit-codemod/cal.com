@@ -9,7 +9,8 @@ export const ItemsExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="space-y-4 md:w-64">
       <div className="space-y-1">
-        <h3 className="text-emphasis mb-2 text-sm font-medium">Basic Items</h3>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <NavigationItem
           item={{
             name: "Event Types",
@@ -27,7 +28,8 @@ export const ItemsExample: React.FC = () => (
       </div>
 
       <div className="space-y-1">
-        <h3 className="text-emphasis mb-2 text-sm font-medium">With Badge</h3>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <NavigationItem
           item={{
             name: "Bookings",
@@ -41,13 +43,15 @@ export const ItemsExample: React.FC = () => (
             name: "Teams",
             href: "#teams",
             icon: "users",
-            badge: <Badge variant="gray">New</Badge>,
+            badge: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$,
           }}
         />
       </div>
 
       <div className="space-y-1">
-        <h3 className="text-emphasis mb-2 text-sm font-medium">Active State</h3>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <NavigationItem
           item={{
             name: "Event Types",

@@ -152,7 +152,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
         team: {
           connect: { id: team1.id },
         },
-        title: "Collective Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "org-bookings-collective-event-type",
         length: 60,
         assignAllTeamMembers: true,
@@ -165,7 +167,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
         team: {
           connect: { id: team1.id },
         },
-        title: "Collective Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "org-bookings-round-robin-event-type",
         length: 60,
         assignAllTeamMembers: false,
@@ -235,7 +239,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
 
       const nonOrgEventType = await eventTypesRepositoryFixture.create(
         {
-          title: "Non Org Event Type",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "non-org-event-type",
           length: 60,
           bookingFields: [],
@@ -755,7 +761,9 @@ describe("Organizations Bookings Endpoints 2024-08-13", () => {
             },
             startTime: new Date(Date.UTC(2030, 0, 15, 13, 0, 0)),
             endTime: new Date(Date.UTC(2030, 0, 15, 14, 0, 0)),
-            title: "Regular user booking",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             uid: `regular-user-booking-${Math.floor(Math.random() * 10000)}`,
             eventType: {
               connect: {

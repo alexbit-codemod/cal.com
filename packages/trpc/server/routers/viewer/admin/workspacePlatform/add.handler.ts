@@ -18,6 +18,8 @@ export default async function addHandler({
     return ensureNoServiceAccountKey(workspacePlatform);
   } catch (error) {
     logger.error(error);
-    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Failed to add workspace platform" });
+    throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }

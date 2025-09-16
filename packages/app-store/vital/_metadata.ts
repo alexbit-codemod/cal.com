@@ -9,10 +9,14 @@ export const metadata = {
   category: "automation",
   categories: ["automation"],
   logo: "icon-dark.svg",
-  label: "Vital",
+  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   publisher: "Vital",
   slug: "vital-automation",
-  title: "Vital",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   type: "vital_other",
   url: "https://tryvital.io",
   variant: "other",

@@ -327,7 +327,9 @@ export const buildEventForTeamEventType = async ({
   if (!updatedEvt) {
     throw new HttpError({
       statusCode: 400,
-      message: "Failed to build event with destination calendar due to missing required fields",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -344,7 +346,9 @@ export const buildEventForTeamEventType = async ({
   if (!teamEvt) {
     throw new HttpError({
       statusCode: 400,
-      message: "Failed to build team event due to missing required fields",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -514,12 +518,16 @@ async function handler(
   const tGuests = await getTranslation("en", "common");
 
   const dynamicUserList = Array.isArray(reqBody.user) ? reqBody.user : getUsernameList(reqBody.user);
-  if (!eventType) throw new HttpError({ statusCode: 404, message: "event_type_not_found" });
+  if (!eventType) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   if (eventType.seatsPerTimeSlot && eventType.recurringEvent) {
     throw new HttpError({
       statusCode: 400,
-      message: "recurring_event_seats_error",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -658,7 +666,9 @@ async function handler(
   if (routedTeamMemberIds) {
     //routingFormResponseId could be 0 for dry run. So, we just avoid undefined value
     if (routingFormResponseId === undefined) {
-      throw new HttpError({ statusCode: 400, message: "Missing routingFormResponseId" });
+      throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     routingFormResponse = await prisma.app_RoutingForms_FormResponse.findUnique({
       where: {
@@ -1257,7 +1267,9 @@ async function handler(
   if (!builtEvt) {
     throw new HttpError({
       statusCode: 400,
-      message: "Failed to build calendar event due to missing required fields",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -1271,7 +1283,9 @@ async function handler(
     if (!updatedEvt) {
       throw new HttpError({
         statusCode: 400,
-        message: "Failed to build event with recurring event ID due to missing required fields",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -1288,7 +1302,9 @@ async function handler(
     });
 
     if (!teamEvt) {
-      throw new HttpError({ statusCode: 400, message: "Failed to build team event" });
+      throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     evt = teamEvt;
@@ -1420,7 +1436,9 @@ async function handler(
       if (!updatedEvt) {
         throw new HttpError({
           statusCode: 400,
-          message: "Failed to build event with new identifiers due to missing required fields",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
 
@@ -1554,7 +1572,9 @@ async function handler(
       if (!updatedEvtWithUid) {
         throw new HttpError({
           statusCode: 400,
-          message: "Failed to build event with UID due to missing required fields",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
 
@@ -1567,7 +1587,9 @@ async function handler(
       if (!updatedEvtWithPassword) {
         throw new HttpError({
           statusCode: 400,
-          message: "Failed to build event with one-time password due to missing required fields",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
 
@@ -1743,7 +1765,9 @@ async function handler(
     if (isThereAnIntegrationError) {
       const error = {
         errorCode: "BookingReschedulingMeetingFailed",
-        message: "Booking Rescheduling failed",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
 
       loggerWithEventDetails.error(
@@ -1964,7 +1988,9 @@ async function handler(
     if (results.length > 0 && results.every((res) => !res.success)) {
       const error = {
         errorCode: "BookingCreatingMeetingFailed",
-        message: "Booking failed",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       };
 
       loggerWithEventDetails.error(
@@ -2177,7 +2203,9 @@ async function handler(
     });
 
     if (!eventTypePaymentAppCredential) {
-      throw new HttpError({ statusCode: 400, message: "Missing payment credentials" });
+      throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     // Convert type of eventTypePaymentAppCredential to appId: EventTypeAppList
@@ -2226,7 +2254,9 @@ async function handler(
     return {
       ...bookingResponse,
       ...luckyUserResponse,
-      message: "Payment required",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       paymentRequired: true,
       paymentUid: payment?.uid,
       paymentId: payment?.id,
@@ -2324,10 +2354,14 @@ async function handler(
     }
 
     // For unexpected errors, provide a generic message
-    throw new HttpError({ statusCode: 500, message: "Failed to process booking link" });
+    throw new HttpError({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
-  if (!booking) throw new HttpError({ statusCode: 400, message: "Booking failed" });
+  if (!booking) throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   try {
     if (!isDryRun) {

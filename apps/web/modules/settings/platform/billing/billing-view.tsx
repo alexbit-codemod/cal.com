@@ -102,9 +102,8 @@ export default function PlatformBillingUpgrade() {
             <CtaRow
               title="Change plan"
               description={t("Want to change your existing plan or check out other plans?")}>
-              <Button href="/settings/platform/plans" color="secondary">
-                Plans
-              </Button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </CtaRow>
 
             <hr className="border-subtle" />

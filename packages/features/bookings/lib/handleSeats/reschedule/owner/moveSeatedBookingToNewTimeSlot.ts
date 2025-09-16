@@ -68,7 +68,9 @@ const moveSeatedBookingToNewTimeSlot = async (
   if (results.length > 0 && results.some((res) => !res.success)) {
     const error = {
       errorCode: "BookingReschedulingMeetingFailed",
-      message: "Booking Rescheduling failed",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
     loggerWithEventDetails.error(`Booking ${organizerUser.name} failed`, JSON.stringify({ error, results }));
   } else {

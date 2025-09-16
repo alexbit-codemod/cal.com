@@ -32,7 +32,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
       <main
         className={`flex min-h-screen flex-col ${inter.className} main text-default flex min-h-full w-full flex-col items-center overflow-visible`}>
         <Navbar username={props.calUsername} />
-        {isLoading && <p>Loading...</p>}
+        {isLoading && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$}
         {!isLoading && booking && (
           <div
             key={booking.id}
@@ -43,20 +44,24 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                   name="circle-check-big"
                   className="my-5 flex h-[40px] w-[40px] rounded-full bg-green-500"
                 />
-                <h1 className="text-xl font-bold">This meeting is scheduled</h1>
-                <p>We sent an email with a calendar invitation with the details to everyone.</p>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             ) : (
               <div className="mx-2 my-4 flex flex-col items-center justify-center text-center">
                 <Icon name="x" className="my-5 flex h-[40px] w-[40px] rounded-full bg-red-400" />
-                <h4 className="text-2xl font-bold">This event is cancelled</h4>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
             <hr className="mx-2 bg-black text-black" />
             <div className="mx-2 my-7 flex flex-col gap-y-3">
               <div className="flex gap-[70px]">
                 <div>
-                  <h4>What</h4>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <div>
                   <p>{booking.title}</p>
@@ -64,7 +69,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
               </div>
               <div className="flex gap-[70px]">
                 <div>
-                  <h4>When</h4>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <div>
                   <div>
@@ -86,13 +92,15 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                 </div>
               </div>
               <div className="flex gap-[70px]">
-                <div>Who</div>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <div>
                   <div>
                     <div>
                       <h4>
                         {booking.hosts[0]?.name}{" "}
-                        <span className="rounded-md bg-blue-800 px-2 text-sm text-white">Host</span>
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       </h4>
                     </div>
                   </div>
@@ -111,7 +119,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
               {!!booking.location && (
                 <div className="flex gap-[70px]">
                   <div>
-                    <h4>Where</h4>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <div>
                     <p>{booking.location}</p>
@@ -121,7 +130,8 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
               {"bookingFieldsResponses" in booking && !!booking.bookingFieldsResponses?.notes && (
                 <div className="flex gap-[70px]">
                   <div className="w-[40px]">
-                    <h4>Additional notes</h4>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <div>
                     <p>{`${booking.bookingFieldsResponses.notes}`}</p>
@@ -134,30 +144,12 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
               <>
                 <hr className="mx-3" />
                 <div className="mx-2 my-3 text-center">
-                  <p>
-                    Need to make a change?{" "}
-                    <button
-                      className="underline"
-                      onClick={() => {
-                        router.push(
-                          `/booking?rescheduleUid=${booking?.uid}&eventTypeSlug=${booking?.eventType.slug}&rescheduledBy=${props.calEmail}`
-                        );
-                      }}>
-                      Reschedule
-                    </button>{" "}
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$${" "}
                     or{" "}
-                    <button
-                      className="underline"
-                      onClick={() => {
-                        cancelBooking({
-                          id: booking.id,
-                          uid: booking.uid,
-                          cancellationReason: "User request",
-                          allRemainingBookings: true,
-                        });
-                      }}>
-                      Cancel
-                    </button>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </p>
                 </div>
               </>

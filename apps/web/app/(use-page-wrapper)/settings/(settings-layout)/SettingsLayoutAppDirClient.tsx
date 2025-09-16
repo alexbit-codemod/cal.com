@@ -406,17 +406,13 @@ const TeamListCollapsible = ({ teamFeatures }: { teamFeatures?: Record<number, T
                       )}
                     </div>
                     {!team.parentId && (
-                      <img
-                        src={getPlaceholderAvatar(team.logoUrl, team.name)}
-                        className="h-[16px] w-[16px] self-start rounded-full stroke-[2px] ltr:mr-2 rtl:ml-2 md:mt-0"
-                        alt={team.name || "Team logo"}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                     <p className="w-1/2 truncate leading-normal">{team.name}</p>
                     {!team.accepted && (
-                      <Badge className="ms-3" variant="orange">
-                        Inv.
-                      </Badge>
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                   </button>
                 </CollapsibleTrigger>
@@ -572,11 +568,8 @@ const SettingsSidebarContainer = ({
                         />
                       )}
                       {!tab.icon && tab?.avatar && (
-                        <img
-                          className="h-4 w-4 rounded-full ltr:mr-3 rtl:ml-3"
-                          src={tab?.avatar}
-                          alt="Organization Logo"
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       )}
                       <Skeleton
                         title={tab.name}
@@ -716,11 +709,8 @@ const SettingsSidebarContainer = ({
                                     )}
                                   </div>
                                   {!otherTeam.parentId && (
-                                    <img
-                                      src={getPlaceholderAvatar(otherTeam.logoUrl, otherTeam.name)}
-                                      className="h-[16px] w-[16px] self-start rounded-full stroke-[2px] ltr:mr-2 rtl:ml-2 md:mt-0"
-                                      alt={otherTeam.name || "Team logo"}
-                                    />
+                                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                                    $$$
                                   )}
                                   <p className="w-1/2 truncate leading-normal">{otherTeam.name}</p>
                                 </button>

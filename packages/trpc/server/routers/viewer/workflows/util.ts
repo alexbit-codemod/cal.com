@@ -187,13 +187,17 @@ export const verifyEmailSender = async (email: string, userId: number, teamId: n
     });
 
     if (!team) {
-      throw new TRPCError({ code: "NOT_FOUND", message: "Team not found" });
+      throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const isTeamMember = team.members.some((member) => member.userId === userId);
 
     if (!isTeamMember) {
-      throw new TRPCError({ code: "FORBIDDEN", message: "You are not a member of this team" });
+      throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     let foundTeamMember = team.members.find((member) => member.user.email === email);
@@ -219,7 +223,9 @@ export const verifyEmailSender = async (email: string, userId: number, teamId: n
     }
   }
 
-  throw new TRPCError({ code: "NOT_FOUND", message: "Email not verified" });
+  throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 };
 
 export function getSender(

@@ -92,22 +92,22 @@ const AppConfiguration = (props: IAppConfigurationProps) => {
   return (
     <div className="flex-col items-start p-3 text-sm">
       <p>
-        <strong>Connected with Vital App: {connected ? "Yes" : "No"}</strong>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </p>
       <br />
       <p>
-        <strong>Sleeping reschedule automation</strong>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </p>
-      <p className="mt-1">
-        You can select different parameters to trigger the reschedule based on your sleeping metrics.
-      </p>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
 
       <div className="w-100 mt-2">
         <div className="block sm:flex">
           <div className="min-w-24 mb-4 mt-5 sm:mb-0">
-            <label htmlFor="description" className="text-sm font-bold">
-              Parameter
-            </label>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="w-120 mt-2.5">
             <Select
@@ -124,9 +124,8 @@ const AppConfiguration = (props: IAppConfigurationProps) => {
 
       <div className="w-full">
         <div className="min-w-24 mb-4 mt-3">
-          <label htmlFor="value" className="text-sm font-bold">
-            Trigger at below or equal than
-          </label>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="mx-2 mt-0 inline-flex w-24 items-baseline">
           <input
@@ -142,30 +141,15 @@ const AppConfiguration = (props: IAppConfigurationProps) => {
             className="pr-12shadow-sm border-default mt-1 block w-full rounded-sm border py-2 pl-6 focus:border-neutral-500 focus:outline-none focus:ring-neutral-500 sm:text-sm"
           />
           <p className="ml-2">
-            <strong>hours</strong>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </p>
         </div>
       </div>
 
       <div>
-        <Button
-          className="my-4"
-          onClick={async () => {
-            try {
-              setSaveLoading(true);
-              await saveSettings({ parameter: selectedParam, sleepValue: sleepValue });
-              showToast("Success saving your Vital Configurations", "success");
-            } catch (error) {
-              showToast("An error occurred saving your Vital Configurations", "error");
-              setSaveLoading(false);
-            }
-            setTouchedForm(false);
-            setSaveLoading(false);
-          }}
-          loading={saveLoading}
-          disabled={disabledSaveButton}>
-          Save configuration
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );

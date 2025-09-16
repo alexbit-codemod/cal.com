@@ -61,7 +61,9 @@ export class OutputIntegrationLocation_2024_06_14 {
   @IsIn(outputLocations)
   @DocsProperty({
     example: "integration",
-    description: "Only allowed value for type is `integration`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "integration";
 
@@ -80,7 +82,9 @@ export class OutputIntegrationLocation_2024_06_14 {
   @IsOptional()
   @IsNumber()
   @ApiPropertyOptional({
-    description: "Credential ID associated with the integration",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   credentialId?: number;
 }
@@ -89,14 +93,18 @@ export class OutputOrganizersDefaultAppLocation_2024_06_14 {
   @IsIn(outputLocations)
   @DocsProperty({
     example: "organizersDefaultApp",
-    description: "only allowed value for type is `organizersDefaultApp`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "organizersDefaultApp";
 }
 
 export class OutputUnknownLocation_2024_06_14 {
   @IsIn(outputLocations)
-  @DocsProperty({ example: "unknown", description: "only allowed value for type is `unknown`" })
+  @DocsProperty({ example: "unknown", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "unknown";
 
   @IsString()

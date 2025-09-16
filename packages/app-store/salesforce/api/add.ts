@@ -7,12 +7,16 @@ import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 import { encodeOAuthState } from "../../_utils/oauth/encodeOAuthState";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ message: "Method not allowed" });
+  if (req.method !== "GET") return res.status(405).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   let consumerKey = "";
   const appKeys = await getAppKeysFromSlug("salesforce");
   if (typeof appKeys.consumer_key === "string") consumerKey = appKeys.consumer_key;
-  if (!consumerKey) return res.status(400).json({ message: "Salesforce client id missing." });
+  if (!consumerKey) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const salesforceClient = new jsforce.Connection({
     oauth2: {

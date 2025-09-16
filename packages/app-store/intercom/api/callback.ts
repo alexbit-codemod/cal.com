@@ -16,11 +16,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { code } = req.query;
 
   if (code && typeof code !== "string") {
-    res.status(400).json({ message: "`code` must be a string" });
+    res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return;
   }
   if (!req.session?.user?.id) {
-    return res.status(401).json({ message: "You must be logged in to do this" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   let clientId = "";
@@ -29,8 +33,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (typeof appKeys.client_id === "string") clientId = appKeys.client_id;
   if (typeof appKeys.client_secret === "string") clientSecret = appKeys.client_secret;
-  if (!clientId) return res.status(400).json({ message: "Intercom client_id missing." });
-  if (!clientSecret) return res.status(400).json({ message: "Intercom client_secret missing." });
+  if (!clientId) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
+  if (!clientSecret) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const response = await fetch(`https://api.intercom.io/auth/eagle/token`, {
     method: "POST",

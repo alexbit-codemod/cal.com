@@ -7,7 +7,9 @@ export class DeleteCalendarCredentialsInputBodyDto {
   @Expose()
   @ApiProperty({
     example: 10,
-    description: "Credential ID of the calendar to delete, as returned by the /calendars endpoint",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "integer",
     required: true,
   })

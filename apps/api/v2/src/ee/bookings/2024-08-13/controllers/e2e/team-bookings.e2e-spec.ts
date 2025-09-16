@@ -253,16 +253,24 @@ describe("Bookings Endpoints 2024-08-13", () => {
           {
             name: "name",
             type: "name",
-            label: "your name",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             variant: "fullName",
             editable: "system",
             required: true,
-            defaultLabel: "your_name",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             variantsConfig: {
               variants: {
                 fullName: {
-                  fields: [{ name: "fullName", type: "text", label: "your name", required: true }],
+                  fields: [{ name: "fullName", type: "text", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  , required: true }],
                 },
               },
             },
@@ -270,17 +278,27 @@ describe("Bookings Endpoints 2024-08-13", () => {
           {
             name: "email",
             type: "email",
-            label: "your email",
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system",
             required: false,
-            defaultLabel: "email_address",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           {
             name: "attendeePhoneNumber",
             type: "phone",
-            label: "phone_number",
-            sources: [{ id: "user", type: "user", label: "User", fieldRequired: true }],
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            sources: [{ id: "user", type: "user", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            , fieldRequired: true }],
             editable: "user",
             required: true,
             placeholder: "",
@@ -288,12 +306,20 @@ describe("Bookings Endpoints 2024-08-13", () => {
           {
             name: "rescheduleReason",
             type: "textarea",
-            views: [{ id: "reschedule", label: "Reschedule View" }],
-            sources: [{ id: "default", type: "default", label: "Default" }],
+            views: [{ id: "reschedule", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
+            sources: [{ id: "default", type: "default", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             }],
             editable: "system-but-optional",
             required: false,
-            defaultLabel: "reason_for_reschedule",
-            defaultPlaceholder: "reschedule_placeholder",
+            defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
+            defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
         ],
         locations: [],

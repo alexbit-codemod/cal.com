@@ -63,11 +63,15 @@ export const ENUM_TO_TIME_UNIT = {
 export type WorkflowTriggerType = (typeof WORKFLOW_TRIGGER_TYPES)[number];
 
 export class WorkflowTriggerOffsetDto {
-  @ApiProperty({ description: "Time value for offset before/after event trigger", example: 24, type: Number })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 24, type: Number })
   @IsNumber()
   value!: number;
 
-  @ApiProperty({ description: "Unit for the offset time", example: HOUR })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: HOUR })
   @IsString()
   @IsIn(TIME_UNITS)
   unit!: TimeUnitType;
@@ -75,7 +79,9 @@ export class WorkflowTriggerOffsetDto {
 
 export class BaseWorkflowTriggerDto {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   @IsIn([WORKFLOW_TRIGGER_TYPES])
@@ -84,7 +90,9 @@ export class BaseWorkflowTriggerDto {
 
 export class OnCreationTriggerDto {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   @IsIn([NEW_EVENT])
@@ -93,7 +101,9 @@ export class OnCreationTriggerDto {
 
 export class OnRescheduleTriggerDto {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   @IsIn([RESCHEDULE_EVENT])
@@ -101,7 +111,9 @@ export class OnRescheduleTriggerDto {
 }
 export class OnCancelTriggerDto {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   @IsIn([EVENT_CANCELLED])
@@ -110,7 +122,9 @@ export class OnCancelTriggerDto {
 
 export class TriggerOffsetDTO {
   @ApiProperty({
-    description: "Offset before/after the trigger time; required for BEFORE_EVENT and AFTER_EVENT only",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: WorkflowTriggerOffsetDto,
   })
   @ValidateNested()
@@ -120,7 +134,9 @@ export class TriggerOffsetDTO {
 
 export class OnBeforeEventTriggerDto extends TriggerOffsetDTO {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: BEFORE_EVENT,
   })
   @IsString()
@@ -130,7 +146,9 @@ export class OnBeforeEventTriggerDto extends TriggerOffsetDTO {
 
 export class OnAfterEventTriggerDto extends TriggerOffsetDTO {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: AFTER_EVENT,
   })
   @IsString()
@@ -140,7 +158,9 @@ export class OnAfterEventTriggerDto extends TriggerOffsetDTO {
 
 export class OnAfterCalVideoGuestsNoShowTriggerDto extends TriggerOffsetDTO {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: AFTER_GUESTS_CAL_VIDEO_NO_SHOW,
   })
   @IsString()
@@ -150,7 +170,9 @@ export class OnAfterCalVideoGuestsNoShowTriggerDto extends TriggerOffsetDTO {
 
 export class OnAfterCalVideoHostsNoShowTriggerDto extends TriggerOffsetDTO {
   @ApiProperty({
-    description: "Trigger type for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: AFTER_HOSTS_CAL_VIDEO_NO_SHOW,
   })
   @IsString()

@@ -24,7 +24,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const customerId = await getStripeCustomerIdFromUserId(userId);
     if (!customerId) {
-      res.status(404).json({ message: "Missing customer id" });
+      res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
       return;
     }
 
@@ -33,7 +35,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       select: { id: true, metadata: true },
     });
     if (!userData) {
-      res.status(404).json({ message: "Missing user data" });
+      res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
       return;
     }
 
@@ -54,11 +58,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const checkPremiumResult = await checkPremiumUsername(intentUsername);
     if (!checkPremiumResult.available) {
-      return res.status(404).json({ message: "Intent username not available" });
+      return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const stripeCustomer = await stripe.customers.retrieve(customerId);
     if (!stripeCustomer || stripeCustomer.deleted) {
-      return res.status(400).json({ message: "Stripe customer not found or deleted" });
+      return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     await stripe.customers.update(customerId, {
       metadata: {
@@ -82,6 +90,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (checkoutSession && checkoutSession.url) {
       return res.redirect(checkoutSession.url).end();
     }
-    return res.status(404).json({ message: "Couldn't redirect to stripe checkout session" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }

@@ -18,10 +18,14 @@ async function postHandler(req: NextApiRequest) {
 
   log.debug("postHandler", safeStringify({ channelToken, channelId }));
   if (channelToken !== process.env.GOOGLE_WEBHOOK_TOKEN) {
-    throw new HttpError({ statusCode: 403, message: "Invalid API key" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   if (typeof channelId !== "string") {
-    throw new HttpError({ statusCode: 403, message: "Missing Channel ID" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // There could be multiple selected calendars for the same googleChannelId for different eventTypes and same user
@@ -32,19 +36,25 @@ async function postHandler(req: NextApiRequest) {
 
   if (!selectedCalendar) {
     log.info("postHandler", `No selected calendar found for googleChannelId: ${channelId}`);
-    return { message: "ok" };
+    return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
   const { credential } = selectedCalendar;
   if (!credential) {
     log.info("postHandler", `No credential found for selected calendar for googleChannelId: ${channelId}`);
-    return { message: "ok" };
+    return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
   const { selectedCalendars } = credential;
   const credentialForCalendarCache = await getCredentialForCalendarCache({ credentialId: credential.id });
   const calendarServiceForCalendarCache = await getCalendar(credentialForCalendarCache);
 
   await calendarServiceForCalendarCache?.fetchAvailabilityAndSetCache?.(selectedCalendars);
-  return { message: "ok" };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }
 
 export default defaultHandler({

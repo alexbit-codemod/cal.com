@@ -27,7 +27,9 @@ async function authMiddleware() {
   const session = await getServerSession({ req: buildLegacyRequest(await headers(), await cookies()) });
 
   if (!session?.user?.id) {
-    throw new HttpError({ statusCode: 401, message: "Not authenticated" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const userRepo = new UserRepository(prisma);
@@ -36,7 +38,9 @@ async function authMiddleware() {
   });
 
   if (!userWithCredentials) {
-    throw new HttpError({ statusCode: 401, message: "Not authenticated" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   return userWithCredentials;
@@ -82,7 +86,9 @@ async function postHandler(req: NextRequest) {
     eventTypeId: eventTypeId ?? null,
   });
 
-  return NextResponse.json({ message: "Calendar Selection Saved" });
+  return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }
 
 async function deleteHandler(req: NextRequest) {
@@ -107,7 +113,9 @@ async function deleteHandler(req: NextRequest) {
     },
   });
 
-  return NextResponse.json({ message: "Calendar Selection Saved" });
+  return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }
 
 export const POST = defaultResponderForAppDir(postHandler);

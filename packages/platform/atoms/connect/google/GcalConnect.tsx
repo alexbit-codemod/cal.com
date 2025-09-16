@@ -24,20 +24,7 @@ export const GcalConnect: FC<Partial<OAuthConnectProps>> = ({
 }) => {
   const { t } = useLocale();
   return (
-    <OAuthConnect
-      label={label || t("google_connect_atom_label")}
-      alreadyConnectedLabel={alreadyConnectedLabel || t("google_connect_atom_already_connected_label")}
-      loadingLabel={loadingLabel || t("google_connect_atom_loading_label")}
-      calendar={GOOGLE_CALENDAR}
-      className={className}
-      onCheckError={onCheckError}
-      redir={redir}
-      initialData={initialData}
-      isMultiCalendar={isMultiCalendar}
-      tooltipSide={tooltipSide}
-      tooltip={tooltip}
-      isClickable={isClickable}
-      isDryRun={isDryRun}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };

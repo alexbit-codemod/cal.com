@@ -83,7 +83,8 @@ export const VerifyEmailChangeEmail = (
           </p>
         </div>
       </div>
-      <CallToAction label={props.language("verify_email_button")} href={props.verificationEmailLink} />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div style={{ lineHeight: "6px" }}>
         <p style={{ fontWeight: 400, lineHeight: "24px" }}>
           <>

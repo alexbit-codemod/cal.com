@@ -41,7 +41,9 @@ export async function canUserAccessTeamWithRole(
   /** If not ADMIN then we check if the actual user belongs to team and matches the required role */
   if (!isSystemWideAdmin) args.where = { ...args.where, members: { some: { userId, role } } };
   const team = await prisma.team.findFirst(args);
-  if (!team) throw new HttpError({ statusCode: 401, message: `Unauthorized: OWNER or ADMIN role required` });
+  if (!team) throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   return team;
 }
 

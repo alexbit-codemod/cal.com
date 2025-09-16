@@ -480,7 +480,9 @@ export function expectSuccessfulBookingCreationEmails({
   const bookingUrlOrigin = booking.urlOrigin || WEBSITE_URL;
   expect(emails).toHaveEmail(
     {
-      titleTag: "confirmed_event_type_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       heading: recurrence ? "new_event_scheduled_recurring" : "new_event_scheduled",
       subHeading: "",
       links: recurrence
@@ -491,7 +493,9 @@ export function expectSuccessfulBookingCreationEmails({
               }?cancel=true&allRemainingBookings=true&cancelledBy=${encodeURIComponent(
                 destinationEmail ?? organizer.email
               )}`,
-              text: "cancel",
+              text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ]
         : [
@@ -499,7 +503,9 @@ export function expectSuccessfulBookingCreationEmails({
               href: `${bookingUrlOrigin}/reschedule/${booking.uid}?rescheduledBy=${encodeURIComponent(
                 destinationEmail ?? organizer.email
               )}`,
-              text: "reschedule",
+              text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ],
       ...(bookingTimeRange
@@ -527,7 +533,9 @@ export function expectSuccessfulBookingCreationEmails({
 
   expect(emails).toHaveEmail(
     {
-      titleTag: "confirmed_event_type_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       heading: recurrence ? "your_event_has_been_scheduled_recurring" : "your_event_has_been_scheduled",
       subHeading: "emailed_you_and_any_other_attendees",
       ...(bookingTimeRange
@@ -552,7 +560,9 @@ export function expectSuccessfulBookingCreationEmails({
               href: `${bookingUrlOrigin}/booking/${
                 booking.uid
               }?cancel=true&allRemainingBookings=true&cancelledBy=${encodeURIComponent(booker.email)}`,
-              text: "cancel",
+              text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ]
         : [
@@ -560,7 +570,9 @@ export function expectSuccessfulBookingCreationEmails({
               href: `${bookingUrlOrigin}/reschedule/${booking.uid}?rescheduledBy=${encodeURIComponent(
                 booker.email
               )}`,
-              text: "reschedule",
+              text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ],
     },
@@ -571,7 +583,9 @@ export function expectSuccessfulBookingCreationEmails({
     otherTeamMembers.forEach((otherTeamMember) => {
       expect(emails).toHaveEmail(
         {
-          titleTag: "confirmed_event_type_subject",
+          titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           heading: recurrence ? "new_event_scheduled_recurring" : "new_event_scheduled",
           subHeading: "",
           ...(bookingTimeRange
@@ -594,7 +608,9 @@ export function expectSuccessfulBookingCreationEmails({
               href: `${bookingUrlOrigin}/reschedule/${booking.uid}?rescheduledBy=${encodeURIComponent(
                 otherTeamMember.email
               )}`,
-              text: "reschedule",
+              text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
             {
               href: `${bookingUrlOrigin}/booking/${
@@ -602,7 +618,9 @@ export function expectSuccessfulBookingCreationEmails({
               }?cancel=true&allRemainingBookings=false&cancelledBy=${encodeURIComponent(
                 otherTeamMember.email
               )}`,
-              text: "cancel",
+              text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ],
         },
@@ -615,7 +633,9 @@ export function expectSuccessfulBookingCreationEmails({
     guests.forEach((guest) => {
       expect(emails).toHaveEmail(
         {
-          titleTag: "confirmed_event_type_subject",
+          titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           heading: recurrence ? "your_event_has_been_scheduled_recurring" : "your_event_has_been_scheduled",
           subHeading: "emailed_you_and_any_other_attendees",
           ...(bookingTimeRange
@@ -649,7 +669,9 @@ export function expectBrokenIntegrationEmails({
   // Broken Integration email is only sent to the Organizer
   expect(emails).toHaveEmail(
     {
-      titleTag: "broken_integration",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       to: `${organizer.email}`,
       // No ics goes in case of broken integration email it seems
       // ics: {
@@ -682,7 +704,9 @@ export function expectCalendarEventCreationFailureEmails({
 }) {
   expect(emails).toHaveEmail(
     {
-      titleTag: "broken_integration",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       to: `${organizer.email}`,
       ics: {
         filename: "event.ics",
@@ -695,7 +719,9 @@ export function expectCalendarEventCreationFailureEmails({
 
   expect(emails).toHaveEmail(
     {
-      titleTag: "calendar_event_creation_failure_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       to: `${booker.name} <${booker.email}>`,
       ics: {
         filename: "event.ics",
@@ -767,7 +793,9 @@ export function expectSuccessfulBookingRescheduledEmails({
 }) {
   expect(emails).toHaveEmail(
     {
-      titleTag: "event_type_has_been_rescheduled_on_time_date",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       to: `${organizer.email}`,
       ics: {
         filename: "event.ics",
@@ -781,7 +809,9 @@ export function expectSuccessfulBookingRescheduledEmails({
 
   expect(emails).toHaveEmail(
     {
-      titleTag: "event_type_has_been_rescheduled_on_time_date",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       to: `${booker.name} <${booker.email}>`,
       ics: {
         filename: "event.ics",
@@ -807,7 +837,9 @@ export function expectSuccesfulLocationChangeEmails({
 }) {
   expect(emails).toHaveEmail(
     {
-      titleTag: "location_changed_event_type_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       links: [
         {
           href: location.href,
@@ -832,7 +864,9 @@ export function expectAwaitingPaymentEmails({
 }) {
   expect(emails).toHaveEmail(
     {
-      titleTag: "awaiting_payment_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       to: `${booker.name} <${booker.email}>`,
       noIcs: true,
     },
@@ -852,7 +886,9 @@ export function expectBookingRequestedEmails({
 }) {
   expect(emails).toHaveEmail(
     {
-      titleTag: "event_awaiting_approval_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       to: `${organizer.email}`,
       noIcs: true,
     },
@@ -862,7 +898,9 @@ export function expectBookingRequestedEmails({
   if (booker) {
     expect(emails).toHaveEmail(
       {
-        titleTag: "booking_submitted_subject",
+        titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         to: `${booker.email}`,
         noIcs: true,
       },
@@ -891,13 +929,17 @@ export function expectBookingRequestRescheduledEmails({
 
   expect(emails).toHaveEmail(
     {
-      titleTag: "rescheduled_event_type_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       heading: "request_reschedule_booking",
       subHeading: "request_reschedule_subtitle",
       links: [
         {
           href: `${bookingUrlOrigin}/reschedule/${booking.uid}?allowRescheduleForCancelledBooking=true`,
-          text: "Book a new time",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       to: `${booker.email}`,
@@ -911,7 +953,9 @@ export function expectBookingRequestRescheduledEmails({
 
   expect(emails).toHaveEmail(
     {
-      titleTag: "rescheduled_event_type_subject",
+      titleTag: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       heading: "request_reschedule_title_organizer",
       subHeading: "request_reschedule_subtitle_organizer",
       to: `${loggedInUser.email}`,
@@ -954,26 +998,34 @@ export function expectBookingRequestedWebhookToHaveBeenFired({
         },
         responses: {
           name: {
-            label: "your_name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: booker.name,
             isHidden: false,
           },
           email: {
-            label: "email_address",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: booker.email,
             isHidden: isEmailHidden,
           },
           ...(booker.attendeePhoneNumber
             ? {
                 attendeePhoneNumber: {
-                  label: "phone_number",
+                  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   value: booker.attendeePhoneNumber,
                   isHidden: isAttendeePhoneNumberHidden,
                 },
               }
             : null),
           location: {
-            label: "location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: { optionValue: "", value: location },
             isHidden: false,
           },
@@ -990,18 +1042,26 @@ export function expectBookingRequestedWebhookToHaveBeenFired({
           // In a Pending Booking Request, we don't send the video call url
         },
         responses: {
-          name: { label: "name", value: booker.name },
-          email: { label: "email", value: booker.email },
+          name: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          , value: booker.name },
+          email: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          , value: booker.email },
           ...(booker.attendeePhoneNumber
             ? {
                 attendeePhoneNumber: {
-                  label: "phone_number",
+                  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   value: booker.attendeePhoneNumber,
                 },
               }
             : null),
           location: {
-            label: "location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: { optionValue: "", value: location },
           },
         },
@@ -1036,19 +1096,27 @@ export function expectBookingCreatedWebhookToHaveBeenFired({
           ...(videoCallUrl ? { videoCallUrl } : null),
         },
         responses: {
-          name: { label: "your_name", value: booker.name, isHidden: false },
-          email: { label: "email_address", value: booker.email, isHidden: isEmailHidden },
+          name: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          , value: booker.name, isHidden: false },
+          email: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          , value: booker.email, isHidden: isEmailHidden },
           ...(booker.attendeePhoneNumber
             ? {
                 attendeePhoneNumber: {
-                  label: "phone_number",
+                  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   value: booker.attendeePhoneNumber,
                   isHidden: isAttendeePhoneNumberHidden,
                 },
               }
             : null),
           location: {
-            label: "location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: { optionValue: "", value: location },
             isHidden: false,
           },
@@ -1063,23 +1131,31 @@ export function expectBookingCreatedWebhookToHaveBeenFired({
         metadata: null,
         responses: {
           name: {
-            label: "name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: booker.name,
           },
           email: {
-            label: "email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: booker.email,
           },
           ...(booker.attendeePhoneNumber
             ? {
                 attendeePhoneNumber: {
-                  label: "phone_number",
+                  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   value: booker.attendeePhoneNumber,
                 },
               }
             : null),
           location: {
-            label: "location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: { optionValue: "", value: location },
           },
         },
@@ -1111,10 +1187,16 @@ export function expectBookingRescheduledWebhookToHaveBeenFired({
         ...(videoCallUrl ? { videoCallUrl } : null),
       },
       responses: {
-        name: { label: "your_name", value: booker.name, isHidden: false },
-        email: { label: "email_address", value: booker.email, isHidden: false },
+        name: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , value: booker.name, isHidden: false },
+        email: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , value: booker.email, isHidden: false },
         location: {
-          label: "location",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: { optionValue: "", value: location },
           isHidden: false,
         },
@@ -1142,15 +1224,21 @@ export function expectBookingCancelledWebhookToHaveBeenFired({
       metadata: null,
       responses: {
         name: {
-          label: "name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: booker.name,
         },
         email: {
-          label: "email",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: booker.email,
         },
         location: {
-          label: "location",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: { optionValue: "", value: location },
         },
       },
@@ -1178,10 +1266,16 @@ export function expectBookingPaymentIntiatedWebhookToHaveBeenFired({
         // In a Pending Booking Request, we don't send the video call url
       },
       responses: {
-        name: { label: "your_name", value: booker.name, isHidden: false },
-        email: { label: "email_address", value: booker.email, isHidden: false },
+        name: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , value: booker.name, isHidden: false },
+        email: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , value: booker.email, isHidden: false },
         location: {
-          label: "location",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: { optionValue: "", value: location },
           isHidden: false,
         },

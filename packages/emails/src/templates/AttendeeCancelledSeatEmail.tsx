@@ -1,12 +1,6 @@
 import { AttendeeScheduledEmail } from "./AttendeeScheduledEmail";
 
 export const AttendeeCancelledSeatEmail = (props: React.ComponentProps<typeof AttendeeScheduledEmail>) => (
-  <AttendeeScheduledEmail
-    title="no_longer_attending"
-    headerType="xCircle"
-    subject="event_no_longer_attending_subject"
-    subtitle=""
-    callToAction={null}
-    {...props}
-  />
+  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
 );

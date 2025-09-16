@@ -22,7 +22,9 @@ export async function checkRateLimitAndThrowError({
     const secondsToWait = convertToSeconds(reset - Date.now());
     throw new TRPCError({
       code: "TOO_MANY_REQUESTS",
-      message: `Rate limit exceeded. Try again in ${secondsToWait} seconds.`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   return response;

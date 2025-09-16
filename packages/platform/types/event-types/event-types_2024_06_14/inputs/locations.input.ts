@@ -18,7 +18,9 @@ export const inputLocations = [
 
 export class InputAddressLocation_2024_06_14 {
   @IsIn(inputLocations)
-  @DocsProperty({ example: "address", description: "only allowed value for type is `address`" })
+  @DocsProperty({ example: "address", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "address";
 
   @IsString()
@@ -35,14 +37,18 @@ export class InputOrganizersDefaultApp_2024_06_14 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "organizersDefaultApp",
-    description: "only allowed value for type is `organizersDefaultApp`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "organizersDefaultApp";
 }
 
 export class InputLinkLocation_2024_06_14 {
   @IsIn(inputLocations)
-  @DocsProperty({ example: "link", description: "only allowed value for type is `link`" })
+  @DocsProperty({ example: "link", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "link";
 
   @IsUrl()
@@ -59,7 +65,9 @@ export type Integration_2024_06_14 = (typeof supportedIntegrations)[number];
 
 export class InputIntegrationLocation_2024_06_14 {
   @IsIn(inputLocations)
-  @DocsProperty({ example: "integration", description: "only allowed value for type is `integration`" })
+  @DocsProperty({ example: "integration", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "integration";
 
   @IsIn(supportedIntegrations)
@@ -69,7 +77,9 @@ export class InputIntegrationLocation_2024_06_14 {
 
 export class InputPhoneLocation_2024_06_14 {
   @IsIn(inputLocations)
-  @DocsProperty({ example: "phone", description: "only allowed value for type is `phone`" })
+  @DocsProperty({ example: "phone", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "phone";
 
   @IsPhoneNumber()
@@ -85,13 +95,17 @@ export class InputAttendeeAddressLocation_2024_06_14 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "attendeeAddress",
-    description: "only allowed value for type is `attendeeAddress`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "attendeeAddress";
 }
 export class InputAttendeePhoneLocation_2024_06_14 {
   @IsIn(inputLocations)
-  @DocsProperty({ example: "attendeePhone", description: "only allowed value for type is `attendeePhone`" })
+  @DocsProperty({ example: "attendeePhone", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   type!: "attendeePhone";
 }
 
@@ -99,7 +113,9 @@ export class InputAttendeeDefinedLocation_2024_06_14 {
   @IsIn(inputLocations)
   @DocsProperty({
     example: "attendeeDefined",
-    description: "only allowed value for type is `attendeeDefined`",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type!: "attendeeDefined";
 }

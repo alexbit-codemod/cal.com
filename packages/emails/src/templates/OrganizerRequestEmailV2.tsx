@@ -10,30 +10,12 @@ export const OrganizerRequestEmailV2 = (props: React.ComponentProps<typeof Organ
   //TODO: We should switch to using org domain if available
   const actionHref = `${WEBAPP_URL}/api/verify-booking-token/?token=${token}&userId=${userId}&bookingUid=${uid}`;
   return (
-    <OrganizerScheduledEmail
-      title={
-        props.title || props.calEvent.recurringEvent?.count
-          ? "event_awaiting_approval_recurring"
-          : "event_awaiting_approval"
-      }
-      subtitle={<>{props.calEvent.organizer.language.translate("someone_requested_an_event")}</>}
-      headerType="calendarCircle"
-      subject="event_awaiting_approval_subject"
-      callToAction={
-        <BookingConfirmationForm action={`${actionHref}&action=reject`}>
-          <CallToActionTable>
-            <CallToAction
-              label={props.calEvent.organizer.language.translate("confirm")}
-              href={`${actionHref}&action=accept`}
-              startIconName="confirmIcon"
-            />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Separator />
-            <CallToAction
-              label={props.calEvent.organizer.language.translate("reject")}
-              // href={`${actionHref}&action=reject`}
-              startIconName="rejectIcon"
-              secondary
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </CallToActionTable>
         </BookingConfirmationForm>
       }

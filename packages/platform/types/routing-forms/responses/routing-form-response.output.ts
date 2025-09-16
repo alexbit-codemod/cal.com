@@ -41,7 +41,9 @@ export class RoutingFormResponseOutput {
   routedToBookingUid!: string;
 
   @ApiProperty({
-    example: { "f00b26df-f54b-4985-8d98-17c5482c6a24": { label: "participant", value: "mamut" } },
+    example: { "f00b26df-f54b-4985-8d98-17c5482c6a24": { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , value: "mamut" } },
   })
   @IsObject()
   @Expose()

@@ -126,25 +126,11 @@ export default function JoinCall(props: PageProps) {
       </div>
       <div style={{ zIndex: 2, position: "relative" }}>
         {calVideoLogo ? (
-          <img
-            className="min-w-16 min-h-16 fixed z-10 hidden aspect-square h-16 w-16 rounded-full sm:inline-block"
-            src={calVideoLogo}
-            alt="My Org Logo"
-            style={{
-              top: 32,
-              left: 32,
-            }}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
-          <img
-            className="fixed z-10 hidden h-5 sm:inline-block"
-            src={`${WEBSITE_URL}/cal-logo-word-dark.svg`}
-            alt="Logo"
-            style={{
-              top: 47,
-              left: 20,
-            }}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
       </div>
       {displayLogInOverlay && <LogInOverlay isLoggedIn={!!loggedInUserName} bookingUid={booking.uid} />}

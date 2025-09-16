@@ -44,7 +44,8 @@ const AppConnectionItem = (props: IAppConnectionItem) => {
   return (
     <div className="flex flex-row items-center justify-between p-5">
       <div className="flex items-center space-x-3">
-        <img src={logo} alt={title} className="h-8 w-8" />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <p className="text-sm font-bold">{title}</p>
         {isDefault && <Badge variant="green">{t("default")}</Badge>}
       </div>

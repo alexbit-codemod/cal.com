@@ -166,7 +166,9 @@ async function createIdenticalBookingHistories(teamMembers: User[], eventTypeId:
       await prisma.booking.create({
         data: {
           uid: `test-booking-${member.id}-${i}-${Date.now()}`,
-          title: `Test booking ${i}`,
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: new Date(Date.now() - (i + 2) * 24 * 60 * 60 * 1000),
           endTime: new Date(Date.now() - (i + 2) * 24 * 60 * 60 * 1000 + 30 * 60 * 1000),
           eventTypeId,

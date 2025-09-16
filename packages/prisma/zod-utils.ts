@@ -209,7 +209,9 @@ export const iso8601 = z.string().transform((val, ctx) => {
   if (!time) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
-      message: "Invalid ISO Date",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   const d = new Date();
@@ -233,7 +235,9 @@ export const eventTypeSlug = z
   .trim()
   .transform((val) => slugify(val))
   .refine((val) => val.length >= 1, {
-    message: "Please enter at least one character",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   });
 
 export const stringToDate = z.string().transform((a) => new Date(a));
@@ -244,7 +248,9 @@ export const stringOrNumber = z.union([
     if (isNaN(parsed)) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "Not a number",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
     return parsed;
@@ -288,7 +294,9 @@ export const bookingCancelSchema = z.object({
   cancelSubsequentBookings: z.boolean().optional(),
   cancellationReason: z.string().optional(),
   seatReferenceUid: z.string().optional(),
-  cancelledBy: z.string().email({ message: "Invalid email" }).optional(),
+  cancelledBy: z.string().email({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }).optional(),
   internalNote: z
     .object({
       id: z.number(),
@@ -704,7 +712,9 @@ export const signupSchema = z.object({
   // Username is marked optional here because it's requirement depends on if it's the Organization invite or a team invite which isn't easily done in zod
   // It's better handled beyond zod in `validateAndGetCorrectedUsernameAndEmail`
   username: z.string().optional(),
-  email: z.string().regex(emailRegex, { message: "Invalid email" }),
+  email: z.string().regex(emailRegex, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }),
   password: z.string().superRefine((data, ctx) => {
     const isStrict = false;
     const result = isPasswordValid(data, true, isStrict);

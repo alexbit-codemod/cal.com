@@ -80,17 +80,15 @@ export function Avatar(props: AvatarProps) {
         props.className
       )}>
       <>
-        <AvatarPrimitive.Image
-          src={imageSrc ?? undefined}
-          alt={alt}
-          className={classNames("aspect-square", avatarClass)}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <AvatarPrimitive.Fallback
           delayMs={600}
           asChild={props.asChild}
           className="flex h-full items-center justify-center">
           <>
-            {props.fallback ? props.fallback : <img src={AVATAR_FALLBACK} alt={alt} className={rootClass} />}
+            {props.fallback ? props.fallback : // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$}
           </>
         </AvatarPrimitive.Fallback>
         {indicator}

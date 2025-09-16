@@ -84,19 +84,8 @@ const ConnectedCalendarList = ({
                     <p className="text-subtle px-5 pt-4 text-sm">{t("toggle_calendars_conflict")}</p>
                     <ul className="space-y-4 px-5 py-4">
                       {connectedCalendar.calendars?.map((cal) => (
-                        <CalendarSwitch
-                          disabled={isDisabled}
-                          key={cal.externalId}
-                          externalId={cal.externalId}
-                          title={cal.name || "Nameless calendar"}
-                          name={cal.name || "Nameless calendar"}
-                          type={connectedCalendar.integration.type}
-                          isChecked={cal.isSelected}
-                          destination={cal.externalId === destinationCalendarId}
-                          credentialId={cal.credentialId}
-                          eventTypeId={shouldUseEventTypeScope ? eventTypeId : null}
-                          delegationCredentialId={connectedCalendar.delegationCredentialId || null}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       ))}
                     </ul>
                   </>
@@ -106,32 +95,8 @@ const ConnectedCalendarList = ({
           );
         }
         return (
-          <Alert
-            key={`alert-${connectedCalendar.credentialId}`}
-            severity="warning"
-            title={t("something_went_wrong")}
-            message={
-              <span>
-                <Link href={`/apps/${connectedCalendar.integration.slug}`}>
-                  {connectedCalendar.integration.name}
-                </Link>
-                : {t("calendar_error")}
-              </span>
-            }
-            iconClassName="h-10 w-10 ml-2 mr-1 mt-0.5"
-            actions={
-              <div className="flex w-32 justify-end">
-                <CredentialActionsDropdown
-                  credentialId={connectedCalendar.credentialId}
-                  integrationType={connectedCalendar.integration.type}
-                  cacheUpdatedAt={connectedCalendar.cacheUpdatedAt}
-                  onSuccess={onChanged}
-                  delegationCredentialId={connectedCalendar.delegationCredentialId}
-                  disableConnectionModification={disableConnectionModification}
-                />
-              </div>
-            }
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         );
       })}
     </List>
@@ -263,7 +228,8 @@ const SelectedCalendarsSettingsHeading = (props: {
       </div>
       {props.showScopeSelector && (
         <div className="mt-2 flex flex-row items-center space-x-2">
-          <span className="text-default text-sm">Using</span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <Select
             onChange={(option) => {
               if (!option) return;
@@ -272,7 +238,8 @@ const SelectedCalendarsSettingsHeading = (props: {
             value={switchScopeSelectValue}
             options={optionsToSwitchScope}
           />
-          <span className="text-default text-sm">settings</span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )}
     </div>

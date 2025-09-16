@@ -77,7 +77,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const session = await getSession({ req });
 
   if (!session) {
-    return res.status(401).json({ message: "Unauthorized" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const { user } = session;
@@ -90,11 +92,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
 
   if (!form) {
-    return res.status(404).json({ message: "Form not found or unauthorized" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!(await canEditEntity(form, user.id))) {
-    return res.status(404).json({ message: "Form not found or unauthorized" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const serializableForm = await getSerializableForm({ form, withDeletedFields: true });

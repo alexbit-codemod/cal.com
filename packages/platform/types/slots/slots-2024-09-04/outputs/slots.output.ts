@@ -2,25 +2,35 @@ import { ApiProperty } from "@nestjs/swagger";
 import { IsDateString, IsInt, IsString } from "class-validator";
 
 export class Slot_2024_09_04 {
-  @ApiProperty({ description: "Start time of slot." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsDateString()
   start!: string;
 }
 
 export class SeatedSlot_2024_09_04 extends Slot_2024_09_04 {
-  @ApiProperty({ description: "How many attendees are attending seated event at this slot." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsInt()
   seatsBooked!: number;
 
-  @ApiProperty({ description: "How many seats are remaining at this slot." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsInt()
   seatsRemaining!: number;
 
-  @ApiProperty({ description: "Total number of seats for the event type" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsInt()
   seatsTotal!: number;
 
-  @ApiProperty({ description: "Unique identifier of the booking of the seated event." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsString()
   bookingUid?: string;
 }
@@ -30,25 +40,35 @@ export class SlotsOutput_2024_09_04 {
 }
 
 export class RangeSlot_2024_09_04 extends Slot_2024_09_04 {
-  @ApiProperty({ description: "End time of slot." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsDateString()
   end!: string;
 }
 
 export class SeatedRangeSlot_2024_09_04 extends RangeSlot_2024_09_04 {
-  @ApiProperty({ description: "How many attendees are attending seated event at this slot." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsInt()
   seatsBooked!: number;
 
-  @ApiProperty({ description: "How many seats are remaining at this slot." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsInt()
   seatsRemaining!: number;
 
-  @ApiProperty({ description: "Total number of seats for the event type" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsInt()
   seatsTotal!: number;
 
-  @ApiProperty({ description: "Unique identifier of the booking of the seated event." })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsString()
   bookingUid?: string;
 }

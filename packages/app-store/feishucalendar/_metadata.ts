@@ -7,7 +7,9 @@ export const metadata = {
   description: _package.description,
   installed: true,
   type: "feishu_calendar",
-  title: "Feishu Calendar",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   variant: "calendar",
   categories: ["calendar"],
   logo: "icon.svg",

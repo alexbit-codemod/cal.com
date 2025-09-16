@@ -78,7 +78,9 @@ export async function getUserHandler({ input, ctx }: AdminVerifyOptions) {
   ]);
 
   if (!requestedUser || !membership)
-    throw new TRPCError({ code: "UNAUTHORIZED", message: "user_not_exist_or_not_in_org" });
+    throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const foundUser = {
     ...requestedUser,

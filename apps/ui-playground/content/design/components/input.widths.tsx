@@ -12,15 +12,20 @@ export const WidthsExample: React.FC = () => (
       <div className="space-y-4">
         {sizes.map((size) => (
           <div key={size} className="flex flex-col space-y-2">
-            <h3 className="text-emphasis text-sm">Size: {size}</h3>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div className="space-y-4">
               <div className="flex flex-col space-y-2">
-                <h4 className="text-subtle text-xs">Full Width</h4>
-                <Input type="text" placeholder="Full width input" size={size} isFullWidth />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
               <div className="flex flex-col space-y-2">
-                <h4 className="text-subtle text-xs">Auto Width</h4>
-                <Input type="text" placeholder="Auto width input" size={size} isFullWidth={false} />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             </div>
           </div>

@@ -23,7 +23,8 @@ const Page = async () => {
         <div className="mt-4 space-x-5 sm:ml-16 sm:mt-0 sm:flex-none">
           {/* TODO: Add import users functionality */}
           {/* <Button disabled>Import users</Button> */}
-          <Button href="/settings/admin/users/add">Add user</Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       }>
       <UsersListingView />

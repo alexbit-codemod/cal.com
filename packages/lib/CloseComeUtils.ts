@@ -169,7 +169,9 @@ export async function getCloseComCustomActivityTypeFieldsIds(
     // Create Custom Activity Type
     const { id: activityType } = await closeCom.customActivity.type.create({
       name: `${APP_NAME} Activity`,
-      description: `Bookings in your ${APP_NAME} account`,
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
     // Create Custom Activity Fields
     const fields = await Promise.all(
@@ -196,7 +198,9 @@ export async function getCloseComLeadId(
   closeCom: CloseCom,
   leadInfo: CloseComLead = {
     companyName: `From ${APP_NAME}`,
-    description: `Generic Lead for Contacts created by ${APP_NAME}`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   }
 ): Promise<string> {
   // TODO: Check for leads against email rather than name

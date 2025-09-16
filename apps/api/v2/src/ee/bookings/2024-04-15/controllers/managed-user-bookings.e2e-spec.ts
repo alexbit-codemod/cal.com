@@ -152,9 +152,13 @@ describe("Managed user bookings 2024-04-15", () => {
 
   it("should create an event type for managed user", async () => {
     const body: CreateEventTypeInput_2024_06_14 = {
-      title: "Managed user bookings first managed user event type",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: "managed-user-bookings-first-managed-user-event-type",
-      description: "Managed user bookings first managed user event type description",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       lengthInMinutes: 30,
     };
 

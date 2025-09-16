@@ -11,61 +11,87 @@ export class CreatePhoneCallInput {
   @IsString()
   @Matches(/^\+[1-9]\d{1,14}$/, {
     message:
-      "Invalid phone number format. Expected format: +<CountryCode><PhoneNumber> with no spaces or separators.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
-  @DocsProperty({ description: "Your phone number" })
+  @DocsProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   yourPhoneNumber!: string;
 
   @IsString()
   @Matches(/^\+[1-9]\d{1,14}$/, {
     message:
-      "Invalid phone number format. Expected format: +<CountryCode><PhoneNumber> with no spaces or separators.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
-  @DocsProperty({ description: "Number to call" })
+  @DocsProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   numberToCall!: string;
 
   @IsString()
-  @DocsProperty({ description: "CAL API Key" })
+  @DocsProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   calApiKey!: string;
 
   @IsBoolean()
-  @DocsProperty({ description: "Enabled status", default: true })
+  @DocsProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , default: true })
   enabled = true;
 
   @IsEnum(TemplateType)
-  @DocsProperty({ description: "Template type", enum: TemplateType })
+  @DocsProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , enum: TemplateType })
   templateType: TemplateType = TemplateType.CUSTOM_TEMPLATE;
 
   @IsOptional()
   @IsString()
-  @ApiPropertyOptional({ description: "Scheduler name" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   schedulerName?: string;
 
   @IsOptional()
   @IsString()
   @Transform(({ value }) => (value ? value : undefined))
-  @ApiPropertyOptional({ description: "Guest name" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   guestName?: string;
 
   @IsOptional()
   @IsString()
   @Transform(({ value }) => (value ? value : undefined))
-  @ApiPropertyOptional({ description: "Guest email" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   guestEmail?: string;
 
   @IsOptional()
   @IsString()
   @Transform(({ value }) => (value ? value : undefined))
-  @ApiPropertyOptional({ description: "Guest company" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   guestCompany?: string;
 
   @IsOptional()
   @IsString()
-  @ApiPropertyOptional({ description: "Begin message" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   beginMessage?: string;
 
   @IsOptional()
   @IsString()
-  @ApiPropertyOptional({ description: "General prompt" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   generalPrompt?: string;
 }

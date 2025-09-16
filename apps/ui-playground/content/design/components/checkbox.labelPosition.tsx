@@ -7,17 +7,11 @@ import { CheckboxField } from "@calcom/ui/components/form";
 export const LabelPositionExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="space-y-4">
-      <CheckboxField
-        description="Description with label above (default on mobile)"
-        id="label-above"
-        label="Label Above"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div className="sm:min-w-[400px]">
-        <CheckboxField
-          description="Description with label to the side (on larger screens)"
-          id="label-side"
-          label="Label to the Side"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   </RenderComponentWithSnippet>

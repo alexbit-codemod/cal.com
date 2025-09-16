@@ -23,11 +23,8 @@ function RenderIcon({
   const isPlatform = useIsPlatform();
 
   return (
-    <img
-      src={`${isPlatform ? process.env.NEXT_PUBLIC_WEBAPP_URL : ""}${eventLocationType.iconUrl}`}
-      className={classNames(invertLogoOnDark(eventLocationType?.iconUrl, isTooltip), "me-[10px] h-4 w-4")}
-      alt={`${eventLocationType.label} icon`}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }
 
@@ -50,7 +47,8 @@ function RenderLocationTooltip({ locations }: { locations: LocationObject[] }) {
           const translatedLocation = getTranslatedLocation(location, eventLocationType, t);
           return (
             <div key={`${location.type}-${index}`} className="font-sm flex flex-row items-center">
-              <RenderIcon eventLocationType={eventLocationType} isTooltip />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <p className="line-clamp-1">{translatedLocation}</p>
             </div>
           );
@@ -85,7 +83,8 @@ export function AvailableEventLocations({ locations }: { locations: LocationObje
           {eventLocationType.iconUrl === "/link.svg" ? (
             <Icon name="link" className="text-default h-4 w-4 ltr:mr-[10px] rtl:ml-[10px]" />
           ) : (
-            <RenderIcon eventLocationType={eventLocationType} isTooltip={false} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
           <Tooltip content={translatedLocation}>
             <p className="line-clamp-1">{translatedLocation}</p>
@@ -102,11 +101,8 @@ export function AvailableEventLocations({ locations }: { locations: LocationObje
       {isPlatform ? (
         <Icon name="map-pin" className={classNames("me-[10px] h-4 w-4 opacity-70 dark:invert")} />
       ) : (
-        <img
-          src="/map-pin-dark.svg"
-          className={classNames("me-[10px] h-4 w-4 opacity-70 dark:invert")}
-          alt="map-pin"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
       <Tooltip content={<RenderLocationTooltip locations={locations} />}>
         <p className="line-clamp-1">

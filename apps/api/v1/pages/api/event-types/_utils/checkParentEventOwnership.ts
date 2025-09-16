@@ -25,14 +25,18 @@ export default async function checkParentEventOwnership(req: NextApiRequest) {
   if (!parentEventType) {
     throw new HttpError({
       statusCode: 404,
-      message: "Parent event type not found.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!parentEventType.teamId) {
     throw new HttpError({
       statusCode: 400,
-      message: "This event type is not capable of having children",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -48,7 +52,9 @@ export default async function checkParentEventOwnership(req: NextApiRequest) {
   if (!teamMember) {
     throw new HttpError({
       statusCode: 403,
-      message: "User is not authorized to access the team to which the parent event type belongs.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 }

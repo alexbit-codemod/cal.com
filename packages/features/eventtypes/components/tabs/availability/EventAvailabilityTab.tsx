@@ -562,28 +562,8 @@ const EventTypeSchedule = ({
               (option) => option.value === value
             );
             return (
-              <Select
-                placeholder={t("select")}
-                options={filteredOptions}
-                isDisabled={shouldLockDisableProps(formFieldName).disabled}
-                isSearchable={false}
-                onChange={(selected) => {
-                  if (selected) {
-                    onChange(selected.value);
-                    if (fieldName === "restrictionSchedule" && selected.value) {
-                      setValue("restrictionScheduleId", selected.value, { shouldDirty: true });
-                    }
-                  }
-                }}
-                className={classNames(
-                  "block w-full min-w-0 flex-1 rounded-sm text-sm",
-                  customClassNames?.availabilitySelect?.select
-                )}
-                value={optionValue}
-                components={{ Option, SingleValue }}
-                isMulti={false}
-                innerClassNames={customClassNames?.availabilitySelect?.innerClassNames}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             );
           }}
         />
@@ -662,7 +642,8 @@ const TeamMemberSchedule = ({
   return (
     <>
       <div className={classNames("flex w-full items-center", customClassNames?.labelContainer)}>
-        {!isPlatform && <Avatar size="sm" imageSrc={avatar} alt={label || ""} />}
+        {!isPlatform && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$}
         {isPlatform && <Icon name="user" className={classNames("h-4 w-4", customClassNames?.labelAvatar)} />}
         <p className={classNames("text-emphasis my-auto ms-3 text-sm", customClassNames?.label)}>{label}</p>
       </div>
@@ -674,23 +655,8 @@ const TeamMemberSchedule = ({
             name={`hosts.${index}.scheduleId`}
             render={({ field }) => {
               return (
-                <Select
-                  placeholder={t("select")}
-                  options={options}
-                  isSearchable={false}
-                  onChange={(selected) => {
-                    field.onChange(selected?.value || null);
-                  }}
-                  className={classNames(
-                    "block w-full min-w-0 flex-1 rounded-sm text-sm",
-                    customClassNames?.select
-                  )}
-                  innerClassNames={customClassNames?.innerClassNames}
-                  value={value as AvailabilityOption}
-                  components={{ Option, SingleValue }}
-                  isMulti={false}
-                  isDisabled={isPending}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               );
             }}
           />

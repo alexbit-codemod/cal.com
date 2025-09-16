@@ -25,7 +25,9 @@ export const projectHandler = async ({ ctx }: ProjectsHandlerOptions) => {
     select: credentialForCalendarServiceSelect,
   });
   if (!credential) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "No credential found for user" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   let credentialKey = credential.key as BasecampToken;
   if (!credentialKey.account) {

@@ -44,13 +44,18 @@ export default function Index() {
 
   return (
     <div>
-      <h1>Welcome to Credential Sync Playground</h1>
-      <p>
-        You are managing credentials for cal.com <strong>userId={userId}</strong> for{" "}
-        <strong>appSlug={appSlug}</strong>. Update query params to manage a different user or app{" "}
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$ for{" "}
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$. Update query params to manage a different user or app{" "}
       </p>
-      <button onClick={() => updateToken({ invalid: true })}>Give an invalid token to Cal.com</button>
-      <button onClick={() => updateToken()}>Give a valid token to Cal.com</button>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <div>{data}</div>
     </div>
   );

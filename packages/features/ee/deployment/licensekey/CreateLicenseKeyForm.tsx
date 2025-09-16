@@ -103,7 +103,8 @@ const CreateANewLicenseKeyFormChild = ({ session }: { session: Ensure<SessionCon
                 control={newLicenseKeyFormMethods.control}
                 render={({ field: { value, onChange } }) => (
                   <>
-                    <Label htmlFor="billingPeriod">Billing Period</Label>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <ToggleGroup
                       isFullWidth
                       id="billingPeriod"
@@ -133,16 +134,8 @@ const CreateANewLicenseKeyFormChild = ({ session }: { session: Ensure<SessionCon
               }}
               render={({ field: { value, onChange } }) => (
                 <div className="flex">
-                  <TextField
-                    containerClassName="w-full"
-                    placeholder="john@acme.com"
-                    name="billingEmail"
-                    disabled={!isAdmin}
-                    label="Billing Email for Customer"
-                    defaultValue={value}
-                    onChange={onChange}
-                    autoComplete="off"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
               )}
             />
@@ -153,7 +146,8 @@ const CreateANewLicenseKeyFormChild = ({ session }: { session: Ensure<SessionCon
               control={newLicenseKeyFormMethods.control}
               render={({ field: { value, onChange } }) => (
                 <>
-                  <Label htmlFor="bookingType">Booking Type</Label>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <ToggleGroup
                     isFullWidth
                     id="bookingType"
@@ -185,14 +179,8 @@ const CreateANewLicenseKeyFormChild = ({ session }: { session: Ensure<SessionCon
                 required: "Must enter a total of billable users",
               }}
               render={({ field: { value, onChange } }) => (
-                <TextField
-                  className="mt-2"
-                  name="entityCount"
-                  label="Total entities included"
-                  placeholder="100"
-                  defaultValue={value}
-                  onChange={(event) => onChange(+event.target.value)}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             />
             <Controller
@@ -202,14 +190,8 @@ const CreateANewLicenseKeyFormChild = ({ session }: { session: Ensure<SessionCon
                 required: "Must enter fixed price per user",
               }}
               render={({ field: { value, onChange } }) => (
-                <TextField
-                  className="mt-2"
-                  name="entityPrice"
-                  label="Fixed price per entity"
-                  addOnSuffix="$"
-                  defaultValue={value / 100}
-                  onChange={(event) => onChange(+event.target.value * 100)}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             />
           </div>
@@ -223,17 +205,8 @@ const CreateANewLicenseKeyFormChild = ({ session }: { session: Ensure<SessionCon
               }}
               render={({ field: { value, onChange } }) => (
                 <>
-                  <TextField
-                    className="mt-2"
-                    placeholder="Acme"
-                    name="overages"
-                    addOnSuffix="$"
-                    label="Overages"
-                    disabled={!isAdmin}
-                    defaultValue={value / 100}
-                    onChange={(event) => onChange(+event.target.value * 100)}
-                    autoComplete="off"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </>
               )}
             />
@@ -258,14 +231,8 @@ const CreateANewLicenseKeyFormChild = ({ session }: { session: Ensure<SessionCon
           </div>
 
           <div className="mt-4 flex gap-2 [&>*]:flex-1 [&>*]:justify-center">
-            <Button
-              color="secondary"
-              onClick={() => {
-                newLicenseKeyFormMethods.reset();
-                setStripeCheckoutUrl(null);
-              }}>
-              Back
-            </Button>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
       )}

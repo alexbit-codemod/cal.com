@@ -28,30 +28,17 @@ export const BasicExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <InputField
-          label="Username"
-          {...form.register("username")}
-          error={form.formState.errors.username?.message}
-        />
-        <InputField
-          label="Email"
-          type="email"
-          {...form.register("email")}
-          error={form.formState.errors.email?.message}
-        />
-        <InputField
-          label="Password"
-          type="password"
-          {...form.register("password")}
-          error={form.formState.errors.password?.message}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <div className="flex justify-end space-x-2">
-          <Button color="minimal" type="button" onClick={() => form.reset()}>
-            Reset
-          </Button>
-          <Button type="submit" loading={form.formState.isSubmitting}>
-            Submit
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </form>
     </RenderComponentWithSnippet>

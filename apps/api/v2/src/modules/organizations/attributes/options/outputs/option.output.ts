@@ -8,14 +8,18 @@ export class OptionOutput {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The ID of the option",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "attr_option_id",
   })
   id!: string;
 
   @Expose()
   @IsString()
-  @ApiProperty({ type: String, required: true, description: "The ID of the attribute", example: "attr_id" })
+  @ApiProperty({ type: String, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "attr_id" })
   attributeId!: string;
 
   @Expose()
@@ -23,7 +27,9 @@ export class OptionOutput {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The value of the option",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "option_value",
   })
   value!: string;
@@ -33,7 +39,9 @@ export class OptionOutput {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The slug of the option",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "option-slug",
   })
   slug!: string;

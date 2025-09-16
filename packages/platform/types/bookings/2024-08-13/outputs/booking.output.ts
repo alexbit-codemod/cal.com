@@ -61,7 +61,9 @@ export class SeatedAttendee extends BookingAttendee {
   @ApiProperty({
     type: Object,
     description:
-      "Booking field responses consisting of an object with booking field slug as keys and user response as values.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { customField: "customValue" },
     required: true,
   })
@@ -177,7 +179,9 @@ class BaseBookingOutput_2024_08_13 {
   @ApiPropertyOptional({
     type: String,
     example: "previous_uid_123",
-    description: "UID of the previous booking from which this booking was rescheduled.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   @IsOptional()
@@ -187,7 +191,9 @@ class BaseBookingOutput_2024_08_13 {
   @ApiPropertyOptional({
     type: String,
     example: "new_uid_456",
-    description: "UID of the new booking to which this booking was rescheduled.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsString()
   @IsOptional()
@@ -213,7 +219,9 @@ class BaseBookingOutput_2024_08_13 {
     type: Number,
     example: 50,
     deprecated: true,
-    description: "Deprecated - rely on 'eventType' object containing the id instead.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsInt()
   @Expose()
@@ -227,7 +235,9 @@ class BaseBookingOutput_2024_08_13 {
   @ApiPropertyOptional({
     type: String,
 
-    description: "Deprecated - rely on 'location' field instead.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "https://example.com/recurring-meeting",
     deprecated: true,
   })
@@ -270,7 +280,9 @@ class BaseBookingOutput_2024_08_13 {
   @Expose()
   rating?: number;
 
-  @ApiPropertyOptional({ type: String, example: "ics_uid_123", description: "UID of ICS event." })
+  @ApiPropertyOptional({ type: String, example: "ics_uid_123", description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsString()
   @IsOptional()
   @Expose()
@@ -297,7 +309,9 @@ export class BookingOutput_2024_08_13 extends BaseBookingOutput_2024_08_13 {
   @ApiProperty({
     type: Object,
     description:
-      "Booking field responses consisting of an object with booking field slug as keys and user response as values.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { customField: "customValue" },
   })
   @IsObject()
@@ -314,7 +328,9 @@ export class RecurringBookingOutput_2024_08_13 extends BookingOutput_2024_08_13 
   @ApiProperty({
     type: Object,
     description:
-      "Booking field responses consisting of an object with booking field slug as keys and user response as values.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: { customField: "customValue" },
   })
   @IsObject()

@@ -163,7 +163,9 @@ export function getFormattedCitations(rawContent?: string): Citation[] {
 
     const uniqueCitations = new Map(
       citations.map((citation, index) => {
-        const title = citation.metadata.title ?? "";
+        const title = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         const formattedCitation = {
           citationNumber: index,
           title: citation.metadata.title ?? "",

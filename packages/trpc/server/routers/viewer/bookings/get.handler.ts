@@ -157,7 +157,9 @@ export async function getBookings({
     if (!areUserIdsWithinUserOrgOrTeam) {
       throw new TRPCError({
         code: "FORBIDDEN",
-        message: "You do not have permissions to fetch bookings for specified userIds",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -791,7 +793,9 @@ async function getAttendeeEmailsFromUserIdsFilter(
   if (!attendeeEmailsFromUserIdsFilter || attendeeEmailsFromUserIdsFilter?.length === 0) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "The requested users do not exist.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -835,7 +839,9 @@ async function getEventTypeIdsFromEventTypeIdsFilter(prisma: PrismaClient, event
   if (eventTypeIdsFromDb?.length === 0) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "The requested event-types do not exist.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

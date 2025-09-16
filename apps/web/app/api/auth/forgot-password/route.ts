@@ -14,7 +14,9 @@ async function handler(req: NextRequest) {
   const email = emailSchema.transform((val) => val.toLowerCase()).safeParse(body?.email);
 
   if (!email.success) {
-    return NextResponse.json({ message: "email is required" }, { status: 400 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
   }
 
   // fallback to email if ip is not present
@@ -39,10 +41,14 @@ async function handler(req: NextRequest) {
     });
     // Don't leak info about whether the user exists
     if (user) passwordResetRequest(user).catch(console.error);
-    return NextResponse.json({ message: "password_reset_email_sent" }, { status: 201 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 201 });
   } catch (reason) {
     console.error(reason);
-    return NextResponse.json({ message: "Unable to create password reset request" }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
   }
 }
 

@@ -81,21 +81,8 @@ export const CheckedTeamSelect = ({
 
   return (
     <>
-      <Select
-        {...props}
-        name={props.name}
-        placeholder={props.placeholder || t("select")}
-        isSearchable={true}
-        options={options}
-        value={valueFromGroup}
-        onChange={handleSelectChange}
-        isMulti
-        className={customClassNames?.hostsSelect?.select}
-        innerClassNames={{
-          ...customClassNames?.hostsSelect?.innerClassNames,
-          control: "rounded-md",
-        }}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       {/* This class name conditional looks a bit odd but it allows a seamless transition when using autoanimate
        - Slides down from the top instead of just teleporting in from nowhere*/}
       <ul
@@ -113,7 +100,8 @@ export const CheckedTeamSelect = ({
                 `flex px-3 py-2 ${index === valueFromGroup.length - 1 ? "" : "border-subtle border-b"}`,
                 customClassNames?.selectedHostList?.listItem?.container
               )}>
-              {!isPlatform && <Avatar size="sm" imageSrc={option.avatar} alt={option.label} />}
+              {!isPlatform && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$}
               {isPlatform && (
                 <Icon
                   name="user"

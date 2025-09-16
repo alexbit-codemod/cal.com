@@ -112,7 +112,9 @@ export class CalendarsController {
   @ApiOperation({
     summary: "Get busy times",
     description:
-      "Get busy times from a calendar. Example request URL is `https://api.cal.com/v2/calendars/busy-times?loggedInUsersTz=Europe%2FMadrid&dateFrom=2024-12-18&dateTo=2024-12-18&calendarsToLoad[0][credentialId]=135&calendarsToLoad[0][externalId]=skrauciz%40gmail.com`",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   async getBusyTimes(
     @Query() queryParams: CalendarBusyTimesInput,
@@ -162,7 +164,9 @@ export class CalendarsController {
     name: "redir",
     required: false,
     type: String,
-    description: "Redirect URL after successful calendar authorization.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async redirect(
     @Req() req: Request,

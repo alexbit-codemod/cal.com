@@ -60,7 +60,9 @@ const _handleResponse = async ({
     if (missingFields.length) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: `Missing required fields ${missingFields.join(", ")}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
     const invalidFields = serializableFormWithFields.fields
@@ -85,9 +87,9 @@ const _handleResponse = async ({
     if (invalidFields.length) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: `Invalid value for fields ${invalidFields
-          .map((f) => `'${f.label}' with value '${f.value}' should be valid ${f.type}`)
-          .join(", ")}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -102,7 +104,9 @@ const _handleResponse = async ({
       if (isRouter(chosenRoute)) {
         throw new TRPCError({
           code: "BAD_REQUEST",
-          message: "Chosen route is a router",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
 

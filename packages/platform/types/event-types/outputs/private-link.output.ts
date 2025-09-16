@@ -3,28 +3,36 @@ import { ApiExtraModels, ApiProperty, getSchemaPath } from "@nestjs/swagger";
 // Base class with common properties
 abstract class BasePrivateLinkOutput {
   @ApiProperty({
-    description: "The private link ID",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: String,
     example: "abc123def456",
   })
   linkId!: string;
 
   @ApiProperty({
-    description: "Event type ID this link belongs to",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Number,
     example: 123,
   })
   eventTypeId!: number;
 
   @ApiProperty({
-    description: "Whether the link is currently expired",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Boolean,
     example: false,
   })
   isExpired!: boolean;
 
   @ApiProperty({
-    description: "Full booking URL for this private link",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: String,
     format: "uri",
     example: "https://cal.com/d/abc123def456/30min",
@@ -35,7 +43,9 @@ abstract class BasePrivateLinkOutput {
 // Time-based private link (expires at a specific date)
 export class TimeBasedPrivateLinkOutput extends BasePrivateLinkOutput {
   @ApiProperty({
-    description: "Expiration date for this time-based link",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: String,
     format: "date-time",
     example: "2025-12-31T23:59:59.000Z",
@@ -46,14 +56,18 @@ export class TimeBasedPrivateLinkOutput extends BasePrivateLinkOutput {
 // Usage-based private link (expires after N uses)
 export class UsageBasedPrivateLinkOutput extends BasePrivateLinkOutput {
   @ApiProperty({
-    description: "Maximum number of times this link can be used",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Number,
     example: 10,
   })
   maxUsageCount!: number;
 
   @ApiProperty({
-    description: "Current usage count for this link",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: Number,
     example: 3,
   })
@@ -65,11 +79,15 @@ export type PrivateLinkOutput = TimeBasedPrivateLinkOutput | UsageBasedPrivateLi
 
 @ApiExtraModels(TimeBasedPrivateLinkOutput, UsageBasedPrivateLinkOutput)
 export class CreatePrivateLinkOutput {
-  @ApiProperty({ description: "Response status", example: "success" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "success" })
   status!: string;
 
   @ApiProperty({
-    description: "Created private link data (either time-based or usage-based)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(TimeBasedPrivateLinkOutput) },
       { $ref: getSchemaPath(UsageBasedPrivateLinkOutput) },
@@ -80,11 +98,15 @@ export class CreatePrivateLinkOutput {
 
 @ApiExtraModels(TimeBasedPrivateLinkOutput, UsageBasedPrivateLinkOutput)
 export class GetPrivateLinksOutput {
-  @ApiProperty({ description: "Response status", example: "success" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "success" })
   status!: string;
 
   @ApiProperty({
-    description: "Array of private links for the event type (mix of time-based and usage-based)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "array",
     items: {
       oneOf: [
@@ -98,11 +120,15 @@ export class GetPrivateLinksOutput {
 
 @ApiExtraModels(TimeBasedPrivateLinkOutput, UsageBasedPrivateLinkOutput)
 export class UpdatePrivateLinkOutput {
-  @ApiProperty({ description: "Response status", example: "success" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "success" })
   status!: string;
 
   @ApiProperty({
-    description: "Updated private link data (either time-based or usage-based)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(TimeBasedPrivateLinkOutput) },
       { $ref: getSchemaPath(UsageBasedPrivateLinkOutput) },
@@ -112,11 +138,15 @@ export class UpdatePrivateLinkOutput {
 }
 
 export class DeletePrivateLinkOutput {
-  @ApiProperty({ description: "Response status", example: "success" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "success" })
   status!: string;
 
   @ApiProperty({
-    description: "Deleted link information",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "object",
     properties: {
       linkId: { type: "string", example: "abc123def456" },

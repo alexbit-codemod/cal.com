@@ -64,7 +64,9 @@ export const useHandleBookEvent = ({
   const crmAppSlug = useBookerStoreContext((state) => state.crmAppSlug);
   const crmRecordId = useBookerStoreContext((state) => state.crmRecordId);
   const handleError = (err: any) => {
-    const errorMessage = err?.message ? t(err.message) : t("can_you_try_again");
+    const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     showToast(errorMessage, "error");
   };
   const searchParams = useSearchParams();

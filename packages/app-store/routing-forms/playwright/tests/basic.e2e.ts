@@ -157,9 +157,13 @@ test.describe("Routing Forms", () => {
 
     test("should be able to edit a newly created form", async ({ page }) => {
       const formId = await addForm(page);
-      const description = "Test Description";
+      const description = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
-      const label = "Test Label";
+      const label = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       const createdFields: Record<number, { label: string; typeIndex: number }> = {};
 
@@ -198,18 +202,26 @@ test.describe("Routing Forms", () => {
 
         await addOneFieldAndDescriptionAndSaveForm(form1Id, page, {
           name: "F1",
-          description: "Form 1 Description",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           field: {
-            label: "F1 Field1",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             typeIndex: 1,
           },
         });
 
         const { types } = await addOneFieldAndDescriptionAndSaveForm(form2Id, page, {
           name: "F2",
-          description: "Form 2 Description",
+          description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           field: {
-            label: "F2 Field1",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             //TODO: Maybe choose some other type and choose type by it's name and not index
             typeIndex: 1,
           },
@@ -230,12 +242,16 @@ test.describe("Routing Forms", () => {
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
         await expect(page.locator('[data-testid="field"]')).toHaveCount(2);
-        await expectCurrentFormToHaveFields(page, { 1: { label: "F1 Field1", typeIndex: 1 } }, types);
+        await expectCurrentFormToHaveFields(page, { 1: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , typeIndex: 1 } }, types);
         // Add 1 more field in F1
         await addOneFieldAndDescriptionAndSaveForm(form1Id, page, {
           name: "F1",
           field: {
-            label: "F1 Field2",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             typeIndex: 1,
           },
         });
@@ -244,7 +260,9 @@ test.describe("Routing Forms", () => {
         //FIXME: Figure out why this delay is required. Without it field count comes out to be 1 only
         await new Promise((resolve) => setTimeout(resolve, 1000));
         await expect(page.locator('[data-testid="field"]')).toHaveCount(3);
-        await expectCurrentFormToHaveFields(page, { 2: { label: "F1 Field2", typeIndex: 1 } }, types);
+        await expectCurrentFormToHaveFields(page, { 2: { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , typeIndex: 1 } }, types);
       });
       todo("Create relationship by using duplicate with live connect");
     });
@@ -267,8 +285,12 @@ test.describe("Routing Forms", () => {
       await saveCurrentForm(page);
 
       const { fields } = await addAllTypesOfFieldsAndSaveForm(formId, page, {
-        description: "Description",
-        label: "Test Field",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
       const queryString =
         "firstField=456&Test Field Number=456&Test Field Single Selection=456&Test Field Multiple Selection=456&Test Field Multiple Selection=789&Test Field Phone=456&Test Field Email=456@example.com";
@@ -417,7 +439,9 @@ test.describe("Routing Forms", () => {
       const downloadStream = await download.createReadStream();
       expect(download.suggestedFilename()).toEqual(`${routingForm.name}-${routingForm.id}.csv`);
       const csv: string = await new Promise((resolve) => {
-        let body = "";
+        let body = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         downloadStream?.on("data", (chunk) => {
           body += chunk;
         });
@@ -1068,7 +1092,9 @@ async function addAllTypesOfFieldsAndSaveForm(
   for (let index = 0; index < fieldTypesList.length; index++) {
     const fieldTypeLabel = fieldTypesList[index];
     const nth = index;
-    const label = `${form.label} ${fieldTypeLabel}`;
+    const label = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     let identifier = "";
 
     if (index !== 0) {

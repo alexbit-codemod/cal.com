@@ -58,36 +58,8 @@ export const TimeTimeUnitInput = (props: Props) => {
   return (
     <div className="flex">
       <div className="grow">
-        <TextField
-          type="number"
-          min="1"
-          label=""
-          disabled={props.disabled}
-          defaultValue={form.getValues("time") ?? props.defaultTime ?? 24}
-          className="rounded-r-none text-sm focus:ring-0"
-          {...form.register("time", { valueAsNumber: true })}
-          addOnSuffix={
-            <TimeUnitAddonSuffix
-              timeUnitOptions={timeUnitOptions}
-              DropdownItems={
-                <>
-                  {TIME_UNITS.map((timeUnit, index) => (
-                    <DropdownMenuItem key={index} className="outline-none">
-                      <DropdownItem
-                        key={index}
-                        type="button"
-                        onClick={() => {
-                          form.setValue("timeUnit", timeUnit, { shouldDirty: true });
-                        }}>
-                        {timeUnitOptions[timeUnit]}
-                      </DropdownItem>
-                    </DropdownMenuItem>
-                  ))}
-                </>
-              }
-            />
-          }
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );

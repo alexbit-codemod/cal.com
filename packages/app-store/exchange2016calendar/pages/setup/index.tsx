@@ -26,11 +26,8 @@ export default function Exchange2016CalendarSetup() {
     <div className="bg-emphasis flex h-screen">
       <div className="bg-default m-auto rounded p-5 md:w-[560px] md:p-10">
         <div>
-          <img
-            src="/api/app-store/exchange2016calendar/icon.svg"
-            alt="Exchange 2016 Calendar"
-            className="h-12 w-12 max-w-2xl"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="flex w-10/12 flex-col">
           <h1 className="text-default">{t("add_exchange2016")}</h1>
@@ -55,31 +52,16 @@ export default function Exchange2016CalendarSetup() {
                 }
               }}>
               <fieldset className="space-y-2" disabled={form.formState.isSubmitting}>
-                <TextField
-                  required
-                  type="text"
-                  {...form.register("url")}
-                  label={t("calendar_url")}
-                  placeholder="https://example.com/Ews/Exchange.asmx"
-                />
-                <TextField
-                  required
-                  type="text"
-                  {...form.register("username")}
-                  label="E-Mail"
-                  placeholder="rickroll@example.com"
-                />
-                <TextField
-                  required
-                  type="password"
-                  {...form.register("password")}
-                  label="Password"
-                  placeholder="•••••••••••••"
-                  autoComplete="password"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </fieldset>
 
-              {errorMessage && <Alert severity="error" title={errorMessage} className="my-4" />}
+              {errorMessage && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$}
               <div className="mt-5 justify-end space-x-2 rtl:space-x-reverse sm:mt-4 sm:flex">
                 <Button type="button" color="secondary" onClick={() => router.back()}>
                   {t("cancel")}

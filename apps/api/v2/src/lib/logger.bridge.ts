@@ -88,12 +88,16 @@ export class Logger {
 
   fatal(...args: any[]) {
     // Prepend FATAL: to the message and log as error
-    const fatalMessage = `fatal: ${this.formatArgsAsString(args)}`;
+    const fatalMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     this.settings.minLevel <= 3 && this.logInternal("error", fatalMessage);
   }
 
   silly(...args: any[]) {
-    const sillyMessage = `silly: ${this.formatArgsAsString(args)}`;
+    const sillyMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     this.settings.minLevel === 0 && this.logInternal("verbose", sillyMessage);
   }
 
@@ -123,7 +127,9 @@ export class Logger {
       const formattedMessage = this.formatArgsAsString(args);
 
       // Prepend the prefix if it exists
-      const message = this.prefix ? `${this.prefix} ${formattedMessage}` : formattedMessage;
+      const message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       // Call the corresponding NestLogger method
       switch (level) {

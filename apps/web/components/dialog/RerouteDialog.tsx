@@ -650,13 +650,10 @@ const NewRoutingManager = ({
     return (
       <div>
         <span className="text-attention">
-          <span>Continue with rerouting in the new</span>{" "}
-          <a
-            href="javascript:void(0)"
-            className="text-attention underline"
-            onClick={() => reroutingState.value?.reschedulerWindow?.focus()}>
-            tab
-          </a>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$${" "}
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </span>
       </div>
     );
@@ -911,7 +908,8 @@ export const RerouteDialog = ({ isOpenDialog, setIsOpenDialog, booking }: Rerout
   return (
     <Dialog open={isOpenDialog} onOpenChange={setIsOpenDialog}>
       <DialogContent enableOverflow preventCloseOnOutsideClick>
-        <DialogHeader title={t("reroute_booking")} subtitle={t("reroute_booking_description")} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <RerouteDialogContentAndFooter
           booking={teamEventTypeBooking}
           isOpenDialog={isOpenDialog}

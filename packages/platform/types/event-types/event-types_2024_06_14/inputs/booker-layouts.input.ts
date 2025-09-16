@@ -74,22 +74,30 @@ function IsDefaultLayoutWithinEnabledLayouts(validationOptions?: ValidationOptio
 }
 @IsDefaultLayoutWithinEnabledLayouts()
 export class BookerLayouts_2024_06_14 {
-  @IsValidLayout({ message: "defaultLayout must be one of the valid layouts - month, week or column" })
+  @IsValidLayout({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @ApiProperty({ type: String, enum: BookerLayoutsInputEnum_2024_06_14 })
   @IsEnum(BookerLayoutsInputEnum_2024_06_14)
   defaultLayout!: BookerLayoutsInputEnum_2024_06_14;
 
   @IsValidLayout({
-    message: "enabledLayouts must be an array containing valid layouts - month, week or column",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     type: [String],
     enum: BookerLayoutsInputEnum_2024_06_14,
-    description: "Array of valid layouts - month, week or column",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @IsEnum(BookerLayoutsInputEnum_2024_06_14, {
     each: true,
-    message: "enabledLayouts must contain only valid layouts - month, week or column",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   enabledLayouts!: BookerLayoutsInputEnum_2024_06_14[];
 }

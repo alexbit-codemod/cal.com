@@ -53,20 +53,26 @@ const usernameHandler =
       json: {
         available: true,
         premium: false,
-        message: "Username is available",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       },
     };
 
     if (check.premium) {
       req.usernameStatus.statusCode = 402;
       req.usernameStatus.json.premium = true;
-      req.usernameStatus.json.message = "This is a premium username.";
+      req.usernameStatus.json.message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
     }
 
     if (!check.available) {
       req.usernameStatus.statusCode = 418;
       req.usernameStatus.json.available = false;
-      req.usernameStatus.json.message = "A user exists with that username";
+      req.usernameStatus.json.message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
     }
 
     req.usernameStatus.json.suggestion = check.suggestedUsername;

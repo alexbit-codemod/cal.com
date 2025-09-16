@@ -15,6 +15,8 @@ export const captureErrors: NextMiddleware = async (_req, res, next) => {
       res.status(400).json({ message: redactedError.message, error: redactedError });
       return;
     }
-    res.status(400).json({ message: "Something went wrong", error });
+    res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , error });
   }
 };

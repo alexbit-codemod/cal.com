@@ -7,7 +7,9 @@ import { Metadata, METADATA_DOCS, ValidateMetadata } from "@calcom/platform-type
 export class CreateOrganizationInput extends RefreshApiKeyInput {
   @IsString()
   @Length(1)
-  @ApiProperty({ description: "Name of the organization", example: "CalTeam" })
+  @ApiProperty({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "CalTeam" })
   readonly name!: string;
 
   @IsOptional()
@@ -15,7 +17,9 @@ export class CreateOrganizationInput extends RefreshApiKeyInput {
   @ApiPropertyOptional({
     type: String,
     description:
-      "Organization slug in kebab-case - if not provided will be generated automatically based on name.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "cal-tel",
   })
   readonly slug?: string;

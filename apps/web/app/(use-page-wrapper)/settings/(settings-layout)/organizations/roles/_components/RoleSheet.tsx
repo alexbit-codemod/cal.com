@@ -180,12 +180,8 @@ export function RoleSheet({ role, open, onOpenChange, teamId, scope = Scope.Orga
           <div className="space-y-4 py-5">
             <div className="flex items-end justify-end gap-2">
               <div className="flex-1">
-                <TextField
-                  label={t("role_name")}
-                  {...form.register("name")}
-                  placeholder={t("role_name_placeholder")}
-                  disabled={isSystemRole}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
               <RoleColorPicker
                 value={color}
@@ -208,13 +204,8 @@ export function RoleSheet({ role, open, onOpenChange, teamId, scope = Scope.Orga
                         <span className="text-sm">{t("advanced")}</span>
                       </div>
                     </div>
-                    <TextField
-                      id="permissions_search"
-                      placeholder={t("search_permissions")}
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      disabled={isSystemRole}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
 
                   {filteredResources.map((resource) => (

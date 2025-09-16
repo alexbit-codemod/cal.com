@@ -145,7 +145,8 @@ const EnableTwoFactorModal = ({ onEnable, onCancel }: EnableTwoFactorModalProps)
   return (
     <Dialog open={true}>
       <DialogContent>
-        <TwoFactorModalHeader title={t("enable_2fa")} description={setupDescriptions[step]} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
         <WithStep step={SetupStep.ConfirmPassword} current={step}>
           <form onSubmit={handleSetup}>
@@ -174,7 +175,8 @@ const EnableTwoFactorModal = ({ onEnable, onCancel }: EnableTwoFactorModalProps)
             <div className="flex justify-center">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={dataUri} alt="" />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               }
             </div>
             <p className="text-center font-mono text-xs">{secret}</p>

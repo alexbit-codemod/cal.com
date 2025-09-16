@@ -27,7 +27,8 @@ const PlatformMembersView = (props: Omit<UserListTableProps, "facetedTeamValues"
         teamId={userOrgId}
         heading={
           <div className="mb-5 text-center text-2xl font-semibold">
-            <h1>Subscribe to Platform</h1>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         }
       />

@@ -108,7 +108,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       });
 
       await eventTypesRepositoryFixture.create(
-        { title: "frisbee match orgUserOne", slug: sharedEventTypeSlug, length: 60 },
+        { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , slug: sharedEventTypeSlug, length: 60 },
         orgUserOne.id
       );
 
@@ -125,7 +127,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       });
 
       await eventTypesRepositoryFixture.create(
-        { title: "frisbee match nonOrgUser", slug: sharedEventTypeSlug, length: 60 },
+        { title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , slug: sharedEventTypeSlug, length: 60 },
         nonOrgUser.id
       );
 
@@ -170,7 +174,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
         team: {
           connect: { id: team.id },
         },
-        title: "Collective Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `slots-2024-09-04-org-collective-event-type-${randomString()}`,
         length: 60,
         assignAllTeamMembers: true,
@@ -188,7 +194,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
         team: {
           connect: { id: team.id },
         },
-        title: "RR Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `slots-2024-09-04-org-round-robin-event-type-${randomString()}`,
         length: 60,
         assignAllTeamMembers: true,
@@ -335,7 +343,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${collectiveEventTypeId}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -381,7 +391,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const booking = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${roundRobinEventTypeId}`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -424,7 +436,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
       const startTime = "2050-09-05T11:00:00.000Z";
       const bookingOne = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${roundRobinEventTypeId}-1`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {
@@ -448,7 +462,9 @@ describe("Slots 2024-09-04 Endpoints", () => {
 
       const bookingTwo = await bookingsRepositoryFixture.create({
         uid: `booking-uid-${roundRobinEventTypeId}-2`,
-        title: "booking title",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime,
         endTime: "2050-09-05T12:00:00.000Z",
         eventType: {

@@ -28,10 +28,8 @@ export const DisabledAppEmail = (
 
           <hr style={{ marginBottom: "24px" }} />
 
-          <CallToAction
-            label={t("edit_event_type")}
-            href={`${WEBAPP_URL}/event-types/${eventTypeId}?tabName=apps`}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       ) : title && eventTypeId ? (
         <>
@@ -41,10 +39,8 @@ export const DisabledAppEmail = (
 
           <hr style={{ marginBottom: "24px" }} />
 
-          <CallToAction
-            label={t("edit_event_type")}
-            href={`${WEBAPP_URL}/event-types/${eventTypeId}?tabName=apps`}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       ) : appType.some((type) => type === "video") ? (
         <>
@@ -54,7 +50,8 @@ export const DisabledAppEmail = (
 
           <hr style={{ marginBottom: "24px" }} />
 
-          <CallToAction label={t("navigate_installed_apps")} href={`${WEBAPP_URL}/apps/installed`} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       ) : appType.some((type) => type === "calendar") ? (
         <>
@@ -67,7 +64,8 @@ export const DisabledAppEmail = (
 
           <hr style={{ marginBottom: "24px" }} />
 
-          <CallToAction label={t("navigate_installed_apps")} href={`${WEBAPP_URL}/apps/installed`} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       ) : (
         <>
@@ -77,7 +75,8 @@ export const DisabledAppEmail = (
 
           <hr style={{ marginBottom: "24px" }} />
 
-          <CallToAction label={t("navigate_installed_apps")} href={`${WEBAPP_URL}/apps/installed`} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </>
       )}
     </BaseEmailHtml>

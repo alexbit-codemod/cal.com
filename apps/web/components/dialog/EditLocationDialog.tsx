@@ -196,17 +196,8 @@ export const EditLocationDialog = (props: ISetLocationDialog) => {
             {t(eventLocationType.messageForOrganizer || "")}
           </label>
           <div className="mt-1">
-            <LocationInput
-              locationFormMethods={locationFormMethods}
-              eventLocationType={eventLocationType}
-              id="locationInput"
-              placeholder={t(eventLocationType.organizerInputPlaceholder || "")}
-              required
-              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-              defaultValue={
-                defaultLocation ? defaultLocation[eventLocationType.defaultValueVariable] : undefined
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <ErrorMessage
               errors={locationFormMethods.formState.errors}
               name={eventLocationType.variable}

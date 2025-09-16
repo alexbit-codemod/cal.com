@@ -83,7 +83,9 @@ export const updateProfileHandler = async ({ ctx, input }: UpdateProfileOptions)
     const stripeCustomerId = userMetadata?.stripeCustomerId;
     const isPremium = userMetadata?.isPremium;
     if (!isPremium || !stripeCustomerId) {
-      throw new TRPCError({ code: "BAD_REQUEST", message: "User is not premium" });
+      throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const stripeSubscriptions = await billingService.getSubscriptions(stripeCustomerId);
@@ -91,7 +93,9 @@ export const updateProfileHandler = async ({ ctx, input }: UpdateProfileOptions)
     if (!stripeSubscriptions || !stripeSubscriptions.length) {
       throw new TRPCError({
         code: "INTERNAL_SERVER_ERROR",
-        message: "No stripeSubscription found",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -106,7 +110,9 @@ export const updateProfileHandler = async ({ ctx, input }: UpdateProfileOptions)
     if (!isPremiumUsernameSubscriptionActive) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: "You need to pay for premium username",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -256,7 +262,9 @@ export const updateProfileHandler = async ({ ctx, input }: UpdateProfileOptions)
     if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002") {
       const meta = e.meta as { target: string[] };
       if (meta.target.indexOf("email") !== -1) {
-        throw new HttpError({ statusCode: 409, message: "email_already_used" });
+        throw new HttpError({ statusCode: 409, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         });
       }
     }
     throw e; // make sure other errors are rethrown

@@ -117,7 +117,9 @@ describe("Teams Memberships Endpoints", () => {
         team: {
           connect: { id: team.id },
         },
-        title: "Collective Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "collective-event-type",
         length: 30,
         assignAllTeamMembers: true,
@@ -130,7 +132,9 @@ describe("Teams Memberships Endpoints", () => {
         team: {
           connect: { id: team.id },
         },
-        title: "Managed Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "managed-event-type",
         length: 60,
         assignAllTeamMembers: true,

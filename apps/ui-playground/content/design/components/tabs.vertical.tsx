@@ -57,7 +57,8 @@ export const VerticalExample: React.FC = () => {
     <RenderComponentWithSnippet>
       <div className="max-w-xs space-y-6">
         <div>
-          <h3 className="text-emphasis mb-2 text-sm font-medium">Basic</h3>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <VerticalTabs
             tabs={verticalTabItems.map((item) => ({
               ...item,

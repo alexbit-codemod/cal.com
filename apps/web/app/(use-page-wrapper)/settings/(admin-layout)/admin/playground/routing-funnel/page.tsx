@@ -58,10 +58,10 @@ export default function RoutingFunnelPlayground() {
   return (
     <div className="space-y-6 p-6">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold">Routing Funnel Playground</h1>
-        <p className="mt-2 text-gray-600">
-          This page demonstrates the RoutingFunnelContent component with sample data.
-        </p>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       <div className="max-w-4xl">
@@ -81,7 +81,8 @@ export default function RoutingFunnelPlayground() {
       </div>
 
       <div className="mt-8 rounded-lg bg-gray-50 p-4">
-        <h2 className="mb-2 text-lg font-semibold">Sample Data Used:</h2>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <pre className="overflow-auto text-sm text-gray-700">
           {JSON.stringify(sampleRoutingFunnelData, null, 2)}
         </pre>

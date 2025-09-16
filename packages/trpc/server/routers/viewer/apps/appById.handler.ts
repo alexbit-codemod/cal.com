@@ -21,7 +21,9 @@ export const appByIdHandler = async ({ ctx, input }: AppByIdOptions) => {
   const apps = getApps(credentials);
   const appFromDb = apps.find((app) => app.slug === appId);
   if (!appFromDb) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: `Could not find app ${appId}` });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

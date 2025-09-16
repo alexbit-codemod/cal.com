@@ -15,13 +15,10 @@ const options = [
 export const DisabledExample: React.FC = () => (
   <RenderComponentWithSnippet>
     <div className="space-y-4 md:w-80">
-      <Select options={options} isDisabled placeholder="This select is disabled..." />
-      <SelectField
-        label="Disabled Field"
-        options={options}
-        isDisabled
-        placeholder="This field is disabled..."
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   </RenderComponentWithSnippet>
 );

@@ -37,7 +37,8 @@ export const SubSectionExample = () => {
               </Section.SubSectionHeader>
               {isFirstSubsectionOpen && (
                 <Section.SubSectionContent>
-                  <p>This is the content of the first subsection.</p>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </Section.SubSectionContent>
               )}
             </Section.SubSection>
@@ -52,10 +53,14 @@ export const SubSectionExample = () => {
               {isSecondSubsectionOpen && (
                 <Section.SubSectionContent>
                   <div className="flex gap-3 px-3 py-1.5">
-                    <div className="text-subtle w-full text-sm font-medium">Field Name</div>
-                    <div className="text-subtle w-full text-sm font-medium">Field Type</div>
-                    <div className="text-subtle w-full text-sm font-medium">Value</div>
-                    <div className="text-subtle w-full text-sm font-medium">When to Write</div>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <Section.SubSectionNested>
                     <div className="flex gap-3">

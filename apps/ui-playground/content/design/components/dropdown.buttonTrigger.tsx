@@ -31,10 +31,12 @@ export const ButtonTriggerExample: React.FC = () => (
       <div className="flex flex-col items-center gap-2">
         <Dropdown>
           <DropdownMenuTrigger asChild>
-            <Button>Menu</Button>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             {menuItems.map((item) => (
               <DropdownItem color={item.destructive ? "destructive" : "secondary"} key={item.label}>
                 {item.label}
@@ -42,17 +44,20 @@ export const ButtonTriggerExample: React.FC = () => (
             ))}
           </DropdownMenuContent>
         </Dropdown>
-        <span className="text-subtle text-xs">Default</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       {/* Button with Icon */}
       <div className="flex flex-col items-center gap-2">
         <Dropdown>
           <DropdownMenuTrigger asChild>
-            <Button>More Actions</Button>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel>Quick Actions</DropdownMenuLabel>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             {menuItems.map((item) => (
               <DropdownItem key={item.label} color={item.destructive ? "destructive" : undefined}>
                 {item.label}
@@ -60,7 +65,8 @@ export const ButtonTriggerExample: React.FC = () => (
             ))}
           </DropdownMenuContent>
         </Dropdown>
-        <span className="text-subtle text-xs">With Icon</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       {/* Icon Button */}
@@ -77,7 +83,8 @@ export const ButtonTriggerExample: React.FC = () => (
             ))}
           </DropdownMenuContent>
         </Dropdown>
-        <span className="text-subtle text-xs">Icon Only</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   </RenderComponentWithSnippet>

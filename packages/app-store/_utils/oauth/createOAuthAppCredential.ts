@@ -22,7 +22,9 @@ const createOAuthAppCredential = async (
 ) => {
   const userId = req.session?.user.id;
   if (!userId) {
-    throw new HttpError({ statusCode: 401, message: "You must be logged in to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   // For OAuth flows, see if a teamId was passed through the state
   const state = decodeOAuthState(req);

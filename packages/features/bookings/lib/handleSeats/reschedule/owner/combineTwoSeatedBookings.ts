@@ -105,7 +105,9 @@ const combineTwoSeatedBookings = async (
   });
 
   if (!updatedNewBooking) {
-    throw new HttpError({ statusCode: 404, message: "Updated booking not found" });
+    throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Update the evt object with the new attendees

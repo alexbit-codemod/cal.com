@@ -40,17 +40,23 @@ const getOuraSleepScore = async (user_id: string, bedtime_start: Date) => {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== "POST") {
-      throw new HttpCode({ statusCode: 405, message: "Method Not Allowed" });
+      throw new HttpCode({ statusCode: 405, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const sig = req.headers["svix-signature"];
     if (!sig) {
-      throw new HttpCode({ statusCode: 400, message: "Missing svix-signature" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const vitalClient = await initVitalClient();
 
     if (!vitalClient || !vitalEnv)
-      return res.status(400).json({ message: "Missing vital client, try calling `initVitalClient`" });
+      return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
 
     const payload = JSON.stringify(req.body);
 
@@ -75,7 +81,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             },
           });
           if (!credential) {
-            return res.status(404).json({ message: "Missing vital credential" });
+            return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             });
           }
 
           // Getting total hours of sleep seconds/60/60 = hours
@@ -96,12 +104,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             minimumSleepTime = vitalSettings.sleepValue as number;
             parameterFilter = vitalSettings.parameter as string;
           } else {
-            res.status(404).json({ message: "Vital configuration not found for user" });
+            res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             });
             return;
           }
 
           if (!event.data.hasOwnProperty(parameterFilter)) {
-            res.status(500).json({ message: "Selected param not available" });
+            res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+             });
             return;
           }
           const totalHoursSleep = Number(event.data[parameterFilter]) / 60 / 60;

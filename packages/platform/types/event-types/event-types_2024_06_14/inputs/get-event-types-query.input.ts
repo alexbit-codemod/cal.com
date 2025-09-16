@@ -7,7 +7,9 @@ export class GetEventTypesQuery_2024_06_14 {
   @IsString()
   @ApiPropertyOptional({
     description:
-      "The username of the user to get event types for. If only username provided will get all event types.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   username?: string;
 
@@ -15,7 +17,9 @@ export class GetEventTypesQuery_2024_06_14 {
   @IsOptional()
   @ApiPropertyOptional({
     description:
-      "Slug of event type to return. Notably, if eventSlug is provided then username must be provided too, because multiple users can have event with same slug.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   eventSlug?: string;
 
@@ -23,7 +27,9 @@ export class GetEventTypesQuery_2024_06_14 {
   @TransformUsernames()
   @ApiPropertyOptional({
     description:
-      "Get dynamic event type for multiple usernames separated by comma. e.g `usernames=alice,bob`",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: String,
   })
   usernames?: string[];
@@ -32,7 +38,9 @@ export class GetEventTypesQuery_2024_06_14 {
   @IsString()
   @ApiPropertyOptional({
     description:
-      "slug of the user's organization if he is in one, orgId is not required if using this parameter",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: String,
   })
   orgSlug?: string;
@@ -42,7 +50,9 @@ export class GetEventTypesQuery_2024_06_14 {
   @IsNumber()
   @ApiPropertyOptional({
     description:
-      "ID of the organization of the user you want the get the event-types of, orgSlug is not needed when using this parameter",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     type: Number,
   })
   orgId?: number;
@@ -52,7 +62,9 @@ export class GetTeamEventTypesQuery_2024_06_14 {
   @IsString()
   @IsOptional()
   @ApiPropertyOptional({
-    description: "Slug of team event type to return.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   eventSlug?: string;
 
@@ -61,7 +73,9 @@ export class GetTeamEventTypesQuery_2024_06_14 {
   @IsNumber()
   @ApiPropertyOptional({
     description:
-      "Specifies the maximum number of hosts to include in the response. This limit helps optimize performance. If not provided, all Hosts will be fetched.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hostsLimit?: number;
 }

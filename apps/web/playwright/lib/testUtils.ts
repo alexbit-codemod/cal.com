@@ -24,7 +24,9 @@ type RequestHandler = (opts: RequestHandlerOptions) => void;
 export const testEmail = "test@example.com";
 export const testName = "Test Testson";
 
-export const teamEventTitle = "Team Event - 30min";
+export const teamEventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+$$$
+;
 export const teamEventSlug = "team-event-30min";
 
 export const IS_STRIPE_ENABLED = !!(
@@ -201,7 +203,9 @@ export async function setupManagedEvent({
   unlockedFields?: Record<string, boolean>;
 }) {
   const teamMateName = "teammate-1";
-  const teamEventTitle = "Managed";
+  const teamEventTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   const adminUser = await users.create(null, {
     hasTeam: true,
     teammates: [{ name: teamMateName }],
@@ -357,7 +361,9 @@ async function createUserWithSeatedEvent(users: Fixtures["users"]) {
     name: "Seated event user",
     eventTypes: [
       {
-        title: "Seated event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug,
         seatsPerTimeSlot: 10,
         requiresConfirmation: true,
@@ -550,13 +556,17 @@ export async function bookTeamEvent({
     const bookingTitle = await page.getByTestId("booking-title").textContent();
 
     const isMatch = teamMatesObj?.some((teamMate) => {
-      const expectedTitle = `${event.title} between ${teamMate.name} and ${testName}`;
+      const expectedTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       return expectedTitle.trim() === bookingTitle?.trim();
     });
 
     expect(isMatch).toBe(true);
   } else {
-    const BookingTitle = `${event.title} between ${team.name} and ${testName}`;
+    const BookingTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     await expect(page.getByTestId("booking-title")).toHaveText(BookingTitle);
   }
   // The booker should be in the attendee list

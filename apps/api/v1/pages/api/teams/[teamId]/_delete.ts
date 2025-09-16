@@ -41,7 +41,9 @@ export async function deleteHandler(req: NextApiRequest) {
   const { teamId } = schemaQueryTeamId.parse(query);
   await checkPermissions(req);
   await prisma.team.delete({ where: { id: teamId } });
-  return { message: `Team with id: ${teamId} deleted successfully` };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }
 
 export default defaultResponder(deleteHandler);

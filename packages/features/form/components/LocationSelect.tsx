@@ -74,7 +74,8 @@ const OptionWithIcon = ({
 
   return (
     <div className="flex items-center gap-3">
-      {icon && <img src={icon} alt="cover" className={classNames("h-3.5 w-3.5", invertLogoOnDark(icon))} />}
+      {icon && // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$}
       <span className={classNames(" text-sm font-medium")}>{label}</span>
     </div>
   );
@@ -86,21 +87,9 @@ export default function LocationSelect({
 }: Props<LocationOption, false, GroupOptionType> & { customClassNames?: LocationSelectCustomClassNames }) {
   const isPlatform = useIsPlatform();
   return (
-    <Select<LocationOption>
-      name="location"
-      id="location-select"
-      data-testid="location-select"
-      components={{
-        Option: (props) => {
-          return (
-            <components.Option {...props}>
-              <div data-testid={`location-select-item-${props.data.value}`}>
-                <OptionWithIcon
-                  icon={props.data.icon}
-                  label={props.data.label}
-                  value={props.data.value}
-                  customClassNames={customClassNames}
-                />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             </components.Option>
           );
@@ -109,12 +98,8 @@ export default function LocationSelect({
           return (
             <components.SingleValue {...props}>
               <div data-testid={`location-select-item-${props.data.value}`}>
-                <OptionWithIcon
-                  icon={props.data.icon}
-                  label={props.data.label}
-                  value={props.data.value}
-                  customClassNames={customClassNames}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             </components.SingleValue>
           );
@@ -123,11 +108,8 @@ export default function LocationSelect({
       formatOptionLabel={(e, d) => (
         <div className="flex items-center gap-3">
           {e.icon && !isPlatform && (
-            <img
-              src={e.icon}
-              alt="app-icon"
-              className={classNames(e.icon.includes("-dark") && "dark:invert", "h-5 w-5")}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
           <span>{e.label}</span>
         </div>

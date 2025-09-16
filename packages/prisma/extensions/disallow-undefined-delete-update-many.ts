@@ -8,7 +8,9 @@ export const checkUndefinedInValue = (where: any) => {
       const whereInput = where[key as any] as any;
       let message;
       if (whereInput === undefined) {
-        message = `The value for the field "${key}" cannot be undefined.`;
+        message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         throw new Error(message);
       }
 
@@ -17,7 +19,9 @@ export const checkUndefinedInValue = (where: any) => {
       }
 
       if (whereInput.hasOwnProperty("in") && typeof whereInput.in === "undefined") {
-        message = `The "in" value for the field "${key}" cannot be undefined.`;
+        message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         throw new Error(message);
       }
     }

@@ -14,7 +14,9 @@ async function handler(req: NextRequest) {
   try {
     appDirRequestBody = await req.json();
   } catch (error) {
-    return NextResponse.json({ success: false, message: "Invalid JSON" }, { status: 400 });
+    return NextResponse.json({ success: false, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
   }
   const session = await getServerSession({ req: buildLegacyRequest(await headers(), await cookies()) });
   const bookingData = bookingCancelInput.parse(appDirRequestBody);

@@ -146,7 +146,9 @@ export async function deleteSegment(page: Page, segmentName: string) {
 
   await page
     .locator('[role="dialog"]')
-    .filter({ hasText: "Delete Segment" })
+    .filter({ hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     })
     .getByRole("button", { name: "Delete" })
     .click();
 

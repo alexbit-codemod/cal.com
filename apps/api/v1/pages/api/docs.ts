@@ -12,7 +12,9 @@ const swaggerHandler = withSwagger({
     ],
     externalDocs: {
       url: "https://docs.cal.com/docs",
-      description: "Find more info at our main docs: https://docs.cal.com/docs/",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
     info: {
       title: `${pjson.name}: ${pjson.description}`,
@@ -169,7 +171,9 @@ const swaggerHandler = withSwagger({
       { name: "memberships" },
       {
         name: "availabilities",
-        description: "Allows modifying unique availabilities tied to a schedule.",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       },
       { name: "custom-inputs" },
       { name: "event-references" },

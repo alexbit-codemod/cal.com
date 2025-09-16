@@ -57,20 +57,26 @@ export class GetBookingsInput_2024_04_15 {
   @Min(1)
   @Max(100)
   @IsOptional()
-  @ApiPropertyOptional({ description: "Maximum number of bookings to retrieve.", example: 50 })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 50 })
   limit?: number;
 
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @IsOptional()
-  @ApiPropertyOptional({ description: "Cursor for pagination.", example: 10, nullable: true })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 10, nullable: true })
   cursor?: number | null;
 }
 
 export class CancelBookingInput_2024_04_15 {
   @IsNumber()
   @IsOptional()
-  @ApiPropertyOptional({ description: "Booking ID to cancel.", example: 123 })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 123 })
   id?: number;
 
   @IsString()
@@ -89,7 +95,9 @@ export class CancelBookingInput_2024_04_15 {
   @IsOptional()
   @ApiPropertyOptional({
     type: String,
-    description: "Reason for cancellation.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Scheduling conflict",
   })
   cancellationReason?: string;

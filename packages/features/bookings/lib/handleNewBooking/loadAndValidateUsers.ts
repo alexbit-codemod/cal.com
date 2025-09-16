@@ -98,10 +98,14 @@ const _loadAndValidateUsers = async ({
   const isDynamicAllowed = !users.some((user) => !user.allowDynamicBooking);
   if (!isDynamicAllowed && !eventTypeId) {
     logger.warn({
-      message: "NewBooking: Some of the users in this group do not allow dynamic booking",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
     throw new HttpError({
-      message: "Some of the users in this group do not allow dynamic booking",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       statusCode: 400,
     });
   }
@@ -121,7 +125,9 @@ const _loadAndValidateUsers = async ({
       },
     });
     if (!eventTypeUser) {
-      logger.warn({ message: "NewBooking: eventTypeUser.notFound" });
+      logger.warn({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
       throw new HttpError({ statusCode: 404, message: "eventTypeUser.notFound" });
     }
     users.push(withSelectedCalendars(eventTypeUser));

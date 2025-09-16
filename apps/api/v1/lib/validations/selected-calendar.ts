@@ -47,15 +47,21 @@ export const selectedCalendarIdSchema = schemaQueryIdAsString.transform((v, ctx)
   const [_integration, externalId] = integration_externalId.split("_calendar_");
   const userIdInt = schemaQueryIdParseInt.safeParse({ id: userIdStr });
   if (!userIdInt.success) {
-    ctx.addIssue({ code: z.ZodIssueCode.custom, message: "userId is not a number" });
+    ctx.addIssue({ code: z.ZodIssueCode.custom, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return z.NEVER;
   }
   if (!_integration) {
-    ctx.addIssue({ code: z.ZodIssueCode.custom, message: "Missing integration" });
+    ctx.addIssue({ code: z.ZodIssueCode.custom, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return z.NEVER;
   }
   if (!externalId) {
-    ctx.addIssue({ code: z.ZodIssueCode.custom, message: "Missing externalId" });
+    ctx.addIssue({ code: z.ZodIssueCode.custom, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     return z.NEVER;
   }
   return {

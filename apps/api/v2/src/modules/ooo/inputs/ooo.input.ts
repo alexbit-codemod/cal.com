@@ -35,7 +35,9 @@ export class CreateOutOfOfficeEntryDto {
   })
   @IsDate()
   @ApiProperty({
-    description: "The start date and time of the out of office period in ISO 8601 format in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2023-05-01T00:00:00.000Z",
   })
   start!: Date;
@@ -50,7 +52,9 @@ export class CreateOutOfOfficeEntryDto {
   })
   @IsDate()
   @ApiProperty({
-    description: "The end date and time of the out of office period in ISO 8601 format in UTC timezone.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2023-05-10T23:59:59.999Z",
   })
   end!: Date;
@@ -58,7 +62,9 @@ export class CreateOutOfOfficeEntryDto {
   @IsString()
   @IsOptional()
   @ApiPropertyOptional({
-    description: "Optional notes for the out of office entry.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Vacation in Hawaii",
   })
   notes?: string;
@@ -66,7 +72,9 @@ export class CreateOutOfOfficeEntryDto {
   @IsInt()
   @IsOptional()
   @ApiPropertyOptional({
-    description: "The ID of the user covering for the out of office period, if applicable.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 2,
   })
   toUserId?: number;
@@ -74,7 +82,9 @@ export class CreateOutOfOfficeEntryDto {
   @IsEnum(OutOfOfficeReason)
   @IsOptional()
   @ApiPropertyOptional({
-    description: "the reason for the out of office entry, if applicable",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "vacation",
     enum: OutOfOfficeReason,
   })
@@ -92,11 +102,15 @@ type SortOrderType = keyof typeof SortOrder;
 export class GetOutOfOfficeEntryFiltersDTO extends SkipTakePagination {
   @IsOptional()
   @IsEnum(SortOrder, {
-    message: 'SortStart must be either "asc" or "desc".',
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     required: false,
-    description: "Sort results by their start time in ascending or descending order.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?sortStart=asc OR ?sortStart=desc",
     enum: SortOrder,
   })
@@ -104,11 +118,15 @@ export class GetOutOfOfficeEntryFiltersDTO extends SkipTakePagination {
 
   @IsOptional()
   @IsEnum(SortOrder, {
-    message: 'SortEnd must be either "asc" or "desc".',
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty({
     required: false,
-    description: "Sort results by their end time in ascending or descending order.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "?sortEnd=asc OR ?sortEnd=desc",
     enum: SortOrder,
   })
@@ -121,7 +139,9 @@ export class GetOrgUsersOutOfOfficeEntryFiltersDTO extends GetOutOfOfficeEntryFi
   @ApiProperty({
     type: String,
     required: false,
-    description: "Filter ooo entries by the user email address. user must be within your organization.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "example@domain.com",
   })
   email?: string;

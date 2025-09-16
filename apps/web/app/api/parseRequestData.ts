@@ -13,7 +13,9 @@ export async function parseUrlFormData(req: NextRequest): Promise<Record<string,
     return Object.fromEntries(params);
   } catch (e) {
     log.error(`Invalid Url Form Data: ${e} from path ${req.nextUrl}`);
-    throw new HttpError({ statusCode: 400, message: "Bad Request (Invalid Url Form Data)" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 
@@ -23,7 +25,9 @@ export async function parseMultiFormData(req: NextRequest): Promise<Record<strin
     return Object.fromEntries(formData.entries());
   } catch (e) {
     log.error(`Invalid Multi Form Data: ${e} from path ${req.nextUrl}`);
-    throw new HttpError({ statusCode: 400, message: "Bad Request (Invalid Multi Form Data)" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 }
 
@@ -34,7 +38,9 @@ export async function parseRequestData(req: NextRequest): Promise<Record<string,
       return await req.json();
     } catch (e) {
       log.error(`Invalid JSON: ${e} from path ${req.nextUrl}`);
-      throw new HttpError({ statusCode: 400, message: "Bad Request (Invalid JSON)" });
+      throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
   }
 
@@ -47,5 +53,7 @@ export async function parseRequestData(req: NextRequest): Promise<Record<string,
   }
 
   log.error(`Unsupported content type: ${contentType} from path ${req.nextUrl}`);
-  throw new HttpError({ statusCode: 415, message: `Unsupported Content-Type. Expected ${contentType}` });
+  throw new HttpError({ statusCode: 415, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }

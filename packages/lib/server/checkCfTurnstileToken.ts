@@ -12,7 +12,9 @@ export async function checkCfTurnstileToken({ token, remoteIp }: { token?: strin
   }
 
   if (!token) {
-    throw new HttpError({ statusCode: 401, message: "No cloudflare token - please try again" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const form = new URLSearchParams();
@@ -28,7 +30,9 @@ export async function checkCfTurnstileToken({ token, remoteIp }: { token?: strin
   const data = await result.json();
 
   if (!data["success"]) {
-    throw new HttpError({ statusCode: 401, message: "Invalid cloudflare token" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   return data;

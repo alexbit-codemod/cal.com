@@ -100,41 +100,16 @@ const EnterpriseLicense = (
           </Button>
           <div className="relative flex justify-center">
             <hr className="border-subtle my-8 w-full border-[1.5px]" />
-            <span className="bg-default absolute mt-[22px] px-3.5 text-sm">OR</span>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           {t("already_have_key")}
           <Controller
             name="licenseKey"
             control={formMethods.control}
             render={({ field: { onBlur, onChange, value } }) => (
-              <TextField
-                {...formMethods.register("licenseKey")}
-                className={classNames(
-                  "group-hover:border-emphasis mb-0",
-                  (checkLicenseLoading || (errors.licenseKey === undefined && isDirty)) && "border-r-0"
-                )}
-                placeholder="xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx"
-                labelSrOnly={true}
-                value={value}
-                addOnClassname={classNames(
-                  "hover:border-default",
-                  errors.licenseKey === undefined && isDirty && "group-hover:border-emphasis"
-                )}
-                addOnSuffix={
-                  checkLicenseLoading ? (
-                    <Icon name="loader" className="h-5 w-5 animate-spin" />
-                  ) : errors.licenseKey === undefined && isDirty ? (
-                    <Icon name="check" className="h-5 w-5 text-green-700" />
-                  ) : undefined
-                }
-                color={errors.licenseKey ? "warn" : ""}
-                onBlur={onBlur}
-                onChange={async (e: React.ChangeEvent<HTMLInputElement>) => {
-                  onChange(e.target.value);
-                  formMethods.setValue("licenseKey", e.target.value);
-                  await formMethods.trigger("licenseKey");
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           />
         </div>

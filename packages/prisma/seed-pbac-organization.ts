@@ -133,7 +133,9 @@ async function createCustomRoles(organizationId: number) {
     data: {
       id: `event_manager_${organizationId}`,
       name: "Event Manager",
-      description: "Can create and manage event types, view bookings and recordings",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       color: "#3B82F6", // Blue
       teamId: organizationId,
       type: RoleType.CUSTOM,
@@ -167,7 +169,9 @@ async function createCustomRoles(organizationId: number) {
     data: {
       id: `analytics_specialist_${organizationId}`,
       name: "Analytics Specialist",
-      description: "Can view insights, reports, and booking analytics",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       color: "#10B981", // Green
       teamId: organizationId,
       type: RoleType.CUSTOM,
@@ -203,7 +207,9 @@ async function createCustomRoles(organizationId: number) {
     data: {
       id: `team_coordinator_${organizationId}`,
       name: "Team Coordinator",
-      description: "Can invite/remove team members, manage workflows and routing forms",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       color: "#8B5CF6", // Purple
       teamId: organizationId,
       type: RoleType.CUSTOM,
@@ -247,7 +253,9 @@ async function createCustomRoles(organizationId: number) {
     data: {
       id: `support_agent_${organizationId}`,
       name: "Support Agent",
-      description: "Can view bookings and basic event information for customer support",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       color: "#F59E0B", // Amber
       teamId: organizationId,
       type: RoleType.CUSTOM,
@@ -491,7 +499,9 @@ async function createTeamWithCustomRoles(organizationId: number, users: any[], c
   // Create some event types for the team
   await prisma.eventType.create({
     data: {
-      title: "Sales Consultation",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: "sales-consultation",
       length: 30,
       teamId: team.id,
@@ -504,7 +514,9 @@ async function createTeamWithCustomRoles(organizationId: number, users: any[], c
 
   await prisma.eventType.create({
     data: {
-      title: "Product Demo",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: "product-demo",
       length: 45,
       teamId: team.id,

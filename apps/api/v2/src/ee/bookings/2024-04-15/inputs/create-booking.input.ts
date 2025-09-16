@@ -64,7 +64,9 @@ class Response {
   name!: string | BookingName;
 
   @Validate((value: string) => !value || isEmail(value), {
-    message: "Invalid response email",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @ApiProperty()
   email!: string;
@@ -114,7 +116,9 @@ export class CreateBookingInput_2024_04_15 {
   @IsOptional()
   @ApiPropertyOptional({ description: RESCHEDULED_BY_DOCS })
   @Validate((value: string) => !value || isEmail(value), {
-    message: "Invalid rescheduledBy email format",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   rescheduledBy?: string;
 

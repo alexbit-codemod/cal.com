@@ -50,13 +50,8 @@ function SearchBarComponent({ className }: SearchBarProps, ref: Ref<HTMLInputEle
   };
 
   return (
-    <Input
-      ref={ref}
-      className={classNames("max-w-48", className)}
-      placeholder={t("search")}
-      value={localValue}
-      onChange={handleSearchChange}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }
 

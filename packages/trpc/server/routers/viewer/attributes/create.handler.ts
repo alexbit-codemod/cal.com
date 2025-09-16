@@ -26,7 +26,9 @@ const createAttributesHandler = async ({ input, ctx }: GetOptions) => {
   if (!org.id) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You need to be apart of an organization to use this feature",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -43,7 +45,9 @@ const createAttributesHandler = async ({ input, ctx }: GetOptions) => {
   if (!membership) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You need to be apart of this organization to use this feature",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -62,7 +66,9 @@ const createAttributesHandler = async ({ input, ctx }: GetOptions) => {
   if (!canCreate) {
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "You don't have permission to create attributes",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

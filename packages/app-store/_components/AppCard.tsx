@@ -65,14 +65,8 @@ export default function AppCard({
         }
         iconSlot={
           <Link href={`/apps/${app.slug}`} className="flex h-8 w-8 items-center justify-center">
-            <img
-              className={classNames(
-                app?.logo.includes("-dark") && "dark:invert",
-                "max-h-full max-w-full object-contain"
-              )}
-              src={app?.logo}
-              alt={app?.name}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Link>
         }>
         <div>

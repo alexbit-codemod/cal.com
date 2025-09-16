@@ -112,13 +112,16 @@ export class OAuthFlowController {
   @DocsTags("Platform / Managed Users")
   @DocsHeader({
     name: X_CAL_SECRET_KEY,
-    description: "OAuth client secret key.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     required: true,
   })
   @ApiOperation({
     summary: "Refresh managed user tokens",
-    description: `If managed user access token is expired then get a new one using this endpoint - it will also refresh the refresh token, because we use
-    "refresh token rotation" mechanism. ${TOKENS_DOCS}`,
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   async refreshTokens(
     @Param("clientId") clientId: string,

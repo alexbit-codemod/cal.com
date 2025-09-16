@@ -35,11 +35,15 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
       );
       return;
     }
-    throw new HttpError({ statusCode: 400, message: "`code` must be a string" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!req.session?.user?.id) {
-    throw new HttpError({ statusCode: 401, message: "You must be logged in to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const { client_id, client_secret } = await getGoogleAppKeys();
@@ -58,7 +62,9 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
       if (!state?.fromApp) {
         throw new HttpError({
           statusCode: 400,
-          message: "You must grant all permissions to use this integration",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
       res.redirect(
@@ -120,7 +126,9 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
         externalId: selectedCalendarWhereUnique.externalId,
       });
     } catch (error) {
-      let errorMessage = "something_went_wrong";
+      let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
         // it is possible a selectedCalendar was orphaned, in this situation-
         // we want to recover by connecting the existing selectedCalendar to the new Credential.
@@ -132,7 +140,9 @@ async function getHandler(req: NextApiRequest, res: NextApiResponse) {
           return;
         }
         // else
-        errorMessage = "account_already_linked";
+        errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
       }
       await CredentialRepository.deleteById({ id: gcalCredential.id });
       res.redirect(

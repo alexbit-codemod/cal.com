@@ -31,14 +31,8 @@ const UsersAddView = () => {
   return (
     <div>
       <LicenseRequired>
-        <UserForm
-          submitLabel="Add user"
-          onSubmit={async (values) => {
-            const parser = getParserWithGeneric(userBodySchema);
-            const parsedValues = parser(values);
-            mutation.mutate(parsedValues);
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </LicenseRequired>
     </div>
   );

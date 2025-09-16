@@ -44,9 +44,13 @@ export async function handleStripePaymentSuccess(event: Stripe.Event) {
 
   if (!payment?.bookingId) {
     log.error("Stripe: Payment Not Found", safeStringify(paymentIntent), safeStringify(payment));
-    throw new HttpCode({ statusCode: 204, message: "Payment not found" });
+    throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
-  if (!payment?.bookingId) throw new HttpCode({ statusCode: 204, message: "Payment not found" });
+  if (!payment?.bookingId) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   await handlePaymentSuccess(payment.id, payment.bookingId);
 }
@@ -59,7 +63,9 @@ const handleSetupSuccess = async (event: Stripe.Event) => {
     },
   });
 
-  if (!payment?.data || !payment?.id) throw new HttpCode({ statusCode: 204, message: "Payment not found" });
+  if (!payment?.data || !payment?.id) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const { booking, user, evt, eventType } = await getBooking(payment.bookingId);
 
@@ -67,7 +73,9 @@ const handleSetupSuccess = async (event: Stripe.Event) => {
     paid: true,
   };
 
-  if (!user) throw new HttpCode({ statusCode: 204, message: "No user found" });
+  if (!user) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const requiresConfirmation = doesBookingRequireConfirmation({
     booking: {
@@ -148,15 +156,21 @@ const webhookHandlers: Record<string, WebhookHandler | undefined> = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== "POST") {
-      throw new HttpCode({ statusCode: 405, message: "Method Not Allowed" });
+      throw new HttpCode({ statusCode: 405, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const sig = req.headers["stripe-signature"];
     if (!sig) {
-      throw new HttpCode({ statusCode: 400, message: "Missing stripe-signature" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     if (!process.env.STRIPE_WEBHOOK_SECRET) {
-      throw new HttpCode({ statusCode: 500, message: "Missing process.env.STRIPE_WEBHOOK_SECRET" });
+      throw new HttpCode({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const requestBuffer = await buffer(req);
     const payload = requestBuffer.toString();
@@ -166,7 +180,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // bypassing this validation for e2e tests
     // in order to successfully confirm the payment
     if (!event.account && !process.env.NEXT_PUBLIC_IS_E2E) {
-      throw new HttpCode({ statusCode: 202, message: "Incoming connected account" });
+      throw new HttpCode({ statusCode: 202, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const handler = webhookHandlers[event.type];
@@ -176,7 +192,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       /** Not really an error, just letting Stripe know that the webhook was received but unhandled */
       throw new HttpCode({
         statusCode: 202,
-        message: `Unhandled Stripe Webhook event type ${event.type}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   } catch (_err) {

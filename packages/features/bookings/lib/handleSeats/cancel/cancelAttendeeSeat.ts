@@ -47,14 +47,18 @@ async function cancelAttendeeSeat(
   if (!bookingToDelete?.attendees.length || bookingToDelete.attendees.length < 2) return;
 
   if (!bookingToDelete.userId) {
-    throw new HttpError({ statusCode: 400, message: "User not found" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const seatReference = bookingToDelete.seatsReferences.find(
     (reference) => reference.referenceUid === seatReferenceUid
   );
 
-  if (!seatReference) throw new HttpError({ statusCode: 400, message: "User not a part of this booking" });
+  if (!seatReference) throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   await Promise.all([
     prisma.bookingSeat.delete({

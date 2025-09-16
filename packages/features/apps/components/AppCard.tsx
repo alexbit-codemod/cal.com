@@ -84,14 +84,8 @@ export function AppCard({ app, credentials, searchText, userAdminTeams }: AppCar
   return (
     <div className="border-subtle relative flex h-64 flex-col rounded-md border p-5">
       <div className="flex">
-        <img
-          src={app.logo}
-          alt={`${app.name} Logo`}
-          className={classNames(
-            app.logo.includes("-dark") && "dark:invert",
-            "mb-4 h-12 w-12 rounded-sm" // TODO: Maybe find a better way to handle this @Hariom?
-          )}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <div className="flex items-center">
         <h3 className="text-emphasis font-medium">
@@ -178,7 +172,8 @@ export function AppCard({ app, credentials, searchText, userAdminTeams }: AppCar
       <div className="max-w-44 absolute right-0 mr-4 flex flex-wrap justify-end gap-1">
         {appAdded > 0 ? <Badge variant="green">{t("installed", { count: appAdded })}</Badge> : null}
         {app.isTemplate && (
-          <span className="bg-error rounded-md px-2 py-1 text-sm font-normal text-red-800">Template</span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         )}
         {(app.isDefault || (!app.isDefault && app.isGlobal)) && (
           <span className="bg-subtle text-emphasis flex items-center rounded-md px-2 py-1 text-sm font-normal">

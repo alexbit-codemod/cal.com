@@ -41,7 +41,9 @@ export const addGuestsHandler = async ({ ctx, input }: AddGuestsOptions) => {
     },
   });
 
-  if (!booking) throw new TRPCError({ code: "NOT_FOUND", message: "booking_not_found" });
+  if (!booking) throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const isTeamAdminOrOwner =
     (await isTeamAdmin(user.id, booking.eventType?.teamId ?? 0)) ||
@@ -52,7 +54,9 @@ export const addGuestsHandler = async ({ ctx, input }: AddGuestsOptions) => {
   const isAttendee = !!booking.attendees.find((attendee) => attendee.email === user.email);
 
   if (!isTeamAdminOrOwner && !isOrganizer && !isAttendee) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "you_do_not_have_permission" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const organizer = await prisma.user.findUniqueOrThrow({
@@ -78,7 +82,9 @@ export const addGuestsHandler = async ({ ctx, input }: AddGuestsOptions) => {
   );
 
   if (uniqueGuests.length === 0)
-    throw new TRPCError({ code: "BAD_REQUEST", message: "emails_must_be_unique_valid" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const guestsFullDetails = uniqueGuests.map((guest) => {
     return {
@@ -173,5 +179,7 @@ export const addGuestsHandler = async ({ ctx, input }: AddGuestsOptions) => {
     console.log("Error sending AddGuestsEmails");
   }
 
-  return { message: "Guests added" };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 };

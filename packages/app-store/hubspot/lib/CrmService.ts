@@ -125,9 +125,13 @@ export default class HubspotCalendarService implements CRM {
     const appKeys = await getAppKeysFromSlug("hubspot");
     if (typeof appKeys.client_id === "string") this.client_id = appKeys.client_id;
     if (typeof appKeys.client_secret === "string") this.client_secret = appKeys.client_secret;
-    if (!this.client_id) throw new HttpError({ statusCode: 400, message: "Hubspot client_id missing." });
+    if (!this.client_id) throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     if (!this.client_secret)
-      throw new HttpError({ statusCode: 400, message: "Hubspot client_secret missing." });
+      throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     const credentialKey = credential.key as unknown as HubspotToken;
     const isTokenValid = (token: HubspotToken) =>
       token &&

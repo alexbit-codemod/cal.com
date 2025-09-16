@@ -11,7 +11,9 @@ export default class EventLocationChangedSMS extends SMSManager {
   getMessage(attendee: Person) {
     const t = attendee.language.translate;
 
-    const messageText = `${t("event_location_changed")}`;
+    const messageText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     const bookingUrl = `${this.calEvent.bookerUrl ?? WEBAPP_URL}/booking/${this.calEvent.uid}?changes=true`;
 

@@ -89,13 +89,8 @@ export const SelectedCalendarsSettingsPlatformWrapper = ({
                     calendarRedirectUrls={calendarRedirectUrls}
                     isDryRun={isDryRun}
                   />
-                  <h1
-                    className={cn(
-                      "px-6 py-4 text-base leading-5",
-                      classNamesObject?.noSelectedCalendarsMessage
-                    )}>
-                    No connected calendars found.
-                  </h1>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </SelectedCalendarsSettings>
               );
             }
@@ -164,19 +159,8 @@ export const SelectedCalendarsSettingsPlatformWrapper = ({
                             <ul className="space-y-4 px-5 py-4">
                               {connectedCalendar.calendars?.map((cal) => {
                                 return (
-                                  <PlatformCalendarSwitch
-                                    key={cal.externalId}
-                                    externalId={cal.externalId}
-                                    title={cal.name || "Nameless calendar"}
-                                    name={cal.name || "Nameless calendar"}
-                                    type={connectedCalendar.integration.type}
-                                    isChecked={cal.isSelected}
-                                    destination={cal.externalId === destinationCalendarId}
-                                    credentialId={cal.credentialId}
-                                    delegationCredentialId={connectedCalendar.delegationCredentialId}
-                                    eventTypeId={null}
-                                    isDryRun={isDryRun}
-                                  />
+                                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                                  $$$
                                 );
                               })}
                             </ul>
@@ -185,26 +169,8 @@ export const SelectedCalendarsSettingsPlatformWrapper = ({
                       );
                     }
                     return (
-                      <Alert
-                        key={`alert-${connectedCalendar.credentialId}`}
-                        severity="warning"
-                        title={t("something_went_wrong")}
-                        message={<span>{connectedCalendar.error?.message || t("calendar_error")}</span>}
-                        iconClassName="h-10 w-10 ml-2 mr-1 mt-0.5"
-                        actions={
-                          !Boolean(connectedCalendar.delegationCredentialId) && (
-                            <div className="flex w-32 justify-end">
-                              <PlatformDisconnectIntegration
-                                credentialId={connectedCalendar.credentialId}
-                                trashIcon
-                                buttonProps={{ className: "border border-default" }}
-                                slug={connectedCalendar.integration.slug}
-                                isDryRun={isDryRun}
-                              />
-                            </div>
-                          )
-                        }
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     );
                   })}
                 </List>
@@ -403,43 +369,16 @@ const PlatformAdditionalCalendarSelector = ({
       <DropdownMenuContent className="w-auto">
         <div>
           <div>
-            <Connect.GoogleCalendar
-              isDryRun={isDryRun}
-              isMultiCalendar={true}
-              isClickable={true}
-              tooltip={<></>}
-              redir={calendarRedirectUrls?.google ?? window.location.href}
-              label={t("add_calendar_label", { calendar: "Google" })}
-              loadingLabel={t("add_calendar_label", { calendar: "Google" })}
-              alreadyConnectedLabel={t("add_calendar_label", { calendar: "Google" })}
-              className="hover:bg-subtle hover:text-default cursor-pointer border-none bg-inherit text-inherit md:rounded-md"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div>
-            <Connect.OutlookCalendar
-              isDryRun={isDryRun}
-              isMultiCalendar={true}
-              isClickable={true}
-              tooltip={<></>}
-              redir={calendarRedirectUrls?.outlook ?? window.location.href}
-              label={t("add_calendar_label", { calendar: "Outlook" })}
-              loadingLabel={t("add_calendar_label", { calendar: "Outlook" })}
-              alreadyConnectedLabel={t("add_calendar_label", { calendar: "Outlook" })}
-              className="hover:bg-subtle hover:text-default cursor-pointer border-none bg-inherit text-inherit md:rounded-md"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div>
-            <AppleConnect
-              isDryRun={isDryRun}
-              onSuccess={refetch}
-              isClickable={true}
-              isMultiCalendar={true}
-              tooltip={<></>}
-              label={t("add_calendar_label", { calendar: "Apple" })}
-              loadingLabel={t("add_calendar_label", { calendar: "Apple" })}
-              alreadyConnectedLabel={t("add_calendar_label", { calendar: "Apple" })}
-              className="hover:bg-subtle hover:text-default cursor-pointer border-none bg-inherit text-inherit md:rounded-md"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
       </DropdownMenuContent>

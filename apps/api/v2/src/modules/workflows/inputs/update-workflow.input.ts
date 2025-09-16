@@ -49,7 +49,9 @@ export type UpdateWorkflowStepDto =
 export class UpdateEmailAttendeeWorkflowStepDto extends WorkflowEmailAttendeeStepDto {
   @ApiProperty({
     description:
-      "Unique identifier of the step you want to update, if adding a new step do not provide this id",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 67244,
   })
   @IsNumber()
@@ -59,7 +61,9 @@ export class UpdateEmailAttendeeWorkflowStepDto extends WorkflowEmailAttendeeSte
 export class UpdateEmailAddressWorkflowStepDto extends WorkflowEmailAddressStepDto {
   @ApiProperty({
     description:
-      "Unique identifier of the step you want to update, if adding a new step do not provide this id",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 67244,
   })
   @IsNumber()
@@ -69,7 +73,9 @@ export class UpdateEmailAddressWorkflowStepDto extends WorkflowEmailAddressStepD
 export class UpdateEmailHostWorkflowStepDto extends WorkflowEmailHostStepDto {
   @ApiProperty({
     description:
-      "Unique identifier of the step you want to update, if adding a new step do not provide this id",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 67244,
   })
   @IsNumber()
@@ -79,7 +85,9 @@ export class UpdateEmailHostWorkflowStepDto extends WorkflowEmailHostStepDto {
 export class UpdatePhoneWhatsAppNumberWorkflowStepDto extends WorkflowPhoneWhatsAppNumberStepDto {
   @ApiProperty({
     description:
-      "Unique identifier of the step you want to update, if adding a new step do not provide this id",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 67244,
   })
   @IsNumber()
@@ -88,7 +96,9 @@ export class UpdatePhoneWhatsAppNumberWorkflowStepDto extends WorkflowPhoneWhats
 export class UpdatePhoneAttendeeWorkflowStepDto extends WorkflowPhoneAttendeeStepDto {
   @ApiProperty({
     description:
-      "Unique identifier of the step you want to update, if adding a new step do not provide this id",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 67244,
   })
   @IsNumber()
@@ -97,7 +107,9 @@ export class UpdatePhoneAttendeeWorkflowStepDto extends WorkflowPhoneAttendeeSte
 export class UpdatePhoneNumberWorkflowStepDto extends WorkflowPhoneNumberStepDto {
   @ApiProperty({
     description:
-      "Unique identifier of the step you want to update, if adding a new step do not provide this id",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 67244,
   })
   @IsNumber()
@@ -106,7 +118,9 @@ export class UpdatePhoneNumberWorkflowStepDto extends WorkflowPhoneNumberStepDto
 export class UpdateWhatsAppAttendeePhoneWorkflowStepDto extends WorkflowPhoneWhatsAppAttendeeStepDto {
   @ApiProperty({
     description:
-      "Unique identifier of the step you want to update, if adding a new step do not provide this id",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: 67244,
   })
   @IsNumber()
@@ -131,13 +145,17 @@ export class UpdateWhatsAppAttendeePhoneWorkflowStepDto extends WorkflowPhoneWha
   BaseWorkflowTriggerDto
 )
 export class UpdateWorkflowDto {
-  @ApiPropertyOptional({ description: "Name of the workflow", example: "Platform Test Workflow" })
+  @ApiPropertyOptional({ description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "Platform Test Workflow" })
   @IsString()
   @IsOptional()
   name?: string;
 
   @ApiPropertyOptional({
-    description: "Activation settings for the workflow, the action that will trigger the workflow.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: WorkflowActivationDto,
   })
   @ValidateNested()
@@ -146,7 +164,9 @@ export class UpdateWorkflowDto {
   activation?: WorkflowActivationDto;
 
   @ApiPropertyOptional({
-    description: "Trigger configuration for the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(OnBeforeEventTriggerDto) },
       { $ref: getSchemaPath(OnAfterEventTriggerDto) },
@@ -183,7 +203,9 @@ export class UpdateWorkflowDto {
     | OnAfterCalVideoHostsNoShowTriggerDto;
 
   @ApiPropertyOptional({
-    description: "Steps to execute as part of the workflow",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(UpdateEmailAddressWorkflowStepDto) },
       { $ref: getSchemaPath(UpdateEmailAttendeeWorkflowStepDto) },
@@ -196,7 +218,9 @@ export class UpdateWorkflowDto {
     type: "array",
   })
   @ValidateNested({ each: true })
-  @ArrayMinSize(1, { message: "Your workflow must contain at least one step." })
+  @ArrayMinSize(1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @IsOptional()
   @Type(() => BaseWorkflowStepDto, {
     discriminator: {

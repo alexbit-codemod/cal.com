@@ -8,35 +8,41 @@ export function Navbar({ username }: { username?: string }) {
     <nav className="flex h-[75px] w-[100%] items-center justify-between bg-black px-14 py-3 text-white">
       <div className={`flex h-[100%] items-center text-lg ${poppins.className}`}>
         <Link href="/">
-          <h1 className="bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] bg-clip-text text-2xl font-bold text-transparent">
-            CalSync
-          </h1>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </Link>
       </div>
       {username && <div className="capitalize">👤 {username}</div>}
       <div className={`${poppins.className}`}>
         <ul className="flex gap-x-7">
           <li>
-            <Link href="/calendars">Calendar</Link>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
           <li>
-            <Link href="/availability">Availability</Link>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
           <li>
-            <Link href="/event-types">EventTypes</Link>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
           <li>
-            <Link href="/booking">Book Me</Link>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
           <li>
-            <Link href="/bookings">My Bookings</Link>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
           <li>
-            <Link href="/embed">Embed</Link>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
 
           <li>
-            <Link href="/conferencing-apps">Conferencing Apps</Link>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </li>
         </ul>
       </div>

@@ -25,10 +25,8 @@ export function DataTablePagination<TData>({
   if (paginationMode === "infinite") {
     const loadedCount = table.getRowModel().rows.length;
     return (
-      <p className="text-subtle text-sm tabular-nums">
-        Loaded <span className="text-default font-medium">{loadedCount}</span> of{" "}
-        <span className="text-default font-medium">{totalRowCount}</span>
-      </p>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   } else if (paginationMode === "standard") {
     return (

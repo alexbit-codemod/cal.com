@@ -90,7 +90,8 @@ export const VerifyCodeDialog = ({
       <DialogContent className="sm:max-w-md">
         <div className="flex flex-row">
           <div className="w-full">
-            <DialogHeader title={t("verify_your_email")} subtitle={t("enter_digit_code", { email })} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Label htmlFor="code">{t("code")}</Label>
             <div className="flex flex-row justify-between">
               <Input

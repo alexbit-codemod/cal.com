@@ -24,11 +24,9 @@ function SingleAppPage(props: AppDataProps) {
     if (!IS_PRODUCTION) {
       // TODO: Improve disabled App UI. This is just a placeholder.
       return (
-        <div className="p-2">
-          This App seems to be disabled. If you are an admin, you can enable this app from{" "}
-          <Link href="/settings/admin/apps" className="cursor-pointer text-blue-500 underline">
-            here
-          </Link>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       );
     }
@@ -39,38 +37,8 @@ function SingleAppPage(props: AppDataProps) {
 
   const { source, data } = props;
   return (
-    <App
-      name={data.name}
-      description={data.description}
-      isGlobal={data.isGlobal}
-      slug={data.slug}
-      variant={data.variant}
-      type={data.type}
-      logo={data.logo}
-      categories={data.categories ?? [data.category]}
-      author={data.publisher}
-      feeType={data.feeType || "usage-based"}
-      price={data.price || 0}
-      commission={data.commission || 0}
-      docs={data.docsUrl}
-      website={data.url}
-      email={data.email}
-      licenseRequired={data.licenseRequired}
-      teamsPlanRequired={data.teamsPlanRequired}
-      descriptionItems={source.data?.items as string[] | undefined}
-      isTemplate={data.isTemplate}
-      dependencies={data.dependencies}
-      concurrentMeetings={data.concurrentMeetings}
-      paid={data.paid}
-      //   tos="https://zoom.us/terms"
-      //   privacy="https://zoom.us/privacy"
-      body={
-        <>
-          {/* eslint-disable-next-line react/no-danger */}
-          <div dangerouslySetInnerHTML={{ __html: markdownToSafeHTML(source.content) }} />
-        </>
-      }
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }
 

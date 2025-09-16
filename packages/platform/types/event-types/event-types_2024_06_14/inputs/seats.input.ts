@@ -9,21 +9,27 @@ export class Seats_2024_06_14 {
   @Min(1)
   @Max(MAX_SEATS_PER_TIME_SLOT)
   @ApiProperty({
-    description: "Number of seats available per time slot",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 4,
   })
   seatsPerTimeSlot!: number;
 
   @IsBoolean()
   @ApiProperty({
-    description: "Show attendee information to other guests",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   showAttendeeInfo!: boolean;
 
   @IsBoolean()
   @ApiProperty({
-    description: "Display the count of available seats",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   showAvailabilityCount!: boolean;

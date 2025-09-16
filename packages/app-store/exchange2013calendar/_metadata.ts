@@ -7,11 +7,15 @@ export const metadata = {
   description: _package.description,
   installed: true,
   type: "exchange2013_calendar",
-  title: "Microsoft Exchange 2013 Calendar",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   variant: "calendar",
   category: "calendar",
   categories: ["calendar"],
-  label: "Exchange Calendar",
+  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   logo: "icon.svg",
   publisher: "Cal.com",
   slug: "exchange2013-calendar",

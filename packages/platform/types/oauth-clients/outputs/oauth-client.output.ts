@@ -23,7 +23,9 @@ export class PlatformOAuthClientDto {
   @IsEnum(PERMISSION_MAP, { each: true })
   @ApiProperty({
     type: [String],
-    description: 'Array of permission keys like ["BOOKING_READ", "BOOKING_WRITE"]',
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: Object.keys(PERMISSION_MAP),
   })
   permissions!: Array<keyof typeof PERMISSION_MAP>;
@@ -54,7 +56,9 @@ export class PlatformOAuthClientDto {
   @ApiProperty({
     example: true,
     description:
-      "If enabled, when creating a managed user the managed user will have 4 default event types: 30 and 60 minutes without Cal video, 30 and 60 minutes with Cal video. Leave this disabled if you want to create a managed user and then manually create event types for the user.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   areDefaultEventTypesEnabled!: boolean;
 

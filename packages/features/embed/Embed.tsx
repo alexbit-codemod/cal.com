@@ -430,12 +430,8 @@ const EmailEmbed = ({
                 }}
               />
             ) : (
-              <TextField
-                disabled
-                label={t("duration")}
-                defaultValue={eventType?.length ?? 15}
-                addOnSuffix={<>{t("minutes")}</>}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           </CollapsibleContent>
         </Collapsible>
@@ -517,7 +513,8 @@ const EmailEmbedPreview = ({
               lineHeight: "17px",
               color: "#333333",
             }}>
-            {t("duration")}: <b style={{ color: "black" }}>{selectedDuration} mins</b>
+            {t("duration")}: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div>
             <b style={{ color: "black" }}>
@@ -665,7 +662,8 @@ const EmailEmbedPreview = ({
             }}>
             <span>{t("powered_by")}</span>{" "}
             <b style={{ color: "black" }}>
-              <span> Cal.com</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </b>
           </div>
         </div>
@@ -955,7 +953,8 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                     {embedType === "inline" && embedParams.embedTabName !== EmbedTabName.ATOM_REACT && (
                       <div>
                         {/*TODO: Add Auto/Fixed toggle from Figma */}
-                        <div className="text-default mb-[9px] text-sm">Window sizing</div>
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                         <div className="justify-left mb-6 flex items-center !font-normal ">
                           <div className="mr-[9px]">
                             <TextField
@@ -976,7 +975,8 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                                   };
                                 });
                               }}
-                              addOnLeading={<>W</>}
+                              addOnLeading={// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                              $$$}
                             />
                           </div>
 
@@ -998,7 +998,8 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                                 };
                               });
                             }}
-                            addOnLeading={<>H</>}
+                            addOnLeading={// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$}
                           />
                         </div>
                       </div>
@@ -1008,7 +1009,8 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                         "items-center justify-between",
                         embedType === "floating-popup" ? "text-emphasis" : "hidden"
                       )}>
-                      <div className="mb-2 text-sm">Button text</div>
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       {/* Default Values should come from preview iframe */}
                       <TextField
                         labelProps={{ className: "hidden" }}
@@ -1048,14 +1050,16 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                           });
                         }}
                       />
-                      <div className="text-default my-2 text-sm">Display calendar icon</div>
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     </div>
                     <div
                       className={classNames(
                         "mt-4 items-center justify-between",
                         embedType === "floating-popup" ? "text-emphasis" : "hidden"
                       )}>
-                      <div className="mb-2">Position of button</div>
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       <Select
                         onChange={(position) => {
                           setPreviewState((previewState) => {
@@ -1074,7 +1078,8 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                     </div>
                     <div className="mt-3 flex flex-col xl:flex-row xl:justify-between">
                       <div className={classNames("mt-4", embedType === "floating-popup" ? "" : "hidden")}>
-                        <div className="whitespace-nowrap">Button color</div>
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                         <div className="mt-2 w-40 xl:mt-0 xl:w-full">
                           <ColorPicker
                             className="w-[130px]"
@@ -1096,7 +1101,8 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                         </div>
                       </div>
                       <div className={classNames("mt-4", embedType === "floating-popup" ? "" : "hidden")}>
-                        <div className="whitespace-nowrap">Text color</div>
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                         <div className="mb-6 mt-2 w-40 xl:mt-0 xl:w-full">
                           <ColorPicker
                             className="w-[130px]"
@@ -1130,7 +1136,8 @@ const EmbedTypeCodeAndPreviewDialogContent = ({
                       {/* Conditionally render EmbedTheme only if NOT React Atom */}
                       {embedParams.embedTabName !== EmbedTabName.ATOM_REACT && (
                         <Label className="mb-6">
-                          <div className="mb-2">EmbedTheme</div>
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                           <Select
                             className="w-full"
                             defaultValue={ThemeOptions[0]}

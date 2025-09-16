@@ -67,18 +67,12 @@ export default function RecurringEventController({
     <div className={classNames("block items-start sm:flex", customClassNames?.container)}>
       <div className={!paymentEnabled ? "w-full" : ""}>
         {paymentEnabled ? (
-          <Alert
-            severity="warning"
-            className={customClassNames?.paymentAlert}
-            title={t("warning_payment_recurring_event")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
           <>
-            <Alert
-              className={classNames("mb-4", customClassNames?.experimentalAlert)}
-              severity="warning"
-              title="Experimental: Recurring Events are currently experimental and causes some issues sometimes when checking for availability. We are working on fixing this."
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <SettingsToggle
               labelClassName={classNames("text-sm", customClassNames?.recurringToggle?.label)}
               toggleSwitchAtTheEnd={true}

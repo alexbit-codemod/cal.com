@@ -11,12 +11,16 @@ const scopes = ["crm.objects.contacts.read", "crm.objects.contacts.write"];
 const hubspotClient = new hubspot.Client();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ message: "Method not allowed" });
+  if (req.method !== "GET") return res.status(405).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const appKeys = await getAppKeysFromSlug("hubspot");
   let clientId = "";
   if (typeof appKeys.client_id === "string") clientId = appKeys.client_id;
-  if (!clientId) return res.status(400).json({ message: "HubSpot client id missing." });
+  if (!clientId) return res.status(400).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const redirectUri = `${WEBAPP_URL_FOR_OAUTH}/api/integrations/hubspot/callback`;
   const url = hubspotClient.oauth.getAuthorizationUrl(

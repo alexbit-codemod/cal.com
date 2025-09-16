@@ -100,7 +100,9 @@ async function postHandler(req: NextApiRequest) {
         },
       },
     });
-    if (alreadyExist) throw new HttpError({ statusCode: 409, message: "Team slug already exists" });
+    if (alreadyExist) throw new HttpError({ statusCode: 409, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Check if parentId is related to this user and is an organization
@@ -111,13 +113,17 @@ async function postHandler(req: NextApiRequest) {
     if (!parentTeam)
       throw new HttpError({
         statusCode: 401,
-        message: "Unauthorized: Invalid parent id. You can only use parent id if you are org owner or admin.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
 
     if (parentTeam.parentId)
       throw new HttpError({
         statusCode: 400,
-        message: "parentId must be of an organization, not a team.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
   }
 
@@ -148,7 +154,9 @@ async function postHandler(req: NextApiRequest) {
     return {
       team: schemaTeamReadPublic.parse(team),
       owner: schemaMembershipPublic.parse(team.members[0]),
-      message: `Team created successfully. We also made user with ID=${effectiveUserId} the owner of this team.`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
 
@@ -166,7 +174,9 @@ async function postHandler(req: NextApiRequest) {
 
   return {
     message:
-      "Your team will be created once we receive your payment. Please complete the payment using the payment link.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     paymentLink: checkoutSession.url,
     pendingTeam: {
       ...schemaTeamReadPublic.parse(pendingPaymentTeam),
@@ -182,7 +192,9 @@ async function checkPermissions(req: NextApiRequest) {
   if (!isSystemWideAdmin && body.ownerId)
     throw new HttpError({
       statusCode: 401,
-      message: "ADMIN required for `ownerId`",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 }
 
@@ -240,7 +252,9 @@ const generateTeamCheckoutSession = async ({
   if (!session.url)
     throw new HttpError({
       statusCode: 500,
-      message: "Failed generating a checkout session URL.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   return session;

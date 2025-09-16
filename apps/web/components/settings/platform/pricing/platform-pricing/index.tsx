@@ -52,7 +52,8 @@ export const PlatformPricing = ({ teamId, teamPlan, heading }: PlatformPricingPr
   };
 
   if (!teamId) {
-    return <div className="m-5">Platform team not present, you need to create a team first.</div>;
+    return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$;
   }
 
   return (
@@ -63,15 +64,8 @@ export const PlatformPricing = ({ teamId, teamPlan, heading }: PlatformPricingPr
           {platformPlans.map((plan) => {
             return (
               <div key={plan.plan} className="mx-10 my-4 md:mx-0 md:my-0">
-                <PlatformBillingCard
-                  plan={plan.plan}
-                  description={plan.description}
-                  pricing={plan.pricing}
-                  includes={plan.includes}
-                  isLoading={isCreateTeamSubscriptionLoading || isUpgradeTeamSubscriptionLoading}
-                  currentPlan={plan.plan.toLocaleLowerCase() === teamPlan}
-                  handleSubscribe={() => handleStripeSubscription(plan.plan)}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             );
           })}

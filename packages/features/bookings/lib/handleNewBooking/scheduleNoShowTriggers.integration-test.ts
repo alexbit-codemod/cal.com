@@ -200,11 +200,15 @@ describe("scheduleNoShowTriggers Integration", () => {
     await prisma.eventType.create({
       data: {
         id: testEventTypeId,
-        title: "Test Event Type",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event-type",
         length: 30,
         userId: testUser.id,
-        description: "Test description",
+        description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       },
     });
 
@@ -214,7 +218,9 @@ describe("scheduleNoShowTriggers Integration", () => {
       data: {
         id: testBookingId,
         uid: "test-uid-no-show",
-        title: "Test No-Show",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         eventTypeId: testEventTypeId,
         status: "ACCEPTED",
         startTime: now,

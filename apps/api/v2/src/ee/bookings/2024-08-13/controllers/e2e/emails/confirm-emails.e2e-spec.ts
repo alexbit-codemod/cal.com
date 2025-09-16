@@ -165,7 +165,9 @@ describe("Bookings Endpoints 2024-08-13 confirm emails", () => {
 
     const event = await eventTypesRepositoryFixture.create(
       {
-        title: "peer coding",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `confirm-emails-2024-08-13-event-type-${randomString()}`,
         length: 60,
         requiresConfirmation: true,
@@ -200,7 +202,9 @@ describe("Bookings Endpoints 2024-08-13 confirm emails", () => {
     await schedulesService.createUserSchedule(user.id, userSchedule);
     const event = await eventTypesRepositoryFixture.create(
       {
-        title: "peer coding",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `confirm-emails-2024-08-13-event-type-${randomString()}`,
         length: 60,
         requiresConfirmation: true,

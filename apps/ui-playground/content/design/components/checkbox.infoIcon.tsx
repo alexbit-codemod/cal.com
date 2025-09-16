@@ -6,11 +6,7 @@ import { CheckboxField } from "@calcom/ui/components/form";
 
 export const InfoIconExample: React.FC = () => (
   <RenderComponentWithSnippet>
-    <CheckboxField
-      description="Checkbox with additional information"
-      id="info-icon"
-      label="Information Icon"
-      informationIconText="This is additional information that appears in a tooltip"
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   </RenderComponentWithSnippet>
 );

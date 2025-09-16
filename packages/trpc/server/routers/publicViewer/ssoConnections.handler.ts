@@ -24,7 +24,9 @@ export const handler = async () => {
     };
   } catch (err) {
     console.error("Error getting SSO connections", err);
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Fetching SSO connections failed." });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 

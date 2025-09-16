@@ -19,17 +19,23 @@ export const config = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== "POST") {
-      throw new HttpCode({ statusCode: 405, message: "Method Not Allowed" });
+      throw new HttpCode({ statusCode: 405, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const bodyRaw = await getRawBody(req);
     const headers = req.headers;
-    const bodyAsString = bodyRaw.toString();
+    const bodyAsString = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     const parseHeaders = webhookHeadersSchema.safeParse(headers);
     if (!parseHeaders.success) {
       console.error(parseHeaders.error);
-      throw new HttpCode({ statusCode: 400, message: "Bad Request" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const { data: parsedHeaders } = parseHeaders;
@@ -37,13 +43,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const parse = eventSchema.safeParse(JSON.parse(bodyAsString));
     if (!parse.success) {
       console.error(parse.error);
-      throw new HttpCode({ statusCode: 400, message: "Bad Request" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const { data: parsedPayload } = parse;
 
     if (parsedPayload.metadata?.payer_data?.appId !== "cal.com") {
-      throw new HttpCode({ statusCode: 204, message: "Payment not for cal.com" });
+      throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const payment = await prisma.payment.findFirst({
@@ -70,22 +80,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
     });
 
-    if (!payment) throw new HttpCode({ statusCode: 204, message: "Payment not found" });
+    if (!payment) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const key = payment.booking?.user?.credentials?.[0].key;
-    if (!key) throw new HttpCode({ statusCode: 204, message: "Credentials not found" });
+    if (!key) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
     const parseCredentials = albyCredentialKeysSchema.safeParse(key);
     if (!parseCredentials.success) {
       console.error(parseCredentials.error);
-      throw new HttpCode({ statusCode: 500, message: "Credentials not valid" });
+      throw new HttpCode({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const credentials = parseCredentials.data;
 
     const albyInvoice = await parseInvoice(bodyAsString, parsedHeaders, credentials.webhook_endpoint_secret);
-    if (!albyInvoice) throw new HttpCode({ statusCode: 204, message: "Invoice not found" });
+    if (!albyInvoice) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     if (albyInvoice.amount !== payment.amount) {
-      throw new HttpCode({ statusCode: 400, message: "invoice amount does not match payment amount" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     return await handlePaymentSuccess(payment.id, payment.bookingId);

@@ -22,31 +22,45 @@ export const isValidRoutingFormFieldType = (type: string): type is RoutingFormFi
 
 export const FieldTypes = [
   {
-    label: "Short Text",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RoutingFormFieldType.TEXT,
   },
   {
-    label: "Number",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RoutingFormFieldType.NUMBER,
   },
   {
-    label: "Long Text",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RoutingFormFieldType.TEXTAREA,
   },
   {
-    label: "Single Selection",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RoutingFormFieldType.SINGLE_SELECT,
   },
   {
-    label: "Multiple Selection",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RoutingFormFieldType.MULTI_SELECT,
   },
   {
-    label: "Phone",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RoutingFormFieldType.PHONE,
   },
   {
-    label: "Email",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: RoutingFormFieldType.EMAIL,
   },
 ] as const;

@@ -145,125 +145,18 @@ export default function RequiresConfirmationController({
                     )}>
                     {(requiresConfirmationSetup === undefined ||
                       !requiresConfirmationLockedProps.disabled) && (
-                      <RadioField
-                        label={t("always")}
-                        disabled={requiresConfirmationLockedProps.disabled}
-                        id="always"
-                        value="always"
-                        className={customClassNames?.alwaysConfirmationRadio}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     )}
                     {(requiresConfirmationSetup !== undefined ||
                       !requiresConfirmationLockedProps.disabled) && (
                       <>
-                        <RadioField
-                          disabled={requiresConfirmationLockedProps.disabled}
-                          className={classNames(
-                            "items-center",
-                            customClassNames?.conditionalConfirmationRadio?.container
-                          )}
-                          label={
-                            <>
-                              <ServerTrans
-                                t={t}
-                                i18nKey="when_booked_with_less_than_notice"
-                                components={[
-                                  <div
-                                    key="when_booked_with_less_than_notice"
-                                    className="mx-2 inline-flex items-center">
-                                    <Input
-                                      type="number"
-                                      min={1}
-                                      disabled={requiresConfirmationLockedProps.disabled}
-                                      onChange={(evt) => {
-                                        const val = Number(evt.target?.value);
-                                        setRequiresConfirmationSetup({
-                                          unit:
-                                            requiresConfirmationSetup?.unit ??
-                                            defaultRequiresConfirmationSetup.unit,
-                                          time: val,
-                                        });
-                                        formMethods.setValue(
-                                          "metadata.requiresConfirmationThreshold.time",
-                                          val,
-                                          { shouldDirty: true }
-                                        );
-                                      }}
-                                      className={classNames(
-                                        "border-default h-9! !m-0 block w-16 rounded-r-none border-r-0 text-sm [appearance:textfield] focus:z-10 focus:border-r",
-                                        customClassNames?.conditionalConfirmationRadio?.timeInput
-                                      )}
-                                      defaultValue={metadata?.requiresConfirmationThreshold?.time || 30}
-                                    />
-                                    <label
-                                      className={classNames(
-                                        requiresConfirmationLockedProps.disabled && "cursor-not-allowed"
-                                      )}>
-                                      <Select
-                                        inputId="notice"
-                                        options={options}
-                                        isSearchable={false}
-                                        isDisabled={requiresConfirmationLockedProps.disabled}
-                                        className={
-                                          customClassNames?.conditionalConfirmationRadio?.timeUnitSelect
-                                        }
-                                        innerClassNames={{
-                                          control: "rounded-l-none max-h-4 px-3 bg-subtle py-1",
-                                        }}
-                                        onChange={(opt) => {
-                                          setRequiresConfirmationSetup({
-                                            time:
-                                              requiresConfirmationSetup?.time ??
-                                              defaultRequiresConfirmationSetup.time,
-                                            unit: opt?.value as UnitTypeLongPlural,
-                                          });
-                                          formMethods.setValue(
-                                            "metadata.requiresConfirmationThreshold.unit",
-                                            opt?.value as UnitTypeLongPlural,
-                                            { shouldDirty: true }
-                                          );
-                                        }}
-                                        defaultValue={defaultValue}
-                                      />
-                                    </label>
-                                  </div>,
-                                ]}
-                              />
-                            </>
-                          }
-                          id="notice"
-                          value="notice"
-                        />
-                        <CheckboxField
-                          checked={requiresConfirmationWillBlockSlot}
-                          descriptionAsLabel
-                          description={t("requires_confirmation_will_block_slot_description")}
-                          className={customClassNames?.conditionalConfirmationRadio?.checkbox}
-                          descriptionClassName={
-                            customClassNames?.conditionalConfirmationRadio?.checkboxDescription
-                          }
-                          onChange={(e) => {
-                            // We set should dirty to properly detect when we can submit the form
-                            formMethods.setValue("requiresConfirmationWillBlockSlot", e.target.checked, {
-                              shouldDirty: true,
-                            });
-                          }}
-                        />
-                        <CheckboxField
-                          checked={requiresConfirmationForFreeEmail}
-                          descriptionAsLabel
-                          description={t("require_confirmation_for_free_email")}
-                          className={customClassNames?.conditionalConfirmationRadio?.checkbox}
-                          descriptionClassName={
-                            customClassNames?.conditionalConfirmationRadio?.checkboxDescription
-                          }
-                          onChange={(e) => {
-                            // We set should dirty to properly detect when we can submit the form
-                            formMethods.setValue("requiresConfirmationForFreeEmail", e.target.checked, {
-                              shouldDirty: true,
-                            });
-                          }}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       </>
                     )}
                   </div>

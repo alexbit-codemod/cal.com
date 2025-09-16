@@ -17,25 +17,15 @@ const EventPaymentsTabPlatformWrapper = ({ eventType }: { eventType: EventTypeSe
 
   const isStripeConnected = !checked || !allowConnect;
 
-  if (!checked) return <div>Checking...</div>;
+  if (!checked) return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$;
 
   return (
     <div>
       {!isStripeConnected ? (
-        <EmptyScreen
-          Icon="grid-3x3"
-          headline="Stripe not connected"
-          description="You need to connect Stripe to use this feature. Please click on the button below to connect."
-          buttonRaw={
-            <StripeConnect
-              teamId={eventType.teamId}
-              label="Connect to Stripe"
-              loadingLabel="Connect to Stripe"
-              alreadyConnectedLabel="Connect to Stripe"
-              isClickable={true}
-              color="secondary"
-              redir={window.location.href}
-            />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           }
         />
       ) : (

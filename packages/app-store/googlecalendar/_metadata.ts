@@ -8,7 +8,9 @@ export const metadata = {
   description: _package.description,
   installed: !!(process.env.GOOGLE_API_CREDENTIALS && validJson(process.env.GOOGLE_API_CREDENTIALS)),
   type: "google_calendar",
-  title: "Google Calendar",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   variant: "calendar",
   category: "calendar",
   categories: ["calendar"],

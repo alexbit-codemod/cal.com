@@ -212,64 +212,19 @@ export const MultiOptionInput = <TFieldValues extends FieldValues>({
               // Key-value pair mode
               <div className="flex w-full gap-2">
                 <div className="flex-grow">
-                  <TextField
-                    disabled={disabled}
-                    labelSrOnly
-                    placeholder={optionPlaceholders[index] ?? "Key"}
-                    pattern={keyPattern}
-                    type="text"
-                    required
-                    addOnClassname="bg-transparent border-0"
-                    {...control.register(`${fieldArrayName}.${index}.label` as Path<TFieldValues>)}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <div className="flex-grow">
-                  <TextField
-                    disabled={disabled}
-                    labelSrOnly
-                    placeholder={valuePlaceholders[index] ?? "Value"}
-                    type="text"
-                    required
-                    addOnClassname="bg-transparent border-0"
-                    {...control.register(`${fieldArrayName}.${index}.value` as Path<TFieldValues>)}
-                    addOnSuffix={
-                      showRemoveButton ? (
-                        <button
-                          type="button"
-                          onClick={() => handleRemoveOption(index)}
-                          aria-label="Remove option"
-                          disabled={disabled}>
-                          <Icon name="x" className="h-4 w-4" />
-                        </button>
-                      ) : null
-                    }
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
               </div>
             ) : (
               // Standard mode
               <div className="flex-grow">
-                <TextField
-                  disabled={disabled}
-                  labelSrOnly
-                  placeholder={optionPlaceholders[index] ?? "New Option"}
-                  type="text"
-                  required
-                  addOnClassname="bg-transparent border-0"
-                  {...control.register(`${fieldArrayName}.${index}.label` as Path<TFieldValues>)}
-                  data-testid={`${fieldArrayName}.${index}-input`}
-                  addOnSuffix={
-                    showRemoveButton ? (
-                      <button
-                        type="button"
-                        onClick={() => handleRemoveOption(index)}
-                        aria-label="Remove option"
-                        disabled={disabled}>
-                        <Icon name="x" className="h-4 w-4" />
-                      </button>
-                    ) : null
-                  }
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
             {showMoveButtons && (

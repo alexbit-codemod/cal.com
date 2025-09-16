@@ -36,9 +36,8 @@ export default function SAMLConnection({
         </div>
         {!connection && (
           <div className="flex-shrink-0 pt-3 sm:ml-auto sm:pl-3 sm:pt-0">
-            <Button color="secondary" onClick={() => setOpenModal(true)}>
-              Configure
-            </Button>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         )}
       </div>
@@ -98,17 +97,8 @@ const CreateConnectionDialog = ({
             name="metadata"
             render={({ field: { value } }) => (
               <div>
-                <TextArea
-                  data-testid="saml_config"
-                  name="metadata"
-                  value={value}
-                  className="h-40"
-                  required={true}
-                  placeholder={t("saml_configuration_placeholder")}
-                  onChange={(e) => {
-                    form.setValue("metadata", e?.target.value);
-                  }}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
           />

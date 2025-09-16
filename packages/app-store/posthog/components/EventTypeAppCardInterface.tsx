@@ -22,26 +22,10 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
       switchChecked={enabled}
       teamId={eventType.team?.id || undefined}>
       <div className="flex flex-col gap-2">
-        <TextField
-          required
-          disabled={disabled}
-          name="Tracking ID"
-          value={trackingId}
-          placeholder="Enter your Tracking ID"
-          onChange={(e) => {
-            setAppData("TRACKING_ID", e.target.value);
-          }}
-        />
-        <TextField
-          required
-          disabled={disabled}
-          name="Api host"
-          value={apiHost}
-          placeholder="Enter your Api host url"
-          onChange={(e) => {
-            setAppData("API_HOST", e.target.value);
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </AppCard>
   );

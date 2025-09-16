@@ -47,12 +47,8 @@ export function UpgradeTip({
       <div className="relative flex min-h-[295px] w-full items-center justify-between overflow-hidden rounded-lg pb-10">
         <picture className="absolute min-h-[295px] w-full rounded-lg object-cover">
           <source srcSet={imageSrc} media="(prefers-color-scheme: dark)" />
-          <img
-            className="absolute min-h-[295px] w-full select-none rounded-lg object-cover object-left md:object-center"
-            src={imageSrc}
-            loading="lazy"
-            alt={title}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </picture>
         <div className="relative my-4 px-8 sm:px-14">
           <h1 className={classNames("font-cal mt-4 text-3xl")}>{title}</h1>

@@ -47,7 +47,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!response.success) {
     return res.status(400).send({
-      message: "Invalid Payload",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -58,7 +60,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { eventTypeId, timezone } = getEventTypeIdFromRetellLLM(retellLLM);
 
   if (!eventTypeId || !timezone)
-    return res.status(404).json({ message: "eventTypeId or Timezone not found" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const eventType = await prisma.eventType.findUnique({
     where: {
@@ -79,7 +83,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     },
   });
 
-  if (!eventType) return res.status(404).json({ message: "eventType not found id" });
+  if (!eventType) return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const now = dayjs();
 

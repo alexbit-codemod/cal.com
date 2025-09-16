@@ -28,8 +28,9 @@ export function UnpublishedEntity(props: UnpublishedEntityProps) {
   const slug = props.orgSlug || props.teamSlug;
   return (
     <div className="m-8 flex items-center justify-center">
-      <EmptyScreen
-        avatar={<Avatar alt={slug ?? ""} imageSrc={getPlaceholderAvatar(props.logoUrl, slug)} size="lg" />}
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$}
         headline={t("team_is_unpublished", {
           team: props.name,
           interpolation: {

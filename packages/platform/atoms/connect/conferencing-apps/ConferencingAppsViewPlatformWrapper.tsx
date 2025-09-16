@@ -261,14 +261,8 @@ export const ConferencingAppsViewPlatformWrapper = ({
               success={({ data }) => {
                 if (!data.items.length) {
                   return (
-                    <EmptyScreen
-                      Icon="calendar"
-                      headline={t("no_category_apps", {
-                        category: t("conferencing").toLowerCase(),
-                      })}
-                      description={t("no_category_apps_description_conferencing")}
-                      buttonRaw={<AddConferencingButtonPlatform installedApps={data?.items} />}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   );
                 }
                 return (

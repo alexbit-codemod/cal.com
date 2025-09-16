@@ -6,14 +6,18 @@ export class CreateApiKeyInput extends RefreshApiKeyInput {
   @IsOptional()
   @IsInt()
   @ApiPropertyOptional({
-    description: "For which team or organization is the api key.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   readonly teamId?: number;
 
   @IsOptional()
   @IsString()
   @ApiPropertyOptional({
-    description: "Store additional note about this api key.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "This is an api key for development purposes.",
   })
   readonly note?: string;

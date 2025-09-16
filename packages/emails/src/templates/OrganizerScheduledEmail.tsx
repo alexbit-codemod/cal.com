@@ -40,29 +40,7 @@ export const OrganizerScheduledEmail = (
   const attendee = isTeamEvent && props.teamMember ? props.teamMember : props.attendee;
 
   return (
-    <BaseScheduledEmail
-      locale={locale}
-      timeZone={props.teamMember?.timeZone || props.calEvent.organizer.timeZone}
-      t={t}
-      subject={t(subject)}
-      title={t(title)}
-      includeAppsStatus
-      timeFormat={timeFormat}
-      isOrganizer
-      subtitle={
-        props.subtitle ? (
-          props.subtitle
-        ) : (
-          <>
-            {props.attendeeCancelled
-              ? t("attendee_no_longer_attending_subtitle", { name: props.attendee.name })
-              : ""}
-          </>
-        )
-      }
-      reassigned={props.reassigned}
-      {...props}
-      attendee={attendee}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };

@@ -22,26 +22,10 @@ const EventTypeAppCard: EventTypeAppCardComponent = function EventTypeAppCard({ 
       switchChecked={enabled}
       teamId={eventType.team?.id || undefined}>
       <div className="flex flex-col gap-2">
-        <TextField
-          dataTestid={`${app.slug}-url`}
-          name="Matomo URL"
-          placeholder="Enter your Matomo URL here"
-          value={matomoUrl}
-          disabled={disabled}
-          onChange={(e) => {
-            setAppData("MATOMO_URL", e.target.value);
-          }}
-        />
-        <TextField
-          dataTestid={`${app.slug}-site-id`}
-          disabled={disabled}
-          name="Site ID"
-          placeholder="Enter your Site ID"
-          value={siteId}
-          onChange={(e) => {
-            setAppData("SITE_ID", e.target.value);
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </AppCard>
   );

@@ -328,23 +328,8 @@ const Days = ({
               <SkeletonText className="h-8 w-9" />
             </button>
           ) : (
-            <DayComponent
-              customClassName={{
-                dayContainer: customClassName?.datePickerDate,
-                dayActive: customClassName?.datePickerDateActive,
-              }}
-              date={day}
-              onClick={() => {
-                props.onChange(day);
-                props?.scrollToTimeSlots?.();
-              }}
-              disabled={disabled}
-              active={isActive(day)}
-              away={away}
-              emoji={emoji}
-              showMonthTooltip={showNextMonthDays && !disabled && day.month() !== browsingDate.month()}
-              isFirstDayOfNextMonth={isFirstDayOfNextMonth}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
         </div>
       ))}

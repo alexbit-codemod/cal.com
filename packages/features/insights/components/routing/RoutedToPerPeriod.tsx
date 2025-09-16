@@ -139,13 +139,8 @@ function FormCard({
             />
             <div className="flex gap-2">
               <div className="w-64">
-                <Input
-                  type="text"
-                  placeholder={t("search")}
-                  value={searchQuery}
-                  onChange={(e) => onSearchChange(e.target.value)}
-                  className="w-full"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
               <DownloadButton
                 userId={userId}
@@ -413,7 +408,8 @@ export function RoutedToPerPeriod() {
                           <HoverCard>
                             <HoverCardTrigger asChild>
                               <div className="flex cursor-pointer items-center gap-2">
-                                <Avatar size="sm" imageSrc={row.avatarUrl} alt={row.name || ""} />
+                                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                                $$$
                                 <div className="flex flex-col gap-1 truncate">
                                   <span>{row.name}</span>
                                 </div>

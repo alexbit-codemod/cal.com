@@ -37,7 +37,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const result = await fetch("https://webexapis.com/v1/access_token", options);
 
   if (result.status !== 200) {
-    let errorMessage = "Something is wrong with Webex API";
+    let errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     try {
       const responseBody = await result.json();
       errorMessage = responseBody.message;
@@ -59,7 +61,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const userId = req.session?.user.id;
   if (!userId) {
-    return res.status(404).json({ message: "No user found" });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   /**
    * With this we take care of no duplicate webex key for a single user

@@ -37,7 +37,8 @@ export const HorizontalExample: React.FC = () => {
     <RenderComponentWithSnippet>
       <div className="space-y-6">
         <div>
-          <h3 className="text-emphasis mb-2 text-sm font-medium">Basic</h3>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <HorizontalTabs
             tabs={tabItems.map((item) => ({
               ...item,
@@ -49,7 +50,8 @@ export const HorizontalExample: React.FC = () => {
         </div>
 
         <div>
-          <h3 className="text-emphasis mb-2 text-sm font-medium">With Icons</h3>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <HorizontalTabs
             tabs={tabItems.map((item) => ({
               ...item,
@@ -60,7 +62,8 @@ export const HorizontalExample: React.FC = () => {
         </div>
 
         <div>
-          <h3 className="text-emphasis mb-2 text-sm font-medium">With Actions</h3>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <HorizontalTabs
             tabs={tabItems.map((item) => ({
               ...item,
@@ -70,7 +73,8 @@ export const HorizontalExample: React.FC = () => {
             actions={
               <button className="hover:text-emphasis text-default ml-auto flex items-center space-x-1 rounded-md px-3 py-[10px] transition">
                 <Icon name="plus" className="h-4 w-4" />
-                <span>Add New</span>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </button>
             }
           />

@@ -17,12 +17,10 @@ export const OAuthClientsList = ({ oauthClients, isDeleting, handleDelete }: OAu
     <div className="mb-10">
       <div className="border-subtle mx-auto block justify-between rounded-t-lg border px-4 py-6 sm:flex sm:px-6">
         <div className="flex w-full flex-col">
-          <h1 className="font-cal text-emphasis mb-1 text-xl font-semibold leading-5 tracking-wide">
-            OAuth Clients
-          </h1>
-          <p className="text-default text-sm ltr:mr-4 rtl:ml-4">
-            Connect your platform to cal.com with OAuth
-          </p>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div>
           <NewOAuthClientButton redirectLink="/settings/platform/oauth-clients/create" />
@@ -56,13 +54,8 @@ export const OAuthClientsList = ({ oauthClients, isDeleting, handleDelete }: OAu
           </div>
         </>
       ) : (
-        <EmptyScreen
-          headline="Create your first OAuth client"
-          description="OAuth clients facilitate access to Cal.com on behalf of users"
-          Icon="plus"
-          className=""
-          buttonRaw={<NewOAuthClientButton redirectLink="/settings/platform/oauth-clients/create" />}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </div>
   );

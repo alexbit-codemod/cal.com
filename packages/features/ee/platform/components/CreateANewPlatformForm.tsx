@@ -114,24 +114,8 @@ const CreateANewPlatformFormChild = ({ session }: { session: Ensure<SessionConte
             }}
             render={({ field: { value } }) => (
               <div className="flex">
-                <TextField
-                  containerClassName="w-full"
-                  placeholder="john@acme.com"
-                  name="orgOwnerEmail"
-                  disabled={!isAdmin}
-                  label={t("platform_admin_email")}
-                  defaultValue={value}
-                  onChange={(e) => {
-                    const email = e?.target.value;
-                    const slug = deriveSlugFromEmail(email);
-                    newOrganizationFormMethods.setValue("orgOwnerEmail", email.trim());
-                    if (newOrganizationFormMethods.getValues("slug") === "") {
-                      newOrganizationFormMethods.setValue("slug", slug);
-                    }
-                    newOrganizationFormMethods.setValue("name", deriveOrgNameFromEmail(email));
-                  }}
-                  autoComplete="off"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             )}
           />
@@ -147,20 +131,8 @@ const CreateANewPlatformFormChild = ({ session }: { session: Ensure<SessionConte
             }}
             render={({ field: { value } }) => (
               <>
-                <TextField
-                  className="mt-2"
-                  placeholder="Acme"
-                  name="name"
-                  label={t("platform_name")}
-                  defaultValue={value}
-                  onChange={(e) => {
-                    newOrganizationFormMethods.setValue("name", e?.target.value.trim());
-                    if (newOrganizationFormMethods.formState.touchedFields["slug"] === undefined) {
-                      newOrganizationFormMethods.setValue("slug", slugify(e?.target.value));
-                    }
-                  }}
-                  autoComplete="off"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </>
             )}
           />

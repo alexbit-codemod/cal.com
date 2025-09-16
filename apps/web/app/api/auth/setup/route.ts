@@ -16,19 +16,27 @@ import { CreationSource } from "@calcom/prisma/enums";
 const querySchema = z.object({
   username: z
     .string()
-    .refine((val) => val.trim().length >= 1, { message: "Please enter at least one character" }),
+    .refine((val) => val.trim().length >= 1, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }),
   full_name: z.string().min(3, "Please enter at least 3 characters"),
-  email_address: z.string().regex(emailRegex, { message: "Please enter a valid email" }),
+  email_address: z.string().regex(emailRegex, { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }),
   password: z.string().refine((val) => isPasswordValid(val.trim(), false, true), {
     message:
-      "The password must be a minimum of 15 characters long containing at least one number and have a mixture of uppercase and lowercase letters",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   }),
 });
 
 async function handler(req: NextRequest) {
   const userCount = await prisma.user.count();
   if (userCount !== 0) {
-    throw new HttpError({ statusCode: 400, message: "No setup needed." });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   const body = await parseRequestData(req);
 
@@ -56,7 +64,9 @@ async function handler(req: NextRequest) {
     },
   });
 
-  return NextResponse.json({ message: "First admin user created successfully." });
+  return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }
 
 export const POST = defaultResponderForAppDir(handler);

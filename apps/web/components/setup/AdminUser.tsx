@@ -25,11 +25,8 @@ export const AdminUserContainer = (props: React.ComponentProps<typeof AdminUser>
           e.preventDefault();
           props.onSuccess();
         }}>
-        <EmptyScreen
-          Icon="user-check"
-          headline={t("admin_user_created")}
-          description={t("admin_user_created_description")}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </form>
     );
   return <AdminUser {...props} />;

@@ -38,7 +38,9 @@ export async function deleteHandler(req: NextApiRequest) {
   const { query } = req;
   const { id } = schemaQueryIdParseInt.parse(query);
   await prisma.attendee.delete({ where: { id } });
-  return { message: `Attendee with id: ${id} deleted successfully` };
+  return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   };
 }
 
 export default defaultResponder(deleteHandler);

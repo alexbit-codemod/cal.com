@@ -147,7 +147,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
       const recurringEvent = await eventTypesRepositoryFixture.create(
         // note(Lauris): freq 2 means weekly, interval 1 means every week and count 3 means 3 weeks in a row
         {
-          title: "peer coding recurring",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: recurringEventTypeSlug,
           length: 60,
           recurringEvent: { freq: 2, count: 3, interval: 1 },
@@ -175,7 +177,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2020, 0, 8, 13, 0, 0)),
         endTime: new Date(Date.UTC(2020, 0, 8, 14, 0, 0)),
-        title: "peer coding lets goo",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: `booking-in-the-past-${randomString()}`,
         eventType: {
           connect: {
@@ -218,7 +222,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
             action: "SMS_ATTENDEE",
             sendTo: null,
             reminderBody:
-              "Hi {ATTENDEE}, this is a reminder that your meeting ({EVENT_NAME}) with {ORGANIZER} is on {EVENT_DATE_YYYY MMM D} at {EVENT_TIME_h:mma} {TIMEZONE}.",
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             emailSubject: "Reminder: {EVENT_NAME} - {EVENT_DATE_ddd, MMM D, YYYY h:mma}",
             template: "REMINDER",
             numberRequired: true,
@@ -232,7 +238,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
 
       eventTypeWithAttendeeSmsReminder = await eventTypesRepositoryFixture.create(
         {
-          title: "event with attendee sms reminder",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "event-with-attendee-sms-reminder",
           length: 15,
           bookingFields: [
@@ -243,15 +251,21 @@ describe("Bookings Endpoints 2024-08-13", () => {
                 {
                   id: String(workflow.id),
                   type: "workflow",
-                  label: "Workflow",
+                  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
+                  ,
                   editUrl: `/workflows/${workflow.id}`,
                   fieldRequired: true,
                 },
               ],
               editable: "system",
               required: true,
-              defaultLabel: "number_text_notifications",
-              defaultPlaceholder: "enter_phone_number",
+              defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
+              defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
             },
           ],
           metadata: {
@@ -700,7 +714,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
           },
           startTime: new Date(Date.UTC(2020, 0, 8, 13, 0, 0)),
           endTime: new Date(Date.UTC(2020, 0, 8, 14, 0, 0)),
-          title: "peer coding lets goo",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           uid: `booking-in-the-past-${randomString()}`,
           eventType: {
             connect: {
@@ -1739,7 +1755,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
         const cancelledByEmail = `user-bookings-canceller-${randomString()}@canceller.com`;
         const cancelledBooking = await bookingsRepositoryFixture.create({
           uid: `booking-uid-${eventTypeId}`,
-          title: "booking title",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: "2050-09-05T11:00:00.000Z",
           endTime: "2050-09-05T12:00:00.000Z",
           eventType: {
@@ -1789,7 +1807,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
         const rescheduledByEmail = `user-bookings-rescheduler-${randomString()}@rescheduler.com`;
         const rescheduledBooking = await bookingsRepositoryFixture.create({
           uid: `booking-uid-${eventTypeId}`,
-          title: "booking title",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: "2050-09-05T11:00:00.000Z",
           endTime: "2050-09-05T12:00:00.000Z",
           eventType: {
@@ -1840,7 +1860,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
         // Create the original booking that will be rescheduled
         const originalBooking = await bookingsRepositoryFixture.create({
           uid: `original-booking-uid-${eventTypeId}`,
-          title: "original booking title",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: "2050-09-05T10:00:00.000Z",
           endTime: "2050-09-05T11:00:00.000Z",
           eventType: {
@@ -1866,7 +1888,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
         // Create the new booking that is the result of the reschedule
         const newBooking = await bookingsRepositoryFixture.create({
           uid: `new-booking-uid-${eventTypeId}`,
-          title: "rescheduled booking title",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: "2050-09-05T14:00:00.000Z",
           endTime: "2050-09-05T15:00:00.000Z",
           eventType: {
@@ -2052,7 +2076,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
       let eventTypeWithAllLocationsId: number;
       it("can create event type with all locations except google meet", async () => {
         const eventTypeBody: CreateEventTypeInput_2024_06_14 = {
-          title: "book using any location",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "book-using-any-location",
           lengthInMinutes: 15,
           locations: [
@@ -2404,7 +2430,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
 
         const booking = await bookingsRepositoryFixture.create({
           uid: `booking-uid-${randomString(10)}`,
-          title: "booking title",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: "2060-09-05T11:00:00.000Z",
           endTime: "2060-09-05T12:00:00.000Z",
           eventType: {
@@ -2574,7 +2602,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
           },
           startTime: new Date(Date.UTC(2050, 0, 8, 13, 0, 0)),
           endTime: new Date(Date.UTC(2050, 0, 8, 14, 0, 0)),
-          title: "peer coding lets goo",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           uid: `cancelled-booking-${randomString()}`,
           eventType: {
             connect: {
@@ -2626,7 +2656,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
           },
           startTime: new Date(Date.UTC(2050, 0, 8, 13, 0, 0)),
           endTime: new Date(Date.UTC(2050, 0, 8, 14, 0, 0)),
-          title: "peer coding lets goo",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           uid: `cancelled-booking-${randomString()}`,
           eventType: {
             connect: {
@@ -2660,7 +2692,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
           fromReschedule: rescheduledBooking.uid,
           startTime: new Date(Date.UTC(2050, 0, 8, 13, 0, 0)),
           endTime: new Date(Date.UTC(2050, 0, 8, 14, 0, 0)),
-          title: "peer coding lets goo",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           uid: `new-booking-${randomString()}`,
           eventType: {
             connect: {
@@ -2714,7 +2748,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
           },
           startTime: new Date(Date.UTC(2050, 0, 8, 13, 0, 0)),
           endTime: new Date(Date.UTC(2050, 0, 8, 14, 0, 0)),
-          title: "peer coding lets goo",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           uid: `cancelled-booking-${randomString()}`,
           eventType: {
             connect: {

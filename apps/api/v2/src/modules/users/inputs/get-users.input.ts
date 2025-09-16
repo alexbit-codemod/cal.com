@@ -5,7 +5,9 @@ import { IsNumber, IsOptional, Max, Min, Validate } from "class-validator";
 import { IsEmailStringOrArray } from "../validators/isEmailStringOrArray";
 
 export class GetUsersInput {
-  @ApiProperty({ required: false, description: "The number of items to return", example: 10 })
+  @ApiProperty({ required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 10 })
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @Min(1)
@@ -13,7 +15,9 @@ export class GetUsersInput {
   @IsOptional()
   take?: number;
 
-  @ApiProperty({ required: false, description: "The number of items to skip", example: 0 })
+  @ApiProperty({ required: false, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 0 })
   @Transform(({ value }: { value: string }) => value && parseInt(value))
   @IsNumber()
   @Min(0)
@@ -27,7 +31,9 @@ export class GetUsersInput {
   })
   @ApiPropertyOptional({
     type: [String],
-    description: "The email address or an array of email addresses to filter by",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   emails?: string[];
 }

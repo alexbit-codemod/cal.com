@@ -18,6 +18,8 @@ export const throwIfNotHaveAdminAccessToTeam = async ({
   const hasAdminAccessToTeam = teamsUserHasAdminAccessFor.some((id) => id === teamId);
 
   if (!hasAdminAccessToTeam) {
-    throw new HttpError({ statusCode: 401, message: "You must be an admin of the team to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };

@@ -33,18 +33,8 @@ const DisableTeamImpersonation = ({
 
   return (
     <>
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        title={t("user_impersonation_heading")}
-        labelClassName="text-sm"
-        disabled={disabled || mutation?.isPending}
-        description={t("team_impersonation_description")}
-        checked={allowImpersonation}
-        onCheckedChange={(_allowImpersonation) => {
-          setAllowImpersonation(_allowImpersonation);
-          mutation.mutate({ teamId, memberId, disableImpersonation: !_allowImpersonation });
-        }}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 };

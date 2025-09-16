@@ -31,13 +31,17 @@ export class CalendarEventVideoLocation implements ICalendarEventLocation {
   @IsString()
   @ApiProperty({
     enum: ["video"],
-    description: "Indicates this is a video conference location",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type = "video";
 
   @IsString()
   @ApiProperty({
-    description: "URL for joining the video conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   url!: string;
 
@@ -45,7 +49,9 @@ export class CalendarEventVideoLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Display name for the video conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   label?: string;
 
@@ -53,7 +59,9 @@ export class CalendarEventVideoLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Password required to join the video conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   password?: string;
 
@@ -61,7 +69,9 @@ export class CalendarEventVideoLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Meeting code or ID required to join the conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   meetingCode?: string;
 
@@ -69,7 +79,9 @@ export class CalendarEventVideoLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Access code required to join the conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   accessCode?: string;
 }
@@ -78,13 +90,17 @@ export class CalendarEventPhoneLocation implements ICalendarEventLocation {
   @IsString()
   @ApiProperty({
     enum: ["phone"],
-    description: "Indicates this is a phone conference location",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type = "phone";
 
   @IsString()
   @ApiProperty({
-    description: "Phone number or URL for dialing into the conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   url!: string;
 
@@ -92,7 +108,9 @@ export class CalendarEventPhoneLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Display name for the phone conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   label?: string;
 
@@ -100,7 +118,9 @@ export class CalendarEventPhoneLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "PIN number required for the phone conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   pin?: string;
 
@@ -108,7 +128,9 @@ export class CalendarEventPhoneLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Password required for the phone conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   password?: string;
 
@@ -116,7 +138,9 @@ export class CalendarEventPhoneLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Access code required for the phone conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   accessCode?: string;
 
@@ -124,7 +148,9 @@ export class CalendarEventPhoneLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Country/region code for the phone number",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   regionCode?: string;
 }
@@ -133,13 +159,17 @@ export class CalendarEventSipLocation implements ICalendarEventLocation {
   @IsString()
   @ApiProperty({
     enum: ["sip"],
-    description: "Indicates this is a SIP (Session Initiation Protocol) conference location",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type = "sip";
 
   @IsString()
   @ApiProperty({
-    description: "SIP URL for joining the conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   url!: string;
 
@@ -147,7 +177,9 @@ export class CalendarEventSipLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Display name for the SIP conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   label?: string;
 
@@ -155,7 +187,9 @@ export class CalendarEventSipLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "PIN number required for the SIP conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   pin?: string;
 
@@ -163,7 +197,9 @@ export class CalendarEventSipLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Password required for the SIP conference",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   password?: string;
 }
@@ -172,13 +208,17 @@ export class CalendarEventMoreLocation implements ICalendarEventLocation {
   @IsString()
   @ApiProperty({
     enum: ["more"],
-    description: "Indicates this is an additional conference location type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   type = "more";
 
   @IsString()
   @ApiProperty({
-    description: "URL for accessing this location",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   url!: string;
 
@@ -186,7 +226,9 @@ export class CalendarEventMoreLocation implements ICalendarEventLocation {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Display name for this location",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   label?: string;
 }
@@ -200,7 +242,9 @@ export type CalendarEventLocation =
 export class CalendarEventHost {
   @IsString()
   @ApiProperty({
-    description: "Email address of the event host",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   email!: string;
 
@@ -208,7 +252,9 @@ export class CalendarEventHost {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Display name of the event host",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   name?: string;
 
@@ -219,7 +265,9 @@ export class CalendarEventHost {
     enum: CalendarEventResponseStatus,
     nullable: true,
     enumName: "CalendarEventResponseStatus",
-    description: "Host's response to the invitation",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: CalendarEventResponseStatus.ACCEPTED,
   })
   responseStatus!: CalendarEventResponseStatus | null;
@@ -228,7 +276,9 @@ export class CalendarEventHost {
 export class calendarEventOwner {
   @IsString()
   @ApiProperty({
-    description: "Email address of the event host",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   email!: string;
 
@@ -236,7 +286,9 @@ export class calendarEventOwner {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Display name of the event host",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   name?: string;
 }
@@ -244,14 +296,18 @@ export class calendarEventOwner {
 export class CalendarEventAttendee {
   @IsString()
   @ApiProperty({
-    description: "Email address of the attendee",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   email!: string;
 
   @IsString()
   @IsOptional()
   @ApiPropertyOptional({
-    description: "Display name of the attendee",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   name?: string;
 
@@ -262,7 +318,9 @@ export class CalendarEventAttendee {
     enum: CalendarEventResponseStatus,
     nullable: true,
     enumName: "CalendarEventResponseStatus",
-    description: "Attendee's response to the invitation",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: CalendarEventResponseStatus.ACCEPTED,
   })
   responseStatus!: CalendarEventResponseStatus | null;
@@ -270,14 +328,18 @@ export class CalendarEventAttendee {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Indicates if this attendee is the current user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   self?: boolean;
 
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Indicates if this attendee's attendance is optional",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   optional?: boolean;
 
@@ -285,7 +347,9 @@ export class CalendarEventAttendee {
   @IsOptional()
   @ApiPropertyOptional({
     nullable: true,
-    description: "Indicates if this attendee is the host",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   host?: boolean;
 }
@@ -307,7 +371,9 @@ export class UnifiedCalendarEventOutput {
       time: { type: "string", format: "date-time" },
       timeZone: { type: "string" },
     },
-    description: "Start date and time of the calendar event with timezone information",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   start!: DateTimeWithZone;
 
@@ -319,21 +385,27 @@ export class UnifiedCalendarEventOutput {
       time: { type: "string", format: "date-time" },
       timeZone: { type: "string" },
     },
-    description: "End date and time of the calendar event with timezone information",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   end!: DateTimeWithZone;
 
   @IsString()
   @ApiProperty({
     type: String,
-    description: "Unique identifier of the calendar event",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   id!: string;
 
   @IsString()
   @ApiProperty({
     type: String,
-    description: "Title of the calendar event",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   title!: string;
 
@@ -342,7 +414,9 @@ export class UnifiedCalendarEventOutput {
   @ApiPropertyOptional({
     type: String,
     nullable: true,
-    description: "Detailed description of the calendar event",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   description?: string | null;
 
@@ -373,7 +447,9 @@ export class UnifiedCalendarEventOutput {
       },
     },
     nullable: true,
-    description: "Conference locations with entry points (video, phone, sip, more)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   locations?: CalendarEventLocation[];
 
@@ -383,7 +459,9 @@ export class UnifiedCalendarEventOutput {
   @ApiPropertyOptional({
     type: [CalendarEventAttendee],
     nullable: true,
-    description: "List of attendees with their response status",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   attendees?: CalendarEventAttendee[];
 
@@ -393,7 +471,9 @@ export class UnifiedCalendarEventOutput {
     enum: CalendarEventStatus,
     enumName: "CalendarEventStatus",
     nullable: true,
-    description: "Status of the event (accepted, pending, declined, cancelled)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: CalendarEventStatus.ACCEPTED,
   })
   status?: CalendarEventStatus | null;
@@ -404,7 +484,9 @@ export class UnifiedCalendarEventOutput {
   @ApiPropertyOptional({
     type: [CalendarEventHost],
     nullable: true,
-    description: "Information about the event hosts (organizers)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   hosts?: CalendarEventHost[];
 
@@ -414,7 +496,9 @@ export class UnifiedCalendarEventOutput {
   @ApiPropertyOptional({
     type: calendarEventOwner,
     nullable: true,
-    description: "The calendar account that owns this event. This is the primary calendar where the event is stored and cannot be modified without appropriate permissions. Changing this would require moving the event to a different calendar",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   calendarEventOwner?: calendarEventOwner;
 
@@ -423,7 +507,9 @@ export class UnifiedCalendarEventOutput {
     enum: CALENDARS,
     enumName: "CalendarSource",
     description:
-      "Calendar integration source (e.g., Google Calendar, Office 365, Apple Calendar). Currently only Google Calendar is supported.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     example: "google",
   })
   source!: (typeof CALENDARS)[number];

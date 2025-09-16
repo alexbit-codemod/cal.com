@@ -145,7 +145,9 @@ export const confirmHandler = async ({ ctx, input }: ConfirmOptions) => {
   // Do not move this before authorization check.
   // This is done to avoid exposing extra information to the requester.
   if (booking.status === BookingStatus.ACCEPTED) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Booking already confirmed" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // If booking requires payment and is not paid, we don't allow confirmation
@@ -159,7 +161,9 @@ export const confirmHandler = async ({ ctx, input }: ConfirmOptions) => {
       },
     });
 
-    return { message: "Booking confirmed", status: BookingStatus.ACCEPTED };
+    return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , status: BookingStatus.ACCEPTED };
   }
 
   // Cache translations to avoid requesting multiple times.
@@ -258,7 +262,9 @@ export const confirmHandler = async ({ ctx, input }: ConfirmOptions) => {
       // FIXME: It might be best to retrieve recurringEventId from the booking itself.
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: "Recurring event id doesn't belong to the booking",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -380,7 +386,9 @@ export const confirmHandler = async ({ ctx, input }: ConfirmOptions) => {
     await handleWebhookTrigger({ subscriberOptions, eventTrigger, webhookData });
   }
 
-  const message = `Booking ${confirmed}` ? "confirmed" : "rejected";
+  const message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   const status = confirmed ? BookingStatus.ACCEPTED : BookingStatus.REJECTED;
 
   return { message, status };
@@ -445,7 +453,9 @@ const checkIfUserIsAuthorizedToConfirmBooking = async ({
     return;
   }
 
-  throw new TRPCError({ code: "UNAUTHORIZED", message: "User is not authorized to confirm this booking" });
+  throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 };
 
 async function isLoggedInUserOrgAdminOfBookingUser(loggedInUserId: number, bookingUserId: number) {

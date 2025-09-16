@@ -9,7 +9,9 @@ import { SUCCESS_STATUS } from "@calcom/platform-constants";
 export class ProfileOutput {
   @IsInt()
   @Expose()
-  @ApiProperty({ type: Number, required: true, description: "The ID of the profile of user", example: 1 })
+  @ApiProperty({ type: Number, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 1 })
   id!: number;
 
   @IsInt()
@@ -17,14 +19,18 @@ export class ProfileOutput {
   @ApiProperty({
     type: Number,
     required: true,
-    description: "The ID of the organization of user",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 1,
   })
   organizationId!: number;
 
   @IsInt()
   @Expose()
-  @ApiProperty({ type: Number, required: true, description: "The IDof the user", example: 1 })
+  @ApiProperty({ type: Number, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: 1 })
   userId!: number;
 
   @IsString()
@@ -33,14 +39,18 @@ export class ProfileOutput {
     type: String,
     nullable: true,
     required: false,
-    description: "The username of the user within the organization context",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "john_doe",
   })
   username!: string;
 }
 export class GetOrgUsersWithProfileOutput extends GetUserOutput {
   @ApiProperty({
-    description: "organization user profile, contains user data within the organizaton context",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   @ValidateNested()

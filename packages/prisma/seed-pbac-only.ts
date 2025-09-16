@@ -21,7 +21,9 @@ async function main() {
 
     console.log("\n🔐 Login Credentials:");
     result.users.forEach(({ user, role, customRole }) => {
-      const roleText = customRole ? `${role} + ${customRole}` : role;
+      const roleText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       console.log(`  - ${user.name}: ${user.email} / password (${roleText})`);
     });
 

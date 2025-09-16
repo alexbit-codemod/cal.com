@@ -97,7 +97,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
         startTime: new Date(Date.UTC(2020, 0, 8, 12, 0, 0)),
         endTime: new Date(Date.UTC(2020, 0, 8, 13, 0, 0)),
         uid: `calendar-links-2024-08-13-booking-${randomString()}`,
-        title: "Test Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         eventType: {
           connect: {
             id: event.id,

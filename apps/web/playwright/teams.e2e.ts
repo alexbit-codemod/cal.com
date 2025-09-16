@@ -59,7 +59,9 @@ test.describe("Teams - NonOrg", () => {
     await expect(page.locator("[data-testid=success-page]")).toBeVisible();
 
     // The title of the booking
-    const BookingTitle = `${teamEventTitle} between ${team.name} and ${testName}`;
+    const BookingTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     await expect(page.locator("[data-testid=booking-title]")).toHaveText(BookingTitle);
     // The booker should be in the attendee list
     await expect(page.locator(`[data-testid="attendee-name-${testName}"]`)).toHaveText(testName);
@@ -103,7 +105,9 @@ test.describe("Teams - NonOrg", () => {
     const bookingTitle = await page.getByTestId("booking-title").textContent();
     expect(
       teamMatesObj.concat([{ name: owner.name! }]).some((teamMate) => {
-        const BookingTitle = `${teamEventTitle} between ${teamMate.name} and ${testName}`;
+        const BookingTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         return BookingTitle === bookingTitle;
       })
     ).toBe(true);

@@ -229,12 +229,8 @@ export const ConfigureStepCard: FC<ConfigureStepCardProps> = (props) => {
           <div key={group.fieldId}>
             {eventTypeGroups[groupIndex].eventTypes.some((eventType) => eventType.selected === true) && (
               <div className="mb-2 mt-4 flex items-center">
-                <Avatar
-                  alt=""
-                  imageSrc={group.image} // if no image, use default avatar
-                  size="md"
-                  className="inline-flex justify-center"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <p className="text-subtle block pl-2">{group.slug}</p>
               </div>
             )}
@@ -246,9 +242,8 @@ export const ConfigureStepCard: FC<ConfigureStepCardProps> = (props) => {
             />
           </div>
         ))}
-        <button form="outer-event-type-form" type="submit" className="hidden" ref={mainForSubmitRef}>
-          Save
-        </button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Button
           className="text-md mt-6 w-full justify-center"
           type="button"

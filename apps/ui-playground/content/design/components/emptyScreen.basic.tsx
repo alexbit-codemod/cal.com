@@ -6,12 +6,7 @@ import { EmptyScreen } from "@calcom/ui/components/empty-screen";
 
 export const BasicExample: React.FC = () => (
   <RenderComponentWithSnippet>
-    <EmptyScreen
-      Icon="calendar"
-      headline="No upcoming meetings"
-      description="Create a meeting to get started"
-      buttonText="Create Meeting"
-      buttonOnClick={() => alert("Create Meeting clicked")}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   </RenderComponentWithSnippet>
 );

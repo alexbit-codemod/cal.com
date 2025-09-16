@@ -249,12 +249,8 @@ const OrgProfileForm = ({ defaultValues }: { defaultValues: FormValues }) => {
               const showRemoveLogoButton = value !== null;
               return (
                 <>
-                  <Avatar
-                    data-testid="profile-upload-logo"
-                    alt={form.getValues("name")}
-                    imageSrc={getPlaceholderAvatar(value, form.getValues("name"))}
-                    size="lg"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="ms-4">
                     <div className="flex gap-2">
                       <ImageUploader
@@ -287,13 +283,8 @@ const OrgProfileForm = ({ defaultValues }: { defaultValues: FormValues }) => {
 
               return (
                 <>
-                  <OrgBanner
-                    data-testid="profile-upload-banner"
-                    alt={`${defaultValues.name} Banner` || ""}
-                    className="grid min-h-[150px] w-full place-items-center rounded-md sm:min-h-[200px]"
-                    fallback={t("no_target", { target: "banner" })}
-                    imageSrc={value}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="ms-4">
                     <div className="flex gap-2">
                       <BannerUploader
@@ -327,12 +318,8 @@ const OrgProfileForm = ({ defaultValues }: { defaultValues: FormValues }) => {
               const showRemoveLogoButton = !!value;
               return (
                 <>
-                  <Avatar
-                    alt="calVideoLogo"
-                    imageSrc={value}
-                    fallback={<Icon name="plus" className="text-subtle h-6 w-6" />}
-                    size="lg"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="ms-4">
                     <div className="flex gap-2">
                       <ImageUploader
@@ -363,14 +350,8 @@ const OrgProfileForm = ({ defaultValues }: { defaultValues: FormValues }) => {
           name="name"
           render={({ field: { value } }) => (
             <div className="mt-8">
-              <TextField
-                name="name"
-                label={t("organization_name")}
-                value={value}
-                onChange={(e) => {
-                  form.setValue("name", e?.target.value, { shouldDirty: true });
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
         />
@@ -379,13 +360,8 @@ const OrgProfileForm = ({ defaultValues }: { defaultValues: FormValues }) => {
           name="slug"
           render={({ field: { value } }) => (
             <div className="mt-8">
-              <TextField
-                name="slug"
-                label={t("organization_url")}
-                value={value}
-                disabled
-                addOnSuffix={`.${subdomainSuffix()}`}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
         />
@@ -394,38 +370,15 @@ const OrgProfileForm = ({ defaultValues }: { defaultValues: FormValues }) => {
           name="id"
           render={({ field: { value } }) => (
             <div className="mt-8">
-              <TextField
-                name="id"
-                label={t("organization_id")}
-                value={value}
-                disabled={true}
-                addOnSuffix={
-                  <Tooltip content={t("copy_to_clipboard")}>
-                    <Button
-                      color="minimal"
-                      size="sm"
-                      type="button"
-                      aria-label="copy organization id"
-                      onClick={() => handleCopy(value.toString())}>
-                      <Icon name="copy" className="ml-1 h-4 w-4" />
-                    </Button>
-                  </Tooltip>
-                }
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
         />
         <div className="mt-8">
           <Label>{t("about")}</Label>
-          <Editor
-            getText={() => md.render(form.getValues("bio") || "")}
-            setText={(value: string) => form.setValue("bio", turndown(value), { shouldDirty: true })}
-            excludedToolbarItems={["blockType"]}
-            disableLists
-            firstRender={firstRender}
-            setFirstRender={setFirstRender}
-            height="80px"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <p className="text-default mt-2 text-sm">{t("org_description")}</p>
       </div>

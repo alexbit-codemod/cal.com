@@ -19,12 +19,8 @@ function App() {
     })();
   }, []);
   return (
-    <button
-      data-cal-namespace={calNamespace}
-      data-cal-link="pro"
-      data-cal-config='{"layout":"month_view", "theme":"dark"}'>
-      Click me
-    </button>
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }
 

@@ -33,8 +33,12 @@ export const getSmsReminderNumberField = () =>
   ({
     name: SMS_REMINDER_NUMBER_FIELD,
     type: "phone",
-    defaultLabel: "number_text_notifications",
-    defaultPlaceholder: "enter_phone_number",
+    defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     editable: "system",
   } as const);
 
@@ -47,7 +51,9 @@ export const getSmsReminderNumberSource = ({
 }) => ({
   id: `${workflowId}`,
   type: "workflow",
-  label: "Workflow",
+  label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   fieldRequired: isSmsReminderNumberRequired,
   editUrl: `/workflows/${workflowId}`,
 });
@@ -145,32 +151,42 @@ export const ensureBookingInputsHaveSystemFields = ({
       name: "name",
       editable: "system",
       // This Label is used in Email only as of now.
-      defaultLabel: "your_name",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       required: true,
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
       ],
     },
     {
-      defaultLabel: "email_address",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       type: "email",
       name: "email",
       required: !isEmailFieldOptional,
       editable: "system-but-optional",
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
       ],
     },
     {
-      defaultLabel: "phone_number",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       type: "phone",
       name: "attendeePhoneNumber",
       required: false,
@@ -178,14 +194,18 @@ export const ensureBookingInputsHaveSystemFields = ({
       editable: "system-but-optional",
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
       ],
     },
     {
-      defaultLabel: "location",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       type: "radioInput",
       name: "location",
       editable: "system",
@@ -211,7 +231,9 @@ export const ensureBookingInputsHaveSystemFields = ({
       },
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
@@ -222,7 +244,9 @@ export const ensureBookingInputsHaveSystemFields = ({
   // These fields should be added after other user fields
   const systemAfterFields: typeof bookingFields = [
     {
-      defaultLabel: "what_is_this_meeting_about",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       type: "text",
       name: "title",
       editable: "system-but-optional",
@@ -231,59 +255,81 @@ export const ensureBookingInputsHaveSystemFields = ({
       defaultPlaceholder: "",
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
       ],
     },
     {
-      defaultLabel: "additional_notes",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       type: "textarea",
       name: "notes",
       editable: "system-but-optional",
       required: additionalNotesRequired,
-      defaultPlaceholder: "share_additional_notes",
+      defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
       ],
     },
     {
-      defaultLabel: "additional_guests",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       type: "multiemail",
       editable: "system-but-optional",
       name: "guests",
-      defaultPlaceholder: "email",
+      defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       required: false,
       hidden: disableGuests,
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
       ],
     },
     {
-      defaultLabel: "reason_for_reschedule",
+      defaultLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       type: "textarea",
       editable: "system-but-optional",
       name: "rescheduleReason",
-      defaultPlaceholder: "reschedule_placeholder",
+      defaultPlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       required: false,
       views: [
         {
           id: "reschedule",
-          label: "Reschedule View",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       sources: [
         {
-          label: "Default",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           id: "default",
           type: "default",
         },
@@ -330,7 +376,9 @@ export const ensureBookingInputsHaveSystemFields = ({
   // Backward Compatibility: If we are migrating from old system, we need to map `customInputs` to `bookingFields`
   if (handleMigration) {
     customInputs.forEach((input, index) => {
-      const label = input.label || `${upperCaseToCamelCase(input.type)}`;
+      const label = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       bookingFields.push({
         label: label,
         editable: "user",

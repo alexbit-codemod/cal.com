@@ -27,7 +27,9 @@ async function authMiddleware(req: NextApiRequest) {
     },
   });
   if (!destinationCalendar)
-    throw new HttpError({ statusCode: 404, message: "Destination calendar not found" });
+    throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 }
 
 export default authMiddleware;

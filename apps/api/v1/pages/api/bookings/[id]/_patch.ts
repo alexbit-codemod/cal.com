@@ -115,7 +115,9 @@ async function checkPermissions(req: NextApiRequest, body: z.infer<typeof schema
     // Organizer has to be a cal user and we can't allow a booking to be transferred to some other cal user's name
     throw new HttpError({
       statusCode: 403,
-      message: "Only admin can change the organizer of a booking",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -127,7 +129,9 @@ async function checkPermissions(req: NextApiRequest, body: z.infer<typeof schema
     if (accessibleUsersIds.length === 0) {
       throw new HttpError({
         statusCode: 403,
-        message: "Only admin can change the organizer of a booking",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }

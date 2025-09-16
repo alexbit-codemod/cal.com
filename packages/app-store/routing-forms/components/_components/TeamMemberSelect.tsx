@@ -83,21 +83,8 @@ export const TeamMemberSelect = ({
     <div>
       <Label htmlFor="routing-form-select-members">{t("routing_form_select_members_to_email")}</Label>
       <div className="space-y-4">
-        <Select
-          id="routing-form-select-members"
-          data-testid="routing-form-select-members"
-          isMulti
-          options={options}
-          value={selectedOptions}
-          onChange={(newValue) => {
-            const selectedIds = (newValue as TeamMemberOption[]).map((option) => parseInt(option.value, 10));
-            onChange(selectedIds);
-          }}
-          className={className}
-          placeholder={placeholder || t("select_members")}
-          isDisabled={disabled || selectAll}
-          size={size}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         {selectAllEnabled && (
           <div className="flex items-center space-x-2">
             <Switch

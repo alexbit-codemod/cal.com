@@ -132,11 +132,15 @@ async function seedAppData() {
         },
       ],
       fields: [
-        { id: "c1296635-9f12-47b1-8153-c3a854649182", type: "text", label: "Test field", required: true },
+        { id: "c1296635-9f12-47b1-8153-c3a854649182", type: "text", label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        , required: true },
         {
           id: multiSelectLegacyFieldId,
           type: "multiselect",
-          label: "Multi Select(with legacy `selectText`)",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "multi",
           selectText: "Option-1\nOption-2",
           required: false,
@@ -144,7 +148,9 @@ async function seedAppData() {
         {
           id: "d3292635-9f12-17b1-9153-c3a854649182",
           type: "multiselect",
-          label: "Multi Select",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "multi",
           options: [
             {

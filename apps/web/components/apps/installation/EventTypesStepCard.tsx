@@ -73,9 +73,8 @@ const EventTypeCard: FC<EventTypeCardProps> = ({
           <div className="mt-2 flex flex-row flex-wrap gap-2">
             {Boolean(durations.length) &&
               durations.map((duration) => (
-                <Badge key={`event-type-${id}-duration-${duration}`} variant="gray" startIcon="clock">
-                  {duration}m
-                </Badge>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               ))}
           </div>
         </li>
@@ -94,12 +93,8 @@ const EventTypeGroup: FC<EventTypeGroupProps> = ({ groupIndex, userName, ...prop
   return (
     <div className="mt-10">
       <div className="mb-2 flex items-center">
-        <Avatar
-          alt=""
-          imageSrc={props.image} // if no image, use default avatar
-          size="md"
-          className="mt-1 inline-flex justify-center"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <p className="block pl-2 text-sm">{props.slug}</p>
       </div>
 
@@ -118,7 +113,8 @@ const EventTypeGroup: FC<EventTypeGroupProps> = ({ groupIndex, userName, ...prop
                 />
               ))
             ) : (
-              <div className="text-subtle bg-muted w-full p-2  text-center text-sm">Team has no Events</div>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           </ul>
         </ScrollableArea>

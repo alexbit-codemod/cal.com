@@ -112,12 +112,16 @@ test.describe("Insights", async () => {
 
     await expect(await page.locator('[data-testid="org-teams-filter-item"]')).toHaveCount(3);
 
-    await expect(await page.locator('[data-testid="org-teams-filter-item"]', { hasText: "All" })).toHaveCount(
+    await expect(await page.locator('[data-testid="org-teams-filter-item"]', { hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     })).toHaveCount(
       0
     );
 
     await expect(
-      await page.locator('[data-testid="org-teams-filter-item"]', { hasText: "Your account" })
+      await page.locator('[data-testid="org-teams-filter-item"]', { hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       })
     ).toHaveCount(1);
   });
 
@@ -139,7 +143,9 @@ test.describe("Insights", async () => {
 
     await expect(
       await page
-        .locator('[data-testid="org-teams-filter-item"]', { hasText: "All" })
+        .locator('[data-testid="org-teams-filter-item"]', { hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         })
         .locator('input[type="checkbox"]')
     ).toBeChecked();
   });
@@ -158,7 +164,9 @@ test.describe("Insights", async () => {
 
     await expect(await page.locator('[data-testid="org-teams-filter-item"]')).toHaveCount(3);
 
-    await expect(await page.locator('[data-testid="org-teams-filter-item"]', { hasText: "All" })).toHaveCount(
+    await expect(await page.locator('[data-testid="org-teams-filter-item"]', { hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     })).toHaveCount(
       0
     );
   });
@@ -178,7 +186,9 @@ test.describe("Insights", async () => {
     await expect(await page.locator('[data-testid="org-teams-filter-item"]')).toHaveCount(3);
 
     // switch to self profile
-    await page.locator('[data-testid="org-teams-filter-item"]', { hasText: "Your account" }).click();
+    await page.locator('[data-testid="org-teams-filter-item"]', { hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }).click();
 
     // switch to team 1
     await page.locator('[data-testid="org-teams-filter-item"]', { hasText: "test-insights" }).first().click();

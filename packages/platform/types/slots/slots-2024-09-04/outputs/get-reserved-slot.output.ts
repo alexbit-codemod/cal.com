@@ -6,20 +6,26 @@ export class GetReservedSlotOutput_2024_09_04 {
   @IsString()
   @ApiProperty({
     example: "e84be5a3-4696-49e3-acc7-b2f3999c3b94",
-    description: "The unique identifier of the reservation.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   reservationUid!: string;
 
   @IsInt()
-  @ApiProperty({ example: 1, description: "The ID of the event type for which booking should be reserved." })
+  @ApiProperty({ example: 1, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   })
   @Expose()
   eventTypeId!: number;
 
   @IsDateString()
   @ApiProperty({
     example: "2024-09-04T09:00:00Z",
-    description: "ISO 8601 datestring in UTC timezone representing available slot.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   slotStart!: string;
@@ -27,7 +33,9 @@ export class GetReservedSlotOutput_2024_09_04 {
   @IsDateString()
   @ApiProperty({
     example: "2024-09-04T10:00:00Z",
-    description: "ISO 8601 datestring in UTC timezone representing slot end.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   slotEnd!: string;
@@ -35,7 +43,9 @@ export class GetReservedSlotOutput_2024_09_04 {
   @IsInt()
   @ApiProperty({
     example: "30",
-    description: "Difference in minutes between slotStart and slotEnd.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   slotDuration!: number;
@@ -43,7 +53,9 @@ export class GetReservedSlotOutput_2024_09_04 {
   @IsDateString()
   @ApiProperty({
     example: "2023-09-04T10:00:00Z",
-    description: "ISO 8601 datestring in UTC timezone representing time until which the slot is reserved.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })
   @Expose()
   reservationUntil!: string;

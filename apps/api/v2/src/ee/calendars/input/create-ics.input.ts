@@ -35,7 +35,9 @@ export class IsICSUrlConstraint implements ValidatorConstraintInterface {
 export class CreateIcsFeedInputDto {
   @ApiProperty({
     example: ["https://cal.com/ics/feed.ics", "http://cal.com/ics/feed.ics"],
-    description: "An array of ICS URLs",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "array",
     items: {
       type: "string",
@@ -52,7 +54,9 @@ export class CreateIcsFeedInputDto {
   @IsBoolean()
   @ApiPropertyOptional({
     example: false,
-    description: "Whether to allowing writing to the calendar or not",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: "boolean",
     default: true,
   })

@@ -62,7 +62,9 @@ describe("EventTypes WebhooksController (e2e)", () => {
 
     eventType = await eventTypeRepositoryFixture.create(
       {
-        title: "Event Type 1",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `event-types-webhooks-event-type-${randomString()}`,
         length: 60,
       },
@@ -71,7 +73,9 @@ describe("EventTypes WebhooksController (e2e)", () => {
 
     eventType2 = await eventTypeRepositoryFixture.create(
       {
-        title: "Event Type 2",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `event-types-webhooks-event-type-${randomString()}`,
         length: 60,
       },
@@ -80,7 +84,9 @@ describe("EventTypes WebhooksController (e2e)", () => {
 
     otherEventType = await eventTypeRepositoryFixture.create(
       {
-        title: "Other Event Type ",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: `event-types-webhooks-other-event-type-${randomString()}`,
         length: 60,
       },

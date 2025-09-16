@@ -10,7 +10,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   {
     plan: "Free",
     description:
-      "The best plan to dip your toes into scheduling infrastructure. Start immediately with 25 free meetings per month",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     pricing: 0,
     includes: [
       "Up to 25 bookings a month",
@@ -23,7 +25,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   {
     plan: "Essentials",
     description:
-      "Your essential package with sophisticated support, hosted platform APIs, Cal.com Atoms (React components) and more.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     pricing: 299,
     includes: [
       "Everything in Starter",
@@ -36,7 +40,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   {
     plan: "Scale",
     description:
-      "The best all-in-one plan to scale your company. Everything you need to provide scheduling for the masses, without breaking things.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     pricing: 2499,
     includes: [
       "Everything in Essentials",
@@ -53,7 +59,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   {
     plan: "Enterprise",
     description:
-      "Enterprise is perfect for institutions that focus on control, security and everything beyond.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     includes: [
       "Everything in Scale",
       "No overages",

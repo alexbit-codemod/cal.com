@@ -230,20 +230,8 @@ export default function WorkflowListPage({ workflows }: Props) {
                       <div className="hidden md:block">
                         {workflow.team?.name && (
                           <Badge className="mr-4 mt-1 p-[1px] px-2" variant="gray">
-                            <Avatar
-                              alt={workflow.team?.name || ""}
-                              href={
-                                workflow.team?.id
-                                  ? `/settings/teams/${workflow.team?.id}/profile`
-                                  : "/settings/my-account/profile"
-                              }
-                              imageSrc={getPlaceholderAvatar(
-                                workflow?.team.logo,
-                                workflow.team?.name as string
-                              )}
-                              size="xs"
-                              className="mt-[3px] inline-flex justify-center"
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                             <div>{workflow.team.name}</div>
                           </Badge>
                         )}

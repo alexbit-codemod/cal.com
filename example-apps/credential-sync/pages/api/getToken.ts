@@ -8,10 +8,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   console.log("getToken hit");
   try {
     if (!secret) {
-      return res.status(403).json({ message: "secret header not set" });
+      return res.status(403).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     if (secret !== CALCOM_CREDENTIAL_SYNC_SECRET) {
-      return res.status(403).json({ message: "Invalid secret" });
+      return res.status(403).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const calcomUserId = req.body.calcomUserId;

@@ -25,7 +25,8 @@ export const IconsExample: React.FC = () => (
           <Badge variant={variant} startIcon="bell">
             {variant}
           </Badge>
-          <span className="text-subtle text-xs">Icon</span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       ))}
     </div>

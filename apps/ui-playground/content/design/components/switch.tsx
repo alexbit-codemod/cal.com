@@ -11,7 +11,8 @@ export const BasicExample = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="flex flex-col space-y-4">
-        <Switch label="Basic switch with label" checked={checked} onCheckedChange={setChecked} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );
@@ -22,8 +23,10 @@ export const LabelPositionExample = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="flex flex-col space-y-4">
-        <Switch label="Label on trailing side (default)" checked={checked} onCheckedChange={setChecked} />
-        <Switch label="Label on leading side" labelOnLeading checked={checked} onCheckedChange={setChecked} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );
@@ -33,9 +36,12 @@ export const StatesExample = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="flex flex-col space-y-4">
-        <Switch label="Enabled switch" checked />
-        <Switch label="Disabled switch" disabled />
-        <Switch label="Disabled and checked switch" disabled defaultChecked />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );
@@ -47,11 +53,8 @@ export const ControlledExample = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="flex flex-col space-y-4">
-        <Switch
-          label={`Switch is ${checked ? "on" : "off"}`}
-          checked={checked}
-          onCheckedChange={setChecked}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );
@@ -62,12 +65,8 @@ export const WithPadding = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="flex flex-col space-y-4">
-        <Switch
-          label={`Switch is ${checked ? "on" : "off"}`}
-          checked={checked}
-          onCheckedChange={setChecked}
-          padding
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );
@@ -79,8 +78,10 @@ export const SwitchSizes = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="flex flex-col space-y-4">
-        <Switch label="Small switch" size="sm" checked={checked} onCheckedChange={setChecked} />
-        <Switch label="Medium switch" checked={checked} onCheckedChange={setChecked} />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );

@@ -24,7 +24,9 @@ export type Types = Record<string, Type>;
 export type Settings = RAQBSettings;
 const conjunctions: Conjunctions = {
   AND: {
-    label: "And",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     jsonLogicConj: "and",
     reversedConj: "OR",
     formatConj: () => "",
@@ -33,7 +35,9 @@ const conjunctions: Conjunctions = {
     mongoConj: "",
   },
   OR: {
-    label: "Or",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     jsonLogicConj: "or",
     reversedConj: "AND",
     formatConj: () => "",
@@ -45,45 +49,61 @@ const conjunctions: Conjunctions = {
 
 const operators: Operators = {
   equal: {
-    label: "Equals",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: "==",
     reversedOp: "not_equal",
     jsonLogic: "==",
   },
   not_equal: {
     isNotOp: true,
-    label: "Does not equal",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: "!=",
     reversedOp: "equal",
     jsonLogic: "!=",
   },
   less: {
-    label: "Less than",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: "<",
     reversedOp: "greater_or_equal",
     jsonLogic: "<",
   },
   less_or_equal: {
-    label: "Less than or equal to",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: "<=",
     reversedOp: "greater",
     jsonLogic: "<=",
   },
   greater: {
-    label: "Greater than",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: ">",
     reversedOp: "less_or_equal",
     jsonLogic: ">",
   },
   greater_or_equal: {
-    label: "Greater than or equal to",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: ">=",
     reversedOp: "less",
     jsonLogic: ">=",
   },
   like: {
-    label: "Contains",
-    labelForFormat: "Contains",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     reversedOp: "not_like",
     jsonLogic: "in",
     _jsonLogicIsRevArgs: true,
@@ -91,9 +111,13 @@ const operators: Operators = {
   },
   not_like: {
     isNotOp: true,
-    label: "Not contains",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     reversedOp: "like",
-    labelForFormat: "Not Contains",
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     valueSources: ["value"],
   },
   /**
@@ -112,8 +136,12 @@ const operators: Operators = {
   //     valueSources: ["value"],
   //   },
   between: {
-    label: "Between",
-    labelForFormat: "BETWEEN",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     cardinality: 2,
     valueLabels: ["Value from", "Value to"],
     reversedOp: "not_between",
@@ -127,8 +155,12 @@ const operators: Operators = {
   },
   not_between: {
     isNotOp: true,
-    label: "Not between",
-    labelForFormat: "NOT BETWEEN",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     cardinality: 2,
     valueLabels: ["Value from", "Value to"],
     reversedOp: "between",
@@ -141,16 +173,24 @@ const operators: Operators = {
     },
   },
   is_empty: {
-    label: "Is empty",
-    labelForFormat: "IS EMPTY",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     cardinality: 0,
     reversedOp: "is_not_empty",
     jsonLogic: "!",
   },
   is_not_empty: {
     isNotOp: true,
-    label: "Is not empty",
-    labelForFormat: "IS NOT EMPTY",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     cardinality: 0,
     reversedOp: "is_empty",
     jsonLogic: "!!",
@@ -173,33 +213,47 @@ const operators: Operators = {
   //     jsonLogic: "!=",
   //   },
   select_equals: {
-    label: "Equals",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: "==",
     reversedOp: "select_not_equals",
     jsonLogic: "==",
   },
   select_not_equals: {
     isNotOp: true,
-    label: "Does not equal",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     labelForFormat: "!=",
     reversedOp: "select_equals",
     jsonLogic: "!=",
   },
   select_any_in: {
-    label: "Any in",
-    labelForFormat: "IN",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     reversedOp: "select_not_any_in",
     jsonLogic: "in",
   },
   select_not_any_in: {
     isNotOp: true,
-    label: "Not any in",
-    labelForFormat: "NOT IN",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     reversedOp: "select_any_in",
   },
   // We define this operator but use it conditionally for multiselect for Attributes only
   multiselect_some_in: {
-    label: "Any in",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     jsonLogic: (field: any, operator: any, vals: any) => {
       return {
         // Tested in jsonLogic.test.ts
@@ -208,11 +262,15 @@ const operators: Operators = {
     },
   },
   multiselect_not_some_in: {
-    label: "Not any in",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     reversedOp: "multiselect_some_in",
   },
   multiselect_equals: {
-    label: "All in",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     reversedOp: "multiselect_not_equals",
     // jsonLogic2: "all-in",
     jsonLogic: (field: any, op: any, vals: any, ...rest) => {
@@ -224,23 +282,37 @@ const operators: Operators = {
   },
   multiselect_not_equals: {
     isNotOp: true,
-    label: "Not all in",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     reversedOp: "multiselect_equals",
   },
   some: {
-    label: "Some",
-    labelForFormat: "SOME",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     cardinality: 0,
     jsonLogic: "some",
   },
   all: {
-    label: "All",
-    labelForFormat: "ALL",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     cardinality: 0,
   },
   none: {
-    label: "None",
-    labelForFormat: "NONE",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    labelForFormat: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     cardinality: 0,
     jsonLogic: "none",
   },
@@ -251,40 +323,60 @@ const widgets: WidgetsWithoutFactory = {
     type: "text",
     jsType: "string",
     valueSrc: "value" as const,
-    valueLabel: "String",
-    valuePlaceholder: "Enter string",
+    valueLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    valuePlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     toJS: (val: any) => val,
   },
   textarea: {
     type: "text",
     jsType: "string",
     valueSrc: "value" as const,
-    valueLabel: "Text",
-    valuePlaceholder: "Enter text",
+    valueLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    valuePlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     toJS: (val: any) => val,
   },
   number: {
     type: "number",
     jsType: "number",
     valueSrc: "value" as const,
-    valueLabel: "Number",
-    valuePlaceholder: "Enter number",
+    valueLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    valuePlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     toJS: (val: any) => val,
   },
   select: {
     type: "select",
     jsType: "string",
     valueSrc: "value" as const,
-    valueLabel: "Value",
-    valuePlaceholder: "Select value",
+    valueLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    valuePlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     toJS: (val: any) => val,
   },
   multiselect: {
     type: "multiselect",
     jsType: "array",
     valueSrc: "value" as const,
-    valueLabel: "Values",
-    valuePlaceholder: "Select values",
+    valueLabel: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    valuePlaceholder: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     toJS: (val: any) => val,
   },
 };

@@ -5,32 +5,13 @@ import { EmptyScreen } from "@calcom/ui/components/empty-screen";
 export default function NoPlatformPlan() {
   const { t } = useLocale();
   return (
-    <EmptyScreen
-      Icon="credit-card"
-      headline={t("subscription_needed")}
-      description={t("subscription_needed_description")}
-      buttonRaw={
-        <div className="flex gap-2">
-          <Button
-            className="hover:bg-slate-300 hover:text-black"
-            color="secondary"
-            href="/settings/platform/new">
-            Subscribe
-          </Button>
-          <Button
-            color="secondary"
-            className="hover:bg-slate-300 hover:text-black"
-            href="https://cal.com/platform/pricing"
-            target="_blank">
-            Go to Pricing
-          </Button>
-          <Button
-            color="secondary"
-            className="hover:bg-slate-300 hover:text-black"
-            href="https://cal.com/sales"
-            target="_blank">
-            Contact Sales
-          </Button>
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       }
     />

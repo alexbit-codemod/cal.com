@@ -16,27 +16,10 @@ export const OrganizationCreationEmail = (
       <p style={{ fontSize: "24px", marginBottom: "16px", textAlign: "center" }}>
         <>{props.language(`You have created ${props.orgName} organization.`)}</>
       </p>
-      <img
-        style={{
-          borderRadius: "16px",
-          height: "270px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        src={`${WEBAPP_URL}/emails/calendar-email-hero.png`}
-        alt=""
-      />
-      <p
-        style={{
-          fontWeight: 400,
-          lineHeight: "24px",
-          marginBottom: "32px",
-          marginTop: "32px",
-          lineHeightStep: "24px",
-        }}>
-        You have been added as an owner of the organization.
-      </p>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <p
         data-testid="organization-link-info"
         style={{
@@ -47,9 +30,8 @@ export const OrganizationCreationEmail = (
           lineHeightStep: "24px",
         }}>
         {isNewUser ? (
-          <>
-            Enjoy your new organization link: <a href={`${newLink}`}>{newLinkWithoutProtocol}</a>
-          </>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
           <ServerTrans
             t={props.language}

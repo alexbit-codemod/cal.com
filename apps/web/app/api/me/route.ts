@@ -17,19 +17,25 @@ async function getHandler() {
 
   const session = await getServerSession({ req: legacyReq });
   if (!session) {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 409 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 409 });
   }
 
   const preUserDate = performance.now();
   const user = await prisma.user.findUnique({ where: { id: session.user.id } });
   if (!user) {
-    return NextResponse.json({ message: "No user found" }, { status: 404 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 404 });
   }
 
   const lastUpdate = performance.now();
 
   const response = NextResponse.json({
-    message: `Hello ${user.name}`,
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     prePrismaDate,
     prismaDuration: `Prisma took ${preSessionDate - prePrismaDate}ms`,
     preSessionDate,

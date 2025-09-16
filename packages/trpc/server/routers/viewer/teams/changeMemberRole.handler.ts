@@ -21,7 +21,9 @@ export const changeMemberRoleHandler = async ({ ctx, input }: ChangeMemberRoleOp
   const teamRepo = new TeamRepository(prisma);
   const team = await teamRepo.findById({ id: input.teamId });
   if (!team) {
-    throw new TRPCError({ code: "NOT_FOUND", message: "Team not found" });
+    throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Get the organization ID (either the team's parent or the team itself if it's an org)
@@ -62,20 +64,26 @@ export const changeMemberRoleHandler = async ({ ctx, input }: ChangeMemberRoleOp
   const teamHasMoreThanOneOwner = teamOwners.length > 1;
 
   if (!targetMembership) {
-    throw new TRPCError({ code: "NOT_FOUND", message: "Target membership not found" });
+    throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (myMembership?.role === MembershipRole.ADMIN && targetMembership?.role === MembershipRole.OWNER) {
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "You can not change the role of an owner if you are an admin.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (targetMembership?.role === MembershipRole.OWNER && !teamHasMoreThanOneOwner) {
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "You can not change the role of the only owner of a team.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -89,7 +97,9 @@ export const changeMemberRoleHandler = async ({ ctx, input }: ChangeMemberRoleOp
   ) {
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "You can not change yourself to a higher role.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

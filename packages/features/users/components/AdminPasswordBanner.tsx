@@ -13,15 +13,8 @@ function AdminPasswordBanner({ data }: AdminPasswordBannerProps) {
 
   return (
     <>
-      <TopBanner
-        text={t("invalid_admin_password", { user: data.user.username })}
-        variant="warning"
-        actions={
-          <Link href="/settings/security/password" className="border-b border-b-black">
-            {t("change_password_admin")}
-          </Link>
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 }

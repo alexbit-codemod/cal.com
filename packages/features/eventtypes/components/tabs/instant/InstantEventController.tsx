@@ -105,23 +105,17 @@ export default function InstantEventController({
     <LicenseRequired>
       <div className="block items-start sm:flex">
         {!isOrg || !isTeamEvent ? (
-          <EmptyScreen
-            headline={t("instant_tab_title")}
-            Icon="phone-call"
-            description={t("uprade_to_create_instant_bookings")}
-            buttonRaw={<Button href="/enterprise">{t("upgrade")}</Button>}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
           <div className={!paymentEnabled ? "w-full" : ""}>
             {paymentEnabled ? (
-              <Alert severity="warning" title={t("warning_payment_instant_meeting_event")} />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             ) : (
               <>
-                <Alert
-                  className="mb-4"
-                  severity="warning"
-                  title={t("warning_instant_meeting_experimental")}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 <SettingsToggle
                   labelClassName="text-sm"
                   toggleSwitchAtTheEnd={true}
@@ -156,19 +150,8 @@ export default function InstantEventController({
                             return (
                               <>
                                 <Label>{t("instant_meeting_availability")}</Label>
-                                <Select
-                                  placeholder={t("select")}
-                                  options={options}
-                                  isDisabled={shouldLockDisableProps("instantMeetingSchedule").disabled}
-                                  isSearchable={false}
-                                  onChange={(selected) => {
-                                    if (selected) onChange(selected.value);
-                                  }}
-                                  className="mb-4 block w-full min-w-0 flex-1 rounded-sm text-sm"
-                                  value={optionValue}
-                                  components={{ Option, SingleValue }}
-                                  isMulti={false}
-                                />
+                                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                                $$$
                               </>
                             );
                           }}
@@ -375,20 +358,8 @@ const InstantMeetingWebhooks = ({ eventType }: { eventType: EventTypeSetup }) =>
               </>
             ) : (
               <>
-                <EmptyScreen
-                  Icon="webhook"
-                  headline={t("create_your_first_webhook")}
-                  description={t("create_instant_meeting_webhook_description")}
-                  buttonRaw={
-                    isChildrenManagedEventType && !isManagedEventType ? (
-                      <Button StartIcon="lock" color="secondary" disabled>
-                        {t("locked_by_admin")}
-                      </Button>
-                    ) : (
-                      <NewWebhookButton />
-                    )
-                  }
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </>
             )}
           </div>

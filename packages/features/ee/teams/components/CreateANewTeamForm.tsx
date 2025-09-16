@@ -103,25 +103,8 @@ export const CreateANewTeamForm = (props: CreateANewTeamFormProps) => {
             }}
             render={({ field: { value } }) => (
               <>
-                <TextField
-                  disabled={
-                    /* E2e is too fast and it tries to fill this way before the form is ready */
-                    !isLocaleReady || createTeamMutation.isPending
-                  }
-                  className="mt-2"
-                  placeholder="Acme Inc."
-                  name="name"
-                  label={t("team_name")}
-                  defaultValue={value}
-                  onChange={(e) => {
-                    newTeamFormMethods.setValue("name", e?.target.value);
-                    if (newTeamFormMethods.formState.touchedFields["slug"] === undefined) {
-                      newTeamFormMethods.setValue("slug", slugify(e?.target.value));
-                    }
-                  }}
-                  autoComplete="off"
-                  data-testid="team-name"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </>
             )}
           />
@@ -133,24 +116,8 @@ export const CreateANewTeamForm = (props: CreateANewTeamFormProps) => {
             control={newTeamFormMethods.control}
             rules={{ required: t("team_url_required") }}
             render={({ field: { value } }) => (
-              <TextField
-                name="slug"
-                placeholder="acme"
-                label={t("team_url")}
-                addOnLeading={`${
-                  orgBranding
-                    ? `${orgBranding.fullDomain.replace("https://", "").replace("http://", "")}/`
-                    : `${subdomainSuffix()}/team/`
-                }`}
-                value={value}
-                defaultValue={value}
-                onChange={(e) => {
-                  newTeamFormMethods.setValue("slug", slugify(e?.target.value, true), {
-                    shouldTouch: true,
-                  });
-                  newTeamFormMethods.clearErrors("slug");
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             )}
           />
         </div>

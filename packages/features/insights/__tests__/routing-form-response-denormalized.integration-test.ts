@@ -29,7 +29,9 @@ describe("RoutingFormResponseDenormalized", () => {
     // Create test event type
     const eventType = await prisma.eventType.create({
       data: {
-        title: "Test Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event",
         length: 60,
         userId: user.id,
@@ -46,25 +48,33 @@ describe("RoutingFormResponseDenormalized", () => {
           {
             id: "57734f65-8bbb-4065-9e71-fb7f0b7485f8",
             type: "text",
-            label: "Manager",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
           },
           {
             id: "674c169a-e40a-492c-b4bb-6f5213873bd6",
             type: "select",
-            label: "Location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
             options: [
               {
                 id: "a33f39e2-0846-45a1-bb77-3cba2e18817c",
-                label: "New York",
+                label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
+                ,
               },
             ],
           },
           {
             id: "83316968-45bf-4c9d-b5d4-5368a8d2d2a8",
             type: "multiselect",
-            label: "skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: false,
             options: [
               {
@@ -80,13 +90,17 @@ describe("RoutingFormResponseDenormalized", () => {
           {
             id: "dd28ffcf-7029-401e-bddb-ce2e7496a1c1",
             type: "email",
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: true,
           },
           {
             id: "f4e9fa6c-5c5d-4d8e-b15c-7f37e9d0c729",
             type: "number",
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             required: false,
           },
         ],
@@ -98,7 +112,9 @@ describe("RoutingFormResponseDenormalized", () => {
     const booking = await prisma.booking.create({
       data: {
         uid: `routing-form-response-denorm-${randomId}`,
-        title: "Test Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: new Date(),
         endTime: new Date(Date.now() + 60 * 60 * 1000),
         userId: user.id,
@@ -115,23 +131,33 @@ describe("RoutingFormResponseDenormalized", () => {
         formId: form.id,
         response: {
           "57734f65-8bbb-4065-9e71-fb7f0b7485f8": {
-            label: "Manager",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "Miss Dora Farrell",
           },
           "674c169a-e40a-492c-b4bb-6f5213873bd6": {
-            label: "Location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "a33f39e2-0846-45a1-bb77-3cba2e18817c",
           },
           "83316968-45bf-4c9d-b5d4-5368a8d2d2a8": {
-            label: "skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: ["ee494e36-1f15-4a04-b88e-fc4795e57eb1", "34c50dca-9eed-4ade-89d4-9b2ccda52acc"],
           },
           "dd28ffcf-7029-401e-bddb-ce2e7496a1c1": {
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: "Felicity.Schuppe9@gmail.com",
           },
           "f4e9fa6c-5c5d-4d8e-b15c-7f37e9d0c729": {
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: 1,
           },
         },
@@ -190,7 +216,9 @@ describe("RoutingFormResponseDenormalized", () => {
       expect(fields[0]).toEqual({
         id: "57734f65-8bbb-4065-9e71-fb7f0b7485f8",
         type: "text",
-        label: "Manager",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         required: true,
       });
       expect(fields[2].options).toHaveLength(2); // Verify multiselect options
@@ -212,23 +240,33 @@ describe("RoutingFormResponseDenormalized", () => {
         data: {
           response: {
             "57734f65-8bbb-4065-9e71-fb7f0b7485f8": {
-              label: "Manager",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Updated Manager Name",
             },
             "674c169a-e40a-492c-b4bb-6f5213873bd6": {
-              label: "Location",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "a33f39e2-0846-45a1-bb77-3cba2e18817c",
             },
             "83316968-45bf-4c9d-b5d4-5368a8d2d2a8": {
-              label: "skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: ["ee494e36-1f15-4a04-b88e-fc4795e57eb1"],
             },
             "dd28ffcf-7029-401e-bddb-ce2e7496a1c1": {
-              label: "Email",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "updated.email@example.com",
             },
             "f4e9fa6c-5c5d-4d8e-b15c-7f37e9d0c729": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: 2,
             },
           },
@@ -286,7 +324,9 @@ describe("RoutingFormResponseDenormalized", () => {
       // Create a parent event type
       const parentEventType = await prisma.eventType.create({
         data: {
-          title: "Parent Event",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           slug: "parent-event",
           length: 60,
           userId: userId,
@@ -422,11 +462,15 @@ describe("RoutingFormResponseDenormalized", () => {
           formId: formId,
           response: {
             "57734f65-8bbb-4065-9e71-fb7f0b7485f8": {
-              label: "Manager",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: null,
             },
             "674c169a-e40a-492c-b4bb-6f5213873bd6": {
-              label: "Location",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: null,
             },
           },
@@ -485,7 +529,9 @@ describe("RoutingFormResponseDenormalized", () => {
           formId: formId,
           response: {
             "83316968-45bf-4c9d-b5d4-5368a8d2d2a8": {
-              label: "skills",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: ["644e7f80-b76b-4a3c-94f7-bf0efa65d3d6", "34c50dca-9eed-4ade-89d4-9b2ccda52acc"],
             },
           },
@@ -550,11 +596,15 @@ describe("RoutingFormResponseDenormalized", () => {
           formId: formId,
           response: {
             "57734f65-8bbb-4065-9e71-fb7f0b7485f8": {
-              label: "Manager",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "John Smith",
             },
             "f4e9fa6c-5c5d-4d8e-b15c-7f37e9d0c729": {
-              label: "Rating",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: 5,
             },
           },
@@ -638,7 +688,9 @@ describe("RoutingFormResponseDenormalized", () => {
       const booking = await prisma.booking.create({
         data: {
           uid: `routing-form-response-denorm-${Math.floor(Math.random() * 1000000)}`,
-          title: "Test Booking",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: new Date(),
           endTime: new Date(Date.now() + 60 * 60 * 1000),
           userId: userId,
@@ -671,7 +723,9 @@ describe("RoutingFormResponseDenormalized", () => {
           formId: formId,
           response: {
             "dd28ffcf-7029-401e-bddb-ce2e7496a1c1": {
-              label: "Email",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "attendee1@example.com",
             },
           },

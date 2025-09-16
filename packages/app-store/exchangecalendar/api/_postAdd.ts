@@ -46,7 +46,9 @@ export async function getHandler(req: NextApiRequest, res: NextApiResponse) {
     if (reason instanceof SoapFaultDetails && reason.message != "") {
       return res.status(500).json({ message: reason.message });
     }
-    return res.status(500).json({ message: "Could not add this exchange account" });
+    return res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   return res.status(200).json({ url: "/apps/installed" });

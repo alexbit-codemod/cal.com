@@ -32,7 +32,9 @@ export const ssoTenantProduct = async (prisma: PrismaClient, email: string) => {
     if (!HOSTED_CAL_FEATURES)
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: "no_account_exists",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
 
     const domain = email.split("@")[1];
@@ -41,7 +43,9 @@ export const ssoTenantProduct = async (prisma: PrismaClient, email: string) => {
     if (!organization)
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: "no_account_exists",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
 
     const createUsersAndConnectToOrgProps = {
@@ -59,7 +63,9 @@ export const ssoTenantProduct = async (prisma: PrismaClient, email: string) => {
     if (!memberships || memberships.length === 0)
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: "no_account_exists",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
   }
 
@@ -83,7 +89,9 @@ export const ssoTenantProduct = async (prisma: PrismaClient, email: string) => {
     throw new TRPCError({
       code: "BAD_REQUEST",
       message:
-        "Could not find a SSO Identity Provider for your email. Please contact your admin to ensure you have been given access to Cal",
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
     });
   }
 

@@ -70,9 +70,8 @@ const GroupTeamMappingTableContent = () => {
     <>
       <DataTable table={table} tableContainerRef={tableContainerRef}>
         <DataTableToolbar.Root>
-          <DataTableToolbar.CTA onClick={() => setCreateTeamDialogOpen(true)}>
-            Create team
-          </DataTableToolbar.CTA>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </DataTableToolbar.Root>
       </DataTable>
       <CreateTeamDialog open={createTeamDialogOpen} onOpenChange={setCreateTeamDialogOpen} />

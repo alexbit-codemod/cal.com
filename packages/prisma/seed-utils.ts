@@ -359,7 +359,9 @@ export async function seedAttributes(teamId: number) {
     // Assign random values/options to members
     for (const member of memberships) {
       if (attr.type === "TEXT") {
-        const mockText = `Sample ${attr.name.toLowerCase()} text for user ${member.userId}`;
+        const mockText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         await prisma.attributeOption.create({
           data: {
             value: mockText,
@@ -596,33 +598,43 @@ export async function seedRoutingForms(
         {
           id: seededForm.formFieldLocation.id,
           type: "select",
-          label: "Location",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           options: formFieldLocationOptions,
           required: true,
         },
         {
           id: seededForm.formFieldSkills.id,
           type: "multiselect",
-          label: "skills",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           options: formFieldSkillsOptions,
           required: true,
         },
         {
           id: seededForm.formFieldEmail.id,
           type: "email",
-          label: "Email",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: true,
         },
         {
           id: seededForm.formFieldManager.id,
           type: "text",
-          label: "Manager",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: true,
         },
         {
           id: seededForm.formFieldRating.id,
           type: "number",
-          label: "Rating",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: true,
         },
       ],
@@ -717,23 +729,33 @@ export async function seedRoutingFormResponses(
         createdAt: randomDate.toDate(),
         response: {
           [seededForm.formFieldLocation.id]: {
-            label: "Location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: selectedLocation.id,
           },
           [seededForm.formFieldSkills.id]: {
-            label: "skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: selectedSkills.map((opt) => opt.id),
           },
           [seededForm.formFieldEmail.id]: {
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: faker.internet.email(),
           },
           [seededForm.formFieldManager.id]: {
-            label: "Manager",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: faker.person.fullName(),
           },
           [seededForm.formFieldRating.id]: {
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: Math.floor(Math.random() * 5) + 1,
           },
         },
@@ -760,23 +782,33 @@ export async function seedRoutingFormResponses(
         createdAt: randomDate.subtract(2, "hour").toDate(),
         response: {
           [seededForm.formFieldLocation.id]: {
-            label: "Location",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: selectedLocation.id,
           },
           [seededForm.formFieldSkills.id]: {
-            label: "skills",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: selectedSkills.map((opt) => opt.id),
           },
           [seededForm.formFieldEmail.id]: {
-            label: "Email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: faker.internet.email(),
           },
           [seededForm.formFieldManager.id]: {
-            label: "Manager",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: faker.person.fullName(),
           },
           [seededForm.formFieldRating.id]: {
-            label: "Rating",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             value: Math.floor(Math.random() * 5) + 1,
           },
         },

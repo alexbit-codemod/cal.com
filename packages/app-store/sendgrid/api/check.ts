@@ -9,7 +9,9 @@ import checkSession from "../../_utils/auth";
 
 export async function getHandler(req: NextApiRequest) {
   const { api_key } = req.body;
-  if (!api_key) throw new HttpError({ statusCode: 400, message: "No Api Key provoided to check" });
+  if (!api_key) throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   checkSession(req);
 

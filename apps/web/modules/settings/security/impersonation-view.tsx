@@ -53,17 +53,8 @@ const ProfileImpersonationView = ({ user }: { user: RouterOutputs["viewer"]["me"
   return (
     <>
       <div>
-        <SettingsToggle
-          toggleSwitchAtTheEnd={true}
-          title={t("user_impersonation_heading")}
-          description={t("user_impersonation_description")}
-          checked={!disableImpersonation}
-          onCheckedChange={(checked) => {
-            mutation.mutate({ disableImpersonation: !checked });
-          }}
-          switchContainerClassName="rounded-t-none border-t-0"
-          disabled={mutation.isPending}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </>
   );

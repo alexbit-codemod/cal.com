@@ -68,12 +68,8 @@ const ConnectedCalendars = (props: IConnectCalendarsProps) => {
             queryIntegrations.data.items.map((item) => (
               <li key={item.title}>
                 {item.title && item.logo && (
-                  <AppConnectionItem
-                    type={item.type}
-                    title={item.title}
-                    description={item.description}
-                    logo={item.logo}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 )}
               </li>
             ))}

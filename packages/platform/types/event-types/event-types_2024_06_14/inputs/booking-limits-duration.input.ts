@@ -9,7 +9,9 @@ export class BaseBookingLimitsDuration_2024_06_14 {
   @IsInt()
   @Min(15)
   @ApiPropertyOptional({
-    description: "The duration of bookings per day (must be a multiple of 15)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 60,
   })
   day?: number;
@@ -18,7 +20,9 @@ export class BaseBookingLimitsDuration_2024_06_14 {
   @IsInt()
   @Min(15)
   @ApiPropertyOptional({
-    description: "The duration of bookings per week (must be a multiple of 15)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 120,
   })
   week?: number;
@@ -27,7 +31,9 @@ export class BaseBookingLimitsDuration_2024_06_14 {
   @IsInt()
   @Min(15)
   @ApiPropertyOptional({
-    description: "The duration of bookings per month (must be a multiple of 15)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 180,
   })
   month?: number;
@@ -36,7 +42,9 @@ export class BaseBookingLimitsDuration_2024_06_14 {
   @IsInt()
   @Min(15)
   @ApiPropertyOptional({
-    description: "The duration of bookings per year (must be a multiple of 15)",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 240,
   })
   year?: number;

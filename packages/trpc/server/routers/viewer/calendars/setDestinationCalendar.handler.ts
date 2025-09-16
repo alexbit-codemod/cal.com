@@ -74,7 +74,9 @@ export const setDestinationCalendarHandler = async ({ ctx, input }: SetDestinati
   let where;
 
   if (!credentialId && !delegationCredentialId) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: `Could not find calendar ${input.externalId}` });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const primaryEmail =
@@ -96,7 +98,9 @@ export const setDestinationCalendarHandler = async ({ ctx, input }: SetDestinati
     ) {
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: `You don't have access to event type ${eventTypeId}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 

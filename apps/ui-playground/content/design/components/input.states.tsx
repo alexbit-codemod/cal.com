@@ -17,14 +17,8 @@ export const StatesExample: React.FC = () => (
             <div className="flex flex-wrap items-center gap-4">
               {sizes.map((size) => (
                 <div key={size} className="flex flex-col items-center gap-2">
-                  <Input
-                    type="text"
-                    placeholder={`${state} input`}
-                    disabled={state === "disabled"}
-                    readOnly={state === "readonly"}
-                    size={size}
-                    isFullWidth={false}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <span className="text-subtle text-xs">{size}</span>
                 </div>
               ))}

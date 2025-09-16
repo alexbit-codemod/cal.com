@@ -37,11 +37,8 @@ export const SlugReplacementEmail = (
           <tbody>
             <tr>
               <td align="center">
-                <CallToAction
-                  label={t("review_event_type")}
-                  href={`${WEBAPP_URL}/event-types`}
-                  endIconName="white-arrow-right"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </td>
             </tr>
           </tbody>

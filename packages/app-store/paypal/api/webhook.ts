@@ -31,7 +31,9 @@ export async function handlePaypalPaymentSuccess(
     },
   });
 
-  if (!payment?.bookingId) throw new HttpCode({ statusCode: 204, message: "Payment not found" });
+  if (!payment?.bookingId) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const booking = await prisma.booking.findUnique({
     where: {
@@ -42,10 +44,14 @@ export async function handlePaypalPaymentSuccess(
     },
   });
 
-  if (!booking) throw new HttpCode({ statusCode: 204, message: "No booking found" });
+  if (!booking) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   // Probably booking it's already paid from /capture but we need to send confirmation email
   const foundCredentials = await findPaymentCredentials(booking.id);
-  if (!foundCredentials) throw new HttpCode({ statusCode: 204, message: "No credentials found" });
+  if (!foundCredentials) throw new HttpCode({ statusCode: 204, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   const { webhookId, ...credentials } = foundCredentials;
 
   const paypalClient = new Paypal(credentials);
@@ -68,22 +74,30 @@ export async function handlePaypalPaymentSuccess(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method !== "POST") {
-      throw new HttpCode({ statusCode: 405, message: "Method Not Allowed" });
+      throw new HttpCode({ statusCode: 405, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const bodyRaw = await getRawBody(req);
     const headers = req.headers;
-    const bodyAsString = bodyRaw.toString();
+    const bodyAsString = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     const parseHeaders = webhookHeadersSchema.safeParse(headers);
     if (!parseHeaders.success) {
       console.error(parseHeaders.error);
-      throw new HttpCode({ statusCode: 400, message: "Bad Request" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
     const parse = eventSchema.safeParse(JSON.parse(bodyAsString));
     if (!parse.success) {
       console.error(parse.error);
-      throw new HttpCode({ statusCode: 400, message: "Bad Request" });
+      throw new HttpCode({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const { data: parsedPayload } = parse;

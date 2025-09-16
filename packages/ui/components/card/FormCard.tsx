@@ -48,15 +48,8 @@ const FormCardActions = ({ deleteField, duplicateField }: FormCardActionsProps) 
   if (actions.length === 1) {
     const action = actions[0];
     return (
-      <Button
-        type="button"
-        variant="icon"
-        color={action.color || "minimal"}
-        className="ml-2"
-        onClick={action.onClick}
-        StartIcon={action.icon}
-        title={action.label}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     );
   }
 

@@ -66,7 +66,9 @@ export const listMembersHandler = async ({ ctx, input }: GetOptions) => {
     }));
 
   if (!organizationId) {
-    throw new TRPCError({ code: "NOT_FOUND", message: "User is not part of any organization." });
+    throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (ctx.user.organization.isPrivate && !ctx.user.organization.isOrgAdmin) {

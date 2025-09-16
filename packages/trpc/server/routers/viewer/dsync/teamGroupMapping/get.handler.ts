@@ -35,7 +35,9 @@ export const getHandler = async ({ ctx }: Options) => {
   });
 
   if (!directoryId) {
-    throw new TRPCError({ code: "NOT_FOUND", message: "Could not find directory id" });
+    throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const teamGroupMappingQuery = await prisma.dSyncTeamGroupMapping.findMany({

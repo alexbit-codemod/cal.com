@@ -49,9 +49,8 @@ export const RoutingFormEmbedDialog = () => {
         <rect x="48" y="142" width="32" height="4" rx="6" fill="#F3F4F6" />
         <rect x="48" y="160" width="72" height="6" rx="3" fill="#292929" />
         <rect x="176" y="50.5" width="108" height="164" rx="6" fill="#F3F4F6" />
-        <text x="220" y="120" textAnchor="middle" className="fill-gray-400" fontSize="8">
-          API
-        </text>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <rect x="200" y="125" width="40" height="2" rx="1" fill="#9CA3AF" />
         <rect x="200" y="130" width="32" height="2" rx="1" fill="#9CA3AF" />
         <rect x="200" y="135" width="36" height="2" rx="1" fill="#9CA3AF" />

@@ -16,11 +16,15 @@ async function getHandler() {
   const secret = process.env.INTERCOM_SECRET;
 
   if (!session) {
-    return NextResponse.json({ message: "user not authenticated" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   if (!secret) {
-    return NextResponse.json({ message: "Intercom Identity Verification secret not set" }, { status: 400 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
   }
 
   const hmac = crypto.createHmac("sha256", secret);

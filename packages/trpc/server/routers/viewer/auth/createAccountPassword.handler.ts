@@ -17,7 +17,9 @@ export const createAccountPasswordHandler = async ({ ctx }: CreateAccountPasswor
 
   const isCal = user.identityProvider === IdentityProvider.CAL;
   if (isCal) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "cannot_create_account_password_cal_provider" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const userWithPassword = await prisma.user.findUnique({
@@ -29,7 +31,9 @@ export const createAccountPasswordHandler = async ({ ctx }: CreateAccountPasswor
     },
   });
   if (!isCal && userWithPassword?.password?.hash) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "cannot_create_account_password_already_existing" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   await passwordResetRequest(user);

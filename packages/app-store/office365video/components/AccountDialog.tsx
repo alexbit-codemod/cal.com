@@ -16,19 +16,11 @@ export function AccountDialog(
         description="If you continue with a personal account you will receive an error">
         <DialogFooter showDivider className="mt-6">
           <>
-            <DialogClose
-              type="button"
-              color="secondary"
-              tabIndex={-1}
-              onClick={() => {
-                props.onOpenChange?.(false);
-              }}>
-              Cancel
-            </DialogClose>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
-            <Button type="button" onClick={props.handleSubmit}>
-              Continue
-            </Button>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </>
         </DialogFooter>
       </DialogContent>

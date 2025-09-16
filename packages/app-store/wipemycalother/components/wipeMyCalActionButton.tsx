@@ -30,9 +30,8 @@ const WipeMyCalActionButton = (props: IWipeMyCalActionButtonProps) => {
       {data && isSuccess && !isPending && credentialId && (
         <div className="mb-4">
           <ConfirmDialog isOpenDialog={openDialog} setIsOpenDialog={setOpenDialog} />
-          <Button color="primary" onClick={() => setOpenDialog(true)} data-testid="wipe-today-button">
-            Wipe Today
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )}
     </>

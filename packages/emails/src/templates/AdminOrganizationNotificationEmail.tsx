@@ -73,11 +73,8 @@ export const AdminOrganizationNotificationEmail = ({
     <BaseEmailHtml
       subject={language("admin_org_notification_email_subject", { appName: APP_NAME })}
       callToAction={
-        <CallToAction
-          label={language("admin_org_notification_email_cta")}
-          href={`${WEBAPP_URL}/settings/admin/organizations`}
-          endIconName="white-arrow-right"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       }>
       <p
         style={{

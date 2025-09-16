@@ -51,7 +51,9 @@ export function getServerErrorFromUnknown(cause: unknown): HttpError {
   if (cause instanceof SyntaxError) {
     return new HttpError({
       statusCode: 500,
-      message: "Unexpected error, please reach out for our customer support.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   if (isPrismaError(cause)) {
@@ -93,7 +95,9 @@ export function getServerErrorFromUnknown(cause: unknown): HttpError {
 
   return new HttpError({
     statusCode: 500,
-    message: `Unhandled error of type '${typeof cause}'. Please reach out for our customer support.`,
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   });
 }
 

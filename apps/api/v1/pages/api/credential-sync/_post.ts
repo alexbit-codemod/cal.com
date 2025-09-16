@@ -57,7 +57,9 @@ import { schemaCredentialPostBody, schemaCredentialPostParams } from "~/lib/vali
  */
 async function handler(req: NextApiRequest) {
   if (!req.body) {
-    throw new HttpError({ message: "Request body is missing", statusCode: 400 });
+    throw new HttpError({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , statusCode: 400 });
   }
 
   const { userId, createSelectedCalendar, createDestinationCalendar } = schemaCredentialPostParams.parse(
@@ -79,7 +81,9 @@ async function handler(req: NextApiRequest) {
   });
 
   if (!app) {
-    throw new HttpError({ message: "App not found", statusCode: 500 });
+    throw new HttpError({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , statusCode: 500 });
   }
 
   const createCalendarResources =
@@ -109,7 +113,9 @@ async function handler(req: NextApiRequest) {
 
   if (createCalendarResources) {
     const calendar = await getCalendar({ ...credential, delegatedTo: null });
-    if (!calendar) throw new HttpError({ message: "Calendar missing for credential", statusCode: 500 });
+    if (!calendar) throw new HttpError({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    , statusCode: 500 });
     const calendars = await calendar.listCalendars();
     const calendarToCreate = calendars.find((calendar) => calendar.primary) || calendars[0];
 

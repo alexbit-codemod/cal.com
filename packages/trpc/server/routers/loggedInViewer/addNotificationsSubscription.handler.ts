@@ -27,7 +27,9 @@ export const addNotificationsSubscriptionHandler = async ({ ctx, input }: AddSec
     log.error("Invalid subscription", parsedSubscription.error, JSON.stringify(subscription));
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Invalid subscription",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -55,14 +57,20 @@ export const addNotificationsSubscriptionHandler = async ({ ctx, input }: AddSec
         p256dh: parsedSubscription.data.keys.p256dh,
       },
     },
-    title: "Test Notification",
-    body: "Push Notifications activated successfully",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
+    body: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     url: "https://app.cal.com/",
     requireInteraction: false,
     type: "TEST_NOTIFICATION",
   });
 
   return {
-    message: "Subscription added successfully",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 };

@@ -127,7 +127,9 @@ export default class SalesforceCRMService implements CRM {
         }),
       });
       if (!response.ok) {
-        const message = `${response.statusText}: ${JSON.stringify(await response.json())}`;
+        const message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         throw new Error(message);
       }
 
@@ -1599,9 +1601,9 @@ export default class SalesforceCRMService implements CRM {
       .catch((e) => {
         const contactId = personRecord?.Id || "unknown";
         // catch the error and throw a new one with a more descriptive message
-        const errorMessage = `Error updating person record for contactId '${contactId}': ${
-          e instanceof Error ? e.message : String(e)
-        }`;
+        const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ;
         throw new Error(errorMessage);
       });
   }

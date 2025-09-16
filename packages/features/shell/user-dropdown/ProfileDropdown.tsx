@@ -50,7 +50,8 @@ export function ProfileDropdown() {
             "hover:bg-emphasis todesktop:!bg-transparent group mx-0 flex w-full cursor-pointer appearance-none items-center rounded-full px-2 py-1.5 text-left outline-none transition focus:outline-none focus:ring-0 md:rounded-none lg:rounded"
           )}>
           <span className="flex w-full flex-grow items-center justify-around gap-2 text-sm font-medium leading-none">
-            <Avatar alt={currentOption.label || ""} size="xsm" />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <span className="block w-20 overflow-hidden overflow-ellipsis whitespace-nowrap">
               {currentOption.label}
             </span>
@@ -71,7 +72,8 @@ export function ProfileDropdown() {
           }}
           className="min-w-56 hariom group overflow-hidden rounded-md">
           <DropdownMenuItem className="p-3 uppercase">
-            <span>Switch to</span>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuItem>
           {options.map((option) => {
             const isSelected = currentOption.value === option.value;
@@ -92,7 +94,8 @@ export function ProfileDropdown() {
                   type="button"
                   childrenClassName={classNames("flex w-full justify-between items-center")}>
                   <span>
-                    <Avatar alt={option.label || ""} size="xsm" />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <span className="ml-2">{option.label}</span>
                   </span>
                   {isSelected ? (

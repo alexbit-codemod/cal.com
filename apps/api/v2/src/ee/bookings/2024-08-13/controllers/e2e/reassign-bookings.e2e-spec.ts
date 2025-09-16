@@ -213,7 +213,9 @@ describe("Bookings Endpoints 2024-08-13", () => {
         },
         startTime: new Date(Date.UTC(2050, 0, 7, 13, 0, 0)),
         endTime: new Date(Date.UTC(2050, 0, 7, 14, 0, 0)),
-        title: "round robin coding lets goo",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         uid: "round-robin-coding",
         eventType: {
           connect: {

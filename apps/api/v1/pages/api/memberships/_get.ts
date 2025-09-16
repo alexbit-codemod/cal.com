@@ -49,7 +49,9 @@ function getUserIds(req: NextApiRequest) {
   const { userId, isSystemWideAdmin } = req;
   /** Only admins can query other users */
   if (!isSystemWideAdmin && req.query.userId)
-    throw new HttpError({ statusCode: 403, message: "ADMIN required" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   if (isSystemWideAdmin && req.query.userId) {
     const query = schemaQuerySingleOrMultipleUserIds.parse(req.query);
     const userIds = Array.isArray(query.userId) ? query.userId : [query.userId || userId];
@@ -66,7 +68,9 @@ function getTeamIds(req: NextApiRequest) {
   const { isSystemWideAdmin } = req;
   /** Only admins can query other teams */
   if (!isSystemWideAdmin && req.query.teamId)
-    throw new HttpError({ statusCode: 403, message: "ADMIN required" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   if (isSystemWideAdmin && req.query.teamId) {
     const query = schemaQuerySingleOrMultipleTeamIds.parse(req.query);
     const teamIds = Array.isArray(query.teamId) ? query.teamId : [query.teamId];

@@ -16,9 +16,9 @@ export default class EventDeclinedSMS extends SMSManager {
       interpolation: { escapeValue: false },
     });
 
-    const messageText = `${t("hey_there")} ${attendee.name}, ${t(
-      "event_request_declined"
-    )} ${eventDeclinedText}`;
+    const messageText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
 
     return messageText;
   }

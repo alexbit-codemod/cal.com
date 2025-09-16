@@ -17,7 +17,9 @@ export class Calendar {
 export class CalendarBusyTimesInput {
   @ApiProperty({
     required: true,
-    description: "The timezone of the logged in user represented as a string",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "America/New_York",
   })
   @IsString()
@@ -25,7 +27,9 @@ export class CalendarBusyTimesInput {
 
   @ApiProperty({
     required: false,
-    description: "The starting date for the busy times query",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2023-10-01",
   })
   @IsString()
@@ -34,7 +38,9 @@ export class CalendarBusyTimesInput {
 
   @ApiProperty({
     required: false,
-    description: "The ending date for the busy times query",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "2023-10-31",
   })
   @IsString()
@@ -44,7 +50,9 @@ export class CalendarBusyTimesInput {
   @ApiProperty({
     type: [Calendar],
     required: true,
-    description: "An array of Calendar objects representing the calendars to be loaded",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: `[{ credentialId: "1", externalId: "AQgtJE7RnHEeyisVq2ENs2gAAAgEGAAAACgtJE7RnHEeyisVq2ENs2gAAAhSDAAAA" }, { credentialId: "2", externalId: "AQM7RnHEeyisVq2ENs2gAAAhFDBBBBB" }]`,
   })
   @IsArray()

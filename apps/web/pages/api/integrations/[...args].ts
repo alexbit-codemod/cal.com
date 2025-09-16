@@ -24,7 +24,9 @@ const defaultIntegrationAddHandler = async ({
   createCredential: AppDeclarativeHandler["createCredential"];
 }) => {
   if (!user?.id) {
-    throw new HttpError({ statusCode: 401, message: "You must be logged in to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   if (!supportsMultipleInstalls) {
     const alreadyInstalled = await prisma.credential.findFirst({
@@ -50,7 +52,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { args, teamId } = req.query;
 
   if (!Array.isArray(args)) {
-    return res.status(404).json({ message: `API route not found` });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const [appName, apiEndpoint] = args;
@@ -59,10 +63,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const handlerMap = (await import("@calcom/app-store/apps.server.generated")).apiHandlers;
     const handlerKey = deriveAppDictKeyFromType(appName, handlerMap);
     const handlers = await handlerMap[handlerKey as keyof typeof handlerMap];
-    if (!handlers) throw new HttpError({ statusCode: 404, message: `No handlers found for ${handlerKey}` });
+    if (!handlers) throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
     const handler = handlers[apiEndpoint as keyof typeof handlers] as AppHandler;
     if (typeof handler === "undefined")
-      throw new HttpError({ statusCode: 404, message: `API handler not found` });
+      throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
 
     if (typeof handler === "function") {
       await handler(req, res);
@@ -81,7 +89,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (error instanceof Error) {
       return res.status(400).json({ message: error.message });
     }
-    return res.status(404).json({ message: `API handler not found` });
+    return res.status(404).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 

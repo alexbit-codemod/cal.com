@@ -172,19 +172,12 @@ export default function RoutingForms({ appUrl }: { appUrl: string }) {
               <FilterResults
                 queryRes={queryRes}
                 emptyScreen={
-                  <EmptyScreen
-                    Icon="git-merge"
-                    headline={t("create_your_first_form")}
-                    description={t("create_your_first_form_description")}
-                    buttonRaw={<NewFormButton setNewFormDialogState={setNewFormDialogState} />}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 }
                 noResultsScreen={
-                  <EmptyScreen
-                    Icon="git-merge"
-                    headline={t("no_results_for_filter")}
-                    description={t("change_filter_common")}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 }
                 SkeletonLoader={SkeletonLoaderTeamList}>
                 <div className="bg-default mb-16 overflow-hidden">

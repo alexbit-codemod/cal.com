@@ -30,7 +30,9 @@ export const generateAuthCodeHandler = async ({ ctx, input }: AddClientOptions) 
   });
 
   if (!client) {
-    throw new TRPCError({ code: "UNAUTHORIZED", message: "Client ID not valid" });
+    throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
   const authorizationCode = generateAuthorizationCode();
 

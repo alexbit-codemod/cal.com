@@ -73,7 +73,9 @@ export const loadUsers = async ({
     if (error instanceof HttpError || error instanceof Prisma.PrismaClientKnownRequestError) {
       throw new HttpError({ statusCode: 400, message: error.message });
     }
-    throw new HttpError({ statusCode: 500, message: "Unable to load users" });
+    throw new HttpError({ statusCode: 500, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 };
 

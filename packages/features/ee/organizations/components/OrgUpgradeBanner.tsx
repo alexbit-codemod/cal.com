@@ -33,19 +33,7 @@ export function OrgUpgradeBanner({ data }: OrgUpgradeBannerProps) {
   if (isPlatform) return null;
 
   return (
-    <TopBanner
-      text={t("org_upgrade_banner_description", { teamName: membership.team.name })}
-      variant="warning"
-      actions={
-        <button
-          data-testid="upgrade_org_banner_button"
-          className="border-b border-b-black"
-          onClick={() => {
-            publishOrgMutation.mutate();
-          }}>
-          {t("upgrade_banner_action")}
-        </button>
-      }
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 }

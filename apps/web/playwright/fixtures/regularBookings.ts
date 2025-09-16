@@ -6,7 +6,9 @@ import { localize } from "../lib/localize";
 import { submitAndWaitForResponse } from "../lib/testUtils";
 import type { createUsersFixture } from "./users";
 
-export const scheduleSuccessfullyText = "This meeting is scheduled";
+export const scheduleSuccessfullyText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+$$$
+;
 
 type UserFixture = ReturnType<typeof createUsersFixture>;
 
@@ -15,7 +17,9 @@ export async function loginUser(users: UserFixture) {
     name: "testuser",
     eventTypes: [
       {
-        title: "Test Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event",
         length: 30,
       },

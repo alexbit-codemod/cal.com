@@ -95,7 +95,9 @@ export const activateEventTypeHandler = async ({ ctx, input }: ActivateEventType
   });
 
   if (!eventType)
-    throw new TRPCError({ code: "UNAUTHORIZED", message: "Not authorized to edit this event type" });
+    throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   // at this point we know that the event type belongs to the user or team
   // so we don't use OR, we use logic.
@@ -138,7 +140,9 @@ export const activateEventTypeHandler = async ({ ctx, input }: ActivateEventType
   if (!eventTypeWorkflow)
     throw new TRPCError({
       code: "UNAUTHORIZED",
-      message: "Not authorized to enable/disable this workflow",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   //check if event type is already active

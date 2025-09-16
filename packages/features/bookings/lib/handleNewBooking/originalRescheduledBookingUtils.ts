@@ -11,7 +11,9 @@ export async function getOriginalRescheduledBooking(uid: string, seatsEventType?
   const originalBooking = await bookingRepo.findOriginalRescheduledBooking(uid, seatsEventType);
 
   if (!originalBooking) {
-    throw new HttpError({ statusCode: 404, message: "Could not find original booking" });
+    throw new HttpError({ statusCode: 404, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (originalBooking.status === BookingStatus.CANCELLED && !originalBooking.rescheduled) {

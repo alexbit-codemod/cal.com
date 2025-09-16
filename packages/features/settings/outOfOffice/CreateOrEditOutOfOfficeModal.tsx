@@ -204,22 +204,8 @@ export const CreateOrEditOutOfOfficeEntryModal = ({
             }
           })}>
           <div className="h-full px-1">
-            <DialogHeader
-              title={
-                currentlyEditingOutOfOfficeEntry
-                  ? t("edit_an_out_of_office")
-                  : oooType === "team"
-                  ? t("create_ooo_dialog_team_title")
-                  : t("create_an_out_of_office")
-              }
-              subtitle={
-                oooType === "team"
-                  ? currentlyEditingOutOfOfficeEntry
-                    ? t("edit_ooo_dialog_team_subtitle")
-                    : t("create_ooo_dialog_team_subtitle")
-                  : undefined
-              }
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
 
             {/* In case of Team, Select Member for whom OOO is created */}
             {oooType === OutOfOfficeTab.TEAM && (
@@ -227,13 +213,8 @@ export const CreateOrEditOutOfOfficeEntryModal = ({
                 <div className="mb-4">
                   <Label className="text-emphasis mt-6">{t("select_team_member")}</Label>
                   <div className="mt-2">
-                    <Input
-                      type="text"
-                      placeholder={t("search")}
-                      onChange={(e) => setSearchMember(e.target.value)}
-                      value={searchMember}
-                      disabled={!!currentlyEditingOutOfOfficeEntry}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <div
                       className={`scroll-bar bg-default mt-2 flex ${
                         !!currentlyEditingOutOfOfficeEntry ? "h-[45px]" : "h-[150px]"
@@ -316,19 +297,8 @@ export const CreateOrEditOutOfOfficeEntryModal = ({
                   control={control}
                   name="reasonId"
                   render={({ field: { onChange, value } }) => (
-                    <Select<Option>
-                      className="mb-0 mt-1 text-white"
-                      name="reason"
-                      data-testid="reason_select"
-                      value={reasonList.find((reason) => reason.value === value)}
-                      placeholder={t("ooo_select_reason")}
-                      options={reasonList}
-                      onChange={(selectedOption) => {
-                        if (selectedOption?.value) {
-                          onChange(selectedOption.value);
-                        }
-                      }}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   )}
                 />
               </div>
@@ -337,32 +307,14 @@ export const CreateOrEditOutOfOfficeEntryModal = ({
             {/* Notes input */}
             <div className="mt-4">
               <p className="text-emphasis block text-sm font-medium">{t("notes")}</p>
-              <TextArea
-                data-testid="notes_input"
-                className="border-subtle mt-1 h-10 w-full rounded-lg border px-2"
-                placeholder={t("additional_notes")}
-                {...register("notes")}
-                onChange={(e) => {
-                  setValue("notes", e?.target.value);
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
 
             <div className="bg-muted my-4 rounded-xl p-5">
               <div className="flex flex-row">
-                <Switch
-                  disabled={!hasTeamPlan}
-                  data-testid="profile-redirect-switch"
-                  checked={profileRedirect}
-                  id="profile-redirect-switch"
-                  onCheckedChange={(state) => {
-                    setProfileRedirect(state);
-                    if (!state) {
-                      setValue("toTeamUserId", null);
-                    }
-                  }}
-                  label={hasTeamPlan ? t("redirect_team_enabled") : t("redirect_team_disabled")}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
                 {!hasTeamPlan && (
                   <div className="mx-2" data-testid="upgrade-team-badge">
                     <UpgradeTeamsBadge />
@@ -374,12 +326,8 @@ export const CreateOrEditOutOfOfficeEntryModal = ({
                 <div className="mb-2">
                   <Label className="text-emphasis mt-6">{t("select_team_member")}</Label>
                   <div className="mt-2">
-                    <Input
-                      type="text"
-                      placeholder={t("search")}
-                      onChange={(e) => setSearchRedirectMember(e.target.value)}
-                      value={searchRedirectMember}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <div className="scroll-bar bg-default mt-2 flex h-[150px] flex-col gap-0.5 overflow-y-scroll rounded-[10px] border p-1">
                       {redirectToMemberListOptions
                         .filter((member) => member.value !== getValues("forUserId"))

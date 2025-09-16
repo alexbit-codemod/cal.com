@@ -15,7 +15,9 @@ type ListHandlerInput = {
 export const listHandler = async ({ ctx }: ListHandlerInput) => {
   const organizationId = ctx.user.organization?.id ?? ctx.user.profiles[0]?.organizationId;
   if (!organizationId) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "You do not belong to an organization" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const currentOrg = await OrganizationRepository.findCurrentOrg({

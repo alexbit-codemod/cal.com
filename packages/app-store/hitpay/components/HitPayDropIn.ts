@@ -66,7 +66,9 @@ export const useHitPayDropIn = (): HitPayDropInResult => {
       const domain = initOptions.domain || "hit-pay.com";
       const path = initOptions.path || "";
 
-      document.body.style.cssText = "width: 100vw; height: 100vh; overflow: hidden; margin: 0; padding: 0;";
+      document.body.style.cssText = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       const iframeSrc = `${scheme}://${domain}${path}/hitpay-iframe.html?post-parent=true&timestamp=${Date.now()}`;
 

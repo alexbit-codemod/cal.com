@@ -25,7 +25,8 @@ const LimitedChipsContainer = <Option, IsMulti extends boolean, Group extends Gr
         <span className="bg-subtle text-default flex items-center justify-center rounded-md px-2 py-[5px] text-[14px] font-medium leading-4">
           <>
             <Icon name="plus" className="mr-1 inline h-3 w-3 stroke-[3px]" />{" "}
-            <span>{overflowCounter} more</span>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </>
         </span>
       )}
@@ -38,68 +39,8 @@ export const MultiDropdownSelect = ({ options = [], value = [], ...props }: Prop
   // const { t } = useLocale();
 
   return (
-    <Select
-      styles={{
-        multiValue: (styles) => {
-          return {
-            ...styles,
-            backgroundColor: "#F3F4F6",
-            color: "#374151",
-            borderRadius: "6px",
-            padding: "5px 8px",
-            gap: "8px",
-            fontSize: "14px",
-            fontWeight: "500",
-            margin: "0px",
-            lineHeight: "16px",
-          };
-        },
-        multiValueLabel: (styles) => ({
-          ...styles,
-          paddingLeft: "0px",
-          fontSize: "14px",
-          padding: "0",
-        }),
-        multiValueRemove: (base) => ({
-          ...base,
-          color: "#4B5563",
-          padding: "0",
-          ":hover": {
-            background: "transparent",
-          },
-          "> svg": {
-            width: "16px",
-            height: "17px",
-          },
-        }),
-        control: (base) => ({
-          ...base,
-          // Brute force to remove focus outline of input
-          "& .cal-multiselect__input": {
-            borderWidth: 0,
-            boxShadow: "none",
-            caretColor: "transparent",
-          },
-        }),
-        valueContainer: (base) => ({
-          ...base,
-          display: "flex",
-          gap: "4px",
-          paddingLeft: "5px",
-          padding: "0px",
-          height: "36px",
-        }),
-      }}
-      className="cal-multiselect"
-      classNamePrefix="cal-multiselect"
-      placeholder="Select"
-      defaultValue={value}
-      options={options}
-      hideSelectedOptions={false}
-      isMulti
-      components={{ ValueContainer: LimitedChipsContainer }}
-      {...props}
-    />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
   );
 };
 

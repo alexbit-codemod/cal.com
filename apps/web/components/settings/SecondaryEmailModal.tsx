@@ -52,11 +52,8 @@ const SecondaryEmailModal = ({
         data-testid="secondary-email-add-dialog">
         <Form form={formMethods} handleSubmit={handleAddEmail}>
           <div className="text-subtle mb-4 text-sm">{t("change_email_hint")}</div>
-          <TextField
-            label={t("email_address")}
-            data-testid="secondary-email-input"
-            {...formMethods.register("email")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {errorMessage && <InputError message={errorMessage} />}
           <DialogFooter showDivider className="mt-10">
             <DialogClose onClick={onCancel}>{t("cancel")}</DialogClose>

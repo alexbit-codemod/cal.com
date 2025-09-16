@@ -11,13 +11,17 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const loggedInUser = req.session?.user;
 
   if (!loggedInUser) {
-    throw new HttpError({ statusCode: 401, message: "You must be logged in to do this" });
+    throw new HttpError({ statusCode: 401, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   // Ideally this should never happen, as email is there in session user but typings aren't accurate it seems
   // TODO: So, confirm and later fix the typings
   if (!loggedInUser.email) {
-    throw new HttpError({ statusCode: 400, message: "Session user must have an email" });
+    throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const { teamId } = req.query;

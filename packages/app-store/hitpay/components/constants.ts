@@ -1,6 +1,8 @@
 export const paymentOptions = [
   {
-    label: "on_booking_option",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     value: "ON_BOOKING",
   },
 ];
@@ -47,25 +49,67 @@ export const supportedPaymentMethods = [
 ];
 
 export const currencyOptions = [
-  { label: "United States dollar (USD)", value: "usd" },
-  { label: "Singapore dollar (SGD)", value: "sgd" },
-  { label: "Malaysian ringgit (MYR)", value: "myr" },
-  { label: "Indonesian rupiah (IDR)", value: "idr" },
-  { label: "Japanese yen (JPY)", value: "jpy" },
-  { label: "Hong Kong dollar (HKD)", value: "hkd" },
-  { label: "Thai baht (THB)", value: "thb" },
-  { label: "Australian dollar (AUD)", value: "aud" },
-  { label: "New Zealand dollar (NZD)", value: "nzd" },
-  { label: "British pound sterling (GBP)", value: "gbp" },
-  { label: "Philippine peso (PHP)", value: "php" },
-  { label: "Indian rupee (INR)", value: "inr" },
-  { label: "Chinese yuan (CNY)", value: "cny" },
-  { label: "Euro (EUR)", value: "eur" },
-  { label: "Swiss franc (CHF)", value: "chf" },
-  { label: "Danish krone (DKK)", value: "dkk" },
-  { label: "Swedish krona (SEK)", value: "sek" },
-  { label: "Norwegian krone (NOK)", value: "nok" },
-  { label: "Vietnamese đồng (VND)", value: "vnd" },
-  { label: "Canadian dollar (CAD)", value: "cad" },
-  { label: "South Korean won (KRW)", value: "krw" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "usd" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "sgd" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "myr" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "idr" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "jpy" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "hkd" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "thb" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "aud" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "nzd" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "gbp" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "php" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "inr" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "cny" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "eur" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "chf" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "dkk" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "sek" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "nok" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "vnd" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "cad" },
+  { label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "krw" },
 ];

@@ -39,7 +39,9 @@ export async function handler(req: NextRequest) {
   const apiKey = req.headers.get("authorization") || req.nextUrl.searchParams.get("apiKey");
 
   if (process.env.CRON_API_KEY !== apiKey) {
-    return NextResponse.json({ message: "Not authenticated" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   const isSendgridEnabled = !!(process.env.SENDGRID_API_KEY && process.env.SENDGRID_EMAIL);
@@ -103,7 +105,9 @@ export async function handler(req: NextRequest) {
   const unscheduledReminders = await getAllUnscheduledReminders();
 
   if (!unscheduledReminders.length) {
-    return NextResponse.json({ message: "No Emails to schedule" }, { status: 200 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 200 });
   }
 
   for (const reminder of unscheduledReminders) {
@@ -163,9 +167,9 @@ export async function handler(req: NextRequest) {
 
         let emailContent = {
           emailSubject: reminder.workflowStep.emailSubject || "",
-          emailBody: `<body style="white-space: pre-wrap;">${
-            reminder.workflowStep.reminderBody || ""
-          }</body>`,
+          emailBody: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         };
 
         let emailBodyEmpty = false;
@@ -499,5 +503,7 @@ export async function handler(req: NextRequest) {
     });
   });
 
-  return NextResponse.json({ message: `${unscheduledReminders.length} Emails to schedule` }, { status: 200 });
+  return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }, { status: 200 });
 }

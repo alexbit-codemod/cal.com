@@ -6,7 +6,9 @@ export class EventTypeColor_2024_06_14 {
   @IsHexColor()
   @IsString()
   @ApiProperty({
-    description: "Color used for event types in light theme",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "#292929",
   })
   lightThemeHex!: string;
@@ -14,7 +16,9 @@ export class EventTypeColor_2024_06_14 {
   @IsHexColor()
   @IsString()
   @ApiProperty({
-    description: "Color used for event types in dark theme",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "#fafafa",
   })
   darkThemeHex!: string;

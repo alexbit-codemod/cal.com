@@ -42,12 +42,8 @@ export default function AIEventController({ eventType, isTeamEvent }: AIEventCon
     <LicenseRequired>
       <div className="block items-start sm:flex">
         {!isOrg || !isTeamEvent ? (
-          <EmptyScreen
-            headline={t("Cal.ai")}
-            Icon="sparkles"
-            description={t("upgrade_to_cal_ai_phone_number_description")}
-            buttonRaw={<Button href="/enterprise">{t("upgrade")}</Button>}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         ) : (
           <div className="w-full">
             <SettingsToggle
@@ -207,16 +203,8 @@ const AISettings = ({ eventType }: { eventType: EventTypeSetup }) => {
             render={({ field: { onChange, value, name }, fieldState: { error } }) => {
               return (
                 <div>
-                  <PhoneInput
-                    required
-                    placeholder={t("your_phone_number")}
-                    id="aiPhoneCallConfig.yourPhoneNumber"
-                    name="aiPhoneCallConfig.yourPhoneNumber"
-                    value={value}
-                    onChange={(val) => {
-                      onChange(val);
-                    }}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   {error?.message && <ErrorMessage message={error.message} fieldName={name} />}
                 </div>
               );
@@ -266,16 +254,8 @@ const AISettings = ({ eventType }: { eventType: EventTypeSetup }) => {
             render={({ field: { onChange, value, name }, fieldState: { error } }) => {
               return (
                 <div>
-                  <PhoneInput
-                    required
-                    placeholder={t("phone_number")}
-                    id="aiPhoneCallConfig.numberToCall"
-                    name="aiPhoneCallConfig.numberToCall"
-                    value={value}
-                    onChange={(val) => {
-                      onChange(val);
-                    }}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   {error?.message && <ErrorMessage message={error.message} fieldName={name} />}
                 </div>
               );
@@ -287,17 +267,8 @@ const AISettings = ({ eventType }: { eventType: EventTypeSetup }) => {
           <Divider />
         </>
 
-        <TextField
-          type="text"
-          hint="For eg:- cal_live_0123.."
-          label={t("provide_api_key")}
-          name="calApiKey"
-          placeholder="Cal API Key"
-          value={calApiKey}
-          onChange={(e) => {
-            setCalApiKey(e.target.value);
-          }}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
         <Divider />
 

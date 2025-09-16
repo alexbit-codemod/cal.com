@@ -60,7 +60,9 @@ export const formMutationHandler = async ({ ctx, input }: FormMutationHandlerOpt
     if (!hasPermission) {
       throw new TRPCError({
         code: "FORBIDDEN",
-        message: `You don't have permission to create routing forms for this team`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -337,14 +339,18 @@ export const formMutationHandler = async ({ ctx, input }: FormMutationHandlerOpt
     if (!sourceForm) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: `Form to duplicate: ${duplicateFrom} not found`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (!(await canEditEntity(sourceForm, userId))) {
       throw new TRPCError({
         code: "NOT_FOUND",
-        message: `Form to duplicate: ${duplicateFrom} not found or you are unauthorized`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -354,7 +360,9 @@ export const formMutationHandler = async ({ ctx, input }: FormMutationHandlerOpt
     if (!fieldsParsed.success || !routesParsed.success) {
       throw new TRPCError({
         code: "INTERNAL_SERVER_ERROR",
-        message: "Could not parse source form's fields or routes",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -415,7 +423,9 @@ export const formMutationHandler = async ({ ctx, input }: FormMutationHandlerOpt
         throw new TRPCError({
           code: "BAD_REQUEST",
           message:
-            "A form being used as a Router must be a Origin form. It must not be using any other Router.",
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
         });
       }
     }

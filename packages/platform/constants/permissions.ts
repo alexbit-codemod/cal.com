@@ -40,30 +40,40 @@ export const PERMISSIONS_GROUPED_MAP = {
     read: EVENT_TYPE_READ,
     write: EVENT_TYPE_WRITE,
     key: "eventType",
-    label: "Event Type",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   },
   BOOKING: {
     read: BOOKING_READ,
     write: BOOKING_WRITE,
     key: "booking",
-    label: "Booking",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   },
   SCHEDULE: {
     read: SCHEDULE_READ,
     write: SCHEDULE_WRITE,
     key: "schedule",
-    label: "Schedule",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   },
   APPS: {
     read: APPS_READ,
     write: APPS_WRITE,
     key: "apps",
-    label: "Apps",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   },
   PROFILE: {
     read: PROFILE_READ,
     write: PROFILE_WRITE,
     key: "profile",
-    label: "Profile",
+    label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   },
 } as const;

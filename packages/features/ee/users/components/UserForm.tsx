@@ -117,13 +117,8 @@ export const UserForm = ({
           name="avatarUrl"
           render={({ field: { value, onChange } }) => (
             <>
-              <Avatar
-                alt={form.getValues("name") || ""}
-                imageSrc={getUserAvatarUrl({
-                  avatarUrl: value,
-                })}
-                size="lg"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div className="ml-4">
                 <ImageUploader
                   target="avatar"
@@ -171,10 +166,14 @@ export const UserForm = ({
           </div>
         )}
       />
-      <TextField label="Name" placeholder="example" required {...form.register("name")} />
-      <TextField label="Username" placeholder="example" required {...form.register("username")} />
-      <EmailField label="Email" placeholder="user@example.com" required {...form.register("email")} />
-      <TextField label="About" {...form.register("bio")} />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <Controller
         name="locale"
         render={({ field: { value, onChange } }) => (

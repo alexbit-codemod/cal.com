@@ -200,7 +200,9 @@ class BaseEventTypeOutput_2024_06_14 {
     type: [Number],
     example: [15, 30, 60],
     description:
-      "If you want that user can choose between different lengths of the event you can specify them here. Must include the provided `lengthInMinutes`.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   lengthInMinutesOptions?: number[];
 
@@ -357,7 +359,9 @@ class BaseEventTypeOutput_2024_06_14 {
 
   @IsOptional()
   @ApiPropertyOptional({
-    description: "Limit how far in the future this event can be booked",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     oneOf: [
       { $ref: getSchemaPath(BusinessDaysWindow_2024_06_14) },
       { $ref: getSchemaPath(CalendarDaysWindow_2024_06_14) },
@@ -427,7 +431,9 @@ class BaseEventTypeOutput_2024_06_14 {
   @IsBoolean()
   @ApiPropertyOptional({
     description:
-      "Boolean to Hide organizer's email address from the booking screen, email notifications, and calendar events",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
   })
   hideOrganizerEmail?: boolean;
 
@@ -435,7 +441,9 @@ class BaseEventTypeOutput_2024_06_14 {
   @ValidateNested()
   @Type(() => CalVideoSettings)
   @ApiPropertyOptional({
-    description: "Cal video settings for the event type",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     type: CalVideoSettings,
   })
   calVideoSettings?: CalVideoSettings | null;
@@ -489,7 +497,9 @@ export class TeamEventTypeOutput_2024_06_14 extends BaseEventTypeOutput_2024_06_
   @IsOptional()
   @ApiPropertyOptional({
     description:
-      "For managed event types, parent event type is the event type that this event type is based on",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     nullable: true,
   })
   parentEventTypeId?: number | null;

@@ -624,7 +624,9 @@ test.describe("Bookings", () => {
         roleInOrganization: MembershipRole.MEMBER,
         eventTypes: [
           {
-            title: "John Inside Org's Meeting",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             slug: "john-inside-org-meeting",
             length: 15,
           },
@@ -638,7 +640,9 @@ test.describe("Bookings", () => {
         useExactUsername: true,
         eventTypes: [
           {
-            title: "John Outside Org's Meeting",
+            title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
             slug: "john-outside-org-meeting",
             length: 15,
           },
@@ -768,7 +772,9 @@ async function bookUserEvent({
   await expect(page.getByTestId("success-page")).toBeVisible();
 
   // The title of the booking
-  const BookingTitle = `${event.title} between ${user.name} and ${testName}`;
+  const BookingTitle = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ;
   await expect(page.getByTestId("booking-title")).toHaveText(BookingTitle);
   // The booker should be in the attendee list
   await expect(page.getByTestId(`attendee-name-${testName}`)).toHaveText(testName);

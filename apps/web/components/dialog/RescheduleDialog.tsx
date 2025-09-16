@@ -42,11 +42,13 @@ export const RescheduleDialog = (props: IRescheduleDialog) => {
             <Icon name="clock" className="m-auto h-6 w-6" />
           </div>
           <div className="w-full pt-1">
-            <DialogHeader title={t("send_reschedule_request")} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <p className="text-subtle text-sm">{t("reschedule_modal_description")}</p>
             <p className="text-emphasis mb-2 mt-6 text-sm font-bold">
               {t("reason_for_reschedule_request")}
-              <span className="text-subtle font-normal"> (Optional)</span>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </p>
             <TextArea
               data-testid="reschedule_reason"

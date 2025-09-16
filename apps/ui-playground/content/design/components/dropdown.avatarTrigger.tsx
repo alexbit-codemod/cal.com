@@ -19,19 +19,25 @@ export const AvatarTriggerExample: React.FC = () => (
         <Dropdown>
           <DropdownMenuTrigger asChild>
             <button className="cursor-pointer">
-              <Avatar size="sm" imageSrc="https://cal.com/stakeholder/peer.jpg" alt="Avatar" />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel>Profile</DropdownMenuLabel>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DropdownMenuSeparator />
-            <DropdownItem>View Profile</DropdownItem>
-            <DropdownItem>Settings</DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <DropdownMenuSeparator />
-            <DropdownItem className="text-error">Sign out</DropdownItem>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </DropdownMenuContent>
         </Dropdown>
-        <span className="text-subtle text-xs">Avatar Menu</span>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   </RenderComponentWithSnippet>

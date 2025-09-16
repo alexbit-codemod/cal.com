@@ -11,7 +11,9 @@ import { IdentityProvider } from "@calcom/prisma/enums";
 
 const passwordResetRequestSchema = z.object({
   password: z.string().refine(validPassword, () => ({
-    message: "Password does not meet the requirements",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   })),
   requestId: z.string(), // format doesn't matter.
 });
@@ -61,7 +63,9 @@ async function handler(req: NextRequest) {
 
   await expireResetPasswordRequest(rawRequestId);
 
-  return NextResponse.json({ message: "Password reset." }, { status: 201 });
+  return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   }, { status: 201 });
 }
 
 async function expireResetPasswordRequest(rawRequestId: string) {

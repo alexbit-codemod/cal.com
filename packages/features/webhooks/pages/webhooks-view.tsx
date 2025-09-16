@@ -53,12 +53,8 @@ const WebhooksList = ({
             <div key={group.teamId}>
               {hasTeams && (
                 <div className="items-centers flex">
-                  <Avatar
-                    alt={group.profile.image || ""}
-                    imageSrc={group.profile.image || `${bookerUrl}/${group.profile.name}/avatar.png`}
-                    size="md"
-                    className="inline-flex justify-center"
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="text-emphasis ml-2 flex flex-grow items-center font-bold">
                     {group.profile.name || ""}
                   </div>
@@ -83,14 +79,8 @@ const WebhooksList = ({
           ))}
         </div>
       ) : (
-        <EmptyScreen
-          Icon="link"
-          headline={t("create_your_first_webhook")}
-          description={t("create_your_first_webhook_description", { appName: APP_NAME })}
-          className="mt-6 rounded-b-lg"
-          buttonRaw={<CreateNewWebhookButton isAdmin={isAdmin} />}
-          border={true}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </SettingsHeader>
   );

@@ -69,7 +69,9 @@ export async function getHandler(req: NextApiRequest) {
   if (!booking)
     throw new HttpError({
       statusCode: 404,
-      message: `No Booking found with booking id ${id}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   const roomName =
@@ -79,7 +81,9 @@ export async function getHandler(req: NextApiRequest) {
   if (!roomName)
     throw new HttpError({
       statusCode: 404,
-      message: `No Cal Video reference found with booking id ${booking.id}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   const recordings = await getRecordingsOfCalVideoByRoomName(roomName);

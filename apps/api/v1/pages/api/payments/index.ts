@@ -36,7 +36,9 @@ async function allPayments({ userId }: NextApiRequest, res: NextApiResponse<Paym
   else
     (error: Error) =>
       res.status(404).json({
-        message: "No Payments were found",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         error,
       });
 }

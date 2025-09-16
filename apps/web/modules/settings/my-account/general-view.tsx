@@ -314,45 +314,14 @@ const GeneralView = ({ user, travelSchedules }: GeneralViewProps) => {
           </SectionBottomActions>
         </Form>
 
-        <SettingsToggle
-          toggleSwitchAtTheEnd={true}
-          title={t("dynamic_booking")}
-          description={t("allow_dynamic_booking")}
-          disabled={mutation.isPending}
-          checked={isAllowDynamicBookingChecked}
-          onCheckedChange={(checked) => {
-            setIsAllowDynamicBookingChecked(checked);
-            mutation.mutate({ allowDynamicBooking: checked });
-          }}
-          switchContainerClassName="mt-6"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        <SettingsToggle
-          data-testid="my-seo-indexing-switch"
-          toggleSwitchAtTheEnd={true}
-          title={t("seo_indexing")}
-          description={t("allow_seo_indexing")}
-          disabled={mutation.isPending || user.organizationSettings?.allowSEOIndexing === false}
-          checked={isAllowSEOIndexingChecked}
-          onCheckedChange={(checked) => {
-            setIsAllowSEOIndexingChecked(checked);
-            mutation.mutate({ allowSEOIndexing: checked });
-          }}
-          switchContainerClassName="mt-6"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
 
-        <SettingsToggle
-          toggleSwitchAtTheEnd={true}
-          title={t("monthly_digest_email")}
-          description={t("monthly_digest_email_for_teams")}
-          disabled={mutation.isPending}
-          checked={isReceiveMonthlyDigestEmailChecked}
-          onCheckedChange={(checked) => {
-            setIsReceiveMonthlyDigestEmailChecked(checked);
-            mutation.mutate({ receiveMonthlyDigestEmail: checked });
-          }}
-          switchContainerClassName="mt-6"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <TravelScheduleModal
           open={isTZScheduleOpen}
           onOpenChange={() => setIsTZScheduleOpen(false)}

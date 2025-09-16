@@ -63,27 +63,23 @@ export const ErrorPage: React.FC<Props> = (props) => {
       <div className="bg-subtle flex h-screen">
         <div className="rtl: bg-default m-auto rounded-md p-10 text-right ltr:text-left">
           <h1 className="font-cal text-emphasis text-6xl">{statusCode}</h1>
-          <h2 className="text-emphasis mt-6 max-w-2xl text-2xl font-medium">
-            It&apos;s not you, it&apos;s us.
-          </h2>
-          <p className="text-default mb-6 mt-4 max-w-2xl text-sm">
-            Something went wrong on our end. Get in touch with our support team, and we&apos;ll get it fixed
-            right away for you.
-          </p>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
 
           <div className="mb-8 flex flex-col">
-            <p className="text-default mb-4 max-w-2xl text-sm">
-              Please provide the following text when contacting support to better help you:
-            </p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <pre className="bg-emphasis text-emphasis w-full max-w-2xl whitespace-normal break-words rounded-md p-4">
               {message}
             </pre>
           </div>
 
-          <Button href="mailto:support@cal.com">Contact Support</Button>
-          <Button color="secondary" className="ml-2" onClick={handleReset}>
-            Try again
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
       {displayDebug && (

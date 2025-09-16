@@ -23,7 +23,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   {
     plan: "Free",
     description:
-      "The best plan to dip your toes into scheduling infrastructure. Start immediately with 25 free meetings per month",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     pricing: 0,
     includes: [
       "Up to 25 bookings a month",
@@ -37,7 +39,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   {
     plan: "Essentials",
     description:
-      "Your essential package with sophisticated support, hosted platform APIs, Cal.com Atoms (React components) and more.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     pricing: 299,
     includes: [
       "Up to 500 bookings a month. $0,60 overage beyond",
@@ -50,7 +54,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   {
     plan: "Scale",
     description:
-      "The best all-in-one plan to scale your company. Everything you need to provide scheduling for the masses, without breaking things.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     pricing: 2499,
     includes: [
       "Up to 5000 bookings a month. $0.50 overage beyond",
@@ -65,7 +71,9 @@ export const platformPlans: IndividualPlatformPlan[] = [
   },
   {
     plan: "Enterprise",
-    description: "Everything in Scale with generous volume discounts beyond 50,000 bookings a month.",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     includes: ["Beyond 50,000 bookings a month", "Everything in Scale", "Up to 50% discount on overages"],
   },
 ];
@@ -73,9 +81,13 @@ export const platformPlans: IndividualPlatformPlan[] = [
 export const helpCards: HelpCardInfo[] = [
   {
     icon: "rocket",
-    title: "Try our Platform Starter Kit",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     description:
-      "If you are building a marketplace or platform from scratch, our Platform Starter Kit has everything you need.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     variant: "basic",
     actionButton: {
       href: "https://experts.cal.com",
@@ -84,9 +96,13 @@ export const helpCards: HelpCardInfo[] = [
   },
   {
     icon: "github",
-    title: "Get the Source code",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     description:
-      "Our Platform Starter Kit is being used in production by Cal.com itself. You can find the ready-to-rock source code on GitHub.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     variant: "basic",
     actionButton: {
       href: "https://github.com/calcom/examples",
@@ -95,9 +111,13 @@ export const helpCards: HelpCardInfo[] = [
   },
   {
     icon: "calendar-check-2",
-    title: "Contact us",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     description:
-      "Book our engineering team for a 15 minute onboarding call and debug a problem. Please come prepared with questions.",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     variant: "basic",
     actionButton: {
       href: "https://i.cal.com/platform",
@@ -106,9 +126,13 @@ export const helpCards: HelpCardInfo[] = [
   },
   {
     icon: "triangle-alert",
-    title: "Report issue",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     description:
-      "You can submit a ticket on GitHub or upgrade your plan to receive real-time support with developer conferences",
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     variant: "basic",
     actionButton: {
       href: "https://github.com/calcom/cal.com/issues/new?template=platform.md",

@@ -127,12 +127,8 @@ const InternalNotePresetsView = ({ team }: ProfileViewProps) => {
                           name={`presets.${index}.name`}
                           control={form.control}
                           render={({ field }) => (
-                            <Input
-                              type="text"
-                              {...field}
-                              placeholder={t("internal_booking_note")}
-                              className="!mb-0"
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           )}
                         />
                         <Button
@@ -150,12 +146,8 @@ const InternalNotePresetsView = ({ team }: ProfileViewProps) => {
                           name={`presets.${index}.cancellationReason`}
                           control={form.control}
                           render={({ field }) => (
-                            <Input
-                              type="text"
-                              {...field}
-                              placeholder={t("internal_note_cancellation_reason")}
-                              className="!mb-0"
-                            />
+                            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                            $$$
                           )}
                         />
                       </div>

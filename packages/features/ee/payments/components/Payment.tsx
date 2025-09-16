@@ -81,14 +81,8 @@ export const PaymentFormComponent = (
       </div>
       {paymentOption === "HOLD" && (
         <div className="bg-info mb-5 mt-2 rounded-md p-3">
-          <CheckboxField
-            description={t("acknowledge_booking_no_show_fee", {
-              amount: props.payment.amount / 100,
-              formatParams: { amount: { currency: props.payment.currency } },
-            })}
-            onChange={(e) => setHoldAcknowledged(e.target.checked)}
-            descriptionClassName="text-info font-semibold"
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       )}
       <div className="mt-2 flex justify-end space-x-2">

@@ -2,11 +2,15 @@ import type { BookerEvent } from "bookings/types";
 
 export const mockEvent: BookerEvent = {
   id: 1,
-  title: "Quick check-in",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   slug: "quick-check-in",
   eventName: "Quick check-in",
   description:
-    "Use this event for a quick 15 minute catchup. Visit this long url to test the component https://cal.com/averylongurlwithoutspacesthatshouldntbreaklayout",
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   users: [
     { name: "Pro example", username: "pro", weekStart: "Sunday", avatarUrl: "", profile: null },
     { name: "Team example", username: "team", weekStart: "Sunday", avatarUrl: "", profile: null },

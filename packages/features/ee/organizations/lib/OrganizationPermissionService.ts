@@ -103,14 +103,18 @@ export class OrganizationPermissionService {
     if (!(await this.hasPermissionToCreateForEmail(input.orgOwnerEmail))) {
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: "you_do_not_have_permission_to_create_an_organization_for_this_email",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
     if (await this.hasConflictingOrganization({ slug: input.slug })) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: "organization_already_exists_with_this_slug",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -118,7 +122,9 @@ export class OrganizationPermissionService {
       // TODO: Consider redirecting to success page
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: "organization_onboarding_already_completed",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -129,7 +135,9 @@ export class OrganizationPermissionService {
     if (teamsToMigrate && !(await this.hasPermissionToMigrateTeams(teamsToMigrate))) {
       throw new TRPCError({
         code: "UNAUTHORIZED",
-        message: "you_do_not_have_permission_to_migrate_one_or_more_of_the_teams",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 

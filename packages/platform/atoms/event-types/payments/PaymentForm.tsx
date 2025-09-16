@@ -44,9 +44,11 @@ export const PaymentForm = ({
   const timezone = localStorage.getItem("timeOption.preferredTimeZone") || CURRENT_TIMEZONE;
   const date = dayjs.utc(paymentInfo?.booking.startTime).tz(timezone);
 
-  if (isLoading) return <h1 className="p-4 pt-4 text-xl">Loading...</h1>;
+  if (isLoading) return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$;
 
-  if (!paymentInfo) return <h1 className="p-4 text-xl">No payment found with UID - {paymentUid}</h1>;
+  if (!paymentInfo) return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$;
 
   const paymentAppData = getPaymentAppData(paymentInfo?.eventType);
 
@@ -82,12 +84,8 @@ export const PaymentForm = ({
                           <div className="font-medium">{t("what")}</div>
                           <div className="col-span-2 mb-6">{eventName}</div>
                           <div className="font-medium">{t("when")}</div>
-                          <div className="col-span-2 mb-6">
-                            {date.format("dddd, DD MMMM YYYY")}
-                            <br />
-                            {date.format(is24h ? "H:mm" : "h:mma")} - {paymentInfo.eventType.length} mins{" "}
-                            <span className="text-subtle">({timezone})</span>
-                          </div>
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                           {paymentInfo.booking.location && (
                             <>
                               <div className="font-medium">{t("where")}</div>

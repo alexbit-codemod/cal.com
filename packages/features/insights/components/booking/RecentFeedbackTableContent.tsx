@@ -20,13 +20,8 @@ export const RecentFeedbackTableContent = ({ data }: { data: FeedbackData }) => 
             key={item.userId}
             className="border-subtle flex items-center justify-between border-b px-4 py-3 last:border-b-0">
             <div className="flex items-center">
-              <Avatar
-                alt={item.user.name || ""}
-                size="sm"
-                imageSrc={getUserAvatarUrl({ avatarUrl: item.user.avatarUrl })}
-                title={item.user.name || ""}
-                className="mr-3"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <div className="text-default text-sm font-medium">{item.user.name}</div>
             </div>
             <div className="flex items-center space-x-4">
@@ -40,16 +35,8 @@ export const RecentFeedbackTableContent = ({ data }: { data: FeedbackData }) => 
           </div>
         ))
       ) : (
-        <EmptyScreen
-          Icon="zap"
-          headline={t("no_ratings")}
-          description={t("no_ratings_description")}
-          buttonRaw={
-            <Button target="_blank" color="secondary" href="/workflows">
-              {t("workflows")}
-            </Button>
-          }
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       )}
     </div>
   );

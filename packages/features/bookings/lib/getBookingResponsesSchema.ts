@@ -333,7 +333,9 @@ function preprocess<T extends z.ZodType>({
 
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message: `Can't parse unknown booking field type: ${bookingField.type}`,
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     })

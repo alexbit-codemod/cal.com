@@ -261,18 +261,12 @@ export const KBarContent = () => {
         <KBarAnimator className="bg-default z-10 w-full max-w-screen-sm overflow-hidden rounded-md shadow-lg">
           <div className="border-subtle flex items-center justify-center border-b">
             <Icon name="search" className="text-default mx-3 h-4 w-4" />
-            <KBarSearch
-              defaultPlaceholder={t("kbar_search_placeholder")}
-              className="bg-default placeholder:text-subtle text-default w-full rounded-sm py-2.5 focus-visible:outline-none"
-              value={inputText}
-              onChange={(e) => {
-                setInputText(e.currentTarget.value.trim());
-                if (aiResponse) setAiResponse("");
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           {showAiChat && inputText && (
-            <MintlifyChat aiResponse={aiResponse} setAiResponse={setAiResponse} searchText={inputText} />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           )}
           <RenderResults />
           <div className="text-subtle border-subtle hidden items-center space-x-1 border-t px-2 py-1.5 text-xs sm:flex">
@@ -281,7 +275,8 @@ export const KBarContent = () => {
             <Icon name="corner-down-left" className="h-4 w-4" />
             <span className="pr-2">{t("open")}</span>
             {isMac ? <Icon name="command" className="h-3 w-3" /> : "CTRL"}
-            <span className="pr-1">+ K </span>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <span className="pr-2">{t("close")}</span>
           </div>
         </KBarAnimator>

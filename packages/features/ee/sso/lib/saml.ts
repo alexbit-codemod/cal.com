@@ -33,7 +33,9 @@ export const canAccess = async (user: { id: number; email: string }, teamId: num
 
   if (!isSAMLLoginEnabled) {
     return {
-      message: "To enable this feature, add value for `SAML_DATABASE_URL` and `SAML_ADMINS` to your `.env`",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       access: false,
     };
   }
@@ -42,7 +44,9 @@ export const canAccess = async (user: { id: number; email: string }, teamId: num
   if (HOSTED_CAL_FEATURES) {
     if (teamId === null || !(await isTeamAdmin(userId, teamId))) {
       return {
-        message: "dont_have_permission",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         access: false,
       };
     }
@@ -52,14 +56,18 @@ export const canAccess = async (user: { id: number; email: string }, teamId: num
   if (!HOSTED_CAL_FEATURES) {
     if (!isSAMLAdmin(email)) {
       return {
-        message: "dont_have_permission",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         access: false,
       };
     }
   }
 
   return {
-    message: "success",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     access: true,
   };
 };

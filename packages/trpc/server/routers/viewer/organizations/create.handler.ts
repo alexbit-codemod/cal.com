@@ -120,7 +120,9 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
     },
   });
 
-  if (!loggedInUser) throw new TRPCError({ code: "UNAUTHORIZED", message: "You are not authorized." });
+  if (!loggedInUser) throw new TRPCError({ code: "UNAUTHORIZED", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const IS_USER_ADMIN = loggedInUser.role === UserPermissionRole.ADMIN;
 
@@ -128,24 +130,32 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
   const billingPeriod = (IS_USER_ADMIN ? billingPeriodRaw : BillingPeriod.MONTHLY) ?? BillingPeriod.MONTHLY;
 
   if (!ORG_SELF_SERVE_ENABLED && !IS_USER_ADMIN && !isPlatform) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "Only admins can create organizations" });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   if (!IS_USER_ADMIN && loggedInUser.email !== orgOwnerEmail && !isPlatform) {
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "You can only create organization where you are the owner",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (isNotACompanyEmail(orgOwnerEmail) && !isPlatform) {
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Use company email to create an organization" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const publishedTeams = loggedInUser.teams.filter((team) => !!team.team.slug);
 
   if (!IS_USER_ADMIN && publishedTeams.length < ORG_MINIMUM_PUBLISHED_TEAMS_SELF_SERVE && !isPlatform) {
-    throw new TRPCError({ code: "FORBIDDEN", message: "You need to have minimum published teams." });
+    throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   let orgOwner = await prisma.user.findUnique({
@@ -167,7 +177,9 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
   // Publishing the organization would fail if the team with the same slug is not migrated first
 
   if (hasAnOrgWithSameSlug || RESERVED_SUBDOMAINS.includes(slug))
-    throw new TRPCError({ code: "BAD_REQUEST", message: "organization_url_taken" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
 
   const hasExistingPlatformOrOrgTeam = loggedInUser?.teams.find((team) => {
     return team.team.isPlatform || team.team.isOrganization;
@@ -176,7 +188,9 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
   if (!!hasExistingPlatformOrOrgTeam?.team && isPlatform) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: `You can't create a new team because you are already a part of ${hasExistingPlatformOrOrgTeam.team.name}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -276,11 +290,15 @@ export const createHandler = async ({ input, ctx }: CreateOptions) => {
     // If we are making the loggedIn user the owner of the organization and he is already a part of an organization, we don't allow it because multi-org is not supported yet
     const isLoggedInUserOrgOwner = orgOwner.id === loggedInUser.id;
     if (ctx.user.profile.organizationId && isLoggedInUserOrgOwner) {
-      throw new TRPCError({ code: "FORBIDDEN", message: "You are part of an organization already" });
+      throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     if (!orgOwner.emailVerified) {
-      throw new TRPCError({ code: "FORBIDDEN", message: "You need to verify your email first" });
+      throw new TRPCError({ code: "FORBIDDEN", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
     }
 
     const nonOrgUsernameForOwner = orgOwner.username || "";

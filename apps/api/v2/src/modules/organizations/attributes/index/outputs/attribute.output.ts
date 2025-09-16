@@ -12,14 +12,18 @@ export type AttributeType = (typeof AttributeType)[keyof typeof AttributeType];
 
 export class Attribute {
   @IsString()
-  @ApiProperty({ type: String, required: true, description: "The ID of the attribute", example: "attr_123" })
+  @ApiProperty({ type: String, required: true, description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , example: "attr_123" })
   id!: string;
 
   @IsInt()
   @ApiProperty({
     type: Number,
     required: true,
-    description: "The team ID associated with the attribute",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: 1,
   })
   teamId!: number;
@@ -27,7 +31,9 @@ export class Attribute {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The type of the attribute",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     enum: AttributeType,
   })
   @IsEnum(AttributeType)
@@ -37,7 +43,9 @@ export class Attribute {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The name of the attribute",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "Attribute Name",
   })
   name!: string;
@@ -46,7 +54,9 @@ export class Attribute {
   @ApiProperty({
     type: String,
     required: true,
-    description: "The slug of the attribute",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: "attribute-name",
   })
   slug!: string;
@@ -55,7 +65,9 @@ export class Attribute {
   @ApiProperty({
     type: Boolean,
     required: true,
-    description: "Whether the attribute is enabled and displayed on their profile",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   enabled!: boolean;
@@ -64,7 +76,9 @@ export class Attribute {
   @ApiProperty({
     type: Boolean,
     required: false,
-    description: "Whether users can edit the relation",
+    description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     example: true,
   })
   usersCanEditRelation!: boolean;

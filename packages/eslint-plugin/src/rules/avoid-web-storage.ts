@@ -112,7 +112,9 @@ const rule = createRule({
   meta: {
     fixable: "code",
     docs: {
-      description: "Avoid deprecated imports",
+      description: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       recommended: "warn",
     },
     messages: {

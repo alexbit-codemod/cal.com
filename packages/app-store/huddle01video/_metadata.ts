@@ -14,14 +14,18 @@ export const metadata = {
   url: "https://huddle01.com",
   category: "conferencing",
   slug: "huddle01",
-  title: "Huddle01",
+  title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   isGlobal: false,
   email: "support@huddle01.com",
   appData: {
     location: {
       linkType: "dynamic",
       type: "integrations:huddle01_video",
-      label: "Huddle01 Video",
+      label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     },
   },
   dirName: "huddle01video",

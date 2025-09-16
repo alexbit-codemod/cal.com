@@ -17,10 +17,14 @@ async function getHandler(request: NextRequest) {
     const { client_id, client_secret } = await getAppKeysFromSlug("google-calendar");
 
     if (!client_id || typeof client_id !== "string")
-      return NextResponse.json({ message: "Google client_id missing." }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
 
     if (!client_secret || typeof client_secret !== "string")
-      return NextResponse.json({ message: "Google client_secret missing." }, { status: 400 });
+      return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       }, { status: 400 });
 
     // Get teamId from query params
     const teamId = request.nextUrl.searchParams.get("teamId");

@@ -135,7 +135,8 @@ export function UserPage(props: PageProps) {
                   <div className="flex flex-wrap items-center">
                     <h2 className="text-default pr-2 text-sm font-semibold">{type.title}</h2>
                   </div>
-                  <EventTypeDescription eventType={type} isPublic={true} shortenDescription />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
               </Link>
             ))}

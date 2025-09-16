@@ -32,7 +32,9 @@ export const queuedResponseHandler = async ({
   if (!queuedFormResponse) {
     return {
       formResponseId: null,
-      message: "Already processed",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
 
@@ -70,7 +72,9 @@ export const queuedResponseHandler = async ({
 
   return {
     formResponseId: formResponse.id,
-    message: "Processed",
+    message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
   };
 };
 
@@ -90,7 +94,9 @@ export const handler = async (req: NextRequest) => {
       return NextResponse.json(
         {
           status: "error",
-          message: "Invalid input",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
         { status: 400 }
       );
@@ -101,7 +107,9 @@ export const handler = async (req: NextRequest) => {
     return NextResponse.json(
       {
         status: "error",
-        message: "Internal server error",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       },
       { status: 500 }
     );

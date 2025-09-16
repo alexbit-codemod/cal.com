@@ -23,21 +23,10 @@ export function EventScheduleItem() {
 
   return (
     <div>
-      <Label>Availability Schedule</Label>
-      <TroubleshooterListItemHeader
-        className="group rounded-md border-b"
-        prefixSlot={<div className="w-4 rounded-[4px] bg-black" />}
-        title={schedule?.name ?? "Loading"}
-        suffixSlot={
-          schedule && (
-            <Link href={`/availability/${schedule.id}`} className="inline-flex">
-              <Badge color="orange" size="sm" className="hidden hover:cursor-pointer group-hover:inline-flex">
-                {t("edit")}
-              </Badge>
-            </Link>
-          )
-        }
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </div>
   );
 }

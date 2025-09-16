@@ -129,14 +129,8 @@ export function Setup(props: PageProps) {
 
   return (
     <main className="bg-subtle flex items-center print:h-full md:h-screen">
-      <WizardForm
-        defaultStep={defaultStep}
-        steps={steps}
-        nextLabel={t("next_step_text")}
-        finishLabel={t("finish")}
-        prevLabel={t("prev_step")}
-        stepLabel={(currentStep, maxSteps) => t("current_step_of_total", { currentStep, maxSteps })}
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </main>
   );
 }

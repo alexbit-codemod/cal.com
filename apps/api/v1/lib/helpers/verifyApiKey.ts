@@ -25,10 +25,14 @@ export const verifyApiKey: NextMiddleware = async (req, res, next) => {
   const hasValidLicense = await licenseKeyService.checkLicense();
 
   if (!hasValidLicense && IS_PRODUCTION) {
-    return res.status(401).json({ message: "Invalid or missing CALCOM_LICENSE_KEY environment variable" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
-  if (!req.query.apiKey) return res.status(401).json({ message: "No apiKey provided" });
+  if (!req.query.apiKey) return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 
   const strippedApiKey = `${req.query.apiKey}`.replace(process.env.API_KEY_PREFIX || "cal_", "");
   const hashedKey = hashAPIKey(strippedApiKey);

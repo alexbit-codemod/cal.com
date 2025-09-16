@@ -24,12 +24,8 @@ export default function ThemeLabel(props: ThemeLabelProps) {
         {...register(fieldName)}
       />
       <div className="ring-inverted relative z-10 rounded-lg ring-offset-2 transition-all peer-checked:ring-2">
-        <img
-          aria-hidden="true"
-          className="cover w-full rounded-lg"
-          src={`/theme-${variant}.svg`}
-          alt={`theme ${variant}`}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <p className="peer-checked:text-emphasis text-default mt-2 text-sm font-medium">{label}</p>
     </label>

@@ -20,7 +20,9 @@ test.describe("Google Calendar", async () => {
     let qaGCalCredential: CredentialForCalendarServiceWithEmail;
     test.beforeAll(async () => {
       let runIntegrationTest = false;
-      const errorMessage = "Could not run test";
+      const errorMessage = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
 
       test.skip(!!APP_CREDENTIAL_SHARING_ENABLED, "Credential sharing enabled");
 

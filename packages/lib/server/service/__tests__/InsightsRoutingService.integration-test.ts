@@ -60,7 +60,9 @@ async function createTestData({
   // Create test event type
   const eventType = await prisma.eventType.create({
     data: {
-      title: "Test Event Type",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       slug: `test-event-type-${randomUUID()}`,
       length: 60,
       userId: user.id,
@@ -72,7 +74,9 @@ async function createTestData({
   const booking = await prisma.booking.create({
     data: {
       uid: `test-booking-${randomUUID()}`,
-      title: "Test Booking",
+      title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       startTime: new Date(),
       endTime: new Date(Date.now() + 60 * 60 * 1000),
       userId: user.id,
@@ -91,13 +95,17 @@ async function createTestData({
         {
           id: `text-field-id-${randomUUID()}`,
           type: "text",
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: true,
         },
         {
           id: `email-field-id-${randomUUID()}`,
           type: "email",
-          label: "Email",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           required: true,
         },
       ],
@@ -111,11 +119,15 @@ async function createTestData({
       formId: form.id,
       response: {
         [`text-field-id-${randomUUID()}`]: {
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: "Test Name",
         },
         [`email-field-id-${randomUUID()}`]: {
-          label: "Email",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           value: "test@example.com",
         },
       },
@@ -576,7 +588,9 @@ describe("InsightsRoutingService Integration Tests", () => {
             {
               id: "text-field-id",
               type: "text",
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
             },
           ],
@@ -589,7 +603,9 @@ describe("InsightsRoutingService Integration Tests", () => {
           formId: personalForm.id,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Personal Form Response",
             },
           },
@@ -642,7 +658,9 @@ describe("InsightsRoutingService Integration Tests", () => {
             {
               id: "text-field-id",
               type: "text",
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
             },
           ],
@@ -655,7 +673,9 @@ describe("InsightsRoutingService Integration Tests", () => {
           formId: personalForm.id,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Personal Form Response",
             },
           },
@@ -680,7 +700,9 @@ describe("InsightsRoutingService Integration Tests", () => {
             {
               id: "text-field-id",
               type: "text",
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
             },
           ],
@@ -693,7 +715,9 @@ describe("InsightsRoutingService Integration Tests", () => {
           formId: otherForm.id,
           response: {
             "text-field-id": {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Other Form Response",
             },
           },
@@ -769,7 +793,9 @@ describe("InsightsRoutingService Integration Tests", () => {
             {
               id: `text-field-id-${randomUUID()}`,
               type: "text",
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               required: true,
             },
           ],
@@ -783,7 +809,9 @@ describe("InsightsRoutingService Integration Tests", () => {
           formId: teamMemberForm.id,
           response: {
             [`text-field-id-${randomUUID()}`]: {
-              label: "Name",
+              label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              ,
               value: "Team Member Form Response",
             },
           },

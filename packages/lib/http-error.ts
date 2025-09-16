@@ -23,7 +23,9 @@ export class HttpError<TCode extends number = number> extends Error {
     this.statusCode = opts.statusCode;
     this.url = opts.url;
     this.method = opts.method;
-    this.message = opts.message ?? `HTTP Error ${opts.statusCode}`;
+    this.message = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     this.data = opts.data;
 
     if (opts.cause instanceof Error && opts.cause.stack) {

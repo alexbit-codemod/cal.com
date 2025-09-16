@@ -197,7 +197,8 @@ export function EditForm({
               name="avatar"
               render={({ field: { value } }) => (
                 <div className="flex items-center">
-                  <Avatar alt={`${selectedUser?.name} avatar`} imageSrc={value} size="mdLg" />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="ml-4">
                     <ImageUploader
                       target="avatar"
@@ -215,9 +216,12 @@ export function EditForm({
             />
           </div>
           <Divider />
-          <TextField label={t("name")} {...form.register("name")} className="mb-6" />
-          <TextField label={t("username")} {...form.register("username")} className="mb-6" />
-          <TextAreaField label={t("about")} {...form.register("bio")} className="min-h-24 mb-6" />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <div className="mb-6">
             <Label>{t("role")}</Label>
             {teamRoles?.length > 0 ? (
@@ -362,65 +366,17 @@ function AttributesList(props: { selectedUserId: number }) {
               return (
                 <div className="flex w-full items-center justify-center" key={attr.id}>
                   {["TEXT", "NUMBER"].includes(attr.type) && (
-                    <InputField
-                      {...field}
-                      containerClassName="w-full"
-                      labelClassName="text-emphasis mb-2 block text-sm font-medium leading-none"
-                      label={attr.name}
-                      type={attr.type === "TEXT" ? "text" : "number"}
-                      value={fieldValue?.value || ""}
-                      onChange={(e) => {
-                        field.onChange({
-                          id: attr.id,
-                          value: e.target.value,
-                        });
-                      }}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   )}
                   {["SINGLE_SELECT", "MULTI_SELECT"].includes(attr.type) && (
                     <div className="w-full">
-                      <SelectField
-                        isDisabled={attr.isLocked}
-                        name={field.name}
-                        containerClassName="w-full"
-                        isMulti={attr.type === "MULTI_SELECT"}
-                        labelProps={{
-                          className: "text-emphasis mb-2 block text-sm font-medium leading-none",
-                        }}
-                        label={attr.name}
-                        options={getOptionsByAttributeId(attr.id)}
-                        value={attr.type === "MULTI_SELECT" ? fieldValue?.options : fieldValue?.options?.[0]}
-                        onChange={(value) => {
-                          if (!value) return;
-                          const valueAsArray = value instanceof Array ? value : [value];
-
-                          const updatedOptions =
-                            attr.type === "MULTI_SELECT"
-                              ? valueAsArray.map((v) => ({
-                                  label: v.label,
-                                  value: v.value,
-                                  weight: v.weight || 100,
-                                }))
-                              : [
-                                  {
-                                    label: valueAsArray[0].label,
-                                    value: valueAsArray[0].value,
-                                    weight: valueAsArray[0].weight || 100,
-                                  },
-                                ];
-
-                          field.onChange({
-                            id: attr.id,
-                            options: getOptionsEnsuringNotOwnedByCalcomNotRemoved({
-                              earlierOptions: fieldValue?.options || [],
-                              updatedOptions,
-                            }),
-                          });
-                        }}
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       {attr.isWeightsEnabled && fieldValue?.options && (
                         <div className="mt-3 space-y-2">
-                          <Label>Weights</Label>
+                          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                          $$$
                           <div className="">
                             {fieldValue.options.map((option, idx) => {
                               return (
@@ -431,24 +387,8 @@ function AttributesList(props: { selectedUserId: number }) {
                                       className="text-subtle">
                                       {option.label}
                                     </Label>
-                                    <InputField
-                                      noLabel
-                                      name={`attributes.${index}.options.${idx}.weight`}
-                                      type="number"
-                                      step={10}
-                                      value={option.weight || 100}
-                                      onChange={(e) => {
-                                        const newWeight = parseFloat(e.target.value) || 1;
-                                        const newOptions = fieldValue?.options?.map((opt, i) =>
-                                          i === idx ? { ...opt, weight: newWeight } : opt
-                                        );
-                                        field.onChange({
-                                          id: attr.id,
-                                          options: newOptions,
-                                        });
-                                      }}
-                                      addOnSuffix={<span className="text-subtle text-sm">%</span>}
-                                    />
+                                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                                    $$$
                                   </div>
                                 </>
                               );

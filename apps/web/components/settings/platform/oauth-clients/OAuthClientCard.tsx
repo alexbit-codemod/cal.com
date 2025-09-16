@@ -89,9 +89,8 @@ export const OAuthClientCard = ({
       )}>
       <div className="flex flex-col gap-2">
         <div className="flex gap-1">
-          <p className="font-semibold">
-            Client name: <span className="font-normal">{name}</span>
-          </p>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         {!!logo && (
           <div>
@@ -100,7 +99,8 @@ export const OAuthClientCard = ({
         )}
         <div className="flex flex-col gap-2">
           <div className="flex flex-row items-center gap-2">
-            <div className="font-semibold">Client Id:</div>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div>{id}</div>
             <Icon
               name="clipboard"
@@ -114,7 +114,8 @@ export const OAuthClientCard = ({
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <div className="font-semibold">Client Secret:</div>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <div className="flex items-center justify-center rounded-md">
             {[...new Array(20)].map((_, index) => (
               <Icon name="asterisk" key={`${index}asterisk`} className="h-2 w-2" />
@@ -132,7 +133,8 @@ export const OAuthClientCard = ({
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex flex-row items-center gap-2">
-            <div className="font-semibold">Organization Id:</div>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <div>{organizationId}</div>
             <Icon
               name="clipboard"
@@ -146,58 +148,56 @@ export const OAuthClientCard = ({
           </div>
         </div>
         <div className="border-subtle flex text-sm">
-          <span className="font-semibold">Permissions: </span>
-          {permissions ? <div className="flex">{clientPermissions}</div> : <>&nbsp;Disabled</>}
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          {permissions ? <div className="flex">{clientPermissions}</div> : // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$}
         </div>
         <div className="flex gap-1 text-sm">
-          <span className="font-semibold">Redirect uris: </span>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {redirectUris.map((item, index) => (redirectUris.length === index + 1 ? `${item}` : `${item}, `))}
         </div>
         {bookingRedirectUri && (
           <div className="flex gap-1 text-sm">
-            <span className="font-semibold">Booking redirect uri: </span> {bookingRedirectUri}
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$ {bookingRedirectUri}
           </div>
         )}
         {bookingRescheduleRedirectUri && (
           <div className="flex gap-1 text-sm">
-            <span className="font-semibold">Booking reschedule uri: </span> {bookingRescheduleRedirectUri}
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$ {bookingRescheduleRedirectUri}
           </div>
         )}
         {bookingCancelRedirectUri && (
           <div className="flex gap-1 text-sm">
-            <span className="font-semibold">Booking cancel uri: </span> {bookingCancelRedirectUri}
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$ {bookingCancelRedirectUri}
           </div>
         )}
         <div className="flex gap-1 text-sm">
-          <span className="text-sm font-semibold">Emails enabled:</span> {areEmailsEnabled ? "Yes" : "No"}
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$ {areEmailsEnabled ? "Yes" : "No"}
         </div>
         <div className="flex gap-1 text-sm">
-          <span className="text-sm font-semibold">Default event types enabled:</span>{" "}
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$${" "}
           {areDefaultEventTypesEnabled ? "Yes" : "No"}
         </div>
         <div className="flex gap-1 text-sm">
-          <span className="text-sm font-semibold">Calendar events enabled:</span>{" "}
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$${" "}
           {areCalendarEventsEnabled ? "Yes" : "No"}
         </div>
       </div>
       <div className="flex items-start gap-4">
-        <Button
-          color="primary"
-          loading={isLoading}
-          disabled={isLoading}
-          onClick={() => router.push(`/settings/platform/oauth-clients/${id}/edit/webhooks`)}>
-          Webhooks
-        </Button>
-        <Button
-          color="secondary"
-          loading={isLoading}
-          disabled={isLoading}
-          onClick={() => router.push(`/settings/platform/oauth-clients/${id}/edit`)}>
-          Edit
-        </Button>
-        <Button color="destructive" loading={isLoading} disabled={isLoading} onClick={() => onDelete(id)}>
-          Delete
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );

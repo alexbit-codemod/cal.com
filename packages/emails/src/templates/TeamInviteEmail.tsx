@@ -33,21 +33,8 @@ export const TeamInviteEmail = (
       <p style={{ fontSize: "24px", marginBottom: "16px", textAlign: "center" }}>
         <>{heading}</>
       </p>
-      <img
-        style={{
-          borderRadius: "16px",
-          height: "270px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        src={
-          IS_PRODUCTION
-            ? `${WEBAPP_URL}/emails/calendar-email-hero.png`
-            : "http://localhost:3000/emails/calendar-email-hero.png"
-        }
-        alt=""
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <p
         style={{
           fontWeight: 400,
@@ -59,13 +46,8 @@ export const TeamInviteEmail = (
         <>{content}</>
       </p>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <CallToAction
-          label={props.language(
-            props.isCalcomMember ? (props.isAutoJoin ? "login" : "email_user_cta") : "create_your_account"
-          )}
-          href={props.joinLink}
-          endIconName="linkIcon"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
       <p
         style={{
@@ -205,45 +187,15 @@ export const TeamInviteEmail = (
         );
       }
       return (
-        <>
-          {autoJoinType === "added" ? (
-            <ServerTrans
-              t={props.language}
-              i18nKey="email_team_invite|content|added_to_org"
-              values={{ teamName, invitedBy, appName: APP_NAME }}
-            />
-          ) : (
-            <ServerTrans
-              t={props.language}
-              i18nKey="email_team_invite|content|invited_to_org"
-              values={{ teamName, invitedBy, appName: APP_NAME }}
-            />
-          )}{" "}
-          {appName} is the event-juggling scheduler that enables you and your team to schedule meetings
-          without the email tennis.
-        </>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       );
     }
 
     if (typeOfInvite === "TO_SUBTEAM") {
       return (
-        <>
-          {autoJoinType === "added" ? (
-            <ServerTrans
-              t={props.language}
-              i18nKey="email_team_invite|content|added_to_subteam"
-              values={{ teamName, parentTeamName: parentTeamName ?? "", invitedBy, appName: APP_NAME }}
-            />
-          ) : (
-            <ServerTrans
-              t={props.language}
-              i18nKey="email_team_invite|content|invited_to_subteam"
-              values={{ teamName, parentTeamName: parentTeamName ?? "", invitedBy, appName: APP_NAME }}
-            />
-          )}{" "}
-          {appName} is the event-juggling scheduler that enables you and your team to schedule meetings
-          without the email tennis.
-        </>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       );
     }
     // Regular team doesn't support auto-join. So, they have to be invited always

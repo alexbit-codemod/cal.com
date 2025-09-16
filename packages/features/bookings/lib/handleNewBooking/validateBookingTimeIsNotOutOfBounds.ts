@@ -45,7 +45,9 @@ const _validateBookingTimeIsNotOutOfBounds = async <T extends ValidateBookingTim
     );
   } catch (error) {
     logger.warn({
-      message: "NewBooking: Unable to determine timeOutOfBounds status. Defaulting to false.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
     if (error instanceof BookingDateInPastError) {

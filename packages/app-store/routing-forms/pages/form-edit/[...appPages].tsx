@@ -92,32 +92,12 @@ function Field({
         deleteField={router ? null : deleteField}>
         <div className="bg-default border-default w-full gap-3 rounded-2xl border p-3">
           <div className="mb-3 w-full">
-            <TextField
-              data-testid={`${hookFieldNamespace}.label`}
-              disabled={!!router}
-              label="Label"
-              className="flex-grow"
-              placeholder={t("this_is_what_your_users_would_see")}
-              defaultValue={label || routerField?.label || "Field"}
-              required
-              {...hookForm.register(`${hookFieldNamespace}.label`)}
-              onChange={(e) => {
-                hookForm.setValue(`${hookFieldNamespace}.label`, e.target.value, { shouldDirty: true });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="mb-3 w-full">
-            <TextField
-              disabled={!!router}
-              label="Identifier"
-              name={`${hookFieldNamespace}.identifier`}
-              required
-              placeholder={t("identifies_name_field")}
-              value={identifier || routerField?.identifier || label || routerField?.label || ""}
-              onChange={(e) => {
-                hookForm.setValue(`${hookFieldNamespace}.identifier`, e.target.value, { shouldDirty: true });
-              }}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="mb-3 w-full">
             <Controller
@@ -147,30 +127,8 @@ function Field({
                   );
                 } else {
                   return (
-                    <SelectField
-                      maxMenuHeight={200}
-                      styles={{
-                        singleValue: (baseStyles) => ({
-                          ...baseStyles,
-                          fontSize: "14px",
-                        }),
-                        option: (baseStyles) => ({
-                          ...baseStyles,
-                          fontSize: "14px",
-                        }),
-                      }}
-                      label="Type"
-                      isDisabled={!!router}
-                      containerClassName="data-testid-field-type"
-                      options={FieldTypes}
-                      onChange={(option) => {
-                        if (!option) {
-                          return;
-                        }
-                        onChange(option.value);
-                      }}
-                      defaultValue={defaultValue}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   );
                 }
               }}
@@ -179,17 +137,8 @@ function Field({
           {["select", "multiselect"].includes(fieldType) ? (
             <div className="bg-muted w-full rounded-[10px] p-2">
               <Label className="text-subtle">{t("options")}</Label>
-              <MultiOptionInput
-                fieldArrayName={`${hookFieldNamespace}.options`}
-                disabled={!!router}
-                optionPlaceholders={["< 10", "10 - 100", "100 - 500", "> 500"]}
-                defaultNumberOfOptions={4}
-                pasteDelimiters={["\n", ","]}
-                showMoveButtons={true}
-                minOptions={1}
-                addOptionLabel={t("add_an_option")}
-                addOptionButtonColor="minimal"
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           ) : null}
 
@@ -200,13 +149,8 @@ function Field({
               defaultValue={routerField?.required}
               render={({ field: { value, onChange } }) => {
                 return (
-                  <BooleanToggleGroupField
-                    variant="small"
-                    disabled={!!router}
-                    label={t("required")}
-                    value={value}
-                    onValueChange={onChange}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 );
               }}
             />
@@ -298,9 +242,8 @@ const FormEdit = ({
       </div>
       {hookFormFields.length ? (
         <div className={classNames("flex")}>
-          <Button data-testid="add-field" type="button" StartIcon="plus" color="secondary" onClick={addField}>
-            Add question
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       ) : null}
     </div>
@@ -331,16 +274,13 @@ const FormEdit = ({
           />
         </div>
         <div>
-          <h1 className="text-emphasis text-emphasis text-center text-lg font-semibold">
-            Create your first question
-          </h1>
-          <p className="text-default mt-2 text-center text-sm leading-normal">
-            Fields are the form fields that the booker would see.
-          </p>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
-        <Button data-testid="add-field" onClick={addField} StartIcon="plus" className="mt-6">
-          Add question
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </div>
   );

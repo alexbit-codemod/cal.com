@@ -12,22 +12,16 @@ export const ConfirmationExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-2">
-        <Button color="destructive" onClick={() => setOpen(true)}>
-          Delete Item
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent
             title="Confirm Deletion"
             description="Are you sure you want to delete this item? This action cannot be undone.">
             <DialogFooter>
               <DialogClose />
-              <Button
-                color="destructive"
-                onClick={() => {
-                  setOpen(false);
-                }}>
-                Delete
-              </Button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </DialogFooter>
           </DialogContent>
         </Dialog>

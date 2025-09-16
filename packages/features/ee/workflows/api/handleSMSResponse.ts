@@ -18,10 +18,14 @@ const handleSMSResponse = async (request: NextRequest) => {
       await WorkflowOptOutContactRepository.removePhoneNumber(optOutResult.phoneNumber);
     }
 
-    return NextResponse.json({ message: "Opt status updated successfully" }, { status: 200 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 200 });
   } catch (e) {
     console.error("Error processing user response webhook:", e);
-    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 500 });
   }
 };
 

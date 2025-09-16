@@ -1,13 +1,6 @@
 import { AttendeeScheduledEmail } from "./AttendeeScheduledEmail";
 
 export const AttendeeDeclinedEmail = (props: React.ComponentProps<typeof AttendeeScheduledEmail>) => (
-  <AttendeeScheduledEmail
-    title={
-      props.calEvent.recurringEvent?.count ? "event_request_declined_recurring" : "event_request_declined"
-    }
-    headerType="xCircle"
-    subject="event_declined_subject"
-    callToAction={null}
-    {...props}
-  />
+  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
 );

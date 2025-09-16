@@ -333,23 +333,8 @@ const WebhookForm = (props: {
           control={formMethods.control}
           render={({ field: { value } }) => (
             <>
-              <TextField
-                name="subscriberUrl"
-                label={t("subscriber_url")}
-                labelClassName="font-medium text-emphasis font-sm"
-                value={value}
-                required
-                type="url"
-                onChange={(e) => {
-                  formMethods.setValue("subscriberUrl", e?.target.value, { shouldDirty: true });
-                  if (hasTemplateIntegration({ url: e.target.value })) {
-                    setUseCustomTemplate(true);
-                    formMethods.setValue("payloadTemplate", customTemplate({ url: e.target.value }), {
-                      shouldDirty: true,
-                    });
-                  }
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </>
           )}
         />
@@ -358,14 +343,8 @@ const WebhookForm = (props: {
           control={formMethods.control}
           render={({ field: { value } }) => (
             <div className="font-sm text-emphasis mt-6 font-medium">
-              <Switch
-                label={t("enable_webhook")}
-                checked={value}
-                // defaultChecked={props?.webhook?.active ? props?.webhook?.active : true}
-                onCheckedChange={(value) => {
-                  formMethods.setValue("active", value, { shouldDirty: true });
-                }}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
           )}
         />
@@ -428,7 +407,8 @@ const WebhookForm = (props: {
             <div className="mt-6">
               {!!hasSecretKey && !changeSecret && (
                 <>
-                  <Label className="font-sm text-emphasis font-medium">Secret</Label>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="bg-default space-y-0 rounded-md border-0 border-neutral-200 sm:mx-0 md:border">
                     <div className="text-emphasis rounded-sm border-b p-2 text-sm">
                       {t("forgotten_secret_description")}
@@ -448,16 +428,8 @@ const WebhookForm = (props: {
               )}
               {!!hasSecretKey && changeSecret && (
                 <>
-                  <TextField
-                    autoComplete="off"
-                    label={t("secret")}
-                    labelClassName="font-medium text-emphasis font-sm"
-                    {...formMethods.register("secret")}
-                    value={newSecret}
-                    onChange={(event) => setNewSecret(event.currentTarget.value)}
-                    type="text"
-                    placeholder={t("leave_blank_to_remove_secret")}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <Button
                     color="secondary"
                     type="button"
@@ -470,15 +442,8 @@ const WebhookForm = (props: {
                 </>
               )}
               {!hasSecretKey && (
-                <TextField
-                  name="secret"
-                  label={t("secret")}
-                  labelClassName="font-medium text-emphasis font-sm"
-                  value={value}
-                  onChange={(e) => {
-                    formMethods.setValue("secret", e?.target.value, { shouldDirty: true });
-                  }}
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             </div>
           )}
@@ -512,15 +477,8 @@ const WebhookForm = (props: {
               </div>
               {useCustomTemplate && (
                 <div className="space-y-3">
-                  <TextArea
-                    name="customPayloadTemplate"
-                    rows={8}
-                    value={value || ""}
-                    placeholder={`{\n\n}`}
-                    onChange={(e) =>
-                      formMethods.setValue("payloadTemplate", e?.target.value, { shouldDirty: true })
-                    }
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
 
                   <Button type="button" color="secondary" onClick={() => setShowVariables(!showVariables)}>
                     {showVariables ? t("webhook_hide_variables") : t("webhook_show_variable")}

@@ -126,12 +126,8 @@ const PaymentPage: FC<PaymentPageProps> = (props) => {
                       <div className="font-medium">{t("what")}</div>
                       <div className="col-span-2 mb-6">{eventName}</div>
                       <div className="font-medium">{t("when")}</div>
-                      <div className="col-span-2 mb-6">
-                        {date.locale(i18n.language ?? "en").format("dddd, DD MMMM YYYY")}
-                        <br />
-                        {date.format(is24h ? "H:mm" : "h:mma")} - {props.eventType.length} mins{" "}
-                        <span className="text-subtle">({timezone})</span>
-                      </div>
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       {props.booking.location && (
                         <>
                           <div className="font-medium">{t("where")}</div>

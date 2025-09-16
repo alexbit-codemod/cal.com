@@ -25,7 +25,9 @@ describe("BookingDenormalized", () => {
     // Create test event type
     const eventType = await prisma.eventType.create({
       data: {
-        title: "Test Event",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         slug: "test-event",
         length: 60,
         userId: user.id,
@@ -37,7 +39,9 @@ describe("BookingDenormalized", () => {
     const booking = await prisma.booking.create({
       data: {
         uid: `booking-denorm-${randomId}`,
-        title: "Test Booking",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         startTime: new Date(),
         endTime: new Date(Date.now() + 60 * 60 * 1000),
         userId: user.id,
@@ -84,7 +88,9 @@ describe("BookingDenormalized", () => {
       await prisma.booking.update({
         where: { id: bookingId },
         data: {
-          title: "Updated Booking",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           status: BookingStatus.CANCELLED,
         },
       });
@@ -149,7 +155,9 @@ describe("BookingDenormalized", () => {
       const booking2 = await prisma.booking.create({
         data: {
           uid: `test-booking-${Math.floor(Math.random() * 1000000)}`,
-          title: "Test Booking 2",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: new Date(),
           endTime: new Date(Date.now() + 60 * 60 * 1000),
           userId: userId,
@@ -180,7 +188,9 @@ describe("BookingDenormalized", () => {
       const booking2 = await prisma.booking.create({
         data: {
           uid: `test-booking-${Math.floor(Math.random() * 1000000)}`,
-          title: "Test Booking 2",
+          title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           startTime: new Date(),
           endTime: new Date(Date.now() + 60 * 60 * 1000),
           userId: userId,

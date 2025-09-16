@@ -31,15 +31,8 @@ export const AvatarGroup = function AvatarGroup(props: AvatarGroupProps) {
     <ul className={classNames("flex items-center", props.className)}>
       {displayedAvatars.map((item, idx) => (
         <li key={idx} className="-mr-1 inline-block">
-          <Avatar
-            data-testid="avatar"
-            className="border-subtle"
-            imageSrc={item.image}
-            title={item.title}
-            alt={item.alt || ""}
-            size={props.size}
-            href={item.href}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </li>
       ))}
       {numTruncatedAvatars > 0 && (

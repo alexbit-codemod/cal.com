@@ -19,23 +19,10 @@ export const MultiExample: React.FC = () => {
   return (
     <RenderComponentWithSnippet>
       <div className="space-y-4 md:w-80">
-        <Select
-          options={options}
-          value={multiValue}
-          onChange={(newValue) => setMultiValue(newValue as { value: string; label: string }[])}
-          isMulti
-          isClearable
-          placeholder="Choose multiple flavors..."
-        />
-        <Select
-          options={options}
-          value={multiValue}
-          onChange={(newValue) => setMultiValue(newValue as { value: string; label: string }[])}
-          isMulti
-          isClearable
-          placeholder="Choose multiple flavors... (small)"
-          size="sm"
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
     </RenderComponentWithSnippet>
   );

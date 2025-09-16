@@ -167,16 +167,8 @@ export default function ApiKeyDialogForm({
               name="note"
               control={form.control}
               render={({ field: { onChange, value } }) => (
-                <TextField
-                  name="note"
-                  label={t("personal_note")}
-                  placeholder={t("personal_note_placeholder")}
-                  value={value}
-                  onChange={(e) => {
-                    form.setValue("note", e?.target.value);
-                  }}
-                  type="text"
-                />
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             />
           </div>
@@ -188,12 +180,8 @@ export default function ApiKeyDialogForm({
                   name="neverExpires"
                   control={form.control}
                   render={({ field: { onChange, value } }) => (
-                    <Switch
-                      label={t("never_expires")}
-                      onCheckedChange={onChange}
-                      checked={value}
-                      disabled={!!defaultValues}
-                    />
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   )}
                 />
               </div>

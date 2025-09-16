@@ -36,7 +36,9 @@ export const deleteFormHandler = async ({ ctx, input }: DeleteFormHandlerOptions
   if (areFormsUsingIt) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "This form is being used by other forms. Please remove it's usage from there first.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -50,7 +52,9 @@ export const deleteFormHandler = async ({ ctx, input }: DeleteFormHandlerOptions
   if (!deletedRes.count) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Form seems to be already deleted.",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
   return deletedRes;

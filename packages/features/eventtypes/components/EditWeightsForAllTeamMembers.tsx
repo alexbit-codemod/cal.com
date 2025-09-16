@@ -47,7 +47,8 @@ const TeamMemberItem = ({ member, onWeightChange }: TeamMemberItemProps) => {
 
   return (
     <div className="border-subtle flex h-12 items-center border-b px-3 py-1 last:border-b-0">
-      <Avatar size="sm" imageSrc={member.avatar} alt={member.label} className="min-w-10" />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
       <span className="text-emphasis ml-3 flex-grow text-sm">{member.label}</span>
       <div className="ml-auto flex h-full items-center">
         {isEditing ? (
@@ -268,13 +269,8 @@ export const EditWeightsForAllTeamMembers = ({
                   t={t}
                   i18nKey="weights_description"
                   components={[
-                    <Link
-                      key="weights_description"
-                      className="underline underline-offset-2"
-                      target="_blank"
-                      href="https://cal.com/docs/enterprise-features/teams/round-robin-scheduling#weights">
-                      Learn more
-                    </Link>,
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
                   ]}
                 />
               </div>
@@ -291,14 +287,8 @@ export const EditWeightsForAllTeamMembers = ({
                   {t("download")}
                 </Button>
               </div>
-              <TextField
-                placeholder={t("search")}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
-                addOnLeading={
-                  <Icon name="search" className="text-subtle h-4 w-4" aria-hidden="true" focusable="false" />
-                }
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
 
               <div className="flex max-h-[80dvh] flex-col overflow-y-auto rounded-md border">
                 {filteredMembers.map((member) => (

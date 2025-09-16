@@ -32,9 +32,8 @@ export default function MeetingUnavailable(props: PageProps) {
                     <Icon name="x" className="h-6 w-6 text-red-600" />
                   </div>
                   <div className="mt-3 text-center sm:mt-5">
-                    <h3 className="text-emphasis text-lg font-medium leading-6" id="modal-headline">
-                      This meeting is in the past.
-                    </h3>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                   <div className="mt-4 border-b border-t py-4">
                     <h2 className="font-cal text-default mb-2 text-center text-lg font-medium">

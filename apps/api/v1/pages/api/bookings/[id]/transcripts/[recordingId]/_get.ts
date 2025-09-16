@@ -67,7 +67,9 @@ const checkIfRecordingBelongsToBooking = async (bookingId: number, recordingId: 
   if (!booking)
     throw new HttpError({
       statusCode: 404,
-      message: `No Booking found with booking id ${bookingId}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   const roomName =
@@ -77,14 +79,18 @@ const checkIfRecordingBelongsToBooking = async (bookingId: number, recordingId: 
   if (!roomName)
     throw new HttpError({
       statusCode: 404,
-      message: `No Booking Reference with Daily Video found with booking id ${bookingId}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
 
   const canUserAccessRecordingId = await checkIfRoomNameMatchesInRecording(roomName, recordingId);
   if (!canUserAccessRecordingId) {
     throw new HttpError({
       statusCode: 403,
-      message: `This Recording Id ${recordingId} does not belong to booking ${bookingId}`,
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 };

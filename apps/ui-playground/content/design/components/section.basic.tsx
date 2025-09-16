@@ -19,7 +19,8 @@ export const BasicExample = () => {
         </Section.Header>
         {isOpen && (
           <Section.Content>
-            <p>This is the main content of the section.</p>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Section.Content>
         )}
       </Section>

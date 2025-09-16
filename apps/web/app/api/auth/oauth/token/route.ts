@@ -11,7 +11,9 @@ import type { OAuthTokenPayload } from "@calcom/types/oauth";
 async function handler(req: NextRequest) {
   const { code, client_id, client_secret, grant_type, redirect_uri } = await parseUrlFormData(req);
   if (grant_type !== "authorization_code") {
-    return NextResponse.json({ message: "grant_type invalid" }, { status: 400 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 400 });
   }
 
   const [hashedSecret] = generateSecret(client_secret);
@@ -27,7 +29,9 @@ async function handler(req: NextRequest) {
   });
 
   if (!client || client.redirectUri !== redirect_uri) {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   const accessCode = await prisma.accessCode.findFirst({
@@ -58,7 +62,9 @@ async function handler(req: NextRequest) {
   });
 
   if (!accessCode) {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }, { status: 401 });
   }
 
   const secretKey = process.env.CALENDSO_ENCRYPTION_KEY || "";

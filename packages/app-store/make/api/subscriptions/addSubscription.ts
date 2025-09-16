@@ -9,13 +9,17 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const apiKey = req.query.apiKey as string;
 
   if (!apiKey) {
-    return res.status(401).json({ message: "No API key provided" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const validKey = await findValidApiKey(apiKey, "make");
 
   if (!validKey) {
-    return res.status(401).json({ message: "API key not valid" });
+    return res.status(401).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   const { subscriberUrl, triggerEvent } = req.body;
@@ -28,7 +32,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 
   if (!createAppSubscription) {
-    return res.status(500).json({ message: "Could not create subscription." });
+    return res.status(500).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   }
 
   res.status(200).json(createAppSubscription);

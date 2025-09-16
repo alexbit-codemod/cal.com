@@ -18,14 +18,18 @@ export const createSelfHostedHandler = async ({ input, ctx }: CreateSelfHostedOp
   if (!IS_SELF_HOSTED) {
     throw new TRPCError({
       code: "INTERNAL_SERVER_ERROR",
-      message: "Self-hosted is not enabled",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!input.onboardingId) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "onboardingId is required",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
@@ -34,14 +38,18 @@ export const createSelfHostedHandler = async ({ input, ctx }: CreateSelfHostedOp
   if (!organizationOnboarding) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Organization onboarding not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 
   if (!organizationOnboarding.orgOwnerEmail) {
     throw new TRPCError({
       code: "BAD_REQUEST",
-      message: "Organization owner email not found",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     });
   }
 

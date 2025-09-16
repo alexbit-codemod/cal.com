@@ -58,7 +58,9 @@ export const withStripeCallback = async (
   if (!checkoutId) {
     return {
       url: `/apps/installed?error=${encodeURIComponent(
-        JSON.stringify({ message: "No Stripe Checkout Session ID" })
+        JSON.stringify({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         })
       )}`,
     };
   }
@@ -67,7 +69,9 @@ export const withStripeCallback = async (
   if (!checkoutSession) {
     return {
       url: `/apps/installed?error=${encodeURIComponent(
-        JSON.stringify({ message: "Unknown Stripe Checkout Session ID" })
+        JSON.stringify({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         })
       )}`,
     };
   }
@@ -75,7 +79,9 @@ export const withStripeCallback = async (
   if (checkoutSession.payment_status !== "paid") {
     return {
       url: `/apps/installed?error=${encodeURIComponent(
-        JSON.stringify({ message: "Stripe Payment not processed" })
+        JSON.stringify({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+         })
       )}`,
     };
   }

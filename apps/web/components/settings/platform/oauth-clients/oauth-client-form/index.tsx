@@ -86,9 +86,8 @@ export const OAuthClientForm = ({
               type="checkbox"
               disabled={!!defaultValues}
             />
-            <label htmlFor={`${permissionKey}Read`} className="cursor-pointer text-sm">
-              Read
-            </label>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="flex items-center gap-x-2">
             <input
@@ -98,9 +97,8 @@ export const OAuthClientForm = ({
               type="checkbox"
               disabled={!!defaultValues}
             />
-            <label htmlFor={`${permissionKey}Write`} className="cursor-pointer text-sm">
-              Write
-            </label>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         </div>
       </div>
@@ -113,22 +111,18 @@ export const OAuthClientForm = ({
         className="border-subtle rounded-b-lg border border-t-0 px-4 pb-8 pt-2"
         onSubmit={handleSubmit(onSubmit)}>
         <div className="mt-6">
-          <TextField disabled={isFormDisabled} required={true} label="Client name" {...register("name")} />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="mt-6">
-          <Label>Redirect uris</Label>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           {fields.map((field, index) => {
             return (
               <div className="flex items-end" key={field.id}>
                 <div className="w-[80vw]">
-                  <TextField
-                    type="url"
-                    required={index === 0}
-                    className="w-[100%]"
-                    label=""
-                    disabled={isFormDisabled}
-                    {...register(`redirectUris.${index}.uri` as const)}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                 </div>
                 <div className="flex">
                   <Button
@@ -194,35 +188,20 @@ export const OAuthClientForm = ({
         </div> */}
         <div className="mt-6">
           <Tooltip content={t("booking_redirect_uri")}>
-            <TextField
-              type="url"
-              label="Booking redirect uri"
-              className="w-[100%]"
-              {...register("bookingRedirectUri")}
-              disabled={isFormDisabled}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Tooltip>
         </div>
         <div className="mt-6">
           <Tooltip content={t("booking_cancel_redirect_uri")}>
-            <TextField
-              type="url"
-              label="Booking cancel redirect uri"
-              className="w-[100%]"
-              {...register("bookingCancelRedirectUri")}
-              disabled={isFormDisabled}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Tooltip>
         </div>
         <div className="mt-6">
           <Tooltip content={t("booking_reschedule_redirect_uri")}>
-            <TextField
-              type="url"
-              label="Booking reschedule redirect uri"
-              className="w-[100%]"
-              {...register("bookingRescheduleRedirectUri")}
-              disabled={isFormDisabled}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </Tooltip>
         </div>
         <div className="mt-6">
@@ -233,9 +212,8 @@ export const OAuthClientForm = ({
             type="checkbox"
             disabled={isFormDisabled}
           />
-          <label htmlFor="areEmailsEnabled" className="cursor-pointer px-2 text-base font-semibold">
-            Enable emails
-          </label>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="mt-6">
           <div className="flex items-center">
@@ -246,9 +224,8 @@ export const OAuthClientForm = ({
               type="checkbox"
               disabled={isFormDisabled}
             />
-            <label htmlFor="areCalendarEventsEnabled" className="cursor-pointer px-2 text-base font-semibold">
-              Enable calendar events
-            </label>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Tooltip
               className="max-w-[400px] whitespace-normal"
               content="If enabled and the managed user has calendar connected, an event in the calendar will be created. By default true. Disable it if you want to create events in the calendar manually.">
@@ -267,11 +244,8 @@ export const OAuthClientForm = ({
               type="checkbox"
               disabled={isFormDisabled}
             />
-            <label
-              htmlFor="areDefaultEventTypesEnabled"
-              className="cursor-pointer px-2 text-base font-semibold">
-              Enable managed user default event types
-            </label>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Tooltip
               className="max-w-[400px] whitespace-normal"
               content="If enabled, when creating a managed user the managed user will have 4 default event types: 30 and 60 minutes without Cal video, 30 and 60 minutes with Cal video. Leave this disabled if you want to create a managed user and then manually create event types for the user.">
@@ -283,7 +257,8 @@ export const OAuthClientForm = ({
         </div>
         <div className="mt-6">
           <div className="flex justify-between">
-            <h1 className="text-base font-semibold underline">Permissions</h1>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <Button type="button" onClick={selectAllPermissions} disabled={!!defaultValues || isFormDisabled}>
               {!isSelectAllPermissionsChecked ? "Select all" : "Discard all"}
             </Button>

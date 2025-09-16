@@ -6,21 +6,9 @@ export const AttendeeWasRequestedToRescheduleEmail = (
 ) => {
   const t = props.attendee.language.translate;
   return (
-    <OrganizerScheduledEmail
-      t={t}
-      title="request_reschedule_booking"
-      subtitle={
-        <>
-          {t("request_reschedule_subtitle", {
-            organizer: props.calEvent.organizer.name,
-          })}
-        </>
-      }
-      headerType="calendarCircle"
-      subject="rescheduled_event_type_subject"
-      callToAction={
-        <CallToActionTable>
-          <CallToAction label="Book a new time" href={props.metadata.rescheduleLink} endIconName="linkIcon" />
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </CallToActionTable>
       }
       {...props}

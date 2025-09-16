@@ -34,24 +34,15 @@ const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({}) => {
     <div className="mt-2 text-sm">
       <div className="flex gap-3">
         <div className="items-center">
-          <p className="py-2">Link a Basecamp project to this event:</p>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
-        <Select
-          placeholder="Select project"
-          options={projects}
-          isLoading={!projects}
-          className="md:min-w-[120px]"
-          onChange={(project) => {
-            if (project) {
-              setProject.mutate({ projectId: project?.value.toString() });
-              setSelectedProject(project);
-            }
-          }}
-          value={selectedProject}
-        />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
-      <div className="mt-2">
-        Please note that as of now you can only link <span className="italic">one</span> of your projects to
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$ of your projects to
         cal.com
       </div>
     </div>

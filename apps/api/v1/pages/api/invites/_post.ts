@@ -49,7 +49,9 @@ async function postHandler(req: NextApiRequest, res: NextApiResponse) {
       creationSource: CreationSource.API_V1,
     });
 
-    return { success: true, message: `${data.usernameOrEmail} has been invited.` };
+    return { success: true, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   } catch (cause) {
     if (cause instanceof TRPCError) {
       const statusCode = getHTTPStatusCodeFromError(cause);
@@ -65,12 +67,16 @@ async function checkPermissions(req: NextApiRequest, body: TInviteMemberInputSch
   if (isSystemWideAdmin) return;
   // To prevent auto-accepted invites, limit it to ADMIN users
   if (!isSystemWideAdmin && "accepted" in body)
-    throw new HttpError({ statusCode: 403, message: "ADMIN needed for `accepted`" });
+    throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   // Only team OWNERS and ADMINS can add other members
   const membership = await prisma.membership.findFirst({
     where: { userId, teamId: body.teamId, role: { in: ["ADMIN", "OWNER"] } },
   });
-  if (!membership) throw new HttpError({ statusCode: 403, message: "You can't add members to this team" });
+  if (!membership) throw new HttpError({ statusCode: 403, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 }
 
 export default defaultResponder(postHandler);

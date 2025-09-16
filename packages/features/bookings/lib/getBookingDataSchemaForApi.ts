@@ -27,7 +27,9 @@ const getBookingDataSchemaForApi = ({
         ctx.addIssue({
           code: "custom",
           message:
-            "Don't use both customInputs and responses. `customInputs` is only there for legacy support.",
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
         });
         return;
       }
@@ -50,7 +52,9 @@ const getBookingDataSchemaForApi = ({
         if (unwantedProps.length) {
           ctx.addIssue({
             code: "custom",
-            message: `Legacy Props: ${unwantedProps.join(",")}. They can't be used with \`responses\``,
+            message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           });
           return;
         }
@@ -59,7 +63,9 @@ const getBookingDataSchemaForApi = ({
         if (!success) {
           ctx.addIssue({
             code: "custom",
-            message: `With \`customInputs\` you must specify legacy props ${legacyProps.join(",")}`,
+            message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           });
         }
       }

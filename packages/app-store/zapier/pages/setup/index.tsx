@@ -73,7 +73,8 @@ export default function ZapierSetup(props: IZapierSetupProps) {
         <div className="bg-default m-auto max-w-[43em] overflow-auto rounded pb-10 md:p-10">
           <div className="md:flex md:flex-row">
             <div className="invisible md:visible">
-              <img className="h-11" src="/api/app-store/zapier/icon.svg" alt="Zapier Logo" />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </div>
             <div className="ml-2 ltr:mr-2 rtl:ml-2 md:ml-5">
               <div className="text-default">{t("setting_up_zapier")}</div>
@@ -86,7 +87,8 @@ export default function ZapierSetup(props: IZapierSetupProps) {
                   </Button>
                 ) : (
                   <>
-                    <div className="mt-8 text-sm font-semibold">Your event types:</div>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     {!newApiKeys[""] ? (
                       <Button color="secondary" onClick={() => generateApiKey()} className="mb-4 mt-2">
                         {t("generate_api_key")}
@@ -128,13 +130,16 @@ export default function ZapierSetup(props: IZapierSetupProps) {
                   t={t}
                   i18nKey="zapier_setup_instructions"
                   components={[
-                    <li key="instruction_1">Log into your Zapier account and create a new Zap.</li>,
-                    <li key="instruction_2">
-                      Select Cal.com as your Trigger app. Also choose a Trigger event.
-                    </li>,
-                    <li key="instruction_3">Choose your account and then enter your Unique API Key.</li>,
-                    <li key="instruction_4">Test your Trigger.</li>,
-                    <li key="instruction_5">You&apos;re set!</li>,
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$,
                   ]}
                 />
               </ol>

@@ -60,7 +60,9 @@ function getBaseProperties(field: InputBookingField): CustomField | SystemField 
         {
           id: "user",
           type: "user",
-          label: "User",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           fieldRequired: true,
         },
       ],
@@ -120,13 +122,21 @@ function getBaseProperties(field: InputBookingField): CustomField | SystemField 
     );
 
     if (firstNameField) {
-      firstNameField.label = field.firstNameLabel || "";
-      firstNameField.placeholder = field.firstNamePlaceholder || "";
+      firstNameField.label = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
+      firstNameField.placeholder = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
     }
 
     if (lastNameField) {
-      lastNameField.label = field.lastNameLabel || "";
-      lastNameField.placeholder = field.lastNamePlaceholder || "";
+      lastNameField.label = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
+      lastNameField.placeholder = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ;
       lastNameField.required = !!field.lastNameRequired;
     }
 
@@ -196,12 +206,16 @@ function getBaseProperties(field: InputBookingField): CustomField | SystemField 
       name: field.slug,
       type: field.type,
       label: field.label,
-      labelAsSafeHtml: `<p>${field.label}</p>\n`,
+      labelAsSafeHtml: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       sources: [
         {
           id: "user",
           type: "user",
-          label: "User",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           fieldRequired: true,
         },
       ],
@@ -218,12 +232,16 @@ function getBaseProperties(field: InputBookingField): CustomField | SystemField 
       type: field.type,
       label: field.label,
       placeholder: "placeholder" in field ? field.placeholder : "",
-      labelAsSafeHtml: `<p>${field.label}</p>\n`,
+      labelAsSafeHtml: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
       sources: [
         {
           id: "user",
           type: "user",
-          label: "User",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           fieldRequired: true,
         },
       ],
@@ -242,7 +260,9 @@ function getBaseProperties(field: InputBookingField): CustomField | SystemField 
       {
         id: "user",
         type: "user",
-        label: "User",
+        label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         fieldRequired: true,
       },
     ],

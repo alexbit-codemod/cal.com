@@ -27,11 +27,8 @@ export default function ICSFeedSetup() {
         <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
           <div>
             {/* eslint-disable @next/next/no-img-element */}
-            <img
-              src="/api/app-store/ics-feedcalendar/icon.svg"
-              alt="ICS Feed"
-              className="h-12 w-12 max-w-2xl"
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
           <div className="flex w-10/12 flex-col">
             <h1 className="text-default">{t("connect_ics_feed")}</h1>
@@ -61,18 +58,8 @@ export default function ICSFeedSetup() {
                 <fieldset className="space-y-2" disabled={form.formState.isSubmitting}>
                   {urls.map((url, i) => (
                     <div key={i} className="flex w-full items-center gap-2">
-                      <TextField
-                        required
-                        type="text"
-                        label={t("calendar_url")}
-                        value={url}
-                        containerClassName={`w-full ${i === 0 ? "mr-6" : ""}`}
-                        onChange={(e) => {
-                          const newVal = e.target.value as string;
-                          setUrls((urls) => urls.map((x, ii) => (ii === i ? newVal : x)));
-                        }}
-                        placeholder="https://example.com/calendar.ics"
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                       {i !== 0 ? (
                         <button
                           type="button"
@@ -95,18 +82,9 @@ export default function ICSFeedSetup() {
                 </button>
 
                 {errorMessage && (
-                  <Alert
-                    severity="error"
-                    title={errorMessage}
-                    actions={
-                      errorActionUrl !== "" ? (
-                        <Button
-                          href={errorActionUrl}
-                          color="secondary"
-                          target="_blank"
-                          className="ml-5 w-32 !p-5">
-                          Go to Admin
-                        </Button>
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       ) : undefined
                     }
                     className="my-4"

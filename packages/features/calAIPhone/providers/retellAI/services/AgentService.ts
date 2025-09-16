@@ -27,7 +27,9 @@ export class AgentService {
     if (!agentId?.trim()) {
       throw new HttpError({
         statusCode: 400,
-        message: "Agent ID is required and cannot be empty",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -40,7 +42,9 @@ export class AgentService {
       });
       throw new HttpError({
         statusCode: 500,
-        message: `Failed to get agent ${agentId}`,
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -109,7 +113,9 @@ export class AgentService {
     if (!agent) {
       throw new HttpError({
         statusCode: 404,
-        message: "Agent not found or you don't have permission to view it.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -120,7 +126,9 @@ export class AgentService {
       if (!llmId) {
         throw new HttpError({
           statusCode: 404,
-          message: "Agent does not have an LLM configured.",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
 
@@ -141,7 +149,9 @@ export class AgentService {
       });
       throw new HttpError({
         statusCode: 500,
-        message: "Unable to fetch agent details. Please try again.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
   }
@@ -169,7 +179,9 @@ export class AgentService {
       if (!canManage) {
         throw new HttpError({
           statusCode: 403,
-          message: "You don't have permission to create agents for this team.",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     }
@@ -193,7 +205,9 @@ export class AgentService {
     return {
       id: agent.id,
       providerAgentId: agent.providerAgentId,
-      message: "Agent created successfully",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
   }
 
@@ -227,7 +241,9 @@ export class AgentService {
     if (!agent) {
       throw new HttpError({
         statusCode: 404,
-        message: "Agent not found or you don't have permission to update it.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -279,12 +295,16 @@ export class AgentService {
 
         throw new HttpError({
           statusCode: 500,
-          message: "Unable to update agent configuration. Please try again.",
+          message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         });
       }
     }
 
-    return { message: "Agent updated successfully" };
+    return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
 
   async deleteAgent({
@@ -307,7 +327,9 @@ export class AgentService {
     if (!agent) {
       throw new HttpError({
         statusCode: 404,
-        message: "Agent not found or you don't have permission to delete it.",
+        message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
       });
     }
 
@@ -331,6 +353,8 @@ export class AgentService {
 
     await this.agentRepository.delete({ id });
 
-    return { message: "Agent deleted successfully" };
+    return { message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     };
   }
 }

@@ -24,9 +24,13 @@ export const getMemberAvailabilityHandler = async ({ ctx, input }: GetMemberAvai
   const members = await MembershipRepository.findByTeamIdForAvailability({ teamId: input.teamId });
 
   const member = members?.find((m) => m.userId === input.memberId);
-  if (!member) throw new TRPCError({ code: "NOT_FOUND", message: "Member not found" });
+  if (!member) throw new TRPCError({ code: "NOT_FOUND", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
   if (!member.user.username)
-    throw new TRPCError({ code: "BAD_REQUEST", message: "Member doesn't have a username" });
+    throw new TRPCError({ code: "BAD_REQUEST", message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     });
   const username = member.user.username;
   const user = await enrichUserWithDelegationCredentialsIncludeServiceAccountKey({
     user: member.user,

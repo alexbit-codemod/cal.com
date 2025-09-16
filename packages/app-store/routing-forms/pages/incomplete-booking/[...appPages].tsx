@@ -96,7 +96,8 @@ function Page({ form }: { form: RoutingFormWithResponseCount }) {
   }, [data]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$;
   }
   return (
     <>
@@ -108,9 +109,8 @@ function Page({ form }: { form: RoutingFormWithResponseCount }) {
                 <Icon name="globe" className="text-subtle h-4 w-4" />
               </div>
               <div className="flex flex-col">
-                <span className="text-emphasis ml-2 text-sm font-medium">
-                  Write to Salesforce contact/lead record
-                </span>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
             </div>
             <Switch
@@ -126,7 +126,8 @@ function Page({ form }: { form: RoutingFormWithResponseCount }) {
               {form.team && (
                 <>
                   <div className="bg-default mt-2 rounded-xl px-2 py-2">
-                    <Label>Credential to use</Label>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                     <Select
                       size="sm"
                       options={credentialOptions}

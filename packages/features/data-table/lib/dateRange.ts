@@ -13,18 +13,30 @@ export type PresetOption = {
 export const CUSTOM_PRESET_VALUE = "c" as const;
 
 export const DEFAULT_PRESET: PresetOption = {
-  labelKey: "last_number_of_days",
+  labelKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  ,
   i18nOptions: { count: 7 },
   value: "w",
 };
-export const CUSTOM_PRESET: PresetOption = { labelKey: "custom_range", value: CUSTOM_PRESET_VALUE };
+export const CUSTOM_PRESET: PresetOption = { labelKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+$$$
+, value: CUSTOM_PRESET_VALUE };
 
 export const PRESET_OPTIONS: PresetOption[] = [
-  { labelKey: "today", value: "tdy" },
+  { labelKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "tdy" },
   DEFAULT_PRESET,
-  { labelKey: "last_number_of_days", i18nOptions: { count: 30 }, value: "t" },
-  { labelKey: "month_to_date", value: "m" },
-  { labelKey: "year_to_date", value: "y" },
+  { labelKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , i18nOptions: { count: 30 }, value: "t" },
+  { labelKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "m" },
+  { labelKey: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+  , value: "y" },
   CUSTOM_PRESET,
 ];
 

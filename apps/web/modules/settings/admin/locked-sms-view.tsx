@@ -40,42 +40,16 @@ export default function LockedSMSView() {
     <div>
       <div className="mb-4 flex w-full items-center justify-between space-x-2 rtl:space-x-reverse">
         <div className="flex">
-          <TextField
-            name="Lock User"
-            placeholder="username"
-            defaultValue=""
-            onChange={(event) => setUsername(event.target.value)}
-            value={username}
-          />
-          <Button
-            type="submit"
-            className="ml-2 mt-5"
-            onClick={() => {
-              mutation.mutate({ username, lock: true });
-              utils.viewer.admin.getSMSLockStateTeamsUsers.invalidate();
-            }}>
-            Lock User
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
         <div className="flex">
-          <TextField
-            name="Lock Team"
-            placeholder="team slug"
-            defaultValue=""
-            onChange={(event) => {
-              setTeamSlug(event.target.value);
-            }}
-            value={teamSlug}
-          />
-          <Button
-            type="submit"
-            className="ml-2 mt-5"
-            onClick={() => {
-              mutation.mutate({ teamSlug, lock: true });
-              utils.viewer.admin.getSMSLockStateTeamsUsers.invalidate();
-            }}>
-            Lock Team
-          </Button>
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </div>
       <UsersTable setSMSLockState={setSMSLockState} />

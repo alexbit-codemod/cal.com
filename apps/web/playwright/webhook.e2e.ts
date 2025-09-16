@@ -71,7 +71,9 @@ test.describe("BOOKING_CREATED", async () => {
       createdAt: "[redacted/dynamic]",
       payload: {
         type: "30-min",
-        title: "30 min between Nameless and Test Testson",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         description: "",
         additionalNotes: "",
         customInputs: {},
@@ -87,11 +89,15 @@ test.describe("BOOKING_CREATED", async () => {
         responses: {
           email: {
             value: "test@example.com",
-            label: "email_address",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           name: {
             value: "Test Testson",
-            label: "your_name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
         },
         userFieldsResponses: {},
@@ -112,7 +118,9 @@ test.describe("BOOKING_CREATED", async () => {
         seatsShowAttendees: true,
         seatsPerTimeSlot: null,
         uid: "[redacted/dynamic]",
-        eventTitle: "30 min",
+        eventTitle: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         eventDescription: null,
         price: 0,
         currency: "usd",
@@ -185,7 +193,9 @@ test.describe("BOOKING_REJECTED", async () => {
       createdAt: "[redacted/dynamic]",
       payload: {
         type: "opt-in",
-        title: "Opt in between Nameless and Test Testson",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         customInputs: {},
         startTime: "[redacted/dynamic]",
         endTime: "[redacted/dynamic]",
@@ -199,11 +209,15 @@ test.describe("BOOKING_REJECTED", async () => {
         responses: {
           email: {
             value: "test@example.com",
-            label: "email",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           name: {
             value: "Test Testson",
-            label: "name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
         },
         userFieldsResponses: {},
@@ -221,7 +235,9 @@ test.describe("BOOKING_REJECTED", async () => {
         requiresConfirmation: "[redacted/dynamic]",
         eventTypeId: "[redacted/dynamic]",
         uid: "[redacted/dynamic]",
-        eventTitle: "Opt in",
+        eventTitle: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         eventDescription: null,
         price: 0,
         currency: "usd",
@@ -290,7 +306,9 @@ test.describe("BOOKING_REQUESTED", async () => {
       createdAt: "[redacted/dynamic]",
       payload: {
         type: "opt-in",
-        title: "Opt in between Nameless and Test Testson",
+        title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         customInputs: {},
         startTime: "[redacted/dynamic]",
         endTime: "[redacted/dynamic]",
@@ -304,11 +322,15 @@ test.describe("BOOKING_REQUESTED", async () => {
         responses: {
           email: {
             value: "test@example.com",
-            label: "email_address",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
           name: {
             value: "Test Testson",
-            label: "your_name",
+            label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
+            ,
           },
         },
         userFieldsResponses: {},
@@ -325,7 +347,9 @@ test.describe("BOOKING_REQUESTED", async () => {
         requiresConfirmation: "[redacted/dynamic]",
         eventTypeId: "[redacted/dynamic]",
         uid: "[redacted/dynamic]",
-        eventTitle: "Opt in",
+        eventTitle: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
+        ,
         eventDescription: null,
         price: 0,
         currency: "usd",
@@ -620,7 +644,9 @@ test.describe("FORM_SUBMITTED", async () => {
       fields: [
         {
           type: "text",
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "name",
           required: true,
         },
@@ -671,13 +697,17 @@ test.describe("FORM_SUBMITTED", async () => {
       fields: [
         {
           type: "text",
-          label: "Name",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "name",
           required: true,
         },
         {
           type: "multiselect",
-          label: "Multi Select",
+          label: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           identifier: "multi",
           required: true,
           options: [
@@ -695,7 +725,9 @@ test.describe("FORM_SUBMITTED", async () => {
     });
 
     await gotoRoutingLink({ page, formId: form.id });
-    const textFieldIdentifier = "name";
+    const textFieldIdentifier = // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ;
     const multiSelectFieldIdentifier = "multi";
     await page.fill(`[data-testid="form-field-${textFieldIdentifier}"]`, "John Doe");
     await page.click(`[data-testid="form-field-${multiSelectFieldIdentifier}"]`); // Open dropdown

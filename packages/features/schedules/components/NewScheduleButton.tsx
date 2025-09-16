@@ -69,14 +69,8 @@ export function NewScheduleButton({
           handleSubmit={(values) => {
             createMutation.mutate(values);
           }}>
-          <InputField
-            label={t("name")}
-            type="text"
-            id="name"
-            required
-            placeholder={t("default_schedule_name")}
-            {...register("name")}
-          />
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
           <DialogFooter>
             <DialogClose />
             <Button type="submit" loading={createMutation.isPending}>

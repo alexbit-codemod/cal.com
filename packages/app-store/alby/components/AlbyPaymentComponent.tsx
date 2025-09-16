@@ -40,7 +40,8 @@ export const AlbyPaymentComponent = (props: IAlbyPaymentComponentProps) => {
   const { copyToClipboard, isCopied } = useCopy();
   const wrongUrl = (
     <>
-      <p className="mt-3 text-center">Couldn&apos;t obtain payment URL</p>
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 
@@ -58,26 +59,11 @@ export const AlbyPaymentComponent = (props: IAlbyPaymentComponentProps) => {
         <>
           {!showQRCode && (
             <div className="flex gap-4">
-              <Button color="secondary" onClick={() => setShowQRCode(true)}>
-                Show QR
-              </Button>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               {window.webln && (
-                <Button
-                  onClick={async () => {
-                    try {
-                      if (!window.webln) {
-                        throw new Error("webln not found");
-                      }
-                      setPaying(true);
-                      await window.webln.enable();
-                      window.webln.sendPayment(paymentRequest);
-                    } catch (error) {
-                      setPaying(false);
-                      alert((error as Error).message);
-                    }
-                  }}>
-                  Pay Now
-                </Button>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               )}
             </div>
           )}
@@ -85,40 +71,31 @@ export const AlbyPaymentComponent = (props: IAlbyPaymentComponentProps) => {
             <>
               <div className="flex items-center justify-center gap-2">
                 <Spinner className="h-4 w-4" />
-                <p className="text-xs">Waiting for payment</p>
+                // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                $$$
               </div>
-              <p className="text-sm">Click or scan the invoice below to pay</p>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
               <Link
                 href={`lightning:${paymentRequest}`}
                 className="inline-flex items-center justify-center rounded-2xl rounded-md border border-transparent bg-white p-2 font-medium text-black shadow-sm hover:brightness-95 focus:outline-none focus:ring-offset-2">
                 <QRCode size={192} value={paymentRequest} />
               </Link>
 
-              <Button
-                size="sm"
-                color="secondary"
-                onClick={() => copyToClipboard(paymentRequest)}
-                className="text-subtle rounded-md"
-                StartIcon={isCopied ? "clipboard-check" : "clipboard"}>
-                Copy Invoice
-              </Button>
-              <Link target="_blank" href="https://getalby.com" className="link mt-4 text-sm underline">
-                Don&apos;t have a lightning wallet?
-              </Link>
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </>
           )}
         </>
       )}
       <Link target="_blank" href="https://getalby.com">
-        <div className="mt-4 flex items-center text-sm">
-          Powered by&nbsp;
-          <img title="Alby" src="/app-store/alby/logo.svg" alt="Alby" className="h-8 dark:hidden" />
-          <img
-            title="Alby"
-            src="/app-store/alby/logo-dark.svg"
-            alt="Alby"
-            className="hidden h-8 dark:block"
-          />
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </div>
       </Link>
     </div>

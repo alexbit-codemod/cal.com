@@ -34,20 +34,8 @@ const MakeTeamPrivateSwitch = ({
 
   return (
     <>
-      <SettingsToggle
-        toggleSwitchAtTheEnd={true}
-        title={t(isOrg ? "make_org_private" : "make_team_private")}
-        labelClassName="text-sm"
-        disabled={disabled || mutation?.isPending}
-        description={t(isOrg ? "make_org_private_description" : "make_team_private_description")}
-        checked={isTeamPrivate}
-        onCheckedChange={(checked) => {
-          setTeamPrivate(checked);
-          mutation.mutate({ id: teamId, isPrivate: checked });
-        }}
-        switchContainerClassName="my-6"
-        data-testid="make-team-private-check"
-      />
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
     </>
   );
 };

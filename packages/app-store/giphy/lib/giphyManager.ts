@@ -5,7 +5,9 @@ import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 const checkGiphyApiKey = async () => {
   const appKeys = await getAppKeysFromSlug("giphy");
   if (typeof appKeys.api_key === "string") return appKeys.api_key;
-  throw new HttpError({ statusCode: 400, message: "Missing Giphy api_key" });
+  throw new HttpError({ statusCode: 400, message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+  $$$
+   });
 };
 
 export const searchGiphy = async (locale: string, keyword: string, offset = 0) => {

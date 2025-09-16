@@ -104,11 +104,8 @@ const LockStatusTable = ({
               <Cell widthClassNames="w-auto">
                 <div className="min-h-10 flex items-center">
                   {" "}
-                  <Avatar
-                    size="md"
-                    alt={`Avatar of ${user.username || "Nameless"}`}
-                    imageSrc={getUserAvatarUrl(user)}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="text-subtle ml-4 font-medium">
                     <span className="text-default">{user.name}</span>
                     <span className="ml-3">/{user.username}</span>
@@ -128,14 +125,12 @@ const LockStatusTable = ({
             <Row key={`team-${team.id}`}>
               <Cell widthClassNames="w-auto">
                 <div className="min-h-10 flex items-center">
-                  <Avatar
-                    size="md"
-                    alt={`Avatar of ${team.name}`}
-                    imageSrc={getPlaceholderAvatar(team.logoUrl, team.name)}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <div className="text-subtle ml-4 font-medium">
                     <span className="text-default">{team.name}</span>
-                    <span className="ml-3 break-all">/team/{team.slug}</span>
+                    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                    $$$
                   </div>
                 </div>
               </Cell>

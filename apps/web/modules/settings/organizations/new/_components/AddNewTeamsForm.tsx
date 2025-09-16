@@ -157,9 +157,8 @@ const AddNewTeamsFormChild = ({ teams }: { teams: { id: number; name: string; sl
       <Form form={form} handleSubmit={handleFormSubmit}>
         {moveTeams.length ? (
           <>
-            <label className="text-emphasis mb-2 block text-sm font-medium leading-none">
-              Move existing teams
-            </label>
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
             <ul className="mb-8 space-y-4">
               {moveTeams.map((team, index) => {
                 const currentTeam = teams.find((t) => t.id === team.id);
@@ -170,28 +169,13 @@ const AddNewTeamsFormChild = ({ teams }: { teams: { id: number; name: string; sl
                     <Controller
                       name={`moveTeams.${index}.shouldMove`}
                       render={({ field: { value, onChange } }) => (
-                        <CheckboxField
-                          defaultValue={value}
-                          checked={value || slugConflictsWithOrg}
-                          onChange={onChange}
-                          description={currentTeam?.name ?? ""}
-                          // Must not allow toggling off if the slug conflicts with the org slug
-                          disabled={slugConflictsWithOrg}
-                        />
+                        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                        $$$
                       )}
                     />
                     {moveTeams[index].shouldMove ? (
-                      <TextField
-                        placeholder="New Slug"
-                        defaultValue={teams.find((t) => t.id === team.id)?.slug ?? ""}
-                        {...register(`moveTeams.${index}.newSlug`)}
-                        onChange={(e) => {
-                          const slug = slugify(e.target.value, true);
-                          setValue(`moveTeams.${index}.newSlug`, slug);
-                        }}
-                        className="mt-2"
-                        label=""
-                      />
+                      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                      $$$
                     ) : null}
                   </li>
                 );
@@ -199,33 +183,12 @@ const AddNewTeamsFormChild = ({ teams }: { teams: { id: number; name: string; sl
             </ul>
           </>
         ) : null}
-        <label className="text-emphasis mb-2 block text-sm font-medium leading-none">Add New Teams</label>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         {fields.map((field, index) => (
           <div className={classNames("relative", index > 0 ? "mb-2" : "")} key={field.id}>
-            <TextField
-              key={field.id}
-              {...register(`teams.${index}.name`)}
-              label=""
-              addOnClassname="bg-transparent p-0 border-l-0"
-              className={index > 0 ? "mb-2" : ""}
-              placeholder={t(`org_team_names_example_${index + 1}`)}
-              addOnSuffix={
-                index > 0 && (
-                  <Button
-                    color="minimal"
-                    className="group/remove mx-2 px-0 hover:bg-transparent"
-                    onClick={() => handleRemoveInput(index)}
-                    aria-label="Remove Team">
-                    <Icon
-                      name="x"
-                      className="bg-subtle text group-hover/remove:text-inverted group-hover/remove:bg-inverted h-5 w-5 rounded-full p-1"
-                    />
-                  </Button>
-                )
-              }
-              minLength={2}
-              maxLength={63}
-            />
+            // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$
           </div>
         ))}
         {counter === 5 && <p className="text-subtle my-2 text-sm">{t("org_max_team_warnings")}</p>}

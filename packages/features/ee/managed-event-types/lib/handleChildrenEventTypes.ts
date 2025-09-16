@@ -98,7 +98,9 @@ export default async function handleChildrenEventTypes({
   // Check we are dealing with a managed event type
   if (updatedEventType?.schedulingType !== SchedulingType.MANAGED)
     return {
-      message: "No managed event type",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
 
   // Retrieving the updated event type
@@ -110,7 +112,9 @@ export default async function handleChildrenEventTypes({
   // Shortcircuit when no data for old and updated event types
   if (!oldEventType || !eventType)
     return {
-      message: "Missing event type",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
 
   // bookingFields is expected to be filled by the _EventTypeModel but is null at create event
@@ -126,7 +130,9 @@ export default async function handleChildrenEventTypes({
   // Check we are certainly dealing with a managed event type through its metadata
   if (!managedEventTypeValues.metadata?.managedEventConfig)
     return {
-      message: "No managed event metadata",
+      message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+      ,
     };
 
   // Define the values for unlocked properties to use on creation, not updation

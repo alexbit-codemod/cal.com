@@ -54,7 +54,8 @@ export const SidebarExample: React.FC = () => {
             icon: "zap",
           }}
         />
-        <div className="text-subtle mt-4 px-2 text-sm">Manage</div>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
         <NavigationItem
           item={{
             name: "Members",

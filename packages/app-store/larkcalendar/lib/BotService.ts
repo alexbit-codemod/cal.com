@@ -7,18 +7,24 @@ const log = logger.getSubLogger({ prefix: [`[[LarkTenantCredential]`] });
 
 const msg = {
   en_us: {
-    title: "Welcome to Cal.com!",
+    title: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+    ,
     content: [
       [
         {
           tag: "text",
-          text: "Cal.com is an open source scheduling infrastructure.",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       [
         {
           tag: "text",
-          text: 'It allows users to send a unique "cal.com" URL that allows anyone to create bookings on their calendars',
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       [
@@ -30,34 +36,46 @@ const msg = {
       [
         {
           tag: "text",
-          text: "Get started",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       [
         {
           tag: "text",
-          text: "1. Visit https://cal.com and sign up for an account.",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       [
         {
           tag: "text",
-          text: '2. Then go to "Apps" in Cal -> install ',
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
         {
           tag: "a",
-          text: '"Larksuite Calendar"',
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           href: "https://www.larksuite.com/hc/articles/057527702350",
         },
         {
           tag: "text",
-          text: " -> sign-in via Lark",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       [
         {
           tag: "text",
-          text: "3. Done. Create your Event Types and share your booking links with external participants!",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       [
@@ -69,13 +87,17 @@ const msg = {
       [
         {
           tag: "text",
-          text: "Do not hesitate to reach out to our agents if you need any assistance.",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
         },
       ],
       [
         {
           tag: "a",
-          text: "Get Help",
+          text: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          ,
           href: "https://applink.larksuite.com/client/helpdesk/open?id=6650327445582905610",
         },
       ],

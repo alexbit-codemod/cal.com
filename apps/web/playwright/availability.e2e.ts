@@ -93,7 +93,9 @@ test.describe("Availability", () => {
     // set time zone to New York
     await page
       .locator("#availability-form div")
-      .filter({ hasText: "TimezoneEurope/London" })
+      .filter({ hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       })
       .locator("svg")
       .click();
     await page.locator("[id=timeZone-lg-viewport]").fill("New");
@@ -156,17 +158,23 @@ test.describe("Availability", () => {
     await page.getByTestId(saturday).getByRole("switch").click();
     await page
       .locator("div")
-      .filter({ hasText: "Sunday9:00am - 5:00pm" })
+      .filter({ hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       })
       .getByTestId("add-time-availability")
       .first()
       .click();
-    await expect(page.locator("div").filter({ hasText: "6:00pm" }).nth(1)).toBeVisible();
+    await expect(page.locator("div").filter({ hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$
+     }).nth(1)).toBeVisible();
     await page.getByRole("button", { name: save }).click();
     await expect(page.getByText("Sun - Tue, Thu - Sat, 9:00 AM - 5:00 PM")).toBeVisible();
     await expect(page.getByText("Sun, 5:00 PM - 6:00 PM")).toBeVisible();
     await page
       .locator("div")
-      .filter({ hasText: "Sunday9:00am - 5:00pm" })
+      .filter({ hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       })
       .getByTestId("copy-button")
       .first()
       .click();
@@ -176,7 +184,9 @@ test.describe("Availability", () => {
     await page.getByRole("button", { name: save }).click();
     await page
       .locator("#availability-form div")
-      .filter({ hasText: "TimezoneEurope/London" })
+      .filter({ hasText: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       })
       .locator("svg")
       .click();
 

@@ -6,18 +6,19 @@ import { EmptyScreen } from "@calcom/ui/components/empty-screen";
 
 export const HtmlContentExample: React.FC = () => (
   <RenderComponentWithSnippet>
-    <EmptyScreen
-      Icon="info"
-      headline={
-        <span className="text-emphasis">
-          Custom Headline with <strong>HTML</strong>
+    // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+    $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
         </span>
       }
       description={
         <div className="text-subtle space-y-2">
-          <p>This is a custom description with multiple paragraphs.</p>
-          <p>
-            You can include <em>any HTML content</em> here.
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$
+          // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+          $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+            $$$ here.
           </p>
         </div>
       }

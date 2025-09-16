@@ -17,23 +17,8 @@ export const TypesExample: React.FC = () => (
             <div className="flex flex-wrap items-center gap-4">
               {sizes.map((size) => (
                 <div key={size} className="flex flex-col items-center gap-2">
-                  <Input
-                    type={type}
-                    placeholder={`Enter ${type}...`}
-                    defaultValue={
-                      type === "email"
-                        ? "example@cal.com"
-                        : type === "url"
-                        ? "https://cal.com"
-                        : type === "number"
-                        ? "42"
-                        : type === "tel"
-                        ? "+1234567890"
-                        : ""
-                    }
-                    size={size}
-                    isFullWidth={false}
-                  />
+                  // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+                  $$$
                   <span className="text-subtle text-xs">{size}</span>
                 </div>
               ))}

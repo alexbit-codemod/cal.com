@@ -133,14 +133,9 @@ const DestinationCalendarSelector = ({
     <div
       className="relative table w-full table-fixed"
       title={`${t("create_events_on")}: ${selectedOption?.label || ""}`}>
-      <Select
-        name="primarySelectedCalendar"
-        placeholder={
-          !hidePlaceholder ? (
-            `${t("create_events_on")}`
-          ) : (
-            <span className="text-default min-w-0 overflow-hidden truncate whitespace-nowrap">
-              <Badge variant="blue">Default</Badge>{" "}
+      // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$// To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$${" "}
               {destinationCalendar?.name &&
                 `${destinationCalendar.name} (${destinationCalendar?.integrationTitle} - ${destinationCalendar.primaryEmail})`}
             </span>

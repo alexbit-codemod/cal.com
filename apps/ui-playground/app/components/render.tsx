@@ -28,13 +28,8 @@ export const RenderComponentWithSnippet: React.FC<PropsWithChildren<Props>> = (p
       <div className={className("not-prose p-8 xl:p-12", props.className)}>{props.children}</div>
 
       <div className="bg-gray-3 border-gray-6 flex items-center justify-start  border-b border-t p-2">
-        <Button
-          color="minimal"
-          onClick={() => {
-            setOpen(!open);
-          }}>
-          Code (WIP)
-        </Button>
+        // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+        $$$
       </div>
 
       <div

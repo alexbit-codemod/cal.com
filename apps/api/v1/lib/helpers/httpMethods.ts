@@ -5,7 +5,9 @@ export const httpMethod = (allowedHttpMethod: "GET" | "POST" | "PATCH" | "DELETE
     if (req.method === allowedHttpMethod || req.method == "OPTIONS") {
       await next();
     } else {
-      res.status(405).json({ message: `Only ${allowedHttpMethod} Method allowed` });
+      res.status(405).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
       res.end();
     }
   };
@@ -18,7 +20,9 @@ export const httpMethods = (allowedHttpMethod: string[]): NextMiddleware => {
     if (allowedHttpMethod.some((method) => method === req.method || req.method == "OPTIONS")) {
       await next();
     } else {
-      res.status(405).json({ message: `Only ${allowedHttpMethod} Method allowed` });
+      res.status(405).json({ message: // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+      $$$
+       });
       res.end();
     }
   };

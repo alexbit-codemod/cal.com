@@ -82,11 +82,8 @@ export const BookingKPICards = () => {
         <StatContainer>
           {eventCategories.map((item, index) => (
             <StatItem key={item.title} index={index}>
-              <KPICard
-                title={item.title}
-                previousMetricData={data[item.index]}
-                previousDateRange={data.previousRange}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </StatItem>
           ))}
         </StatContainer>
@@ -96,11 +93,8 @@ export const BookingKPICards = () => {
         <StatContainer>
           {performanceCategories.map((item, index) => (
             <StatItem key={item.title} index={index}>
-              <KPICard
-                title={item.title}
-                previousMetricData={data[item.index]}
-                previousDateRange={data.previousRange}
-              />
+              // To safely replace this hard-coded string with a translation key  talk to us to get access to our i18n pro codemods. https://cal.com/codemod
+              $$$
             </StatItem>
           ))}
         </StatContainer>
