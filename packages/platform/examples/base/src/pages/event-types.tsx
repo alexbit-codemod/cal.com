@@ -33,7 +33,7 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
   const handleSubmit = () => {
     eventTypeRef.current?.handleFormSubmit({
       onSuccess: () => {
-        console.log('Event type updated successfully');
+        logger.log('Event type updated successfully');
         // Additional success handling logic here
       },
       onError: (error) => {
@@ -755,7 +755,7 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                 refetchTeamEvents();
               }}
               onError={(eventType, error) => {
-                console.log(eventType);
+                logger.log(eventType);
                 console.error(error);
               }}
               onDeleteSuccess={() => {
@@ -812,7 +812,7 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                   }}
                   teamId={teams?.[0]?.id}
                   onCancel={() => {
-                    console.log("cancel team event type creation");
+                    logger.log("cancel team event type creation");
                   }}
                   onSuccess={() => {
                     refetchTeamEvents();

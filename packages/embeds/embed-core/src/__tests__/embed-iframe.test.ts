@@ -26,7 +26,7 @@ describe("embedStore.router.ensureQueryParamsInUrl", async () => {
     vi.useFakeTimers();
     // Mock requestAnimationFrame and cancelAnimationFrame
     window.requestAnimationFrame = vi.fn((callback: FrameRequestCallback) => {
-      console.log("mockRequestAnimationFrame called");
+      logger.log("mockRequestAnimationFrame called");
       const timeoutId = setTimeout(() => {
         callback(performance.now());
       }, 100) as unknown as number;
@@ -262,7 +262,7 @@ describe("methods", async () => {
     isLinkReadyMock = vi.fn();
     isBookerReadyMock = vi.fn();
     ensureQueryParamsInUrlMock = vi.fn().mockImplementation(() => {
-      console.log("Fake ensureQueryParamsInUrl called");
+      logger.log("Fake ensureQueryParamsInUrl called");
       return {
         stopEnsuringQueryParamsInUrl: vi.fn(),
       };
