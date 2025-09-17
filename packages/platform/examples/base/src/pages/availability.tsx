@@ -22,7 +22,7 @@ export default function Availability(props: { calUsername: string; calEmail: str
   const handleSubmit = () => {
     availabilityRef.current?.handleFormSubmit({
       onSuccess: () => {
-        console.log("Form submitted successfully");
+        logger.log("Form submitted successfully");
       },
       onError: (error) => {
         console.error("Form submission failed:", error);
@@ -81,16 +81,16 @@ export default function Availability(props: { calUsername: string; calEmail: str
           }}
           onFormStateChange={handleFormStateChange}
           onUpdateSuccess={() => {
-            console.log("Updated successfully");
+            logger.log("Updated successfully");
           }}
           onUpdateError={() => {
-            console.log("update error");
+            logger.log("update error");
           }}
           onDeleteError={() => {
-            console.log("delete error");
+            logger.log("delete error");
           }}
           onDeleteSuccess={() => {
-            console.log("Deleted successfully");
+            logger.log("Deleted successfully");
           }}
         />
       </div>
