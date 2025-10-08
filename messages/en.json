@@ -1,0 +1,212 @@
+{
+  "form-step": {
+    "progress": {
+      "step-indicator": "Step {currentStep} of {steps}"
+    }
+  },
+  "ui-card": {
+    "media": {
+      "play-video-alt": "play feature video"
+    }
+  },
+  "app-list-card": {
+    "logo-alt-text": "{title} logo",
+    "badges": {
+      "template": "Template"
+    }
+  },
+  "admin-playground-layout": {
+    "navigation": {
+      "back-to-playground": "← Playground"
+    }
+  },
+  "textarea-sizes-demo": {
+    "sections": {
+      "default-height": "Default Height",
+      "custom-height": "Custom Height (6 rows)"
+    },
+    "placeholders": {
+      "default-height": "Default height textarea...",
+      "taller-textarea": "Taller textarea...",
+      "auto-growing": "This textarea grows with content..."
+    }
+  },
+  "switch-playground": {
+    "examples": {
+      "basic": {
+        "label": "Basic switch with label"
+      },
+      "label-position": {
+        "trailing": "Label on trailing side (default)",
+        "leading": "Label on leading side"
+      },
+      "states": {
+        "enabled": "Enabled switch",
+        "disabled": "Disabled switch",
+        "disabled-checked": "Disabled and checked switch"
+      },
+      "controlled": {
+        "status-template": "Switch is {checked,select,true{on} false{off}}"
+      },
+      "with-padding": {
+        "status-template": "Switch is {checked,select,true{on} false{off}}"
+      },
+      "sizes": {
+        "small": "Small switch",
+        "medium": "Medium switch"
+      }
+    }
+  },
+  "select-field-playground": {
+    "labels": {
+      "flavor": "Flavor",
+      "required-field": "Required Field",
+      "with-error": "With Error",
+      "flavor-small": "Flavor",
+      "required-field-small": "Required Field",
+      "with-error-small": "With Error (small)"
+    },
+    "placeholders": {
+      "choose-flavor": "Choose a flavor...",
+      "required-field": "This field is required...",
+      "choose-flavor-small": "Choose a flavor... (small)",
+      "required-field-small": "This field is required... (small)"
+    }
+  },
+  "section-with-icon-demo": {
+    "descriptions": {
+      "icon-animation-feature": "This section demonstrates how to include an icon in the header and uses FormKit auto-animate for smooth transitions when toggling content visibility."
+    }
+  },
+  "range-slider-demo": {
+    "labels": {
+      "single-value": "Single Value:",
+      "range": "Range:",
+      "step-size-25": "Step Size 25:",
+      "disabled": "Disabled: 50%"
+    }
+  },
+  "multi-input-field-playground": {
+    "sections": {
+      "default-delimiters": {
+        "heading": "Default Delimiters (Newline and Comma)",
+        "instruction": "Try pasting: “Option 1, Option 2” or multiple lines"
+      },
+      "comma-only": {
+        "heading": "Comma Only Delimiter",
+        "instruction": "Try pasting: “First, Second, Third”"
+      },
+      "key-value-pairs": {
+        "heading": "Key-Value Pair Paste Support",
+        "instruction": "Try pasting: “NODE_ENV=production” or “KEY1:value1, KEY2:value2”"
+      },
+      "custom-delimiters": {
+        "heading": "Custom Delimiters (Semicolon and Pipe)",
+        "instruction": "Try pasting: “One;Two|Three”"
+      }
+    }
+  },
+  "input-types-demo": {
+    "placeholders": {
+      "enter-type": "Enter {type}..."
+    }
+  },
+  "form-addons-demo": {
+    "labels": {
+      "website": "Website",
+      "website-with-prefix": "Website",
+      "github-username": "GitHub Username",
+      "custom-domain": "Custom Domain"
+    },
+    "buttons": {
+      "reset": "Reset",
+      "submit": "Submit"
+    }
+  },
+  "empty-screen-border-demo": {
+    "sections": {
+      "without-border": "Without Border",
+      "with-solid-border": "With Solid Border"
+    },
+    "descriptions": {
+      "browse-apps-marketplace": "Browse available apps in the marketplace",
+      "inbox-empty": "Your inbox is empty"
+    },
+    "buttons": {
+      "browse-apps": "Browse Apps",
+      "compose": "Compose"
+    }
+  },
+  "dropdown-avatar-trigger-demo": {
+    "avatar": {
+      "alt-text": "Avatar"
+    },
+    "menu": {
+      "profile-label": "Profile",
+      "view-profile": "View Profile",
+      "settings": "Settings",
+      "sign-out": "Sign out"
+    },
+    "demo": {
+      "caption": "Avatar Menu"
+    }
+  },
+  "dialog-basic-demo": {
+    "buttons": {
+      "open-dialog": "Open Basic Dialog",
+      "action": "Action"
+    },
+    "content": {
+      "description": "Dialogs are used to display content that requires user attention or interaction. They appear above the page content and must be closed before interacting with the page again."
+    }
+  },
+  "checkbox-basic-demo": {
+    "states": {
+      "unchecked": "Unchecked",
+      "checked": "Checked",
+      "disabled": "Disabled",
+      "disabled-checked": "Disabled Checked"
+    }
+  },
+  "button-icons-demo": {
+    "headings": {
+      "start-icon": "Start Icon",
+      "end-icon": "End Icon"
+    },
+    "labels": {
+      "start-icon": "Start Icon",
+      "end-icon": "End Icon"
+    }
+  },
+  "badge-dots-demo": {
+    "labels": {
+      "dot-indicator": "Dot"
+    }
+  },
+  "avatar-link-demo": {
+    "avatar": {
+      "alt-text": "With link"
+    },
+    "labels": {
+      "clickable-description": "Clickable"
+    }
+  },
+  "alert-custom-icon-demo": {
+    "titles": {
+      "severity-alert-with-custom-icon": "{severityCharAt0ToUpperCaseSeveritySlice1} Alert with Custom Icon Color"
+    }
+  },
+  "color-type-table": {
+    "copy-actions": {
+      "hex": "Copy as HEX",
+      "rgb": "Copy as RGB",
+      "hsl": "Copy as HSL",
+      "tailwind-class": "Copy Tailwind Class"
+    }
+  },
+  "component-renderer": {
+    "buttons": {
+      "show-code-wip": "Code (WIP)"
+    }
+  }
+}
