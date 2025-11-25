@@ -1,4 +1,6 @@
 "use client";
+import { useTranslations } from "next-intl";
+
 
 import React from "react";
 import { Toaster } from "react-hot-toast";
@@ -30,17 +32,17 @@ interface TypographyTableProps {
 interface CopyMenuProps {
   style: TypographyStyle;
   onCopy: (format: string) => void;
+  t: any;
 }
 
-const CopyMenu: React.FC<CopyMenuProps> = ({ style, onCopy }) => {
+const CopyMenu: React.FC<CopyMenuProps> = ({ style, onCopy, t }) => {
+
   return (
     <div className="absolute inset-2 flex items-center justify-center bg-black/10 opacity-0 transition-opacity group-hover:opacity-100">
       <div className="bg-default space-y-1 rounded-md p-2 shadow-lg">
         <button
           onClick={() => onCopy(style.className)}
-          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">
-          Copy Tailwind Class
-        </button>
+          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">{t('actions.copy-tailwind-class')}</button>
         <button
           onClick={() =>
             onCopy(`font-family: ${style.specs.fontFamily};
@@ -48,22 +50,22 @@ font-size: ${style.specs.fontSize}px;
 line-height: ${style.specs.lineHeight};
 font-weight: ${style.specs.weight};`)
           }
-          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">
-          Copy CSS
-        </button>
+          className="hover:bg-subtle w-full rounded px-3 py-1 text-left text-sm">{t('actions.copy-css')}</button>
       </div>
     </div>
   );
 };
 
 export const TypographyTable: React.FC<TypographyTableProps> = ({ sections }) => {
+  const t = useTranslations("typography-table");
+  
   const handleCopy = async (value: string) => {
     try {
       await navigator.clipboard.writeText(value);
-      showToast(`Copied to clipboard`, "success");
+      showToast(t('messages.copied-to-clipboard'), "success");
     } catch (error) {
       console.error("Failed to copy:", error);
-      showToast("Failed to copy", "error");
+      showToast(t('messages.failed-to-copy'), "error");
     }
   };
 
@@ -88,16 +90,16 @@ export const TypographyTable: React.FC<TypographyTableProps> = ({ sections }) =>
                         <p className="text-emphasis text-sm font-medium">{style.name}</p>
                         <p className="text-subtle mt-1 text-xs">{style.className}</p>
                       </div>
-                      <div className={style.className}>The quick brown fox jumps over the lazy dog</div>
+                      <div className={style.className}>{t('sample-text.pangram')}</div>
                     </div>
                     <div className="text-subtle space-y-2 text-sm">
-                      <p>Font: {style.specs.fontFamily}</p>
-                      <p>Size: {style.specs.fontSize}px</p>
-                      <p>Line Height: {style.specs.lineHeight}</p>
-                      <p>Weight: {style.specs.weight}</p>
+                      <p>{t('specs.font-family', { fontFamily: style.specs.fontFamily })}</p>
+                      <p>{t('specs.font-size', { fontSize: style.specs.fontSize })}</p>
+                      <p>{t('specs.line-height', { lineHeight: style.specs.lineHeight })}</p>
+                      <p>{t('specs.font-weight', { weight: style.specs.weight })}</p>
                     </div>
                   </div>
-                  <CopyMenu style={style} onCopy={handleCopy} />
+                  <CopyMenu style={style} onCopy={handleCopy} t={t} />
                 </div>
               ))}
             </div>

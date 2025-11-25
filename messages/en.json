@@ -1,0 +1,213 @@
+{
+  "meeting-time-timezones": {
+    "indicators": {
+      "day-offset_0": "+1",
+      "day-offset_1": "-1"
+    }
+  },
+  "date-range-picker": {
+    "labels": {
+      "date-range-incomplete": "{startDate} - End"
+    },
+    "placeholders": {
+      "select-date": "Pick a date"
+    }
+  },
+  "platform-members-layout": {
+    "headings": {
+      "member-management": "Member management"
+    },
+    "tooltips": {
+      "admin-member-access": "Only teammates invited as admins can create OAuth clients while teammates invited as members have read only access"
+    }
+  },
+  "textarea-states-demo": {
+    "states": {
+      "default": {
+        "label": "Default",
+        "placeholder": "Default textarea..."
+      },
+      "disabled": {
+        "label": "Disabled",
+        "placeholder": "Disabled textarea..."
+      },
+      "readonly": {
+        "label": "Readonly",
+        "placeholder": "Readonly textarea...",
+        "default-value": "This is a readonly textarea"
+      }
+    }
+  },
+  "tabs-horizontal-demo": {
+    "sections": {
+      "basic-tabs": "Basic",
+      "tabs-with-icons": "With Icons",
+      "tabs-with-actions": "With Actions"
+    },
+    "actions": {
+      "add-new": "Add New"
+    }
+  },
+  "select-grouped-demo": {
+    "placeholders": {
+      "choose-food": "Choose food..."
+    }
+  },
+  "select-async-demo": {
+    "placeholders": {
+      "search-country": "Search for a country...",
+      "search-country-small": "Search for a country... (small)"
+    }
+  },
+  "range-slider-demo": {
+    "examples": {
+      "default-range-heading": "Default Range (15-30 mins)",
+      "custom-range-heading": "Custom Range with Success Badge (5-20 mins)",
+      "large-range-heading": "Large Range with Warning Badge (0-100 mins)"
+    },
+    "triggers": {
+      "total-time": "Total time",
+      "meeting-duration": "Meeting duration",
+      "extended-duration": "Extended duration"
+    },
+    "labels": {
+      "selected-values": "Selected Values:"
+    }
+  },
+  "multi-input-field-states": {
+    "states": {
+      "default": "Default State",
+      "disabled": "Disabled State",
+      "minimum-options": "Minimum Options (2)"
+    },
+    "placeholders": {
+      "first-option": "First option",
+      "second-option": "Second option",
+      "third-option": "Third option",
+      "disabled-option-1": "Disabled option 1",
+      "disabled-option-2": "Disabled option 2",
+      "required-option-1": "Required option 1",
+      "required-option-2": "Required option 2",
+      "optional-option": "Optional option"
+    }
+  },
+  "input-values-demo": {
+    "headings": {
+      "size-label": "Size: {size}"
+    },
+    "sections": {
+      "default-value": "Default Value",
+      "placeholder": "Placeholder"
+    },
+    "examples": {
+      "placeholder-text": "Placeholder text",
+      "default-text-value": "Default text value"
+    }
+  },
+  "form-basic-demo": {
+    "labels": {
+      "username": "Username",
+      "email": "Email",
+      "password": "Password"
+    },
+    "buttons": {
+      "reset": "Reset",
+      "submit": "Submit"
+    }
+  },
+  "empty-screen-custom-icon-demo": {
+    "messages": {
+      "no-team-members": "No team members",
+      "add-team-members-description": "Add team members to collaborate"
+    },
+    "buttons": {
+      "add-members": "Add Members"
+    },
+    "alerts": {
+      "add-members-clicked": "Add Members clicked"
+    }
+  },
+  "dropdown-button-trigger-demo": {
+    "buttons": {
+      "menu": "Menu",
+      "more-actions": "More Actions"
+    },
+    "labels": {
+      "actions": "Actions",
+      "quick-actions": "Quick Actions"
+    },
+    "variants": {
+      "default": "Default",
+      "with-icon": "With Icon",
+      "icon-only": "Icon Only"
+    }
+  },
+  "dialog-confirmation-demo": {
+    "buttons": {
+      "delete-item": "Delete Item",
+      "confirm-delete": "Delete"
+    },
+    "dialog": {
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete this item? This action cannot be undone."
+    }
+  },
+  "checkbox-description-demo": {
+    "examples": {
+      "regular-description": "This is a regular description",
+      "description-as-label": "This description acts as the label",
+      "with-label": "Label and description",
+      "with-description": "Label and description"
+    }
+  },
+  "button-loading-demo": {
+    "headings": {
+      "loading-state": "Loading State",
+      "loading-with-icons": "Loading with Icons"
+    },
+    "labels": {
+      "loading": "Loading",
+      "with-icon": "With Icon"
+    }
+  },
+  "badge-icons-demo": {
+    "labels": {
+      "icon": "Icon"
+    }
+  },
+  "avatar-shape-demo": {
+    "avatars": {
+      "circle-alt": "Circle Avatar",
+      "circle-title": "Circle Avatar",
+      "square-alt": "Square Avatar",
+      "square-title": "Square Avatar"
+    }
+  },
+  "alert-custom-icons-demo": {
+    "titles": {
+      "severity-alert-with-custom-icon": "{severity} Alert with Custom Icon"
+    },
+    "messages": {
+      "custom-icon-description": "This alert uses a custom icon instead of the default one."
+    }
+  },
+  "typography-table": {
+    "actions": {
+      "copy-tailwind-class": "Copy Tailwind Class",
+      "copy-css": "Copy CSS"
+    },
+    "sample-text": {
+      "pangram": "The quick brown fox jumps over the lazy dog"
+    },
+    "specs": {
+      "font-family": "Font: {fontFamily}",
+      "font-size": "Size: {fontSize}px",
+      "line-height": "Line Height: {lineHeight}",
+      "font-weight": "Weight: {weight}"
+    },
+    "messages": {
+      "copied-to-clipboard": "Copied to clipboard",
+      "failed-to-copy": "Failed to copy"
+    }
+  }
+}

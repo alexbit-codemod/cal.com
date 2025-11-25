@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import * as Popover from "@radix-ui/react-popover";
 
 import {
@@ -63,6 +64,8 @@ const MeetingTimeInTimezones = ({
   // We don't show the popover if there's only one timezone.
   if (times.length === 1) return null;
 
+  const t = useTranslations("meeting-time-timezones");
+
   return (
     <Popover.Root>
       <Popover.Trigger
@@ -81,7 +84,7 @@ const MeetingTimeInTimezones = ({
                 {time.startTime} - {time.endTime}
                 {(time.isNextDay || time.isPreviousDay) && (
                   <span className="text-medium bg-muted text-emphasis ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full text-[10px]">
-                    {time.isNextDay ? "+1" : "-1"}
+                    {time.isNextDay ? t('indicators.day-offset_0') : t('indicators.day-offset_1')}
                   </span>
                 )}
               </span>

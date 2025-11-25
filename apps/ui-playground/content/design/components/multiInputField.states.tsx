@@ -1,4 +1,6 @@
 "use client";
+import { useTranslations } from "next-intl";
+
 
 import { RenderComponentWithSnippet } from "@/app/components/render";
 import { useForm, FormProvider } from "react-hook-form";
@@ -12,6 +14,8 @@ type FormValues = {
 };
 
 export const StatesExample: React.FC = () => {
+const t = useTranslations("multi-input-field-states");
+
   const methods = useForm<FormValues>();
 
   return (
@@ -20,29 +24,29 @@ export const StatesExample: React.FC = () => {
         <div className="space-y-6">
           <div className="space-y-4">
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Default State</h3>
+              <h3 className="text-emphasis text-sm">{t('states.default')}</h3>
               <MultiOptionInput<FormValues>
                 fieldArrayName="defaultOptions"
-                optionPlaceholders={["First option", "Second option", "Third option"]}
+                optionPlaceholders={[t('placeholders.first-option'), t('placeholders.second-option'), t('placeholders.third-option')]}
                 defaultNumberOfOptions={3}
               />
             </div>
 
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Disabled State</h3>
+              <h3 className="text-emphasis text-sm">{t('states.disabled')}</h3>
               <MultiOptionInput<FormValues>
                 fieldArrayName="disabledOptions"
-                optionPlaceholders={["Disabled option 1", "Disabled option 2"]}
+                optionPlaceholders={[t('placeholders.disabled-option-1'), t('placeholders.disabled-option-2')]}
                 defaultNumberOfOptions={2}
                 disabled
               />
             </div>
 
             <div className="flex flex-col space-y-2">
-              <h3 className="text-emphasis text-sm">Minimum Options (2)</h3>
+              <h3 className="text-emphasis text-sm">{t('states.minimum-options')}</h3>
               <MultiOptionInput<FormValues>
                 fieldArrayName="minOptions"
-                optionPlaceholders={["Required option 1", "Required option 2", "Optional option"]}
+                optionPlaceholders={[t('placeholders.required-option-1'), t('placeholders.required-option-2'), t('placeholders.optional-option')]}
                 defaultNumberOfOptions={3}
                 minOptions={2}
               />
