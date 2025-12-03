@@ -34,10 +34,10 @@ const opts: JacksonOption = {
 
 declare global {
   /* eslint-disable no-var */
-  var connectionController: IConnectionAPIController | undefined;
-  var oauthController: IOAuthController | undefined;
-  var samlSPConfig: ISPSSOConfig | undefined;
-  var dsyncController: IDirectorySyncController | undefined;
+  let connectionController: IConnectionAPIController | undefined;
+  let oauthController: IOAuthController | undefined;
+  let samlSPConfig: ISPSSOConfig | undefined;
+  let dsyncController: IDirectorySyncController | undefined;
   /* eslint-enable no-var */
 }
 

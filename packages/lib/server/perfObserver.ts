@@ -4,7 +4,7 @@ import logger from "../logger";
 
 declare global {
   // eslint-disable-next-line no-var
-  var perfObserver: PerformanceObserver | undefined;
+  let perfObserver: PerformanceObserver | undefined;
 }
 export const perfObserver =
   globalThis.perfObserver ||

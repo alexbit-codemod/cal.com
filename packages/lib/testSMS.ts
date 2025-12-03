@@ -1,6 +1,6 @@
 declare global {
   // eslint-disable-next-line no-var
-  var testSMS: {
+  let testSMS: {
     to: string;
     from: string;
     message: string;
