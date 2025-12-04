@@ -7,10 +7,11 @@ const rule: Rule.RuleModule = {
     },
   },
   create: (context) => {
+    const contextSourceCode = context.sourceCode ?? context.getSourceCode();
     return {
       VariableDeclarator: (node) => {
         if (node.id.type === "Identifier" && node.id.name !== "bla") {
-          context.report({
+          contextSourceCode.report({
             node,
             message: 'All variabled should be named "bla"!',
           });
