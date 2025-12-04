@@ -47,6 +47,7 @@ const searchIncludeProperty = (
 
 const rule = createRule({
   create: function (context) {
+    const contextSourceCode = context.sourceCode ?? context.getSourceCode();
     return {
       CallExpression(node) {
         if (!(node.callee as TSESTree.MemberExpression).property) {
@@ -67,7 +68,7 @@ const rule = createRule({
         }
 
         const backReporter = (reportObj: ReportDescriptor<"no-prisma-include-true">) => {
-          context.report(reportObj);
+          contextSourceCode.report(reportObj);
         };
 
         nodeArgs.properties?.forEach((property) => {
