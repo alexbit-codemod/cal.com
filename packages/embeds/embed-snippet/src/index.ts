@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 
 /* eslint-disable @typescript-eslint/ban-ts-comment,prefer-rest-params,prefer-const */
 import type { GlobalCal, GlobalCalWithoutNs, Queue } from "@calcom/embed-core";

@@ -1,5 +1,5 @@
-/* eslint-env node */
-/* eslint-disable @typescript-eslint/no-require-imports, no-undef */
+
+
 const glob = require("glob");
 const { nextJsOrgRewriteConfig } = require("./getNextjsOrgRewriteConfig");
 
@@ -19,7 +19,7 @@ const topLevelRouteNamesWhitelistedForRewrite = exports.topLevelRouteNamesWhitel
  * These top-level route names are excluded from rewrites in beforeFiles in next.config.js
  * to prevent conflicts with organization slug rewrites.
  */
-/* eslint-disable no-undef */
+
 let topLevelRoutesExcludedFromOrgRewrite = exports.topLevelRoutesExcludedFromOrgRewrite = glob
   .sync(
     "{pages,app,app/(booking-page-wrapper),app/(use-page-wrapper),app/(use-page-wrapper)/(main-nav)}/**/[^_]*.{tsx,js,ts}",

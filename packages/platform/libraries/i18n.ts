@@ -5,7 +5,7 @@ import { WEBAPP_URL } from "@calcom/lib/constants";
 import { fetchWithTimeout } from "@calcom/lib/fetchWithTimeout";
 import logger from "@calcom/lib/logger";
 
-/* eslint-disable @typescript-eslint/no-require-imports */
+
 const { i18n } = require("@calcom/config/next-i18next.config");
 const path = require("path");
 const translationsPath = path.resolve(__dirname, "../../../../apps/web/public/static/locales/en/common.json");

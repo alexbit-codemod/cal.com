@@ -33,7 +33,7 @@ const opts: JacksonOption = {
 };
 
 declare global {
-  /* eslint-disable no-var */
+  
   var connectionController: IConnectionAPIController | undefined;
   var oauthController: IOAuthController | undefined;
   var samlSPConfig: ISPSSOConfig | undefined;
