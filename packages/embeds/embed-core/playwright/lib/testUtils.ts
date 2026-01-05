@@ -2,6 +2,7 @@ import type { Page, Frame } from "@playwright/test";
 import { expect } from "@playwright/test";
 
 import prisma from "@calcom/prisma";
+import { regex } from "arkregex";
 
 export async function getQueuedFormResponse(queuedFormResponseId: string) {
   return prisma.app_RoutingForms_QueuedFormResponse.findFirst({
@@ -131,7 +132,8 @@ export async function bookFirstEvent(username: string, frame: Frame, page: Page)
   await frame.click('[data-testid="event-type-link"]');
   await frame.waitForURL((url) => {
     // Wait for reaching the event page
-    const matches = url.pathname.match(new RegExp(`/${username}/(.+)$`));
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+    const matches = url.pathname.match(regex(`/${username}/(.+)$` as Parameters<typeof regex>[0]) as RegExp);
     if (!matches || !matches[1]) {
       return false;
     }

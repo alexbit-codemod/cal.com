@@ -45,8 +45,9 @@ import { Tooltip } from "@calcom/ui/components/tooltip";
 import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
 import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
 import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+import { regex as arkregex } from "arkregex";
 
-const regex = new RegExp("^[a-zA-Z0-9-]*$");
+const regex = arkregex("^[a-zA-Z0-9-]*$") as RegExp;
 
 
 

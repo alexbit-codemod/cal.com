@@ -3,6 +3,7 @@ import logger from "@calcom/lib/logger";
 import type { dynamicFieldValueOperands, dynamicFieldValueOperandsResponse } from "@calcom/lib/raqb/types";
 import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
 import { caseInsensitive } from "@calcom/lib/raqb/utils";
+import { regex } from "arkregex";
 
 // Type for JSON values that can be in the query
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
@@ -36,7 +37,8 @@ const replaceAttributeOptionIdsWithOptionLabel = ({
   allAttributesOptions.forEach((attributeOption) => {
     const attributeOptionId = attributeOption.id;
     queryValueWithLabels = queryValueWithLabels.replace(
-      new RegExp(`${attributeOptionId}`, "g"),
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      regex(`${attributeOptionId}` as Parameters<typeof regex>[0], "g") as RegExp,
       caseInsensitive(attributeOption.value)
     );
   });

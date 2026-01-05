@@ -16,6 +16,7 @@ import {
   MSTeamsLocationType as importedMSTeamsLocationType,
   DailyLocationType as importedDailyLocationType,
 } from "./constants";
+import { regex } from "arkregex";
 
 export const MeetLocationType = importedMeetLocationType;
 export const MSTeamsLocationType = importedMSTeamsLocationType;
@@ -292,7 +293,8 @@ const getStaticLinkLocationByValue = (value: string | undefined | null) => {
     if (l.default || l.linkType == "dynamic" || !l.urlRegExp) {
       return;
     }
-    return new RegExp(l.urlRegExp).test(value);
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+    return (regex(l.urlRegExp as Parameters<typeof regex>[0]) as RegExp).test(value);
   });
 };
 
@@ -536,7 +538,8 @@ export const locationsResolver = (t: TFunction) => {
               eventLocationType.linkType === "static" &&
               eventLocationType.urlRegExp
             ) {
-              const valid = z.string().regex(new RegExp(eventLocationType.urlRegExp)).safeParse(link).success;
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+              const valid = z.string().regex(regex(eventLocationType.urlRegExp as Parameters<typeof regex>[0]) as RegExp).safeParse(link).success;
 
               if (!valid) {
                 const sampleUrl = eventLocationType.organizerInputPlaceholder;

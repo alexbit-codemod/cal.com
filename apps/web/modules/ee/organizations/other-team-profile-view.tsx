@@ -32,8 +32,9 @@ import { ImageUploader } from "@calcom/ui/components/image-uploader";
 import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
 import { showToast } from "@calcom/ui/components/toast";
 import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
+import { regex as arkregex } from "arkregex";
 
-const regex = new RegExp("^[a-zA-Z0-9-]*$");
+const regex = arkregex("^[a-zA-Z0-9-]*$") as RegExp;
 
 const teamProfileFormSchema = z.object({
   name: z.string(),

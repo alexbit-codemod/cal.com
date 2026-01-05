@@ -8,6 +8,7 @@ import { prisma } from "@calcom/prisma";
 import { clearFilters, applySelectFilter } from "./filter-helpers";
 import { test } from "./lib/fixtures";
 import { createAllPermissionsArray, enablePBACForTeam } from "./lib/test-helpers/pbac";
+import { regex } from "arkregex";
 
 test.describe.configure({ mode: "parallel" });
 
@@ -273,7 +274,8 @@ test.describe("Insights", async () => {
     for (const title of expectedChartTitles) {
       const chartCard = page
         .locator("[data-testid='chart-card'] h2")
-        .filter({ hasText: new RegExp(`^${title}$`) });
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+        .filter({ hasText: regex(`^${title}$` as Parameters<typeof regex>[0]) as RegExp });
       await expect(chartCard).toBeVisible();
     }
   });

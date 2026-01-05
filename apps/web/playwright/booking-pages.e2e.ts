@@ -18,6 +18,7 @@ import { SchedulingType } from "@calcom/prisma/enums";
 import type { Schedule, TimeRange } from "@calcom/types/schedule";
 import { expect } from "@playwright/test";
 import { JSDOM } from "jsdom";
+import { regex } from "arkregex";
 
 const freeUserObj = { name: `Free-user-${randomString(3)}` };
 test.describe.configure({ mode: "parallel" });
@@ -202,8 +203,9 @@ test.describe("pro user", () => {
       `${pro.username}/${pro.eventTypes[1].slug}?rescheduleUid=${bookingFixture.uid}`
     );
 
-    await expect(page).toHaveURL(
-      new RegExp(`${pro.username}/${eventType.slug}`)
+    await expect(page).toHaveU// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+RL(
+      regex(`${pro.username}/${eventType.slug}` as Parameters<typeof regex>[0]) as RegExp
     );
   });
 

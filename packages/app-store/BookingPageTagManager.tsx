@@ -7,6 +7,7 @@ import { sdkActionManager } from "@calcom/lib/sdk-event";
 import type { AppMeta } from "@calcom/types/App";
 
 import type { appDataSchemas } from "./apps.schemas.generated";
+import { regex as arkregex } from "arkregex";
 
 const PushEventPrefix = "cal_analytics_app_";
 
@@ -112,7 +113,8 @@ export default function BookingPageTagManager({
             if (eventTypeAppData[variableName]) {
               // Replace if value is available. It can possible not be a template variable that just matches the regex.
               val = val.replace(
-                new RegExp(`{${variableName}}`, "g"),
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+                arkregex(`{${variableName}}` as Parameters<typeof arkregex>[0], "g") as RegExp,
                 eventTypeAppData[variableName]
               ) as NonNullable<T>;
             }

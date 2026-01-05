@@ -3,6 +3,7 @@ import z from "zod";
 
 import { guessEventLocationType } from "@calcom/app-store/locations";
 import type { Prisma } from "@calcom/prisma/client";
+import { regex as arkregex } from "arkregex";
 
 export const nameObjectSchema = z.object({
   firstName: z.string(),
@@ -156,7 +157,8 @@ export function updateHostInEventName(eventName: string, oldHost: string, newHos
   for (const { pattern, replacement } of formats) {
     // Escape special regex characters in the pattern
     const escapedPattern = pattern.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const regex = new RegExp(`\\b${escapedPattern}\\b`, "gi");
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+    const regex = arkregex(`\\b${escapedPattern}\\b` as Parameters<typeof arkregex>[0], "gi") as RegExp;
 
     if (regex.test(updatedEventName)) {
       updatedEventName = updatedEventName.replace(regex, replacement);

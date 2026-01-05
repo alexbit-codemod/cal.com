@@ -12,6 +12,7 @@ import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/
 import { Form } from "@calcom/ui/components/form";
 import { TextField } from "@calcom/ui/components/form";
 import { showToast } from "@calcom/ui/components/toast";
+import { regex } from "arkregex";
 
 export type UpdateUsersDefaultConferencingAppParams = {
   appSlug: string;
@@ -41,7 +42,8 @@ export function AppSetDefaultLinkDialog({
 
   const form = useForm<LocationTypeSetLinkDialogFormProps>({
     resolver: zodResolver(
-      z.object({ link: z.string().regex(new RegExp(eventLocationTypeOptions?.urlRegExp ?? "")) })
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      z.object({ link: z.string().regex(regex(eventLocationTypeOptions?.urlRegExp ?? "" as Parameters<typeof regex>[0]) as RegExp) })
     ),
   });
 

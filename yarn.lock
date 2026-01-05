@@ -326,6 +326,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ark/util@npm:0.56.0":
+  version: 0.56.0
+  resolution: "@ark/util@npm:0.56.0"
+  checksum: 10/eb3477c6c1c126e708885721dd518d55dac133d642a916535ef0d75403182407cb36729d954181db82a6388b5e71cdeb486ea72dbfa3a58542f8d0435b79fb35
+  languageName: node
+  linkType: hard
+
 "@arr/every@npm:^1.0.0":
   version: 1.0.1
   resolution: "@arr/every@npm:1.0.1"
@@ -18043,6 +18050,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"arkregex@npm:0.0.5":
+  version: 0.0.5
+  resolution: "arkregex@npm:0.0.5"
+  dependencies:
+    "@ark/util": "npm:0.56.0"
+  checksum: 10/c5eca109df57639b3245e1e72efe1b43cf881a2234b29736b11f57d29674d9ef78a2dcf54f5381a33690d53ce8989520bc123bb686dcce83f15c44f141c7f8a9
+  languageName: node
+  linkType: hard
+
 "arr-rotate@npm:^1.0.0":
   version: 1.0.0
   resolution: "arr-rotate@npm:1.0.0"
@@ -18982,6 +18998,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:5.17.0"
     "@testing-library/react": "npm:16.0.1"
     "@vitest/ui": "npm:4.0.16"
+    arkregex: "npm:0.0.5"
     c8: "npm:7.13.0"
     checkly: "npm:latest"
     dotenv-checker: "npm:1.1.5"

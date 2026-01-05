@@ -1,6 +1,7 @@
 import type { TFunction } from "i18next";
 import type { ReactNode, ReactElement, FC } from "react";
 import React, { isValidElement, Fragment, createElement, cloneElement } from "react";
+import { regex } from "arkregex";
 
 type ServerTransProps = {
   i18nKey: string; // Translation key
@@ -199,7 +200,8 @@ const parseObjectComponents = (content: string, components: Record<string, React
 
   // First handle {{tag}} interpolation
   Object.keys(components).forEach((tag) => {
-    const interpolationRegex = new RegExp(`{{\\s*${tag}\\s*}}`, "g");
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+    const interpolationRegex = regex(`{{\\s*${tag}\\s*}}` as Parameters<typeof regex>[0], "g") as RegExp;
     processedContent = processedContent.replace(interpolationRegex, (match) => {
       const placeholder = `__INTERP_${tag}_${Math.random().toString(36).substring(2)}__`;
 
@@ -216,7 +218,8 @@ const parseObjectComponents = (content: string, components: Record<string, React
 
   // Then handle <tag>content</tag>
   Object.keys(components).forEach((tag) => {
-    const tagRegex = new RegExp(`<${tag}>(.*?)<\\/${tag}>`, "gs");
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+    const tagRegex = regex(`<${tag}>(.*?)<\\/${tag}>` as Parameters<typeof regex>[0], "gs") as RegExp;
 
     processedContent = processedContent.replace(tagRegex, (match, content) => {
       const placeholder = `__TAG_${tag}_${Math.random().toString(36).substring(2)}__`;
@@ -307,7 +310,8 @@ const parseHtmlTags = (content: string): ReactNode[] => {
   htmlTags.forEach(({ tag, component, selfClosing }) => {
     if (selfClosing) {
       // Handle self-closing tags like <br/>
-      const selfClosingRegex = new RegExp(`<${tag}\\s*\\/>`, "g");
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      const selfClosingRegex = regex(`<${tag}\\s*\\/>` as Parameters<typeof regex>[0], "g") as RegExp;
 
       processedContent = processedContent.replace(selfClosingRegex, (match) => {
         const placeholder = `__HTML_${tag}_${Math.random().toString(36).substring(2)}__`;
@@ -316,7 +320,8 @@ const parseHtmlTags = (content: string): ReactNode[] => {
       });
     } else {
       // Handle regular tags like <strong>content</strong>
-      const tagRegex = new RegExp(`<${tag}>(.*?)<\\/${tag}>`, "gs");
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      const tagRegex = regex(`<${tag}>(.*?)<\\/${tag}>` as Parameters<typeof regex>[0], "gs") as RegExp;
 
       processedContent = processedContent.replace(tagRegex, (match, content) => {
         const placeholder = `__HTML_${tag}_${Math.random().toString(36).substring(2)}__`;

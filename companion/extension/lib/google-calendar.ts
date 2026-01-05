@@ -1,3 +1,4 @@
+import { regex as arkregex } from "arkregex";
 /// <reference types="chrome" />
 
 // Google Calendar integration: inject a no-show toggle next to attendees in event popups.
@@ -556,14 +557,12 @@ function parseAttendees(eventPopup: Element): AttendeeInfo[] {
             whoText.toLowerCase().includes("organiser"));
 
         // Try to find the name associated with this email
-        const nameMatch = whoText.match(
-          new RegExp(
-            `([^\\n]+?)\\s*[-–]?\\s*(?:Organizer|Organiser)?\\s*${email.replace(
+        const nameMatch = whoText.m// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+atch(
+          arkregex(`([^\\n]+?)\\s*[-–]?\\s*(?:Organizer|Organiser)?\\s*${email.replace(
               /[.*+?^${}()|[\]\\]/g,
               "\\$&"
-            )}`,
-            "i"
-          )
+            )}` as Parameters<typeof arkregex>[0], "i") as RegExp
         );
 
         attendees.push({
@@ -602,14 +601,12 @@ function parseAttendees(eventPopup: Element): AttendeeInfo[] {
           el.textContent?.includes(email)
         );
 
-        const nameMatch = containerText.match(
-          new RegExp(
-            `([^\\n]+?)\\s*[-–]?\\s*(?:Organizer|Organiser)?\\s*${email.replace(
+        const nameMatch = containerText// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+.match(
+          arkregex(`([^\\n]+?)\\s*[-–]?\\s*(?:Organizer|Organiser)?\\s*${email.replace(
               /[.*+?^${}()|[\]\\]/g,
               "\\$&"
-            )}`,
-            "i"
-          )
+            )}` as Parameters<typeof arkregex>[0], "i") as RegExp
         );
 
         attendees.push({

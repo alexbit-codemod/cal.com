@@ -21,6 +21,7 @@ import { createRoutingForm } from "../lib/test-helpers/routingFormHelpers";
 import { selectFirstAvailableTimeSlotNextMonth, teamEventSlug, teamEventTitle } from "../lib/testUtils";
 import type { createEmailsFixture } from "./emails";
 import { TimeZoneEnum } from "./types";
+import { regex } from "arkregex";
 
 // Don't import hashPassword from app as that ends up importing next-auth and initializing it before NEXTAUTH_URL can be updated during tests.
 export function hashPassword(password: string) {
@@ -1051,7 +1052,7 @@ const createUser = (
 };
 
 async function confirmPendingPayment(page: Page) {
-  await page.waitForURL(new RegExp("/booking/*"));
+  await page.waitForURL(regex("/booking/*") as RegExp);
 
   const url = page.url();
 

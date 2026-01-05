@@ -13,6 +13,7 @@ import classNames from "@calcom/ui/classNames";
 import { Button } from "@calcom/ui/components/button";
 import { TextField } from "@calcom/ui/components/form";
 import { Icon } from "@calcom/ui/components/icon";
+import { regex } from "arkregex";
 
 export interface Option {
   label: string;
@@ -123,10 +124,10 @@ export const MultiOptionInput = <TFieldValues extends FieldValues>({
   const handlePasteInOptionAtIndex = (event: React.ClipboardEvent, optionIndex: number) => {
     const paste = event.clipboardData.getData("text");
     // Split on any of the delimiters
-    const delimiterRegex = new RegExp(`[${pasteDelimiters.join("")}]+`);
-    const keyValueRegex = new RegExp(
-      `([^${keyValueDelimiters.join("")}]+)([${keyValueDelimiters.join("")}])(.+)`
-    );
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+    const delimiterRegex = regex(`[${pasteDelimiters.join("")}]+` as Parameters<typeof regex>[0]) as RegExp;
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+    const keyValueRegex = regex(`([^${keyValueDelimiters.join("")}]+)([${keyValueDelimiters.join("")}])(.+)` as Parameters<typeof regex>[0]) as RegExp;
 
     const optionsBeingPasted = paste
       .split(delimiterRegex)

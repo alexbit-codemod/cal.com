@@ -1,6 +1,7 @@
 import type { TFunction } from "i18next";
 
 import { DYNAMIC_TEXT_VARIABLES, FORMATTED_DYNAMIC_TEXT_VARIABLES } from "./constants";
+import { regex as arkregex } from "arkregex";
 
 // variables are saved in the db always in english, so here we translate them to the user's language
 export function getTranslatedText(text: string, language: { locale: string; t: TFunction }) {
@@ -12,7 +13,8 @@ export function getTranslatedText(text: string, language: { locale: string; t: T
     });
 
     variables?.forEach((variable) => {
-      const regex = new RegExp(`{${variable}}`, "g"); // .replaceAll is not available here for some reason
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      const regex = arkregex(`{${variable}}` as Parameters<typeof arkregex>[0], "g") as RegExp; // .replaceAll is not available here for some reason
       let translatedVariable = DYNAMIC_TEXT_VARIABLES.includes(variable.toLowerCase())
         ? language.t(variable.toLowerCase().concat("_variable")).replace(/ /g, "_").toLocaleUpperCase()
         : DYNAMIC_TEXT_VARIABLES.includes(variable.toLowerCase().concat("_name")) //for the old variables names (ORGANIZER_NAME, ATTENDEE_NAME)

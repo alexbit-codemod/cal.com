@@ -1,4 +1,5 @@
 import { Transform } from "class-transformer";
+import { regex as arkregex } from "arkregex";
 
 export function CapitalizeTimeZone(): PropertyDecorator {
   return Transform(({ value }) => {
@@ -15,7 +16,8 @@ export function CapitalizeTimeZone(): PropertyDecorator {
       // note(Lauris): regex matching GMT, EST, UTC at the start, end, or surrounded by non-letters and capitalizing them
       const specialCases = ["GMT", "EST", "UTC"];
       specialCases.forEach((specialCase) => {
-        const regex = new RegExp(`(^|[^a-zA-Z])(${specialCase})([^a-zA-Z]|$)`, "gi");
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+        const regex = arkregex(`(^|[^a-zA-Z])(${specialCase})([^a-zA-Z]|$)` as Parameters<typeof arkregex>[0], "gi") as RegExp;
         normalizedTimeZone = normalizedTimeZone.replace(regex, (match, p1, p2, p3) => {
           return `${p1}${specialCase}${p3}`;
         });

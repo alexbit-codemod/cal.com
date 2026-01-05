@@ -10,6 +10,7 @@ import { checkPostMethod } from "./proxy";
 // We'll test the wrapped proxy as it would be used in production
 import proxy from "./proxy";
 import { config } from "./proxy";
+import { regex as arkregex } from "arkregex";
 
 // Mock dependencies at module level
 vi.mock("@vercel/edge-config", () => ({
@@ -486,8 +487,9 @@ describe("Middleware Integration Tests", () => {
 
 describe("Middleware Matcher - Comprehensive Coverage", () => {
   const matcher = config.matcher[0];
-  const pattern = matcher.replace(/^\/|\/$/g, "");
-  const regex = new RegExp(`^/${pattern}`);
+  const pattern = matcher.replace(/^\/|\/$/g// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+, "");
+  const regex = arkregex(`^/${pattern}` as Parameters<typeof arkregex>[0]) as RegExp;
 
   const cases = [
     // pages & apis

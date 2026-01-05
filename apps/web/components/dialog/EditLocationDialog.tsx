@@ -26,6 +26,7 @@ import { Form, Input } from "@calcom/ui/components/form";
 import { Icon } from "@calcom/ui/components/icon";
 
 import { QueryCell } from "../../lib/QueryCell";
+import { regex } from "arkregex";
 
 interface ISetLocationDialog {
   saveLocation: ({
@@ -119,7 +120,8 @@ export const EditLocationDialog = (props: ISetLocationDialog) => {
           eventLocationType.linkType === "static" &&
           eventLocationType.urlRegExp
         ) {
-          const valid = z.string().regex(new RegExp(eventLocationType.urlRegExp)).safeParse(val).success;
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+          const valid = z.string().regex(regex(eventLocationType.urlRegExp as Parameters<typeof regex>[0]) as RegExp).safeParse(val).success;
           if (!valid) {
             const sampleUrl = eventLocationType.organizerInputPlaceholder;
             ctx.addIssue({

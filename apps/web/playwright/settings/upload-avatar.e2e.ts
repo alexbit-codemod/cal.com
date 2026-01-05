@@ -5,6 +5,7 @@ import { CAL_URL } from "@calcom/lib/constants";
 import { prisma } from "@calcom/prisma";
 
 import { test } from "../lib/fixtures";
+import { regex } from "arkregex";
 
 test.describe("User Avatar", async () => {
   test("it can upload a user profile image", async ({ page, users }) => {
@@ -46,7 +47,8 @@ test.describe("User Avatar", async () => {
 
       const avatarImage = page.getByTestId("profile-upload-avatar").locator("img");
 
-      await expect(avatarImage).toHaveAttribute("src", new RegExp(`^\/api\/avatar\/${objectKey}\.png$`));
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      await expect(avatarImage).toHaveAttribute("src", regex(`^\/api\/avatar\/${objectKey}\.png$` as Parameters<typeof regex>[0]) as RegExp);
 
       const urlResponse = await page.request.get((await avatarImage.getAttribute("src")) || "", {
         maxRedirects: 0,
@@ -60,14 +62,16 @@ test.describe("User Avatar", async () => {
 
       await expect(page.locator(`img`)).toHaveAttribute(
         "src",
-        new RegExp(`\/api\/avatar\/${objectKey}\.png$`)
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+        regex(`\/api\/avatar\/${objectKey}\.png$` as Parameters<typeof regex>[0]) as RegExp
       );
       // verify objectKey is passed to the OG image
       // yes, OG image URI encodes at multiple places.. don't want to mess with that.
       const ogImageLocator = page.locator('meta[property="og:image"]');
       await expect(ogImageLocator).toHaveCount(1);
       const searchParam = `meetingImage=${encodeURIComponent(`${CAL_URL}/api/avatar/${objectKey}.png`)}`;
-      await expect(ogImageLocator).toHaveAttribute("content", new RegExp(encodeURIComponent(searchParam)));
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      await expect(ogImageLocator).toHaveAttribute("content", regex(encodeURIComponent(searchParam) as Parameters<typeof regex>[0]) as RegExp);
     });
   });
 });
@@ -113,7 +117,8 @@ test.describe("Team Logo", async () => {
 
       await expect(avatarImage).toHaveAttribute(
         "src",
-        new RegExp(`^\/api\/avatar\/${response.objectKey}\.png$`)
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+        regex(`^\/api\/avatar\/${response.objectKey}\.png$` as Parameters<typeof regex>[0]) as RegExp
       );
 
       const urlResponse = await page.request.get((await avatarImage.getAttribute("src")) || "", {
@@ -172,7 +177,8 @@ test.describe("Organization Logo", async () => {
 
       await expect(avatarImage).toHaveAttribute(
         "src",
-        new RegExp(`^\/api\/avatar\/${response.objectKey}\.png$`)
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+        regex(`^\/api\/avatar\/${response.objectKey}\.png$` as Parameters<typeof regex>[0]) as RegExp
       );
 
       const urlResponse = await page.request.get((await avatarImage.getAttribute("src")) || "", {
@@ -194,7 +200,8 @@ test.describe("Organization Logo", async () => {
 
       await expect(page.locator(`img`)).toHaveAttribute(
         "src",
-        new RegExp(`^\/api\/avatar\/${objectKey}\.png$`)
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+        regex(`^\/api\/avatar\/${objectKey}\.png$` as Parameters<typeof regex>[0]) as RegExp
       );
     });
 

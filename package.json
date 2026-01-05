@@ -171,5 +171,8 @@
   "syncpack": {
     "filter": "^(?!@calcom).*",
     "semverRange": ""
+  },
+  "dependencies": {
+    "arkregex": "0.0.5"
   }
 }

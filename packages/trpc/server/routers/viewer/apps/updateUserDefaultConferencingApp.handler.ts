@@ -9,6 +9,7 @@ import type { TrpcSessionUser } from "@calcom/trpc/server/types";
 import { TRPCError } from "@trpc/server";
 
 import type { TUpdateUserDefaultConferencingAppInputSchema } from "./updateUserDefaultConferencingApp.schema";
+import { regex } from "arkregex";
 
 type UpdateUserDefaultConferencingAppOptions = {
   ctx: {
@@ -37,7 +38,8 @@ export const updateUserDefaultConferencingAppHandler = async ({
   if (appLocation.linkType === "static" && appLocation.urlRegExp) {
     const validLink = z
       .string()
-      .regex(new RegExp(appLocation.urlRegExp), "Invalid App Link")
+// TODO(arkregex): pattern/flags not statically known; typing may degrade. Consider regex.as<...>(...)
+      .regex(regex(appLocation.urlRegExp as Parameters<typeof regex>[0]) as RegExp, "Invalid App Link")
       .parse(input.appLink);
     if (!validLink) {
       throw new TRPCError({ code: "BAD_REQUEST", message: "Invalid app link" });
