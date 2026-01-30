@@ -436,12 +436,11 @@ function assertThatCodeIsValidVanillaJsCode(code: string) {
   });
 
   if (result.status !== 0) {
-    console.log(
-      JSON.stringify({
+    // Replaced console logging with logger
+  logger.log(JSON.stringify({
         biomeError: result.stderr,
         code,
-      })
-    );
+      }));
   }
 
   expect(result.status).toBe(0);
@@ -455,12 +454,11 @@ function assertThatCodeIsValidReactCode(code: string) {
   });
 
   if (result.status !== 0) {
-    console.log(
-      JSON.stringify({
+    // Replaced console logging with logger
+  logger.log(JSON.stringify({
         biomeError: result.stderr,
         code,
-      })
-    );
+      }));
   }
 
   expect(result.status).toBe(0);

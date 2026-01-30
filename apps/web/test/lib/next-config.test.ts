@@ -17,7 +17,8 @@ beforeAll(async () => {
   orgUserTypeRouteMatch = match(orgUserTypeRoutePath);
 
   orgUserRouteMatch = match(orgUserRoutePath);
-  console.log({
+  // Replaced console logging with logger
+  logger.log({
     regExps: {
       orgUserTypeRouteMatch: pathToRegexp(orgUserTypeRoutePath),
       orgUserRouteMatch: pathToRegexp(orgUserRoutePath),

@@ -46,7 +46,8 @@ async function createTestForm(): Promise<App_RoutingForms_Form> {
  */
 async function createBulkResponsesAndExport(): Promise<void> {
   const testForm = await createTestForm();
-  console.log(`Using form: ${testForm.id}`);
+  // Replaced console logging with logger
+  logger.log(`Using form: ${testForm.id}`);
 
   const TOTAL_RESPONSES = 300000;
   const BATCH_SIZE = 1000;
@@ -57,7 +58,8 @@ async function createBulkResponsesAndExport(): Promise<void> {
     const batchEnd = Math.min((batch + 1) * BATCH_SIZE, TOTAL_RESPONSES);
     const batchSize = batchEnd - batchStart;
 
-    console.log(`Creating batch ${batch + 1}/${NUM_BATCHES} (responses ${batchStart + 1}-${batchEnd})...`);
+    // Replaced console logging with logger
+  logger.log(`Creating batch ${batch + 1}/${NUM_BATCHES} (responses ${batchStart + 1}-${batchEnd})...`);
 
     // Create responses in parallel within each batch
     const responsePromises = Array.from({ length: batchSize }, (_, i) => {
@@ -78,12 +80,14 @@ async function createBulkResponsesAndExport(): Promise<void> {
 
     await Promise.all(responsePromises);
 
-    console.log(`✓ Batch ${batch + 1} completed (${batchEnd}/${TOTAL_RESPONSES} total)`);
+    // Replaced console logging with logger
+  logger.log(`✓ Batch ${batch + 1} completed (${batchEnd}/${TOTAL_RESPONSES} total)`);
 
     await new Promise((resolve) => setTimeout(resolve, 100));
   }
 
-  console.log(`\n✓ Successfully created ${TOTAL_RESPONSES} responses`);
+  // Replaced console logging with logger
+  logger.log(`\n✓ Successfully created ${TOTAL_RESPONSES} responses`);
 }
 
 createBulkResponsesAndExport()

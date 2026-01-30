@@ -15,7 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json(linkStepResult);
   }
   const buttonAndInvitationStepResult = await handleButtonAndInvitationStep(req);
-  console.log(buttonAndInvitationStepResult);
+  // Replaced console logging with logger
+  logger.log(buttonAndInvitationStepResult);
   if (buttonAndInvitationStepResult) {
     return res.status(200).json(buttonAndInvitationStepResult);
   }

@@ -104,11 +104,13 @@ export function WebCallDialog({
       });
 
       retellWebClient.on("agent_start_talking", () => {
-        console.log("Agent started talking");
+        // Replaced console logging with logger
+        logger.log("Agent started talking");
       });
 
       retellWebClient.on("agent_stop_talking", () => {
-        console.log("Agent stopped talking");
+        // Replaced console logging with logger
+        logger.log("Agent stopped talking");
       });
 
       retellWebClient.on("update", (update: { transcript?: Array<{ role: string; content: string }> }) => {

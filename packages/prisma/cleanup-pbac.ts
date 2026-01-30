@@ -7,7 +7,8 @@
 import prisma from ".";
 
 async function cleanupPBACOrganization() {
-  console.log("🧹 Cleaning up PBAC Demo Organization...");
+  // Replaced console logging with logger
+  logger.log("🧹 Cleaning up PBAC Demo Organization...");
 
   try {
     // Find the organization
@@ -24,11 +25,13 @@ async function cleanupPBACOrganization() {
     });
 
     if (!organization) {
-      console.log("ℹ️  PBAC Demo Organization not found, nothing to clean up");
+      // Replaced console logging with logger
+  logger.log("ℹ️  PBAC Demo Organization not found, nothing to clean up");
       return;
     }
 
-    console.log(`Found organization: ${organization.name} (ID: ${organization.id})`);
+    // Replaced console logging with logger
+  logger.log(`Found organization: ${organization.name} (ID: ${organization.id})`);
 
     // Delete users created for PBAC demo
     const pbacUserEmails = [
@@ -45,14 +48,16 @@ async function cleanupPBACOrganization() {
       },
     });
 
-    console.log(`Found ${pbacUsers.length} PBAC users to delete`);
+    // Replaced console logging with logger
+  logger.log(`Found ${pbacUsers.length} PBAC users to delete`);
 
     // Delete users (this will cascade delete memberships, profiles, etc.)
     for (const user of pbacUsers) {
       await prisma.user.delete({
         where: { id: user.id },
       });
-      console.log(`  ✅ Deleted user: ${user.email}`);
+      // Replaced console logging with logger
+  logger.log(`  ✅ Deleted user: ${user.email}`);
     }
 
     // Delete custom roles (this will cascade delete permissions)
@@ -60,7 +65,8 @@ async function cleanupPBACOrganization() {
       await prisma.role.delete({
         where: { id: role.id },
       });
-      console.log(`  ✅ Deleted role: ${role.name}`);
+      // Replaced console logging with logger
+  logger.log(`  ✅ Deleted role: ${role.name}`);
     }
 
     // Delete child teams
@@ -68,7 +74,8 @@ async function cleanupPBACOrganization() {
       await prisma.team.delete({
         where: { id: team.id },
       });
-      console.log(`  ✅ Deleted team: ${team.name}`);
+      // Replaced console logging with logger
+  logger.log(`  ✅ Deleted team: ${team.name}`);
     }
 
     // Delete the organization (this will cascade delete organization settings)
@@ -76,7 +83,8 @@ async function cleanupPBACOrganization() {
       where: { id: organization.id },
     });
 
-    console.log(`  ✅ Deleted organization: ${organization.name}`);
+    // Replaced console logging with logger
+  logger.log(`  ✅ Deleted organization: ${organization.name}`);
 
     // Clean up any temp org redirects
     await prisma.tempOrgRedirect.deleteMany({
@@ -88,9 +96,11 @@ async function cleanupPBACOrganization() {
       },
     });
 
-    console.log("  ✅ Cleaned up temp org redirects");
+    // Replaced console logging with logger
+  logger.log("  ✅ Cleaned up temp org redirects");
 
-    console.log("\n🎉 PBAC Demo Organization cleanup completed successfully!");
+    // Replaced console logging with logger
+  logger.log("\n🎉 PBAC Demo Organization cleanup completed successfully!");
   } catch (error) {
     console.error("❌ Error during cleanup:", error);
     throw error;
@@ -101,7 +111,8 @@ async function cleanupPBACOrganization() {
 
 cleanupPBACOrganization()
   .then(() => {
-    console.log("✅ Cleanup completed!");
+    // Replaced console logging with logger
+  logger.log("✅ Cleanup completed!");
     process.exit(0);
   })
   .catch((error) => {

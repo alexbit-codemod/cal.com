@@ -81,9 +81,8 @@ export async function createUserAndEventType({
     },
   });
 
-  console.log(
-    `👤 Upserted '${user.username}' with email "${user.email}" & password "${user.password}". Booking page 👉 ${process.env.NEXT_PUBLIC_WEBAPP_URL}/${user.username}`
-  );
+  // Replaced console logging with logger
+  logger.log(`👤 Upserted '${user.username}' with email "${user.email}" & password "${user.password}". Booking page 👉 ${process.env.NEXT_PUBLIC_WEBAPP_URL}/${user.username}`);
 
   for (const eventTypeInput of eventTypes) {
     const { _bookings, _numBookings, ...eventTypeData } = eventTypeInput;
@@ -124,18 +123,16 @@ export async function createUserAndEventType({
     });
 
     if (eventType) {
-      console.log(
-        `\t📆 Event type ${eventTypeData.slug} already seems seeded - ${process.env.NEXT_PUBLIC_WEBAPP_URL}/${user.username}/${eventTypeData.slug}`
-      );
+      // Replaced console logging with logger
+  logger.log(`\t📆 Event type ${eventTypeData.slug} already seems seeded - ${process.env.NEXT_PUBLIC_WEBAPP_URL}/${user.username}/${eventTypeData.slug}`);
       continue;
     }
     const { id } = await prisma.eventType.create({
       data: eventTypeData,
     });
 
-    console.log(
-      `\t📆 Event type ${eventTypeData.slug} with id ${id}, length ${eventTypeData.length}min - ${process.env.NEXT_PUBLIC_WEBAPP_URL}/${user.username}/${eventTypeData.slug}`
-    );
+    // Replaced console logging with logger
+  logger.log(`\t📆 Event type ${eventTypeData.slug} with id ${id}, length ${eventTypeData.length}min - ${process.env.NEXT_PUBLIC_WEBAPP_URL}/${user.username}/${eventTypeData.slug}`);
 
     for (const bookingInput of bookingFields) {
       await prisma.booking.create({
@@ -162,11 +159,10 @@ export async function createUserAndEventType({
           iCalUID: "",
         },
       });
-      console.log(
-        `\t\t☎️ Created booking ${bookingInput.title} at ${new Date(
+      // Replaced console logging with logger
+  logger.log(`\t\t☎️ Created booking ${bookingInput.title} at ${new Date(
           bookingInput.startTime
-        ).toLocaleDateString()}`
-      );
+        ).toLocaleDateString()}`);
     }
   }
   console.log("👤 User with it's event-types and bookings created", theUser.email);
@@ -181,7 +177,8 @@ export async function createUserAndEventType({
           },
         });
 
-        console.log(`🔑 ${credential.type} credentials created for ${theUser.email}`);
+        // Replaced console logging with logger
+  logger.log(`🔑 ${credential.type} credentials created for ${theUser.email}`);
       }
     }
   }
@@ -221,7 +218,8 @@ export async function createTeamAndAddUsers(
       });
     } catch (_err) {
       if (_err instanceof Error && _err.message.indexOf("Unique constraint failed on the fields") !== -1) {
-        console.log(`Team '${team.name}' already exists, skipping.`);
+        // Replaced console logging with logger
+  logger.log(`Team '${team.name}' already exists, skipping.`);
         return;
       }
       throw _err;
@@ -233,9 +231,8 @@ export async function createTeamAndAddUsers(
     return;
   }
 
-  console.log(
-    `🏢 Created team '${teamInput.name}' - ${process.env.NEXT_PUBLIC_WEBAPP_URL}/team/${team.slug}`
-  );
+  // Replaced console logging with logger
+  logger.log(`🏢 Created team '${teamInput.name}' - ${process.env.NEXT_PUBLIC_WEBAPP_URL}/team/${team.slug}`);
 
   for (const eventType of team.eventTypes) {
     await prisma.eventType.update({
@@ -261,7 +258,8 @@ export async function createTeamAndAddUsers(
         accepted: true,
       },
     });
-    console.log(`\t👤 Added '${teamInput.name}' membership for '${username}' with role '${role}'`);
+    // Replaced console logging with logger
+  logger.log(`\t👤 Added '${teamInput.name}' membership for '${username}' with role '${role}'`);
   }
 
   return team;
@@ -304,7 +302,8 @@ export async function seedAttributes(teamId: number) {
   });
 
   if (existingAttributes.length > 0) {
-    console.log(`Skipping attributes seed, attributes already exist`);
+    // Replaced console logging with logger
+  logger.log(`Skipping attributes seed, attributes already exist`);
     return;
   }
 
@@ -319,7 +318,8 @@ export async function seedAttributes(teamId: number) {
     },
   });
 
-  console.log(`🎯 Creating attributes for team ${teamId}`);
+  // Replaced console logging with logger
+  logger.log(`🎯 Creating attributes for team ${teamId}`);
 
   const attributeRaw: { id: string; options: { id: string; value: string }[] }[] = [];
 
@@ -353,7 +353,8 @@ export async function seedAttributes(teamId: number) {
       })),
     });
 
-    console.log(`\t📝 Created attribute: ${attr.name}`);
+    // Replaced console logging with logger
+  logger.log(`\t📝 Created attribute: ${attr.name}`);
 
     // Assign random values/options to members
     for (const member of memberships) {
@@ -418,7 +419,8 @@ export async function seedAttributes(teamId: number) {
       }
     }
 
-    console.log(`\t✅ Assigned ${attr.name} values to ${memberships.length} members`);
+    // Replaced console logging with logger
+  logger.log(`\t✅ Assigned ${attr.name} values to ${memberships.length} members`);
   }
   return attributeRaw;
 }
@@ -468,7 +470,8 @@ export async function seedRoutingForms(
     },
   });
   if (form) {
-    console.log(`Skipping Routing Form - Form Seed, ${seededForm.name} already exists`);
+    // Replaced console logging with logger
+  logger.log(`Skipping Routing Form - Form Seed, ${seededForm.name} already exists`);
     return;
   }
 
@@ -688,7 +691,8 @@ export async function seedRoutingFormResponses(
   });
 
   if (bookings.length === 0) {
-    console.log("No bookings found for team - skipping routing form responses");
+    // Replaced console logging with logger
+  logger.log("No bookings found for team - skipping routing form responses");
     return;
   }
 
@@ -783,5 +787,6 @@ export async function seedRoutingFormResponses(
     });
   }
 
-  console.log(`Created ${bookings.length} routing form responses`);
+  // Replaced console logging with logger
+  logger.log(`Created ${bookings.length} routing form responses`);
 }

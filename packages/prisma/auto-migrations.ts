@@ -36,7 +36,8 @@ async function main(): Promise<void> {
       ...process.env,
     },
   });
-  console.log(stdout);
+  // Replaced console logging with logger
+  logger.log(stdout);
   console.error(stderr);
 }
 

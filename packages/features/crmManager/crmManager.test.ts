@@ -107,7 +107,8 @@ describe.skip("crmManager tests", () => {
         ],
       });
 
-      console.log(mockedCrmApp);
+      // Replaced console logging with logger
+  logger.log(mockedCrmApp);
     });
   });
 });

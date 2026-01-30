@@ -1885,23 +1885,27 @@ describe("Event types Endpoints", () => {
       try {
         await eventTypesRepositoryFixture.delete(eventType.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       try {
         await userRepositoryFixture.delete(user.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       try {
         await userRepositoryFixture.delete(falseTestUser.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
 
       try {
         await userRepositoryFixture.delete(orgUser.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       await app.close();
     });
@@ -2871,12 +2875,14 @@ describe("Event types Endpoints", () => {
         await eventTypesRepositoryFixture.delete(legacyEventTypeId1);
         await eventTypesRepositoryFixture.delete(legacyEventTypeId2);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       try {
         await userRepositoryFixture.delete(user.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       await app.close();
     });
@@ -3179,12 +3185,14 @@ describe("Event types Endpoints", () => {
       try {
         await eventTypesRepositoryFixture.delete(legacyEventTypeId1);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       try {
         await userRepositoryFixture.delete(user.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       await app.close();
     });

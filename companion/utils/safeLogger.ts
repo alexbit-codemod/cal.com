@@ -54,7 +54,8 @@ export const safeLogInfo = (message: string, data?: unknown): void => {
     if (data !== undefined) {
       console.log(message, data);
     } else {
-      console.log(message);
+      // Replaced console logging with logger
+  logger.log(message);
     }
   }
 };

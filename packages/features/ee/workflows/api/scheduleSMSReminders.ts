@@ -244,7 +244,8 @@ export async function handler(req: NextRequest) {
           retryCount: reminder.retryCount + 1,
         },
       });
-      console.log(`Error scheduling SMS with error ${error}`);
+      // Replaced console logging with logger
+  logger.log(`Error scheduling SMS with error ${error}`);
     }
   }
 

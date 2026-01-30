@@ -26,7 +26,8 @@ class MockPaymentService implements IAbstractPaymentService {
 
       const uid = uuidv4();
 
-      console.log("CREATE payment");
+      // Replaced console logging with logger
+  logger.log("CREATE payment");
 
       const paymentData = await prisma.payment.create({
         data: {

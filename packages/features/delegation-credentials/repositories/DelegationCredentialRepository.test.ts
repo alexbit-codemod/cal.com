@@ -26,7 +26,8 @@ vi.mock("@calcom/lib/crypto", async (importOriginal) => {
   return {
     ...actual,
     symmetricEncrypt: vi.fn((serviceAccountKey) => {
-      console.log({ mockEncrypted: serviceAccountKey });
+      // Replaced console logging with logger
+  logger.log({ mockEncrypted: serviceAccountKey });
       return `encrypted(${serviceAccountKey})`;
     }),
     symmetricDecrypt: vi.fn((serviceAccountKey) => {

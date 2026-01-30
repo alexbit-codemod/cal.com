@@ -1,4 +1,3 @@
- 
 import startCase from "lodash/startCase";
 
 import type { FilterType } from "@calcom/types/data-table";

@@ -132,7 +132,8 @@ export function initLinkedInIntegration() {
   let eventTypesCache: EventType[] | null = null;
   let cacheTimestamp: number | null = null;
 
-  console.log("[Cal.com] LinkedIn integration starting...");
+  // Replaced console logging with logger
+  logger.log("[Cal.com] LinkedIn integration starting...");
 
   injectStyles();
 
@@ -167,7 +168,8 @@ export function initLinkedInIntegration() {
 
       insertButtonIntoDOM(leftActions, calWrapper, emojiButtonContainer);
 
-      console.log("[Cal.com] Successfully injected Cal.com button");
+      // Replaced console logging with logger
+  logger.log("[Cal.com] Successfully injected Cal.com button");
     });
   }
 

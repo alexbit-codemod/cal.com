@@ -100,7 +100,8 @@ export const getStaticProps = async (slug: string) => {
     source = source.replace(/{DESCRIPTION}/g, appMeta.description);
   } catch (error) {
     /* If the app doesn't have a README we fallback to the package description */
-    console.log(`No DESCRIPTION.md provided for: ${appDirname}`);
+    // Replaced console logging with logger
+  logger.log(`No DESCRIPTION.md provided for: ${appDirname}`);
     source = appMeta.description;
   }
 

@@ -170,7 +170,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
       let tokensWereRefreshed = false;
       if (oauthService.isTokenExpired(storedTokens) && storedTokens.refreshToken) {
         try {
-          console.log("Access token expired, refreshing...");
+          // Replaced console logging with logger
+          logger.log("Access token expired, refreshing...");
           tokens = await oauthService.refreshAccessToken(storedTokens.refreshToken);
           await saveOAuthTokens(tokens);
           tokensWereRefreshed = true;

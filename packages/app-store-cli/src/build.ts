@@ -568,9 +568,8 @@ function generateFiles() {
     fs.writeFileSync(filePath, formatOutput(`${banner}${output.join("\n")}`));
     formatFileWithBiome(filePath);
   });
-  console.log(
-    `Generated ${filesToGenerate.map(([fileName]) => fileName).join(", ")}`
-  );
+  // Replaced console logging with logger
+  logger.log(`Generated ${filesToGenerate.map(([fileName]) => fileName).join(", ")}`);
 }
 
 const debouncedGenerateFiles = debounce(generateFiles);
@@ -581,20 +580,23 @@ if (isInWatchMode) {
     .on("addDir", (dirPath) => {
       const appName = getAppName(dirPath);
       if (appName) {
-        console.log(`Added ${appName}`);
+        // Replaced console logging with logger
+  logger.log(`Added ${appName}`);
         debouncedGenerateFiles();
       }
     })
     .on("change", (filePath) => {
       if (filePath.endsWith("config.json")) {
-        console.log("Config file changed");
+        // Replaced console logging with logger
+  logger.log("Config file changed");
         debouncedGenerateFiles();
       }
     })
     .on("unlinkDir", (dirPath) => {
       const appName = getAppName(dirPath);
       if (appName) {
-        console.log(`Removed ${appName}`);
+        // Replaced console logging with logger
+  logger.log(`Removed ${appName}`);
         debouncedGenerateFiles();
       }
     });
