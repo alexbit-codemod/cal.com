@@ -317,7 +317,8 @@ export class TeamService {
         });
       }
     } catch (e) {
-      console.log(e);
+      // Replaced console logging with logger
+  logger.log(e);
     }
   }
 

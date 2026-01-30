@@ -337,5 +337,6 @@ function ensureAppServerIsReadyToServeEmbed(webServer: { port?: number; url?: st
   // Only one of port or url can be specified, so remove port.
   delete webServer.port;
   webServer.url = `${process.env.NEXT_PUBLIC_WEBAPP_URL}/embed/embed.js`;
-  console.log("Ensuring that /embed/embed.js is 200 before starting tests");
+  // Replaced console logging with logger
+  logger.log("Ensuring that /embed/embed.js is 200 before starting tests");
 }

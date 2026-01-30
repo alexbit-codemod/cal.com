@@ -50,7 +50,8 @@ export const createSalesforceMock = () => {
     const query = composeQuery(parsedQuery);
 
     // Simple SOQL parser
-    console.log({ query });
+    // Replaced console logging with logger
+  logger.log({ query });
     const fromMatch = query.match(/FROM\s+(\w+)/i);
     const whereMatch = query.match(/WHERE\s+(.+?)(?:\s+LIMIT|\s+ORDER|\s*$)/i);
     const limitMatch = query.match(/LIMIT\s+(\d+)/i);
@@ -83,7 +84,8 @@ export const createSalesforceMock = () => {
         return { records: [] };
     }
 
-    console.log({ whereClause });
+    // Replaced console logging with logger
+  logger.log({ whereClause });
     // Apply where clause filtering (basic implementation)
     if (whereClause) {
       if (whereClause.includes("Email =")) {

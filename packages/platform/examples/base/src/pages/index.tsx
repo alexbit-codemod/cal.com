@@ -44,7 +44,8 @@ export default function Home(props: { calUsername: string; calEmail: string }) {
               className="h-[40px] bg-linear-to-r from-[#E94057] via-[#E94057] to-[#E94057] text-center text-base font-semibold text-transparent text-white hover:bg-orange-700"
               errorRedir="http://localhost:4321/availability"
               onCheckSuccess={() => {
-                console.log("stripe account connected successfully".toLocaleUpperCase());
+                // Replaced console logging with logger
+                logger.log("stripe account connected successfully".toLocaleUpperCase());
               }}
             />
           </div>

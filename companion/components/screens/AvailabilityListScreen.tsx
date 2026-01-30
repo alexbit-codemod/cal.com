@@ -201,7 +201,8 @@ export function AvailabilityListScreen({
         userTimezone = userProfile.timeZone;
       }
     } catch {
-      console.log("Could not get user timezone, using default");
+      // Replaced console logging with logger
+      logger.log("Could not get user timezone, using default");
     }
 
     // Create schedule with Monday-Friday 9 AM - 5 PM default

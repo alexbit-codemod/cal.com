@@ -112,7 +112,8 @@ const shuffle = (
 	} else if (randomEvent.userId) {
 		booking.userId = randomEvent.userId;
 	} else {
-		console.log({ randomEvent, usersIdsToPick });
+		// Replaced console logging with logger
+  logger.log({ randomEvent, usersIdsToPick });
 		throw new Error("No valid userId available for booking");
 	}
 
@@ -190,11 +191,13 @@ async function _createPayments(bookings: BookingWithEventType[]) {
 	const paidBookings = bookings.filter((booking) => booking.paid);
 
 	if (paidBookings.length === 0) {
-		console.log("No paid bookings found, skipping payment creation");
+		// Replaced console logging with logger
+  logger.log("No paid bookings found, skipping payment creation");
 		return;
 	}
 
-	console.log(`Creating payments for ${paidBookings.length} paid bookings...`);
+	// Replaced console logging with logger
+  logger.log(`Creating payments for ${paidBookings.length} paid bookings...`);
 
 	for (const booking of paidBookings) {
 		// Use event type's price and currency, with fallback to defaults
@@ -218,9 +221,8 @@ async function _createPayments(bookings: BookingWithEventType[]) {
 		});
 	}
 
-	console.log(
-		`Successfully created payments for ${paidBookings.length} bookings`,
-	);
+	// Replaced console logging with logger
+  logger.log(`Successfully created payments for ${paidBookings.length} bookings`);
 }
 
 type PaymentScenario = {
@@ -246,9 +248,8 @@ type BookingWithPaymentData = {
 };
 
 async function createPaymentsForScenarios(bookings: BookingWithPaymentData[]) {
-	console.log(
-		`Creating payments for ${bookings.length} bookings with diverse scenarios...`,
-	);
+	// Replaced console logging with logger
+  logger.log(`Creating payments for ${bookings.length} bookings with diverse scenarios...`);
 
 	// Batch create all payments at once
 	const paymentData = bookings.map((booking) => {
@@ -275,11 +276,13 @@ async function createPaymentsForScenarios(bookings: BookingWithPaymentData[]) {
 		data: paymentData,
 	});
 
-	console.log(`Successfully created payments for ${bookings.length} bookings`);
+	// Replaced console logging with logger
+  logger.log(`Successfully created payments for ${bookings.length} bookings`);
 }
 
 async function createDiversePaymentBookings(organizationId: number) {
-	console.log("\n=== Creating diverse payment event types and bookings ===");
+	// Replaced console logging with logger
+  logger.log("\n=== Creating diverse payment event types and bookings ===");
 
 	// Find the insights team
 	const insightsTeam = await prisma.team.findFirst({
@@ -290,9 +293,8 @@ async function createDiversePaymentBookings(organizationId: number) {
 	});
 
 	if (!insightsTeam) {
-		console.log(
-			"Insights team not found, skipping payment event type creation",
-		);
+		// Replaced console logging with logger
+  logger.log("Insights team not found, skipping payment event type creation");
 		return;
 	}
 
@@ -307,7 +309,8 @@ async function createDiversePaymentBookings(organizationId: number) {
 	});
 
 	if (insightsTeamMembers.length === 0) {
-		console.log("No team members found, skipping payment event type creation");
+		// Replaced console logging with logger
+  logger.log("No team members found, skipping payment event type creation");
 		return;
 	}
 
@@ -444,7 +447,8 @@ async function createDiversePaymentBookings(organizationId: number) {
 				skipDuplicates: true,
 			});
 
-			console.log(`Created event type: ${createdEventType.title}`);
+			// Replaced console logging with logger
+  logger.log(`Created event type: ${createdEventType.title}`);
 			eventType = createdEventType;
 		}
 
@@ -636,14 +640,12 @@ async function createDiversePaymentBookings(organizationId: number) {
 			});
 		}
 
-		console.log(
-			`Prepared ${count} bookings for scenario: ${scenario.scenarioName}`,
-		);
+		// Replaced console logging with logger
+  logger.log(`Prepared ${count} bookings for scenario: ${scenario.scenarioName}`);
 	}
 
-	console.log(
-		`Creating ${allScenarioBookings.length} bookings across all scenarios...`,
-	);
+	// Replaced console logging with logger
+  logger.log(`Creating ${allScenarioBookings.length} bookings across all scenarios...`);
 
 	// Insert all bookings
 	await prisma.booking.createMany({
@@ -704,14 +706,16 @@ async function createDiversePaymentBookings(organizationId: number) {
 	// Create payments with appropriate states for each scenario
 	await createPaymentsForScenarios(bookingsForPayments);
 
-	console.log(
-		`Successfully created ${allScenarioBookings.length} bookings with diverse payment scenarios`,
-	);
-	console.log("\nScenario distribution:");
+	// Replaced console logging with logger
+  logger.log(`Successfully created ${allScenarioBookings.length} bookings with diverse payment scenarios`);
+	// Replaced console logging with logger
+  logger.log("\nScenario distribution:");
 	scenarios.forEach(({ count, scenario }) => {
-		console.log(`  - ${scenario.scenarioName}: ${count} bookings`);
+		// Replaced console logging with logger
+  logger.log(`  - ${scenario.scenarioName}: ${count} bookings`);
 	});
-	console.log("=== Diverse payment bookings creation completed ===\n");
+	// Replaced console logging with logger
+  logger.log("=== Diverse payment bookings creation completed ===\n");
 }
 
 async function seedBookingAssignments() {
@@ -1127,7 +1131,8 @@ async function createPerformanceData() {
 
 	if (createExtraMembers) {
 		if (insightsTeam === null) {
-			console.log("This should not happen");
+			// Replaced console logging with logger
+  logger.log("This should not happen");
 			throw new Error("Insights team id is undefined or null");
 		}
 

@@ -39,10 +39,12 @@ const defaultMockOAuthManager = vi.fn().mockImplementation(function() {
     }),
     request: vi.fn().mockImplementation(function(fn) {
       if (useFullMockOAuthManagerRequest) {
-        console.log("OAuthManager.request full mock being used");
+        // Replaced console logging with logger
+  logger.log("OAuthManager.request full mock being used");
         return oAuthManagerRequestFullMock(fn);
       }
-      console.log("OAuthManager.request default mock being used");
+      // Replaced console logging with logger
+  logger.log("OAuthManager.request default mock being used");
       return {
         json: {
           calendars: [],

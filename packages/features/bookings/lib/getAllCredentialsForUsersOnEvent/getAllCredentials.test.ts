@@ -301,7 +301,8 @@ describe("getAllCredentialsIncludeServiceAccountKey", () => {
             },
           ]);
 
-          console.log(testEventType);
+          // Replaced console logging with logger
+  logger.log(testEventType);
 
           const credentials = await getAllCredentialsIncludeServiceAccountKey(
             {
@@ -627,7 +628,8 @@ describe("getAllCredentialsIncludeServiceAccountKey", () => {
             },
           ]);
 
-          console.log(testEventType);
+          // Replaced console logging with logger
+  logger.log(testEventType);
 
           const credentials = await getAllCredentialsIncludeServiceAccountKey(
             {

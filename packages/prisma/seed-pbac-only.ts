@@ -7,28 +7,40 @@
 import { createPBACOrganization } from "./seed-pbac-organization";
 
 async function main() {
-  console.log("🚀 Starting PBAC organization seed...");
+  // Replaced console logging with logger
+  logger.log("🚀 Starting PBAC organization seed...");
 
   try {
     const result = await createPBACOrganization();
 
-    console.log("\n🎉 PBAC Organization created successfully!");
-    console.log("\n📋 Summary:");
-    console.log(`Organization: ${result.organization.name} (${result.organization.slug})`);
-    console.log(`Custom Roles: ${Object.keys(result.customRoles).length}`);
-    console.log(`Users: ${result.users.length}`);
-    console.log(`Team: ${result.team?.name || "None"} (${result.team?.slug || "N/A"})`);
+    // Replaced console logging with logger
+  logger.log("\n🎉 PBAC Organization created successfully!");
+    // Replaced console logging with logger
+  logger.log("\n📋 Summary:");
+    // Replaced console logging with logger
+  logger.log(`Organization: ${result.organization.name} (${result.organization.slug})`);
+    // Replaced console logging with logger
+  logger.log(`Custom Roles: ${Object.keys(result.customRoles).length}`);
+    // Replaced console logging with logger
+  logger.log(`Users: ${result.users.length}`);
+    // Replaced console logging with logger
+  logger.log(`Team: ${result.team?.name || "None"} (${result.team?.slug || "N/A"})`);
 
-    console.log("\n🔐 Login Credentials:");
+    // Replaced console logging with logger
+  logger.log("\n🔐 Login Credentials:");
     result.users.forEach(({ user, role, customRole }) => {
       const roleText = customRole ? `${role} + ${customRole}` : role;
-      console.log(`  - ${user.name}: ${user.email} / password (${roleText})`);
+      // Replaced console logging with logger
+  logger.log(`  - ${user.name}: ${user.email} / password (${roleText})`);
     });
 
-    console.log(`\n🌐 Access URLs:`);
-    console.log(`Organization: ${process.env.NEXT_PUBLIC_WEBAPP_URL}/org/${result.organization.slug}`);
+    // Replaced console logging with logger
+  logger.log(`\n🌐 Access URLs:`);
+    // Replaced console logging with logger
+  logger.log(`Organization: ${process.env.NEXT_PUBLIC_WEBAPP_URL}/org/${result.organization.slug}`);
     if (result.team) {
-      console.log(`Team: ${process.env.NEXT_PUBLIC_WEBAPP_URL}/team/${result.team.slug}`);
+      // Replaced console logging with logger
+  logger.log(`Team: ${process.env.NEXT_PUBLIC_WEBAPP_URL}/team/${result.team.slug}`);
     }
   } catch (error) {
     console.error("❌ Error creating PBAC organization:", error);
@@ -38,7 +50,8 @@ async function main() {
 
 main()
   .then(() => {
-    console.log("\n✅ Seed completed successfully!");
+    // Replaced console logging with logger
+  logger.log("\n✅ Seed completed successfully!");
     process.exit(0);
   })
   .catch((error) => {

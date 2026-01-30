@@ -38,7 +38,8 @@ describe("embed-iframe.methods", async () => {
         isLinkReadyMock = vi.fn();
         isBookerReadyMock = vi.fn();
         ensureQueryParamsInUrlMock = vi.fn().mockImplementation(() => {
-            console.log("Fake ensureQueryParamsInUrl called");
+            // Replaced console logging with logger
+  logger.log("Fake ensureQueryParamsInUrl called");
             return {
                 stopEnsuringQueryParamsInUrl: vi.fn(),
             };
@@ -50,7 +51,8 @@ describe("embed-iframe.methods", async () => {
     afterEach(() => {
         vi.resetAllMocks();
         vi.resetModules();
-        console.log('After each of first describe');
+        // Replaced console logging with logger
+  logger.log('After each of first describe');
     });
 
     describe("methods.connect", async () => {

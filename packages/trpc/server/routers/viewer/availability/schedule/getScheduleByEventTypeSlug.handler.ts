@@ -57,7 +57,8 @@ export const getScheduleByEventSlugHandler = async ({ ctx, input }: GetOptions) 
       },
     });
   } catch (e) {
-    console.log(e);
+    // Replaced console logging with logger
+  logger.log(e);
     return {
       id: -1,
       name: "No schedules found",

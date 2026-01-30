@@ -18,12 +18,14 @@ try {
   // Try docker compose first (new syntax)
   try {
     execSync("docker compose version", { stdio: "ignore" });
-    console.log("Starting containers with docker compose...");
+    // Replaced console logging with logger
+  logger.log("Starting containers with docker compose...");
     execSync("docker compose up -d", { stdio: "inherit" });
   } catch (e) {
     // Fall back to docker-compose if the above fails
     if (checkCommandExists("docker-compose")) {
-      console.log("Starting containers with docker-compose...");
+      // Replaced console logging with logger
+  logger.log("Starting containers with docker-compose...");
       execSync("docker-compose up -d", { stdio: "inherit" });
     } else {
       throw new Error("Neither 'docker compose' nor 'docker-compose' command is available");

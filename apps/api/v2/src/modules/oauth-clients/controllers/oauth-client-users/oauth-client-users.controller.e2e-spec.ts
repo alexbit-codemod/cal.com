@@ -816,17 +816,20 @@ describe("OAuth Client Users Endpoints", () => {
       try {
         await userRepositoryFixture.delete(postResponseData.user.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       try {
         await userRepositoryFixture.delete(postResponseData2.user.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       try {
         await userRepositoryFixture.delete(platformAdmin.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       await app.close();
     });
@@ -1035,7 +1038,8 @@ describe("OAuth Client Users Endpoints", () => {
       try {
         await userRepositoryFixture.delete(postResponseData.user.id);
       } catch (e) {
-        console.log(e);
+        // Replaced console logging with logger
+  logger.log(e);
       }
       await app.close();
     });

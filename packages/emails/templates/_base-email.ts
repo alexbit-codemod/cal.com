@@ -42,9 +42,8 @@ export default class BaseEmail {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-expect-error
       setTestEmail(await this.getNodeMailerPayload());
-      console.log(
-        "Skipped Sending Email as process.env.NEXT_PUBLIC_UNIT_TESTS is set. Emails are available in globalThis.testEmails"
-      );
+      // Replaced console logging with logger
+  logger.log("Skipped Sending Email as process.env.NEXT_PUBLIC_UNIT_TESTS is set. Emails are available in globalThis.testEmails");
       return new Promise((r) => r("Skipped sendEmail for Unit Tests"));
     }
 
@@ -54,7 +53,8 @@ export default class BaseEmail {
     const to = "to" in payload ? (payload.to as string) : "";
 
     if (isSmsCalEmail(to)) {
-      console.log(`Skipped Sending Email to faux email: ${to}`);
+      // Replaced console logging with logger
+  logger.log(`Skipped Sending Email to faux email: ${to}`);
       return new Promise((r) => r(`Skipped Sending Email to faux email: ${to}`));
     }
 

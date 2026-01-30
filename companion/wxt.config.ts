@@ -106,11 +106,14 @@ export default defineConfig({
 
     // Log build mode for clarity
     if (isBuildForStore) {
-      console.log("\n🏪 STORE BUILD: Using https://companion.cal.com\n");
+      // Replaced console logging with logger
+  logger.log("\n🏪 STORE BUILD: Using https://companion.cal.com\n");
     } else if (isLocalDev) {
-      console.log(`\n🔧 DEV BUILD: Using ${devUrl}\n`);
+      // Replaced console logging with logger
+  logger.log(`\n🔧 DEV BUILD: Using ${devUrl}\n`);
     }
-    console.log(`🌐 Browser Target: ${browserTarget}\n`);
+    // Replaced console logging with logger
+  logger.log(`🌐 Browser Target: ${browserTarget}\n`);
 
     return {
       resolve: {

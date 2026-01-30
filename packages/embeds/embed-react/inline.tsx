@@ -21,7 +21,8 @@ function App() {
     setTimeout(setLoaded.bind(true), 1000);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const callback = (event: any) => {
-      console.log(event.detail);
+      // Replaced console logging with logger
+      logger.log(event.detail);
     };
     api.then((api) => {
       api("on", {
