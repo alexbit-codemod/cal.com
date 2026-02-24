@@ -14,22 +14,7 @@ import Shell from "~/shell/Shell";
 
 type OAuthClientOption = { label: string; value: string };
 
-const ManagedUsersView = () => {
-  const { t } = useLocale();
-  const { data: OAuthClientsQueryData, error, isLoading: isOAuthClientLoading } = useOAuthClients();
-
-  const oAuthClientOptions: OAuthClientOption[] = useMemo(
-    () =>
-      OAuthClientsQueryData.map((client) => ({
-        label: client.name,
-        value: client.id,
-      })),
-    [OAuthClientsQueryData]
-  );
-
-  const [oAuthClient, setOAuthClient] = useState<OAuthClientOption | null>(oAuthClientOptions[0] || null);
-
-  const ManagedUsersSkeletonLoader = () => {
+const ManagedUsersSkeletonLoader = () => {
     return (
       <div className="flex">
         <div className="w-1/4 p-4" />
@@ -56,6 +41,23 @@ const ManagedUsersView = () => {
       </div>
     );
   };
+
+const ManagedUsersView = () => {
+  const { t } = useLocale();
+  const { data: OAuthClientsQueryData, error, isLoading: isOAuthClientLoading } = useOAuthClients();
+
+  const oAuthClientOptions: OAuthClientOption[] = useMemo(
+    () =>
+      OAuthClientsQueryData.map((client) => ({
+        label: client.name,
+        value: client.id,
+      })),
+    [OAuthClientsQueryData]
+  );
+
+  const [oAuthClient, setOAuthClient] = useState<OAuthClientOption | null>(oAuthClientOptions[0] || null);
+
+  
 
   if (isOAuthClientLoading) {
     return <ManagedUsersSkeletonLoader />;

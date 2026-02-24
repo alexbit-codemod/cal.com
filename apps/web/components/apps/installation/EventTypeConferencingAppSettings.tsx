@@ -68,17 +68,19 @@ const LocationsWrapper = ({
   );
 };
 
-const EventTypeConferencingAppSettings = ({ eventType, slug }: { eventType: TEventType; slug: string }) => {
-  const locationsQuery = trpc.viewer.apps.locationOptions.useQuery({});
-  const { t } = useLocale();
-
-  const SkeletonLoader = () => {
+const SkeletonLoader = () => {
     return (
       <SkeletonContainer>
         <SkeletonText className="my-2 h-8 w-full" />
       </SkeletonContainer>
     );
   };
+
+const EventTypeConferencingAppSettings = ({ eventType, slug }: { eventType: TEventType; slug: string }) => {
+  const locationsQuery = trpc.viewer.apps.locationOptions.useQuery({});
+  const { t } = useLocale();
+
+  
 
   return (
     <QueryCell

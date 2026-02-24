@@ -136,6 +136,14 @@ const ConditionalLink = ({
   );
 };
 
+const RequestSentMessage = () => {
+    return (
+      <Badge startIcon="send" size="md" variant="gray" data-testid="request_reschedule_sent">
+        {t("reschedule_request_sent")}
+      </Badge>
+    );
+  };
+
 function BookingListItem(booking: BookingItemProps) {
   const parsedBooking = buildParsedBooking(booking);
   const itemRef = useRef<HTMLDivElement>(null);
@@ -239,13 +247,7 @@ function BookingListItem(booking: BookingItemProps) {
     t,
   } as BookingActionContext;
 
-  const RequestSentMessage = () => {
-    return (
-      <Badge startIcon="send" size="md" variant="gray" data-testid="request_reschedule_sent">
-        {t("reschedule_request_sent")}
-      </Badge>
-    );
-  };
+  
 
   const bookingYear = dayjs(booking.startTime).year();
   const currentYear = dayjs().year();
