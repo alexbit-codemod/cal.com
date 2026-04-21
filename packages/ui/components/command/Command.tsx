@@ -4,7 +4,7 @@ import * as React from "react";
 
 import classNames from "@calcom/ui/classNames";
 
-import { Dialog, DialogContent } from "../dialog";
+import { Dialog, DialogContent } from "../dialog/Dialog";
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
