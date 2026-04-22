@@ -6,8 +6,8 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { useUrlMatchesCurrentUrl } from "@calcom/lib/hooks/useUrlMatchesCurrentUrl";
 import classNames from "@calcom/ui/classNames";
 
-import { Icon } from "../../icon";
-import type { IconName } from "../../icon";
+import Icon from "../../icon/Icon";
+import { IconName } from "../../icon/icon-names";
 
 export type VerticalTabItemProps = {
   name: string;
