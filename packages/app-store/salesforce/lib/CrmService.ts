@@ -21,7 +21,7 @@ import { CredentialRepository } from "@calcom/features/credentials/repositories/
 import { getRedisService } from "@calcom/features/di/containers/Redis";
 
 import type { ParseRefreshTokenResponse } from "../../_utils/oauth/parseRefreshTokenResponse";
-import { SalesforceRoutingTraceService } from "./tracing";
+import { SalesforceRoutingTraceService } from "./tracing/SalesforceRoutingTraceService";
 import parseRefreshTokenResponse from "../../_utils/oauth/parseRefreshTokenResponse";
 import { findFieldValueByIdentifier } from "../../routing-forms/lib/findFieldValueByIdentifier";
 import { default as appMeta } from "../config.json";
