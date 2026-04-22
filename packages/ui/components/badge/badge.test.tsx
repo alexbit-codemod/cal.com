@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { vi } from "vitest";
 
-import { Icon } from "../icon";
+import Icon from "../icon/Icon";
 import { Badge, badgeStyles } from "./Badge";
 
 describe("Badge", () => {
