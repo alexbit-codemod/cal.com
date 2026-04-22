@@ -6,7 +6,7 @@ import { safeStringify } from "@calcom/lib/safeStringify";
 import type { Contact } from "@calcom/types/CrmService";
 
 import { SalesforceRecordEnum } from "../enums";
-import { SalesforceRoutingTraceService } from "../tracing";
+import { SalesforceRoutingTraceService } from "../tracing/SalesforceRoutingTraceService";
 import getAllPossibleWebsiteValuesFromEmailDomain from "../utils/getAllPossibleWebsiteValuesFromEmailDomain";
 import getDominantAccountId from "../utils/getDominantAccountId";
 import { GetAccountRecordsForRRSkip } from "./documents/queries";
