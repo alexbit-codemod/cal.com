@@ -2,7 +2,8 @@ import type { TFunction } from "i18next";
 
 import { APP_NAME, WEBAPP_URL, IS_PRODUCTION } from "@calcom/lib/constants";
 
-import { V2BaseEmailHtml, CallToAction } from "../components";
+import { V2BaseEmailHtml } from "../components/V2BaseEmailHtml";
+import { CallToAction } from "../components/CallToAction";
 
 type TeamInvite = {
   language: TFunction;
