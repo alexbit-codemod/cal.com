@@ -1,17 +1,10 @@
 import type { FC } from "react";
 import React from "react";
 
-import type { ButtonBaseProps } from "../button";
-import { Button } from "../button";
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuPortal,
-  DropdownMenuTrigger,
-} from "../dropdown";
-import type { IconName } from "../icon";
+import { ButtonBaseProps } from "../button/Button";
+import { Button } from "../button/Button";
+import { Dropdown, DropdownItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuPortal, DropdownMenuTrigger } from "../dropdown/Dropdown";
+import { IconName } from "../icon/icon-names";
 
 export type ActionType = {
   id: string;
