@@ -1,4 +1,5 @@
-import { BaseEmailHtml, Info } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
+import { Info } from "../components/Info";
 
 export interface Feedback {
   username: string;

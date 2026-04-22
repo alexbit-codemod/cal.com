@@ -1,4 +1,4 @@
-import { BaseEmailHtml } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
 import type { OrganizerScheduledEmail } from "./OrganizerScheduledEmail";
 
 export const OrganizerPaymentRefundFailedEmail = (

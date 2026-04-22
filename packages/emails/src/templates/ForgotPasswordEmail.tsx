@@ -2,7 +2,8 @@ import type { TFunction } from "i18next";
 
 import { APP_NAME, SUPPORT_MAIL_ADDRESS } from "@calcom/lib/constants";
 
-import { BaseEmailHtml, CallToAction } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
+import { CallToAction } from "../components/CallToAction";
 
 export type PasswordReset = {
   language: TFunction;
