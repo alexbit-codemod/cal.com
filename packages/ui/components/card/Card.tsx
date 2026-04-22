@@ -7,7 +7,7 @@ import React from "react";
 
 import classNames from "@calcom/ui/classNames";
 
-import { Button } from "../button";
+import { Button } from "../button/Button";
 
 const cvaCardTypeByVariant = cva("", {
   // Variants won't have any style by default. Style will only be applied if the variants are combined.
