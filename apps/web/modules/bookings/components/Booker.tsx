@@ -39,7 +39,7 @@ import StickyBox from "react-sticky-box";
 import { Toaster } from "sonner";
 import { shallow } from "zustand/shallow";
 import { AvailableTimeSlots } from "./AvailableTimeSlots";
-import { BookEventForm } from "./BookEventForm";
+import { BookEventForm } from "./BookEventForm/BookEventForm";
 import { BookFormAsModal } from "./BookEventForm/BookFormAsModal";
 import { DatePicker } from "./DatePicker";
 import { DryRunMessage } from "./DryRunMessage";

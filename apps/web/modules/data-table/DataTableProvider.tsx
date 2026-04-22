@@ -3,15 +3,10 @@
 import type { SortingState, OnChangeFn, VisibilityState, ColumnSizingState } from "@tanstack/react-table";
 import { createContext, useMemo } from "react";
 
-import {
-  DataTableStateProvider,
-  DataTableSegmentProvider,
-  DataTableFiltersProvider,
-  useDataTableState,
-  useDataTableSegment,
-  useDataTableFilters,
-} from "./contexts";
-import type { ActiveFiltersValidatorState } from "./contexts";
+import { DataTableStateProvider, useDataTableState } from "./contexts/DataTableStateContext";
+import { DataTableSegmentProvider, useDataTableSegment } from "./contexts/DataTableSegmentContext";
+import { DataTableFiltersProvider, useDataTableFilters } from "./contexts/DataTableFiltersContext";
+import { ActiveFiltersValidatorState } from "./contexts/DataTableStateContext";
 import type {
   FilterValue,
   FilterSegmentOutput,

@@ -18,7 +18,10 @@ import dynamic from "next/dynamic";
 import { useEffect, useMemo } from "react";
 import { shallow } from "zustand/shallow";
 import i18nConfigration from "../../../../../i18n.json";
-import { EventDetails, EventMembers, EventMetaSkeleton, EventTitle } from "./event-meta";
+import { EventDetails } from "./event-meta/Details";
+import { EventMembers } from "./event-meta/Members";
+import { EventMetaSkeleton } from "./event-meta/Skeleton";
+import { EventTitle } from "./event-meta/Title";
 import { ScrollableWithGradients } from "./ScrollableWithGradients";
 
 const WebTimezoneSelect = dynamic(
