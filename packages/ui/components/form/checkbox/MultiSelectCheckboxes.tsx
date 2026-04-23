@@ -13,7 +13,7 @@ import type { Props } from "react-select";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import classNames from "@calcom/ui/classNames";
 
-import { Select } from "../select";
+import { Select } from "../select/Select";
 
 export type Option = {
   value: string;
