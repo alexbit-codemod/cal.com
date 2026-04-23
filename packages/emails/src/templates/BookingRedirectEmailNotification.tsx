@@ -1,5 +1,5 @@
 import type { IBookingRedirect } from "../../lib/types/booking-redirect-types";
-import { BaseEmailHtml } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
 
 export const BookingRedirectEmailNotification = (
   props: IBookingRedirect & Partial<React.ComponentProps<typeof BaseEmailHtml>>

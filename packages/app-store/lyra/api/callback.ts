@@ -5,7 +5,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";
 import createOAuthAppCredential from "../../_utils/oauth/createOAuthAppCredential";
 import { decodeOAuthState } from "../../_utils/oauth/decodeOAuthState";
-import { getLyraAppKeys, LYRA_API_URL } from "../lib";
+import { getLyraAppKeys } from "../lib/getLyraAppKeys";
+import { LYRA_API_URL } from "../lib/constants";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = decodeOAuthState(req);

@@ -3,16 +3,14 @@ import { formatPrice } from "@calcom/lib/currencyConversions";
 import { TimeFormat } from "@calcom/lib/timeFormat";
 import type { CalendarEvent, Person } from "@calcom/types/Calendar";
 import type { TFunction } from "i18next";
-import {
-  AppsStatus,
-  BaseEmailHtml,
-  Info,
-  LocationInfo,
-  ManageLink,
-  UserFieldsResponses,
-  WhenInfo,
-  WhoInfo,
-} from "../components";
+import { AppsStatus } from "../components/AppsStatus";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
+import { Info } from "../components/Info";
+import { LocationInfo } from "../components/LocationInfo";
+import { ManageLink } from "../components/ManageLink";
+import { UserFieldsResponses } from "../components/UserFieldsResponses";
+import { WhenInfo } from "../components/WhenInfo";
+import { WhoInfo } from "../components/WhoInfo";
 import { PersonInfo } from "../components/WhoInfo";
 
 export const BaseScheduledEmail = (
