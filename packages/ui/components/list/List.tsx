@@ -4,7 +4,7 @@ import { createElement } from "react";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import classNames from "@calcom/ui/classNames";
 
-import { Badge } from "../badge";
+import { Badge } from "../badge/Badge";
 
 export type ListProps = {
   roundContainer?: boolean;
