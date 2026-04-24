@@ -4,8 +4,8 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
 
 import classNames from "../../../classNames";
-import { Dropdown, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../dropdown";
-import { Input } from "../../form";
+import { Dropdown, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../dropdown/Dropdown";
+import { Input } from "../../form/inputs/TextField";
 import { ChevronDownIcon, ChevronUpIcon } from "@coss/ui/icons";
 
 interface IAddVariablesDropdown {
