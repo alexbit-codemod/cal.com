@@ -22,7 +22,8 @@ import {
 } from "@coss/ui/shared/app-header";
 import { WebhookIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { CreateNewWebhookButton, WebhookListItem } from "../components";
+import CreateNewWebhookButton from "../components/CreateNewWebhookButton";
+import WebhookListItem from "../components/WebhookListItem";
 
 type WebhooksByViewer = RouterOutputs["viewer"]["webhook"]["getByViewer"];
 
