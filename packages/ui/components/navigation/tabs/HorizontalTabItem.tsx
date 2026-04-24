@@ -4,9 +4,9 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { useUrlMatchesCurrentUrl } from "@calcom/lib/hooks/useUrlMatchesCurrentUrl";
 import classNames from "@calcom/ui/classNames";
 
-import { Avatar } from "../../avatar";
-import { Icon } from "../../icon";
-import type { IconName } from "../../icon";
+import { Avatar } from "../../avatar/Avatar";
+import Icon from "../../icon/Icon";
+import { IconName } from "../../icon/icon-names";
 
 export type HorizontalTabItemProps = {
   name: string;

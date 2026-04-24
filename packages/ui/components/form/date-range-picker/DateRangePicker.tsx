@@ -4,7 +4,7 @@ import classNames from "@calcom/ui/classNames";
 import * as Popover from "@radix-ui/react-popover";
 import { format, isBefore, isSameDay } from "date-fns";
 import { type HTMLAttributes, useMemo, useState } from "react";
-import { Button } from "../../button";
+import { Button } from "../../button/Button";
 import { Calendar } from "./Calendar";
 import { calculateNewDateRange } from "./dateRangeLogic";
 
