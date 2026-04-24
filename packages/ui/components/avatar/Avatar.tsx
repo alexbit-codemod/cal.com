@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AVATAR_FALLBACK } from "@calcom/lib/constants";
 import classNames from "@calcom/ui/classNames";
 
-import { Tooltip } from "../tooltip";
+import Tooltip from "../tooltip/Tooltip";
 
 type Maybe<T> = T | null | undefined;
 
