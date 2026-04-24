@@ -11,7 +11,7 @@ import logger from "@calcom/lib/logger";
 import { SchedulingType } from "@calcom/prisma/enums";
 
 import { managedEventManualReassignment } from "../managedEventManualReassignment";
-import { validateManagedEventReassignment } from "../utils";
+import { validateManagedEventReassignment } from "../utils/validateManagedEventReassignment";
 
 interface ManagedEventReassignmentParams {
   bookingId: number;
