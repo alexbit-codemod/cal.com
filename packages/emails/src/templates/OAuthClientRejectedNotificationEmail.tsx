@@ -2,7 +2,8 @@ import type { TFunction } from "i18next";
 
 import { APP_NAME, WEBAPP_URL } from "@calcom/lib/constants";
 
-import { BaseEmailHtml, CallToAction } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
+import { CallToAction } from "../components/CallToAction";
 
 type OAuthClientRejectedNotification = {
   language: TFunction;
