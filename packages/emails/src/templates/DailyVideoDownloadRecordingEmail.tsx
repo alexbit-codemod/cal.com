@@ -2,7 +2,8 @@ import type { TFunction } from "i18next";
 
 import { WEBAPP_URL, APP_NAME, COMPANY_NAME } from "@calcom/lib/constants";
 
-import { V2BaseEmailHtml, CallToAction } from "../components";
+import { V2BaseEmailHtml } from "../components/V2BaseEmailHtml";
+import { CallToAction } from "../components/CallToAction";
 
 interface DailyVideoDownloadRecordingEmailProps {
   language: TFunction;

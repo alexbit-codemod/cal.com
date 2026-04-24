@@ -3,7 +3,8 @@ import type { TFunction } from "i18next";
 import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 
-import { BaseEmailHtml, CallToAction } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
+import { CallToAction } from "../components/CallToAction";
 
 export const SlugReplacementEmail = (
   props: {
