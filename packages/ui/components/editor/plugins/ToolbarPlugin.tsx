@@ -27,8 +27,8 @@ import {
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-import { Button } from "../../button";
-import { Dropdown, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../dropdown";
+import { Button } from "../../button/Button";
+import { Dropdown, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../dropdown/Dropdown";
 import { ChevronDownIcon, ChevronUpIcon } from "@coss/ui/icons";
 import type { TextEditorProps } from "../types";
 import { AddVariablesDropdown } from "./AddVariablesDropdown";
