@@ -2,7 +2,8 @@ import type { TFunction } from "i18next";
 
 import ServerTrans from "@calcom/lib/components/ServerTrans";
 
-import { BaseEmailHtml, CallToAction } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
+import { CallToAction } from "../components/CallToAction";
 
 export type OrganizationAdminNoSlotsEmailInput = {
   language: TFunction;
