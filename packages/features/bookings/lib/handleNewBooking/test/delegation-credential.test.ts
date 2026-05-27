@@ -46,6 +46,7 @@ import { MembershipRole } from "@calcom/prisma/enums";
 import { test } from "@calcom/testing/lib/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
+import logger from "@calcom/lib/logger";
 
 vi.mock("@calcom/app-store/calendar.services.generated", () => {
   class MockGoogleCalendarService {
@@ -646,7 +647,7 @@ describe("handleNewBooking", () => {
           })
         );
 
-        console.log("createdBooking", createdBooking);
+        logger.log("createdBooking", createdBooking);
 
         await expectBookingToBeInDatabase({
           description: "",

@@ -39,7 +39,7 @@ export async function generateGoogleCalendarAccessToken() {
 
     const json = await response.json();
     if (json.access_token) {
-      console.log("Access Token:", json.access_token);
+      logger.log("Access Token:", json.access_token);
       return json.access_token;
     } else {
       console.error("Failed to retrieve access token:", json);
@@ -75,8 +75,8 @@ export async function generateZoomAccessToken() {
 
     const json = await response.json();
     if (json.access_token) {
-      console.log("New Access Token:", json.access_token);
-      console.log("New Refresh Token:", json.refresh_token); // Save this refresh token securely
+      logger.log("New Access Token:", json.access_token);
+      logger.log("New Refresh Token:", json.refresh_token); // Save this refresh token securely
       return json.access_token; // You might also want to return the new refresh token if applicable
     } else {
       console.error("Failed to refresh access token:", json);

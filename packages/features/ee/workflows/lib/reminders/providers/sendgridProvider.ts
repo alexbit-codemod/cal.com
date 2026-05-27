@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 import { addHTMLStyles } from "@calcom/emails/templates/workflow-email";
 import { SENDER_NAME } from "@calcom/lib/constants";
 import { setTestEmail } from "@calcom/lib/testEmails";
+import logger from "@calcom/lib/logger";
 
 const testMode = process.env.NEXT_PUBLIC_IS_E2E || process.env.INTEGRATION_TEST_MODE;
 
@@ -55,7 +56,7 @@ export function sendSendgridMail(
         html: mailData.html || "",
       });
     }
-    console.log(
+    logger.log(
       "Skipped Sending Email as process.env.NEXT_PUBLIC_IS_E2E or process.env.INTEGRATION_TEST_MODE is set. Emails are available in globalThis.testEmails"
     );
 

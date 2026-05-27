@@ -7,6 +7,7 @@ import { BaseAppFork, generateAppFiles, getSlugFromAppName } from "./core";
 import type { SupportedCommands } from "./types";
 import Templates from "./utils/templates";
 import { validateCreateAppFlags } from "./validateCreateAppFlags";
+import logger from "@calcom/lib/logger";
 
 const cli = meow(
   `
@@ -96,7 +97,7 @@ if (
 ) {
   slug = cli.flags.slug;
   if (!slug) {
-    console.log("--slug is required");
+    logger.log("--slug is required");
     cli.showHelp(0);
   }
 }
@@ -139,16 +140,16 @@ if (isCreateCommand && appName && description && category) {
 
       await generateAppFiles();
 
-      console.log(`\nApp created successfully!`);
-      console.log(`Slug: ${appSlug}`);
-      console.log(`App URL: http://localhost:3000/apps/${appSlug}`);
-      console.log(`Name: ${appName}`);
-      console.log(`Description: ${description}`);
-      console.log(`Category: ${category}`);
+      logger.log(`\nApp created successfully!`);
+      logger.log(`Slug: ${appSlug}`);
+      logger.log(`App URL: http://localhost:3000/apps/${appSlug}`);
+      logger.log(`Name: ${appName}`);
+      logger.log(`Description: ${description}`);
+      logger.log(`Category: ${category}`);
       if (externalLinkUrl) {
-        console.log(`External Link: ${externalLinkUrl}`);
+        logger.log(`External Link: ${externalLinkUrl}`);
       }
-      console.log(
+      logger.log(
         `\nNext Step: Enable the app from http://localhost:3000/settings/admin/apps as an admin user.`
       );
     } catch (error) {

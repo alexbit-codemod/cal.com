@@ -1,4 +1,5 @@
 import { UiConfig } from "../types";
+import logger from "@calcom/lib/logger";
 
 /**
  * Maps old CSS variable names to new Tailwind v4 variable names.
@@ -52,7 +53,7 @@ export function mapOldToNewCssVars(
                 mapped[theme][varName] = value
                 continue;
             }
-            console.log("Mapped variable:", varName, "to", newVarName);
+            logger.log("Mapped variable:", varName, "to", newVarName);
             mapped[theme][newVarName] = value;
         }
     }

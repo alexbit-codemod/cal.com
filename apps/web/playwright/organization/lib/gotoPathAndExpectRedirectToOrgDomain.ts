@@ -18,7 +18,7 @@ export async function gotoPathAndExpectRedirectToOrgDomain({
     throw new Error("Org slug is not defined");
   }
   page.goto(path).catch((e) => {
-    console.log("Expected navigation error to happen");
+    logger.log("Expected navigation error to happen");
   });
 
   const orgSlug = org.slug;
@@ -27,7 +27,7 @@ export async function gotoPathAndExpectRedirectToOrgDomain({
     page.on("request", (request) => {
       if (request.isNavigationRequest()) {
         const requestedUrl = request.url();
-        console.log("Requested navigation to", requestedUrl);
+        logger.log("Requested navigation to", requestedUrl);
         // Resolve on redirection to org domain
         if (requestedUrl.includes(orgSlug)) {
           resolve(requestedUrl);

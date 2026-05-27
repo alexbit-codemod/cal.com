@@ -2,6 +2,7 @@ import { vi, beforeEach } from "vitest";
 import { mockDeep, mockReset } from "vitest-mock-extended";
 
 import type { OrganizationRepository } from "@calcom/features/ee/organizations/repositories/OrganizationRepository";
+import logger from "@calcom/lib/logger";
 
 const mockedSingleton = mockDeep<OrganizationRepository>();
 
@@ -23,7 +24,7 @@ export const organizationScenarios = {
             return org;
           }
           const errorMsg = "Mock Error-fakeReturnOrganization: Unhandled input";
-          console.log(errorMsg, { arg, forInput });
+          logger.log(errorMsg, { arg, forInput });
           throw new Error(errorMsg);
         });
       },

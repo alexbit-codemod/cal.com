@@ -117,7 +117,7 @@ export const OrganizationInviteEmailView = ({ userEmail }: OrganizationInviteEma
   };
 
   const handleGoogleWorkspaceConnect = () => {
-    console.log("Connect Google Workspace");
+    logger.log("Connect Google Workspace");
   };
 
   const handleUploadCSV = () => {
@@ -125,7 +125,7 @@ export const OrganizationInviteEmailView = ({ userEmail }: OrganizationInviteEma
   };
 
   const handleCopyInviteLink = () => {
-    console.log("Copy invite link - disabled");
+    logger.log("Copy invite link - disabled");
   };
 
   const handleInviteViaEmail = () => {

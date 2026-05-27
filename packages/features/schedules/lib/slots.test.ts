@@ -3,6 +3,7 @@ import dayjs from "@calcom/dayjs";
 import type { DateRange } from "@calcom/features/schedules/lib/date-ranges";
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import getSlots from "./slots";
+import logger from "@calcom/lib/logger";
 
 let dateRangesNextDay: DateRange[];
 
@@ -393,7 +394,7 @@ describe("Tests the slots function performance", () => {
 
     expect(executionTimeInMs).toBeLessThan(3000); // less than 3 seconds for 2000 date ranges
 
-    console.log(
+    logger.log(
       `Performance test completed in ${executionTimeInMs}ms with ${result.length} slots generated from ${dateRanges.length} date ranges`
     );
   });

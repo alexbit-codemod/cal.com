@@ -4,6 +4,7 @@ import { mockReset, mockDeep } from "vitest-mock-extended";
 import type { MembershipRole } from "@calcom/prisma/enums";
 
 import type * as inviteMemberUtils from "../utils";
+import logger from "@calcom/lib/logger";
 
 vi.mock("../utils", async () => {
   return inviteMemberUtilsMock;
@@ -33,7 +34,7 @@ export const inviteMemberutilsScenarios = {
         if (forInput.teamId === teamId) {
           return fakedVal;
         }
-        console.log("Mock Error: Unhandled input", { teamId });
+        logger.log("Mock Error: Unhandled input", { teamId });
         throw new Error(`Mock Error: Unhandled input. teamId: ${teamId}`);
       });
       return fakedVal;

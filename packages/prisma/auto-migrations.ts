@@ -3,6 +3,7 @@ import { exec as execCb } from "node:child_process";
 import { promisify } from "node:util";
 
 import { isPrismaAvailableCheck } from "./is-prisma-available-check";
+import logger from "@calcom/lib/logger";
 
 dotEnv.config({ path: "../../.env" });
 
@@ -36,7 +37,7 @@ async function main(): Promise<void> {
       ...process.env,
     },
   });
-  console.log(stdout);
+  logger.log(stdout);
   console.error(stderr);
 }
 

@@ -9,7 +9,7 @@ export const useIsQuickAvailabilityCheckFeatureEnabled = () => {
   );
 
   useEffect(() => {
-    console.log("QuickAvailabilityCheck feature enabled:", isQuickAvailabilityCheckFeatureEnabledRef.current);
+    logger.log("QuickAvailabilityCheck feature enabled:", isQuickAvailabilityCheckFeatureEnabledRef.current);
   }, []);
 
   return isQuickAvailabilityCheckFeatureEnabledRef.current;

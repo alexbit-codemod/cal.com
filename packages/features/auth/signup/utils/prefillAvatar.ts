@@ -4,6 +4,7 @@ import { uploadAvatar } from "@calcom/lib/server/avatar";
 import { resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
 import prisma from "@calcom/prisma";
 import type { Prisma } from "@calcom/prisma/client";
+import logger from "@calcom/lib/logger";
 
 interface IPrefillAvatar {
   email: string;
@@ -14,7 +15,7 @@ async function downloadImageDataFromUrl(url: string) {
     const response = await fetch(url);
 
     if (!response.ok) {
-      console.log("Error fetching image from: ", url);
+      logger.log("Error fetching image from: ", url);
       return null;
     }
 
@@ -23,7 +24,7 @@ async function downloadImageDataFromUrl(url: string) {
 
     return base64Image;
   } catch (error) {
-    console.log(error);
+    logger.log(error);
     return null;
   }
 }

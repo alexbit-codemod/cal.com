@@ -78,7 +78,7 @@ test.describe("Booking Race Condition Prevention", () => {
 
     expect(bookingResults.isRaceConditionPrevented).toBe(true);
 
-    console.log("Race condition prevention test results:", {
+    logger.log("Race condition prevention test results:", {
       totalBookings: bookingResults.bookings.length,
       responseStatuses: bookingResults.responseStatuses,
       sameHostSelected: bookingResults.sameHostSelected,

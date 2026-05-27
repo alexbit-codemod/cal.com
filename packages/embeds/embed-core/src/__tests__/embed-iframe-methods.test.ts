@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 import { fakeCurrentDocumentUrl, nextTick } from "../embed-iframe/__tests__/test-utils";
+import logger from "@calcom/lib/logger";
 
 describe("embed-iframe.methods", async () => {
     let methods: typeof import("../embed-iframe").methods;
@@ -38,7 +39,7 @@ describe("embed-iframe.methods", async () => {
         isLinkReadyMock = vi.fn();
         isBookerReadyMock = vi.fn();
         ensureQueryParamsInUrlMock = vi.fn().mockImplementation(() => {
-            console.log("Fake ensureQueryParamsInUrl called");
+            logger.log("Fake ensureQueryParamsInUrl called");
             return {
                 stopEnsuringQueryParamsInUrl: vi.fn(),
             };
@@ -50,7 +51,7 @@ describe("embed-iframe.methods", async () => {
     afterEach(() => {
         vi.resetAllMocks();
         vi.resetModules();
-        console.log('After each of first describe');
+        logger.log('After each of first describe');
     });
 
     describe("methods.connect", async () => {

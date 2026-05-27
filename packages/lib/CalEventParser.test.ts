@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import type { CalendarEvent } from "@calcom/types/Calendar";
 
 import { getRichDescription } from "./CalEventParser";
+import logger from "@calcom/lib/logger";
 
 describe("getRichDescription", () => {
   const t = ((key: string, _args?: Record<string, unknown>) => key) as TFunction;
@@ -35,8 +36,8 @@ describe("getRichDescription", () => {
   it("should format description without extra whitespace", () => {
     const description = getRichDescription(mockCalEvent, t);
 
-    console.log("Description:", description);
-    console.log(
+    logger.log("Description:", description);
+    logger.log(
       "Lines:",
       description.split("\n").map((line) => `"${line}"`)
     );

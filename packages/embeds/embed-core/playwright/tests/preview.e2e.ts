@@ -1,6 +1,7 @@
 import { expect } from "@playwright/test";
 
 import { test } from "@calcom/web/playwright/lib/fixtures";
+import logger from "@calcom/lib/logger";
 
 test.describe("Preview", () => {
   test("Preview - embed-core should load if correct embedLibUrl is provided", async ({ page }) => {
@@ -35,7 +36,7 @@ test.describe("Preview", () => {
 
     const failedRequestUrl = await new Promise<string>((resolve) =>
       page.on("requestfailed", (request) => {
-        console.log("request failed");
+        logger.log("request failed");
         resolve(request.url());
       })
     );

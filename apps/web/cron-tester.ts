@@ -13,11 +13,11 @@ async function fetchCron(endpoint: string) {
     },
   });
   const json = await res.json();
-  console.log(endpoint, json);
+  logger.log(endpoint, json);
 }
 
 try {
-  console.log("⏳ Running cron endpoints");
+  logger.log("⏳ Running cron endpoints");
   new CronJob(
     // Each 5 seconds
     "*/5 * * * * *",

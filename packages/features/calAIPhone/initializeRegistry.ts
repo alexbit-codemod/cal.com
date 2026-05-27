@@ -1,6 +1,7 @@
 import { AIPhoneServiceRegistry } from "./AIPhoneServiceRegistry";
 import { AIPhoneServiceProviderType } from "./interfaces/AIPhoneService.interface";
 import { RetellAIPhoneServiceProviderFactory } from "./providers/retellAI";
+import logger from "@calcom/lib/logger";
 
 /**
  * Initialize the AI Phone Service Registry
@@ -24,7 +25,7 @@ export function initializeAIPhoneServiceRegistry(): void {
 
   // Log initialization details in development
   if (process.env.NODE_ENV !== "production") {
-    console.log("AI Phone Service Registry initialized:", {
+    logger.log("AI Phone Service Registry initialized:", {
       defaultProvider: AIPhoneServiceRegistry.getDefaultProvider(),
       availableProviders: AIPhoneServiceRegistry.getAvailableProviders(),
     });

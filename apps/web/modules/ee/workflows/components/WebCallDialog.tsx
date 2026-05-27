@@ -112,18 +112,18 @@ export function WebCallDialog({
       });
 
       retellWebClient.on("agent_start_talking", () => {
-        console.log("Agent started talking");
+        logger.log("Agent started talking");
       });
 
       retellWebClient.on("agent_stop_talking", () => {
-        console.log("Agent stopped talking");
+        logger.log("Agent stopped talking");
       });
 
       retellWebClient.on("update", (update: { transcript?: Array<{ role: string; content: string }> }) => {
-        console.log("📝 Received update event:", update);
+        logger.log("📝 Received update event:", update);
 
         if (update.transcript && Array.isArray(update.transcript)) {
-          console.log("📜 Transcript array received:", update.transcript);
+          logger.log("📜 Transcript array received:", update.transcript);
 
           try {
             const newEntries: TranscriptEntry[] = update.transcript
@@ -137,20 +137,20 @@ export function WebCallDialog({
                   text: entry.content,
                   timestamp: new Date(),
                 };
-                console.log("✅ Mapped transcript entry:", mappedEntry);
+                logger.log("✅ Mapped transcript entry:", mappedEntry);
                 return mappedEntry;
               })
               .filter(Boolean) as TranscriptEntry[];
 
-            console.log("🔄 Setting transcript with entries:", newEntries.length, "entries");
-            console.log("📋 Current transcript state has:", transcript.length, "entries");
+            logger.log("🔄 Setting transcript with entries:", newEntries.length, "entries");
+            logger.log("📋 Current transcript state has:", transcript.length, "entries");
 
             setTranscript(newEntries);
           } catch (error) {
             console.error("❌ Error processing transcript update:", error);
           }
         } else {
-          console.log(
+          logger.log(
             "🚫 No transcript data in update or transcript is not an array:",
             typeof update.transcript
           );

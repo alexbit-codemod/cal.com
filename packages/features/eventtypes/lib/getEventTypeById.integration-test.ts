@@ -7,9 +7,10 @@ import i18nMock from "@calcom/testing/lib/__mocks__/libServerI18n";
 import { describe, test, expect, beforeEach, afterEach, vi } from "vitest";
 
 import { getRawEventType } from "./getEventTypeById";
+import logger from "@calcom/lib/logger";
 
 export function mockNoTranslations() {
-  console.log("Mocking i18n.getTranslation to return identity function");
+  logger.log("Mocking i18n.getTranslation to return identity function");
   i18nMock.getTranslation.mockImplementation(() => {
     return new Promise((resolve) => {
       const identityFn = (key: string) => key;

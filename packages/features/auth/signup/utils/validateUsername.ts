@@ -1,5 +1,6 @@
 import { getOrgUsernameFromEmail } from "@calcom/features/auth/signup/utils/getOrgUsernameFromEmail";
 import prisma from "@calcom/prisma";
+import logger from "@calcom/lib/logger";
 
 export const getUsernameForOrgMember = async ({
   email,
@@ -102,7 +103,7 @@ export const validateAndGetCorrectedUsernameInTeam = async (
       },
     });
 
-    console.log("validateAndGetCorrectedUsernameInTeam", {
+    logger.log("validateAndGetCorrectedUsernameInTeam", {
       teamId,
       team,
     });

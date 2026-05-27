@@ -81,7 +81,7 @@ const renderComponent = ({
     const [assignAllTeamMembers, setAssignAllTeamMembers] = React.useState(
       componentProps.assignAllTeamMembers
     );
-    console.log(methods.getValues());
+    logger.log(methods.getValues());
     return (
       <FormProvider {...methods}>
         {React.cloneElement(children as React.ReactElement, {

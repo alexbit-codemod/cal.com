@@ -2,6 +2,7 @@ import prismock from "@calcom/testing/lib/__mocks__/prisma";
 import { encryptServiceAccountKey } from "@calcom/lib/server/serviceAccountKey";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { DelegationCredentialRepository } from "./DelegationCredentialRepository";
+import logger from "@calcom/lib/logger";
 
 const mockOrganizationRepository = {
   findByMemberEmail: vi.fn(),
@@ -19,7 +20,7 @@ vi.mock("@calcom/lib/crypto", async (importOriginal) => {
   return {
     ...actual,
     symmetricEncrypt: vi.fn((serviceAccountKey) => {
-      console.log({ mockEncrypted: serviceAccountKey });
+      logger.log({ mockEncrypted: serviceAccountKey });
       return `encrypted(${serviceAccountKey})`;
     }),
     symmetricDecrypt: vi.fn((serviceAccountKey) => {

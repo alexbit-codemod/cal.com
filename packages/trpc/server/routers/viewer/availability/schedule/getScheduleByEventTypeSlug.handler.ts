@@ -3,6 +3,7 @@ import type { PrismaClient } from "@calcom/prisma";
 import type { TrpcSessionUser } from "../../../../types";
 import { getHandler } from "./get.handler";
 import type { TGetByEventSlugInputSchema } from "./getScheduleByEventTypeSlug.schema";
+import logger from "@calcom/lib/logger";
 
 type GetOptions = {
   ctx: {
@@ -57,7 +58,7 @@ export const getScheduleByEventSlugHandler = async ({ ctx, input }: GetOptions) 
       },
     });
   } catch (e) {
-    console.log(e);
+    logger.log(e);
     return {
       id: -1,
       name: "No schedules found",

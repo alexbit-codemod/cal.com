@@ -4,6 +4,7 @@ import handleDeleteCredential from "@calcom/features/credentials/handleDeleteCre
 import prisma from "@calcom/prisma";
 import type { Credential, EventType, User } from "@calcom/prisma/client";
 import { BookingStatus } from "@calcom/prisma/enums";
+import logger from "@calcom/lib/logger";
 
 describe("handleDeleteCredential Integration Tests - BookingReference Soft Delete", () => {
   let testUser: User;
@@ -101,7 +102,7 @@ describe("handleDeleteCredential Integration Tests - BookingReference Soft Delet
       });
     } catch (error) {
       // Credential already deleted by test
-      console.log("Credential deletion error:", error);
+      logger.log("Credential deletion error:", error);
     }
 
     await prisma.user.delete({

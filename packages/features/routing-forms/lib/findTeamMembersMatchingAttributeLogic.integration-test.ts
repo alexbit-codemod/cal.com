@@ -11,6 +11,7 @@ import {
   findTeamMembersMatchingAttributeLogic,
   TroubleshooterCase,
 } from "./findTeamMembersMatchingAttributeLogic";
+import logger from "@calcom/lib/logger";
 
 let testFixtures: {
   org: Team;
@@ -1283,7 +1284,7 @@ describe("findTeamMembersMatchingAttributeLogic", () => {
           throw new Error("Looks like performance testing is not enabled");
         }
         const totalTimeTaken = Object.values(timeTaken).reduce((sum, time) => (sum ?? 0) + (time ?? 0), 0);
-        console.log("Total time taken", totalTimeTaken, {
+        logger.log("Total time taken", totalTimeTaken, {
           timeTaken,
         });
         expect(totalTimeTaken).toBeLessThan(5000);

@@ -2,6 +2,7 @@ import type { Page, Frame } from "@playwright/test";
 import { expect } from "@playwright/test";
 
 import prisma from "@calcom/prisma";
+import logger from "@calcom/lib/logger";
 
 export async function getQueuedFormResponse(queuedFormResponseId: string) {
   return prisma.app_RoutingForms_QueuedFormResponse.findFirst({
@@ -103,7 +104,7 @@ export const getEmbedIframe = async ({
   if (u.pathname === `${pathname}/embed`) {
     return embedIframe;
   }
-  console.log(`Embed iframe url pathname match. Expected: "${pathname}/embed"`, `Actual: ${u.pathname}`);
+  logger.log(`Embed iframe url pathname match. Expected: "${pathname}/embed"`, `Actual: ${u.pathname}`);
   return null;
 };
 

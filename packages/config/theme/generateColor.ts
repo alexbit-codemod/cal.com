@@ -1,4 +1,5 @@
 import type { Color, HSL, Shade } from "./interfaces";
+import logger from "@calcom/lib/logger";
 
 // Yeah i stole this...
 const hexToHSL = (hex: string): HSL => {
@@ -38,7 +39,7 @@ const hexToHSL = (hex: string): HSL => {
     HSL.l = Math.round(l * 100);
     return HSL;
   } catch (_error) {
-    console.log(hex);
+    logger.log(hex);
     return { h: 0, s: 0, l: 0 };
   }
 };

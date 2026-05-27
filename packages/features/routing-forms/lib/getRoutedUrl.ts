@@ -212,7 +212,7 @@ const _getRoutedUrl = async (context: Pick<GetServerSidePropsContext, "query" | 
   }
 
   // TODO: To be done using sentry tracing
-  console.log("Server-Timing", getServerTimingHeader(timeTaken));
+  logger.log("Server-Timing", getServerTimingHeader(timeTaken));
 
   // Use fallbackAction if set (when no team members found), otherwise use the main decidedAction
   const actionToUse = fallbackAction ?? decidedAction;

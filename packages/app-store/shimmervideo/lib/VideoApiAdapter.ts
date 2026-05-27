@@ -8,6 +8,7 @@ import type { PartialReference } from "@calcom/types/EventManager";
 import type { VideoApiAdapter, VideoCallData } from "@calcom/types/VideoApiAdapter";
 
 import { getShimmerAppKeys } from "./getShimmerAppKeys";
+import logger from "@calcom/lib/logger";
 
 /** Shimmer Video app type in the config.json
  *  changed to 'shimmer_video' to support video conferencing
@@ -185,7 +186,7 @@ const ShimmerDailyVideoApiAdapter = (): VideoApiAdapter => {
         );
         return Promise.resolve(res);
       } catch (err) {
-        console.log("err", err);
+        logger.log("err", err);
         throw new Error("Something went wrong! Unable to get recording access link");
       }
     },

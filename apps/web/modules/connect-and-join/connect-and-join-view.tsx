@@ -35,7 +35,7 @@ function ConnectAndJoin() {
       }
     },
     onError: (err) => {
-      console.log("err", err, err instanceof TRPCClientError);
+      logger.log("err", err, err instanceof TRPCClientError);
       if (err instanceof TRPCClientError) {
         setErrorMessage(t(err.message));
       } else {

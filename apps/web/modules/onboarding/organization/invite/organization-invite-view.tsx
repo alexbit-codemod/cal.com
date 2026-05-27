@@ -35,7 +35,7 @@ export const OrganizationInviteView = ({ userEmail }: OrganizationInviteViewProp
   const googleWorkspaceEnabled = flags["google-workspace-directory"];
 
   const handleGoogleWorkspaceConnect = () => {
-    console.log("Connect Google Workspace");
+    logger.log("Connect Google Workspace");
   };
 
   const handleInviteViaEmail = () => {
@@ -47,7 +47,7 @@ export const OrganizationInviteView = ({ userEmail }: OrganizationInviteViewProp
   };
 
   const handleCopyInviteLink = () => {
-    console.log("Copy invite link - disabled");
+    logger.log("Copy invite link - disabled");
   };
 
   const handleSkip = async () => {

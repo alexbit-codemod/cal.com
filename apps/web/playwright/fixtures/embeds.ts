@@ -9,7 +9,7 @@ export const createEmbedsFixture = (page: Page) => {
     async addEmbedListeners(calNamespace: string) {
       await page.addInitScript(
         ({ calNamespace }: { calNamespace: string }) => {
-          console.log(
+          logger.log(
             "PlaywrightTest - InitScript:",
             "Adding listener for __iframeReady on namespace:",
             calNamespace
@@ -35,11 +35,11 @@ export const createEmbedsFixture = (page: Page) => {
                 event.data.type
               ) {
                 const { type, namespace, data } = event.data;
-                console.log("PlaywrightTest postMessage:", `Received ${type} for namespace ${namespace}`);
+                logger.log("PlaywrightTest postMessage:", `Received ${type} for namespace ${namespace}`);
 
                 // Set iframeReady when we receive __iframeReady event for our namespace
                 if (type === "__iframeReady" && namespace === calNamespace) {
-                  console.log("PlaywrightTest postMessage:", "Setting window.iframeReady = true");
+                  logger.log("PlaywrightTest postMessage:", "Setting window.iframeReady = true");
                   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                   //@ts-ignore
                   window.iframeReady = true;
@@ -80,7 +80,7 @@ export const createEmbedsFixture = (page: Page) => {
             let api = window.Cal;
 
             if (!api) {
-              console.log("PlaywrightTest:", "window.Cal not available yet, trying again");
+              logger.log("PlaywrightTest:", "window.Cal not available yet, trying again");
               setTimeout(tryAddingListener, 500);
               return;
             }
@@ -88,18 +88,18 @@ export const createEmbedsFixture = (page: Page) => {
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               //@ts-ignore
               api = window.Cal.ns[calNamespace];
-              console.log("Using api from namespace-", { calNamespace, api });
+              logger.log("Using api from namespace-", { calNamespace, api });
             }
             if (!api) {
-              console.log(`namespace "${calNamespace}" not found yet - Trying again`);
+              logger.log(`namespace "${calNamespace}" not found yet - Trying again`);
               setTimeout(tryAddingListener, 500);
               return;
             }
-            console.log("PlaywrightTest:", `Adding listener for __iframeReady on namespace:${calNamespace}`);
+            logger.log("PlaywrightTest:", `Adding listener for __iframeReady on namespace:${calNamespace}`);
             api("on", {
               action: "*",
               callback: (e) => {
-                console.log("Playwright Embed Fixture: Received event", JSON.stringify(e.detail));
+                logger.log("Playwright Embed Fixture: Received event", JSON.stringify(e.detail));
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 window.iframeReady = true; // Technically if there are multiple cal embeds, it can be set due to some other iframe. But it works for now. Improve it when it doesn't work
@@ -118,11 +118,11 @@ export const createEmbedsFixture = (page: Page) => {
       );
 
       page.on("console", (msg) => {
-        console.log(`Browser Console: ${msg.type()}: ${msg.text()}`);
+        logger.log(`Browser Console: ${msg.type()}: ${msg.text()}`);
       });
 
       page.on("framenavigated", async (frame) => {
-        console.log(`Navigation occurred in frame: ${frame.url()}`);
+        logger.log(`Navigation occurred in frame: ${frame.url()}`);
       });
 
       page.on("pageerror", (error) => {

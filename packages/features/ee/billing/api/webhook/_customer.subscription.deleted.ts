@@ -4,6 +4,7 @@ import prisma from "@calcom/prisma";
 
 import type { LazyModule, SWHMap } from "./__handler";
 import { HttpCode } from "./__handler";
+import logger from "@calcom/lib/logger";
 
 type Data = SWHMap["customer.subscription.deleted"]["data"];
 
@@ -44,7 +45,7 @@ const stripeWebhookProductHandler = (handlers: Handlers) => async (data: Data) =
   }
   const handlerGetter = handlers[productId as any];
   if (!handlerGetter) {
-    console.log("No product handler found for product", productId);
+    logger.log("No product handler found for product", productId);
     return {
       success: false,
       message: `No product handler found for product: ${productId}`,
@@ -53,7 +54,7 @@ const stripeWebhookProductHandler = (handlers: Handlers) => async (data: Data) =
   const handler = (await handlerGetter())?.default;
   // auto catch unsupported Stripe products.
   if (!handler) {
-    console.log("No product handler found for product", productId);
+    logger.log("No product handler found for product", productId);
     return {
       success: false,
       message: `No product handler found for product: ${productId}`,

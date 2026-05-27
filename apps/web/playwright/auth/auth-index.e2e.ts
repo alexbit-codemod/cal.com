@@ -82,7 +82,7 @@ test.describe("Can signup from a team invite", async () => {
       },
     });
 
-    console.log("createdUser", createdUser);
+    logger.log("createdUser", createdUser);
 
     // Check that the user was created
     expect(createdUser).not.toBeNull();

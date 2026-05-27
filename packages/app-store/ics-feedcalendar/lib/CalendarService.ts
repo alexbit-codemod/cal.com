@@ -14,6 +14,7 @@ import type {
 } from "@calcom/types/Calendar";
 import type { CredentialPayload } from "@calcom/types/Credential";
 import ICAL from "ical.js";
+import logger from "@calcom/lib/logger";
 
 // for Apple's Travel Time feature only (for now)
 const getTravelDurationInSeconds = (vevent: ICAL.Component) => {
@@ -193,7 +194,7 @@ class ICSFeedCalendarService implements Calendar {
               vcalendar.addSubcomponent(timezoneComp);
             } catch (e) {
               // Adds try-catch to ensure the code proceeds when Apple Calendar provides non-standard TZIDs
-              console.log("error in adding vtimezone", e);
+              logger.log("error in adding vtimezone", e);
             }
           } else {
             console.error("No timezone found");

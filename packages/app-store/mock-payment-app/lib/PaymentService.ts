@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import prisma from "@calcom/prisma";
 import type { Booking, Payment, Prisma, PaymentOption } from "@calcom/prisma/client";
 import type { IAbstractPaymentService } from "@calcom/types/PaymentService";
+import logger from "@calcom/lib/logger";
 
 class MockPaymentService implements IAbstractPaymentService {
   async create(
@@ -26,7 +27,7 @@ class MockPaymentService implements IAbstractPaymentService {
 
       const uid = uuidv4();
 
-      console.log("CREATE payment");
+      logger.log("CREATE payment");
 
       const paymentData = await prisma.payment.create({
         data: {
