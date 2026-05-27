@@ -5,6 +5,7 @@ import { Utils as QbUtils, type JsonTree } from "react-awesome-query-builder";
 import { safeStringify } from "@calcom/lib/safeStringify";
 
 import jsonLogic from "./jsonLogic";
+import logger from "@calcom/lib/logger";
 
 export const enum RaqbLogicResult {
   MATCH = "MATCH",
@@ -43,7 +44,7 @@ export const evaluateRaqbLogic = (
     if (beStrictWithEmptyLogic && queryValue.children1 && Object.keys(queryValue.children1).length > 0) {
       throw new Error("Couldn't build the logic from the query value");
     }
-    console.log(
+    logger.log(
       "No logic found",
       safeStringify({ queryValue, queryBuilderConfigFields: queryBuilderConfig.fields })
     );
@@ -52,7 +53,7 @@ export const evaluateRaqbLogic = (
   }
 
   if (config.logLevel >= 1) {
-    console.log("Checking logic with data", safeStringify({ logic, data }));
+    logger.log("Checking logic with data", safeStringify({ logic, data }));
   }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return !!jsonLogic.apply(logic as any, data) ? RaqbLogicResult.MATCH : RaqbLogicResult.NO_MATCH;

@@ -1,4 +1,5 @@
 import type { EmbedEvent, GlobalCal } from "../../src/embed";
+import logger from "@calcom/lib/logger";
 
 const Cal = window.Cal as GlobalCal;
 Cal.config = Cal.config || {};
@@ -482,7 +483,7 @@ Cal.ns.routingFormAuto("on", {
   action: "routed",
   callback: (e) => {
     const detail = e.detail;
-    console.log("`routed` event data:", detail.data);
+    logger.log("`routed` event data:", detail.data);
     alert(`Routing Done - Check console for 'routed' event data`);
   },
 });
@@ -703,7 +704,7 @@ if (only === "all" || only == "ns:pageParamsForwarding") {
 // Verifies that the type of e.detail.data is valid. type-check will fail if we accidentally break it.
 const bookingSuccessfulV2Callback = (e: EmbedEvent<"bookingSuccessfulV2">) => {
   const data = e.detail.data;
-  console.log("bookingSuccessfulV2", {
+  logger.log("bookingSuccessfulV2", {
     endTime: data.endTime,
     startTime: data.startTime,
     title: data.title,
@@ -723,7 +724,7 @@ Cal("on", {
 
 const bookerReadyCallback = (e: EmbedEvent<"bookerReady">) => {
   const data = e.detail.data;
-  console.log("bookerReady", {
+  logger.log("bookerReady", {
     eventId: data.eventId,
     eventSlug: data.eventSlug,
   });

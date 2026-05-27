@@ -436,7 +436,7 @@ function assertThatCodeIsValidVanillaJsCode(code: string) {
   });
 
   if (result.status !== 0) {
-    console.log(
+    logger.log(
       JSON.stringify({
         biomeError: result.stderr,
         code,
@@ -455,7 +455,7 @@ function assertThatCodeIsValidReactCode(code: string) {
   });
 
   if (result.status !== 0) {
-    console.log(
+    logger.log(
       JSON.stringify({
         biomeError: result.stderr,
         code,

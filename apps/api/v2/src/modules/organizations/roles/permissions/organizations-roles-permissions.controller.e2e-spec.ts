@@ -383,7 +383,7 @@ describe("Organizations Roles Permissions Endpoints", () => {
       // Clean up user
       await userRepositoryFixture.deleteByEmail(pbacOrgUserWithRolePermission.email);
     } catch (err) {
-      console.log(err);
+      logger.log(err);
     } finally {
       await app.close();
     }

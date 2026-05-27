@@ -6,13 +6,14 @@ import { fileURLToPath } from "node:url";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import logger from "@calcom/lib/logger";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const usePool = process.env.USE_POOL ?? "true";
 
-console.log("Platform libraries usePool", usePool);
+logger.log("Platform libraries usePool", usePool);
 
 // https://vitejs.dev/guide/build.html#library-mode
 export default defineConfig({

@@ -27,6 +27,7 @@ import type { TrpcSessionUser } from "@calcom/trpc/server/types";
 import { TRPCError } from "@trpc/server";
 
 import type { TFindTeamMembersMatchingAttributeLogicOfRouteInputSchema } from "./findTeamMembersMatchingAttributeLogicOfRoute.schema";
+import logger from "@calcom/lib/logger";
 
 interface FindTeamMembersMatchingAttributeLogicOfRouteHandlerOptions {
   ctx: {
@@ -303,11 +304,11 @@ export const findTeamMembersMatchingAttributeLogicOfRouteHandler = async ({
   const timeAfterGetOrderedLuckyUsers = performance.now();
   timeTaken.getOrderedLuckyUsers = timeAfterGetOrderedLuckyUsers - timeBeforeGetOrderedLuckyUsers;
 
-  console.log("_enablePerf, _concurrency", _enablePerf, _concurrency);
+  logger.log("_enablePerf, _concurrency", _enablePerf, _concurrency);
   if (_enablePerf) {
     const serverTimingHeader = getServerTimingHeader(timeTaken);
     ctx.res?.setHeader("Server-Timing", serverTimingHeader);
-    console.log("Server-Timing", serverTimingHeader);
+    logger.log("Server-Timing", serverTimingHeader);
   }
 
   return {

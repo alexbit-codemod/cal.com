@@ -369,7 +369,7 @@ export async function createRoutingForm(config: CreateRoutingFormConfig) {
         name: form.name,
       },
     });
-    console.log(`🎯 Created form ${createdForm.id}`, JSON.stringify(createdForm, null, 2));
+    logger.log(`🎯 Created form ${createdForm.id}`, JSON.stringify(createdForm, null, 2));
     return createdForm;
   } else {
     // Default routing form

@@ -36,7 +36,7 @@ const copyAppStoreStatic = () => {
       SVG_HASHES[appDirName] = hash;
     }
 
-    console.log(`Copied ${file} to ${destPath}`);
+    logger.log(`Copied ${file} to ${destPath}`);
   });
 
   // Write SVG hashes to a JSON file

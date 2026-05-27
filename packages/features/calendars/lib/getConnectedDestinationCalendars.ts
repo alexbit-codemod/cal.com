@@ -222,7 +222,7 @@ async function ensureSelectedCalendarIsInDb({
   };
   eventTypeId: number | null;
 }) {
-  console.log(
+  logger.log(
     `Upsert the selectedCalendar record to the DB for user ${user.id} with details ${JSON.stringify(
       selectedCalendar
     )}`

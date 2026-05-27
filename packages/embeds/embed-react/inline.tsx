@@ -9,6 +9,7 @@ import ReactDom from "react-dom";
 // Because we don't import from @calcom/embed-react, this file isn't able to test if the build is successful or not and thus npm package would work or not correctly.
 // There are tests in test/built which verify that the types from built package are correctly generated and exported correctly.
 import Cal, { getCalApi, type EmbedEvent } from "./src/index";
+import logger from "@calcom/lib/logger";
 
 const api = getCalApi({
   namespace: "inline",
@@ -21,7 +22,7 @@ function App() {
     setTimeout(setLoaded.bind(true), 1000);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const callback = (event: any) => {
-      console.log(event.detail);
+      logger.log(event.detail);
     };
     api.then((api) => {
       api("on", {
@@ -52,7 +53,7 @@ function App() {
 
         const bookerReadyCallback = (e: EmbedEvent<"bookerReady">) => {
           const data = e.detail.data;
-          console.log("bookerReady", {
+          logger.log("bookerReady", {
             eventId: data.eventId,
             eventSlug: data.eventSlug,
           });
@@ -73,7 +74,7 @@ function App() {
           e: EmbedEvent<"bookingSuccessfulV2">
         ) => {
           const data = e.detail.data;
-          console.log("bookingSuccessfulV2", {
+          logger.log("bookingSuccessfulV2", {
             endTime: data.endTime,
             startTime: data.startTime,
             title: data.title,

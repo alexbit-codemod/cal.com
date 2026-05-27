@@ -8,6 +8,7 @@ import {
   deleteAllBookingsByEmail,
   ensureEmbedIframe,
 } from "../lib/testUtils";
+import logger from "@calcom/lib/logger";
 
 test.describe("Inline Iframe", () => {
   test("Configured with Dark Theme. Do booking and verify that COEP/CORP headers are correctly set", async ({
@@ -37,7 +38,7 @@ test.describe("Inline Iframe", () => {
         const error = request.failure()?.errorText;
         // Identifies that the request is blocked by the browser due to COEP restrictions
         if (error?.includes("ERR_BLOCKED_BY_RESPONSE")) {
-          console.log("Request failed: ", request.url(), error);
+          logger.log("Request failed: ", request.url(), error);
           resolve(request.url().includes("/pro/embed"));
         }
       });

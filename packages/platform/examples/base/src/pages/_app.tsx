@@ -9,6 +9,7 @@ import Select from "react-select";
 
 import { CalProvider, CalOAuthProvider, BookerEmbed, Router as CalRouter } from "@calcom/atoms";
 import "@calcom/atoms/globals.min.css";
+import logger from "@calcom/lib/logger";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "800"] });
 type TUser = Data["users"][0];
@@ -195,7 +196,7 @@ export default function App({ Component, pageProps }: AppProps) {
             formId="a63e6fce-899a-404e-8c38-e069710589c5"
             formResponsesURLParams={new URLSearchParams({ isBookingDryRun: "true", Territory: "Europe" })}
             onDisplayBookerEmbed={() => {
-              console.log("render booker embed");
+              logger.log("render booker embed");
             }}
             bannerUrl="https://i0.wp.com/mahala.co.uk/wp-content/uploads/2014/12/img_banner-thin_mountains.jpg?fit=800%2C258&ssl=1"
             bookerCustomClassNames={{

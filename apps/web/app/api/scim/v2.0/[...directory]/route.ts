@@ -92,7 +92,7 @@ async function handleScimRequest(request: NextRequest, method: string, params: P
   const searchParams = request.nextUrl.searchParams;
 
   if (shouldLog) {
-    console.log(
+    logger.log(
       "SCIM API request",
       safeStringify({
         method,
@@ -136,7 +136,7 @@ async function handleScimRequest(request: NextRequest, method: string, params: P
   const { status, data } = await dsyncController.requests.handle(scimRequest, handleEvents);
 
   if (shouldLog) {
-    console.log(
+    logger.log(
       "Response to SCIM",
       safeStringify({
         status,

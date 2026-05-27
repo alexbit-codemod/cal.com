@@ -181,13 +181,13 @@ describe("Booking ownership and access in Middleware", () => {
   });
 
   afterAll(async () => {
-    console.log("Cleaning up org", orgRef.id);
+    logger.log("Cleaning up org", orgRef.id);
     await prisma.team.delete({
       where: {
         id: orgRef.id,
       },
     });
-    console.log("Cleaning up users", [
+    logger.log("Cleaning up users", [
       adminUserRef.id,
       ownerUserRef.id,
       orgOwnerUserRef.id,
@@ -203,7 +203,7 @@ describe("Booking ownership and access in Middleware", () => {
   });
 
   test("should not throw error for bookings where user is an attendee", async () => {
-    console.log(createEventResult1.bookings[0].id);
+    logger.log(createEventResult1.bookings[0].id);
     const { req } = createMocks<CustomNextApiRequest, CustomNextApiResponse>({
       method: "GET",
       query: {

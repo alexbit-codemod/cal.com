@@ -25,6 +25,7 @@ import { SdkActionManager } from "./sdk-action-manager";
 import tailwindCss from "./tailwindCss";
 import type { EmbedPageType, ModalPrerenderOptions, PrefillAndIframeAttrsConfig, UiConfig } from "./types";
 import { getMaxHeightForModal } from "./ui-utils";
+import logger from "@calcom/lib/logger";
 
 // Exporting for consumption by @calcom/embed-core user
 export type { EmbedEvent } from "./sdk-action-manager";
@@ -1700,7 +1701,7 @@ function log(...args: unknown[]) {
   globalCal.__logQueue = globalCal.__logQueue || [];
   globalCal.__logQueue.push(args);
   if (searchString.includes("cal.embed.logging=1") || process.env.INTEGRATION_TEST_MODE === "true") {
-    console.log("Parent:", ...args);
+    logger.log("Parent:", ...args);
   }
 }
 

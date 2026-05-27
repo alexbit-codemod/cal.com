@@ -10,6 +10,7 @@ import { setTestEmail } from "@calcom/lib/testEmails";
 import { prisma } from "@calcom/prisma";
 
 import { sanitizeDisplayName } from "../lib/sanitizeDisplayName";
+import logger from "@calcom/lib/logger";
 
 export default class BaseEmail {
   name = "";
@@ -42,7 +43,7 @@ export default class BaseEmail {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-expect-error
       setTestEmail(await this.getNodeMailerPayload());
-      console.log(
+      logger.log(
         "Skipped Sending Email as process.env.NEXT_PUBLIC_UNIT_TESTS is set. Emails are available in globalThis.testEmails"
       );
       return new Promise((r) => r("Skipped sendEmail for Unit Tests"));
@@ -54,7 +55,7 @@ export default class BaseEmail {
     const to = "to" in payload ? (payload.to as string) : "";
 
     if (isSmsCalEmail(to)) {
-      console.log(`Skipped Sending Email to faux email: ${to}`);
+      logger.log(`Skipped Sending Email to faux email: ${to}`);
       return new Promise((r) => r(`Skipped Sending Email to faux email: ${to}`));
     }
 

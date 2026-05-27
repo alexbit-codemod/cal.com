@@ -1,5 +1,6 @@
 import { sdkActionManager } from "../../sdk-event";
 import { type EmbedStore } from "../lib/embedStore";
+import logger from "@calcom/lib/logger";
 
 export const isBrowser = typeof window !== "undefined";
 
@@ -210,7 +211,7 @@ export function log(...args: unknown[]) {
     args.unshift("CAL:");
     logQueue.push(args);
     if (searchParams.get("debug") || process.env.INTEGRATION_TEST_MODE === "true") {
-      console.log("Child:", ...args);
+      logger.log("Child:", ...args);
     }
   }
 }

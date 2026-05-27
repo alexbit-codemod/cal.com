@@ -6,6 +6,7 @@ import { vi } from "vitest";
 import "vitest-fetch-mock";
 
 import type { CredentialForCalendarServiceWithEmail } from "@calcom/types/Credential";
+import logger from "@calcom/lib/logger";
 
 vi.stubEnv("GOOGLE_WEBHOOK_TOKEN", "test-webhook-token");
 
@@ -140,7 +141,7 @@ export const createMockJWTInstance = ({
   authorizeError?: { response?: { data?: { error?: string } } } | Error;
   tokenExpiryDate?: number;
 }) => {
-  console.log("createMockJWTInstance", { email, authorizeError });
+  logger.log("createMockJWTInstance", { email, authorizeError });
   const mockJWTInstance = {
     type: "jwt" as const,
     config: {

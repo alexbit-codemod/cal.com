@@ -187,7 +187,7 @@ async function handleCalAIPhoneNumberSubscription(
   });
 
   try {
-    console.log("Attempting to link agent to phone number:", { agentId, phoneNumberId: newNumber.id });
+    logger.log("Attempting to link agent to phone number:", { agentId, phoneNumberId: newNumber.id });
 
     const agent = await agentRepo.findByIdWithUserAccess({
       agentId,
@@ -199,7 +199,7 @@ async function handleCalAIPhoneNumberSubscription(
       throw new HttpCode(404, "Agent not found or user does not have access to it");
     }
 
-    console.log("Found agent:", { agentId: agent.id, providerAgentId: agent.providerAgentId });
+    logger.log("Found agent:", { agentId: agent.id, providerAgentId: agent.providerAgentId });
 
     // Assign agent to the new number via Retell API
     await aiService.updatePhoneNumber(calAIPhoneNumber.phone_number, {
@@ -216,7 +216,7 @@ async function handleCalAIPhoneNumberSubscription(
       },
     });
 
-    console.log("Phone number successfully linked to agent");
+    logger.log("Phone number successfully linked to agent");
   } catch (error) {
     console.error("Agent linking error details:", {
       error,

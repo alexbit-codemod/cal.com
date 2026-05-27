@@ -9,6 +9,7 @@ import {
   type ReschedulePreventionRedirectInput,
   type ReschedulePreventionRedirectResult,
 } from "./determineReschedulePreventionRedirect";
+import logger from "@calcom/lib/logger";
 
 // Mock the constants module
 vi.mock("@calcom/lib/constants", async () => {
@@ -97,7 +98,7 @@ const expectRedirectToEventBookingPageWithParams = ({
   eventUrl: string;
   params: Record<string, string>;
 }) => {
-  console.log("expectRedirectToEventBookingPageWithParams", { result, eventUrl, params });
+  logger.log("expectRedirectToEventBookingPageWithParams", { result, eventUrl, params });
   if (!result) {
     throw new Error("We expected a redirect result");
   }

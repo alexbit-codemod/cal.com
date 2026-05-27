@@ -1,4 +1,5 @@
 import prisma from ".";
+import logger from "@calcom/lib/logger";
 
 // TODO: Put some restrictions here to run it on local DB only.
 // Production DB currently doesn't support app deletion
@@ -15,10 +16,10 @@ async function main() {
         appId: appId,
       },
     });
-    console.log(`Deleted app from DB: '${appId}'`);
+    logger.log(`Deleted app from DB: '${appId}'`);
   } catch (e) {
     if (e.code === "P2025") {
-      console.log(`App '${appId}' already deleted from DB`);
+      logger.log(`App '${appId}' already deleted from DB`);
       return;
     }
     throw e;

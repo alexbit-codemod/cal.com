@@ -29,7 +29,7 @@ export const nextServer = async ({ port = 3000 } = { port: 3000 }) => {
     port,
     hostname: "localhost",
   });
-  console.log("Started Next Server", { dev, port });
+  logger.log("Started Next Server", { dev, port });
 
   await app.prepare();
   const handle = app.getRequestHandler();

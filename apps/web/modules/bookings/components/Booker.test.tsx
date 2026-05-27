@@ -55,7 +55,7 @@ vi.mock("./BookEventForm", () => ({
     isTimeslotUnavailable: boolean;
     onCancel: () => void;
   }) => {
-    console.log("BookEventForm Called", { isTimeslotUnavailable, onCancel });
+    logger.log("BookEventForm Called", { isTimeslotUnavailable, onCancel });
     return (
       <div data-testid="book-event-form" data-unavailable={isTimeslotUnavailable}>
         Mock Book Event Form

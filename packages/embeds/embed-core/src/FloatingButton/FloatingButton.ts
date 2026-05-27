@@ -1,4 +1,5 @@
 import getFloatingButtonHtml from "./FloatingButtonHtml";
+import logger from "@calcom/lib/logger";
 
 type ModalTargetDatasetProps = {
   calLink: string;
@@ -82,7 +83,7 @@ export class FloatingButton extends HTMLElement {
       }
       buttonWrapperEl.style.display = off ? "none" : this.buttonWrapperStyleDisplay;
     } else {
-      console.log("Unknown attribute changed", name, oldValue, newValue);
+      logger.log("Unknown attribute changed", name, oldValue, newValue);
     }
   }
 

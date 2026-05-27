@@ -50,7 +50,7 @@ export const TeamInviteView = ({ userEmail }: TeamInviteViewProps) => {
 
   const handleGoogleWorkspaceConnect = () => {
     // TODO: Implement Google Workspace connection
-    console.log("Connect Google Workspace");
+    logger.log("Connect Google Workspace");
   };
 
   const handleInviteViaEmail = () => {
@@ -63,7 +63,7 @@ export const TeamInviteView = ({ userEmail }: TeamInviteViewProps) => {
 
   const handleCopyInviteLink = () => {
     // Disabled for now as per requirements
-    console.log("Copy invite link - disabled");
+    logger.log("Copy invite link - disabled");
   };
 
   const handleSkip = async () => {

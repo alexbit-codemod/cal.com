@@ -18,6 +18,7 @@ import {
   getContentSidForTemplate,
   getContentVariablesForTemplate,
 } from "../lib/reminders/templates/whatsapp/ContentSidMapping";
+import logger from "@calcom/lib/logger";
 
 export async function handler(req: NextRequest) {
   const apiKey = req.headers.get("authorization") || req.nextUrl.searchParams.get("apiKey");
@@ -173,7 +174,7 @@ export async function handler(req: NextRequest) {
         }
       }
     } catch (error) {
-      console.log(`Error scheduling WHATSAPP with error ${error}`);
+      logger.log(`Error scheduling WHATSAPP with error ${error}`);
     }
   }
 

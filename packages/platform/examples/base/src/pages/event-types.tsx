@@ -12,6 +12,7 @@ import {
   EventTypeSettings,
   CreateEventType,
 } from "@calcom/atoms";
+import logger from "@calcom/lib/logger";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,18 +23,18 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
   const eventTypeRef = useRef<EventSettingsFromRef>(null);
 
   const handleFormStateChange = useCallback((formState: unknown) => {
-    console.log(formState, "formStateeeeee");
+    logger.log(formState, "formStateeeeee");
   }, []);
 
   const handleValidate = async () => {
     const result = await eventTypeRef.current?.validateForm();
-    console.log("Validation result:", result);
+    logger.log("Validation result:", result);
   };
 
   const handleSubmit = () => {
     eventTypeRef.current?.handleFormSubmit({
       onSuccess: () => {
-        console.log("Event type updated successfully");
+        logger.log("Event type updated successfully");
         // Additional success handling logic here
       },
       onError: (error) => {
@@ -757,7 +758,7 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                 refetchTeamEvents();
               }}
               onError={(eventType, error) => {
-                console.log(eventType);
+                logger.log(eventType);
                 console.error(error);
               }}
               onDeleteSuccess={() => {
@@ -814,7 +815,7 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                   }}
                   teamId={teams?.[0]?.id}
                   onCancel={() => {
-                    console.log("cancel team event type creation");
+                    logger.log("cancel team event type creation");
                   }}
                   onSuccess={() => {
                     refetchTeamEvents();

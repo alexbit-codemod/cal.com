@@ -114,7 +114,7 @@ function getAttributesFromScimPayload({
 
   const shouldLog = DIRECTORY_IDS_TO_LOG.includes(directoryId);
   if (shouldLog) {
-    console.log("Collected Attributes:", `${safeStringify(scimUserAttributes)}`);
+    logger.log("Collected Attributes:", `${safeStringify(scimUserAttributes)}`);
   }
 
   return scimUserAttributes;

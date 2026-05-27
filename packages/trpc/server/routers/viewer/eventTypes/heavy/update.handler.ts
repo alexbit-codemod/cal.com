@@ -654,11 +654,11 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
       break;
     }
   }
-  console.log("multiplePrivateLinks", multiplePrivateLinks);
+  logger.log("multiplePrivateLinks", multiplePrivateLinks);
   // Handle multiple private links using the service
   const privateLinksRepo = HashedLinkRepository.create();
   const connectedLinks = await privateLinksRepo.findLinksByEventTypeId(input.id);
-  console.log("connectedLinks", connectedLinks);
+  logger.log("connectedLinks", connectedLinks);
   const connectedMultiplePrivateLinks = connectedLinks.map((link) => link.link);
 
   const privateLinksService = new HashedLinkService();

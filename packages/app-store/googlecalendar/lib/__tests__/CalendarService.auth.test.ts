@@ -26,6 +26,7 @@ import {
   defaultDelegatedCredential,
   createCredentialForCalendarService,
 } from "./utils";
+import logger from "@calcom/lib/logger";
 
 function expectJWTInstanceToBeCreated() {
   expect(getLastCreatedJWT()).toBeDefined();
@@ -135,11 +136,11 @@ describe("GoogleCalendarService credential handling", () => {
         delegationCredentialId: "delegation-credential-id-1",
       });
 
-      console.log("TESTS: credentialWithDelegation", credentialWithDelegation);
+      logger.log("TESTS: credentialWithDelegation", credentialWithDelegation);
 
       mockSuccessfulCalendarListFetch();
       await expectNoCredentialsInDb();
-      console.log("TESTS: First instance of CalendarService");
+      logger.log("TESTS: First instance of CalendarService");
       const calendarService1 = BuildCalendarService({
         ...credentialWithDelegation,
       });
@@ -159,7 +160,7 @@ describe("GoogleCalendarService credential handling", () => {
         },
       });
       expect(existingCredential).toBeDefined();
-      console.log("TESTS: Second instance of CalendarService");
+      logger.log("TESTS: Second instance of CalendarService");
       createMockJWTInstance({
         authorizeError: {
           response: {

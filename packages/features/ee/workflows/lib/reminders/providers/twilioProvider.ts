@@ -68,7 +68,7 @@ export const sendSMS = async ({
       from: isWhatsapp ? getDefaultSender(isWhatsapp) : sender || getDefaultSender(),
       message: body,
     });
-    console.log(
+    logger.log(
       "Skipped sending SMS because process.env.NEXT_PUBLIC_IS_E2E or process.env.INTEGRATION_TEST_MODE is set. SMS are available in globalThis.testSMS"
     );
 
@@ -157,7 +157,7 @@ export const scheduleSMS = async ({
       from: isWhatsapp ? getDefaultSender(isWhatsapp) : sender || getDefaultSender(),
       message: body,
     });
-    console.log(
+    logger.log(
       "Skipped sending SMS because process.env.NEXT_PUBLIC_IS_E2E or process.env.INTEGRATION_TEST_MODE is set. SMS are available in globalThis.testSMS"
     );
     return { sid: uuidv4() };

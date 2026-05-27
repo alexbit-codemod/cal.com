@@ -1,4 +1,5 @@
 import { beforeEach, afterEach, vi } from "vitest";
+import logger from "@calcom/lib/logger";
 
 let __matchMediaFakeQuery: string[] = [];
 // Mock matchMedia - Not Provided by JSDOM
@@ -14,20 +15,20 @@ function mockWindowMatchMedia() {
       onchange: null,
       addEventListener: (event: string, listener: (event: MediaQueryListEvent) => void) => {
         if (event === "change") {
-          console.log("addEventListener called", event, listener);
+          logger.log("addEventListener called", event, listener);
           eventListeners.change.push(listener);
         }
       },
       removeEventListener: (event: string, listener: (event: MediaQueryListEvent) => void) => {
         if (event === "change") {
           eventListeners.change = eventListeners.change.filter((l) => l !== listener);
-          console.log("removeEventListener called, Remaining listeners", eventListeners.change.length);
+          logger.log("removeEventListener called, Remaining listeners", eventListeners.change.length);
         }
       },
       dispatchEvent: (event: MediaQueryListEvent) => {
         if (event.type === "change") {
           eventListeners.change.forEach((listener) => {
-            console.log("listener called", listener);
+            logger.log("listener called", listener);
             listener(event as MediaQueryListEvent);
           });
         }
@@ -59,5 +60,5 @@ export function fakeDeviceMatchesMediaQuery(query: string) {
 
   // Add the new query
   __matchMediaFakeQuery.push(query);
-  console.log("__mock__:fakeDeviceMatchesMediaQuery updated", { query, __matchMediaFakeQuery });
+  logger.log("__mock__:fakeDeviceMatchesMediaQuery updated", { query, __matchMediaFakeQuery });
 }

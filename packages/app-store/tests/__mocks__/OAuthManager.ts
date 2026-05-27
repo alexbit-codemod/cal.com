@@ -2,6 +2,7 @@ import { beforeEach, vi } from "vitest";
 import { mockClear, mockDeep } from "vitest-mock-extended";
 
 import type * as OAuthManager from "../../_utils/oauth/OAuthManager";
+import logger from "@calcom/lib/logger";
 
 vi.mock("../../_utils/oauth/OAuthManager", () => oAuthManagerMock);
 let useFullMockOAuthManagerRequest: boolean | null = null;
@@ -39,10 +40,10 @@ const defaultMockOAuthManager = vi.fn().mockImplementation(function() {
     }),
     request: vi.fn().mockImplementation(function(fn) {
       if (useFullMockOAuthManagerRequest) {
-        console.log("OAuthManager.request full mock being used");
+        logger.log("OAuthManager.request full mock being used");
         return oAuthManagerRequestFullMock(fn);
       }
-      console.log("OAuthManager.request default mock being used");
+      logger.log("OAuthManager.request default mock being used");
       return {
         json: {
           calendars: [],

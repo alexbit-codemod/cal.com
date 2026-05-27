@@ -20,6 +20,7 @@ import { WatchlistType, BookingStatus } from "@calcom/prisma/enums";
 import { test } from "@calcom/testing/lib/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
+import logger from "@calcom/lib/logger";
 
 const timeout = process.env.CI ? 5000 : 20000;
 
@@ -121,7 +122,7 @@ describe("handleNewBooking - Spam Detection", () => {
           action: "BLOCK",
         });
 
-        console.log("watchlists", await prisma.watchlist.findMany());
+        logger.log("watchlists", await prisma.watchlist.findMany());
 
         await createBookingScenario(
           getScenarioData({

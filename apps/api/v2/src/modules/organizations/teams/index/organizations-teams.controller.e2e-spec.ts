@@ -115,7 +115,7 @@ describe("Organizations Team Endpoints", () => {
         .then((response) => {
           const responseBody: ApiSuccessResponse<Team[]> = response.body;
           expect(responseBody.status).toEqual(SUCCESS_STATUS);
-          console.log("WOOOW", responseBody.data);
+          logger.log("WOOOW", responseBody.data);
           expect([team2.id, team.id]).toContain(responseBody.data[0].id);
           expect([team2.id]);
         });

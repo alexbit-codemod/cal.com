@@ -4,6 +4,7 @@ import { UsageEvent, LicenseKeySingleton } from "@calcom/ee/common/server/Licens
 import type { IDeploymentRepository } from "@calcom/features/ee/deployment/repositories/IDeploymentRepository";
 import { Prisma } from "@calcom/prisma/client";
 import type { PrismaClient } from "@calcom/prisma/client";
+import logger from "@calcom/lib/logger";
 
 class InlineDeploymentRepository implements IDeploymentRepository {
   constructor(private prisma: PrismaClient) {}
@@ -31,7 +32,7 @@ async function incrementUsage(prismaClient: PrismaClient, event?: UsageEvent) {
     const licenseKeyService = await LicenseKeySingleton.getInstance(deploymentRepo);
     await licenseKeyService.incrementUsage(event);
   } catch (e) {
-    console.log(e);
+    logger.log(e);
   }
 }
 

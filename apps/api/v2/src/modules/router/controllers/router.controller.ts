@@ -60,7 +60,7 @@ export class RouterController {
     ) {
       return this.handleRedirectWithContactOwner(routingUrl, routingSearchParams);
     }
-    console.log("handleRedirect Regular called", { destination });
+    logger.log("handleRedirect Regular called", { destination });
 
     return { status: "success", data: destination, redirect: true };
   }
@@ -69,7 +69,7 @@ export class RouterController {
     routingUrl: URL,
     routingSearchParams: URLSearchParams
   ): Promise<ApiResponse<unknown> & { redirect: boolean }> {
-    console.log("handleRedirectWithContactOwner called", { routingUrl, routingSearchParams });
+    logger.log("handleRedirectWithContactOwner called", { routingUrl, routingSearchParams });
     const pathNameParams = routingUrl.pathname.split("/");
     const eventTypeSlug = pathNameParams[pathNameParams.length - 1];
     const teamId = Number(routingSearchParams.get("cal.teamId"));

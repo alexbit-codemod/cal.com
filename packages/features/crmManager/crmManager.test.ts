@@ -21,6 +21,7 @@ vi.mock("@urql/exchange-retry", () => ({
 import { getCrm } from "@calcom/app-store/_utils/getCrm";
 
 import CrmManager from "./crmManager";
+import logger from "@calcom/lib/logger";
 
 // vi.mock("@calcom/app-store/_utils/getCrm");
 
@@ -107,7 +108,7 @@ describe.skip("crmManager tests", () => {
         ],
       });
 
-      console.log(mockedCrmApp);
+      logger.log(mockedCrmApp);
     });
   });
 });

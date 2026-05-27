@@ -8,6 +8,7 @@ import chokidar from "chokidar";
 import { debounce } from "lodash";
 import { APP_STORE_PATH } from "./constants";
 import { getAppName } from "./utils/getAppName";
+import logger from "@calcom/lib/logger";
 
 const isInWatchMode = process.argv[2] === "--watch";
 
@@ -522,7 +523,7 @@ function generateFiles() {
     fs.writeFileSync(filePath, formatOutput(`${banner}${output.join("\n")}`));
     formatFileWithBiome(filePath);
   });
-  console.log(`Generated ${filesToGenerate.map(([fileName]) => fileName).join(", ")}`);
+  logger.log(`Generated ${filesToGenerate.map(([fileName]) => fileName).join(", ")}`);
 }
 
 const debouncedGenerateFiles = debounce(generateFiles);
@@ -533,20 +534,20 @@ if (isInWatchMode) {
     .on("addDir", (dirPath) => {
       const appName = getAppName(dirPath);
       if (appName) {
-        console.log(`Added ${appName}`);
+        logger.log(`Added ${appName}`);
         debouncedGenerateFiles();
       }
     })
     .on("change", (filePath) => {
       if (filePath.endsWith("config.json")) {
-        console.log("Config file changed");
+        logger.log("Config file changed");
         debouncedGenerateFiles();
       }
     })
     .on("unlinkDir", (dirPath) => {
       const appName = getAppName(dirPath);
       if (appName) {
-        console.log(`Removed ${appName}`);
+        logger.log(`Removed ${appName}`);
         debouncedGenerateFiles();
       }
     });

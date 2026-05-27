@@ -300,7 +300,7 @@ export async function getEmailsReceivedByUser({
 
   const matchingEmails = await emails.search(userEmail, "to");
   if (!matchingEmails?.total) {
-    console.log(
+    logger.log(
       `No emails received by ${userEmail}. All emails sent to:`,
       (await emails.messages())?.items.map((e) => e.to)
     );
@@ -435,13 +435,13 @@ export function goToUrlWithErrorHandling({ page, url }: { page: Page; url: strin
       // Ignore failures for subresources like images, scripts, RSC requests, etc.
       if (!request.isNavigationRequest() || request.frame() !== page.mainFrame()) {
         const failedToLoadUrl = request.url();
-        console.log("goToUrlWithErrorHandling: Failed to load URL:", failedToLoadUrl);
+        logger.log("goToUrlWithErrorHandling: Failed to load URL:", failedToLoadUrl);
         return;
       }
       if (resolved) return;
       resolved = true;
       const failedToLoadUrl = request.url();
-      console.log("goToUrlWithErrorHandling: Navigation failed for URL:", failedToLoadUrl);
+      logger.log("goToUrlWithErrorHandling: Navigation failed for URL:", failedToLoadUrl);
       resolve({ success: false, url: failedToLoadUrl });
     };
     page.on("requestfailed", onRequestFailed);

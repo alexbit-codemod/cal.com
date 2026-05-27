@@ -440,7 +440,7 @@ describe("Organizations Teams Routing Forms Responses", () => {
           const responseBody = response.body;
           expect(responseBody.status).toEqual(SUCCESS_STATUS);
           const data = responseBody.data;
-          console.log("responseBody", responseBody.data);
+          logger.log("responseBody", responseBody.data);
           expect(data.routing?.queuedResponseId).toBeDefined();
         });
     });

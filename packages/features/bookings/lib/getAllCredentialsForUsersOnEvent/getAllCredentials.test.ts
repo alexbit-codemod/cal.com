@@ -6,6 +6,7 @@ import {
 } from "@calcom/testing/lib/bookingScenario/bookingScenario";
 import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
 import { describe, expect, test, vi } from "vitest";
+import logger from "@calcom/lib/logger";
 
 vi.mock("@calcom/features/users/repositories/UserRepository", () => {
   return {
@@ -300,7 +301,7 @@ describe("getAllCredentialsIncludeServiceAccountKey", () => {
             },
           ]);
 
-          console.log(testEventType);
+          logger.log(testEventType);
 
           const credentials = await getAllCredentialsIncludeServiceAccountKey(
             {
@@ -626,7 +627,7 @@ describe("getAllCredentialsIncludeServiceAccountKey", () => {
             },
           ]);
 
-          console.log(testEventType);
+          logger.log(testEventType);
 
           const credentials = await getAllCredentialsIncludeServiceAccountKey(
             {

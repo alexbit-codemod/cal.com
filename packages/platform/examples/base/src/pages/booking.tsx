@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 import { Booker, useEventTypes, useTeamEventTypes, useTeams } from "@calcom/atoms";
+import logger from "@calcom/lib/logger";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -106,7 +107,7 @@ export default function Bookings(props: { calUsername: string; calEmail: string 
                 }
               }}
               onBookerStateChange={(bookerState) => {
-                console.log("Booker state updated:", bookerState);
+                logger.log("Booker state updated:", bookerState);
                 // You can perform any actions based on the updated state here
               }}
               metadata={{ CustomKey: "CustomValue" }}

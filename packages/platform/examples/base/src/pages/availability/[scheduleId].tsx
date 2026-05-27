@@ -5,6 +5,7 @@ import { useRef, useCallback } from "react";
 
 import type { AvailabilitySettingsFormRef } from "@calcom/atoms";
 import { AvailabilitySettings } from "@calcom/atoms";
+import logger from "@calcom/lib/logger";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,18 +14,18 @@ export default function Availability(props: { calUsername: string; calEmail: str
   const availabilityRef = useRef<AvailabilitySettingsFormRef>(null);
 
   const handleFormStateChange = useCallback((formState: unknown) => {
-    console.log(formState, "formStateeeeee");
+    logger.log(formState, "formStateeeeee");
   }, []);
 
   const handleValidate = async () => {
     const result = await availabilityRef.current?.validateForm();
-    console.log("Validation result:", result);
+    logger.log("Validation result:", result);
   };
 
   const handleSubmit = () => {
     availabilityRef.current?.handleFormSubmit({
       onSuccess: () => {
-        console.log("Form submitted successfully");
+        logger.log("Form submitted successfully");
       },
       onError: (error) => {
         console.error("Form submission failed:", error);
@@ -84,17 +85,17 @@ export default function Availability(props: { calUsername: string; calEmail: str
           }} */
           onFormStateChange={handleFormStateChange}
           onUpdateSuccess={() => {
-            console.log("Updated successfully");
+            logger.log("Updated successfully");
             router.push(`/availability`);
           }}
           onUpdateError={() => {
-            console.log("update error");
+            logger.log("update error");
           }}
           onDeleteError={() => {
-            console.log("delete error");
+            logger.log("delete error");
           }}
           onDeleteSuccess={() => {
-            console.log("Deleted successfully");
+            logger.log("Deleted successfully");
           }}
         />
       </div>
