@@ -19,18 +19,15 @@ import {
   ValidateNested,
 } from "class-validator";
 
-import type { BookingWindow_2024_06_14, BookingLimitsDuration_2024_06_14 } from "../inputs";
-import {
-  EventTypeColor_2024_06_14,
-  Seats_2024_06_14,
-  Host as TeamEventTypeHostInput,
-  BaseBookingLimitsDuration_2024_06_14,
-  BusinessDaysWindow_2024_06_14,
-  CalendarDaysWindow_2024_06_14,
-  RangeWindow_2024_06_14,
-  CalVideoSettings,
-} from "../inputs";
-import { Recurrence_2024_06_14 } from "../inputs";
+import type { BookingWindow_2024_06_14 } from "../inputs/booking-window.input";
+import type { BookingLimitsDuration_2024_06_14 } from "../inputs/booking-limits-duration.input";
+import { Host as TeamEventTypeHostInput } from "../inputs";
+import { EventTypeColor_2024_06_14 } from "../inputs/event-type-color.input";
+import { Seats_2024_06_14 } from "../inputs/seats.input";
+import { BaseBookingLimitsDuration_2024_06_14 } from "../inputs/booking-limits-duration.input";
+import { BusinessDaysWindow_2024_06_14, CalendarDaysWindow_2024_06_14, RangeWindow_2024_06_14 } from "../inputs/booking-window.input";
+import { CalVideoSettings } from "../inputs/create-event-type.input";
+import { Recurrence_2024_06_14 } from "../inputs/recurrence.input";
 import { BookerLayouts_2024_06_14 } from "../inputs/booker-layouts.input";
 import type { BookingLimitsCount_2024_06_14 } from "../inputs/booking-limits-count.input";
 import type { ConfirmationPolicy_2024_06_14 } from "../inputs/confirmation-policy.input";

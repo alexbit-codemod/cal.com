@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import React, { useState } from "react";
 
-import { BookerEmbed } from "../booker-embed";
+import { BookerEmbed } from "../booker-embed/BookerEmbed";
 import type { BookerPlatformWrapperAtomPropsForTeam } from "../booker/types";
 
 /**

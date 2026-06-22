@@ -5,27 +5,7 @@ import { IsBoolean, IsOptional, IsString } from "class-validator";
 import type { ValidationOptions, ValidatorConstraintInterface } from "class-validator";
 import { registerDecorator, validate, ValidatorConstraint } from "class-validator";
 
-import {
-  PhoneFieldInput_2024_06_14,
-  AddressFieldInput_2024_06_14,
-  TextFieldInput_2024_06_14,
-  NumberFieldInput_2024_06_14,
-  TextAreaFieldInput_2024_06_14,
-  SelectFieldInput_2024_06_14,
-  MultiSelectFieldInput_2024_06_14,
-  MultiEmailFieldInput_2024_06_14,
-  CheckboxGroupFieldInput_2024_06_14,
-  RadioGroupFieldInput_2024_06_14,
-  BooleanFieldInput_2024_06_14,
-  NameDefaultFieldInput_2024_06_14,
-  EmailDefaultFieldInput_2024_06_14,
-  GuestsDefaultFieldInput_2024_06_14,
-  NotesDefaultFieldInput_2024_06_14,
-  RescheduleReasonDefaultFieldInput_2024_06_14,
-  TitleDefaultFieldInput_2024_06_14,
-  SplitNameDefaultFieldInput_2024_06_14,
-  UrlFieldInput_2024_06_14,
-} from "../inputs";
+import { PhoneFieldInput_2024_06_14, AddressFieldInput_2024_06_14, TextFieldInput_2024_06_14, NumberFieldInput_2024_06_14, TextAreaFieldInput_2024_06_14, SelectFieldInput_2024_06_14, MultiSelectFieldInput_2024_06_14, MultiEmailFieldInput_2024_06_14, CheckboxGroupFieldInput_2024_06_14, RadioGroupFieldInput_2024_06_14, BooleanFieldInput_2024_06_14, NameDefaultFieldInput_2024_06_14, EmailDefaultFieldInput_2024_06_14, GuestsDefaultFieldInput_2024_06_14, NotesDefaultFieldInput_2024_06_14, RescheduleReasonDefaultFieldInput_2024_06_14, TitleDefaultFieldInput_2024_06_14, SplitNameDefaultFieldInput_2024_06_14, UrlFieldInput_2024_06_14 } from "../inputs/booking-fields.input";
 
 export class NameDefaultFieldOutput_2024_06_14 extends NameDefaultFieldInput_2024_06_14 {
   @IsBoolean()
