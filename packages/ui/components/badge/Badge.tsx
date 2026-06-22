@@ -4,8 +4,8 @@ import React from "react";
 
 import classNames from "@calcom/ui/classNames";
 
-import { Icon } from "../icon";
-import type { IconName } from "../icon";
+import Icon from "../icon/Icon";
+import type { IconName } from "../icon/icon-names";
 
 export const badgeStyles = cva("font-medium inline-flex items-center justify-center rounded-[4px] gap-x-1", {
   variants: {

@@ -3,8 +3,8 @@ import classNames from "classnames";
 import type { ReactNode } from "react";
 import { forwardRef } from "react";
 
-import { Icon } from "../icon";
-import type { IconName } from "../icon";
+import Icon from "../icon/Icon";
+import type { IconName } from "../icon/icon-names";
 
 export const alertStyles = cva("rounded-[10px] p-3", {
   variants: {
