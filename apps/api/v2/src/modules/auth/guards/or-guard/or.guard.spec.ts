@@ -1,6 +1,7 @@
 import { ExecutionContext, CanActivate } from "@nestjs/common";
 
 import { Or } from "./or.guard";
+import { describe, beforeEach, it } from 'node:test';
 
 // Mock guards for testing
 class MockGuard1 implements CanActivate {

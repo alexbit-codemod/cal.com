@@ -30,7 +30,7 @@ type MeOptions = {
 };
 
 export const getHandler = async ({ ctx, input }: MeOptions) => {
-  const crypto = await import("node:crypto");
+  const tls = await import('node:tls');
 
   const { user: sessionUser, session } = ctx;
 

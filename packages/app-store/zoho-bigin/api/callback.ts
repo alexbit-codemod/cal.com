@@ -1,4 +1,3 @@
-import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 import qs from "qs";
 
@@ -68,11 +67,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     grant_type: "authorization_code",
   };
 
-  const tokenInfo = await axios.post(accountsUrl, qs.stringify(formData), {
-    headers: {
+  const tokenInfo = await fetch(accountsUrl, {
+	method: "POST",
+	headers: {
       "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
     },
-  });
+	body: JSON.stringify(qs.stringify(formData))
+})
+	.then(async (resp) => Object.assign(resp, { data: await resp.json() }))
+	.catch(() => null);
 
   tokenInfo.data.expiryDate = Math.round(Date.now() + tokenInfo.data.expires_in);
   tokenInfo.data.accountServer = accountsServer;

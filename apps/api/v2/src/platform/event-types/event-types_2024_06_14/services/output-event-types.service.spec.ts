@@ -3,6 +3,7 @@ import { ConfigService } from "@nestjs/config";
 import { OutputEventTypesService_2024_06_14 } from "./output-event-types.service";
 import { UsersService } from "@/modules/users/services/users.service";
 import { UsersRepository } from "@/modules/users/users.repository";
+import { describe, beforeEach, it } from 'node:test';
 
 jest.mock("@calcom/platform-libraries/organizations", () => ({
   getBookerBaseUrlSync: jest.fn((slug: string | null) => {

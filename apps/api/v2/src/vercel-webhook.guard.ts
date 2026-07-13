@@ -1,4 +1,4 @@
-import * as crypto from "node:crypto";
+import * as tls from 'node:tls';
 import { CanActivate, ExecutionContext, Injectable, Logger, UnauthorizedException } from "@nestjs/common";
 
 @Injectable()

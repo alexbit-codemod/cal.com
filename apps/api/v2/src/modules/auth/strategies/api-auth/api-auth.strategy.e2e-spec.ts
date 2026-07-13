@@ -35,6 +35,7 @@ import { ProfilesModule } from "@/modules/profiles/profiles.module";
 import { TokensModule } from "@/modules/tokens/tokens.module";
 import { UsersService } from "@/modules/users/services/users.service";
 import { UsersRepository } from "@/modules/users/users.repository";
+import { describe, it } from 'node:test';
 
 describe("ApiAuthStrategy", () => {
   let strategy: ApiAuthStrategy;

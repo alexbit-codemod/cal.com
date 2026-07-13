@@ -1,4 +1,3 @@
-import axios from "axios";
 import qs from "qs";
 import { v4 as uuidv4 } from "uuid";
 import type z from "zod";
@@ -117,24 +116,28 @@ class HitPayPaymentService implements IAbstractPaymentService {
         purpose: booking.title,
       };
 
-      const response = await axios.post(requestUrl, qs.stringify(formData), {
-        headers: {
+      const response = await fetch(requestUrl, {
+	method: "POST",
+	headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
           "X-BUSINESS-API-KEY": keyObj.apiKey,
           "X-Requested-With": "XMLHttpRequest",
         },
-      });
+	body: JSON.stringify(qs.stringify(formData))
+})
+	.then(async (resp) => Object.assign(resp, { data: await resp.json() }))
+	.catch(() => null);
 
       const data = response.data;
 
       const getRequestUrl = `${hitpayAPIurl}/v1/payment-requests?request_id=${data.id}&is_default=1`;
-      const getResponse = await axios.get(getRequestUrl, {
-        headers: {
+      const getResponse = await fetch(getRequestUrl, { headers: {
           "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
           "X-BUSINESS-API-KEY": keyObj.apiKey,
           "X-Requested-With": "XMLHttpRequest",
-        },
-      });
+        } })
+	.then(async (res) => Object.assign(res, { data: await res.json() }))
+	.catch(() => null);
       const getData = getResponse.data;
       const defaultLink = getData.data[0].url;
 

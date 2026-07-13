@@ -2,6 +2,7 @@ import { plainToClass } from "class-transformer";
 import { IsOptional, IsString } from "class-validator";
 
 import { CapitalizeTimeZone } from "./capitalize-timezone";
+import { describe, it } from 'node:test';
 
 class TestDto {
   @IsOptional()

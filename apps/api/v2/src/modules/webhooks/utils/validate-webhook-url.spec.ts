@@ -7,6 +7,7 @@ jest.mock("@calcom/platform-libraries", () => ({
 }));
 
 import { validateWebhookUrl, validateWebhookUrlIfChanged } from "./validate-webhook-url";
+import { describe, beforeEach, it } from 'node:test';
 
 describe("validateWebhookUrl", () => {
   beforeEach(() => {

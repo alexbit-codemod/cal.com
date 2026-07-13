@@ -47,6 +47,7 @@ import { GoogleCalendarService } from "./google-calendar.service";
 import { BookingReferencesRepository_2024_08_13 } from "@/platform/bookings/2024-08-13/repositories/booking-references.repository";
 import { GoogleCalendarService as GCalService } from "@/platform/calendars/services/gcal.service";
 import { CredentialsRepository } from "@/modules/credentials/credentials.repository";
+import { describe, beforeEach, it } from 'node:test';
 
 describe("GoogleCalendarService", () => {
   let service: GoogleCalendarService;
