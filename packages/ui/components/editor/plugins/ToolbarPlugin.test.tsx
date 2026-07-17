@@ -10,11 +10,11 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import ToolbarPlugin from "./ToolbarPlugin";
 
 // Mocks
-vi.mock("../../icon", () => ({
+vi.mock("../../icon/Icon", () => ({
   Icon: ({ name }: { name: string }) => <span data-testid={`icon-${name}`}>{name}</span>,
 }));
 
-vi.mock("../../button", () => ({
+vi.mock("../../button/Button", () => ({
   Button: ({ children, onClick, StartIcon }: any) => (
     <button onClick={onClick} data-testid={`button-${StartIcon || "default"}`}>
       {StartIcon && <span>{StartIcon}</span>}
@@ -23,7 +23,7 @@ vi.mock("../../button", () => ({
   ),
 }));
 
-vi.mock("../../dropdown", () => ({
+vi.mock("../../dropdown/Dropdown", () => ({
   Dropdown: ({ children }: any) => <div data-testid="dropdown">{children}</div>,
   DropdownMenuTrigger: ({ children }: any) => <div data-testid="dropdown-trigger">{children}</div>,
   DropdownMenuContent: ({ children }: any) => <div data-testid="dropdown-content">{children}</div>,

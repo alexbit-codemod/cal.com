@@ -8,7 +8,7 @@ import { QueryCell } from "../../../lib/QueryCell";
 import { EditLocationDialog } from "../EditLocationDialog";
 
 // // Mock the trpc hook
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calcom/trpc/react/trpc", () => ({
   trpc: {
     viewer: {
       apps: {

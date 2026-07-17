@@ -2,7 +2,7 @@ import type { TFunction } from "i18next";
 
 import { APP_NAME, SENDER_NAME, SUPPORT_MAIL_ADDRESS } from "@calcom/lib/constants";
 
-import { BaseEmailHtml } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
 
 export type MonthlyDigestEmailData = {
   language: TFunction;

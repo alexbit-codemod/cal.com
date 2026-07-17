@@ -23,17 +23,15 @@ import type {
   OutputUnknownLocation_2024_06_14,
 } from "@calcom/platform-types";
 
-import {
-  transformLocationsInternalToApi,
-  transformBookingFieldsInternalToApi,
-  transformIntervalLimitsInternalToApi,
-  transformFutureBookingLimitsInternalToApi,
-  transformRecurrenceInternalToApi,
-  transformBookerLayoutsInternalToApi,
-  transformRequiresConfirmationInternalToApi,
-  transformEventTypeColorsInternalToApi,
-  transformSeatsInternalToApi,
-} from ".";
+import { transformLocationsInternalToApi } from "./locations";
+import { transformBookingFieldsInternalToApi } from "./booking-fields";
+import { transformIntervalLimitsInternalToApi } from "./interval-limits";
+import { transformFutureBookingLimitsInternalToApi } from "./future-booking-limits";
+import { transformRecurrenceInternalToApi } from "./recurrence";
+import { transformBookerLayoutsInternalToApi } from "./booker-layouts";
+import { transformRequiresConfirmationInternalToApi } from "./requires-confirmation";
+import { transformEventTypeColorsInternalToApi } from "./event-type-colors";
+import { transformSeatsInternalToApi } from "./seats";
 import {
   systemBeforeFieldEmail,
   systemBeforeFieldName,

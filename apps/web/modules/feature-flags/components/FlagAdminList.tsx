@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import { Badge } from "@calcom/ui/components/badge";
 import { Button } from "@calcom/ui/components/button";
 import { PanelCard } from "@calcom/ui/components/card";

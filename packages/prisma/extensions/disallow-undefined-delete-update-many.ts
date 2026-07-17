@@ -1,4 +1,4 @@
-import { Prisma } from "../client";
+import { Prisma } from "../generated/prisma/client";
 
 export const checkUndefinedInValue = (where: any) => {
   if (where) {

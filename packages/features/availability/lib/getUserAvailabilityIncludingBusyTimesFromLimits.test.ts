@@ -17,7 +17,7 @@ vi.mock("@calcom/app-store/_utils/getCalendar", () => ({
   getCalendar: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/holidays", () => ({
+vi.mock("@calcom/lib/holidays/HolidayService", () => ({
   getHolidayService: vi.fn(() => ({
     getHolidayDatesInRange: vi.fn().mockResolvedValue([]),
   })),

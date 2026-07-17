@@ -89,3 +89,4 @@ const ColorPicker = (props: ColorPickerProps) => {
 };
 
 export default ColorPicker;
+export { ColorPicker };

@@ -10,7 +10,7 @@ import type {
   ZodTypeAny,
 } from "zod";
 import z, { ZodNullable, ZodObject, ZodOptional } from "zod";
-import type { Prisma } from "./client";
+import type { Prisma } from "./generated/prisma/client";
 import { EventTypeCustomInputType } from "./enums";
 
 /** @see https://github.com/colinhacks/zod/issues/3155#issuecomment-2060045794 */

@@ -1,7 +1,7 @@
 import { EventTypesRepository_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/event-types.repository";
 import { EventTypesService_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/services/event-types.service";
 import { InputEventTypesService_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/services/input-event-types.service";
-import type { CustomField, SystemField } from "@/platform/event-types/event-types_2024_06_14/transformers";
+import type { CustomField, SystemField } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
 import { DatabaseTeamEventType } from "@/modules/teams/event-types/services/output-team-event-types.service";
 
 type BaseTransformedEventType = ReturnType<

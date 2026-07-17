@@ -1,7 +1,7 @@
 import type { EventTypeSetup, FormValues } from "@calcom/features/eventtypes/lib/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { useFormContext } from "react-hook-form";
 import type { TeamMembers } from "../../EventType";
 import { EventAvailabilityTab } from "./EventAvailabilityTab";

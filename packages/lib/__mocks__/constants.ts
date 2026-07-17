@@ -6,6 +6,8 @@ const initialConstants = {
   IS_PRODUCTION: false,
   IS_TEAM_BILLING_ENABLED: false,
   WEBSITE_URL: "",
+  WEBSITE_TERMS_URL: "https://cal.com/terms",
+  WEBSITE_PRIVACY_POLICY_URL: "https://cal.com/privacy",
   PUBLIC_INVALIDATE_AVAILABLE_SLOTS_ON_BOOKING_FORM: true,
   CLOUDFLARE_SITE_ID: "test-site-id",
   CLOUDFLARE_USE_TURNSTILE_IN_BOOKER: "1",

@@ -40,7 +40,7 @@ import { shallow } from "zustand/shallow";
 import { useIsQuickAvailabilityCheckFeatureEnabled } from "../hooks/useIsQuickAvailabilityCheckFeatureEnabled";
 import type { WrappedBookerProps } from "../types";
 import { AvailableTimeSlots } from "./AvailableTimeSlots";
-import { BookEventForm } from "./BookEventForm";
+import { BookEventForm } from "./BookEventForm/BookEventForm";
 import { BookFormAsModal } from "./BookEventForm/BookFormAsModal";
 import { DatePicker } from "./DatePicker";
 import { DryRunMessage } from "./DryRunMessage";

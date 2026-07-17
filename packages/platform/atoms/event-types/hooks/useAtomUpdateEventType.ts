@@ -4,7 +4,7 @@ import type { AxiosError } from "axios";
 import type { EventTypeUpdateInput } from "@calcom/features/eventtypes/lib/types";
 import { V2_ENDPOINTS, SUCCESS_STATUS } from "@calcom/platform-constants";
 import type { ApiErrorResponse, ApiResponse, ApiSuccessResponse } from "@calcom/platform-types";
-import type { EventType } from "@calcom/prisma/client";
+import type { EventType } from "@calcom/prisma/generated/prisma/client";
 
 import { useAtomsContext } from "../../hooks/useAtomsContext";
 import http from "../../lib/http";

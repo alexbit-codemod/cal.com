@@ -5,7 +5,7 @@ import { subscriberUrlReserved } from "@calcom/features/webhooks/lib/subscriberU
 import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { APP_NAME } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { Alert } from "@calcom/ui/components/alert";
 import { Button } from "@calcom/ui/components/button";
 import { DialogContent } from "@calcom/ui/components/dialog";
@@ -15,7 +15,7 @@ import { revalidateEventTypeEditPage } from "@calcom/web/app/(use-page-wrapper)/
 import Link from "next/link";
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { WebhookForm } from "~/webhooks/components";
+import WebhookForm from "~/webhooks/components/WebhookForm";
 import WebhookListItem from "~/webhooks/components/WebhookListItem";
 import type { TWebhook, WebhookFormSubmitData } from "~/webhooks/components/WebhookForm";
 

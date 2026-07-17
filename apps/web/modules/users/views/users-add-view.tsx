@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { showToast } from "@calcom/ui/components/toast";
 import { usePathname, useRouter } from "next/navigation";
 import type { FormValues } from "../components/UserForm";

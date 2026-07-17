@@ -1,7 +1,7 @@
 "use client";
 
 import dayjs from "@calcom/dayjs";
-import { useBookingLocation } from "@calcom/features/bookings/hooks";
+import { useBookingLocation } from "@calcom/features/bookings/hooks/useBookingLocation";
 import { shouldShowFieldInCustomResponses } from "@calcom/lib/bookings/SystemField";
 import { formatPrice } from "@calcom/lib/currencyConversions";
 import { formatToLocalizedTimezone } from "@calcom/lib/dayjs";
@@ -15,7 +15,7 @@ import {
   EventTypeMetaDataSchema,
   eventTypeBookingFields,
 } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { RecurringEvent } from "@calcom/types/Calendar";
 import classNames from "@calcom/ui/classNames";
 import { Avatar } from "@calcom/ui/components/avatar";

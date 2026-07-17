@@ -12,8 +12,8 @@ import { HttpError } from "@calcom/lib/http-error";
 import { parseEventTypeColor } from "@calcom/lib/isEventTypeColor";
 import { localStorage } from "@calcom/lib/webstorage";
 import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
 import { ArrowButton } from "@calcom/ui/components/arrow-button";
 import { UserAvatarGroup } from "@calcom/ui/components/avatar";
@@ -40,7 +40,7 @@ import {
   EventTypeEmbedButton,
   EventTypeEmbedDialog,
 } from "@calcom/web/modules/embed/components/EventTypeEmbed";
-import { EventTypeDescription } from "@calcom/web/modules/event-types/components";
+import EventTypeDescription from "@calcom/web/modules/event-types/components/EventTypeDescription";
 import {
   CreateEventTypeDialog,
   type ProfileOption,

@@ -2,7 +2,7 @@
 
 import dayjs from "@calcom/dayjs";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
 import { Alert } from "@calcom/ui/components/alert";
 import { Badge } from "@calcom/ui/components/badge";
@@ -18,7 +18,8 @@ import { useBookingListData } from "~/bookings/hooks/useBookingListData";
 import { useBookingStatusTab } from "~/bookings/hooks/useBookingStatusTab";
 import { useFacetedUniqueValues } from "~/bookings/hooks/useFacetedUniqueValues";
 import { useListAutoSelector } from "~/bookings/hooks/useListAutoSelector";
-import { DataTableFilters, DataTableSegment } from "~/data-table/components";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DataTableSegment } from "~/data-table/components/segment";
 import { useDataTable } from "~/data-table/hooks/useDataTable";
 import { useDisplayedFilterCount } from "~/data-table/hooks/useDisplayedFilterCount";
 import {

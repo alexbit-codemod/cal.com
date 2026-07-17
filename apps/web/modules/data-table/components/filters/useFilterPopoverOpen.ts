@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { useDataTable } from "~/data-table/hooks";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
 
 export function useFilterPopoverOpen(columnId: string) {
   const { filterToOpen } = useDataTable();

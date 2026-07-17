@@ -5,12 +5,12 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import { TimezoneSelect } from "@calcom/web/modules/timezone/components/TimezoneSelect";
 import { FULL_NAME_LENGTH_MAX_LIMIT } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import { Button } from "@calcom/ui/components/button";
 import { Input } from "@calcom/ui/components/form";
 

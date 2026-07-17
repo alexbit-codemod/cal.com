@@ -5,7 +5,7 @@ import { Editable } from "@/platform/event-types/event-types_2024_04_15/inputs/e
 import { BaseField } from "@/platform/event-types/event-types_2024_04_15/inputs/enums/field-type";
 import { UpdateEventTypeInput_2024_04_15 } from "@/platform/event-types/event-types_2024_04_15/inputs/update-event-type.input";
 import { EventTypeOutput } from "@/platform/event-types/event-types_2024_04_15/outputs/event-type.output";
-import { systemBeforeFieldEmail } from "@/platform/event-types/event-types_2024_06_14/transformers";
+import { systemBeforeFieldEmail } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
 import { MembershipsRepository } from "@/modules/memberships/memberships.repository";
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { SelectedCalendarsRepository } from "@/modules/selected-calendars/selected-calendars.repository";

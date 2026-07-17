@@ -7,8 +7,8 @@ import { downloadAsCsv } from "@calcom/lib/csvUtils";
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { MembershipRole } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { FilterType } from "@calcom/types/data-table";
 import classNames from "@calcom/ui/classNames";
 import { Avatar } from "@calcom/ui/components/avatar";
@@ -35,13 +35,11 @@ import { parseAsBoolean, useQueryState } from "nuqs";
 import posthog from "posthog-js";
 import { useMemo, useReducer, useState } from "react";
 import { createPortal } from "react-dom";
-import {
-  DataTableFilters,
-  DataTableSegment,
-  DataTableSelectionBar,
-  DataTableToolbar,
-  DataTableWrapper,
-} from "~/data-table/components";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DataTableSegment } from "~/data-table/components/segment";
+import { DataTableSelectionBar } from "~/data-table/components/DataTableSelectionBar";
+import { DataTableToolbar } from "~/data-table/components/DataTableToolbar";
+import { DataTableWrapper } from "~/data-table/components/DataTableWrapper";
 import { DataTableProvider } from "~/data-table/DataTableProvider";
 import { useColumnFilters } from "~/data-table/hooks/useColumnFilters";
 import { useDataTable } from "~/data-table/hooks/useDataTable";

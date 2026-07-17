@@ -19,29 +19,18 @@ import { BadRequestException, Injectable } from "@nestjs/common";
 import { ConnectedCalendarsData } from "@/platform/calendars/outputs/connected-calendars.output";
 import { CalendarsService } from "@/platform/calendars/services/calendars.service";
 import { EventTypesRepository_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/event-types.repository";
-import { InputEventTransformed_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/transformed";
-import {
-  CustomField,
-  InternalLocation,
-  InternalLocationSchema,
-  SystemField,
-  systemAfterFieldGuests,
-  systemAfterFieldNotes,
-  systemAfterFieldRescheduleReason,
-  systemAfterFieldTitle,
-  systemBeforeFieldEmail,
-  systemBeforeFieldLocation,
-  systemBeforeFieldName,
-  transformBookerLayoutsApiToInternal,
-  transformBookingFieldsApiToInternal,
-  transformConfirmationPolicyApiToInternal,
-  transformEventColorsApiToInternal,
-  transformFutureBookingLimitsApiToInternal,
-  transformIntervalLimitsApiToInternal,
-  transformLocationsApiToInternal,
-  transformRecurrenceApiToInternal,
-  transformSeatsApiToInternal,
-} from "@/platform/event-types/event-types_2024_06_14/transformers";
+import { InputEventTransformed_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/transformed/event-type.tranformed";
+import { CustomField, SystemField, systemAfterFieldGuests, systemAfterFieldNotes, systemAfterFieldRescheduleReason, systemAfterFieldTitle, systemBeforeFieldEmail, systemBeforeFieldLocation, systemBeforeFieldName } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
+import { InternalLocation, InternalLocationSchema } from "@/platform/event-types/event-types_2024_06_14/transformers/internal/locations";
+import { transformBookerLayoutsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/booker-layouts";
+import { transformBookingFieldsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/booking-fields";
+import { transformConfirmationPolicyApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/confirmation-policy";
+import { transformEventColorsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/event-colors";
+import { transformFutureBookingLimitsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/future-booking-limits";
+import { transformIntervalLimitsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/interval-limits";
+import { transformLocationsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/locations";
+import { transformRecurrenceApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/recurrence";
+import { transformSeatsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/seats";
 import { UserWithProfile } from "@/modules/users/users.repository";
 
 interface ValidationContext {

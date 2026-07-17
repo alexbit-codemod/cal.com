@@ -6,10 +6,10 @@ import Cropper from "react-easy-crop";
 import checkIfItFallbackImage from "@calcom/lib/checkIfItFallbackImage";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 
-import type { ButtonColor, ButtonProps } from "../button";
-import { Button } from "../button";
-import { Dialog, DialogClose, DialogContent, DialogTrigger, DialogFooter } from "../dialog";
-import { showToast } from "../toast";
+import type { ButtonColor, ButtonProps } from "../button/Button";
+import { Button } from "../button/Button";
+import { Dialog, DialogClose, DialogContent, DialogTrigger, DialogFooter } from "../dialog/Dialog";
+import { showToast } from "../toast/showToast";
 import { useFileReader, createImage, Slider } from "./Common";
 import type { FileEvent, Area } from "./Common";
 

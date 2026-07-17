@@ -5,7 +5,8 @@ import { getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/rea
 import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
 
-import { DataTableSelectionBar, DataTableWrapper } from "@calcom/web/modules/data-table/components";
+import { DataTableSelectionBar } from "@calcom/web/modules/data-table/components/DataTableSelectionBar";
+import { DataTableWrapper } from "@calcom/web/modules/data-table/components/DataTableWrapper";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { WatchlistType } from "@calcom/prisma/enums";
 import { EmptyScreen } from "@calcom/ui/components/empty-screen";

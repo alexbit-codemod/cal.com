@@ -14,19 +14,7 @@ import type {
   SplitNameDefaultFieldInput_2024_06_14,
 } from "@calcom/platform-types";
 
-import {
-  systemBeforeFieldEmail,
-  systemBeforeFieldName,
-  systemBeforeFieldLocation,
-  systemBeforeFieldPhone,
-  systemAfterFieldTitle,
-  systemAfterFieldNotes,
-  systemAfterFieldGuests,
-  systemAfterFieldRescheduleReason,
-  type CustomField,
-  type SystemField,
-  systemBeforeFieldNameSplit,
-} from "../internal-to-api";
+import { systemBeforeFieldEmail, systemBeforeFieldName, systemBeforeFieldLocation, systemBeforeFieldPhone, systemAfterFieldTitle, systemAfterFieldNotes, systemAfterFieldGuests, systemAfterFieldRescheduleReason, type CustomField, type SystemField, systemBeforeFieldNameSplit } from "../internal-to-api/booking-fields";
 
 type InputBookingField = InputBookingField_2024_06_14 | PhoneDefaultFieldOutput_2024_06_14;
 

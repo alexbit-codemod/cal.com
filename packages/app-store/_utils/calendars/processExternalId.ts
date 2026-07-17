@@ -1,6 +1,6 @@
 import type { DestinationCalendar } from "@calcom/prisma/client";
 
-import { metadata as OutlookMetadata } from "../../office365calendar";
+import { metadata as OutlookMetadata } from "../../office365calendar/_metadata";
 
 /**
  * When inviting attendees to a calendar event, sometimes the external ID is only used for internal purposes

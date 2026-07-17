@@ -1,5 +1,5 @@
 import type { AppFlags } from "@calcom/features/flags/config";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 
 const initialData: AppFlags = {
   "calendar-cache": false,

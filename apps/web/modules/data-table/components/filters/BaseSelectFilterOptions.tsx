@@ -20,7 +20,8 @@ import {
 } from "@calcom/ui/components/command";
 import { CheckIcon } from "@coss/ui/icons";
 import { useMemo } from "react";
-import { useDataTable, useFilterValue } from "~/data-table/hooks";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useFilterValue } from "~/data-table/hooks/useFilterValue";
 
 type FilterableColumn = Extract<_FilterableColumn, { type: Extract<FilterType, "ms" | "ss"> }>;
 

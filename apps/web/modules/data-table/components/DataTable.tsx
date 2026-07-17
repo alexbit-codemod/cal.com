@@ -6,14 +6,7 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import classNames from "@calcom/ui/classNames";
 import { Command, CommandItem, CommandList } from "@calcom/ui/components/command";
 import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
-import {
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableNew,
-  TableRow,
-} from "@calcom/ui/components/table";
+import { TableBody, TableCell, TableHead, TableHeader, Table as TableNew, TableRow } from "@calcom/ui/components/table/TableNew";
 import { ArrowDownIcon, ArrowUpIcon, CheckIcon, ChevronsUpDownIcon, EyeOffIcon } from "@coss/ui/icons";
 import type { Header, HeaderGroup, Table as ReactTableType, Row } from "@tanstack/react-table";
 import { flexRender } from "@tanstack/react-table";

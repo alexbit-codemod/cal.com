@@ -11,18 +11,13 @@ import type {
 } from "@calcom/features/data-table/lib/types";
 import type { ColumnSizingState, OnChangeFn, SortingState, VisibilityState } from "@tanstack/react-table";
 import { createContext, useMemo } from "react";
-import type { ActiveFiltersValidatorState } from "./contexts";
-import {
-  DataTableFiltersProvider,
-  DataTableSegmentProvider,
-  DataTableStateProvider,
-  useDataTableFilters,
-  useDataTableSegment,
-  useDataTableState,
-} from "./contexts";
+import type { ActiveFiltersValidatorState } from "./contexts/DataTableStateContext";
+import { DataTableFiltersProvider, useDataTableFilters } from "./contexts/DataTableFiltersContext";
+import { DataTableSegmentProvider, useDataTableSegment } from "./contexts/DataTableSegmentContext";
+import { DataTableStateProvider, useDataTableState } from "./contexts/DataTableStateContext";
 
 export type { ActiveFiltersValidatorState };
-export type { ActiveFiltersValidator } from "./contexts";
+export type { ActiveFiltersValidator } from "./contexts/DataTableStateContext";
 
 export type DataTableContextType = {
   tableIdentifier: string;

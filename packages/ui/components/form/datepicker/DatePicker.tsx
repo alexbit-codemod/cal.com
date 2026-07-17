@@ -61,4 +61,5 @@ const DatePicker = ({ minDate, disabled, date, onDatesChange, className, label }
   );
 };
 
+export { DatePicker };
 export default DatePicker;

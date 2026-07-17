@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import type { SpanFn } from "@calcom/features/watchlist/lib/telemetry";
+import type { SpanFn } from "@calcom/features/watchlist/lib/telemetry/types";
 
 import { filterBlockedUsers, type UserWithEmail } from "./filter-blocked-users.controller";
 

@@ -2,7 +2,7 @@
 
 import { Pagination } from "@calcom/ui/components/pagination";
 import type { Table } from "@tanstack/react-table";
-import { useDataTable } from "~/data-table/hooks";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;

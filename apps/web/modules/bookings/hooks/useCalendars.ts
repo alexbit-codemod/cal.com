@@ -5,9 +5,9 @@ import { shallow } from "zustand/shallow";
 import { useOverlayCalendarStore } from "@calcom/features/bookings/Booker/components/OverlayCalendar/store";
 import { useBookerStore } from "@calcom/features/bookings/Booker/store";
 import type { ToggledConnectedCalendars } from "@calcom/features/bookings/Booker/types";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import { localStorage } from "@calcom/lib/webstorage";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 
 type UseCalendarsProps = {
   hasSession: boolean;

@@ -3,8 +3,8 @@ import type { Dispatch, SetStateAction } from "react";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { userMetadata } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
 import { Button } from "@calcom/ui/components/button";
 import { List } from "@calcom/ui/components/list";

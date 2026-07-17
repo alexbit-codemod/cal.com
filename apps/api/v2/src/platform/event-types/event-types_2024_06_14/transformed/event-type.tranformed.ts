@@ -1,12 +1,10 @@
-import type {
-  transformEventColorsApiToInternal,
-  transformFutureBookingLimitsApiToInternal,
-  transformIntervalLimitsApiToInternal,
-  transformRecurrenceApiToInternal,
-  transformSeatsApiToInternal,
-  transformBookingFieldsApiToInternal,
-  InternalLocationsSchema,
-} from "@/platform/event-types/event-types_2024_06_14/transformers";
+import type { transformEventColorsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/event-colors";
+import type { transformFutureBookingLimitsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/future-booking-limits";
+import type { transformIntervalLimitsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/interval-limits";
+import type { transformRecurrenceApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/recurrence";
+import type { transformSeatsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/seats";
+import type { transformBookingFieldsApiToInternal } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/booking-fields";
+import type { InternalLocationsSchema } from "@/platform/event-types/event-types_2024_06_14/transformers/internal/locations";
 import type { z } from "zod";
 
 import type {

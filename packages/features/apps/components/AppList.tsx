@@ -16,7 +16,7 @@ import type { AppCategories } from "@calcom/prisma/enums";
 import type { DefaultConferencingApp } from "@calcom/prisma/zod-utils";
 import type { App } from "@calcom/types/App";
 import { Alert } from "@calcom/ui/components/alert";
-import type { AppListCardProps } from "@calcom/ui/components/app-list-card";
+import type { AppListCardProps } from "@calcom/ui/components/app-list-card/AppListCard";
 import { Button } from "@calcom/ui/components/button";
 import {
   Dropdown,

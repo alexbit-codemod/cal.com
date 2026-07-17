@@ -1,7 +1,7 @@
 import process from "node:process";
 import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
 import { getRegularBookingService } from "@calcom/features/bookings/di/RegularBookingService.container";
-import { BotDetectionService } from "@calcom/features/bot-detection";
+import { BotDetectionService } from "@calcom/features/bot-detection/BotDetectionService";
 import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
 import { FeaturesRepository } from "@calcom/features/flags/features.repository";
 import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";

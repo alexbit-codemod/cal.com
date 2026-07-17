@@ -1,4 +1,4 @@
-import { OrganizerIntegrationLocation } from "@/platform/event-types/event-types_2024_06_14/transformers";
+import { OrganizerIntegrationLocation } from "@/platform/event-types/event-types_2024_06_14/transformers/internal/locations";
 
 type BaseEventType = {
   length: number;

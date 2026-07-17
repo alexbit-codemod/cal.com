@@ -16,7 +16,7 @@ import { buildDateRanges, subtract } from "@calcom/features/schedules/lib/date-r
 import { getWorkingHours } from "@calcom/lib/availability";
 import { stringToDayjsZod } from "@calcom/lib/dayjs";
 import { ErrorCode } from "@calcom/lib/errorCodes";
-import { getHolidayService } from "@calcom/lib/holidays";
+import { getHolidayService } from "@calcom/lib/holidays/HolidayService";
 import { getHolidayEmoji } from "@calcom/lib/holidays/getHolidayEmoji";
 import { HttpError } from "@calcom/lib/http-error";
 import { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";

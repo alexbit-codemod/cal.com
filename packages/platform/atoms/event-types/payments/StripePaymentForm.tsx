@@ -1,4 +1,4 @@
-import getStripe from "@calcom/app-store/stripepayment/lib/client";
+import getStripe from "@calcom/app-store/stripepayment/lib/client/getStripe";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { Elements, useElements, useStripe } from "@stripe/react-stripe-js";

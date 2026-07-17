@@ -1,6 +1,6 @@
 import type { DestinationCalendarClassNames } from "../../destination-calendar/DestinationCalendar";
-import { DestinationCalendarSettingsPlatformWrapper } from "../../destination-calendar/index";
-import { SelectedCalendarsSettingsPlatformWrapper } from "../../selected-calendars/index";
+import { DestinationCalendarSettingsPlatformWrapper } from "../../destination-calendar/wrappers/DestinationCalendarSettingsPlatformWrapper";
+import { SelectedCalendarsSettingsPlatformWrapper } from "../../selected-calendars/wrappers/SelectedCalendarsSettingsPlatformWrapper";
 import type {
   CalendarRedirectUrls,
   SelectedCalendarsClassNames,

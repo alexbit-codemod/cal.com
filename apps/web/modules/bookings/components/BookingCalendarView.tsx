@@ -1,7 +1,7 @@
 "use client";
 
 import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import type { CalendarEvent } from "@calcom/features/calendars/weeklyview/types/events";
 import { useGetTheme } from "@calcom/lib/hooks/useTheme";
 import { Calendar } from "@calcom/web/modules/calendars/weeklyview/components/Calendar";

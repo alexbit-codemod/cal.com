@@ -7,7 +7,8 @@ import { FilterSearchField } from "@calcom/ui/components/form";
 import type { Table } from "@tanstack/react-table";
 import type { ComponentPropsWithoutRef } from "react";
 import { type ChangeEvent, forwardRef, type Ref, useEffect, useState } from "react";
-import { useColumnFilters, useDataTable } from "~/data-table/hooks";
+import { useColumnFilters } from "~/data-table/hooks/useColumnFilters";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
 
 interface DataTableToolbarProps extends ComponentPropsWithoutRef<"div"> {
   children: React.ReactNode;

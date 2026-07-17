@@ -16,7 +16,7 @@ import { Button } from "@calcom/ui/components/button";
 import type { IconName } from "@calcom/ui/components/icon";
 import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
 import startCase from "lodash/startCase";
-import { useFilterValue } from "~/data-table/hooks";
+import { useFilterValue } from "~/data-table/hooks/useFilterValue";
 import { FilterOptions } from "./FilterOptions";
 import { useFilterPopoverOpen } from "./useFilterPopoverOpen";
 import { numberFilterOperatorOptions, useTextFilterOperatorOptions } from "./utils";

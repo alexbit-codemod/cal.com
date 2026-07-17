@@ -4,7 +4,7 @@ import { shallow } from "zustand/shallow";
 import dayjs from "@calcom/dayjs";
 import { useOverlayCalendarStore } from "@calcom/features/bookings/Booker/components/OverlayCalendar/store";
 import type { ToggledConnectedCalendars } from "@calcom/features/bookings/Booker/types";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 
 import type { WrappedBookerPropsMain } from "../types";
 import { useLocalSet } from "@calcom/features/bookings/Booker/hooks/useLocalSet";

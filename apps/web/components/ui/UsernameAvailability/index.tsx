@@ -1,5 +1,5 @@
 import { IS_SELF_HOSTED, WEBSITE_URL } from "@calcom/lib/constants";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { AppRouter } from "@calcom/trpc/types/server/routers/_app";
 import useRouterQuery from "@lib/hooks/useRouterQuery";
 import type { TRPCClientErrorLike } from "@trpc/client";

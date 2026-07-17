@@ -9,7 +9,7 @@ import {
 } from "@calcom/testing/lib/bookingScenario/bookingScenario";
 import process from "node:process";
 import { appStoreMetadata } from "@calcom/app-store/apps.metadata.generated";
-import { getBatchProcessorJobAccessLink, getRoomNameFromRecordingId } from "@calcom/app-store/dailyvideo/lib";
+import { getBatchProcessorJobAccessLink, getRoomNameFromRecordingId } from "@calcom/app-store/dailyvideo/lib/VideoApiAdapter";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import prisma from "@calcom/prisma";
 import { BookingStatus, WebhookTriggerEvents } from "@calcom/prisma/enums";
@@ -61,7 +61,7 @@ beforeAll(() => {
   vi.stubEnv("SENDGRID_EMAIL", "FAKE_SENDGRID_EMAIL");
 });
 
-vi.mock("@calcom/app-store/dailyvideo/lib", () => {
+vi.mock("@calcom/app-store/dailyvideo/lib/VideoApiAdapter", () => {
   return {
     getRoomNameFromRecordingId: vi.fn(),
     getBatchProcessorJobAccessLink: vi.fn(),

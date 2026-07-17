@@ -4,7 +4,7 @@ import { revalidateTag } from "next/cache";
 
 import { TravelScheduleRepository } from "@calcom/features/travelSchedule/repositories/TravelScheduleRepository";
 import { NEXTJS_CACHE_TTL } from "@calcom/lib/constants";
-import { unstable_cache } from "@calcom/lib/unstable_cache";
+import { cache as unstable_cache } from "@calcom/lib/unstable_cache/unstable_cache";
 
 const CACHE_TAGS = {
   TRAVEL_SCHEDULES: "TravelRepository.findTravelSchedulesByUserId",

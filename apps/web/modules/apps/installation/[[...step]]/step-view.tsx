@@ -19,12 +19,12 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { Team } from "@calcom/prisma/client";
 import type { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
 import type { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { AppMeta } from "@calcom/types/App";
 import { Form, Steps } from "@calcom/ui/components/form";
 import { showToast } from "@calcom/ui/components/toast";
 
-import { HttpError } from "@lib/core/http/error";
+import { HttpError } from "@lib/core/http/error/http-error";
 
 import type { PersonalAccountProps } from "@components/apps/installation/AccountsStepCard";
 import { AccountsStepCard } from "@components/apps/installation/AccountsStepCard";

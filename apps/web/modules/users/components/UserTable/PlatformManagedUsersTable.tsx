@@ -2,7 +2,7 @@
 
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { Avatar } from "@calcom/ui/components/avatar";
 import { Badge } from "@calcom/ui/components/badge";
 import { Checkbox } from "@calcom/ui/components/form";
@@ -10,13 +10,11 @@ import { SkeletonText } from "@calcom/ui/components/skeleton";
 import { keepPreviousData } from "@tanstack/react-query";
 import { type ColumnDef, getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
 import { useMemo, useReducer, useState } from "react";
-import {
-  DataTableFilters,
-  DataTableSegment,
-  DataTableSelectionBar,
-  DataTableToolbar,
-  DataTableWrapper,
-} from "~/data-table/components";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DataTableSegment } from "~/data-table/components/segment";
+import { DataTableSelectionBar } from "~/data-table/components/DataTableSelectionBar";
+import { DataTableToolbar } from "~/data-table/components/DataTableToolbar";
+import { DataTableWrapper } from "~/data-table/components/DataTableWrapper";
 import { DataTableProvider } from "~/data-table/DataTableProvider";
 import { useColumnFilters } from "~/data-table/hooks/useColumnFilters";
 import { useDataTable } from "~/data-table/hooks/useDataTable";

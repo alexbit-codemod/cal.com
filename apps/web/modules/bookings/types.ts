@@ -3,7 +3,7 @@ import type { UseBookingFormReturnType } from "@calcom/features/bookings/Booker/
 import type { CustomClassNames, ToggledConnectedCalendars } from "@calcom/features/bookings/Booker/types";
 import type { BookerEventQuery } from "@calcom/features/bookings/types";
 import type { DataTableRow } from "@calcom/features/data-table/lib/separator";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import type { EventBusyDate } from "@calcom/types/Calendar";
 import type { useScheduleForEventReturnType } from "@calcom/web/modules/schedules/hooks/useEvent";
 import type { UseBookingsReturnType } from "./hooks/useBookings";

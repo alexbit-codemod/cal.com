@@ -7,7 +7,7 @@ import { fieldTypesConfigMap } from "@calcom/features/form-builder/fieldTypes";
 import { SystemField } from "@calcom/lib/bookings/SystemField";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import { FormBuilderField } from "@calcom/web/modules/form-builder/components/FormBuilderField";
 import { useMemo, useRef } from "react";
 import { useFormContext } from "react-hook-form";

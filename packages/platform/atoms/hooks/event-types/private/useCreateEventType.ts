@@ -8,7 +8,7 @@ import {
 } from "@calcom/platform-constants";
 import type { ApiResponse, ApiSuccessResponse } from "@calcom/platform-types";
 import type { CreateEventTypeInput_2024_06_14 } from "@calcom/platform-types";
-import type { EventType } from "@calcom/prisma/client";
+import type { EventType } from "@calcom/prisma/generated/prisma/client";
 
 import http from "../../../lib/http";
 

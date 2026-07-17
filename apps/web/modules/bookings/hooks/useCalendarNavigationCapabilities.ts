@@ -2,7 +2,7 @@ import { useCallback, useMemo, useEffect } from "react";
 
 import type { Dayjs } from "@calcom/dayjs";
 import dayjs from "@calcom/dayjs";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 
 import { getWeekStart } from "../lib/weekUtils";
 import type { NavigationCapabilities } from "../store/bookingDetailsSheetStore";

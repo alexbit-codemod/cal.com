@@ -147,11 +147,11 @@ vi.mock("@calcom/prisma/zod-utils", () => ({
 
 vi.mock("@calcom/app-store/zod-utils", () => ({
   eventTypeMetaDataSchemaWithTypedApps: {
-    parse: vi.fn(),
+    parse: vi.fn((value) => value ?? {}),
   },
 }));
 
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calcom/trpc/react/trpc", () => ({
   trpc: {
     viewer: {
       public: {

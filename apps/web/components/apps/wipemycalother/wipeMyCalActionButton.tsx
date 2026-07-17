@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { Button } from "@calcom/ui/components/button";
 
 import { ConfirmDialog } from "./confirmDialog";

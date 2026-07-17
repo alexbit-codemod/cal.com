@@ -1,4 +1,4 @@
-import { Prisma } from "../client";
+import { Prisma } from "../generated/prisma/client";
 
 export function excludeLockedUsersExtension() {
   return Prisma.defineExtension({

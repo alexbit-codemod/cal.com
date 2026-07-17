@@ -31,7 +31,8 @@ import { CheckIcon } from "@coss/ui/icons";
 import { format } from "date-fns";
 import type { Dayjs } from "dayjs";
 import { useCallback, useEffect, useState } from "react";
-import { useDataTable, useFilterValue } from "~/data-table/hooks";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useFilterValue } from "~/data-table/hooks/useFilterValue";
 import { useFilterPopoverOpen } from "./useFilterPopoverOpen";
 
 type DateRangeFilterProps = {

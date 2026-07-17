@@ -5,7 +5,7 @@ import type { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
 import type { appDataSchemas } from "../../apps.schemas.generated";
 import type { appDataSchema, paymentOptionEnum } from "../../stripepayment/zod";
 import type { EventTypeAppsList } from "../../utils";
-import { eventTypeMetaDataSchemaWithTypedApps } from "../../zod-utils";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
 import { getEventTypeAppData } from "../getEventTypeAppData";
 
 export function getPaymentAppData(
@@ -18,7 +18,7 @@ export function getPaymentAppData(
 ) {
   const eventType = {
     ..._eventType,
-    metadata: eventTypeMetaDataSchemaWithTypedApps.parse(_eventType.metadata),
+    metadata: eventTypeMetaDataSchemaWithTypedApps.parse(_eventType.metadata ?? null),
   };
   const metadataApps = eventType.metadata?.apps;
   if (!metadataApps) {

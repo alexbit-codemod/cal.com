@@ -7,7 +7,8 @@ import type { FilterType } from "@calcom/types/data-table";
 import { Button } from "@calcom/ui/components/button";
 import { Form, Input, Select } from "@calcom/ui/components/form";
 import { Controller, useForm } from "react-hook-form";
-import { useDataTable, useFilterValue } from "~/data-table/hooks";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useFilterValue } from "~/data-table/hooks/useFilterValue";
 import { useTextFilterOperatorOptions } from "./utils";
 
 export type TextFilterOptionsProps = {

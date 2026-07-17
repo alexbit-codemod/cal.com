@@ -9,7 +9,8 @@ import { EyeOffIcon, PlusIcon } from "@coss/ui/icons";
 import type { Table } from "@tanstack/react-table";
 import startCase from "lodash/startCase";
 import { forwardRef, useState } from "react";
-import { useDataTable, useFilterableColumns } from "~/data-table/hooks";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useFilterableColumns } from "~/data-table/hooks/useFilterableColumns";
 
 export interface AddFilterButtonProps<TData> {
   table: Table<TData>;

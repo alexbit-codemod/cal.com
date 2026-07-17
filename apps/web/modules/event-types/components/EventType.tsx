@@ -8,7 +8,7 @@ import type {
   TabMap,
 } from "@calcom/features/eventtypes/lib/types";
 import type { customInputSchema } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import { Form } from "@calcom/ui/components/form";
 import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
 /* eslint-disable @typescript-eslint/no-empty-function */

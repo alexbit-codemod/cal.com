@@ -1,6 +1,6 @@
 import CreateEventTypeForm from "@calcom/features/eventtypes/components/CreateEventTypeForm";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { EventType } from "@calcom/prisma/client";
+import type { EventType } from "@calcom/prisma/generated/prisma/client";
 import { Button } from "@calcom/ui/components/button";
 import { useCreateEventType } from "../../hooks/event-types/private/useCreateEventType";
 import { useCreateEventTypeForm } from "../../hooks/event-types/private/useCreateEventTypeForm";

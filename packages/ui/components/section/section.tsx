@@ -2,8 +2,8 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { Slot } from "@radix-ui/react-slot";
 
 import cn from "../../classNames";
-import type { IconName } from "../icon";
-import { Icon as IconComponent } from "../icon";
+import type { IconName } from "../icon/icon-names";
+import IconComponent from "../icon/Icon";
 
 const Root = ({
   children,

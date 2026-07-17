@@ -2,7 +2,7 @@
 
 import { sdkActionManager, useIsEmbed } from "@calcom/embed-core/embed-iframe";
 import { useBookerEmbedEvents } from "@calcom/embed-core/src/embed-iframe/react-hooks";
-import type { BookerProps } from "@calcom/features/bookings/Booker";
+import type { BookerProps } from "@calcom/features/bookings/Booker/types";
 import {
   BookerStoreProvider,
   useBookerStoreContext,

@@ -47,7 +47,7 @@ vi.mock("framer-motion", async (importOriginal) => {
 });
 
 // Mock components that we don't want to test
-vi.mock("./BookEventForm", () => ({
+vi.mock("./BookEventForm/BookEventForm", () => ({
   BookEventForm: ({
     isTimeslotUnavailable,
     onCancel,

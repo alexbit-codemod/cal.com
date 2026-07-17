@@ -6,7 +6,7 @@ import AppNotInstalledMessage from "@calcom/app-store/_components/AppNotInstalle
 import type { getServerSideProps } from "@calcom/app-store/make/pages/setup/_getServerSideProps";
 import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { Button } from "@calcom/ui/components/button";
 import { showToast } from "@calcom/ui/components/toast";
 import { Tooltip } from "@calcom/ui/components/tooltip";

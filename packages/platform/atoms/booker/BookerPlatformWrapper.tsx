@@ -12,7 +12,7 @@ import { useBookingForm } from "@calcom/features/bookings/Booker/hooks/useBookin
 import { useLocalSet } from "@calcom/features/bookings/Booker/hooks/useLocalSet";
 import { useStableTimezone } from "@calcom/features/bookings/Booker/hooks/useStableTimezone";
 import { useInitializeBookerStore } from "@calcom/features/bookings/Booker/store";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import type { ConnectedDestinationCalendars } from "@calcom/features/calendars/lib/getConnectedDestinationCalendars";
 import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
 import { useTimesForSchedule } from "@calcom/features/schedules/hooks/useTimesForSchedule";

@@ -3,7 +3,8 @@ import { components as reactSelectComponents } from "react-select";
 
 import classNames from "@calcom/ui/classNames";
 
-import { Badge, CreditsBadge } from "../../badge";
+import { Badge } from "../../badge/Badge";
+import { CreditsBadge } from "../../badge/CreditsBadge";
 import { CheckIcon } from "@coss/ui/icons";
 import type { SelectProps } from "./types";
 

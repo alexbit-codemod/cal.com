@@ -28,19 +28,15 @@ import {
   systemBeforeFieldEmail,
   systemBeforeFieldName,
 } from "../internal-to-api/booking-fields";
-import {
-  transformBookerLayoutsApiToInternal,
-  transformBookingFieldsApiToInternal,
-  transformConfirmationPolicyApiToInternal,
-  transformEventColorsApiToInternal,
-  transformFutureBookingLimitsApiToInternal,
-  transformIntervalLimitsApiToInternal,
-  transformLocationsApiToInternal,
-  transformRecurrenceApiToInternal,
-  transformSeatsApiToInternal,
-  transformSelectOptionsApiToInternal,
-  transformTeamLocationsApiToInternal,
-} from "./index";
+import { transformBookerLayoutsApiToInternal } from "./booker-layouts";
+import { transformBookingFieldsApiToInternal, transformSelectOptionsApiToInternal } from "./booking-fields";
+import { transformConfirmationPolicyApiToInternal } from "./confirmation-policy";
+import { transformEventColorsApiToInternal } from "./event-colors";
+import { transformFutureBookingLimitsApiToInternal } from "./future-booking-limits";
+import { transformIntervalLimitsApiToInternal } from "./interval-limits";
+import { transformLocationsApiToInternal, transformTeamLocationsApiToInternal } from "./locations";
+import { transformRecurrenceApiToInternal } from "./recurrence";
+import { transformSeatsApiToInternal } from "./seats";
 
 describe("transformLocationsApiToInternal", () => {
   it("should transform address", () => {

@@ -6,7 +6,7 @@ import { InstallAppButtonWithoutPlanCheck } from "@calcom/app-store/InstallAppBu
 import type { TDependencyData } from "@calcom/app-store/_appRegistry";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { App } from "@calcom/types/App";
 import { Badge } from "@calcom/ui/components/badge";
 import { Button } from "@calcom/ui/components/button";

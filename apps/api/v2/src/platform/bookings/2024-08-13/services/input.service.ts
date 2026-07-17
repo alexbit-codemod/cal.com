@@ -35,7 +35,7 @@ import {
 import { PlatformBookingsService } from "@/platform/bookings/shared/platform-bookings.service";
 import { EventTypesRepository_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/event-types.repository";
 import { OutputEventTypesService_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/services/output-event-types.service";
-import { apiToInternalintegrationsMapping } from "@/platform/event-types/event-types_2024_06_14/transformers";
+import { apiToInternalintegrationsMapping } from "@/platform/event-types/event-types_2024_06_14/transformers/api-to-internal/locations";
 import { isApiKey, sha256Hash, stripApiKey } from "@/lib/api-key";
 import { defaultBookingResponses } from "@/lib/safe-parse/default-responses-booking";
 import { safeParse } from "@/lib/safe-parse/safe-parse";

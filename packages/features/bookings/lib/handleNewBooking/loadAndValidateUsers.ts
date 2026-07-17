@@ -2,7 +2,7 @@ import { enrichUsersWithDelegationCredentials } from "@calcom/app-store/delegati
 import { getQualifiedHostsService } from "@calcom/features/di/containers/QualifiedHosts";
 import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
 import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry";
+import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry/sentry-span";
 import { filterBlockedUsers } from "@calcom/features/watchlist/operations/filter-blocked-users.controller";
 import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
 import { HttpError } from "@calcom/lib/http-error";

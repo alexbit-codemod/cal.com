@@ -35,7 +35,7 @@ afterEach(() => {
   cleanup();
 });
 
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calcom/trpc/react/trpc", () => ({
   trpc: {
     viewer: {
       bookings: {

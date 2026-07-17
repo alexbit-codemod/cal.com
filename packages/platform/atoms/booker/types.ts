@@ -1,4 +1,4 @@
-import type { BookerProps } from "@calcom/features/bookings/Booker";
+import type { BookerProps } from "@calcom/features/bookings/Booker/types";
 import type { BookerStore, CountryCode } from "@calcom/features/bookings/Booker/store";
 import type { Timezone, VIEW_TYPE } from "@calcom/features/bookings/Booker/types";
 import type { BookingCreateBody } from "@calcom/features/bookings/lib/bookingCreateBodySchema";

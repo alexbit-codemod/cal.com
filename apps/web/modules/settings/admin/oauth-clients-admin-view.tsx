@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 
 import { OAuthClientsAdminSkeleton } from "./oauth-clients-admin-skeleton";
 import { showToast } from "@calcom/ui/components/toast";

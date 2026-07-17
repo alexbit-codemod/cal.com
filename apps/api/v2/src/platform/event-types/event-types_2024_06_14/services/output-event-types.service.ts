@@ -25,22 +25,16 @@ import type {
 } from "@calcom/prisma/client";
 import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
-import {
-  BookingFieldSchema,
-  CustomField,
-  InternalLocation,
-  InternalLocationSchema,
-  SystemField,
-  transformBookerLayoutsInternalToApi,
-  transformBookingFieldsInternalToApi,
-  transformEventTypeColorsInternalToApi,
-  transformFutureBookingLimitsInternalToApi,
-  transformIntervalLimitsInternalToApi,
-  transformLocationsInternalToApi,
-  transformRecurrenceInternalToApi,
-  transformRequiresConfirmationInternalToApi,
-  transformSeatsInternalToApi,
-} from "@/platform/event-types/event-types_2024_06_14/transformers";
+import { BookingFieldSchema, CustomField, SystemField, transformBookingFieldsInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
+import { InternalLocation, InternalLocationSchema } from "@/platform/event-types/event-types_2024_06_14/transformers/internal/locations";
+import { transformBookerLayoutsInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/booker-layouts";
+import { transformEventTypeColorsInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/event-type-colors";
+import { transformFutureBookingLimitsInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/future-booking-limits";
+import { transformIntervalLimitsInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/interval-limits";
+import { transformLocationsInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/locations";
+import { transformRecurrenceInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/recurrence";
+import { transformRequiresConfirmationInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/requires-confirmation";
+import { transformSeatsInternalToApi } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/seats";
 import { ProfileMinimal, UsersService } from "@/modules/users/services/users.service";
 
 type EventTypeUser = {

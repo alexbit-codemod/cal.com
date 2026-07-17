@@ -1,4 +1,5 @@
-import { Memoize, Unmemoize } from "@calcom/features/cache";
+import { Memoize } from "@calcom/features/cache/decorators/Memoize";
+import { Unmemoize } from "@calcom/features/cache/decorators/Unmemoize";
 import type { FeatureId } from "@calcom/features/flags/config";
 import type { FeatureDto } from "@calcom/lib/dto/FeatureDto";
 import { FeatureDtoArraySchema, FeatureDtoSchema } from "@calcom/lib/dto/FeatureDto";

@@ -1,7 +1,7 @@
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { FilterSegmentScope } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { Button } from "@calcom/ui/components/button";
 import {
   Dialog,
@@ -17,7 +17,7 @@ import { useSession } from "next-auth/react";
 import posthog from "posthog-js";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useDataTable } from "~/data-table/hooks";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
 
 interface FormValues {
   name: string;

@@ -20,7 +20,7 @@ vi.mock("@calcom/ui/components/toast", () => ({
   showToast: (...args: unknown[]) => mockShowToast(...args),
 }));
 
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calcom/trpc/react/trpc", () => ({
   trpc: {
     viewer: {
       organizations: {

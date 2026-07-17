@@ -4,7 +4,8 @@ import type { ColumnSizingState, Header, Table } from "@tanstack/react-table";
 // eslint-disable-next-line no-restricted-imports
 import debounce from "lodash/debounce";
 import { useCallback, useEffect, useMemo, useRef } from "react";
-import { useDataTable, useDebouncedWidth } from ".";
+import { useDataTable } from "./useDataTable";
+import { useDebouncedWidth } from "./useDebouncedWidth";
 
 type UseColumnResizingProps<TData> = {
   enabled: boolean;

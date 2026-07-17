@@ -6,7 +6,7 @@ import { InfoIcon } from "@coss/ui/icons";
 import { cva } from "class-variance-authority";
 import type React from "react";
 import { forwardRef, useId, useState } from "react";
-import { Icon } from "../../icon";
+import Icon from "../../icon/Icon";
 import { HintsOrErrors } from "./HintOrErrors";
 import { Label } from "./Label";
 import type { InputFieldProps, InputProps } from "./types";

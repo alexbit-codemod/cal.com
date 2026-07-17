@@ -3,7 +3,7 @@
 import { useBookerUrl } from "@calcom/features/bookings/hooks/useBookerUrl";
 import { APP_NAME, WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import { Avatar, AvatarImage } from "@coss/ui/components/avatar";
 import { Card, CardFrame, CardFrameHeader, CardPanel } from "@coss/ui/components/card";
 import {
@@ -22,7 +22,8 @@ import {
 } from "@coss/ui/shared/app-header";
 import { WebhookIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { CreateNewWebhookButton, WebhookListItem } from "../components";
+import CreateNewWebhookButton from "../components/CreateNewWebhookButton";
+import WebhookListItem from "../components/WebhookListItem";
 
 type WebhooksByViewer = RouterOutputs["viewer"]["webhook"]["getByViewer"];
 

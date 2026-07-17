@@ -11,8 +11,8 @@ import { BadRequestException, ForbiddenException, Injectable, NotFoundException 
 import { DEFAULT_EVENT_TYPES } from "@/platform/event-types/event-types_2024_06_14/constants/constants";
 import { EventTypesRepository_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/event-types.repository";
 import { DatabaseEventType } from "@/platform/event-types/event-types_2024_06_14/services/output-event-types.service";
-import { InputEventTransformed_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/transformed";
-import { CustomField, SystemField } from "@/platform/event-types/event-types_2024_06_14/transformers";
+import { InputEventTransformed_2024_06_14 } from "@/platform/event-types/event-types_2024_06_14/transformed/event-type.tranformed";
+import { CustomField, SystemField } from "@/platform/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
 import { SchedulesRepository_2024_06_11 } from "@/platform/schedules/schedules_2024_06_11/schedules.repository";
 import { AuthOptionalUser } from "@/modules/auth/decorators/get-optional-user/get-optional-user.decorator";
 import { ApiAuthGuardUser } from "@/modules/auth/strategies/api-auth/api-auth.strategy";

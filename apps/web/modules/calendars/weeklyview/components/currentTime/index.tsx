@@ -1,5 +1,5 @@
 import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import { useCalendarStore } from "@calcom/features/calendars/weeklyview/state/store";
 import { useCallback, useEffect, useRef, useState } from "react";
 

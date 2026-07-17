@@ -5,8 +5,8 @@ import dayjs from "@calcom/dayjs";
 
 import type { CalendarEvent } from "@calcom/features/calendars/weeklyview/types/events";
 import { BookingStatus } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 
 type UseOnboardingCalendarEventsProps = {
   startDate: Date;

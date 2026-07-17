@@ -30,7 +30,7 @@ const runtimeMock = async (isPending: boolean) => {
     },
   };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const mockedLib = (await import("@calcom/trpc/react")) as any;
+  const mockedLib = (await import("@calcom/trpc/react/trpc")) as any;
   mockedLib.trpc = updatedTrcp;
 };
 
@@ -86,7 +86,7 @@ describe("Test TimezoneSelect", () => {
       // errors of "Cannot set property 'trpc' of [object Module] which has only a getter"
       // TODO: Update this pattern to be more consistent. Using this direct mocking in the
       // functions below breaks some tests.
-      vi.mock("@calcom/trpc/react", () => ({
+      vi.mock("@calcom/trpc/react/trpc", () => ({
         trpc: {
           viewer: {
             timezones: {

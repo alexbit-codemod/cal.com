@@ -1,6 +1,6 @@
 "use client";
 
-import getStripe from "@calcom/app-store/stripepayment/lib/client";
+import getStripe from "@calcom/app-store/stripepayment/lib/client/getStripe";
 import { getPremiumPlanPriceValue } from "@calcom/app-store/stripepayment/lib/utils";
 import {
   fetchSignup,

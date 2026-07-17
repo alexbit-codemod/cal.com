@@ -27,7 +27,7 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { Prisma } from "@calcom/prisma/client";
 import { CancellationReasonRequirement, SchedulingType } from "@calcom/prisma/enums";
 import type { EditableSchema, fieldSchema } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
 import { Alert } from "@calcom/ui/components/alert";
 import { Badge } from "@calcom/ui/components/badge";
@@ -47,7 +47,7 @@ import {
   SelectedCalendarsSettingsWebWrapper,
   SelectedCalendarsSettingsWebWrapperSkeleton,
 } from "@calcom/web/modules/calendars/components/SelectedCalendarsSettingsWebWrapper";
-import { MultiplePrivateLinksController } from "@calcom/web/modules/event-types/components";
+import { MultiplePrivateLinksController } from "@calcom/web/modules/event-types/components/MultiplePrivateLinksController";
 import AddVerifiedEmail from "@calcom/web/modules/event-types/components/AddVerifiedEmail";
 import { BookerLayoutSelector } from "@calcom/web/modules/settings/components/BookerLayoutSelector";
 import { TimezoneSelect as WebTimezoneSelect } from "@calcom/web/modules/timezone/components/TimezoneSelect";

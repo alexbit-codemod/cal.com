@@ -1,4 +1,5 @@
-import { Memoize, Unmemoize } from "@calcom/features/cache";
+import { Memoize } from "@calcom/features/cache/decorators/Memoize";
+import { Unmemoize } from "@calcom/features/cache/decorators/Unmemoize";
 import type { TeamFeaturesDto } from "@calcom/lib/dto/TeamFeaturesDto";
 import { TeamFeaturesDtoSchema } from "@calcom/lib/dto/TeamFeaturesDto";
 import { z } from "zod";
