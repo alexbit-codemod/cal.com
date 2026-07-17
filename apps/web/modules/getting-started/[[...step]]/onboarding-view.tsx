@@ -1,28 +1,26 @@
 "use client";
 
-import type { TFunction } from "i18next";
-import { signOut } from "next-auth/react";
-import { usePathname, useRouter } from "next/navigation";
-import { Suspense, useTransition } from "react";
-import { Toaster } from "sonner";
-import { z } from "zod";
-import posthog from "posthog-js";
-
 import { APP_NAME } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { useParamsWithFallback } from "@calcom/lib/hooks/useParamsWithFallback";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { StepCard } from "@calcom/ui/components/card";
-import { Steps } from "@calcom/ui/components/form";
-import { LoaderIcon } from "@coss/ui/icons";
-
+import { Button } from "@calcom/ui/components/button/Button";
+import { StepCard } from "@calcom/ui/components/card/StepCard";
+import { Steps } from "@calcom/ui/components/form/step";
 import { ConnectedCalendars } from "@components/getting-started/steps-views/ConnectCalendars";
 import { ConnectedVideoStep } from "@components/getting-started/steps-views/ConnectedVideoStep";
 import { SetupAvailability } from "@components/getting-started/steps-views/SetupAvailability";
 import UserProfile from "@components/getting-started/steps-views/UserProfile";
 import { UserSettings } from "@components/getting-started/steps-views/UserSettings";
+import { LoaderIcon } from "@coss/ui/icons";
+import type { TFunction } from "i18next";
+import { usePathname, useRouter } from "next/navigation";
+import { signOut } from "next-auth/react";
+import posthog from "posthog-js";
+import { Suspense, useTransition } from "react";
+import { Toaster } from "sonner";
+import { z } from "zod";
 
 const INITIAL_STEP = "user-settings";
 const BASE_STEPS = [

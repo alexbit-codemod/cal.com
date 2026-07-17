@@ -1,39 +1,33 @@
 "use client";
 
-import { useReactTable, getCoreRowModel, getSortedRowModel } from "@tanstack/react-table";
-import { TimezoneBadge } from "@calcom/web/modules/insights/components/booking";
-
-import { useMemo, useEffect } from "react";
-import { createPortal } from "react-dom";
-
 import {
   ColumnFilterType,
   convertMapToFacetedValues,
-  ZSingleSelectFilterValue,
   type FilterableColumn,
+  ZSingleSelectFilterValue,
 } from "@calcom/features/data-table";
-import { useDataTable } from "~/data-table/hooks/useDataTable";
-import { useFilterValue } from "~/data-table/hooks/useFilterValue";
-import {
-  DataTableWrapper,
-  DataTableFilters,
-  DataTableSegment,
-  DataTableSkeleton,
-  DateRangeFilter,
-} from "@calcom/web/modules/data-table/components";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { FilterType } from "@calcom/types/data-table";
-import { useInsightsRoutingParameters } from "@calcom/web/modules/insights/hooks/useInsightsRoutingParameters";
-import { trpc } from "@calcom/trpc/react";
-
-import { RoutingFormResponsesDownload } from "../filters/Download/RoutingFormResponsesDownload";
-import { OrgTeamsFilter } from "../filters/OrgTeamsFilter";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { DataTableFilters, DateRangeFilter } from "@calcom/web/modules/data-table/components";
+import { DataTableSkeleton } from "@calcom/web/modules/data-table/components/DataTableSkeleton";
+import { DataTableWrapper } from "@calcom/web/modules/data-table/components/DataTableWrapper";
+import { DataTableSegment } from "@calcom/web/modules/data-table/components/segment";
+import { TimezoneBadge } from "@calcom/web/modules/insights/components/booking/TimezoneBadge";
 import { useInsightsColumns } from "@calcom/web/modules/insights/hooks/useInsightsColumns";
 import { useInsightsOrgTeams } from "@calcom/web/modules/insights/hooks/useInsightsOrgTeams";
 import { useInsightsRoutingFacetedUniqueValues } from "@calcom/web/modules/insights/hooks/useInsightsRoutingFacetedUniqueValues";
+import { useInsightsRoutingParameters } from "@calcom/web/modules/insights/hooks/useInsightsRoutingParameters";
 import type { RoutingFormTableRow } from "@calcom/web/modules/insights/lib/types";
+import { getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
+import { useEffect, useMemo } from "react";
+import { createPortal } from "react-dom";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useFilterValue } from "~/data-table/hooks/useFilterValue";
+import { RoutingFormResponsesDownload } from "../filters/Download/RoutingFormResponsesDownload";
+import { OrgTeamsFilter } from "../filters/OrgTeamsFilter";
 import { RoutingKPICards } from "./RoutingKPICards";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
 
 export type RoutingFormTableType = ReturnType<typeof useReactTable<RoutingFormTableRow>>;
 

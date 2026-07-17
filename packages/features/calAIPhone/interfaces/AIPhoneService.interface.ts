@@ -1,7 +1,5 @@
+import type { TrackingData } from "@calcom/lib/tracking/server";
 import type { Logger } from "tslog";
-
-import type { TrackingData } from "@calcom/lib/tracking";
-
 import type { RetellAIPhoneServiceProviderTypeMap } from "../providers/retellAI";
 
 /**

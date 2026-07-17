@@ -1,18 +1,17 @@
+import classNames from "@calcom/ui/classNames";
+import { Button } from "@calcom/ui/components/button/Button";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { ArrowDownIcon, ArrowUpIcon, XIcon } from "@coss/ui/icons";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import {
-  useFieldArray,
-  useFormContext,
+  type ArrayPath,
   type FieldValues,
   type Path,
   type PathValue,
-  type ArrayPath,
+  useFieldArray,
+  useFormContext,
 } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
-
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { ArrowDownIcon, ArrowUpIcon, XIcon } from "@coss/ui/icons";
 
 export interface Option {
   label: string;

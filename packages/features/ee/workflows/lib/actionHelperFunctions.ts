@@ -1,14 +1,10 @@
-import type { TFunction } from "i18next";
-
 import type { TimeFormat } from "@calcom/lib/timeFormat";
 import { WorkflowActions, WorkflowTemplates, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-
-import {
-  whatsappEventCancelledTemplate,
-  whatsappEventCompletedTemplate,
-  whatsappEventRescheduledTemplate,
-  whatsappReminderTemplate,
-} from "../lib/reminders/templates/whatsapp";
+import type { TFunction } from "i18next";
+import { whatsappEventCancelledTemplate } from "../lib/reminders/templates/whatsapp/whatsappEventCancelledTemplate";
+import { whatsappEventCompletedTemplate } from "../lib/reminders/templates/whatsapp/whatsappEventCompletedTemplate";
+import { whatsappReminderTemplate } from "../lib/reminders/templates/whatsapp/whatsappEventReminderTemplate";
+import { whatsappEventRescheduledTemplate } from "../lib/reminders/templates/whatsapp/whatsappEventRescheduledTemplate";
 import { FORM_TRIGGER_WORKFLOW_EVENTS } from "./constants";
 import emailRatingTemplate from "./reminders/templates/emailRatingTemplate";
 import emailReminderTemplate from "./reminders/templates/emailReminderTemplate";

@@ -1,8 +1,17 @@
 "use client";
 
-import { keepPreviousData } from "@tanstack/react-query";
-import { useState } from "react";
-
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { ToggleGroup } from "@calcom/ui/components/form/toggleGroup";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import {
   BlockedEntriesTable,
   CreateBlocklistEntryModal,
@@ -10,20 +19,10 @@ import {
   PendingReportsTable,
   type SortByOption,
 } from "@calcom/web/modules/blocklist";
+import { keepPreviousData } from "@tanstack/react-query";
+import { useState } from "react";
+import { DataTableToolbar } from "~/data-table/components/DataTableToolbar";
 import { useDataTable } from "~/data-table/hooks/useDataTable";
-import { DataTableToolbar } from "~/data-table/components";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
 
 type ViewType = "blocked" | "pending";
 

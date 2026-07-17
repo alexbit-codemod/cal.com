@@ -1,17 +1,8 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useSession } from "next-auth/react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect, useLayoutEffect, useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-import { z } from "zod";
-
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { getTeamUrlSync } from "@calcom/features/ee/organizations/lib/getTeamUrlSync";
-import { trackFormbricksAction } from "@calcom/web/modules/formbricks/lib/trackFormbricksAction";
 import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
 import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
 import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
@@ -23,30 +14,40 @@ import objectKeys from "@calcom/lib/objectKeys";
 import slugify from "@calcom/lib/slugify";
 import turndown from "@calcom/lib/turndownService";
 import type { Prisma } from "@calcom/prisma/client";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button, LinkIconButton } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
-import { CopyIcon } from "@coss/ui/icons";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Button } from "@calcom/ui/components/button/Button";
+import LinkIconButton from "@calcom/ui/components/button/LinkIconButton";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogTrigger } from "@calcom/ui/components/dialog/Dialog";
+import { Editor } from "@calcom/ui/components/editor/Editor";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import ImageUploader from "@calcom/ui/components/image-uploader/ImageUploader";
 import {
+  SkeletonAvatar,
   SkeletonButton,
   SkeletonContainer,
   SkeletonText,
-  SkeletonAvatar,
-} from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
 import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
 import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+import { trackFormbricksAction } from "@calcom/web/modules/formbricks/lib/trackFormbricksAction";
+import { CopyIcon } from "@coss/ui/icons";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { z } from "zod";
 
-const regex = new RegExp("^[a-zA-Z0-9-]*$");
+const regex = /^[a-zA-Z0-9-]*$/;
 
 const SkeletonLoader = () => {
   return (

@@ -1,17 +1,16 @@
+import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
+import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
+import { Dialog as BaseDialog } from "@calcom/ui/components/dialog/Dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { Dialog as BaseDialog } from "@calcom/ui/components/dialog";
 
 export type DialogProps = React.ComponentProps<(typeof DialogPrimitive)["Root"]> & {
   name?: string;
   clearQueryParamsOnClose?: string[];
 };
 
-const enum DIALOG_STATE {
+enum DIALOG_STATE {
   // Dialog is there in the DOM but not visible.
   CLOSED = "CLOSED",
   // State from the time b/w the Dialog is dismissed and the time the "dialog" query param is removed from the URL.

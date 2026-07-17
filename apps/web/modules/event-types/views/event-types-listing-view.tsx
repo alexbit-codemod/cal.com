@@ -14,15 +14,15 @@ import { HttpError } from "@calcom/lib/http-error";
 import { parseEventTypeColor } from "@calcom/lib/isEventTypeColor";
 import { localStorage } from "@calcom/lib/webstorage";
 import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { ArrowButton } from "@calcom/ui/components/arrow-button";
-import { UserAvatarGroup } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+import { ArrowButton } from "@calcom/ui/components/arrow-button/ArrowButton";
+import { UserAvatarGroup } from "@calcom/ui/components/avatar/UserAvatarGroup";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
 import {
   Dropdown,
   DropdownItem,
@@ -31,26 +31,28 @@ import {
   DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Label, Switch, TextField } from "@calcom/ui/components/form";
-import { SearchIcon } from "@coss/ui/icons";
-import { HorizontalTabs } from "@calcom/ui/components/navigation";
-import { Skeleton } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Switch } from "@calcom/ui/components/form/switch";
+import HorizontalTabs from "@calcom/ui/components/navigation/tabs/HorizontalTabs";
+import { Skeleton } from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { CreateButton } from "@calcom/web/modules/ee/teams/components/createButton/CreateButton";
 import {
   EventTypeEmbedButton,
   EventTypeEmbedDialog,
 } from "@calcom/web/modules/embed/components/EventTypeEmbed";
-import { EventTypeDescription } from "@calcom/web/modules/event-types/components";
 import {
   CreateEventTypeDialog,
   type ProfileOption,
 } from "@calcom/web/modules/event-types/components/CreateEventTypeDialog";
 import { DuplicateDialog } from "@calcom/web/modules/event-types/components/DuplicateDialog";
+import EventTypeDescription from "@calcom/web/modules/event-types/components/EventTypeDescription";
 import { InfiniteSkeletonLoader } from "@calcom/web/modules/event-types/components/SkeletonLoader";
+import { SearchIcon } from "@coss/ui/icons";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { TRPCClientError } from "@trpc/client";
 import Link from "next/link";
@@ -432,15 +434,15 @@ export const InfiniteEventTypeList = ({
       if (value) newSearchParams.set(key, value.toString());
       if (value === null) newSearchParams.delete(key);
     }
-        setParamsIfDefined("dialog", "duplicate");
-        setParamsIfDefined("title", eventType.title);
-        setParamsIfDefined("description", eventType.description);
-        setParamsIfDefined("slug", eventType.slug);
-        setParamsIfDefined("id", eventType.id);
-        setParamsIfDefined("length", eventType.length);
-        setParamsIfDefined("pageSlug", group.profile.slug);
-        setParamsIfDefined("schedulingType", eventType.schedulingType);
-        router.push(`${pathname}?${newSearchParams.toString()}`);
+    setParamsIfDefined("dialog", "duplicate");
+    setParamsIfDefined("title", eventType.title);
+    setParamsIfDefined("description", eventType.description);
+    setParamsIfDefined("slug", eventType.slug);
+    setParamsIfDefined("id", eventType.id);
+    setParamsIfDefined("length", eventType.length);
+    setParamsIfDefined("pageSlug", group.profile.slug);
+    setParamsIfDefined("schedulingType", eventType.schedulingType);
+    router.push(`${pathname}?${newSearchParams.toString()}`);
   };
 
   const deleteMutation = trpc.viewer.eventTypes.delete.useMutation({

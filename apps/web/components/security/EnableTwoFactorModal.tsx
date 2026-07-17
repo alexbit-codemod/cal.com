@@ -1,17 +1,15 @@
-import type { BaseSyntheticEvent } from "react";
-import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-
 import { ErrorCode } from "@calcom/features/auth/lib/ErrorCode";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useCallbackRef } from "@calcom/lib/hooks/useCallbackRef";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent } from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
 import TwoFactor from "@components/auth/TwoFactor";
-
+import type React from "react";
+import type { BaseSyntheticEvent } from "react";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import TwoFactorAuthAPI from "./TwoFactorAuthAPI";
 import TwoFactorModalHeader from "./TwoFactorModalHeader";
 

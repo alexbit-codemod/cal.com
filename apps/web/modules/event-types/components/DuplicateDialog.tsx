@@ -1,9 +1,4 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
+import process from "node:process";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { EventTypeDuplicateInput } from "@calcom/features/eventtypes/lib/types";
 import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
@@ -14,16 +9,21 @@ import { HttpError } from "@calcom/lib/http-error";
 import { md } from "@calcom/lib/markdownIt";
 import slugify from "@calcom/lib/slugify";
 import turndown from "@calcom/lib/turndownService";
-import { trpc } from "@calcom/trpc/react";
 import { SchedulingType } from "@calcom/prisma/enums";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Editor } from "@calcom/ui/components/editor/Editor";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 const querySchema = z.object({
   title: z.string().min(1),
@@ -125,7 +125,16 @@ const DuplicateDialog = () => {
   return (
     <Dialog
       name="duplicate"
-      clearQueryParamsOnClose={["description", "title", "length", "slug", "name", "id", "pageSlug", "schedulingType"]}>
+      clearQueryParamsOnClose={[
+        "description",
+        "title",
+        "length",
+        "slug",
+        "name",
+        "id",
+        "pageSlug",
+        "schedulingType",
+      ]}>
       <DialogContent type="creation" className="overflow-y-auto" title={t("duplicate_event_type")}>
         <Form
           form={form}
@@ -134,10 +143,7 @@ const DuplicateDialog = () => {
           }}>
           <div className="-mt-2 stack-y-5">
             {isManagedEventType && (
-              <Alert
-                severity="info"
-                message={t("managed_event_type_duplicate_disclaimer")}
-              />
+              <Alert severity="info" message={t("managed_event_type_duplicate_disclaimer")} />
             )}
             <TextField
               label={t("title")}

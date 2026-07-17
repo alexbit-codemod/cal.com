@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-
-import { showToast } from "@calcom/ui/components/toast";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useEffect, useRef, useState } from "react";
 
 export function useVoicePreview() {
   const [playingVoiceId, setPlayingVoiceId] = useState<string | null>(null);

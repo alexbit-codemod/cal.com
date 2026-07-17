@@ -1,17 +1,16 @@
-import { useState } from "react";
-import type { UseFormReturn } from "react-hook-form";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
-import PhoneInput from "@calcom/web/components/phone-input";
 import { getEventTypeIdForCalAiTest } from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
 import type { FormValues } from "@calcom/features/ee/workflows/lib/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
-import { Label } from "@calcom/ui/components/form";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import PhoneInput from "@calcom/web/components/phone-input";
 import { PhoneIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
+import { useState } from "react";
+import type { UseFormReturn } from "react-hook-form";
 
 interface TestPhoneCallDialogProps {
   open: boolean;

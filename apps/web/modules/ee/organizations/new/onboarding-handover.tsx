@@ -1,7 +1,7 @@
 "use client";
 
+import { WizardLayout } from "@calcom/ui/components/layout/WizardLayout";
 import { AdminOnboardingHandover } from "~/ee/organizations/components/AdminOnboardingHandover";
-import { WizardLayout } from "@calcom/ui/components/layout";
 
 export const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   return (

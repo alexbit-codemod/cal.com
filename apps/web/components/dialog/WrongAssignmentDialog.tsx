@@ -2,19 +2,20 @@ import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useCopy } from "@calcom/lib/hooks/useCopy";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { AssignmentReasonEnum } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Label, Select, TextArea } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog/Dialog";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import Icon from "@calcom/ui/components/icon/Icon";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import assignmentReasonBadgeTitleMap from "@lib/booking/assignmentReasonBadgeTitleMap";
 import type { Dispatch, SetStateAction } from "react";
 import type { Control, ControllerRenderProps } from "react-hook-form";
 import { Controller, useForm } from "react-hook-form";
-
-import assignmentReasonBadgeTitleMap from "@lib/booking/assignmentReasonBadgeTitleMap";
 
 interface BookingData {
   uid: string;

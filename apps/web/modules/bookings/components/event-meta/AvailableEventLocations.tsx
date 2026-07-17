@@ -1,3 +1,4 @@
+import process from "node:process";
 import type {
   DefaultEventLocationType,
   EventLocationTypeFromApp,
@@ -8,7 +9,7 @@ import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import invertLogoOnDark from "@calcom/lib/invertLogoOnDark";
 import classNames from "@calcom/ui/classNames";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { LinkIcon, MapPinIcon } from "@coss/ui/icons";
 
 const excludeNullValues = (value: unknown) => !!value;

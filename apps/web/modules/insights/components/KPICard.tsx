@@ -1,11 +1,11 @@
 "use client";
 
+import { calculateDeltaType } from "@calcom/features/insights/lib/calculateDeltaType";
+import { valueFormatter } from "@calcom/features/insights/lib/valueFormatter";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-
-import { calculateDeltaType, valueFormatter } from "@calcom/features/insights/lib";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import Icon from "@calcom/ui/components/icon/Icon";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 
 export const KPICard = ({
   title,

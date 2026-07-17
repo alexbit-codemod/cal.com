@@ -1,10 +1,3 @@
-import { ErrorMessage } from "@hookform/error-message";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { isValidPhoneNumber } from "libphonenumber-js/max";
-import { useEffect, useState } from "react";
-import { Controller, useForm, useWatch, useFormContext } from "react-hook-form";
-import { z } from "zod";
-
 import type { EventLocationType, LocationObject } from "@calcom/app-store/locations";
 import {
   getEventLocationType,
@@ -15,16 +8,22 @@ import {
   OrganizerDefaultConferencingAppType,
 } from "@calcom/app-store/locations";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
-import PhoneInput from "@calcom/web/components/phone-input";
 import type { LocationOption } from "@calcom/features/form/components/LocationSelect";
 import LocationSelect from "@calcom/features/form/components/LocationSelect";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Form, Input } from "@calcom/ui/components/form";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import PhoneInput from "@calcom/web/components/phone-input";
 import { MapPinIcon } from "@coss/ui/icons";
-
+import { ErrorMessage } from "@hookform/error-message";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { isValidPhoneNumber } from "libphonenumber-js/max";
+import { useEffect, useState } from "react";
+import { Controller, useForm, useFormContext, useWatch } from "react-hook-form";
+import { z } from "zod";
 import { QueryCell } from "../../lib/QueryCell";
 
 interface ISetLocationDialog {

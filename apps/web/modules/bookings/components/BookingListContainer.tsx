@@ -1,15 +1,13 @@
 "use client";
 
 import dayjs from "@calcom/dayjs";
-import { useDataTable } from "~/data-table/hooks/useDataTable";
-import { useDisplayedFilterCount } from "~/data-table/hooks/useDisplayedFilterCount";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
 import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ToggleGroup } from "@calcom/ui/components/form";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ToggleGroup } from "@calcom/ui/components/form/toggleGroup";
 import { WipeMyCalActionButton } from "@calcom/web/components/apps/wipemycalother/wipeMyCalActionButton";
 import { getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
 import { useRouter } from "next/navigation";
@@ -21,7 +19,10 @@ import { useBookingStatusTab } from "~/bookings/hooks/useBookingStatusTab";
 import { useFacetedUniqueValues } from "~/bookings/hooks/useFacetedUniqueValues";
 import { useListAutoSelector } from "~/bookings/hooks/useListAutoSelector";
 import { useSwitchToCorrectStatusTab } from "~/bookings/hooks/useSwitchToCorrectStatusTab";
-import { DataTableFilters, DataTableSegment } from "~/data-table/components";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DataTableSegment } from "~/data-table/components/segment";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useDisplayedFilterCount } from "~/data-table/hooks/useDisplayedFilterCount";
 import {
   BookingDetailsSheetStoreProvider,
   useBookingDetailsSheetStore,

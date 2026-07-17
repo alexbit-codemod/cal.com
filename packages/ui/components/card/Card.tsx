@@ -1,13 +1,12 @@
 // @TODO: turn this into a more generic component that has the same Props API as MUI https://mui.com/material-ui/react-card/
+
+import classNames from "@calcom/ui/classNames";
 import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 import Link from "next/link";
+import type React from "react";
 import type { ReactNode } from "react";
-import React from "react";
-
-import classNames from "@calcom/ui/classNames";
-
-import { Button } from "../button";
+import { Button } from "../button/Button";
 
 const cvaCardTypeByVariant = cva("", {
   // Variants won't have any style by default. Style will only be applied if the variants are combined.
@@ -263,7 +262,8 @@ export function Card({
                   {learnMore.text}
                 </LinkComponent>
               ) : learnMore.onClick ? (
-                <button type="button"
+                <button
+                  type="button"
                   color="minimal"
                   onClick={learnMore.onClick}
                   className={classNames("cursor-pointer text-default text-xs font-medium", buttonClassName)}>

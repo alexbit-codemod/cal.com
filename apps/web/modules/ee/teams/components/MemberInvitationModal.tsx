@@ -1,10 +1,3 @@
-import { useSession } from "next-auth/react";
-import posthog from "posthog-js";
-import type { FormEvent } from "react";
-import { useMemo, useRef, useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-
-import TeamInviteFromOrg from "~/ee/organizations/components/TeamInviteFromOrg";
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import type { PendingMember } from "@calcom/features/ee/teams/lib/types";
@@ -12,24 +5,28 @@ import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { IS_TEAM_BILLING_ENABLED_CLIENT, MAX_NB_INVITES } from "@calcom/lib/constants";
 import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { CreationSource } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import { CreationSource, MembershipRole } from "@calcom/prisma/enums";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { isEmail } from "@calcom/trpc/server/routers/viewer/teams/util";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { BuildingIcon, UserIcon, UsersIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextAreaField } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { ToggleGroup } from "@calcom/ui/components/form/toggleGroup";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
-
+import { BuildingIcon, UserIcon, UsersIcon } from "@coss/ui/icons";
+import { useSession } from "next-auth/react";
+import posthog from "posthog-js";
+import type { FormEvent } from "react";
+import { useMemo, useRef, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import TeamInviteFromOrg from "~/ee/organizations/components/TeamInviteFromOrg";
 import { GoogleWorkspaceInviteButton } from "./GoogleWorkspaceInviteButton";
 
 type MemberInvitationModalProps = {
@@ -412,7 +409,7 @@ export default function MemberInvitationModal(props: MemberInvitationModalProps)
                   type="button"
                   color="minimal"
                   variant="icon"
-                  onClick={async function () {
+                  onClick={async () => {
                     try {
                       // Required for Safari but also works on Chrome
                       // Credits to https://wolfgangrittner.dev/how-to-use-clipboard-api-in-firefox/

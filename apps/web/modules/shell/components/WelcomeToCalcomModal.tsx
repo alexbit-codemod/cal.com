@@ -2,11 +2,10 @@
 
 import { APP_NAME } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent } from "@calcom/ui/components/dialog";
-import { Logo } from "@calcom/ui/components/logo";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Dialog, DialogContent } from "@calcom/ui/components/dialog/Dialog";
+import { Logo } from "@calcom/ui/components/logo/Logo";
 import { CheckIcon, UserIcon } from "@coss/ui/icons";
-
 import { useWelcomeToCalcomModal } from "../hooks/useWelcomeToCalcomModal";
 
 const features = [

@@ -1,11 +1,9 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
+import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone/AIPhoneServiceRegistry";
 import { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
 import { FeaturesRepository } from "@calcom/features/flags/features.repository";
 import logger from "@calcom/lib/logger";
 import prisma from "@calcom/prisma";
-
 import { TRPCError } from "@trpc/server";
-
 import type { TrpcSessionUser } from "../../../types";
 import type { TTestCallInputSchema } from "./testCall.schema";
 

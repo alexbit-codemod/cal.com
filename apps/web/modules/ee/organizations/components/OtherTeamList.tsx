@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
-
 import type { OrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.module";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { trackFormbricksAction } from "@calcom/web/modules/formbricks/lib/trackFormbricksAction";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
-
+import { useState } from "react";
 import OtherTeamListItem from "./OtherTeamListItem";
 
 interface Props {

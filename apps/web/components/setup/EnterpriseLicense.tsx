@@ -1,18 +1,17 @@
+import { CONSOLE_URL } from "@calcom/lib/constants";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import type { RouterInputs, RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import classNames from "@calcom/ui/classNames";
+import { Button } from "@calcom/ui/components/button/Button";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { CheckIcon, LoaderIcon } from "@coss/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 // eslint-disable-next-line no-restricted-imports
 import { noop } from "lodash";
 import { useCallback, useState } from "react";
 import { Controller, FormProvider, useForm, useFormState } from "react-hook-form";
 import { z } from "zod";
-
-import { CONSOLE_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterInputs, RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { CheckIcon, LoaderIcon } from "@coss/ui/icons";
 
 type EnterpriseLicenseFormValues = {
   licenseKey: string;

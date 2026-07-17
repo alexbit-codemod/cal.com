@@ -3,7 +3,7 @@
 import { useFillRemainingHeight } from "@calcom/lib/hooks/useFillRemainingHeight";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import { Icon } from "@calcom/ui/components/icon";
+import Icon from "@calcom/ui/components/icon/Icon";
 import { OrgBadge, TeamBadge } from "@calcom/web/modules/billing/components/PlanBadge";
 import { UpgradePlanDialog } from "@calcom/web/modules/billing/components/UpgradePlanDialog";
 import { Badge } from "@coss/ui/components/badge";
@@ -198,7 +198,8 @@ export function FullScreenUpgradeBanner({
           </div>
 
           {/* Image - mobile only, hidden when features are expanded */}
-          <div className={`${showFeatures ? "hidden" : ""} md:hidden my-4 flex items-center justify-center rounded-xl bg-subtle aspect-[3/4] overflow-hidden relative`}>
+          <div
+            className={`${showFeatures ? "hidden" : ""} md:hidden my-4 flex items-center justify-center rounded-xl bg-subtle aspect-[3/4] overflow-hidden relative`}>
             <BannerImage {...bannerImageProps} />
           </div>
 

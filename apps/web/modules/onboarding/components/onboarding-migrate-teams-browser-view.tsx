@@ -1,12 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
-
 import { subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -16,6 +13,8 @@ import {
   RotateCwIcon,
   UsersIcon,
 } from "@coss/ui/icons";
+import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 type OnboardingMigrateTeamsBrowserViewProps = {
   teams: Array<{ id: number; name: string; slug: string | null; isSelected?: boolean }>;

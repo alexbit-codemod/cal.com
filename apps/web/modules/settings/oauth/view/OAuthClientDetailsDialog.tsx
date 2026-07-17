@@ -1,26 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useCopy } from "@calcom/lib/hooks/useCopy";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import {
-  ConfirmationDialogContent,
-  DialogClose,
-  DialogContent,
-  DialogFooter,
-} from "@calcom/ui/components/dialog";
-
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { Label, TextArea } from "@calcom/ui/components/form";
-
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import type { OAuthClientCreateFormValues } from "../create/OAuthClientCreateModal";
 import { OAuthClientFormFields } from "./OAuthClientFormFields";
 

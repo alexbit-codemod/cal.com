@@ -1,6 +1,5 @@
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import { z } from "zod";
-
-import type { RouterOutputs } from "@calcom/trpc/react";
 
 export type RoutingFormTableRow = RouterOutputs["viewer"]["insights"]["routingFormResponses"]["data"][number];
 

@@ -1,5 +1,5 @@
 import { CALCOM_VERSION } from "@calcom/lib/constants";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 
 export function useViewerI18n(locale: string) {
   return trpc.viewer.i18n.get.useQuery(

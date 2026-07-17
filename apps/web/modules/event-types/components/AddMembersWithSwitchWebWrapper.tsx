@@ -1,5 +1,4 @@
-import { trpc } from "@calcom/trpc/react";
-
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { AddMembersWithSwitchProps } from "./AddMembersWithSwitch";
 import { AddMembersWithSwitch } from "./AddMembersWithSwitch";
 

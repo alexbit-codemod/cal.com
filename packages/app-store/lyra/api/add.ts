@@ -5,7 +5,8 @@ import { defaultResponder } from "@calcom/lib/server/defaultResponder";
 import prisma from "@calcom/prisma";
 import type { NextApiRequest } from "next";
 import { encodeOAuthState } from "../../_utils/oauth/encodeOAuthState";
-import { getLyraAppKeys, LYRA_API_URL } from "../lib";
+import { LYRA_API_URL } from "../lib/constants";
+import { getLyraAppKeys } from "../lib/getLyraAppKeys";
 
 async function handler(req: NextApiRequest) {
   await prisma.user.findFirstOrThrow({

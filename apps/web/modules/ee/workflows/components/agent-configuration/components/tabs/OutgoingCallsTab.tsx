@@ -1,14 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { Controller } from "react-hook-form";
-import type { UseFormReturn } from "react-hook-form";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { Label, Select } from "@calcom/ui/components/form";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-
+import type { Option } from "@calcom/ui/components/form/checkbox";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import { useState } from "react";
+import type { UseFormReturn } from "react-hook-form";
+import { Controller } from "react-hook-form";
 import { VoiceSelectionDialog } from "../../../VoiceSelectionDialog";
 import type { AgentFormValues } from "../../types/schemas";
 import { AgentConfigForm } from "../forms/AgentConfigForm";

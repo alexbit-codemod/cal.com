@@ -1,10 +1,9 @@
-import { useState } from "react";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Command, CommandList, CommandItem } from "@calcom/ui/components/command";
-import { Popover, PopoverTrigger, PopoverContent } from "@calcom/ui/components/popover";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Command, CommandItem, CommandList } from "@calcom/ui/components/command/Command";
+import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover/Popover";
 import { CheckIcon } from "@coss/ui/icons";
+import { useState } from "react";
 
 export type DateTarget = "startTime" | "createdAt";
 

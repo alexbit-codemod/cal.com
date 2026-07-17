@@ -1,9 +1,9 @@
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Dialog, DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -13,10 +13,10 @@ import {
   DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import type { ActionType } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import type { ActionType } from "@calcom/ui/components/table/TableActions";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { MeetingSessionDetailsDialog } from "@calcom/web/modules/ee/video/components/MeetingSessionDetailsDialog";
 import { AddGuestsDialog } from "@components/dialog/AddGuestsDialog";
 import { CancelBookingDialog } from "@components/dialog/CancelBookingDialog";

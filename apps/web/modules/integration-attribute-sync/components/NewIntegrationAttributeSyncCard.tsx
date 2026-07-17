@@ -1,10 +1,9 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
-
 import type { ISyncFormData } from "@calcom/features/ee/integration-attribute-sync/repositories/IIntegrationAttributeSyncRepository";
-import IntegrationAttributeSyncCard from "./IntegrationAttributeSyncCard";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import type { IIntegrationAttributeSyncCardProps } from "./IntegrationAttributeSyncCard";
+import IntegrationAttributeSyncCard from "./IntegrationAttributeSyncCard";
 
 type INewIntegrationAttributeSyncCardProps = Pick<
   IIntegrationAttributeSyncCardProps,

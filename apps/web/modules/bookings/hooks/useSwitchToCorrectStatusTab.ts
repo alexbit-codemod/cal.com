@@ -1,4 +1,4 @@
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 import { validStatuses } from "../lib/validStatuses";
@@ -78,7 +78,7 @@ export function usePreSelectedBooking(): {
   preSelectedBooking: BookingForTabResolution | null;
   preSelectedBookingFull: BookingOutput | null;
   isPending: boolean;
-}{
+} {
   const searchParams = useSearchParams();
   const preSelectedBookingUid = searchParams?.get("uid") ?? undefined;
 

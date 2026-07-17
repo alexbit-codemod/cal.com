@@ -1,4 +1,5 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
+import process from "node:process";
+import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone/AIPhoneServiceRegistry";
 import { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
 import { PrismaPhoneNumberRepository } from "@calcom/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
 import { CreditsRepository } from "@calcom/features/credits/repositories/CreditsRepository";
@@ -6,7 +7,6 @@ import stripe from "@calcom/features/ee/payments/server/stripe";
 import logger from "@calcom/lib/logger";
 import { prisma } from "@calcom/prisma";
 import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
-
 import { CHECKOUT_SESSION_TYPES } from "../../constants";
 import type { SWHMap } from "./__handler";
 import { HttpCode } from "./__handler";

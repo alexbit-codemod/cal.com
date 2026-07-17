@@ -1,11 +1,11 @@
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import {
   type ReminderMinutes,
   reminderSchema,
 } from "@calcom/trpc/server/routers/viewer/calendars/setDestinationReminder.schema";
-import { showToast } from "@calcom/ui/components/toast";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { DestinationCalendarSettings } from "../../../../packages/platform/atoms/destination-calendar/DestinationCalendar";
 import { AtomsWrapper } from "../../../../packages/platform/atoms/src/components/atoms-wrapper";
 export const DestinationCalendarSettingsWebWrapper = ({

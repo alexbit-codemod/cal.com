@@ -1,24 +1,25 @@
 "use client";
 
-import { getCoreRowModel, getSortedRowModel, useReactTable, type ColumnDef } from "@tanstack/react-table";
-import { usePathname } from "next/navigation";
-import { useMemo, useState, useReducer } from "react";
-
 import { ColumnFilterType, convertFacetedValuesToMap } from "@calcom/features/data-table";
-import { DataTableProvider } from "~/data-table/DataTableProvider";
-import { useDataTable } from "~/data-table/hooks/useDataTable";
-import { DataTableWrapper, DataTableToolbar, DataTableFilters } from "~/data-table/components";
-import { useSegments } from "~/data-table/hooks/useSegments";
 import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import type { CallDetailsState, CallDetailsAction } from "@calcom/features/ee/workflows/lib/types";
+import type { CallDetailsAction, CallDetailsState } from "@calcom/features/ee/workflows/lib/types";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
 import { CallDetailsSheet } from "@calcom/web/modules/ee/workflows/components/CallDetailsSheet";
+import { type ColumnDef, getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
+import { usePathname } from "next/navigation";
+import { useMemo, useReducer, useState } from "react";
+import { DataTableToolbar } from "~/data-table/components/DataTableToolbar";
+import { DataTableWrapper } from "~/data-table/components/DataTableWrapper";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DataTableProvider } from "~/data-table/DataTableProvider";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useSegments } from "~/data-table/hooks/useSegments";
 
 type CallHistoryRow = {
   id: string;

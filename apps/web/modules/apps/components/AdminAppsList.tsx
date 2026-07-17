@@ -6,21 +6,19 @@ import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { AppCategories } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import cs from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import {
-  ConfirmationDialogContent,
-  DialogClose,
-  DialogContent,
-  DialogFooter,
-} from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Form, Switch, TextField } from "@calcom/ui/components/form";
-import { List } from "@calcom/ui/components/list";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { List } from "@calcom/ui/components/list/List";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import AppListCardWebWrapper from "@calcom/web/modules/apps/components/AppListCardWebWrapper";
 import { PencilIcon } from "@coss/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";

@@ -6,7 +6,7 @@ import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getB
 import { getTeamUrlSync } from "@calcom/features/ee/organizations/lib/getTeamUrlSync";
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { SchedulingType } from "@calcom/prisma/enums";
-import { AvatarGroup } from "@calcom/ui/components/avatar";
+import { AvatarGroup } from "@calcom/ui/components/avatar/AvatarGroup";
 
 export interface EventMembersProps {
   /**

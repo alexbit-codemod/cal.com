@@ -1,22 +1,21 @@
-import { useState } from "react";
-import posthog from "posthog-js";
-
 import dayjs from "@calcom/dayjs";
+import { extractDateRangeFromColumnFilters } from "@calcom/features/insights/lib/bookingUtils";
 import { downloadAsCsv } from "@calcom/lib/csvUtils";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast, showProgressToast, hideProgressToast } from "@calcom/ui/components/toast";
-
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { hideProgressToast, showProgressToast } from "@calcom/ui/components/toast/ProgressToast";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import posthog from "posthog-js";
+import { useState } from "react";
 import { useInsightsBookingParameters } from "../../../hooks/useInsightsBookingParameters";
-import { extractDateRangeFromColumnFilters } from "@calcom/features/insights/lib/bookingUtils";
 
 type RawData = RouterOutputs["viewer"]["insights"]["rawData"]["data"][number];
 
@@ -95,11 +94,7 @@ const Download = () => {
   return (
     <Dropdown modal={false}>
       <DropdownMenuTrigger asChild>
-        <Button
-          EndIcon="file-down"
-          color="secondary"
-          loading={isDownloading}
-          className="h-full">
+        <Button EndIcon="file-down" color="secondary" loading={isDownloading} className="h-full">
           {t("download")}
         </Button>
       </DropdownMenuTrigger>

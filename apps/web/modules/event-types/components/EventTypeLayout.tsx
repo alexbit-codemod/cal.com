@@ -1,38 +1,36 @@
-import { useMemo, useState, Suspense } from "react";
-import type { UseFormReturn } from "react-hook-form";
-
 import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import type { EventTypeSetupProps, FormValues } from "@calcom/features/eventtypes/lib/types";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { SchedulingType } from "@calcom/prisma/enums";
+import classNames from "@calcom/ui/classNames";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
+import { VerticalDivider } from "@calcom/ui/components/divider/Divider";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Switch } from "@calcom/ui/components/form/switch";
+import HorizontalTabs from "@calcom/ui/components/navigation/tabs/HorizontalTabs";
+import type { VerticalTabItemProps } from "@calcom/ui/components/navigation/tabs/VerticalTabItem";
+import VerticalTabs from "@calcom/ui/components/navigation/tabs/VerticalTabs";
+import { Skeleton } from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import {
   EventTypeEmbedButton,
   EventTypeEmbedDialog,
 } from "@calcom/web/modules/embed/components/EventTypeEmbed";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SchedulingType } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { VerticalDivider } from "@calcom/ui/components/divider";
-import {
-  DropdownMenuSeparator,
-  Dropdown,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownItem,
-  DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Label } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { LoaderIcon } from "@coss/ui/icons";
-import { HorizontalTabs, VerticalTabs } from "@calcom/ui/components/navigation";
-import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
-import { Skeleton } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
 import WebShell from "@calcom/web/modules/shell/Shell";
-
+import { LoaderIcon } from "@coss/ui/icons";
+import { Suspense, useMemo, useState } from "react";
+import type { UseFormReturn } from "react-hook-form";
 import { Shell as PlatformShell } from "../../../../../packages/platform/atoms/src/components/ui/shell";
 import { DeleteDialog } from "./dialogs/DeleteDialog";
 

@@ -3,15 +3,14 @@
 import type { Scope } from "@calcom/features/pbac/domain/types/permission-registry";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
-  DropdownMenuContent,
   DropdownItem,
+  DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-
+} from "@calcom/ui/components/dropdown/Dropdown";
 import { useRoleStates } from "../hooks/useRoleQueryStates";
 import { DeleteRoleModal } from "./DeleteRoleModal";
 import { RoleSheet } from "./RoleSheet";

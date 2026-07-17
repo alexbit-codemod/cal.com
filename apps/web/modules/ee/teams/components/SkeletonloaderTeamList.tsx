@@ -1,6 +1,6 @@
 "use client";
 
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 
 function SkeletonLoaderTeamList() {
   return (

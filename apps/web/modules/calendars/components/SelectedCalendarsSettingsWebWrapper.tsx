@@ -1,10 +1,10 @@
 import { SelectedCalendarsSettings } from "@calcom/atoms/selected-calendars/SelectedCalendarsSettings";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Select } from "@calcom/ui/components/form";
-import { List } from "@calcom/ui/components/list";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Select } from "@calcom/ui/components/form/select";
+import { List } from "@calcom/ui/components/list/List";
 import AppListCardWebWrapper from "@calcom/web/modules/apps/components/AppListCardWebWrapper";
 import CredentialActionsDropdown from "@calcom/web/modules/apps/components/CredentialActionsDropdown";
 import AdditionalCalendarSelector from "@calcom/web/modules/calendars/components/AdditionalCalendarSelector";

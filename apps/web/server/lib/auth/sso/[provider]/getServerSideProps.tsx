@@ -8,7 +8,7 @@ import { ssoTenantProduct } from "@calcom/features/ee/sso/lib/sso";
 import { OnboardingPathService } from "@calcom/features/onboarding/lib/onboarding-path.service";
 import { checkUsername } from "@calcom/features/profile/lib/checkUsername";
 import { IS_PREMIUM_USERNAME_ENABLED } from "@calcom/lib/constants";
-import { getTrackingFromCookies, type TrackingData } from "@calcom/lib/tracking";
+import { getTrackingFromCookies, type TrackingData } from "@calcom/lib/tracking/server";
 import { prisma } from "@calcom/prisma";
 import type { GetServerSidePropsContext } from "next";
 import { z } from "zod";

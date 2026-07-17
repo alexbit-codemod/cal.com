@@ -1,6 +1,8 @@
 import { WEBAPP_URL } from "@calcom/lib/constants";
-
-import { CallToAction, Separator, CallToActionTable, BookingConfirmationForm } from "../components";
+import { BookingConfirmationForm } from "../components/BookingConfirmationForm";
+import { CallToAction } from "../components/CallToAction";
+import { CallToActionTable } from "../components/CallToActionTable";
+import { Separator } from "../components/Separator";
 import { OrganizerScheduledEmail } from "./OrganizerScheduledEmail";
 
 export const OrganizerRequestEmailV2 = (props: React.ComponentProps<typeof OrganizerScheduledEmail>) => {

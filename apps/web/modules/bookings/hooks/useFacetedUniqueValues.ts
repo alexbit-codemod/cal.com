@@ -1,9 +1,8 @@
 import { convertFacetedValuesToMap, type FacetedValue } from "@calcom/features/data-table";
-import { trpc } from "@calcom/trpc/react";
 import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { RowData, Table } from "@tanstack/react-table";
 import { useCallback } from "react";
-
 import { useEventTypes } from "./useEventTypes";
 
 interface UseFacetedUniqueValuesOptions {

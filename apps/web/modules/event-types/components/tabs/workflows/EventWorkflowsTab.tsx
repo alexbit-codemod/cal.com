@@ -1,9 +1,3 @@
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useFormContext } from "react-hook-form";
-
-import LicenseRequired from "~/ee/common/components/LicenseRequired";
 import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
 import { getActionIcon } from "@calcom/features/ee/workflows/lib/getActionIcon";
 import type { FormValues } from "@calcom/features/eventtypes/lib/types";
@@ -11,18 +5,22 @@ import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { HttpError } from "@calcom/lib/http-error";
 import { WorkflowActions } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Switch } from "@calcom/ui/components/form";
-import { LockIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { revalidateEventTypeEditPage } from "@calcom/web/app/(use-page-wrapper)/event-types/[type]/actions";
-
+import { LockIcon } from "@coss/ui/icons";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useFormContext } from "react-hook-form";
+import LicenseRequired from "~/ee/common/components/LicenseRequired";
 import SkeletonLoader from "~/ee/workflows/components/SkeletonLoaderEventWorkflowsTab";
 import type { WorkflowType } from "~/ee/workflows/components/WorkflowListPage";
 

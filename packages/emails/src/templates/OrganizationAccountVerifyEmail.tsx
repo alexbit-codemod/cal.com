@@ -1,8 +1,6 @@
+import { APP_NAME, COMPANY_NAME, SUPPORT_MAIL_ADDRESS } from "@calcom/lib/constants";
 import type { TFunction } from "i18next";
-
-import { APP_NAME, SUPPORT_MAIL_ADDRESS, COMPANY_NAME } from "@calcom/lib/constants";
-
-import { BaseEmailHtml } from "../components";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
 
 export type OrganizationEmailVerify = {
   language: TFunction;

@@ -4,12 +4,12 @@ import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
 import { Timezone as PlatformTimzoneSelect } from "@calcom/atoms/timezone";
 import getLocationsOptionsForSelect from "@calcom/features/bookings/lib/getLocationOptionsForSelect";
 import DestinationCalendarSelector from "@calcom/features/calendars/components/DestinationCalendarSelector";
-import { TimezoneSelect as WebTimezoneSelect } from "@calcom/web/modules/timezone/components/TimezoneSelect";
 import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
 import {
   allowDisablingAttendeeConfirmationEmails,
   allowDisablingHostConfirmationEmails,
 } from "@calcom/features/ee/workflows/lib/allowDisablingStandardEmails";
+import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
 import type { EventNameObjectType } from "@calcom/features/eventtypes/lib/eventNaming";
 import { getEventName } from "@calcom/features/eventtypes/lib/eventNaming";
 import type {
@@ -20,7 +20,6 @@ import type {
   SelectClassNames,
   SettingsToggleClassNames,
 } from "@calcom/features/eventtypes/lib/types";
-import { BookerLayoutSelector } from "@calcom/web/modules/settings/components/BookerLayoutSelector";
 import {
   DEFAULT_DARK_BRAND_COLOR,
   DEFAULT_LIGHT_BRAND_COLOR,
@@ -33,35 +32,31 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { Prisma } from "@calcom/prisma/client";
 import { CancellationReasonRequirement, SchedulingType } from "@calcom/prisma/enums";
 import type { EditableSchema, fieldSchema } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import {
-  CheckboxField,
-  ColorPicker,
-  Label,
-  Select,
-  SelectField,
-  SettingsToggle,
-  Switch,
-  TextField,
-} from "@calcom/ui/components/form";
-import { InfoIcon, PencilIcon } from "@coss/ui/icons";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { CheckboxField } from "@calcom/ui/components/form/checkbox";
+import ColorPicker from "@calcom/ui/components/form/color-picker/colorpicker";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select, SelectField } from "@calcom/ui/components/form/select";
+import { SettingsToggle, Switch } from "@calcom/ui/components/form/switch";
 import {
   SelectedCalendarSettingsScope,
   SelectedCalendarsSettingsWebWrapper,
   SelectedCalendarsSettingsWebWrapperSkeleton,
 } from "@calcom/web/modules/calendars/components/SelectedCalendarsSettingsWebWrapper";
-import { MultiplePrivateLinksController } from "@calcom/web/modules/event-types/components";
 import AddVerifiedEmail from "@calcom/web/modules/event-types/components/AddVerifiedEmail";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
+import { MultiplePrivateLinksController } from "@calcom/web/modules/event-types/components/MultiplePrivateLinksController";
+import { BookerLayoutSelector } from "@calcom/web/modules/settings/components/BookerLayoutSelector";
+import { TimezoneSelect as WebTimezoneSelect } from "@calcom/web/modules/timezone/components/TimezoneSelect";
+import { InfoIcon, PencilIcon } from "@coss/ui/icons";
 import type { Dispatch, SetStateAction } from "react";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import type { z } from "zod";
-
 import type { CustomEventTypeModalClassNames } from "./CustomEventTypeModal";
 import CustomEventTypeModal from "./CustomEventTypeModal";
 import type { EmailNotificationToggleCustomClassNames } from "./DisableAllEmailsSetting";

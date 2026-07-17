@@ -1,4 +1,4 @@
-import type { IconName } from "@calcom/ui/components/icon";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
 
 type IndividualPlatformPlan = {
   plan: string;

@@ -1,7 +1,7 @@
-import { BaseEmailHtml, Info } from "@calcom/emails/src/components";
+import { BaseEmailHtml } from "@calcom/emails/src/components/BaseEmailHtml";
+import { Info } from "@calcom/emails/src/components/Info";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import type { App_RoutingForms_Form } from "@calcom/prisma/client";
-
 import type { Fields, OrderedResponses } from "../../types/types";
 
 export const ResponseEmail = ({

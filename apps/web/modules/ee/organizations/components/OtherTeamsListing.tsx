@@ -2,8 +2,7 @@
 
 import type { OrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.module";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
 import OtherTeamList from "./OtherTeamList";
 
 type OtherTeamsListingProps = {

@@ -1,25 +1,23 @@
 "use client";
 
-import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { useState } from "react";
-import type { Options, Props } from "react-select";
-
 import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import type { SelectClassNames } from "@calcom/features/eventtypes/lib/types";
-import { getHostsFromOtherGroups } from "@calcom/lib/bookings/hostGroupUtils";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Select } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-
 import type {
   PriorityDialogCustomClassNames,
   WeightDialogCustomClassNames,
 } from "@calcom/features/eventtypes/components/dialogs/HostEditDialogs";
 import { PriorityDialog, WeightDialog } from "@calcom/features/eventtypes/components/dialogs/HostEditDialogs";
+import type { SelectClassNames } from "@calcom/features/eventtypes/lib/types";
+import { getHostsFromOtherGroups } from "@calcom/lib/bookings/hostGroupUtils";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import classNames from "@calcom/ui/classNames";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Select } from "@calcom/ui/components/form/select";
+import Icon from "@calcom/ui/components/icon/Icon";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useState } from "react";
+import type { Options, Props } from "react-select";
 
 export type CheckedSelectOption = {
   avatar: string;

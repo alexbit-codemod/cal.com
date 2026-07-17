@@ -1,5 +1,5 @@
 import type dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import type { BorderColor } from "@calcom/features/calendars/weeklyview/types/common";
 import classNames from "@calcom/ui/classNames";
 import { useId } from "react";

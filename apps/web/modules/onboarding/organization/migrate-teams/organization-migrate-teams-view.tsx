@@ -1,17 +1,16 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import slugify from "@calcom/lib/slugify";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { CheckboxField } from "@calcom/ui/components/form/checkbox";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { CheckboxField, TextField } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
-
 import { OnboardingCard } from "../../components/OnboardingCard";
 import { OnboardingLayout } from "../../components/OnboardingLayout";
 import { OnboardingMigrateTeamsBrowserView } from "../../components/onboarding-migrate-teams-browser-view";

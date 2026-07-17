@@ -5,41 +5,38 @@ import {
   NoticeThresholdUnitEnum,
 } from "@calcom/platform-enums";
 import type {
-  TransformBookingLimitsSchema_2024_06_14,
-  TransformFutureBookingsLimitSchema_2024_06_14,
   BookerLayoutsTransformedSchema,
   EventTypeColorsTransformedSchema,
-  TransformRecurringEventSchema_2024_06_14,
-  SeatOptionsTransformedSchema,
-  SeatOptionsDisabledSchema,
   OutputAddressLocation_2024_06_14,
   OutputAttendeeAddressLocation_2024_06_14,
-  OutputOrganizersDefaultAppLocation_2024_06_14,
   OutputAttendeeDefinedLocation_2024_06_14,
   OutputAttendeePhoneLocation_2024_06_14,
   OutputIntegrationLocation_2024_06_14,
   OutputLinkLocation_2024_06_14,
+  OutputOrganizersDefaultAppLocation_2024_06_14,
   OutputPhoneLocation_2024_06_14,
   OutputUnknownLocation_2024_06_14,
+  SeatOptionsDisabledSchema,
+  SeatOptionsTransformedSchema,
+  TransformBookingLimitsSchema_2024_06_14,
+  TransformFutureBookingsLimitSchema_2024_06_14,
+  TransformRecurringEventSchema_2024_06_14,
 } from "@calcom/platform-types";
-
+import { transformBookerLayoutsInternalToApi } from "./booker-layouts";
 import {
-  transformLocationsInternalToApi,
-  transformBookingFieldsInternalToApi,
-  transformIntervalLimitsInternalToApi,
-  transformFutureBookingLimitsInternalToApi,
-  transformRecurrenceInternalToApi,
-  transformBookerLayoutsInternalToApi,
-  transformRequiresConfirmationInternalToApi,
-  transformEventTypeColorsInternalToApi,
-  transformSeatsInternalToApi,
-} from ".";
-import {
-  systemBeforeFieldEmail,
-  systemBeforeFieldName,
   type CustomField,
   type SystemField,
+  systemBeforeFieldEmail,
+  systemBeforeFieldName,
+  transformBookingFieldsInternalToApi,
 } from "./booking-fields";
+import { transformEventTypeColorsInternalToApi } from "./event-type-colors";
+import { transformFutureBookingLimitsInternalToApi } from "./future-booking-limits";
+import { transformIntervalLimitsInternalToApi } from "./interval-limits";
+import { transformLocationsInternalToApi } from "./locations";
+import { transformRecurrenceInternalToApi } from "./recurrence";
+import { transformRequiresConfirmationInternalToApi } from "./requires-confirmation";
+import { transformSeatsInternalToApi } from "./seats";
 
 describe("transformLocationsInternalToApi", () => {
   it("should reverse transform address location", () => {
@@ -185,7 +182,7 @@ describe("transformLocationsInternalToApi", () => {
     ];
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     const result = transformLocationsInternalToApi(transformedLocation);
 
     expect(result).toEqual(expectedOutput);
@@ -206,7 +203,7 @@ describe("transformLocationsInternalToApi", () => {
     ];
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     const result = transformLocationsInternalToApi(transformedLocation);
 
     expect(result).toEqual(expectedOutput);
@@ -892,7 +889,7 @@ describe("transformBookingFieldsInternalToApi", () => {
     ];
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+    // @ts-expect-error
     const result = transformBookingFieldsInternalToApi(transformedField);
 
     expect(result).toEqual(expectedOutput);

@@ -7,10 +7,9 @@ import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { downloadAsCsv } from "@calcom/lib/csvUtils";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button, buttonClasses } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { ChevronDownIcon, InfoIcon, SearchIcon, UploadIcon } from "@coss/ui/icons";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Button, buttonClasses } from "@calcom/ui/components/button/Button";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
 import {
   Sheet,
   SheetBody,
@@ -19,9 +18,10 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-} from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calcom/ui/components/sheet/Sheet";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useTeamMembersWithSegment } from "@calcom/web/modules/event-types/hooks/useTeamMembersWithSegment";
+import { ChevronDownIcon, InfoIcon, SearchIcon, UploadIcon } from "@coss/ui/icons";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -284,9 +284,7 @@ export const EditWeightsForAllTeamMembers = ({
                 placeholder={t("search")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
-                addOnLeading={
-                  <SearchIcon className="text-subtle h-4 w-4" />
-                }
+                addOnLeading={<SearchIcon className="text-subtle h-4 w-4" />}
               />
 
               <div className="flex max-h-[80dvh] flex-col overflow-y-auto rounded-md border">

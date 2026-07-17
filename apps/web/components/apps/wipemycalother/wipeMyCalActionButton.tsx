@@ -1,8 +1,6 @@
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
 import { useState } from "react";
-
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-
 import { ConfirmDialog } from "./confirmDialog";
 
 interface IWipeMyCalActionButtonProps {

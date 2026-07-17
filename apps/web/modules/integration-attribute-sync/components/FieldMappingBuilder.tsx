@@ -1,13 +1,14 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Input, Select, Switch } from "@calcom/ui/components/form";
-import { ArrowRightIcon, LinkIcon } from "@coss/ui/icons";
-
 import { getDefaultFieldMapping } from "@calcom/features/ee/integration-attribute-sync/lib/fieldMappingHelpers";
 import type {
   IFieldMappingFormState,
   IFieldMappingWithOptionalId,
 } from "@calcom/features/ee/integration-attribute-sync/repositories/IIntegrationAttributeSyncRepository";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { ArrowRightIcon, LinkIcon } from "@coss/ui/icons";
 
 type AttributeOptions = {
   label: string;

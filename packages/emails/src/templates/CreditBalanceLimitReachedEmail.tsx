@@ -1,9 +1,8 @@
-import type { TFunction } from "i18next";
-
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { CreditUsageType } from "@calcom/prisma/enums";
-
-import { CallToAction, V2BaseEmailHtml } from "../components";
+import type { TFunction } from "i18next";
+import { CallToAction } from "../components/CallToAction";
+import { V2BaseEmailHtml } from "../components/V2BaseEmailHtml";
 import type { BaseScheduledEmail } from "./BaseScheduledEmail";
 
 export const CreditBalanceLimitReachedEmail = (

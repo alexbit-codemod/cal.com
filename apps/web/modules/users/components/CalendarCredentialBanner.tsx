@@ -1,8 +1,7 @@
-import Link from "next/link";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { type RouterOutputs } from "@calcom/trpc/react";
-import { TopBanner } from "@calcom/ui/components/top-banner";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { TopBanner } from "@calcom/ui/components/top-banner/TopBanner";
+import Link from "next/link";
 
 export type CalendarCredentialBannerProps = {
   data: RouterOutputs["viewer"]["me"]["getUserTopBanners"]["calendarCredentialBanner"];

@@ -1,8 +1,8 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { PanelCard } from "@calcom/ui/components/card";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { PanelCard } from "@calcom/ui/components/card/PanelCard";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 
 export function ActiveUserBreakdownSkeleton() {
   const { t } = useLocale();

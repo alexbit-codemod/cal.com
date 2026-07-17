@@ -5,7 +5,7 @@ import {
   SkeletonButton,
   SkeletonContainer,
   SkeletonText,
-} from "@calcom/ui/components/skeleton";
+} from "@calcom/ui/components/skeleton/Skeleton";
 
 export default function Loading() {
   return (

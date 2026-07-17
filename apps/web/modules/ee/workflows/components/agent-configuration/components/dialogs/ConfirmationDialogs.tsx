@@ -1,10 +1,10 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Dialog as UIDialog } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { Dialog as UIDialog } from "@calcom/ui/components/dialog/Dialog";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 
 interface ConfirmationDialogsProps {
   cancellingNumberId: number | null;

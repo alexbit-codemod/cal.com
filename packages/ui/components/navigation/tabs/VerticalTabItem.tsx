@@ -1,13 +1,11 @@
-import Link from "next/link";
-import { Fragment } from "react";
-import posthog from "posthog-js";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { useUrlMatchesCurrentUrl } from "@calcom/lib/hooks/useUrlMatchesCurrentUrl";
 import classNames from "@calcom/ui/classNames";
-
-import { Icon } from "../../icon";
-import type { IconName } from "../../icon";
+import Link from "next/link";
+import posthog from "posthog-js";
+import { Fragment } from "react";
+import Icon from "../../icon/Icon";
+import type { IconName } from "../../icon/icon-names";
 
 export type VerticalTabItemProps = {
   name: string;

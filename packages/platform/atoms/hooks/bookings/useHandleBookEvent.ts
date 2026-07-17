@@ -1,16 +1,17 @@
-import { useSearchParams } from "next/navigation";
-
 import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
 import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
 import { useBookerTime } from "@calcom/features/bookings/Booker/hooks/useBookerTime";
 import type { UseBookingFormReturnType } from "@calcom/features/bookings/Booker/hooks/useBookingForm";
-import { mapBookingToMutationInput, mapRecurringBookingToMutationInput } from "@calcom/features/bookings/lib";
 import type { BookingCreateBody } from "@calcom/features/bookings/lib/bookingCreateBodySchema";
+import {
+  mapBookingToMutationInput,
+  mapRecurringBookingToMutationInput,
+} from "@calcom/features/bookings/lib/client/booking-event-form/booking-to-mutation-input-mapper";
 import type { BookerEvent } from "@calcom/features/bookings/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { RoutingFormSearchParams } from "@calcom/platform-types";
-import { showToast } from "@calcom/ui/components/toast";
-
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useSearchParams } from "next/navigation";
 import { getUtmTrackingParameters } from "../../lib/getUtmTrackingParameters";
 import type { UseCreateBookingInput } from "./useCreateBooking";
 
@@ -93,8 +94,8 @@ export const useHandleBookEvent = ({
       const validDuration = event.data.isDynamic
         ? duration || event.data.length
         : duration && event.data.metadata?.multipleDuration?.includes(duration)
-        ? duration
-        : event.data.length;
+          ? duration
+          : event.data.length;
 
       const bookingInput = {
         values,

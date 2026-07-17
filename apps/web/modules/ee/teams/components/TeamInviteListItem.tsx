@@ -1,18 +1,18 @@
 import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { MembershipRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 interface Props {

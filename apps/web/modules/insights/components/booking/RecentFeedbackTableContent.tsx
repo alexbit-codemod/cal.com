@@ -2,11 +2,11 @@
 
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 
 type FeedbackData = RouterOutputs["viewer"]["insights"]["recentRatings"];
 

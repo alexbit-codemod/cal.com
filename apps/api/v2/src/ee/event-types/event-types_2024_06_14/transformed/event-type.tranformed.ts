@@ -1,18 +1,15 @@
 import type {
-  transformEventColorsApiToInternal,
-  transformFutureBookingLimitsApiToInternal,
-  transformIntervalLimitsApiToInternal,
-  transformRecurrenceApiToInternal,
-  transformSeatsApiToInternal,
-  transformBookingFieldsApiToInternal,
-  InternalLocationsSchema,
-} from "@/ee/event-types/event-types_2024_06_14/transformers";
-import type { z } from "zod";
-
-import type {
-  CreateEventTypeInput_2024_06_14,
   ConfirmationPolicyTransformedSchema,
+  CreateEventTypeInput_2024_06_14,
 } from "@calcom/platform-types";
+import type { z } from "zod";
+import type { transformBookingFieldsApiToInternal } from "@/ee/event-types/event-types_2024_06_14/transformers/api-to-internal/booking-fields";
+import type { transformEventColorsApiToInternal } from "@/ee/event-types/event-types_2024_06_14/transformers/api-to-internal/event-colors";
+import type { transformFutureBookingLimitsApiToInternal } from "@/ee/event-types/event-types_2024_06_14/transformers/api-to-internal/future-booking-limits";
+import type { transformIntervalLimitsApiToInternal } from "@/ee/event-types/event-types_2024_06_14/transformers/api-to-internal/interval-limits";
+import type { transformRecurrenceApiToInternal } from "@/ee/event-types/event-types_2024_06_14/transformers/api-to-internal/recurrence";
+import type { transformSeatsApiToInternal } from "@/ee/event-types/event-types_2024_06_14/transformers/api-to-internal/seats";
+import type { InternalLocationsSchema } from "@/ee/event-types/event-types_2024_06_14/transformers/internal/locations";
 
 export type InputEventTransformed_2024_06_14 = Omit<
   CreateEventTypeInput_2024_06_14,

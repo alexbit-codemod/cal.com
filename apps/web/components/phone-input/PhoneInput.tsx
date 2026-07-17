@@ -8,7 +8,7 @@ import "react-phone-input-2/lib/style.css";
 
 import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
 import { type CountryCode, useBookerStore } from "@calcom/features/bookings/Booker/store";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
 import { CUSTOM_PHONE_MASKS } from "./phone-masks";
 

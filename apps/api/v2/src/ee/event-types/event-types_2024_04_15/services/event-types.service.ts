@@ -1,3 +1,11 @@
+import {
+  createEventType,
+  EventTypesPublic,
+  getEventTypesPublic,
+  updateEventType,
+} from "@calcom/platform-libraries/event-types";
+import type { EventType } from "@calcom/prisma/client";
+import { BadRequestException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
 import { DEFAULT_EVENT_TYPES } from "@/ee/event-types/event-types_2024_04_15/constants/constants";
 import { EventTypesRepository_2024_04_15 } from "@/ee/event-types/event-types_2024_04_15/event-types.repository";
 import { CreateEventTypeInput_2024_04_15 } from "@/ee/event-types/event-types_2024_04_15/inputs/create-event-type.input";
@@ -5,21 +13,12 @@ import { Editable } from "@/ee/event-types/event-types_2024_04_15/inputs/enums/e
 import { BaseField } from "@/ee/event-types/event-types_2024_04_15/inputs/enums/field-type";
 import { UpdateEventTypeInput_2024_04_15 } from "@/ee/event-types/event-types_2024_04_15/inputs/update-event-type.input";
 import { EventTypeOutput } from "@/ee/event-types/event-types_2024_04_15/outputs/event-type.output";
-import { systemBeforeFieldEmail } from "@/ee/event-types/event-types_2024_06_14/transformers";
+import { systemBeforeFieldEmail } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
 import { MembershipsRepository } from "@/modules/memberships/memberships.repository";
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { SelectedCalendarsRepository } from "@/modules/selected-calendars/selected-calendars.repository";
 import { UsersService } from "@/modules/users/services/users.service";
-import { UserWithProfile, UsersRepository } from "@/modules/users/users.repository";
-import { BadRequestException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
-
-import {
-  createEventType,
-  updateEventType,
-  EventTypesPublic,
-  getEventTypesPublic,
-} from "@calcom/platform-libraries/event-types";
-import type { EventType } from "@calcom/prisma/client";
+import { UsersRepository, UserWithProfile } from "@/modules/users/users.repository";
 
 @Injectable()
 export class EventTypesService_2024_04_15 {
@@ -43,7 +42,7 @@ export class EventTypesService_2024_04_15 {
       ctx: {
         user: eventTypeUser,
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
+        // @ts-expect-error
         prisma: this.dbWrite.prisma,
       },
     });
@@ -149,7 +148,7 @@ export class EventTypesService_2024_04_15 {
       ctx: {
         user: eventTypeUser,
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
+        // @ts-expect-error
         prisma: this.dbWrite.prisma,
       },
     });

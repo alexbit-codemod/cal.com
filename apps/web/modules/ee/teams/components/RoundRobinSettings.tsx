@@ -1,18 +1,16 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { RRResetInterval, RRTimestampBasis } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
-
+import { useForm } from "react-hook-form";
 import RoundRobinResetInterval from "./RoundRobinResetInterval";
 import RoundRobinTimestampBasis from "./RoundRobinTimestampBasis";
 

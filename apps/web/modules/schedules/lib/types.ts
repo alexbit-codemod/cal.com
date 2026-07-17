@@ -1,4 +1,4 @@
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 
 export type Slots = RouterOutputs["viewer"]["slots"]["getSchedule"]["slots"];
 

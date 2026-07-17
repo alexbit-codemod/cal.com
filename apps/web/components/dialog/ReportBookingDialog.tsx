@@ -1,16 +1,16 @@
-import type { Dispatch, SetStateAction } from "react";
-import { Controller, useForm } from "react-hook-form";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { BookingReportReason } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Select, Label } from "@calcom/ui/components/form";
-import { TextArea } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog/Dialog";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import type { Dispatch, SetStateAction } from "react";
+import { Controller, useForm } from "react-hook-form";
 
 type BookingReportStatus = "upcoming" | "past" | "cancelled" | "rejected";
 

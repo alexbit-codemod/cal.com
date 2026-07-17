@@ -1,20 +1,17 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogTrigger } from "@calcom/ui/components/dialog/Dialog";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { PlatformPricing } from "@calcom/web/components/settings/platform/pricing/platform-pricing/index";
-
-import { useUnsubscribeTeamToStripe } from "@lib/hooks/settings/platform/billing/useUnsubscribeTeamToStripe";
-
 import NoPlatformPlan from "@components/settings/platform/dashboard/NoPlatformPlan";
 import { useGetUserAttributes } from "@components/settings/platform/hooks/useGetUserAttributes";
-
+import { useUnsubscribeTeamToStripe } from "@lib/hooks/settings/platform/billing/useUnsubscribeTeamToStripe";
+import { usePathname } from "next/navigation";
 import { CtaRow } from "~/settings/billing/billing-view";
 import Shell from "~/shell/Shell";
 

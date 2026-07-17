@@ -1,8 +1,8 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { TopBanner } from "@calcom/ui/components/top-banner";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { TopBanner } from "@calcom/ui/components/top-banner/TopBanner";
 
 export type DueInvoiceBannerProps = {
   data: RouterOutputs["viewer"]["me"]["getUserTopBanners"]["dueInvoiceBanner"];

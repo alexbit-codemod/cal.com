@@ -1,23 +1,22 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
+import { setShowNewOrgModalFlag } from "@calcom/web/modules/ee/organizations/hooks/useWelcomeModal";
+import { useOnboarding } from "@calcom/web/modules/ee/organizations/lib/onboardingStore";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
-import { setShowNewOrgModalFlag } from "@calcom/web/modules/ee/organizations/hooks/useWelcomeModal";
-import { useOnboarding } from "@calcom/web/modules/ee/organizations/lib/onboardingStore";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
 
 type TeamMember = RouterOutputs["viewer"]["teams"]["listMembers"]["members"][number];
 

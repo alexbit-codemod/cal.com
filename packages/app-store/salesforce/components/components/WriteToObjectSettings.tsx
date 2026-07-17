@@ -1,16 +1,14 @@
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { Button } from "@calcom/ui/components/button/Button";
+import { InputField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { Section } from "@calcom/ui/components/section";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useState } from "react";
 import type z from "zod";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Switch } from "@calcom/ui/components/form";
-import { InputField } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { Section } from "@calcom/ui/components/section";
-import { showToast } from "@calcom/ui/components/toast";
-
-import { WhenToWriteToRecord, SalesforceFieldType, DateFieldTypeData } from "../../lib/enums";
-import type { writeToRecordEntrySchema, writeToBookingEntry } from "../../zod";
+import { DateFieldTypeData, SalesforceFieldType, WhenToWriteToRecord } from "../../lib/enums";
+import type { writeToBookingEntry, writeToRecordEntrySchema } from "../../zod";
 
 export enum BookingActionEnum {
   ON_BOOKING = "on_booking",

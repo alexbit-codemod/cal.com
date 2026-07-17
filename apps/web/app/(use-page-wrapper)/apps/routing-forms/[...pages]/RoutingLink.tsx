@@ -1,18 +1,12 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import type { FormEvent } from "react";
-import { useEffect, useRef, useState } from "react";
-import { Toaster } from "sonner";
-import { v4 as uuidv4 } from "uuid";
-
 import FormInputFields from "@calcom/app-store/routing-forms/components/FormInputFields";
 import { getAbsoluteEventTypeRedirectUrlWithEmbedSupport } from "@calcom/app-store/routing-forms/getEventTypeRedirectUrl";
 import getFieldIdentifier from "@calcom/app-store/routing-forms/lib/getFieldIdentifier";
 import { findMatchingRoute } from "@calcom/app-store/routing-forms/lib/processRoute";
 import { substituteVariables } from "@calcom/app-store/routing-forms/lib/substituteVariables";
 import { getFieldResponseForJsonLogic } from "@calcom/app-store/routing-forms/lib/transformResponse";
-import type { NonRouterRoute, FormResponse } from "@calcom/app-store/routing-forms/types/types";
+import type { FormResponse, NonRouterRoute } from "@calcom/app-store/routing-forms/types/types";
 import { sdkActionManager, useIsEmbed } from "@calcom/embed-core/embed-iframe";
 import { getUrlSearchParamsToForward } from "@calcom/features/routing-forms/lib/getUrlSearchParamsToForward";
 import useGetBrandingColours from "@calcom/lib/getBrandColours";
@@ -21,13 +15,18 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import useTheme from "@calcom/lib/hooks/useTheme";
 import { markdownToSafeHTMLClient } from "@calcom/lib/markdownToSafeHTMLClient";
 import { navigateInTopWindow } from "@calcom/lib/navigateInTopWindow";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { inferSSRProps } from "@calcom/types/inferSSRProps";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { showToast } from "@calcom/ui/components/toast";
-import { useCalcomTheme } from "@calcom/ui/styles";
+import { Button } from "@calcom/ui/components/button/Button";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useCalcomTheme } from "@calcom/ui/styles/useCalcomTheme";
 import type { getServerSideProps } from "@calcom/web/lib/apps/routing-forms/[...pages]/getServerSidePropsRoutingLink";
+import { useRouter } from "next/navigation";
+import type { FormEvent } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Toaster } from "sonner";
+import { v4 as uuidv4 } from "uuid";
 
 type Props = inferSSRProps<typeof getServerSideProps>;
 const useBrandColors = ({

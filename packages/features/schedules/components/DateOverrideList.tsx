@@ -1,14 +1,12 @@
-import { noop } from "@tanstack/react-table";
-import { formatInTimeZone } from "date-fns-tz";
-
 import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
 import dayjs from "@calcom/dayjs";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { TimeRange, WorkingHours } from "@calcom/types/schedule";
-import { Button } from "@calcom/ui/components/button";
-import { DialogTrigger } from "@calcom/ui/components/dialog";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogTrigger } from "@calcom/ui/components/dialog/Dialog";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
+import { noop } from "@tanstack/react-table";
+import { formatInTimeZone } from "date-fns-tz";
 import DateOverrideInputDialog from "./DateOverrideInputDialog";
 
 const sortByDate = (a: { ranges: TimeRange[]; id: string }, b: { ranges: TimeRange[]; id: string }) => {

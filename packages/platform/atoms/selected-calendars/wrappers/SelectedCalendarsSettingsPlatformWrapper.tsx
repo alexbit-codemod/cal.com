@@ -1,19 +1,20 @@
-import { useState } from "react";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { CALENDARS } from "@calcom/platform-constants";
 import { QueryCell } from "@calcom/trpc/components/QueryCell";
 import cn from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { AppListCard } from "@calcom/ui/components/app-list-card";
-import type { ButtonProps } from "@calcom/ui/components/button";
-import { Button } from "@calcom/ui/components/button";
-import { CalendarSwitchComponent, type ICalendarSwitchProps } from "@calcom/ui/components/calendar-switch";
-import { DisconnectIntegrationComponent } from "@calcom/ui/components/disconnect-calendar-integration";
-import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calcom/ui/components/dropdown";
-import { Switch } from "@calcom/ui/components/form";
-import { List } from "@calcom/ui/components/list";
-
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { AppListCard } from "@calcom/ui/components/app-list-card/AppListCard";
+import type { ButtonProps } from "@calcom/ui/components/button/Button";
+import { Button } from "@calcom/ui/components/button/Button";
+import {
+  CalendarSwitchComponent,
+  type ICalendarSwitchProps,
+} from "@calcom/ui/components/calendar-switch/CalendarSwitch";
+import { DisconnectIntegrationComponent } from "@calcom/ui/components/disconnect-calendar-integration/DisconnectIntegration";
+import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calcom/ui/components/dropdown/Dropdown";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { List } from "@calcom/ui/components/list/List";
+import { useState } from "react";
 import * as Connect from "../../connect";
 import { AppleConnect } from "../../connect/apple/AppleConnect";
 import { useAddSelectedCalendar } from "../../hooks/calendars/useAddSelectedCalendar";

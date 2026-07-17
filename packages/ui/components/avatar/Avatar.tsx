@@ -1,12 +1,10 @@
+import { AVATAR_FALLBACK } from "@calcom/lib/constants";
+import classNames from "@calcom/ui/classNames";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
 import { Provider as TooltipPrimitiveProvider } from "@radix-ui/react-tooltip";
 import { cva } from "class-variance-authority";
 import Link from "next/link";
-
-import { AVATAR_FALLBACK } from "@calcom/lib/constants";
-import classNames from "@calcom/ui/classNames";
-
-import { Tooltip } from "../tooltip";
+import Tooltip from "../tooltip/Tooltip";
 
 type Maybe<T> = T | null | undefined;
 

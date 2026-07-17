@@ -1,14 +1,13 @@
 "use client";
 
-import { useState } from "react";
-
 import { IS_CALCOM } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { PanelCard } from "@calcom/ui/components/card";
-import { TextField } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { PanelCard } from "@calcom/ui/components/card/PanelCard";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useState } from "react";
 
 export default function LicenseView() {
   const { t } = useLocale();

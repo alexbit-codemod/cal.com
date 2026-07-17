@@ -1,29 +1,27 @@
 "use client";
 
-import posthog from "posthog-js";
-import { useState } from "react";
-import type { UseFormReturn } from "react-hook-form";
-
 import type { FormValues } from "@calcom/features/ee/workflows/lib/types";
 import { CAL_AI_PHONE_NUMBER_MONTHLY_PRICE } from "@calcom/lib/constants";
 import { formatPhoneNumber } from "@calcom/lib/formatPhoneNumber";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { LoaderIcon, PhoneIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { WebCallDialog } from "@calcom/web/modules/ee/workflows/components/WebCallDialog";
-
+import { LoaderIcon, PhoneIcon } from "@coss/ui/icons";
+import posthog from "posthog-js";
+import { useState } from "react";
+import type { UseFormReturn } from "react-hook-form";
 import { TestPhoneCallDialog } from "../../../TestPhoneCallDialog";
 import { usePhoneNumberActions } from "../../hooks/usePhoneNumberActions";
 import { BuyNumberDialog } from "../dialogs/BuyNumberDialog";

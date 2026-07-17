@@ -1,6 +1,5 @@
 import type { Dayjs } from "@calcom/dayjs";
-import { trpc } from "@calcom/trpc/react";
-
+import { trpc } from "@calcom/trpc/react/trpc";
 import { NAVIGATION_PROBE_WINDOW_MONTHS } from "../lib/constants";
 import type { BookingListingStatus } from "../types";
 

@@ -28,7 +28,7 @@ import {
 import type { PrismaClient } from "@calcom/prisma";
 import { BadRequestException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
 import { EventTypesService_2024_06_14 } from "@/ee/event-types/event-types_2024_06_14/services/event-types.service";
-import { systemBeforeFieldEmail } from "@/ee/event-types/event-types_2024_06_14/transformers";
+import { systemBeforeFieldEmail } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
 import { AtomsRepository } from "@/modules/atoms/atoms.repository";
 import { CredentialsRepository } from "@/modules/credentials/credentials.repository";
 import { MembershipsRepository } from "@/modules/memberships/memberships.repository";
@@ -37,8 +37,7 @@ import { PrismaReadService } from "@/modules/prisma/prisma-read.service";
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { TeamsEventTypesService } from "@/modules/teams/event-types/services/teams-event-types.service";
 import { UsersService } from "@/modules/users/services/users.service";
-import { UserWithProfile } from "@/modules/users/users.repository";
-import { UsersRepository } from "@/modules/users/users.repository";
+import { UsersRepository, UserWithProfile } from "@/modules/users/users.repository";
 
 type EnabledAppType = App & {
   credential: CredentialDataWithTeamName;
@@ -77,7 +76,7 @@ export class EventTypesAtomService {
     private readonly eventTypeService: EventTypesService_2024_06_14,
     private readonly teamEventTypeService: TeamsEventTypesService,
     private readonly organizationsTeamsRepository: OrganizationsTeamsRepository,
-    private readonly usersRepository: UsersRepository,
+    private readonly usersRepository: UsersRepository
   ) {}
 
   private async getTeamSlug(teamId: number): Promise<string> {

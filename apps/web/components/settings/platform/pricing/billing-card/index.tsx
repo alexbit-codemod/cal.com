@@ -1,5 +1,5 @@
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calcom/ui/components/button/Button";
 
 type PlatformBillingCardProps = {
   plan: string;

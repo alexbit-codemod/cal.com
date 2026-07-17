@@ -1,6 +1,5 @@
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 import type { ReactNode } from "react";
-
-import { SkeletonText } from "@calcom/ui/components/skeleton";
 
 type OnboardingCardProps = {
   title: string;

@@ -1,7 +1,5 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
-
 import {
   OptionComponent,
   SingleValueComponent,
@@ -9,9 +7,9 @@ import {
 import type { ConnectedDestinationCalendars } from "@calcom/features/calendars/lib/getConnectedDestinationCalendars";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Select } from "@calcom/ui/components/form";
-
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Select } from "@calcom/ui/components/form/select";
+import { useEffect, useMemo, useState } from "react";
 import { getPlaceholderContent } from "../lib/getPlaceholderContent";
 
 export type DestinationCalendarProps = {

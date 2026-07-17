@@ -1,7 +1,9 @@
+import process from "node:process";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { symmetricEncrypt } from "@calcom/lib/crypto";
-
-import { CallToAction, Separator, CallToActionTable } from "../components";
+import { CallToAction } from "../components/CallToAction";
+import { CallToActionTable } from "../components/CallToActionTable";
+import { Separator } from "../components/Separator";
 import { OrganizerScheduledEmail } from "./OrganizerScheduledEmail";
 
 export const OrganizerRequestEmail = (props: React.ComponentProps<typeof OrganizerScheduledEmail>) => {

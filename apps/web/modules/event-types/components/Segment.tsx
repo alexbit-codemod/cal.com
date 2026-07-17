@@ -9,7 +9,7 @@ import { getQueryBuilderConfigForAttributes } from "@calcom/app-store/routing-fo
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { isEqual } from "@calcom/lib/isEqual";
 import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { type RouterOutputs, trpc } from "@calcom/trpc/react";
+import { type RouterOutputs, trpc } from "@calcom/trpc/react/trpc";
 import cn from "@calcom/ui/classNames";
 import { useCallback, useState } from "react";
 import type { BuilderProps, ImmutableTree, JsonTree } from "react-awesome-query-builder";

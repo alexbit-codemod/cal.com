@@ -3,8 +3,8 @@
 import type { NormalizedFeature, UseFeatureOptInResult } from "@calcom/features/feature-opt-in/types";
 import type { FeatureState } from "@calcom/features/flags/config";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useCallback, useMemo } from "react";
 
 function useMutationCallbacks(onSuccessCallback: () => void): { onSuccess: () => void; onError: () => void } {

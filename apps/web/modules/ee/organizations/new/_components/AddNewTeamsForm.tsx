@@ -1,21 +1,20 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import slugify from "@calcom/lib/slugify";
+import { trpc } from "@calcom/trpc/react/trpc";
+import classNames from "@calcom/ui/classNames";
+import { Button } from "@calcom/ui/components/button/Button";
+import { CheckboxField } from "@calcom/ui/components/form/checkbox";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import Icon from "@calcom/ui/components/icon/Icon";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import { useOnboarding } from "@calcom/web/modules/ee/organizations/lib/onboardingStore";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Controller, useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
-
-import { useOnboarding } from "@calcom/web/modules/ee/organizations/lib/onboardingStore";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText, SkeletonContainer, SkeletonButton } from "@calcom/ui/components/skeleton";
 
 const schema = z.object({
   teams: z.array(

@@ -1,27 +1,25 @@
 "use client";
 
-import { keepPreviousData } from "@tanstack/react-query";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import posthog from "posthog-js";
-import { useState, useMemo } from "react";
-
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
 import { APP_NAME } from "@calcom/lib/constants";
 import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { MembershipRole } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { UserAvatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+import { UserAvatar } from "@calcom/ui/components/avatar/UserAvatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import InviteLinkSettingsModal from "@calcom/web/modules/ee/teams/components/InviteLinkSettingsModal";
-
+import { keepPreviousData } from "@tanstack/react-query";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import posthog from "posthog-js";
+import { useMemo, useState } from "react";
 import { MemberInvitationModalWithoutMembers } from "~/ee/teams/components/MemberInvitationModal";
 
 type TeamMember = RouterOutputs["viewer"]["teams"]["listMembers"]["members"][number];

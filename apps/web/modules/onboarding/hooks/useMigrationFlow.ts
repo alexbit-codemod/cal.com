@@ -1,7 +1,7 @@
 "use client";
 
+import { trpc } from "@calcom/trpc/react/trpc";
 import { useSearchParams } from "next/navigation";
-import { trpc } from "@calcom/trpc/react";
 
 export const useMigrationFlow = () => {
   const searchParams = useSearchParams();

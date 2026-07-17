@@ -2,7 +2,7 @@
 
 import type { OptInFeatureConfig } from "@calcom/features/feature-opt-in/config";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calcom/ui/components/button/Button";
 import Image from "next/image";
 import type { ReactElement } from "react";
 

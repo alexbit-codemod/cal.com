@@ -6,7 +6,7 @@ import type { UseFormReturn } from "react-hook-form";
 import { Controller, useWatch } from "react-hook-form";
 import "react-phone-number-input/style.css";
 
-import type { RetellAgentWithDetails } from "@calcom/features/calAIPhone/providers/retellAI";
+import type { RetellAgentWithDetails } from "@calcom/features/calAIPhone/providers/retellAI/types";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import {
   getTemplateBodyForAction,
@@ -43,36 +43,33 @@ import {
   WorkflowTemplates,
   WorkflowTriggerEvents,
 } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Badge, InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { InfoBadge } from "@calcom/ui/components/badge/InfoBadge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { AddVariablesDropdown, Editor } from "@calcom/ui/components/editor";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-import {
-  CheckboxField,
-  EmailField,
-  Input,
-  Label,
-  MultiSelectCheckbox,
-  Select,
-  TextArea,
-  TextField,
-} from "@calcom/ui/components/form";
-import { CircleHelpIcon, InfoIcon, PhoneIcon } from "@coss/ui/icons";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { Editor } from "@calcom/ui/components/editor/Editor";
+import { AddVariablesDropdown } from "@calcom/ui/components/editor/plugins/AddVariablesDropdown";
+import type { Option } from "@calcom/ui/components/form/checkbox";
+import { CheckboxField, MultiSelectCheckbox } from "@calcom/ui/components/form/checkbox";
+import { EmailField, TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Input, TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useHasActiveTeamPlan, useHasPaidPlan } from "@calcom/web/modules/billing/hooks/useHasPaidPlan";
-import { AgentConfigurationSheet }from "./agent-configuration/AgentConfigurationSheet";
+import { CircleHelpIcon, InfoIcon, PhoneIcon } from "@coss/ui/icons";
+import { AgentConfigurationSheet } from "./agent-configuration/AgentConfigurationSheet";
 import { TestPhoneCallDialog } from "./TestPhoneCallDialog";
 import { TimeTimeUnitInput } from "./TimeTimeUnitInput";
 import { WebCallDialog } from "./WebCallDialog";

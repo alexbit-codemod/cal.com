@@ -5,8 +5,8 @@ import customTemplate, { hasTemplateIntegration } from "@calcom/features/webhook
 import { WebhookVersion } from "@calcom/features/webhooks/lib/interface/IWebhookRepository";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { TimeUnit, WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Form } from "@calcom/ui/components/form";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
 import { Button } from "@coss/ui/components/button";
 import { Card, CardFrame, CardFrameFooter, CardPanel } from "@coss/ui/components/card";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@coss/ui/components/collapsible";

@@ -1,17 +1,16 @@
-import Link from "next/link";
-import { useState } from "react";
-import posthog from "posthog-js";
-
-import { InstallAppButtonWithoutPlanCheck } from "@calcom/app-store/InstallAppButtonWithoutPlanCheck";
 import type { TDependencyData } from "@calcom/app-store/_appRegistry";
+import { InstallAppButtonWithoutPlanCheck } from "@calcom/app-store/InstallAppButtonWithoutPlanCheck";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { App } from "@calcom/types/App";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { showToast } from "@calcom/ui/components/toast";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { ArrowRightIcon, CircleAlertIcon } from "@coss/ui/icons";
+import Link from "next/link";
+import posthog from "posthog-js";
+import { useState } from "react";
 
 interface IAppConnectionItem {
   title: string;

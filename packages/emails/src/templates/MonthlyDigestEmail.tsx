@@ -1,8 +1,8 @@
-import type { TFunction } from "i18next";
-
+import process from "node:process";
 import { APP_NAME, SENDER_NAME, SUPPORT_MAIL_ADDRESS } from "@calcom/lib/constants";
-
-import { BaseEmailHtml, CallToAction } from "../components";
+import type { TFunction } from "i18next";
+import { BaseEmailHtml } from "../components/BaseEmailHtml";
+import { CallToAction } from "../components/CallToAction";
 
 export type MonthlyDigestEmailData = {
   language: TFunction;

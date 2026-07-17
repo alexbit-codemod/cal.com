@@ -1,20 +1,11 @@
-import { useAutoAnimate } from "@formkit/auto-animate/react";
-import type { UseQueryResult } from "@tanstack/react-query";
-import { useState, memo, useEffect } from "react";
-import { Controller, useFormContext } from "react-hook-form";
-import type { OptionProps, SingleValueProps } from "react-select";
-import { components } from "react-select";
-
-import type { GetAllSchedulesByUserIdQueryType } from "./EventAvailabilityTabWebWrapper";
 import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
 import dayjs from "@calcom/dayjs";
 import { SelectSkeletonLoader } from "@calcom/features/availability/components/SkeletonLoader";
 import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import type { TeamMembers } from "@calcom/web/modules/event-types/components/EventType";
 import type {
   AvailabilityOption,
-  FormValues,
   EventTypeSetup,
+  FormValues,
   Host,
   SelectClassNames,
 } from "@calcom/features/eventtypes/lib/types";
@@ -23,18 +14,26 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { weekdayNames } from "@calcom/lib/weekday";
 import { weekStartNum } from "@calcom/lib/weekstart";
 import { SchedulingType } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { Spinner } from "@calcom/ui/components/icon";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
+import { Spinner } from "@calcom/ui/components/icon/Spinner";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import type { TeamMembers } from "@calcom/web/modules/event-types/components/EventType";
 import { GlobeIcon, UserIcon } from "@coss/ui/icons";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import type { UseQueryResult } from "@tanstack/react-query";
+import { memo, useEffect, useState } from "react";
+import { Controller, useFormContext } from "react-hook-form";
+import type { OptionProps, SingleValueProps } from "react-select";
+import { components } from "react-select";
+import type { GetAllSchedulesByUserIdQueryType } from "./EventAvailabilityTabWebWrapper";
 
 export type ScheduleQueryData = RouterOutputs["viewer"]["availability"]["schedule"]["get"];
 

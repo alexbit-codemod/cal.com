@@ -2,11 +2,11 @@
 
 import dayjs from "@calcom/dayjs";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
 import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
 import { ChevronLeftIcon, ChevronRightIcon } from "@coss/ui/icons";
 import { getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
 import React, { useEffect, useMemo } from "react";

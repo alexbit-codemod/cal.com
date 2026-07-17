@@ -1,22 +1,20 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { ToggleGroup } from "@calcom/ui/components/form/toggleGroup";
+import { useInsightsRoutingParameters } from "@calcom/web/modules/insights/hooks/useInsightsRoutingParameters";
 import { useState } from "react";
 import {
-  BarChart,
   Bar,
+  BarChart,
+  CartesianGrid,
+  Rectangle,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Rectangle,
 } from "recharts";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { ToggleGroup } from "@calcom/ui/components/form";
-
-import { useInsightsRoutingParameters } from "@calcom/web/modules/insights/hooks/useInsightsRoutingParameters";
 import { ChartCard } from "../ChartCard";
 
 // Custom Tooltip component

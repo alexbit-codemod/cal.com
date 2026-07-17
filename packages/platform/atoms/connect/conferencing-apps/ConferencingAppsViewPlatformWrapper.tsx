@@ -9,16 +9,16 @@ import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { GOOGLE_MEET, OFFICE_365_VIDEO, ZOOM } from "@calcom/platform-constants";
 import type { App } from "@calcom/types/App";
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 import { useQueryClient } from "@tanstack/react-query";
 import { useReducer, useState } from "react";
 import { AtomsWrapper } from "../../src/components/atoms-wrapper";

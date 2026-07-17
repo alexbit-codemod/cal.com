@@ -16,7 +16,7 @@ import { getFeatureRepository } from "@calcom/features/di/containers/FeatureRepo
 import { getBillingProviderService } from "@calcom/features/ee/billing/di/containers/Billing";
 import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
 import { GlobalWatchlistRepository } from "@calcom/features/watchlist/lib/repository/GlobalWatchlistRepository";
-import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry";
+import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry/sentry-span";
 import { normalizeEmail } from "@calcom/features/watchlist/lib/utils/normalization";
 import { checkIfEmailIsBlockedInWatchlistController } from "@calcom/features/watchlist/operations/check-if-email-in-watchlist.controller";
 import { hashPassword } from "@calcom/lib/auth/hashPassword";
@@ -26,7 +26,7 @@ import logger from "@calcom/lib/logger";
 import { isPrismaError } from "@calcom/lib/server/getServerErrorFromUnknown";
 import type { CustomNextApiHandler } from "@calcom/lib/server/username";
 import { usernameHandler } from "@calcom/lib/server/username";
-import { getTrackingFromCookies } from "@calcom/lib/tracking";
+import { getTrackingFromCookies } from "@calcom/lib/tracking/server";
 import prisma from "@calcom/prisma";
 import {
   CreationSource,

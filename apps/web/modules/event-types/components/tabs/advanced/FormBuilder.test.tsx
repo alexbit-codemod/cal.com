@@ -7,7 +7,7 @@ import {
   setMockMatchMedia,
   verifier,
 } from "@calcom/features/form-builder/testUtils";
-import { showToast } from "@calcom/ui/components/toast";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { render, screen, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";

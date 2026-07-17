@@ -6,11 +6,14 @@ import type { writeToRecordDataSchema as salesforceWriteToRecordDataSchema } fro
 import { routingFormIncompleteBookingDataSchema as salesforceRoutingFormIncompleteBookingDataSchema } from "@calcom/app-store/salesforce/zod";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { IncompleteBookingActionType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { inferSSRProps } from "@calcom/types/inferSSRProps";
-import { Button } from "@calcom/ui/components/button";
-import { InputField, Label, Select, Switch } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { InputField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import type { getServerSidePropsForSingleFormView as getServerSideProps } from "@calcom/web/lib/apps/routing-forms/[...pages]/getServerSidePropsSingleForm";
 import SingleForm from "@components/apps/routing-forms/SingleForm";
 import { GlobeIcon } from "@coss/ui/icons";

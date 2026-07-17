@@ -1,6 +1,7 @@
 "use client";
 
-import getStripe from "@calcom/app-store/stripepayment/lib/client";
+import process from "node:process";
+import getStripe from "@calcom/app-store/stripepayment/lib/client/getStripe";
 import { getPremiumPlanPriceValue } from "@calcom/app-store/stripepayment/lib/utils";
 import {
   fetchSignup,
@@ -32,11 +33,15 @@ import { IS_EUROPE } from "@calcom/lib/timezoneConstants";
 import { signupSchema as apiSignupSchema } from "@calcom/prisma/zod-utils";
 import type { inferSSRProps } from "@calcom/types/inferSSRProps";
 import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { CheckboxField, Form, PasswordField, SelectField, TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { CheckboxField } from "@calcom/ui/components/form/checkbox";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { PasswordField } from "@calcom/ui/components/form/inputs/Input";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { SelectField } from "@calcom/ui/components/form/select";
+import Icon from "@calcom/ui/components/icon/Icon";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { InfoIcon, ShieldCheckIcon, StarIcon } from "@coss/ui/icons";
 import { Analytics as DubAnalytics } from "@dub/analytics/react";
 import { zodResolver } from "@hookform/resolvers/zod";

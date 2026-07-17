@@ -1,5 +1,5 @@
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
+import { Badge } from "@calcom/ui/components/badge/Badge";
 import { useTeamInvites } from "@calcom/web/modules/billing/hooks/useHasPaidPlan";
 
 export function TeamInviteBadge() {

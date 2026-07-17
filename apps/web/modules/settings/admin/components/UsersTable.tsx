@@ -2,10 +2,11 @@ import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { SMSLockState } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import type { IconName } from "@calcom/ui/components/icon";
-import { Table, DropdownActions } from "@calcom/ui/components/table";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
+import { Table } from "@calcom/ui/components/table/Table";
+import { DropdownActions } from "@calcom/ui/components/table/TableActions";
 
 const { Cell, ColumnTitle, Header, Row } = Table;
 

@@ -1,32 +1,30 @@
-import { useState } from "react";
-import type { UseFormReturn } from "react-hook-form";
-
 import type { Language } from "@calcom/features/calAIPhone/providers/retellAI/types";
 import { restorePromptComplexity } from "@calcom/features/calAIPhone/providers/retellAI/utils/promptUtils";
 import type { FormValues } from "@calcom/features/ee/workflows/lib/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-import { ToggleGroup } from "@calcom/ui/components/form";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import type { Option } from "@calcom/ui/components/form/checkbox";
+import { ToggleGroup } from "@calcom/ui/components/form/toggleGroup";
 import {
   Sheet,
+  SheetBody,
   SheetContent,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetBody,
-  SheetFooter,
-} from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
-
+} from "@calcom/ui/components/sheet/Sheet";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useState } from "react";
+import type { UseFormReturn } from "react-hook-form";
 import { WebCallDialog } from "../WebCallDialog";
 import { IncomingCallsTab } from "./components/tabs/IncomingCallsTab";
 import { OutgoingCallsTab } from "./components/tabs/OutgoingCallsTab";

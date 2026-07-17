@@ -1,12 +1,10 @@
+import { convertFacetedValuesToMap, type FacetedValue } from "@calcom/features/data-table";
+import { bookingStatusToText } from "@calcom/features/insights/lib/bookingStatusToText";
+import { BookingStatus } from "@calcom/prisma/enums";
+import { trpc } from "@calcom/trpc/react/trpc";
+import type { HeaderRow } from "@calcom/web/modules/insights/lib/types";
 import type { Table } from "@tanstack/react-table";
 import { useCallback } from "react";
-
-import { convertFacetedValuesToMap, type FacetedValue } from "@calcom/features/data-table";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-
-import { bookingStatusToText } from "@calcom/features/insights/lib/bookingStatusToText";
-import type { HeaderRow } from "@calcom/web/modules/insights/lib/types";
 
 const statusOrder: Record<BookingStatus, number> = {
   [BookingStatus.ACCEPTED]: 1,

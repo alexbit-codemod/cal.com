@@ -1,11 +1,8 @@
-import { useSession } from "next-auth/react";
-import { useState } from "react";
-
 import { ENABLE_PROFILE_SWITCHER } from "@calcom/lib/constants";
 import { useRefreshData } from "@calcom/lib/hooks/useRefreshData";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
 import {
   Dropdown,
   DropdownItem,
@@ -13,8 +10,10 @@ import {
   DropdownMenuItem,
   DropdownMenuPortal,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
+} from "@calcom/ui/components/dropdown/Dropdown";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "@coss/ui/icons";
+import { useSession } from "next-auth/react";
+import { useState } from "react";
 
 export function ProfileDropdown() {
   const { update, data: sessionData } = useSession();
@@ -95,9 +94,7 @@ export function ProfileDropdown() {
                     <Avatar alt={option.label || ""} size="xsm" />
                     <span className="ml-2">{option.label}</span>
                   </span>
-                  {isSelected ? (
-                    <CheckIcon className="ml-2 inline h-4 w-4" />
-                  ) : null}
+                  {isSelected ? <CheckIcon className="ml-2 inline h-4 w-4" /> : null}
                 </DropdownItem>
               </DropdownMenuItem>
             );

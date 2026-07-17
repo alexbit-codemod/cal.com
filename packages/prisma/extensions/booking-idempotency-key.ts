@@ -1,7 +1,6 @@
 import { v5 as uuidv5 } from "uuid";
-
-import { Prisma } from "../client";
 import { BookingStatus } from "../enums";
+import { Prisma } from "../generated/prisma/client";
 
 function generateIdempotencyKey({
   startTime,

@@ -1,6 +1,6 @@
 "use client";
 
-import { WizardLayout } from "@calcom/ui/components/layout";
+import { WizardLayout } from "@calcom/ui/components/layout/WizardLayout";
 import AddNewTeamMembers from "@calcom/web/modules/ee/teams/components/AddNewTeamMembers";
 
 export const LayoutWrapper = ({ children }: { children: React.ReactNode }) => (

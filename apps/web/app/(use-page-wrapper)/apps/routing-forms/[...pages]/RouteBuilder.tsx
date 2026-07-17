@@ -37,21 +37,18 @@ import { areTheySiblingEntities } from "@calcom/lib/entityPermissionUtils.shared
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { Prisma } from "@calcom/prisma/client";
 import { SchedulingType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { inferSSRProps } from "@calcom/types/inferSSRProps";
 import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { FormCard } from "@calcom/ui/components/card";
-import {
-  SelectWithValidation as Select,
-  SelectField,
-  Switch,
-  TextArea,
-  TextField,
-} from "@calcom/ui/components/form";
-import type { IconName } from "@calcom/ui/components/icon";
-import { Icon } from "@calcom/ui/components/icon";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import FormCard from "@calcom/ui/components/card/FormCard";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { SelectWithValidation as Select, SelectField } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import Icon from "@calcom/ui/components/icon/Icon";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
 import type { getServerSidePropsForSingleFormView as getServerSideProps } from "@calcom/web/lib/apps/routing-forms/[...pages]/getServerSidePropsSingleForm";
 import SingleForm from "@components/apps/routing-forms/SingleForm";
 import { useAutoAnimate } from "@formkit/auto-animate/react";

@@ -1,11 +1,9 @@
+import { getErrorFromUnknown } from "@calcom/lib/errors";
 import type { ReactElement, Ref } from "react";
 import React, { forwardRef } from "react";
 import type { FieldValues, SubmitHandler, UseFormReturn } from "react-hook-form";
 import { FormProvider } from "react-hook-form";
-
-import { getErrorFromUnknown } from "@calcom/lib/errors";
-
-import { showToast } from "../../toast";
+import { showToast } from "../../toast/showToast";
 
 type FormProps<T extends object> = { form: UseFormReturn<T>; handleSubmit: SubmitHandler<T> } & Omit<
   JSX.IntrinsicElements["form"],

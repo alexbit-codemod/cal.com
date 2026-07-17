@@ -1,5 +1,4 @@
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useDataTable } from "~/data-table/hooks";
 import type {
   CombinedFilterSegment,
   FilterSegmentOutput,
@@ -7,7 +6,7 @@ import type {
   UserFilterSegment,
 } from "@calcom/features/data-table/lib/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
@@ -16,10 +15,12 @@ import {
   DropdownMenuLabel,
   DropdownMenuPortal,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Icon, type IconName } from "@calcom/ui/components/icon";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import Icon from "@calcom/ui/components/icon/Icon";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
 import { useSession } from "next-auth/react";
 import { useMemo, useState } from "react";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
 import { DeleteSegmentDialog } from "./DeleteSegmentDialog";
 import { DuplicateSegmentDialog } from "./DuplicateSegmentDialog";
 import { RenameSegmentDialog } from "./RenameSegmentDialog";

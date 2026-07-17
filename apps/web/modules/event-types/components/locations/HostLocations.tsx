@@ -1,11 +1,5 @@
 "use client";
 
-import { useSession } from "next-auth/react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useFormContext } from "react-hook-form";
-import type { CSSObjectWithLabel } from "react-select";
-import { components } from "react-select";
-
 import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
 import {
   defaultLocations,
@@ -15,23 +9,30 @@ import {
   isStaticLocationType,
 } from "@calcom/app-store/locations";
 import { getAppFromSlug } from "@calcom/app-store/utils";
-import PhoneInput from "@calcom/web/components/phone-input";
-import invertLogoOnDark from "@calcom/lib/invertLogoOnDark";
+import type { FormValues, Host, HostLocation } from "@calcom/features/eventtypes/lib/types";
 import type { LocationOption } from "@calcom/features/form/components/LocationSelect";
 import LocationSelect from "@calcom/features/form/components/LocationSelect";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Label, TextField, Select, SettingsToggle } from "@calcom/ui/components/form";
+import invertLogoOnDark from "@calcom/lib/invertLogoOnDark";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog/Dialog";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
+import { Skeleton } from "@calcom/ui/components/skeleton/Skeleton";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import PhoneInput from "@calcom/web/components/phone-input";
 import { LoaderIcon, TriangleAlertIcon } from "@coss/ui/icons";
-import { Skeleton } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-
-import type { FormValues, Host, HostLocation } from "@calcom/features/eventtypes/lib/types";
+import { useSession } from "next-auth/react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useFormContext } from "react-hook-form";
+import type { CSSObjectWithLabel } from "react-select";
+import { components } from "react-select";
 import type { TLocationOptions } from "./Locations";
 
 type HostWithLocationOptions = {

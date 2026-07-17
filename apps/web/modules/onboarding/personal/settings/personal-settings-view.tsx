@@ -2,12 +2,14 @@
 
 import { FULL_NAME_LENGTH_MAX_LIMIT } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { UserAvatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Label, TextArea, TextField } from "@calcom/ui/components/form";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { UserAvatar } from "@calcom/ui/components/avatar/UserAvatar";
+import { Button } from "@calcom/ui/components/button/Button";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import ImageUploader from "@calcom/ui/components/image-uploader/ImageUploader";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { UsernameAvailabilityField } from "@components/ui/UsernameAvailability";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";

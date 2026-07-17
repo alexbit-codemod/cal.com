@@ -1,3 +1,4 @@
+import process from "node:process";
 import { updateProfilePhotoGoogle } from "@calcom/app-store/_utils/oauth/updateProfilePhotoGoogle";
 import { updateProfilePhotoMicrosoft } from "@calcom/app-store/_utils/oauth/updateProfilePhotoMicrosoft";
 import { createGoogleCalendarServiceWithGoogleType } from "@calcom/app-store/googlecalendar/lib/CalendarService";
@@ -39,7 +40,7 @@ import { randomString } from "@calcom/lib/random";
 import { safeStringify } from "@calcom/lib/safeStringify";
 import { hashEmail } from "@calcom/lib/server/PiiHasher";
 import slugify from "@calcom/lib/slugify";
-import type { TrackingData } from "@calcom/lib/tracking";
+import type { TrackingData } from "@calcom/lib/tracking/server";
 import prisma from "@calcom/prisma";
 import type { Membership, Team } from "@calcom/prisma/client";
 import { CreationSource, IdentityProvider, MembershipRole, UserPermissionRole } from "@calcom/prisma/enums";
@@ -921,7 +922,10 @@ export const getOptions = ({
 
         const allProfiles = await ProfileRepository.findAllProfilesForUserIncludingMovedUser(existingUser);
         const { upId } = determineProfile({ profiles: allProfiles, token });
-        log.debug("callbacks:jwt:accountType:oauth:existingUser", safeStringify({ userId: existingUser.id, upId }));
+        log.debug(
+          "callbacks:jwt:accountType:oauth:existingUser",
+          safeStringify({ userId: existingUser.id, upId })
+        );
         return {
           ...token,
           upId,

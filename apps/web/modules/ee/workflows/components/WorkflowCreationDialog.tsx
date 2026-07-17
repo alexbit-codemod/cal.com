@@ -1,17 +1,16 @@
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import posthog from "posthog-js";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { HttpError } from "@calcom/lib/http-error";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import cn from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
-import { Icon } from "@calcom/ui/components/icon";
-import type { IconName } from "@calcom/ui/components/icon";
-import { RadioGroup, Radio, RadioIndicator } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Dialog, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import Icon from "@calcom/ui/components/icon/Icon";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
+import { Radio, Group as RadioGroup, Indicator as RadioIndicator } from "@calcom/ui/components/radio/Radio";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useRouter } from "next/navigation";
+import posthog from "posthog-js";
+import { useState } from "react";
 
 type WorkflowOptionCardProps = {
   title: string;

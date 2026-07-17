@@ -1,7 +1,6 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-
 import { TroubleshooterListItemHeader } from "@calcom/features/troubleshooter/components/TroubleshooterListItemContainer";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { Badge } from "@calcom/ui/components/badge/Badge";
 
 function ConnectedAppsItem() {
   return (

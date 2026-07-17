@@ -3,10 +3,12 @@
 import { isCompanyEmail } from "@calcom/features/ee/organizations/lib/utils";
 import { emailSchema } from "@calcom/lib/emailSchema";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Form, InputError, TextField } from "@calcom/ui/components/form";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { InputError } from "@calcom/ui/components/form/inputs/InputError";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
@@ -57,7 +59,7 @@ export const CompanyEmailRequired = ({ userEmail }: { userEmail: string }) => {
     posthog.capture("onboarding_company_email_verify_clicked");
     setErrorMessage("");
     const qs = searchParams?.toString() ?? "";
-    const redirectTo = qs ? `${pathname ?? ""}?${qs}` : pathname ?? undefined;
+    const redirectTo = qs ? `${pathname ?? ""}?${qs}` : (pathname ?? undefined);
     addSecondaryEmailMutation.mutate({
       email: values.email,
       makePrimary: true,

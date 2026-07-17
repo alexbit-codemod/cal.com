@@ -1,23 +1,21 @@
 "use client";
 
-import { format } from "date-fns";
-import Link from "next/link";
-
+import type { BlocklistEntry, BlocklistEntryDetails, BlocklistScope } from "@calcom/features/blocklist/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ExternalLinkIcon } from "@coss/ui/icons";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Sheet,
-  SheetContent,
   SheetBody,
+  SheetContent,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetFooter,
-} from "@calcom/ui/components/sheet";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-
-import type { BlocklistEntry, BlocklistEntryDetails, BlocklistScope } from "@calcom/features/blocklist/types";
+} from "@calcom/ui/components/sheet/Sheet";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import { ExternalLinkIcon } from "@coss/ui/icons";
+import { format } from "date-fns";
+import Link from "next/link";
 
 export interface BlocklistEntryDetailsSheetProps<T extends BlocklistEntry> {
   scope: BlocklistScope;

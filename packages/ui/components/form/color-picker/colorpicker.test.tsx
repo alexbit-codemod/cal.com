@@ -2,8 +2,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { act } from "react-dom/test-utils";
 import { vi } from "vitest";
-
-import type { ButtonProps } from "../../button";
+import type { ButtonProps } from "../../button/Button";
 import ColorPicker from "./colorpicker";
 
 vi.mock("../../button/Button", async () => {

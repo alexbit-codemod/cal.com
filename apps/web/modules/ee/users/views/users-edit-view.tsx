@@ -1,12 +1,10 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
-
-import { getParserWithGeneric } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
-
 import { userBodySchema } from "@calcom/features/ee/users/schemas/userBodySchema";
+import { getParserWithGeneric } from "@calcom/prisma/zod-utils";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { usePathname, useRouter } from "next/navigation";
 import { UserForm } from "../components/UserForm";
 
 interface User {

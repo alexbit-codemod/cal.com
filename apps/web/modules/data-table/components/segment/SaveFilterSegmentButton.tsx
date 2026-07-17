@@ -1,25 +1,27 @@
-import { useSession } from "next-auth/react";
-import { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import posthog from "posthog-js";
-
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { type FilterSegmentScope } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
+import type { FilterSegmentScope } from "@calcom/prisma/enums";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTrigger,
-} from "@calcom/ui/components/dialog";
-import { Form, Input, Label, Select, Switch } from "@calcom/ui/components/form";
-import { RadioGroup, RadioField } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
-
-import { useDataTable } from "~/data-table/hooks";
+} from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { RadioField, Group as RadioGroup } from "@calcom/ui/components/radio/Radio";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useSession } from "next-auth/react";
+import posthog from "posthog-js";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
 
 interface FormValues {
   name: string;

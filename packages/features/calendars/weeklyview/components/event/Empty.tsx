@@ -1,6 +1,6 @@
 import type { Dayjs } from "@calcom/dayjs";
 import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import { DefaultOutOfOfficeSlot } from "@calcom/features/calendars/weeklyview/components/DefaultOutOfOfficeSlot";
 import { useCalendarStore } from "@calcom/features/calendars/weeklyview/state/store";
 import type {

@@ -1,6 +1,6 @@
 import { IS_SELF_HOSTED } from "@calcom/lib/constants";
 import hasKeyInMetadata from "@calcom/lib/hasKeyInMetadata";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 
 export function useHasPaidPlan() {
   if (IS_SELF_HOSTED) return { isPending: false, hasPaidPlan: true };

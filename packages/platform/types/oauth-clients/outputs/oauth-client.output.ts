@@ -1,9 +1,7 @@
-import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
-import { IsArray, IsEnum, IsString, IsNumber, IsOptional, IsDate, IsBoolean, IsUrl } from "class-validator";
-
 import { PERMISSION_MAP } from "@calcom/platform-constants";
-
-import { ARE_CALENDAR_EVENTS_ENABLED_DOCS } from "../inputs";
+import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
+import { IsArray, IsBoolean, IsDate, IsEnum, IsNumber, IsOptional, IsString, IsUrl } from "class-validator";
+import { ARE_CALENDAR_EVENTS_ENABLED_DOCS } from "../inputs/create-oauth-client.input";
 
 export class PlatformOAuthClientDto {
   @ApiProperty({ example: "clsx38nbl0001vkhlwin9fmt0" })

@@ -1,12 +1,7 @@
-import type { Table } from "@tanstack/react-table";
-import type { Dispatch, SetStateAction } from "react";
-import { useState } from "react";
-
-import { DataTableSelectionBar } from "~/data-table/components";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Command,
   CommandEmpty,
@@ -14,11 +9,14 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@calcom/ui/components/command";
-import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calcom/ui/components/command/Command";
+import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover/Popover";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { CheckIcon } from "@coss/ui/icons";
-
+import type { Table } from "@tanstack/react-table";
+import type { Dispatch, SetStateAction } from "react";
+import { useState } from "react";
+import { DataTableSelectionBar } from "~/data-table/components/DataTableSelectionBar";
 import type { UserTableUser } from "../types";
 
 interface Props {

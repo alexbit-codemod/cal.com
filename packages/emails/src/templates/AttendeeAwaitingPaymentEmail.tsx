@@ -1,4 +1,5 @@
-import { CallToAction, CallToActionTable } from "../components";
+import { CallToAction } from "../components/CallToAction";
+import { CallToActionTable } from "../components/CallToActionTable";
 import { AttendeeScheduledEmail } from "./AttendeeScheduledEmail";
 
 function ManageLink(props: React.ComponentProps<typeof AttendeeScheduledEmail>) {

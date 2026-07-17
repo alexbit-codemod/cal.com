@@ -2,7 +2,7 @@
 
 import type { OptInFeatureConfig } from "@calcom/features/feature-opt-in/config";
 import { getOptInFeatureConfig, shouldDisplayFeatureAt } from "@calcom/features/feature-opt-in/config";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import posthog from "posthog-js";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {

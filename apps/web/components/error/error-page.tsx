@@ -4,7 +4,7 @@ import { useLayoutEffect } from "react";
 
 import "@calcom/embed-core/src/embed-iframe";
 import { HttpError } from "@calcom/lib/http-error";
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calcom/ui/components/button/Button";
 
 type Props = {
   statusCode?: number | null;

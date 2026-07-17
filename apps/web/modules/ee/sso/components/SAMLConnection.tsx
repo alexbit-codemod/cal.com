@@ -1,17 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-
 import type { SSOConnection } from "@calcom/ee/sso/lib/saml";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextArea } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 
 interface FormValues {
   metadata: string;

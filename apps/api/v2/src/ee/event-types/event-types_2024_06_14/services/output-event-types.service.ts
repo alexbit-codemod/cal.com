@@ -26,21 +26,23 @@ import type {
 import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import {
-  BookingFieldSchema,
-  CustomField,
   InternalLocation,
   InternalLocationSchema,
+} from "@/ee/event-types/event-types_2024_06_14/transformers/internal/locations";
+import { transformBookerLayoutsInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/booker-layouts";
+import {
+  BookingFieldSchema,
+  CustomField,
   SystemField,
-  transformBookerLayoutsInternalToApi,
   transformBookingFieldsInternalToApi,
-  transformEventTypeColorsInternalToApi,
-  transformFutureBookingLimitsInternalToApi,
-  transformIntervalLimitsInternalToApi,
-  transformLocationsInternalToApi,
-  transformRecurrenceInternalToApi,
-  transformRequiresConfirmationInternalToApi,
-  transformSeatsInternalToApi,
-} from "@/ee/event-types/event-types_2024_06_14/transformers";
+} from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/booking-fields";
+import { transformEventTypeColorsInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/event-type-colors";
+import { transformFutureBookingLimitsInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/future-booking-limits";
+import { transformIntervalLimitsInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/interval-limits";
+import { transformLocationsInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/locations";
+import { transformRecurrenceInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/recurrence";
+import { transformRequiresConfirmationInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/requires-confirmation";
+import { transformSeatsInternalToApi } from "@/ee/event-types/event-types_2024_06_14/transformers/internal-to-api/seats";
 import { ProfileMinimal, UsersService } from "@/modules/users/services/users.service";
 
 type EventTypeUser = {

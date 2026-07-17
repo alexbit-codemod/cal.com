@@ -1,20 +1,18 @@
 "use client";
 
-import type { ColumnDef } from "@tanstack/react-table";
-import { useMemo } from "react";
-
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import type { BlocklistEntry, BlocklistScope } from "@calcom/features/blocklist/types";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Checkbox } from "@calcom/ui/components/form";
-
-import type { BlocklistEntry, BlocklistScope } from "@calcom/features/blocklist/types";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { Checkbox } from "@calcom/ui/components/form/checkbox";
+import type { ColumnDef } from "@tanstack/react-table";
+import { useMemo } from "react";
 
 interface UseBlockedEntriesColumnsProps<T extends BlocklistEntry> {
   t: (key: string) => string;

@@ -4,9 +4,8 @@ import dayjs from "@calcom/dayjs";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { detectBrowserTimeFormat } from "@calcom/lib/timeFormat";
 import type { inferSSRProps } from "@calcom/types/inferSSRProps";
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calcom/ui/components/button/Button";
 import { CalendarIcon, XIcon } from "@coss/ui/icons";
-
 import type { getServerSideProps } from "@lib/video/meeting-ended/[uid]/getServerSideProps";
 
 export type PageProps = inferSSRProps<typeof getServerSideProps>;

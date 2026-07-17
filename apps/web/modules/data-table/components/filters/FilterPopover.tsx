@@ -1,24 +1,22 @@
-import startCase from "lodash/startCase";
-
-import type { FilterType } from "@calcom/types/data-table";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import type { IconName } from "@calcom/ui/components/icon";
-import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
-
-import { useFilterValue } from "~/data-table/hooks";
 import {
+  ColumnFilterType,
   type FilterableColumn,
   type FilterValue,
   ZFilterValue,
-  ColumnFilterType,
 } from "@calcom/features/data-table/lib/types";
 import {
-  isSingleSelectFilterValue,
   isMultiSelectFilterValue,
-  isTextFilterValue,
   isNumberFilterValue,
+  isSingleSelectFilterValue,
+  isTextFilterValue,
 } from "@calcom/features/data-table/lib/utils";
+import type { FilterType } from "@calcom/types/data-table";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
+import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover/Popover";
+import startCase from "lodash/startCase";
+import { useFilterValue } from "~/data-table/hooks/useFilterValue";
 import { FilterOptions } from "./FilterOptions";
 import { useFilterPopoverOpen } from "./useFilterPopoverOpen";
 import { numberFilterOperatorOptions, useTextFilterOperatorOptions } from "./utils";

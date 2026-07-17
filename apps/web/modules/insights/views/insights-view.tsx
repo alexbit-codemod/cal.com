@@ -1,42 +1,40 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { useState, useCallback } from "react";
-
 import { ColumnFilterType, type FilterableColumn } from "@calcom/features/data-table";
-import { DataTableProvider } from "~/data-table/DataTableProvider";
-import { DataTableFilters, DateRangeFilter } from "~/data-table/components";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { FilterType } from "@calcom/types/data-table";
-import { useDataTable } from "~/data-table/hooks/useDataTable";
-import { useSegments } from "~/data-table/hooks/useSegments";
-import {
-  AverageEventDurationChart,
-  BookingKPICards,
-  BookingsByHourChart,
-  CSATOverTimeChart,
-  EventTrendsChart,
-  HighestNoShowHostTable,
-  HighestRatedMembersTable,
-  LeastBookedTeamMembersTable,
-  LowestRatedMembersTable,
-  MostBookedTeamMembersTable,
-  MostCancelledBookingsTables,
-  MostCompletedTeamMembersTable,
-  LeastCompletedTeamMembersTable,
-  NoShowHostsOverTimeChart,
-  PopularEventsTable,
-  RecentNoShowGuestsChart,
-  RecentFeedbackTable,
-  TimezoneBadge,
-} from "@calcom/web/modules/insights/components/booking";
-import { InsightsOrgTeamsProvider } from "../components/context/InsightsOrgTeamsProvider";
-import { DateTargetSelector, type DateTarget } from "../components/filters/DateTargetSelector";
-import { Download } from "../components/filters/Download/Download";
-import { OrgTeamsFilter } from "../components/filters/OrgTeamsFilter";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
+import { AverageEventDurationChart } from "@calcom/web/modules/insights/components/booking/AverageEventDurationChart";
+import { BookingKPICards } from "@calcom/web/modules/insights/components/booking/BookingKPICards";
+import { BookingsByHourChart } from "@calcom/web/modules/insights/components/booking/BookingsByHourChart";
+import { CSATOverTimeChart } from "@calcom/web/modules/insights/components/booking/CSATOverTimeChart";
+import { EventTrendsChart } from "@calcom/web/modules/insights/components/booking/EventTrendsChart";
+import { HighestNoShowHostTable } from "@calcom/web/modules/insights/components/booking/HighestNoShowHostTable";
+import { HighestRatedMembersTable } from "@calcom/web/modules/insights/components/booking/HighestRatedMembersTable";
+import { LeastBookedTeamMembersTable } from "@calcom/web/modules/insights/components/booking/LeastBookedTeamMembersTable";
+import { LeastCompletedTeamMembersTable } from "@calcom/web/modules/insights/components/booking/LeastCompletedBookings";
+import { LowestRatedMembersTable } from "@calcom/web/modules/insights/components/booking/LowestRatedMembersTable";
+import { MostBookedTeamMembersTable } from "@calcom/web/modules/insights/components/booking/MostBookedTeamMembersTable";
+import { MostCancelledBookingsTables } from "@calcom/web/modules/insights/components/booking/MostCancelledBookingsTables";
+import { MostCompletedTeamMembersTable } from "@calcom/web/modules/insights/components/booking/MostCompletedBookings";
+import { NoShowHostsOverTimeChart } from "@calcom/web/modules/insights/components/booking/NoShowHostsOverTimeChart";
+import { PopularEventsTable } from "@calcom/web/modules/insights/components/booking/PopularEventsTable";
+import { RecentFeedbackTable } from "@calcom/web/modules/insights/components/booking/RecentFeedbackTable";
+import { RecentNoShowGuestsChart } from "@calcom/web/modules/insights/components/booking/RecentNoShowGuestsChart";
+import { TimezoneBadge } from "@calcom/web/modules/insights/components/booking/TimezoneBadge";
 import { useInsightsBookings } from "@calcom/web/modules/insights/hooks/useInsightsBookings";
 import { useInsightsOrgTeams } from "@calcom/web/modules/insights/hooks/useInsightsOrgTeams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+import { usePathname } from "next/navigation";
+import { useCallback, useState } from "react";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DateRangeFilter } from "~/data-table/components/filters/DateRangeFilter";
+import { DataTableProvider } from "~/data-table/DataTableProvider";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useSegments } from "~/data-table/hooks/useSegments";
+import { InsightsOrgTeamsProvider } from "../components/context/InsightsOrgTeamsProvider";
+import { type DateTarget, DateTargetSelector } from "../components/filters/DateTargetSelector";
+import { Download } from "../components/filters/Download/Download";
+import { OrgTeamsFilter } from "../components/filters/OrgTeamsFilter";
 
 export default function InsightsPage({ timeZone }: { timeZone: string }) {
   const pathname = usePathname();

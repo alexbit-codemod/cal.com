@@ -1,9 +1,8 @@
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { List } from "@calcom/ui/components/list";
-
+import { Button } from "@calcom/ui/components/button/Button";
+import { List } from "@calcom/ui/components/list/List";
 import { AppConnectionItem } from "../components/AppConnectionItem";
 import { ConnectedCalendarItem } from "../components/ConnectedCalendarItem";
 import { CreateEventsOnCalendarSelect } from "../components/CreateEventsOnCalendarSelect";

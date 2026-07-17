@@ -1,20 +1,19 @@
-import type { ReactNode } from "react";
-import { useState } from "react";
-import type { UseFormReturn } from "react-hook-form";
-
 import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
+import type { createEventTypeInput } from "@calcom/features/eventtypes/lib/types";
 import { MAX_EVENT_DURATION_MINUTES, MIN_EVENT_DURATION_MINUTES } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { md } from "@calcom/lib/markdownIt";
 import slugify from "@calcom/lib/slugify";
 import turndown from "@calcom/lib/turndownService";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { Editor } from "@calcom/ui/components/editor/Editor";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextAreaField } from "@calcom/ui/components/form/inputs/Input";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
+import type { ReactNode } from "react";
+import { useState } from "react";
+import type { UseFormReturn } from "react-hook-form";
 import type { z } from "zod";
-import { createEventTypeInput } from "@calcom/features/eventtypes/lib/types";
 
 type CreateEventTypeFormValues = z.infer<typeof createEventTypeInput>;
 

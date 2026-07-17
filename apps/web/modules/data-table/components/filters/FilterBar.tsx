@@ -1,8 +1,7 @@
 "use client";
 
-import { type Table } from "@tanstack/react-table";
-
-import { useDisplayedFilterCount } from "~/data-table/hooks";
+import type { Table } from "@tanstack/react-table";
+import { useDisplayedFilterCount } from "~/data-table/hooks/useDisplayedFilterCount";
 import { ActiveFilters } from "./ActiveFilters";
 import { AddFilterButton } from "./AddFilterButton";
 

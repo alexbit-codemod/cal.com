@@ -1,18 +1,23 @@
 "use client";
 
-import { Controller } from "react-hook-form";
-import type { UseFormReturn } from "react-hook-form";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog } from "@calcom/ui/components/dialog";
-import { DialogContent, DialogHeader, DialogFooter as BaseDialogFooter } from "@calcom/ui/components/dialog";
-import { Form, Label, Switch, TextField } from "@calcom/ui/components/form";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import {
+  DialogFooter as BaseDialogFooter,
+  Dialog,
+  DialogContent,
+  DialogHeader,
+} from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { InfoIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-
+import type { UseFormReturn } from "react-hook-form";
+import { Controller } from "react-hook-form";
 import type { PhoneNumberFormValues } from "../../types/schemas";
 
 interface ImportNumberDialogProps {

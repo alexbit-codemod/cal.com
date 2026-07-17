@@ -1,4 +1,4 @@
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 
 export function OrganizationBanner() {
   const {

@@ -1,7 +1,3 @@
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { getTeamUrlSync } from "@calcom/features/ee/organizations/lib/getTeamUrlSync";
@@ -10,14 +6,15 @@ import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { useRefreshData } from "@calcom/lib/hooks/useRefreshData";
 import { MembershipRole } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogTrigger } from "@calcom/ui/components/dialog/Dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -25,13 +22,14 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
-
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { MemberInvitationModalWithoutMembers } from "~/ee/teams/components/MemberInvitationModal";
-
 import InviteLinkSettingsModal from "./InviteLinkSettingsModal";
 import { TeamRole } from "./TeamPill";
 

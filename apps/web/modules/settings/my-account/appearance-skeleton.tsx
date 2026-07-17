@@ -1,9 +1,9 @@
 "use client";
 
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
 import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
+import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 
 export const SkeletonLoader = () => {
   const { t } = useLocale();

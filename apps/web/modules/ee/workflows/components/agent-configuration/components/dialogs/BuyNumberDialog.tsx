@@ -1,16 +1,19 @@
 "use client";
 
-import posthog from "posthog-js";
-
 import { CAL_AI_PHONE_NUMBER_MONTHLY_PRICE } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog } from "@calcom/ui/components/dialog";
-import { DialogContent, DialogHeader, DialogFooter as BaseDialogFooter } from "@calcom/ui/components/dialog";
-import { Label } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import {
+  DialogFooter as BaseDialogFooter,
+  Dialog,
+  DialogContent,
+  DialogHeader,
+} from "@calcom/ui/components/dialog/Dialog";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import posthog from "posthog-js";
 
 interface BuyNumberDialogProps {
   open: boolean;

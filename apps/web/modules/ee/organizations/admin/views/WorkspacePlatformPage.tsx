@@ -1,23 +1,23 @@
 "use client";
 
+import { Dialog } from "@calcom/features/components/controlled-dialog";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
+import { type RouterOutputs, trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextAreaField } from "@calcom/ui/components/form/inputs/Input";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { Table } from "@calcom/ui/components/table/Table";
+import { DropdownActions } from "@calcom/ui/components/table/TableActions";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import type { SubmitHandler } from "react-hook-form";
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
-
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
-import { trpc, type RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { DropdownActions, Table } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
 
 const { Body, Cell, ColumnTitle, Header, Row } = Table;
 
@@ -392,7 +392,7 @@ function UpdatePlatformDialog({
       onOpenChange(false);
       await utils.viewer.admin.workspacePlatform.list.invalidate();
     },
-    onError: function (error) {
+    onError: (error) => {
       showToast(error.message, "error");
     },
   });

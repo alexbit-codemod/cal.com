@@ -1,15 +1,13 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { Dialog } from "@calcom/ui/components/dialog/Dialog";
+import { DropdownItem } from "@calcom/ui/components/dropdown/Dropdown";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Dialog } from "@calcom/ui/components/dialog";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { DropdownItem } from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
-
 import { revalidateTeamRoles } from "../actions";
 
 interface DeleteRoleModalProps {

@@ -1,28 +1,30 @@
-import { useMemo, useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-
 import dayjs from "@calcom/dayjs";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
 import { useDebounce } from "@calcom/lib/hooks/useDebounce";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
 import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { DateRangePicker, TextArea, Input, Checkbox } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog/Dialog";
+import { Checkbox } from "@calcom/ui/components/form/checkbox";
+import { DateRangePickerLazy as DateRangePicker } from "@calcom/ui/components/form/date-range-picker";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useHasTeamPlan } from "@calcom/web/modules/billing/hooks/useHasPaidPlan";
-
+import { useMemo, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { UpgradeTeamsBadgeWebWrapper as UpgradeTeamsBadge } from "~/billing/components/UpgradeTeamsBadgeWebWrapper";
 import { OutOfOfficeTab } from "~/settings/outOfOffice/OutOfOfficeToggleGroup";
 
 export type { BookingRedirectForm } from "~/settings/outOfOffice/types";
+
 import type { BookingRedirectForm } from "~/settings/outOfOffice/types";
 
 type Option = { value: number; label: string };

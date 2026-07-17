@@ -1,4 +1,4 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
+import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone/AIPhoneServiceRegistry";
 import { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
 import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
 import {

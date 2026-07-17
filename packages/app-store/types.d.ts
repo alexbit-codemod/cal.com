@@ -3,7 +3,7 @@ import type React from "react";
 import type { z } from "zod";
 
 import type { EventTypeFormMetadataSchema } from "@calcom/prisma/zod-utils";
-import type { ButtonProps } from "@calcom/ui/components/button";
+import type { ButtonProps } from "@calcom/ui/components/button/Button";
 
 export type IntegrationOAuthCallbackState = {
   returnTo?: string;

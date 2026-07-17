@@ -4,7 +4,7 @@ import * as Label from "@radix-ui/react-label";
 import * as PrimitiveSwitch from "@radix-ui/react-switch";
 import type React from "react";
 import type { ReactNode } from "react";
-import { Tooltip } from "../../tooltip";
+import Tooltip from "../../tooltip/Tooltip";
 
 const Wrapper = ({ children, tooltip }: { tooltip?: string; children: React.ReactNode }) => {
   if (!tooltip) {

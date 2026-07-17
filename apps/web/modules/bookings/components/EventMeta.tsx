@@ -1,10 +1,10 @@
 import { Timezone as PlatformTimezoneSelect } from "@calcom/atoms/timezone";
 import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useBookerTime } from "@calcom/features/bookings/Booker/hooks/useBookerTime";
 import { fadeInUp } from "@calcom/features/bookings/Booker/config";
+import { useBookerTime } from "@calcom/features/bookings/Booker/hooks/useBookerTime";
 import type { Timezone } from "@calcom/features/bookings/Booker/types";
 import { FromToTime } from "@calcom/features/bookings/Booker/utils/dates";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
 import type { BookerEvent } from "@calcom/features/bookings/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { markdownToSafeHTMLClient } from "@calcom/lib/markdownToSafeHTMLClient";
@@ -18,7 +18,10 @@ import dynamic from "next/dynamic";
 import { useEffect, useMemo } from "react";
 import { shallow } from "zustand/shallow";
 import i18nConfigration from "../../../../../i18n.json";
-import { EventDetails, EventMembers, EventMetaSkeleton, EventTitle } from "./event-meta";
+import { EventDetails } from "./event-meta/Details";
+import { EventMembers } from "./event-meta/Members";
+import { EventMetaSkeleton } from "./event-meta/Skeleton";
+import { EventTitle } from "./event-meta/Title";
 import { ScrollableWithGradients } from "./ScrollableWithGradients";
 
 const WebTimezoneSelect = dynamic(

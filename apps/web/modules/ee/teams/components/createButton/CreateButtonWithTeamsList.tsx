@@ -2,8 +2,7 @@
 
 import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
 import type { MembershipRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { CreateBtnProps, Option } from "./CreateButton";
 import { CreateButton } from "./CreateButton";
 

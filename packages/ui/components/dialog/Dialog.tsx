@@ -1,17 +1,15 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import classNames from "@calcom/ui/classNames";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
 import type { ForwardRefExoticComponent, ReactNode } from "react";
 import React from "react";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-
-import type { ButtonProps } from "../button";
-import { Button } from "../button";
-import type { IconName } from "../icon";
-import { Icon } from "../icon";
+import type { ButtonProps } from "../button/Button";
+import { Button } from "../button/Button";
+import Icon from "../icon/Icon";
+import type { IconName } from "../icon/icon-names";
 
 const dialogClasses = cva(
   "fadeIn bg-default scroll-bar fixed left-1/2 top-1/2 z-50 w-[95vw] m-auto -translate-x-1/2 -translate-y-1/2 rounded-2xl text-left shadow-xl focus-visible:outline-none sm:align-middle",

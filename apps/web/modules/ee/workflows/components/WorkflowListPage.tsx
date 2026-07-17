@@ -2,22 +2,22 @@ import { getActionIcon } from "@calcom/features/ee/workflows/lib/getActionIcon";
 import type { WorkflowListType } from "@calcom/features/ee/workflows/lib/types";
 import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { ArrowButton } from "@calcom/ui/components/arrow-button";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+import { ArrowButton } from "@calcom/ui/components/arrow-button/ArrowButton";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { LinkIcon } from "@coss/ui/icons";
-import { Tooltip } from "@calcom/ui/components/tooltip";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

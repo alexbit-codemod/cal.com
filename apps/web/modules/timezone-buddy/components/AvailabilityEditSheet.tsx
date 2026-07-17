@@ -1,20 +1,16 @@
-import { useFieldArray, useForm, useFormContext } from "react-hook-form";
-
 import dayjs from "@calcom/dayjs";
-import { TimezoneSelect } from "@calcom/web/modules/timezone/components/TimezoneSelect";
 import DateOverrideInputDialog from "@calcom/features/schedules/components/DateOverrideInputDialog";
 import DateOverrideList from "@calcom/features/schedules/components/DateOverrideList";
-import Schedule from "@calcom/web/modules/schedules/components/Schedule";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { HttpError } from "@calcom/lib/http-error";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
 import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { Schedule as ScheduleType, TimeRange, WorkingHours } from "@calcom/types/schedule";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
 import {
   Sheet,
   SheetBody,
@@ -23,9 +19,11 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-} from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
-
+} from "@calcom/ui/components/sheet/Sheet";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Schedule from "@calcom/web/modules/schedules/components/Schedule";
+import { TimezoneSelect } from "@calcom/web/modules/timezone/components/TimezoneSelect";
+import { useFieldArray, useForm, useFormContext } from "react-hook-form";
 import type { SliderUser } from "./AvailabilitySliderTable";
 
 interface Props {

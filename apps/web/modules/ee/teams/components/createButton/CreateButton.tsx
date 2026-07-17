@@ -1,13 +1,11 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
-
 import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import type { ButtonColor } from "@calcom/ui/components/button";
-import { Button } from "@calcom/ui/components/button";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import type { ButtonColor } from "@calcom/ui/components/button/Button";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
@@ -15,7 +13,8 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { usePathname, useRouter } from "next/navigation";
 
 export interface Option {
   platform?: boolean;

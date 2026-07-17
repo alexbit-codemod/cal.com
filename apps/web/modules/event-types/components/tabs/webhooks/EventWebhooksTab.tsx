@@ -4,11 +4,11 @@ import { subscriberUrlReserved } from "@calcom/features/webhooks/lib/subscriberU
 import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { APP_NAME, WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { revalidateEventTypeEditPage } from "@calcom/web/app/(use-page-wrapper)/event-types/[type]/actions";
 import { Card, CardPanel } from "@coss/ui/components/card";
 import { Dialog, DialogPanel, DialogPopup } from "@coss/ui/components/dialog";
@@ -21,8 +21,9 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { WebhookForm, WebhookListItem } from "~/webhooks/components";
 import type { TWebhook, WebhookFormSubmitData } from "~/webhooks/components/WebhookForm";
+import WebhookForm from "~/webhooks/components/WebhookForm";
+import WebhookListItem from "~/webhooks/components/WebhookListItem";
 import { WebhookVersionCTA } from "~/webhooks/components/WebhookVersionCTA";
 import { WebhookFormHeader } from "~/webhooks/views/webhook-form-header";
 

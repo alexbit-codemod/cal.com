@@ -6,10 +6,10 @@ import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hook
 import type { EventTypeApps, EventTypeSetupProps, FormValues } from "@calcom/features/eventtypes/lib/types";
 import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
 import { Section } from "@calcom/ui/components/section";
 import Link from "next/link";
 import { useFormContext } from "react-hook-form";

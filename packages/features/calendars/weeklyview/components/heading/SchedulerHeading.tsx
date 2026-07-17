@@ -1,7 +1,7 @@
 import dayjs from "@calcom/dayjs";
 import { useCalendarStore } from "@calcom/features/calendars/weeklyview/state/store";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
 
 export function SchedulerHeading() {
   const { startDate, endDate, handleDateChange } = useCalendarStore((state) => ({

@@ -3,8 +3,8 @@
 import { ZSingleSelectFilterValue } from "@calcom/features/data-table";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { WrongAssignmentReportStatus } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
@@ -12,16 +12,14 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { RoutingFormResponseSheet } from "@calcom/web/components/booking/RoutingFormResponseSheet";
 import { RoutingTraceSheet } from "@calcom/web/components/booking/RoutingTraceSheet";
-import {
-  DataTableFilters,
-  DataTableSkeleton,
-  DataTableWrapper,
-} from "@calcom/web/modules/data-table/components";
+import { DataTableFilters } from "@calcom/web/modules/data-table/components";
+import { DataTableSkeleton } from "@calcom/web/modules/data-table/components/DataTableSkeleton";
+import { DataTableWrapper } from "@calcom/web/modules/data-table/components/DataTableWrapper";
 import { useInsightsOrgTeams } from "@calcom/web/modules/insights/hooks/useInsightsOrgTeams";
 import {
   useWrongAssignmentColumns,

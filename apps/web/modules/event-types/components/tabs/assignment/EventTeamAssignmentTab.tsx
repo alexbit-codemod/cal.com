@@ -1,3 +1,8 @@
+import AssignAllTeamMembers from "@calcom/features/eventtypes/components/AssignAllTeamMembers";
+import type { ChildrenEventTypeSelectCustomClassNames } from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
+import ChildrenEventTypeSelect from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
+import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
+import WeightDescription from "@calcom/features/eventtypes/components/WeightDescription";
 import type {
   EventTypeSetupProps,
   FormValues,
@@ -11,21 +16,18 @@ import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { RRTimestampBasis, SchedulingType } from "@calcom/prisma/enums";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Label, Select, SettingsToggle } from "@calcom/ui/components/form";
-import { XIcon } from "@coss/ui/icons";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
 import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import type { AddMembersWithSwitchCustomClassNames } from "@calcom/web/modules/event-types/components/AddMembersWithSwitch";
 import AddMembersWithSwitch, {
   mapUserToValue,
 } from "@calcom/web/modules/event-types/components/AddMembersWithSwitch";
-import AssignAllTeamMembers from "@calcom/features/eventtypes/components/AssignAllTeamMembers";
-import type { ChildrenEventTypeSelectCustomClassNames } from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
-import ChildrenEventTypeSelect from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
 import { EditWeightsForAllTeamMembers } from "@calcom/web/modules/event-types/components/EditWeightsForAllTeamMembers";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
-import WeightDescription from "@calcom/features/eventtypes/components/WeightDescription";
+import { XIcon } from "@coss/ui/icons";
 import type { TFunction } from "i18next";
 import Link from "next/link";
 import type { ComponentProps, Dispatch, SetStateAction } from "react";

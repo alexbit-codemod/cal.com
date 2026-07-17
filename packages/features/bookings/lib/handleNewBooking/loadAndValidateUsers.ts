@@ -3,7 +3,7 @@ import type { RoutingFormResponse } from "@calcom/features/bookings/lib/getLucky
 import { getQualifiedHostsService } from "@calcom/features/di/containers/QualifiedHosts";
 import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
 import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry";
+import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry/sentry-span";
 import { filterBlockedUsers } from "@calcom/features/watchlist/operations/filter-blocked-users.controller";
 import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
 import { HttpError } from "@calcom/lib/http-error";
@@ -16,7 +16,6 @@ import { SchedulingType } from "@calcom/prisma/enums";
 import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
 import type { CredentialForCalendarService } from "@calcom/types/Credential";
 import type { Logger } from "tslog";
-
 import type { NewBookingEventType } from "./getEventTypesFromDB";
 import { loadUsers } from "./loadUsers";
 

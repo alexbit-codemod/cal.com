@@ -1,28 +1,26 @@
+import { Dialog } from "@calcom/features/components/controlled-dialog";
+import { ErrorCode } from "@calcom/lib/errorCodes";
+import { useDebounce } from "@calcom/lib/hooks/useDebounce";
+import { useInViewObserver } from "@calcom/lib/hooks/useInViewObserver";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { trpc } from "@calcom/trpc/react/trpc";
+import classNames from "@calcom/ui/classNames";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextAreaField } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { CheckIcon, LoaderIcon } from "@coss/ui/icons";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { Dispatch, SetStateAction } from "react";
 import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useInViewObserver } from "@calcom/lib/hooks/useInViewObserver";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import {
-  DialogContent,
-  DialogFooter,
-  DialogClose,
-  ConfirmationDialogContent,
-} from "@calcom/ui/components/dialog";
-import { TextAreaField, Form, Label, Input } from "@calcom/ui/components/form";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
-import { CheckIcon, LoaderIcon } from "@coss/ui/icons";
 
 enum ReassignType {
   AUTO = "auto",

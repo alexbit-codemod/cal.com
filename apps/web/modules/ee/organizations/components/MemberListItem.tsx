@@ -1,19 +1,18 @@
-import classNames from "classnames";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { UserAvatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { UserAvatar } from "@calcom/ui/components/avatar/UserAvatar";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import TeamPill, { TeamRole } from "@calcom/web/modules/ee/teams/components/TeamPill";
+import classNames from "classnames";
 
 interface Props {
   member: RouterOutputs["viewer"]["organizations"]["listOtherTeamMembers"]["rows"][number];

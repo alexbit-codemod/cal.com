@@ -1,12 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { Dialog } from "@calcom/ui/components/dialog/Dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -14,11 +12,12 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
-
-import type { AtomEventTypeListItem } from "../types";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Link from "next/link";
+import { useState } from "react";
 import { formatEventTypeDuration } from "../lib/formatEventTypeDuration";
+import type { AtomEventTypeListItem } from "../types";
 
 const EventTypeContent = ({ eventType }: { eventType: AtomEventTypeListItem }) => {
   return (

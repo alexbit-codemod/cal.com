@@ -8,9 +8,12 @@ import { useRefreshData } from "@calcom/lib/hooks/useRefreshData";
 import type { CancellationReasonRequirement } from "@calcom/prisma/enums";
 import type { RecurringEvent } from "@calcom/types/Calendar";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { CheckboxField, Label, Select, TextArea } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { Button } from "@calcom/ui/components/button/Button";
+import { CheckboxField } from "@calcom/ui/components/form/checkbox";
+import { TextArea } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { InfoIcon, XIcon } from "@coss/ui/icons";
 import { useCallback, useState } from "react";
 
@@ -46,7 +49,6 @@ const InternalNotePresetsSelect = ({
       onPresetSelect?.(option);
     }
   };
-
 
   return (
     <div className="mb-4 flex flex-col">
@@ -187,62 +189,60 @@ export default function CancelBooking(props: Props) {
 
   const isRenderedAsCancelDialog = props.renderContext === "dialog";
 
-  const handleCancel =async()=>{
-     try{
-          setLoading(true);
+  const handleCancel = async () => {
+    try {
+      setLoading(true);
 
-                  const response = await fetch("/api/csrf?sameSite=none", { cache: "no-store" });
-                  const { csrfToken } = await response.json();
+      const response = await fetch("/api/csrf?sameSite=none", { cache: "no-store" });
+      const { csrfToken } = await response.json();
 
-                  const res = await fetch("/api/cancel", {
-                    body: JSON.stringify({
-                      uid: booking?.uid,
-                      cancellationReason: cancellationReason,
-                      allRemainingBookings,
-                      // @NOTE: very important this shouldn't cancel with number ID use uid instead
-                      seatReferenceUid,
-                      cancelledBy: currentUserEmail,
-                      internalNote: internalNote,
-                      csrfToken,
-                    }),
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    method: "POST",
-                  });
+      const res = await fetch("/api/cancel", {
+        body: JSON.stringify({
+          uid: booking?.uid,
+          cancellationReason: cancellationReason,
+          allRemainingBookings,
+          // @NOTE: very important this shouldn't cancel with number ID use uid instead
+          seatReferenceUid,
+          cancelledBy: currentUserEmail,
+          internalNote: internalNote,
+          csrfToken,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
 
-                  const bookingWithCancellationReason = {
-                    ...(bookingCancelledEventProps.booking as object),
-                    cancellationReason,
-                  } as unknown;
+      const bookingWithCancellationReason = {
+        ...(bookingCancelledEventProps.booking as object),
+        cancellationReason,
+      } as unknown;
 
-                  if (res.status >= 200 && res.status < 300) {
-                    sdkActionManager?.fire("bookingCancelled", {
-                      ...bookingCancelledEventProps,
-                      booking: bookingWithCancellationReason,
-                    });
-                    refreshData();
-                    if (props.onCanceled) {
-                      props.onCanceled();
-                    }
-                  } else {
-                    const data = await res.json();
-                    const errorMessage =
-                      data.message ||
-                      `${t("error_with_status_code_occured", { status: res.status })} ${t(
-                        "please_try_again"
-                      )}`;
+      if (res.status >= 200 && res.status < 300) {
+        sdkActionManager?.fire("bookingCancelled", {
+          ...bookingCancelledEventProps,
+          booking: bookingWithCancellationReason,
+        });
+        refreshData();
+        if (props.onCanceled) {
+          props.onCanceled();
+        }
+      } else {
+        const data = await res.json();
+        const errorMessage =
+          data.message ||
+          `${t("error_with_status_code_occured", { status: res.status })} ${t("please_try_again")}`;
 
-                    if (props.showErrorAsToast) {
-                      showToast(errorMessage, "error");
-                    } else {
-                      setError(errorMessage);
-                    }
-                  }
-     } finally{
-          setLoading(false);
-     }
-  }
+        if (props.showErrorAsToast) {
+          showToast(errorMessage, "error");
+        } else {
+          setError(errorMessage);
+        }
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>

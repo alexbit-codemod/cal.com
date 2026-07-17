@@ -1,9 +1,9 @@
 "use client";
 
+import process from "node:process";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
-
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
 
 interface WebPushContextProps {
   permission: NotificationPermission;
@@ -112,7 +112,7 @@ export function WebPushProvider({ children }: ProviderProps) {
 
 const urlB64ToUint8Array = (base64String: string) => {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
-  const base64 = (base64String + padding).replace(/\-/g, "+").replace(/_/g, "/");
+  const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
   const rawData = window.atob(base64);
   const outputArray = new Uint8Array(rawData.length);
   for (let i = 0; i < rawData.length; ++i) {

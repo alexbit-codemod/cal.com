@@ -1,26 +1,26 @@
 import { AddMembersWithSwitchPlatformWrapper } from "@calcom/atoms/add-members-switch/AddMembersWithSwitchPlatformWrapper";
 import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import type {
-  FormValues,
-  Host,
-  SettingsToggleClassNames,
-  TeamMember,
-} from "@calcom/features/eventtypes/lib/types";
-import { Segment } from "./Segment";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { Label, SettingsToggle } from "@calcom/ui/components/form";
-import { type ComponentProps, type Dispatch, type SetStateAction, useMemo } from "react";
-import { Controller, useFormContext } from "react-hook-form";
-import type { Options } from "react-select";
-import { AddMembersWithSwitchWebWrapper } from "./AddMembersWithSwitchWebWrapper";
-
 import AssignAllTeamMembers from "@calcom/features/eventtypes/components/AssignAllTeamMembers";
 import type {
   CheckedSelectOption,
   CheckedTeamSelectCustomClassNames,
 } from "@calcom/features/eventtypes/components/CheckedTeamSelect";
 import CheckedTeamSelect from "@calcom/features/eventtypes/components/CheckedTeamSelect";
+import type {
+  FormValues,
+  Host,
+  SettingsToggleClassNames,
+  TeamMember,
+} from "@calcom/features/eventtypes/lib/types";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
+import { type ComponentProps, type Dispatch, type SetStateAction, useMemo } from "react";
+import { Controller, useFormContext } from "react-hook-form";
+import type { Options } from "react-select";
+import { AddMembersWithSwitchWebWrapper } from "./AddMembersWithSwitchWebWrapper";
+import { Segment } from "./Segment";
 
 interface IUserToValue {
   id: number | null;

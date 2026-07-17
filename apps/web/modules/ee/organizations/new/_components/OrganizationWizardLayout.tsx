@@ -1,8 +1,8 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-import { WizardLayout } from "@calcom/ui/components/layout";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { WizardLayout } from "@calcom/ui/components/layout/WizardLayout";
 
 interface OrganizationWizardLayoutProps {
   children: React.ReactNode;

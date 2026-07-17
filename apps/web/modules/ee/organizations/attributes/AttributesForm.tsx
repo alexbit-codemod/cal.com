@@ -1,15 +1,19 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import React, { useState } from "react";
-import type { UseFormReturn, FieldArrayWithId } from "react-hook-form";
-import { Controller, useForm, useFieldArray } from "react-hook-form";
-import { z } from "zod";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { SettingsToggle, SelectField, Input, InputField, Form, Label } from "@calcom/ui/components/form";
+import { InfoBadge } from "@calcom/ui/components/badge/InfoBadge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Input, InputField } from "@calcom/ui/components/form/inputs/TextField";
+import { SelectField } from "@calcom/ui/components/form/select";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
+import { zodResolver } from "@hookform/resolvers/zod";
+import type React from "react";
+import { useState } from "react";
+import type { FieldArrayWithId, UseFormReturn } from "react-hook-form";
+import { Controller, useFieldArray, useForm } from "react-hook-form";
+import { z } from "zod";
 
 const attributeFormSchema = z.object({
   attrName: z.string().min(1),

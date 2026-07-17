@@ -1,8 +1,8 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Label } from "@calcom/ui/components/form";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
 import { UserIcon } from "@coss/ui/icons";
 
 interface VoiceSelectorProps {

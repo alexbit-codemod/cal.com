@@ -1,11 +1,4 @@
-import classNames from "classnames";
-// eslint-disable-next-line no-restricted-imports
-import { noop } from "lodash";
-import { useSession } from "next-auth/react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import type { RefCallback } from "react";
-import { useEffect, useState } from "react";
-
+import process from "node:process";
 import { getPremiumPlanPriceValue } from "@calcom/app-store/stripepayment/lib/utils";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { WEBAPP_URL } from "@calcom/lib/constants";
@@ -13,16 +6,23 @@ import { fetchUsername } from "@calcom/lib/fetchUsername";
 import hasKeyInMetadata from "@calcom/lib/hasKeyInMetadata";
 import { useDebounce } from "@calcom/lib/hooks/useDebounce";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { AppRouter } from "@calcom/trpc/types/server/routers/_app";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Label, Input } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import Icon from "@calcom/ui/components/icon/Icon";
 import { CheckIcon, ExternalLinkIcon } from "@coss/ui/icons";
-
 import type { TRPCClientErrorLike } from "@trpc/client";
+import classNames from "classnames";
+// eslint-disable-next-line no-restricted-imports
+import { noop } from "lodash";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useSession } from "next-auth/react";
+import type { RefCallback } from "react";
+import { useEffect, useState } from "react";
 
 export enum UsernameChangeStatusEnum {
   UPGRADE = "UPGRADE",

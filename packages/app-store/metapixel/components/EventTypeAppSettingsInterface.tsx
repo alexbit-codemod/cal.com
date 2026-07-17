@@ -1,7 +1,8 @@
-import { useEffect } from "react";
-
 import type { EventTypeAppSettingsComponent } from "@calcom/app-store/types";
-import { Label, Select, TextField } from "@calcom/ui/components/form";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { useEffect } from "react";
 
 const EventTypeAppSettingsInterface: EventTypeAppSettingsComponent = ({
   getAppData,

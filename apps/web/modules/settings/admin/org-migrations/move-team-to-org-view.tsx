@@ -1,11 +1,12 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Form, TextField } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { TFunction } from "next-i18next";
 import { useForm } from "react-hook-form";
@@ -68,9 +69,7 @@ export default function MoveTeamToOrgView() {
             required
             placeholder={t("move_team_to_org_target_org_id_placeholder")}
           />
-          <div className="mt-2 text-gray-600 text-sm">
-            {t("organization_migration_move_team_footnote")}
-          </div>
+          <div className="mt-2 text-gray-600 text-sm">{t("organization_migration_move_team_footnote")}</div>
         </div>
         <Button type="submit" loading={moveTeamMutation.isPending}>
           {t("organization_migration_move_team")}

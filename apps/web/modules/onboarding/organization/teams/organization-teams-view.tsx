@@ -1,18 +1,17 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import slugify from "@calcom/lib/slugify";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { XIcon } from "@coss/ui/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import posthog from "posthog-js";
-import { useForm, useFieldArray } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Form, TextField } from "@calcom/ui/components/form";
-import { XIcon } from "@coss/ui/icons";
-
 import { OnboardingCard } from "../../components/OnboardingCard";
 import { OnboardingLayout } from "../../components/OnboardingLayout";
 import { OnboardingTeamsBrowserView } from "../../components/onboarding-teams-browser-view";

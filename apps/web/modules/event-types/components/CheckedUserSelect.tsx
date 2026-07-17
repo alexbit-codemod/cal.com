@@ -1,12 +1,11 @@
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import Icon from "@calcom/ui/components/icon/Icon";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import type { Props } from "react-select";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Icon } from "@calcom/ui/components/icon";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
 
 export type CheckedUserSelectOption = {
   avatar: string;

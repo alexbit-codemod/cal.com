@@ -1,18 +1,10 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useSession } from "next-auth/react";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
-import { Toaster } from "sonner";
-
-import LicenseRequired from "~/ee/common/components/LicenseRequired";
 import {
-  isSMSAction,
-  isSMSOrWhatsappAction,
   isCalAIAction,
   isFormTrigger,
+  isSMSAction,
+  isSMSOrWhatsappAction,
 } from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
 import { formSchema } from "@calcom/features/ee/workflows/lib/schema";
 import type { FormValues } from "@calcom/features/ee/workflows/lib/types";
@@ -26,18 +18,25 @@ import { SENDER_ID } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { HttpError } from "@calcom/lib/http-error";
 import { WorkflowActions } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
 import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-import { Form, Input } from "@calcom/ui/components/form";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import type { Option } from "@calcom/ui/components/form/checkbox";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { PencilIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useSearchParams } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { useForm, useWatch } from "react-hook-form";
+import { Toaster } from "sonner";
+import LicenseRequired from "~/ee/common/components/LicenseRequired";
 import { DeleteDialog } from "../components/DeleteDialog";
 import SkeletonLoader from "../components/SkeletonLoaderEdit";
 import WorkflowDetailsPage from "../components/WorkflowDetailsPage";

@@ -1,15 +1,15 @@
 "use client";
 
-import { useState } from "react";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { DropdownActions, Table } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { Table } from "@calcom/ui/components/table/Table";
+import { DropdownActions } from "@calcom/ui/components/table/TableActions";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useState } from "react";
 
 const { Body, Cell, ColumnTitle, Header, Row } = Table;
 

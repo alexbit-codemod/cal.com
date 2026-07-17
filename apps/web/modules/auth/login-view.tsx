@@ -1,14 +1,15 @@
 "use client";
 
+import process from "node:process";
 import { ErrorCode } from "@calcom/features/auth/lib/ErrorCode";
 import { HOSTED_CAL_FEATURES, WEBAPP_URL, WEBSITE_URL } from "@calcom/lib/constants";
 import { emailRegex } from "@calcom/lib/emailSchema";
 import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
 import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Icon } from "@calcom/ui/components/icon";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import Icon from "@calcom/ui/components/icon/Icon";
 import { SAMLLogin } from "@calcom/web/modules/auth/components/SAMLLogin";
 import { LastUsed, useLastUsed } from "@calcom/web/modules/auth/hooks/useLastUsed";
 import AddToHomescreen from "@components/AddToHomescreen";
@@ -38,13 +39,9 @@ interface LoginValues {
   csrfToken: string;
 }
 
-const MicrosoftIcon = () => (
-  <img className="size-4" src="/microsoft-logo.svg" alt="" />
-);
+const MicrosoftIcon = () => <img className="size-4" src="/microsoft-logo.svg" alt="" />;
 
-const GoogleIcon = () => (
-  <img className="size-4" src="/google-icon-colored.svg" alt="" />
-);
+const GoogleIcon = () => <img className="size-4" src="/google-icon-colored.svg" alt="" />;
 
 function BackgroundGrid() {
   const rows = 9;

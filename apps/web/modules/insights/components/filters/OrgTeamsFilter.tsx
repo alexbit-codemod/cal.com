@@ -1,16 +1,14 @@
-import { useSession } from "next-auth/react";
-import { useState } from "react";
-
-import { FilterCheckboxField, FilterCheckboxFieldsContainer } from "~/filters/components/TeamsFilter";
 import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Divider } from "@calcom/ui/components/divider";
-import { FilterSearchField } from "@calcom/ui/components/form";
-import { AnimatedPopover } from "@calcom/ui/components/popover";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Divider } from "@calcom/ui/components/divider/Divider";
+import { FilterSearchField } from "@calcom/ui/components/form/inputs/Input";
+import { AnimatedPopover } from "@calcom/ui/components/popover/AnimatedPopover";
 import { LayersIcon } from "@coss/ui/icons";
-
+import { useSession } from "next-auth/react";
+import { useState } from "react";
+import { FilterCheckboxField, FilterCheckboxFieldsContainer } from "~/filters/components/TeamsFilter";
 import { useInsightsOrgTeams } from "../../hooks/useInsightsOrgTeams";
 
 export type OrgTeamsType = "org" | "team" | "yours";

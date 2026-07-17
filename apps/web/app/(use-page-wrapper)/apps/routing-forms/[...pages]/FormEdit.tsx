@@ -6,16 +6,14 @@ import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreL
 import { getFieldIdentifier } from "@calcom/features/form-builder/utils/getFieldIdentifier";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { FormCard, FormCardBody } from "@calcom/ui/components/card";
-import {
-  BooleanToggleGroupField,
-  Label,
-  MultiOptionInput,
-  SelectField,
-  TextField,
-} from "@calcom/ui/components/form";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { Button } from "@calcom/ui/components/button/Button";
+import FormCard, { FormCardBody } from "@calcom/ui/components/card/FormCard";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { MultiOptionInput } from "@calcom/ui/components/form/inputs/MultiOptionInput";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { SelectField } from "@calcom/ui/components/form/select";
+import { BooleanToggleGroupField } from "@calcom/ui/components/form/toggleGroup";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import type { getServerSidePropsForSingleFormView as getServerSideProps } from "@calcom/web/lib/apps/routing-forms/[...pages]/getServerSidePropsSingleForm";
 import SingleForm from "@components/apps/routing-forms/SingleForm";
 import { ChevronDownIcon, MenuIcon } from "@coss/ui/icons";
@@ -171,7 +169,9 @@ function Field({
                             "h-8 w-full justify-between text-left text-sm",
                             !!router && "bg-subtle cursor-not-allowed"
                           )}>
-                          <span className="text-default">{defaultValue?.label || t("select_field_type")}</span>
+                          <span className="text-default">
+                            {defaultValue?.label || t("select_field_type")}
+                          </span>
                           <ChevronDownIcon className="text-default h-4 w-4" />
                         </Button>
                       </Tooltip>

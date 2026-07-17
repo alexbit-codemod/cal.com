@@ -1,13 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-
 import { WEBAPP_URL_FOR_OAUTH } from "@calcom/lib/constants";
 import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
 import prisma from "@calcom/prisma";
-
+import type { NextApiRequest, NextApiResponse } from "next";
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";
 import createOAuthAppCredential from "../../_utils/oauth/createOAuthAppCredential";
 import { decodeOAuthState } from "../../_utils/oauth/decodeOAuthState";
-import { getZoomAppKeys } from "../lib";
+import { getZoomAppKeys } from "../lib/getZoomAppKeys";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = decodeOAuthState(req);

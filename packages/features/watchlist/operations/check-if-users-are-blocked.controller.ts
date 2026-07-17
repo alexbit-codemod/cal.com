@@ -1,5 +1,5 @@
 import { getWatchlistFeature } from "@calcom/features/di/watchlist/containers/watchlist";
-import type { SpanFn } from "@calcom/features/watchlist/lib/telemetry";
+import type { SpanFn } from "@calcom/features/watchlist/lib/telemetry/types";
 import { normalizeEmail } from "@calcom/features/watchlist/lib/utils/normalization";
 
 function presenter(containsBlockedUser: boolean, span?: SpanFn): Promise<boolean> {

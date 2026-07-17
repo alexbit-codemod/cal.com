@@ -1,4 +1,4 @@
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 import { BellIcon, LinkIcon } from "@coss/ui/icons";
 
 function SkeletonLoader() {

@@ -1,17 +1,14 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { FailedBookingsByField } from "@calcom/web/modules/insights/components/routing/FailedBookingsByField";
+import { RoutedToPerPeriod } from "@calcom/web/modules/insights/components/routing/RoutedToPerPeriod";
+import { RoutingFormResponsesTable } from "@calcom/web/modules/insights/components/routing/RoutingFormResponsesTable";
+import { RoutingFunnel } from "@calcom/web/modules/insights/components/routing/RoutingFunnel";
 import { usePathname } from "next/navigation";
-
 import { DataTableProvider } from "~/data-table/DataTableProvider";
 import { useSegments } from "~/data-table/hooks/useSegments";
-import {
-  RoutingFormResponsesTable,
-  FailedBookingsByField,
-  RoutedToPerPeriod,
-  RoutingFunnel,
-} from "@calcom/web/modules/insights/components/routing";
 import { InsightsOrgTeamsProvider } from "../components/context/InsightsOrgTeamsProvider";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
 
 export default function InsightsRoutingFormResponsesPage({ timeZone }: { timeZone: string }) {
   const { t } = useLocale();

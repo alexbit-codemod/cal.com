@@ -1,6 +1,6 @@
 import dayjs from "@calcom/dayjs";
-import logger from "@calcom/lib/logger";
 import { getTranslation } from "@calcom/i18n/server";
+import logger from "@calcom/lib/logger";
 import prisma from "@calcom/prisma";
 import {
   WorkflowActions,
@@ -8,7 +8,6 @@ import {
   WorkflowTemplates,
   WorkflowTriggerEvents,
 } from "@calcom/prisma/enums";
-
 import { isAttendeeAction } from "../actionHelperFunctions";
 import { IMMEDIATE_WORKFLOW_TRIGGER_EVENTS } from "../constants";
 import {
@@ -18,12 +17,10 @@ import {
 import type { BookingInfo } from "../types";
 import { scheduleSmsOrFallbackEmail, sendSmsOrFallbackEmail } from "./messageDispatcher";
 import type { ScheduleTextReminderArgs, timeUnitLowerCase } from "./smsReminderManager";
-import {
-  whatsappEventCancelledTemplate,
-  whatsappEventCompletedTemplate,
-  whatsappEventRescheduledTemplate,
-  whatsappReminderTemplate,
-} from "./templates/whatsapp";
+import { whatsappEventCancelledTemplate } from "./templates/whatsapp/whatsappEventCancelledTemplate";
+import { whatsappEventCompletedTemplate } from "./templates/whatsapp/whatsappEventCompletedTemplate";
+import { whatsappReminderTemplate } from "./templates/whatsapp/whatsappEventReminderTemplate";
+import { whatsappEventRescheduledTemplate } from "./templates/whatsapp/whatsappEventRescheduledTemplate";
 
 const log = logger.getSubLogger({ prefix: ["[whatsappReminderManager]"] });
 
@@ -96,7 +93,7 @@ export const scheduleWhatsappReminder = async (args: ScheduleTextReminderArgs & 
   const locale = evt.organizer.language.locale;
   const timeFormat = evt.organizer.timeFormat;
 
-  let contentSid: string | undefined = getContentSidForTemplate(template);
+  const contentSid: string | undefined = getContentSidForTemplate(template);
   const contentVariables = getContentVariablesForTemplate({
     name,
     attendeeName,

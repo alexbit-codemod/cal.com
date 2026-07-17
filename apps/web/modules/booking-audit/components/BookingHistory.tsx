@@ -3,13 +3,15 @@
 import type { AuditActorType } from "@calcom/features/booking-audit/lib/repository/IAuditActorRepository";
 import ServerTrans from "@calcom/lib/components/ServerTrans";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { FilterSearchField, Select } from "@calcom/ui/components/form";
-import { Icon, type IconName } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Button } from "@calcom/ui/components/button/Button";
+import { FilterSearchField } from "@calcom/ui/components/form/inputs/Input";
+import { Select } from "@calcom/ui/components/form/select";
+import Icon from "@calcom/ui/components/icon/Icon";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import { format, formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { useState } from "react";
@@ -30,14 +32,14 @@ type TranslationWithParams = {
 };
 
 type DisplayFieldValue =
-    | { type: "translationKey"; valueKey: string }
-    | { type: "rawValue"; value: string }
-    | { type: "rawValues"; values: string[] }
-    | { type: "translationsWithParams"; valuesWithParams: TranslationWithParams[] };
+  | { type: "translationKey"; valueKey: string }
+  | { type: "rawValue"; value: string }
+  | { type: "rawValues"; values: string[] }
+  | { type: "translationsWithParams"; valuesWithParams: TranslationWithParams[] };
 
 type DisplayField = {
-    labelKey: string;
-    fieldValue: DisplayFieldValue;
+  labelKey: string;
+  fieldValue: DisplayFieldValue;
 };
 
 type AuditLog = {
@@ -333,15 +335,15 @@ function BookingLogsTimeline({ logs }: BookingLogsTimelineProps) {
                       {/* Render displayFields if available, otherwise show type */}
                       {log.displayFields && log.displayFields.length > 0
                         ? log.displayFields.map((field, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-start gap-2 py-2 border-b px-3 border-subtle">
-                            <span className="font-medium text-emphasis w-[140px]">{t(field.labelKey)}</span>
-                            <span className="font-medium">
-                              <DisplayFieldValueComponent fieldValue={field.fieldValue} />
-                            </span>
-                          </div>
-                        ))
+                            <div
+                              key={idx}
+                              className="flex items-start gap-2 py-2 border-b px-3 border-subtle">
+                              <span className="font-medium text-emphasis w-[140px]">{t(field.labelKey)}</span>
+                              <span className="font-medium">
+                                <DisplayFieldValueComponent fieldValue={field.fieldValue} />
+                              </span>
+                            </div>
+                          ))
                         : null}
                       <div className="flex items-start gap-2 py-2 border-b px-3 border-subtle">
                         <span className="font-medium text-emphasis w-[140px]">{t("actor")}</span>

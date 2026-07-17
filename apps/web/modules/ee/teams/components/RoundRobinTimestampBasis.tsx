@@ -1,10 +1,9 @@
 "use client";
 
-import { Controller } from "react-hook-form";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { RRTimestampBasis } from "@calcom/prisma/enums";
-import { Select } from "@calcom/ui/components/form";
+import { Select } from "@calcom/ui/components/form/select";
+import { Controller } from "react-hook-form";
 
 const RoundRobinTimestampBasis = () => {
   const { t } = useLocale();

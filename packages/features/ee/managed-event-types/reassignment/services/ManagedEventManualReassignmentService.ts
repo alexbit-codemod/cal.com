@@ -19,11 +19,9 @@ import {
   type ManagedEventAssignmentReasonService,
   ManagedEventReassignmentType,
 } from "@calcom/features/ee/managed-event-types/reassignment/services/ManagedEventAssignmentReasonRecorder";
-import {
-  buildNewBookingPlan,
-  findTargetChildEventType,
-  validateManagedEventReassignment,
-} from "@calcom/features/ee/managed-event-types/reassignment/utils";
+import { buildNewBookingPlan } from "@calcom/features/ee/managed-event-types/reassignment/utils/buildNewBookingPlan";
+import { findTargetChildEventType } from "@calcom/features/ee/managed-event-types/reassignment/utils/findTargetChildEventType";
+import { validateManagedEventReassignment } from "@calcom/features/ee/managed-event-types/reassignment/utils/validateManagedEventReassignment";
 import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
 import { BookingLocationService } from "@calcom/features/ee/round-robin/lib/bookingLocationService";
 import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";

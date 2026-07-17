@@ -1,7 +1,7 @@
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { DialogContent } from "@calcom/ui/components/dialog";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { DialogContent } from "@calcom/ui/components/dialog/Dialog";
 import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 import { CreateANewTeamForm } from "@calcom/web/modules/ee/teams/components/CreateANewTeamForm";
 

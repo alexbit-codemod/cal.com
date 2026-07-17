@@ -1,17 +1,14 @@
-import type { Dispatch, SetStateAction } from "react";
-import type { FC } from "react";
-import React from "react";
-import { useFieldArray, useFormContext } from "react-hook-form";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
 import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ScrollableArea } from "@calcom/ui/components/scrollable";
-
-import type { TEventType, TEventTypesForm, TEventTypeGroup } from "~/apps/installation/[[...step]]/step-view";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ScrollableArea } from "@calcom/ui/components/scrollable/ScrollableArea";
+import type { Dispatch, FC, SetStateAction } from "react";
+import React from "react";
+import { useFieldArray, useFormContext } from "react-hook-form";
+import type { TEventType, TEventTypeGroup, TEventTypesForm } from "~/apps/installation/[[...step]]/step-view";
 
 type EventTypesCardProps = {
   userName: string;

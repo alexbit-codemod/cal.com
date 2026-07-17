@@ -1,17 +1,16 @@
 "use client";
 
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextAreaField } from "@calcom/ui/components/form/inputs/Input";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import ImageUploader from "@calcom/ui/components/image-uploader/ImageUploader";
+import { useOnboarding } from "@calcom/web/modules/ee/organizations/lib/onboardingStore";
+import { PlusIcon } from "@coss/ui/icons";
 import { useRouter } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
-
-import { useOnboarding } from "@calcom/web/modules/ee/organizations/lib/onboardingStore";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { PlusIcon } from "@coss/ui/icons";
 
 export const AboutOrganizationForm = () => {
   const { t } = useLocale();

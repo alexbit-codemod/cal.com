@@ -4,10 +4,11 @@ import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { UploadIcon } from "@coss/ui/icons";
 import { useCallback, useState } from "react";
 import { z } from "zod";
-import { Button } from "../button";
-import { Input, Label } from "../form";
-import { Icon } from "../icon";
-import { showToast } from "../toast";
+import { Button } from "../button/Button";
+import { Label } from "../form/inputs/Label";
+import { Input } from "../form/inputs/TextField";
+import Icon from "../icon/Icon";
+import { showToast } from "../toast/showToast";
 
 export interface FileData {
   file: File;

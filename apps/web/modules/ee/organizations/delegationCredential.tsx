@@ -1,26 +1,26 @@
 "use client";
 
-import { useState } from "react";
-import { useForm, Controller, useFormContext } from "react-hook-form";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import type { ServiceAccountKey } from "@calcom/lib/server/serviceAccountKey";
 import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { SelectField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { DropdownActions } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { InfoBadge } from "@calcom/ui/components/badge/InfoBadge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextAreaField } from "@calcom/ui/components/form/inputs/Input";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { SelectField } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
+import { DropdownActions } from "@calcom/ui/components/table/TableActions";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useState } from "react";
+import { Controller, useForm, useFormContext } from "react-hook-form";
 
 interface DelegationItemProps {
   delegation: {

@@ -1,18 +1,17 @@
-import { useState } from "react";
-import type { UseFormReturn } from "react-hook-form";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { InputError, Input } from "@calcom/ui/components/form";
-
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { InputError } from "@calcom/ui/components/form/inputs/InputError";
+import { Input } from "@calcom/ui/components/form/inputs/TextField";
+import { useState } from "react";
+import type { UseFormReturn } from "react-hook-form";
 import type { FormValues } from "~/settings/my-account/profile-view";
 
 type CustomEmailTextFieldProps = {

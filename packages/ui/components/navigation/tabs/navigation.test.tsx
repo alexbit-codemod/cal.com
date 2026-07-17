@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { vi } from "vitest";
-
-import type { IconName } from "../../icon";
+import type { IconName } from "../../icon/icon-names";
 import HorizontalTabs from "./HorizontalTabs";
 import VerticalTabs from "./VerticalTabs";
 

@@ -1,19 +1,17 @@
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import classNames from "@calcom/ui/classNames";
+import type React from "react";
 import type { Dispatch, SetStateAction } from "react";
-import React from "react";
 import type {
   GroupBase,
-  OptionProps,
   MultiValueProps,
   MultiValue as MultiValueType,
+  OptionProps,
+  Props,
   SingleValue,
 } from "react-select";
 import { components } from "react-select";
-import type { Props } from "react-select";
-
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-
-import { Select } from "../select";
+import { Select } from "../select/Select";
 
 export type Option = {
   value: string;

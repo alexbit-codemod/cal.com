@@ -1,8 +1,6 @@
-import { Icon } from "@calcom/ui/components/icon";
-
+import Icon from "@calcom/ui/components/icon/Icon";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
 import { ROUTING_TRACE_DOMAINS } from "../constants";
-
-import type { IconName } from "@calcom/ui/components/icon";
 
 const DOMAIN_ICONS: Record<
   string,

@@ -1,23 +1,22 @@
-import { useState } from "react";
-import { useFormContext } from "react-hook-form";
-
 import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
 import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
 import type {
   EventTypeSetup,
+  FormValues,
   InputClassNames,
   SelectClassNames,
   SettingsToggleClassNames,
 } from "@calcom/features/eventtypes/lib/types";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { Frequency } from "@calcom/prisma/zod-utils";
 import type { RecurringEvent } from "@calcom/types/Calendar";
 import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
+import { useState } from "react";
+import { useFormContext } from "react-hook-form";
 
 export type RecurringEventControllerProps = {
   eventType: EventTypeSetup;

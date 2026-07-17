@@ -1,10 +1,8 @@
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Card } from "@calcom/ui/components/card";
-import { Icon } from "@calcom/ui/components/icon";
-
-import { helpCards } from "@lib/settings/platform/utils";
-
+import Card from "@calcom/ui/components/card/Card";
+import Icon from "@calcom/ui/components/icon/Icon";
 import { useGetUserAttributes } from "@components/settings/platform/hooks/useGetUserAttributes";
+import { helpCards } from "@lib/settings/platform/utils";
 
 export const HelpCards = () => {
   const { t } = useLocale();

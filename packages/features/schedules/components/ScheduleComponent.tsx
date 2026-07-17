@@ -1,3 +1,18 @@
+import process from "node:process";
+import type { scheduleClassNames } from "@calcom/atoms/availability/types";
+import type { ConfigType } from "@calcom/dayjs";
+import dayjs from "@calcom/dayjs";
+import { defaultDayRange as DEFAULT_DAY_RANGE } from "@calcom/lib/availability";
+import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { weekdayNames } from "@calcom/lib/weekday";
+import type { TimeRange } from "@calcom/types/schedule";
+import cn from "@calcom/ui/classNames";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calcom/ui/components/dropdown/Dropdown";
+import { CheckboxField } from "@calcom/ui/components/form/checkbox";
+import { Select } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import { SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 import React, { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type {
   ArrayPath,
@@ -11,21 +26,6 @@ import type {
 } from "react-hook-form";
 import { Controller, useFieldArray, useFormContext } from "react-hook-form";
 import { createFilter, type GroupBase, type Props } from "react-select";
-
-import type { scheduleClassNames } from "@calcom/atoms/availability/types";
-import type { ConfigType } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { defaultDayRange as DEFAULT_DAY_RANGE } from "@calcom/lib/availability";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { weekdayNames } from "@calcom/lib/weekday";
-import type { TimeRange } from "@calcom/types/schedule";
-import cn from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calcom/ui/components/dropdown";
-import { Select } from "@calcom/ui/components/form";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
 
 export type { TimeRange };
 

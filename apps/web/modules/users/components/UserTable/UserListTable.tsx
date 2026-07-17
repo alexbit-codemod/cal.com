@@ -2,24 +2,20 @@
 
 import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
 import { ColumnFilterType, convertFacetedValuesToMap, type FacetedValue } from "@calcom/features/data-table";
-import { DataTableProvider } from "~/data-table/DataTableProvider";
-import { useColumnFilters } from "~/data-table/hooks/useColumnFilters";
-import { useDataTable } from "~/data-table/hooks/useDataTable";
-import { useSegments } from "~/data-table/hooks/useSegments";
 import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
 import type { MemberPermissions } from "@calcom/features/pbac/lib/team-member-permissions";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { downloadAsCsv } from "@calcom/lib/csvUtils";
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { FilterType } from "@calcom/types/data-table";
 import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Checkbox } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Checkbox } from "@calcom/ui/components/form/checkbox";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useGetUserAttributes } from "@calcom/web/components/settings/platform/hooks/useGetUserAttributes";
 import { LimitedBadges } from "@calcom/web/components/ui/LimitedBadges";
 import {
@@ -41,13 +37,15 @@ import { parseAsBoolean, useQueryState } from "nuqs";
 import posthog from "posthog-js";
 import { useMemo, useReducer, useState } from "react";
 import { createPortal } from "react-dom";
-import {
-  DataTableFilters,
-  DataTableSegment,
-  DataTableSelectionBar,
-  DataTableToolbar,
-  DataTableWrapper,
-} from "~/data-table/components";
+import { DataTableSelectionBar } from "~/data-table/components/DataTableSelectionBar";
+import { DataTableToolbar } from "~/data-table/components/DataTableToolbar";
+import { DataTableWrapper } from "~/data-table/components/DataTableWrapper";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DataTableSegment } from "~/data-table/components/segment";
+import { DataTableProvider } from "~/data-table/DataTableProvider";
+import { useColumnFilters } from "~/data-table/hooks/useColumnFilters";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useSegments } from "~/data-table/hooks/useSegments";
 import { DeleteBulkUsers } from "./BulkActions/DeleteBulkUsers";
 import { DynamicLink } from "./BulkActions/DynamicLink";
 import { EventTypesList } from "./BulkActions/EventTypesList";

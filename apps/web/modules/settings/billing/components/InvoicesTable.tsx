@@ -1,22 +1,14 @@
 "use client";
 
-import { keepPreviousData } from "@tanstack/react-query";
-import { usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
-import { useState, useEffect, useRef } from "react";
-
 import dayjs from "@calcom/dayjs";
-import { ColumnFilterType, ZDateRangeFilterValue, type FilterableColumn } from "@calcom/features/data-table";
-import { DataTableProvider } from "~/data-table/DataTableProvider";
-import { useFilterValue } from "~/data-table/hooks/useFilterValue";
-import { useSegments } from "~/data-table/hooks/useSegments";
+import { ColumnFilterType, type FilterableColumn, ZDateRangeFilterValue } from "@calcom/features/data-table";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import type { FilterType } from "@calcom/types/data-table";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { PanelCard } from "@calcom/ui/components/card";
-import { Icon } from "@calcom/ui/components/icon";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { PanelCard } from "@calcom/ui/components/card/PanelCard";
+import Icon from "@calcom/ui/components/icon/Icon";
 import {
   Table,
   TableBody,
@@ -25,9 +17,14 @@ import {
   TableHeader,
   TableRow,
 } from "@calcom/ui/components/table/TableNew";
-
-import { DateRangeFilter } from "~/data-table/components";
-
+import { keepPreviousData } from "@tanstack/react-query";
+import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { useEffect, useRef, useState } from "react";
+import { DateRangeFilter } from "~/data-table/components/filters/DateRangeFilter";
+import { DataTableProvider } from "~/data-table/DataTableProvider";
+import { useFilterValue } from "~/data-table/hooks/useFilterValue";
+import { useSegments } from "~/data-table/hooks/useSegments";
 import { InvoicesTableSkeleton } from "./InvoicesTableSkeleton";
 
 const DEFAULT_PAGE_SIZE = 10;

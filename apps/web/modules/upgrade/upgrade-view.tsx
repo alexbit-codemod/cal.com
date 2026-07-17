@@ -1,14 +1,12 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { showToast } from "@calcom/ui/components/toast";
-
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useRouter } from "next/navigation";
 import Shell from "~/shell/Shell";
 
 export type OrgUpgradeBannerProps = {

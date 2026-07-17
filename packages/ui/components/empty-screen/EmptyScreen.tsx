@@ -1,11 +1,9 @@
-import type { ReactNode } from "react";
-import React from "react";
-
 import classNames from "@calcom/ui/classNames";
-
-import { Button } from "../button";
-import type { IconName } from "../icon";
-import { Icon } from "../icon";
+import type React from "react";
+import type { ReactNode } from "react";
+import { Button } from "../button/Button";
+import Icon from "../icon/Icon";
+import type { IconName } from "../icon/icon-names";
 
 export function EmptyScreen({
   Icon: icon,

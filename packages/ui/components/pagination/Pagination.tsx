@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-
-import { Button } from "../button";
-import { ButtonGroup } from "../buttonGroup";
-import { Select } from "../form/select";
+import { useState } from "react";
+import { Button } from "../button/Button";
+import { ButtonGroup } from "../buttonGroup/ButtonGroup";
+import { Select } from "../form/select/Select";
 
 export interface PaginationProps {
   currentPage: number;

@@ -1,6 +1,3 @@
-import { useSession } from "next-auth/react";
-import { useMemo } from "react";
-
 import dayjs from "@calcom/dayjs";
 import { useAvailableTimeSlots } from "@calcom/features/bookings/Booker/hooks/useAvailableTimeSlots";
 import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
@@ -8,10 +5,10 @@ import { Calendar } from "@calcom/features/calendars/weeklyview/components/Calen
 import { useTroubleshooterStore } from "@calcom/features/troubleshooter/store";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { BookingStatus } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-
+import { trpc } from "@calcom/trpc/react/trpc";
+import { useSession } from "next-auth/react";
+import { useMemo } from "react";
 import { useSchedule } from "~/schedules/hooks/useSchedule";
-
 import { OutOfOfficeInSlots } from "../../bookings/components/OutOfOfficeInSlots";
 
 export const LargeCalendar = ({ extraDays }: { extraDays: number }) => {

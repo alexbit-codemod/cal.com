@@ -1,9 +1,9 @@
 "use client";
 
-import type { Timezones } from "@calcom/lib/timezone";
 import { TimezoneSelectComponent } from "@calcom/features/timezone/components/TimezoneSelectComponent";
 import { CALCOM_VERSION } from "@calcom/lib/constants";
-import { trpc } from "@calcom/trpc/react";
+import type { Timezones } from "@calcom/lib/timezone";
+import { trpc } from "@calcom/trpc/react/trpc";
 import { useMemo } from "react";
 import type { Props as SelectProps } from "react-timezone-select";
 

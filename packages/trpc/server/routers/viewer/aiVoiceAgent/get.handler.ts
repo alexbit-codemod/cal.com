@@ -1,5 +1,4 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-
+import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone/AIPhoneServiceRegistry";
 import type { TrpcSessionUser } from "../../../types";
 import type { TGetInputSchema } from "./get.schema";
 

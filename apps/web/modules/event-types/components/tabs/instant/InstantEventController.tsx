@@ -1,31 +1,29 @@
-import { useSession } from "next-auth/react";
-import { useState } from "react";
-import { useFormContext, Controller } from "react-hook-form";
-import { components } from "react-select";
-import type { OptionProps, SingleValueProps } from "react-select";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
-import LicenseRequired from "~/ee/common/components/LicenseRequired";
 import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import type { EventTypeSetup, FormValues, AvailabilityOption } from "@calcom/features/eventtypes/lib/types";
+import type { AvailabilityOption, EventTypeSetup, FormValues } from "@calcom/features/eventtypes/lib/types";
 import { subscriberUrlReserved } from "@calcom/features/webhooks/lib/subscriberUrlReserved";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-
-import { WebhookForm } from "~/webhooks/components";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogContent } from "@calcom/ui/components/dialog/Dialog";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Select } from "@calcom/ui/components/form/select";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useSession } from "next-auth/react";
+import { useState } from "react";
+import { Controller, useFormContext } from "react-hook-form";
+import type { OptionProps, SingleValueProps } from "react-select";
+import { components } from "react-select";
+import LicenseRequired from "~/ee/common/components/LicenseRequired";
 import type { TWebhook, WebhookFormSubmitData } from "~/webhooks/components/WebhookForm";
+import WebhookForm from "~/webhooks/components/WebhookForm";
 import WebhookListItem from "~/webhooks/components/WebhookListItem";
 
 type InstantEventControllerProps = {

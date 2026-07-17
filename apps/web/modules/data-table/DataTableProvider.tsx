@@ -1,26 +1,20 @@
 "use client";
 
-import type { SortingState, OnChangeFn, VisibilityState, ColumnSizingState } from "@tanstack/react-table";
-import { createContext, useMemo } from "react";
-
-import {
-  DataTableStateProvider,
-  DataTableSegmentProvider,
-  DataTableFiltersProvider,
-  useDataTableState,
-  useDataTableSegment,
-  useDataTableFilters,
-} from "./contexts";
-import type { ActiveFiltersValidatorState } from "./contexts";
 import type {
-  FilterValue,
-  FilterSegmentOutput,
-  SystemFilterSegment,
-  CombinedFilterSegment,
-  SegmentIdentifier,
   ActiveFilters,
+  CombinedFilterSegment,
+  FilterSegmentOutput,
+  FilterValue,
+  SegmentIdentifier,
+  SystemFilterSegment,
   UseSegments,
 } from "@calcom/features/data-table/lib/types";
+import type { ColumnSizingState, OnChangeFn, SortingState, VisibilityState } from "@tanstack/react-table";
+import { createContext, useMemo } from "react";
+import { DataTableFiltersProvider, useDataTableFilters } from "./contexts/DataTableFiltersContext";
+import { DataTableSegmentProvider, useDataTableSegment } from "./contexts/DataTableSegmentContext";
+import type { ActiveFiltersValidatorState } from "./contexts/DataTableStateContext";
+import { DataTableStateProvider, useDataTableState } from "./contexts/DataTableStateContext";
 
 export type { ActiveFiltersValidatorState };
 export type { ActiveFiltersValidator } from "./contexts";

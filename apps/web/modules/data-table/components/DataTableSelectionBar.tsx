@@ -1,12 +1,12 @@
 "use client";
 
+import classNames from "@calcom/ui/classNames";
+import { Button, type ButtonProps } from "@calcom/ui/components/button/Button";
+import Icon from "@calcom/ui/components/icon/Icon";
+import type { IconName } from "@calcom/ui/components/icon/icon-names";
 import type { Table } from "@tanstack/react-table";
 import { forwardRef } from "react";
 import { createPortal } from "react-dom";
-
-import classNames from "@calcom/ui/classNames";
-import { Button, type ButtonProps } from "@calcom/ui/components/button";
-import { Icon, type IconName } from "@calcom/ui/components/icon";
 
 export type ActionItem<TData> =
   | {

@@ -1,10 +1,8 @@
 "use client";
 
-import { type Table } from "@tanstack/react-table";
-
-import { Pagination } from "@calcom/ui/components/pagination";
-
-import { useDataTable } from "~/data-table/hooks";
+import { Pagination } from "@calcom/ui/components/pagination/Pagination";
+import type { Table } from "@tanstack/react-table";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;

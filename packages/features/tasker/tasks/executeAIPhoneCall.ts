@@ -1,7 +1,7 @@
 import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
 import dayjs from "@calcom/dayjs";
 import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
+import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone/AIPhoneServiceRegistry";
 import { handleInsufficientCredits } from "@calcom/features/ee/billing/helpers/handleInsufficientCredits";
 import { getVariableFormats } from "@calcom/features/ee/workflows/lib/reminders/templates/customTemplate";
 import { WorkflowReminderRepository } from "@calcom/features/ee/workflows/lib/repository/workflowReminder";
@@ -14,6 +14,7 @@ import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowE
 import logger from "@calcom/lib/logger";
 import prisma from "@calcom/prisma";
 import { CreditUsageType } from "@calcom/prisma/enums";
+
 interface ExecuteAIPhoneCallPayload {
   workflowReminderId: number;
   agentId: string;
@@ -39,9 +40,7 @@ type BookingWithRelations = NonNullable<
  * for backward compatibility.
  * Accepts both FORM_SUBMITTED_WEBHOOK_RESPONSES and CalEventResponses types.
  */
-export function convertResponsesToVariableFormats(
-  responses: Record<string, { value?: unknown }>
-) {
+export function convertResponsesToVariableFormats(responses: Record<string, { value?: unknown }>) {
   return Object.fromEntries(
     Object.entries(responses).flatMap(([key, value]) => {
       const formats = getVariableFormats(key);

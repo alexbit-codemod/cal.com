@@ -2,14 +2,14 @@
 
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Label } from "@calcom/ui/components/form";
-import { InfoIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useHasTeamPlan } from "@calcom/web/modules/billing/hooks/useHasPaidPlan";
 import { FullscreenUpgradeBannerForTeamsPage } from "@calcom/web/modules/billing/upgrade-banners/FullscreenUpgradeBannerForTeamsPage";
+import { InfoIcon } from "@coss/ui/icons";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo } from "react";
 import SkeletonLoaderTeamList from "~/ee/teams/components/SkeletonloaderTeamList";

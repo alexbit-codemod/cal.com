@@ -1,12 +1,10 @@
 "use client";
 
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { showToast } from "@calcom/ui/components/toast/showToast";
 import { useState } from "react";
-
-import { trpc } from "@calcom/trpc/react";
-import { TextField } from "@calcom/ui/components/form";
-import { Button } from "@calcom/ui/components/button";
-import { showToast } from "@calcom/ui/components/toast";
-
 import UsersTable from "./components/UsersTable";
 
 export default function LockedSMSView() {

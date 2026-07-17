@@ -1,8 +1,7 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-
+import { Button } from "@calcom/ui/components/button/Button";
 import { useRoleSheetState } from "../hooks/useRoleQueryStates";
 
 export function CreateRoleCTA() {

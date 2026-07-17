@@ -1,12 +1,10 @@
 "use client";
 
+import classNames from "@calcom/ui/classNames";
 import type { Dispatch, SetStateAction } from "react";
 import { useEffect, useState } from "react";
-
-import classNames from "@calcom/ui/classNames";
-
-import { Button } from "../../button";
-import { Steps } from "../../form/step";
+import { Button } from "../../button/Button";
+import { Steps } from "../../form/step/Steps";
 import { useWizardState } from "./useWizardState";
 
 export type WizardStep = {

@@ -1,12 +1,10 @@
-import { useSession } from "next-auth/react";
-import type { Dispatch } from "react";
-
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
-
+import { trpc } from "@calcom/trpc/react/trpc";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { useSession } from "next-auth/react";
+import type { Dispatch } from "react";
 import type { UserTableAction, UserTableState } from "./types";
 
 export function DeleteMemberModal({

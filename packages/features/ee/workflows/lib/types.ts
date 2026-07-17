@@ -14,7 +14,7 @@ import type {
   WorkflowTriggerEvents,
 } from "@calcom/prisma/enums";
 import type { CalEventResponses, RecurringEvent, TeamMember } from "@calcom/types/Calendar";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
+import type { Option } from "@calcom/ui/components/form/checkbox/MultiSelectCheckboxes";
 import type { Retell } from "retell-sdk";
 import { z } from "zod";
 import { TIME_UNIT, WORKFLOW_ACTIONS, WORKFLOW_TEMPLATES, WORKFLOW_TRIGGER_EVENTS } from "./constants";

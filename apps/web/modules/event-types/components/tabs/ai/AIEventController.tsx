@@ -1,27 +1,26 @@
-import * as RadioGroup from "@radix-ui/react-radio-group";
-import { useSession } from "next-auth/react";
-import React, { useState } from "react";
-import { useFormContext, Controller } from "react-hook-form";
-import { z } from "zod";
-
 import { getTemplateFieldsSchema } from "@calcom/features/calAIPhone/getTemplateFieldsSchema";
 import { templateFieldsMap } from "@calcom/features/calAIPhone/template-fields-map";
 import type { TemplateType } from "@calcom/features/calAIPhone/zod-utils";
-import PhoneInput from "@calcom/web/components/phone-input";
-import LicenseRequired from "~/ee/common/components/LicenseRequired";
 import type { EventTypeSetup, FormValues } from "@calcom/features/eventtypes/lib/types";
-import { ComponentForField } from "@calcom/web/modules/form-builder/components/FormBuilderField";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Divider } from "@calcom/ui/components/divider";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Divider } from "@calcom/ui/components/divider/Divider";
+import { EmptyScreen } from "@calcom/ui/components/empty-screen/EmptyScreen";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { SettingsToggle } from "@calcom/ui/components/form/switch";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import PhoneInput from "@calcom/web/components/phone-input";
+import { ComponentForField } from "@calcom/web/modules/form-builder/components/FormBuilderField";
 import { InfoIcon } from "@coss/ui/icons";
-import { showToast } from "@calcom/ui/components/toast";
+import * as RadioGroup from "@radix-ui/react-radio-group";
+import { useSession } from "next-auth/react";
+import React, { useState } from "react";
+import { Controller, useFormContext } from "react-hook-form";
+import { z } from "zod";
+import LicenseRequired from "~/ee/common/components/LicenseRequired";
 
 type AIEventControllerProps = {
   eventType: EventTypeSetup;
@@ -113,7 +112,7 @@ const TemplateFields = () => {
             name={`aiPhoneCallConfig.${field.name}`}
             render={({ field: { value, onChange }, fieldState: { error } }) => {
               const { variableName, ...restField } = field;
-              const variableInfo = !!variableName ? `: ${t("variable")} {{${variableName}}}` : "";
+              const variableInfo = variableName ? `: ${t("variable")} {{${variableName}}}` : "";
               return (
                 <div>
                   <ComponentForField
@@ -148,7 +147,7 @@ const AISettings = ({ eventType }: { eventType: EventTypeSetup }) => {
 
   const createCallMutation = trpc.viewer.organizations.createPhoneCall.useMutation({
     onSuccess: (data) => {
-      if (!!data?.callId) {
+      if (data?.callId) {
         showToast("Phone Call Created successfully", "success");
       }
     },

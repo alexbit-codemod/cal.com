@@ -1,8 +1,6 @@
-import Link from "next/link";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-
-import { Tooltip } from "../tooltip";
+import Link from "next/link";
+import Tooltip from "../tooltip/Tooltip";
 import { Badge } from "./Badge";
 
 export const CreditsBadge = function CreditsBadge({

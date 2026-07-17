@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Label, Select } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { Select } from "@calcom/ui/components/form/select";
+import { Switch } from "@calcom/ui/components/form/switch";
+import Icon from "@calcom/ui/components/icon/Icon";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
+import { useEffect, useState } from "react";
 
 export interface TeamMember {
   id: number;

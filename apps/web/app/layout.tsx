@@ -1,6 +1,6 @@
 import { getLocale } from "@calcom/features/auth/lib/getLocale";
 import { loadTranslations } from "@calcom/i18n/server";
-import { IconSprites } from "@calcom/ui/components/icon";
+import { IconSprites } from "@calcom/ui/components/icon/IconSprites";
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 import { dir } from "i18next";
 import { Inter } from "next/font/google";
@@ -10,6 +10,7 @@ import Script from "next/script";
 import type React from "react";
 
 import "../styles/globals.css";
+import process from "node:process";
 import { AppRouterI18nProvider } from "./AppRouterI18nProvider";
 import { Providers } from "./providers";
 import { SpeculationRules } from "./SpeculationRules";
@@ -116,8 +117,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head nonce={nonce}>
         <style>{`
           :root {
-            --font-sans: ${interFont.style.fontFamily.replace(/\'/g, "")};
-            --font-cal: ${calFont.style.fontFamily.replace(/\'/g, "")};
+            --font-sans: ${interFont.style.fontFamily.replace(/'/g, "")};
+            --font-cal: ${calFont.style.fontFamily.replace(/'/g, "")};
           }
         `}</style>
         {process.env.NODE_ENV === "development" && (

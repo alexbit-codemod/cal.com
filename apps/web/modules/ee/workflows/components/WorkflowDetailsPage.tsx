@@ -11,18 +11,17 @@ import { SCANNING_WORKFLOW_STEPS, SENDER_ID, SENDER_NAME } from "@calcom/lib/con
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
 import { WorkflowActions, WorkflowTemplates } from "@calcom/prisma/enums";
-import { type RouterOutputs, trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { FormCard, FormCardBody } from "@calcom/ui/components/card";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-import { useHasPaidPlan, useHasActiveTeamPlan } from "@calcom/web/modules/billing/hooks/useHasPaidPlan";
+import { type RouterOutputs, trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import FormCard, { FormCardBody } from "@calcom/ui/components/card/FormCard";
+import type { Option } from "@calcom/ui/components/form/checkbox";
+import { useHasActiveTeamPlan, useHasPaidPlan } from "@calcom/web/modules/billing/hooks/useHasPaidPlan";
 import { useAgentsData } from "@calcom/web/modules/ee/workflows/hooks/useAgentsData";
 import { ArrowRightIcon, ZapIcon } from "@coss/ui/icons";
 import { useSearchParams } from "next/navigation";
 import type { Dispatch, SetStateAction } from "react";
 import { useEffect, useState } from "react";
 import type { UseFormReturn } from "react-hook-form";
-
 import { AddActionDialog } from "./AddActionDialog";
 import WorkflowStepContainer from "./WorkflowStepContainer";
 

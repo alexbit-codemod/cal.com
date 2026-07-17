@@ -1,6 +1,6 @@
 "use client";
 
-import { SkeletonText, SkeletonContainer } from "@calcom/ui/components/skeleton";
+import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton/Skeleton";
 
 export const OAuthClientsAdminSkeleton = () => {
   return (

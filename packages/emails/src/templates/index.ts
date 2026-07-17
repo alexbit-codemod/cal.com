@@ -1,4 +1,4 @@
-export * from "@calcom/app-store/routing-forms/emails/components";
+export { ResponseEmail } from "@calcom/app-store/routing-forms/emails/components/ResponseEmail";
 export { AdminOAuthClientNotificationEmail } from "./AdminOAuthClientNotificationEmail";
 export { AdminOrganizationNotificationEmail } from "./AdminOrganizationNotificationEmail";
 export { AttendeeAddGuestsEmail } from "./AttendeeAddGuestsEmail";

@@ -11,7 +11,7 @@ import {
 } from "@calcom/lib/constants";
 import logger from "@calcom/lib/logger";
 import { safeStringify } from "@calcom/lib/safeStringify";
-import type { TrackingData } from "@calcom/lib/tracking";
+import type { TrackingData } from "@calcom/lib/tracking/server";
 import prisma from "@calcom/prisma";
 import { BillingPeriod, teamMetadataSchema } from "@calcom/prisma/zod-utils";
 import type Stripe from "stripe";

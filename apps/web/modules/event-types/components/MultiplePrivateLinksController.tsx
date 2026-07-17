@@ -1,25 +1,27 @@
-import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { useState } from "react";
-import { Controller, useFormContext } from "react-hook-form";
-
 import dayjs from "@calcom/dayjs";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import type { FormValues, PrivateLinkWithOptions } from "@calcom/features/eventtypes/lib/types";
+import type {
+  EventTypeSetupProps,
+  FormValues,
+  PrivateLinkWithOptions,
+} from "@calcom/features/eventtypes/lib/types";
 import { generateHashedLink } from "@calcom/lib/generateHashedLink";
 import { isLinkExpired as utilsIsLinkExpired } from "@calcom/lib/hashedLinksUtils";
 import { useCopy } from "@calcom/lib/hooks/useCopy";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { trpc } from "@calcom/trpc/react/trpc";
 import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent } from "@calcom/ui/components/dialog";
-import { TextField } from "@calcom/ui/components/form";
-import { DatePicker } from "@calcom/ui/components/form";
-import { NumberInput } from "@calcom/ui/components/form";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Dialog, DialogContent } from "@calcom/ui/components/dialog/Dialog";
+import { DatePicker } from "@calcom/ui/components/form/datepicker";
+import { NumberInput } from "@calcom/ui/components/form/inputs/Input";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
 import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useState } from "react";
+import { Controller, useFormContext } from "react-hook-form";
 
 export const MultiplePrivateLinksController = ({
   team,

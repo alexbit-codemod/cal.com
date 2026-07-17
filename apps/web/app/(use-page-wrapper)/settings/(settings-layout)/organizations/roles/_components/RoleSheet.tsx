@@ -1,24 +1,25 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
-import { useState, useMemo, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
-import type { Resource, PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
+import type { PermissionString, Resource } from "@calcom/features/pbac/domain/types/permission-registry";
 import {
   CrudAction,
-  Scope,
   getPermissionsForScope,
+  Scope,
 } from "@calcom/features/pbac/domain/types/permission-registry";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Form, TextField, Checkbox, Label } from "@calcom/ui/components/form";
-import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle } from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
-
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Button } from "@calcom/ui/components/button/Button";
+import { Checkbox } from "@calcom/ui/components/form/checkbox";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { Label } from "@calcom/ui/components/form/inputs/Label";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
+import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle } from "@calcom/ui/components/sheet/Sheet";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { revalidateTeamRoles } from "../actions";
 import { AdvancedPermissionGroup } from "./AdvancedPermissionGroup";
 import RoleColorPicker from "./RoleColorPicker";

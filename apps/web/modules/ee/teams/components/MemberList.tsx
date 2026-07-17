@@ -3,28 +3,20 @@
 import process from "node:process";
 import { Dialog } from "@calcom/features/components/controlled-dialog";
 import { convertFacetedValuesToMap } from "@calcom/features/data-table";
-import { DataTableProvider } from "~/data-table/DataTableProvider";
-import { useDataTable } from "~/data-table/hooks/useDataTable";
-import { useFetchMoreOnBottomReached } from "~/data-table/hooks/useFetchMoreOnBottomReached";
-import { useColumnFilters } from "~/data-table/hooks/useColumnFilters";
 import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
 import type { MemberPermissions } from "@calcom/features/pbac/lib/team-member-permissions";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
 import { useFillRemainingHeight } from "@calcom/lib/hooks/useFillRemainingHeight";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import {
-  ConfirmationDialogContent,
-  DialogClose,
-  DialogContent,
-  DialogFooter,
-} from "@calcom/ui/components/dialog";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Avatar } from "@calcom/ui/components/avatar/Avatar";
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import { ButtonGroup } from "@calcom/ui/components/buttonGroup/ButtonGroup";
+import { ConfirmationDialogContent } from "@calcom/ui/components/dialog/ConfirmationDialogContent";
+import { DialogClose, DialogContent, DialogFooter } from "@calcom/ui/components/dialog/Dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -33,10 +25,10 @@ import {
   DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Checkbox } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calcom/ui/components/dropdown/Dropdown";
+import { Checkbox } from "@calcom/ui/components/form/checkbox";
+import { showToast } from "@calcom/ui/components/toast/showToast";
+import Tooltip from "@calcom/ui/components/tooltip/Tooltip";
 import TeamAvailabilityModal from "@calcom/web/modules/ee/teams/components/TeamAvailabilityModal";
 import { DynamicLink } from "@calcom/web/modules/users/components/UserTable/BulkActions/DynamicLink";
 import { keepPreviousData } from "@tanstack/react-query";
@@ -54,12 +46,14 @@ import { parseAsBoolean, useQueryState } from "nuqs";
 import posthog from "posthog-js";
 import type { Dispatch, SetStateAction } from "react";
 import { useMemo, useReducer, useRef, useState } from "react";
-import {
-  DataTableFilters,
-  DataTableSelectionBar,
-  DataTableToolbar,
-  DataTableWrapper,
-} from "~/data-table/components";
+import { DataTableSelectionBar } from "~/data-table/components/DataTableSelectionBar";
+import { DataTableToolbar } from "~/data-table/components/DataTableToolbar";
+import { DataTableWrapper } from "~/data-table/components/DataTableWrapper";
+import { DataTableFilters } from "~/data-table/components/filters";
+import { DataTableProvider } from "~/data-table/DataTableProvider";
+import { useColumnFilters } from "~/data-table/hooks/useColumnFilters";
+import { useDataTable } from "~/data-table/hooks/useDataTable";
+import { useFetchMoreOnBottomReached } from "~/data-table/hooks/useFetchMoreOnBottomReached";
 import DeleteBulkTeamMembers from "./DeleteBulkTeamMembers";
 import { EditMemberSheet } from "./EditMemberSheet";
 import { EventTypesList } from "./EventTypesList";

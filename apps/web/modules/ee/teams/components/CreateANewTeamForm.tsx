@@ -1,23 +1,22 @@
 "use client";
 
-import posthog from "posthog-js";
-import { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-
 import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
 import { subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
 import type { NewTeamFormValues } from "@calcom/features/ee/teams/lib/types";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import slugify from "@calcom/lib/slugify";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { DialogFooter } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
+import type { RouterOutputs } from "@calcom/trpc/react/trpc";
+import { trpc } from "@calcom/trpc/react/trpc";
+import { Alert } from "@calcom/ui/components/alert/Alert";
+import { Button } from "@calcom/ui/components/button/Button";
+import { DialogFooter } from "@calcom/ui/components/dialog/Dialog";
+import { Form } from "@calcom/ui/components/form/inputs/Form";
+import { TextField } from "@calcom/ui/components/form/inputs/TextField";
 import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
 import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+import posthog from "posthog-js";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 
 interface CreateANewTeamFormProps {
   onCancel: () => void;

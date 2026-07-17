@@ -1,28 +1,26 @@
-import { createColumnHelper } from "@tanstack/react-table";
-import startCase from "lodash/startCase";
-import { useMemo } from "react";
-import { z } from "zod";
-
 import dayjs from "@calcom/dayjs";
 import { ColumnFilterType } from "@calcom/features/data-table";
 import { WEBAPP_URL } from "@calcom/lib/constants";
 import { useCopy } from "@calcom/lib/hooks/useCopy";
 import { useLocale } from "@calcom/lib/hooks/useLocale";
 import { RoutingFormFieldType } from "@calcom/routing-forms/lib/FieldTypes";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-
+import { Badge } from "@calcom/ui/components/badge/Badge";
+import { Button } from "@calcom/ui/components/button/Button";
+import type { HeaderRow, RoutingFormTableRow } from "@calcom/web/modules/insights/lib/types";
+import {
+  ZResponseMultipleValues,
+  ZResponseNumericValue,
+  ZResponseSingleValue,
+  ZResponseTextValue,
+} from "@calcom/web/modules/insights/lib/types";
+import { createColumnHelper } from "@tanstack/react-table";
+import startCase from "lodash/startCase";
+import { useMemo } from "react";
+import { z } from "zod";
 import { BookedByCell } from "../components/BookedByCell";
 import { BookingAtCell } from "../components/BookingAtCell";
 import { BookingStatusBadge } from "../components/BookingStatusBadge";
 import { ResponseValueCell } from "../components/ResponseValueCell";
-import type { HeaderRow, RoutingFormTableRow } from "@calcom/web/modules/insights/lib/types";
-import {
-  ZResponseMultipleValues,
-  ZResponseSingleValue,
-  ZResponseTextValue,
-  ZResponseNumericValue,
-} from "@calcom/web/modules/insights/lib/types";
 
 export const useInsightsColumns = ({
   headers,

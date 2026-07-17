@@ -1,6 +1,5 @@
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-
+import { Button } from "@calcom/ui/components/button/Button";
 import { useBookingConfirmation } from "./hooks/useBookingConfirmation";
 
 interface AcceptBookingButtonProps {

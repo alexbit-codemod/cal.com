@@ -8,10 +8,10 @@ import {
 } from "@calcom/embed-core/embed-iframe";
 import { useRouterQuery } from "@calcom/lib/hooks/useRouterQuery";
 import useTheme from "@calcom/lib/hooks/useTheme";
-import { UserAvatar } from "@calcom/ui/components/avatar";
-import { Icon } from "@calcom/ui/components/icon";
-import { OrgBanner } from "@calcom/ui/components/organization-banner";
-import { UnpublishedEntity } from "@calcom/ui/components/unpublished-entity";
+import { UserAvatar } from "@calcom/ui/components/avatar/UserAvatar";
+import Icon from "@calcom/ui/components/icon/Icon";
+import { OrgBanner } from "@calcom/ui/components/organization-banner/OrgBanner";
+import { UnpublishedEntity } from "@calcom/ui/components/unpublished-entity/UnpublishedEntity";
 import { EventTypeDescriptionLazy as EventTypeDescription } from "@calcom/web/modules/event-types/components";
 import EmptyPage from "@calcom/web/modules/event-types/components/EmptyPage";
 import type { getServerSideProps } from "@server/lib/[user]/getServerSideProps";

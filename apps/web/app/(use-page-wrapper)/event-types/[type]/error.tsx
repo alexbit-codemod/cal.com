@@ -1,8 +1,7 @@
 "use client";
 
 import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-
+import { Alert } from "@calcom/ui/components/alert/Alert";
 import Shell from "~/shell/Shell";
 
 export default function Error() {
