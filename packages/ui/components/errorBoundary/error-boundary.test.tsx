@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { useEffect } from "react";
 
 import ErrorBoundary from "./ErrorBoundary";
+import { describe } from 'node:test';
 
 describe("ErrorBoundary", () => {
   test("should render children when no error occurs", () => {

@@ -1,4 +1,5 @@
 import { isOriginAllowed } from "@/lib/is-origin-allowed/is-origin-allowed";
+import { describe, it } from 'node:test';
 
 describe("isOriginAllowed", () => {
   describe("is allowed", () => {

@@ -1,4 +1,3 @@
-import axios from "axios";
 import qs from "qs";
 
 import { getLocation } from "@calcom/lib/CalEventParser";
@@ -84,11 +83,15 @@ class BiginCrmService implements CRM {
 
     const tokenInfo = await refreshOAuthTokens(
       async () =>
-        await axios.post(accountsUrl, qs.stringify(formData), {
-          headers: {
+        await fetch(accountsUrl, {
+	method: "POST",
+	headers: {
             "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
           },
-        }),
+	body: JSON.stringify(qs.stringify(formData))
+})
+	.then(async (resp) => Object.assign(resp, { data: await resp.json() }))
+	.catch(() => null),
       "zoho-bigin",
       credentialId
     );
@@ -262,13 +265,16 @@ class BiginCrmService implements CRM {
       }),
     };
 
-    return axios
-      .put(token.api_domain + this.eventsSlug, JSON.stringify({ data: [biginEvent] }), {
-        headers: {
+    return fetch(token.api_domain + this.eventsSlug, {
+	method: "PUT",
+	headers: {
           "content-type": "application/json",
           authorization: `Zoho-oauthtoken ${token.access_token}`,
         },
-      })
+	body: JSON.stringify(JSON.stringify({ data: [biginEvent] }))
+})
+	.then(async (resp) => Object.assign(resp, { data: await resp.json() }))
+	.catch(() => null)
       .then((data) => data.data)
       .catch((e) => {
         this.log.error("Error in updating bigin event", JSON.stringify(e), e.response?.data);
@@ -277,13 +283,15 @@ class BiginCrmService implements CRM {
 
   async deleteEvent(uid: string): Promise<void> {
     const token = await this.auth.getToken();
-    return axios
-      .delete(`${token.api_domain}${this.eventsSlug}?ids=${uid}`, {
-        headers: {
+    return fetch(`${token.api_domain}${this.eventsSlug}?ids=${uid}`, {
+	method: "DELETE",
+	headers: {
           "content-type": "application/json",
           authorization: `Zoho-oauthtoken ${token.access_token}`,
-        },
-      })
+        }
+})
+	.then(async (resp) => Object.assign(resp, { data: await resp.json() }))
+	.catch(() => null)
       .then((data) => data.data)
       .catch((e) => this.log.error("Error deleting bigin event", JSON.stringify(e), e.response?.data));
   }

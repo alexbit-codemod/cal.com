@@ -1,4 +1,4 @@
-import * as crypto from "node:crypto";
+import * as tls from 'node:tls';
 import { z } from "zod";
 
 import { CALCOM_PRIVATE_API_ROUTE } from "@calcom/lib/constants";

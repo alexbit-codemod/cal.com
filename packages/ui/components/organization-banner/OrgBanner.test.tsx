@@ -2,6 +2,7 @@
 import { render } from "@testing-library/react";
 
 import { OrgBanner } from "./OrgBanner";
+import { describe } from 'node:test';
 
 describe("tests for OrgBanner component", () => {
   test("Should render the OrgBanner correctly when supplied imageSrc", () => {

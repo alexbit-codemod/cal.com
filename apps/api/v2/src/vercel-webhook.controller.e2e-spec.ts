@@ -1,4 +1,4 @@
-import * as crypto from "node:crypto";
+import * as tls from 'node:tls';
 import type { INestApplication } from "@nestjs/common";
 import type { NestExpressApplication } from "@nestjs/platform-express";
 import { Test } from "@nestjs/testing";

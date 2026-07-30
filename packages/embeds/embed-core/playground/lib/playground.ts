@@ -769,7 +769,7 @@ if (only === "all" || only === "ns:windowScrollToTimeslot") {
 (function ensureScrolledToCorrectIframe() {
   // Reset the hash so that we can scroll to correct iframe
   // Also, even if we need to scroll to the same iframe, we need to still reset it otherwise hashchange event will not fire
-  location.hash = "";
+  location.hashAlgorithm = "";
   let api: typeof Cal | (typeof Cal)["ns"][string] | null = null;
 
   const getNamespace = () => {
@@ -787,7 +787,7 @@ if (only === "all" || only === "ns:windowScrollToTimeslot") {
         function scrollToIframeInPlayground() {
           const namespace = getNamespace();
           if (namespace) {
-            location.hash = `#cal-booking-place-${namespace}-iframe`;
+            location.hashAlgorithm = `#cal-booking-place-${namespace}-iframe`;
           }
         }
         scrollToIframeInPlayground();

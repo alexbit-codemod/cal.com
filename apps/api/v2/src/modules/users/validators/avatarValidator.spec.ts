@@ -1,6 +1,7 @@
 import { IsOptional, Validate, validateSync } from "class-validator";
 
 import { AvatarValidator } from "./avatarValidator";
+import { describe, it } from 'node:test';
 
 // Mock DTO for testing the validator
 class MockAvatarDto {

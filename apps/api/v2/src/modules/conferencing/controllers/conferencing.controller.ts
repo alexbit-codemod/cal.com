@@ -2,10 +2,7 @@ import { API_VERSIONS_VALUES } from "@/lib/api-versions";
 import { API_KEY_OR_ACCESS_TOKEN_HEADER } from "@/lib/docs/headers";
 import { GetUser } from "@/modules/auth/decorators/get-user/get-user.decorator";
 import { ApiAuthGuard } from "@/modules/auth/guards/api-auth/api-auth.guard";
-import {
-  ConferencingAppsOauthUrlOutputDto,
-  GetConferencingAppsOauthUrlResponseDto,
-} from "@/modules/conferencing/outputs/get-conferencing-apps-oauth-url";
+import { ConferencingAppsOauthUrlOutputDto } from "@/modules/conferencing/outputs/get-conferencing-apps-oauth-url";
 import {
   ConferencingAppsOutputResponseDto,
   ConferencingAppOutputResponseDto,

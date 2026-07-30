@@ -9,6 +9,7 @@ import { SlotsInputService_2024_09_04 } from "@/modules/slots/slots-2024-09-04/s
 import { SlotsOutputService_2024_09_04 } from "@/modules/slots/slots-2024-09-04/services/slots-output.service";
 import { SlotsRepository_2024_09_04 } from "@/modules/slots/slots-2024-09-04/slots.repository";
 import { TeamsRepository } from "@/modules/teams/teams/teams.repository";
+import { describe, beforeEach, it } from 'node:test';
 
 describe("SlotsService_2024_09_04", () => {
   let service: SlotsService_2024_09_04;

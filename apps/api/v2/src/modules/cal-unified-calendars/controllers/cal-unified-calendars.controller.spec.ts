@@ -32,6 +32,7 @@ import { CalUnifiedCalendarsController } from "./cal-unified-calendars.controlle
 import { ApiAuthGuard } from "@/modules/auth/guards/api-auth/api-auth.guard";
 import { PermissionsGuard } from "@/modules/auth/guards/permissions/permissions.guard";
 import { UnifiedCalendarService } from "@/modules/cal-unified-calendars/services/unified-calendar.service";
+import { describe, beforeEach, it } from 'node:test';
 
 describe("CalUnifiedCalendarsController", () => {
   let controller: CalUnifiedCalendarsController;
