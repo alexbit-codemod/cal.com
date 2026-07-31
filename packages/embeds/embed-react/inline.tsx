@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @fileoverview This file is an example file and tells how to use the Cal component in a React application. This is also used by playwright e2e
  */
@@ -8,7 +9,8 @@ import ReactDom from "react-dom";
 
 // Because we don't import from @calcom/embed-react, this file isn't able to test if the build is successful or not and thus npm package would work or not correctly.
 // There are tests in test/built which verify that the types from built package are correctly generated and exported correctly.
-import Cal, { getCalApi, type EmbedEvent } from "./src/index";
+import { getCalApi, type EmbedEvent } from "./src/index";
+import { Cal } from "./src/Cal";
 
 const api = getCalApi({
   namespace: "inline",
@@ -117,4 +119,5 @@ function App() {
     </>
   );
 }
-ReactDom.render(<App />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
